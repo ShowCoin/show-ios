@@ -16,15 +16,6 @@
 
 @implementation ShowScrollerView
 
-//-(BOOL)gestureRecognizerShouldBegin:(UIPanGestureRecognizer *)gestureRecognizer{
-//    if (![gestureRecognizer respondsToSelector:@selector(translationInView:)]) {
-//        return YES;
-//    }
-//    CGPoint translation = [gestureRecognizer translationInView:self.superview];
-//    CGFloat absX = fabs(translation.x);
-//    CGFloat absY = fabs(translation.y);
-//    return absX > absY;
-//}
 
 @end
 

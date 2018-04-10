@@ -225,28 +225,20 @@ typedef NS_ENUM(NSInteger,UIBarButtonItemType) {
     self.tabBar.shadowImage =  [UIImage imageWithColor:[UIColor clearColor] size:CGSizeMake(self.tabBar.width, self.tabBar.height)] ; // [UIImage new];
     [self.tabBar addSubview:self.barView];
     
-//
     ShowHomeViewController    *baseViewController = [[ShowHomeViewController alloc]init];
     [baseViewController.navigationBarView setNavigationLeftBarStyle:NavigationBarLeftNone];
     
     BaseViewController    *baseViewController1 = [[BaseViewController alloc]init];
     baseViewController1.view.backgroundColor = [UIColor grayColor];
     [baseViewController1.navigationBarView setNavigationLeftBarStyle:NavigationBarLeftNone];
-    
-    ShowLiveViewController    *baseViewController2 = [[ShowLiveViewController alloc]init];
-//    baseViewController2.view.backgroundColor = [UIColor grayColor];
-    [baseViewController2.navigationBarView setNavigationLeftBarStyle:NavigationBarLeftNone];
+
     
     KMBarItemView *homeView = [self setupBarItem:[KMBarItem item:STRING_TABBAR_HOME_15 normalImage:nil selectImage:nil] viewController:baseViewController type:UIBarButtonItemType_Text];
-//    KMBarItemView *focusonView = [self setupBarItem:[KMBarItem item:STRING_TABBAR_FOCUSON_14 normalImage:nil selectImage:nil] viewController:baseViewController1 type:UIBarButtonItemType_Text];
     KMBarItemView *centerView = [self setupBarItem:[KMBarItem item:@"" normalImage:nil selectImage:nil] viewController:baseViewController1 type:UIBarButtonItemType_Button];
-//    KMBarItemView *chatView = [self setupBarItem:[KMBarItem item:STRING_TABBAR_MESSAGE_13 normalImage:nil selectImage:nil] viewController:baseViewController2 type:UIBarButtonItemType_Text];
     KMBarItemView *meView = [self setupBarItem:[KMBarItem item:STRING_TABBAR_ACCOUNT_12 normalImage:nil selectImage:nil] viewController:self.UserCenterVc type:UIBarButtonItemType_Text];
 
     [self.barView addSubview:homeView];
-//    [self.barView addSubview:focusonView];
     [self.barView addSubview:centerView];
-//    [self.barView addSubview:chatView];
     [self.barView addSubview:meView];
     
     UIView *lineView = [[UIView alloc]init];
