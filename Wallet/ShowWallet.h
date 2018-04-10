@@ -76,8 +76,8 @@ typedef enum WalletError {
 
 typedef enum WalletTransactionAction {
     WalletTransactionActionNormal = 0,
-    WalletTransactionActionRush,
-    WalletTransactionActionCancel
+    WalletTransactionActionRush = 1,
+    WalletTransactionActionCancel = 2
 } WalletTransactionAction ;
 
 typedef enum WalletOptionsType {
