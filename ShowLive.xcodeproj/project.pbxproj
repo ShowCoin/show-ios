@@ -208,6 +208,12 @@
 		936A1A172078ECAD000A043A /* ImageRawDataOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = 936A1A0E2078ECAA000A043A /* ImageRawDataOutput.m */; };
 		936A1A182078ECAD000A043A /* GPU_rgb2yuv.m in Sources */ = {isa = PBXBuildFile; fileRef = 936A1A102078ECAB000A043A /* GPU_rgb2yuv.m */; };
 		936A1A192078ECAD000A043A /* GPUImageBeautifyFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 936A1A112078ECAC000A043A /* GPUImageBeautifyFilter.m */; };
+		93B5E088207E070A00B4C4B6 /* PageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B5E087207E070900B4C4B6 /* PageManager.m */; };
+		93B5E08C207E075E00B4C4B6 /* SLHeadPortrait.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B5E08B207E075E00B4C4B6 /* SLHeadPortrait.m */; };
+		93B5E095207E084E00B4C4B6 /* SLChatViewController+BlankView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B5E092207E084D00B4C4B6 /* SLChatViewController+BlankView.m */; };
+		93B5E096207E084E00B4C4B6 /* SLChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B5E094207E084E00B4C4B6 /* SLChatViewController.m */; };
+		93B5E09B207E085500B4C4B6 /* SLMessageListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B5E098207E085400B4C4B6 /* SLMessageListCell.m */; };
+		93B5E09C207E085500B4C4B6 /* SLMessageListHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B5E099207E085400B4C4B6 /* SLMessageListHeader.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -678,6 +684,18 @@
 		936A1A102078ECAB000A043A /* GPU_rgb2yuv.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPU_rgb2yuv.m; sourceTree = "<group>"; };
 		936A1A112078ECAC000A043A /* GPUImageBeautifyFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPUImageBeautifyFilter.m; sourceTree = "<group>"; };
 		936A1A122078ECAD000A043A /* AutoWhiteBalanceFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoWhiteBalanceFilter.h; sourceTree = "<group>"; };
+		93B5E086207E070900B4C4B6 /* PageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageManager.h; sourceTree = "<group>"; };
+		93B5E087207E070900B4C4B6 /* PageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageManager.m; sourceTree = "<group>"; };
+		93B5E08A207E075E00B4C4B6 /* SLHeadPortrait.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLHeadPortrait.h; sourceTree = "<group>"; };
+		93B5E08B207E075E00B4C4B6 /* SLHeadPortrait.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLHeadPortrait.m; sourceTree = "<group>"; };
+		93B5E091207E084D00B4C4B6 /* SLChatViewController+BlankView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SLChatViewController+BlankView.h"; sourceTree = "<group>"; };
+		93B5E092207E084D00B4C4B6 /* SLChatViewController+BlankView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SLChatViewController+BlankView.m"; sourceTree = "<group>"; };
+		93B5E093207E084D00B4C4B6 /* SLChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLChatViewController.h; sourceTree = "<group>"; };
+		93B5E094207E084E00B4C4B6 /* SLChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLChatViewController.m; sourceTree = "<group>"; };
+		93B5E097207E085400B4C4B6 /* SLMessageListHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLMessageListHeader.h; sourceTree = "<group>"; };
+		93B5E098207E085400B4C4B6 /* SLMessageListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLMessageListCell.m; sourceTree = "<group>"; };
+		93B5E099207E085400B4C4B6 /* SLMessageListHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLMessageListHeader.m; sourceTree = "<group>"; };
+		93B5E09A207E085400B4C4B6 /* SLMessageListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLMessageListCell.h; sourceTree = "<group>"; };
 		AA2350AAA436CDCBB1E93DCE /* Pods-ShowLive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowLive.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShowLive/Pods-ShowLive.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -817,13 +835,6 @@
 			path = view;
 			sourceTree = "<group>";
 		};
-		722AB8012078E2D000D5694D /* model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = model;
-			sourceTree = "<group>";
-		};
 		72AC02D3206CF11B0016490A /* userCenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -860,6 +871,8 @@
 		72FE9B5820621F59008DD3D5 /* ShowLive */ = {
 			isa = PBXGroup;
 			children = (
+				93B5E08D207E080800B4C4B6 /* Chat */,
+				93B5E085207E06F500B4C4B6 /* PageManager */,
 				931602712068BD5300455B5F /* Class */,
 				43192C1820732FBF0048B8E4 /* Services */,
 				43F400D92072252400A06159 /* Model */,
@@ -1020,6 +1033,7 @@
 		93154D0220623A1900BF088F /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				93B5E089207E074100B4C4B6 /* HeadPortrait */,
 				93154E6020626EA700BF088F /* ShowNoDataView */,
 				93154E5920626D9800BF088F /* ShowHelper */,
 				93154E5220626D6400BF088F /* UserDefault */,
@@ -1573,7 +1587,6 @@
 		936A197220788F02000A043A /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				722AB8012078E2D000D5694D /* model */,
 				722AB8002078E2BA00D5694D /* view */,
 				936A197420788F19000A043A /* Contorller */,
 			);
@@ -1600,8 +1613,6 @@
 			children = (
 				936A1A022078EC90000A043A /* Filter */,
 				936A199B2078AAF4000A043A /* Medio */,
-				936A197A20788F91000A043A /* Model */,
-				936A197920788F8D000A043A /* View */,
 				936A197820788F80000A043A /* Contorller */,
 			);
 			path = Live;
@@ -1616,20 +1627,6 @@
 				936A19FD2078C7B7000A043A /* ShowPreviewViewController.m */,
 			);
 			path = Contorller;
-			sourceTree = "<group>";
-		};
-		936A197920788F8D000A043A /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		936A197A20788F91000A043A /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		936A19812078A655000A043A /* Setting */ = {
@@ -1701,6 +1698,63 @@
 				936A1A102078ECAB000A043A /* GPU_rgb2yuv.m */,
 			);
 			path = Filter;
+			sourceTree = "<group>";
+		};
+		93B5E085207E06F500B4C4B6 /* PageManager */ = {
+			isa = PBXGroup;
+			children = (
+				93B5E086207E070900B4C4B6 /* PageManager.h */,
+				93B5E087207E070900B4C4B6 /* PageManager.m */,
+			);
+			path = PageManager;
+			sourceTree = "<group>";
+		};
+		93B5E089207E074100B4C4B6 /* HeadPortrait */ = {
+			isa = PBXGroup;
+			children = (
+				93B5E08A207E075E00B4C4B6 /* SLHeadPortrait.h */,
+				93B5E08B207E075E00B4C4B6 /* SLHeadPortrait.m */,
+			);
+			path = HeadPortrait;
+			sourceTree = "<group>";
+		};
+		93B5E08D207E080800B4C4B6 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				93B5E08E207E081400B4C4B6 /* MessageList */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		93B5E08E207E081400B4C4B6 /* MessageList */ = {
+			isa = PBXGroup;
+			children = (
+				93B5E090207E083F00B4C4B6 /* View */,
+				93B5E08F207E082D00B4C4B6 /* ViewController */,
+			);
+			path = MessageList;
+			sourceTree = "<group>";
+		};
+		93B5E08F207E082D00B4C4B6 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				93B5E093207E084D00B4C4B6 /* SLChatViewController.h */,
+				93B5E094207E084E00B4C4B6 /* SLChatViewController.m */,
+				93B5E091207E084D00B4C4B6 /* SLChatViewController+BlankView.h */,
+				93B5E092207E084D00B4C4B6 /* SLChatViewController+BlankView.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		93B5E090207E083F00B4C4B6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				93B5E097207E085400B4C4B6 /* SLMessageListHeader.h */,
+				93B5E099207E085400B4C4B6 /* SLMessageListHeader.m */,
+				93B5E09A207E085400B4C4B6 /* SLMessageListCell.h */,
+				93B5E098207E085400B4C4B6 /* SLMessageListCell.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		D544A431CFB6EF8D747D9730 /* Pods */ = {
@@ -1956,6 +2010,7 @@
 				431F612E2077701300B6C282 /* BGModelInfo.m in Sources */,
 				93154E1E206264B200BF088F /* RNEncryptor.m in Sources */,
 				93154D1620623BAB00BF088F /* NSAttributedString+Additon.m in Sources */,
+				93B5E096207E084E00B4C4B6 /* SLChatViewController.m in Sources */,
 				93154D6620623C9400BF088F /* UIViewController+TrackLoadLog.m in Sources */,
 				93154E4B2062669800BF088F /* Base64Util.m in Sources */,
 				93154CF92062396000BF088F /* HLLeadProfile.m in Sources */,
@@ -1967,6 +2022,7 @@
 				93154CF12062396000BF088F /* KMUtils.m in Sources */,
 				93154E06206264B200BF088F /* TADotView.m in Sources */,
 				93154D1720623BAB00BF088F /* NSArray+Addition.m in Sources */,
+				93B5E095207E084E00B4C4B6 /* SLChatViewController+BlankView.m in Sources */,
 				93154CFC2062396000BF088F /* KMencryption.m in Sources */,
 				93154E20206264B200BF088F /* CYPromptCoverViewQueue.m in Sources */,
 				72FE9B6920621F59008DD3D5 /* main.m in Sources */,
@@ -2000,6 +2056,7 @@
 				931602B0206CDFCD00455B5F /* crypto_scrypt-nosse.c in Sources */,
 				93154E1A206264B200BF088F /* STTransition.m in Sources */,
 				93160275206B923E00455B5F /* ShowLoginAction.m in Sources */,
+				93B5E09C207E085500B4C4B6 /* SLMessageListHeader.m in Sources */,
 				93154E6D206280B100BF088F /* ShowService.m in Sources */,
 				93154D6320623C9400BF088F /* XLBubbleTransition.m in Sources */,
 				93154D5B20623C9400BF088F /* NSString+MD5.m in Sources */,
@@ -2007,6 +2064,7 @@
 				93154E30206264B200BF088F /* JPVideoPlayerProgressView.m in Sources */,
 				72FE9B5B20621F59008DD3D5 /* AppDelegate.m in Sources */,
 				93154E27206264B200BF088F /* JPVideoPlayerDownloader.m in Sources */,
+				93B5E09B207E085500B4C4B6 /* SLMessageListCell.m in Sources */,
 				43F400DC2072255F00A06159 /* BaseModel.m in Sources */,
 				93154E24206264B200BF088F /* FLAnimatedImageView.m in Sources */,
 				43F400EB2072370600A06159 /* UIButton+FillColor.m in Sources */,
@@ -2047,6 +2105,7 @@
 				936A197D20788FF6000A043A /* ShowHomeViewController.m in Sources */,
 				93154E5120626A8800BF088F /* ShowHitEdgeExpandButton.m in Sources */,
 				936A19932078A668000A043A /* ShowForUsViewController.m in Sources */,
+				93B5E088207E070A00B4C4B6 /* PageManager.m in Sources */,
 				93154E14206264B200BF088F /* ACMediaManager.m in Sources */,
 				93154D5E20623C9400BF088F /* NSString+Additions.m in Sources */,
 				93154D6120623C9400BF088F /* UIImage+ImageEffects.m in Sources */,
@@ -2091,6 +2150,7 @@
 				4310F5BF206D027300B2BFFF /* ShowNavigationBar.m in Sources */,
 				722AB7F62078CCED00D5694D /* ShowLiveHotViewController.m in Sources */,
 				93154D4F20623C9400BF088F /* UINavigationController+Additions.m in Sources */,
+				93B5E08C207E075E00B4C4B6 /* SLHeadPortrait.m in Sources */,
 				936A1A132078ECAD000A043A /* BeautifyEffect.m in Sources */,
 				93154CF22062396000BF088F /* KMShareUtils.m in Sources */,
 				430111372073B67B00DA3BA2 /* BaseTabBarController.m in Sources */,
