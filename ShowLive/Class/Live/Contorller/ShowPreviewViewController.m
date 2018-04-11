@@ -17,7 +17,7 @@
 #import "GPU_rgb2yuv.h"
 #import "GPUImageTextureResizeFilter.h"
 #define  GPU_RGB2YUV
-
+ 
 //#ifdef USE_V2
 #import "ZZBeautyFilter_v2.h"
 //#else
