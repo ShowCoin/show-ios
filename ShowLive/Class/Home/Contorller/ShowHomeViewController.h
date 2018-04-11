@@ -7,7 +7,7 @@
 //
 
 #import "BaseViewController.h"
-
+#import "SLGiveLikeView.h"
 @interface ShowHomeViewController : BaseViewController
 
 @end
