@@ -217,7 +217,6 @@
 		936A1A172078ECAD000A043A /* ImageRawDataOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = 936A1A0E2078ECAA000A043A /* ImageRawDataOutput.m */; };
 		936A1A182078ECAD000A043A /* GPU_rgb2yuv.m in Sources */ = {isa = PBXBuildFile; fileRef = 936A1A102078ECAB000A043A /* GPU_rgb2yuv.m */; };
 		936A1A192078ECAD000A043A /* GPUImageBeautifyFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 936A1A112078ECAC000A043A /* GPUImageBeautifyFilter.m */; };
-		93B5E088207E070A00B4C4B6 /* PageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B5E087207E070900B4C4B6 /* PageManager.m */; };
 		93B5E08C207E075E00B4C4B6 /* SLHeadPortrait.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B5E08B207E075E00B4C4B6 /* SLHeadPortrait.m */; };
 		93B5E095207E084E00B4C4B6 /* SLChatViewController+BlankView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B5E092207E084D00B4C4B6 /* SLChatViewController+BlankView.m */; };
 		93B5E096207E084E00B4C4B6 /* SLChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B5E094207E084E00B4C4B6 /* SLChatViewController.m */; };
@@ -719,8 +718,6 @@
 		936A1A102078ECAB000A043A /* GPU_rgb2yuv.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPU_rgb2yuv.m; sourceTree = "<group>"; };
 		936A1A112078ECAC000A043A /* GPUImageBeautifyFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPUImageBeautifyFilter.m; sourceTree = "<group>"; };
 		936A1A122078ECAD000A043A /* AutoWhiteBalanceFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoWhiteBalanceFilter.h; sourceTree = "<group>"; };
-		93B5E086207E070900B4C4B6 /* PageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageManager.h; sourceTree = "<group>"; };
-		93B5E087207E070900B4C4B6 /* PageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageManager.m; sourceTree = "<group>"; };
 		93B5E08A207E075E00B4C4B6 /* SLHeadPortrait.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLHeadPortrait.h; sourceTree = "<group>"; };
 		93B5E08B207E075E00B4C4B6 /* SLHeadPortrait.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLHeadPortrait.m; sourceTree = "<group>"; };
 		93B5E091207E084D00B4C4B6 /* SLChatViewController+BlankView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SLChatViewController+BlankView.h"; sourceTree = "<group>"; };
@@ -969,7 +966,6 @@
 			children = (
 				93C5AC1620810CDE0061DF25 /* Manger */,
 				93B5E08D207E080800B4C4B6 /* Chat */,
-				93B5E085207E06F500B4C4B6 /* PageManager */,
 				931602712068BD5300455B5F /* Class */,
 				43192C1820732FBF0048B8E4 /* Services */,
 				43F400D92072252400A06159 /* Model */,
@@ -1800,15 +1796,6 @@
 			path = Filter;
 			sourceTree = "<group>";
 		};
-		93B5E085207E06F500B4C4B6 /* PageManager */ = {
-			isa = PBXGroup;
-			children = (
-				93B5E086207E070900B4C4B6 /* PageManager.h */,
-				93B5E087207E070900B4C4B6 /* PageManager.m */,
-			);
-			path = PageManager;
-			sourceTree = "<group>";
-		};
 		93B5E089207E074100B4C4B6 /* HeadPortrait */ = {
 			isa = PBXGroup;
 			children = (
@@ -2248,7 +2235,6 @@
 				9316027B206CDC6500455B5F /* ETHMnemonic.m in Sources */,
 				93154E5120626A8800BF088F /* ShowHitEdgeExpandButton.m in Sources */,
 				936A19932078A668000A043A /* ShowForUsViewController.m in Sources */,
-				93B5E088207E070A00B4C4B6 /* PageManager.m in Sources */,
 				93154E14206264B200BF088F /* ACMediaManager.m in Sources */,
 				93154D5E20623C9400BF088F /* NSString+Additions.m in Sources */,
 				93154D6120623C9400BF088F /* UIImage+ImageEffects.m in Sources */,
