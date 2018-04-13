@@ -36,6 +36,10 @@
 		722AB7D5207650B800D5694D /* UserTableViewTypeTwoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 722AB7D4207650B800D5694D /* UserTableViewTypeTwoCell.m */; };
 		722AB7D8207650CD00D5694D /* UserTableViewTypeThreeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 722AB7D7207650CD00D5694D /* UserTableViewTypeThreeCell.m */; };
 		722AB7E120774E8400D5694D /* UserInfoListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 722AB7E020774E8400D5694D /* UserInfoListCell.m */; };
+		723CE43520810B4E003C25AE /* SLTopListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 723CE43420810B4E003C25AE /* SLTopListViewController.m */; };
+		723CE43D20810BAA003C25AE /* SLToplistSubView.m in Sources */ = {isa = PBXBuildFile; fileRef = 723CE43820810BAA003C25AE /* SLToplistSubView.m */; };
+		723CE43E20810BAA003C25AE /* SLTopListGivingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 723CE43B20810BAA003C25AE /* SLTopListGivingCell.m */; };
+		723CE43F20810BAA003C25AE /* SLTopListTabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 723CE43C20810BAA003C25AE /* SLTopListTabelView.m */; };
 		725417B1207E02EB0019A209 /* ShowHomeBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 725417AD207E02EB0019A209 /* ShowHomeBaseController.m */; };
 		725417B2207E02EB0019A209 /* ShowHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 725417AF207E02EB0019A209 /* ShowHomeViewController.m */; };
 		725417BF207E032F0019A209 /* HotReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 725417B3207E032E0019A209 /* HotReusableView.m */; };
@@ -300,6 +304,14 @@
 		722AB7D7207650CD00D5694D /* UserTableViewTypeThreeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserTableViewTypeThreeCell.m; sourceTree = "<group>"; };
 		722AB7DF20774E8400D5694D /* UserInfoListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserInfoListCell.h; sourceTree = "<group>"; };
 		722AB7E020774E8400D5694D /* UserInfoListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserInfoListCell.m; sourceTree = "<group>"; };
+		723CE43320810B4E003C25AE /* SLTopListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLTopListViewController.h; sourceTree = "<group>"; };
+		723CE43420810B4E003C25AE /* SLTopListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLTopListViewController.m; sourceTree = "<group>"; };
+		723CE43720810BAA003C25AE /* SLTopListGivingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLTopListGivingCell.h; sourceTree = "<group>"; };
+		723CE43820810BAA003C25AE /* SLToplistSubView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLToplistSubView.m; sourceTree = "<group>"; };
+		723CE43920810BAA003C25AE /* SLTopListTabelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLTopListTabelView.h; sourceTree = "<group>"; };
+		723CE43A20810BAA003C25AE /* SLToplistSubView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLToplistSubView.h; sourceTree = "<group>"; };
+		723CE43B20810BAA003C25AE /* SLTopListGivingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLTopListGivingCell.m; sourceTree = "<group>"; };
+		723CE43C20810BAA003C25AE /* SLTopListTabelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLTopListTabelView.m; sourceTree = "<group>"; };
 		725417AD207E02EB0019A209 /* ShowHomeBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowHomeBaseController.m; sourceTree = "<group>"; };
 		725417AE207E02EB0019A209 /* ShowHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowHomeViewController.h; sourceTree = "<group>"; };
 		725417AF207E02EB0019A209 /* ShowHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowHomeViewController.m; sourceTree = "<group>"; };
@@ -822,6 +834,7 @@
 		722AB7D920774DA700D5694D /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				723CE43220810B4E003C25AE /* TopList */,
 				936A19812078A655000A043A /* Setting */,
 				72AC02D4206CF1390016490A /* UserCenterViewController.h */,
 				72AC02D5206CF1390016490A /* UserCenterViewController.m */,
@@ -839,6 +852,7 @@
 		722AB7DB20774DC200D5694D /* view */ = {
 			isa = PBXGroup;
 			children = (
+				723CE43620810BAA003C25AE /* TopList */,
 				936A19972078A69F000A043A /* Setting */,
 				722AB7D0207650A200D5694D /* UserTableViewTypeOneCell.h */,
 				722AB7D1207650A200D5694D /* UserTableViewTypeOneCell.m */,
@@ -869,6 +883,28 @@
 				725417B5207E032E0019A209 /* ShowHomeSamallCell.m */,
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		723CE43220810B4E003C25AE /* TopList */ = {
+			isa = PBXGroup;
+			children = (
+				723CE43320810B4E003C25AE /* SLTopListViewController.h */,
+				723CE43420810B4E003C25AE /* SLTopListViewController.m */,
+			);
+			path = TopList;
+			sourceTree = "<group>";
+		};
+		723CE43620810BAA003C25AE /* TopList */ = {
+			isa = PBXGroup;
+			children = (
+				723CE43720810BAA003C25AE /* SLTopListGivingCell.h */,
+				723CE43820810BAA003C25AE /* SLToplistSubView.m */,
+				723CE43920810BAA003C25AE /* SLTopListTabelView.h */,
+				723CE43A20810BAA003C25AE /* SLToplistSubView.h */,
+				723CE43B20810BAA003C25AE /* SLTopListGivingCell.m */,
+				723CE43C20810BAA003C25AE /* SLTopListTabelView.m */,
+			);
+			path = TopList;
 			sourceTree = "<group>";
 		};
 		72AC02D3206CF11B0016490A /* userCenter */ = {
@@ -1624,7 +1660,6 @@
 			isa = PBXGroup;
 			children = (
 				439859DF2080BC9700F8528B /* SLChatRoomView */,
-				722AB8012078E2D000D5694D /* model */,
 				722AB8002078E2BA00D5694D /* view */,
 				936A197420788F19000A043A /* Contorller */,
 			);
@@ -2030,10 +2065,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				725417C4207E032F0019A209 /* NewReusableView.m in Sources */,
+				723CE43520810B4E003C25AE /* SLTopListViewController.m in Sources */,
 				936A199E2078AB30000A043A /* ShowStream.mm in Sources */,
 				93154D5F20623C9400BF088F /* NSDate+Additions.m in Sources */,
 				93154E09206264B200BF088F /* TAAbstractDotView.m in Sources */,
 				93154D5420623C9400BF088F /* UIImageView+XFExtension.m in Sources */,
+				723CE43E20810BAA003C25AE /* SLTopListGivingCell.m in Sources */,
 				93160290206CDF4F00455B5F /* AES128CTR.m in Sources */,
 				936A19942078A668000A043A /* ShowSettingViewController.m in Sources */,
 				93154E6320626F2100BF088F /* DWTagList.m in Sources */,
@@ -2101,6 +2138,7 @@
 				72FE9B5B20621F59008DD3D5 /* AppDelegate.m in Sources */,
 				93154E27206264B200BF088F /* JPVideoPlayerDownloader.m in Sources */,
 				93B5E09B207E085500B4C4B6 /* SLMessageListCell.m in Sources */,
+				723CE43D20810BAA003C25AE /* SLToplistSubView.m in Sources */,
 				43F400DC2072255F00A06159 /* BaseModel.m in Sources */,
 				93154E24206264B200BF088F /* FLAnimatedImageView.m in Sources */,
 				43F400EB2072370600A06159 /* UIButton+FillColor.m in Sources */,
@@ -2144,6 +2182,7 @@
 				93154E14206264B200BF088F /* ACMediaManager.m in Sources */,
 				93154D5E20623C9400BF088F /* NSString+Additions.m in Sources */,
 				93154D6120623C9400BF088F /* UIImage+ImageEffects.m in Sources */,
+				723CE43F20810BAA003C25AE /* SLTopListTabelView.m in Sources */,
 				93154E3C2062662F00BF088F /* OpenUDID.m in Sources */,
 				936A198020789007000A043A /* ShowLiveViewController.m in Sources */,
 				93154D1420623BAB00BF088F /* UIView+build.m in Sources */,
