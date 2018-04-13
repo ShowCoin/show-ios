@@ -22,6 +22,12 @@
 		4378646B2076108200146B97 /* ShowResourcesService.m in Sources */ = {isa = PBXBuildFile; fileRef = 4378646A2076108200146B97 /* ShowResourcesService.m */; };
 		4382A95D2071F66C00E95A1F /* DemoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4382A95C2071F66C00E95A1F /* DemoTableViewController.m */; };
 		4382A965207211F600E95A1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4382A964207211F600E95A1F /* Assets.xcassets */; };
+		439859EC2080BC9700F8528B /* SLChatIMManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 439859E02080BC9700F8528B /* SLChatIMManager.m */; };
+		439859ED2080BC9700F8528B /* SLChatRoomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 439859E12080BC9700F8528B /* SLChatRoomTableViewCell.m */; };
+		439859EE2080BC9700F8528B /* SLCharRoomContentHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 439859E62080BC9700F8528B /* SLCharRoomContentHelp.m */; };
+		439859EF2080BC9700F8528B /* SLChatRoomMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 439859E92080BC9700F8528B /* SLChatRoomMessage.m */; };
+		439859F02080BC9700F8528B /* SLChatRoomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 439859EA2080BC9700F8528B /* SLChatRoomView.m */; };
+		439859F12080BC9700F8528B /* SLMessageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 439859EB2080BC9700F8528B /* SLMessageInfo.m */; };
 		43F400DC2072255F00A06159 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F400DB2072255F00A06159 /* BaseModel.m */; };
 		43F400E22072272500A06159 /* TransactionRecordsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F400E12072272500A06159 /* TransactionRecordsModel.m */; };
 		43F400E5207228EE00A06159 /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F400E3207228EE00A06159 /* BaseTableViewCell.m */; };
@@ -261,6 +267,18 @@
 		4382A95C2071F66C00E95A1F /* DemoTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoTableViewController.m; sourceTree = "<group>"; };
 		4382A962207211C600E95A1F /* ShowStringDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowStringDefine.h; sourceTree = "<group>"; };
 		4382A964207211F600E95A1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ShowLive/Resouce/Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		439859E02080BC9700F8528B /* SLChatIMManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLChatIMManager.m; sourceTree = "<group>"; };
+		439859E12080BC9700F8528B /* SLChatRoomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLChatRoomTableViewCell.m; sourceTree = "<group>"; };
+		439859E22080BC9700F8528B /* SLCharRoomContentHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLCharRoomContentHelp.h; sourceTree = "<group>"; };
+		439859E32080BC9700F8528B /* SLMessageInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLMessageInfo.h; sourceTree = "<group>"; };
+		439859E42080BC9700F8528B /* SLChatRoomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLChatRoomView.h; sourceTree = "<group>"; };
+		439859E52080BC9700F8528B /* SLChatRoomMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLChatRoomMessage.h; sourceTree = "<group>"; };
+		439859E62080BC9700F8528B /* SLCharRoomContentHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLCharRoomContentHelp.m; sourceTree = "<group>"; };
+		439859E72080BC9700F8528B /* SLChatRoomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLChatRoomTableViewCell.h; sourceTree = "<group>"; };
+		439859E82080BC9700F8528B /* SLChatIMManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLChatIMManager.h; sourceTree = "<group>"; };
+		439859E92080BC9700F8528B /* SLChatRoomMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLChatRoomMessage.m; sourceTree = "<group>"; };
+		439859EA2080BC9700F8528B /* SLChatRoomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLChatRoomView.m; sourceTree = "<group>"; };
+		439859EB2080BC9700F8528B /* SLMessageInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLMessageInfo.m; sourceTree = "<group>"; };
 		43F400DA2072255F00A06159 /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
 		43F400DB2072255F00A06159 /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
 		43F400E02072272500A06159 /* TransactionRecordsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransactionRecordsModel.h; sourceTree = "<group>"; };
@@ -752,6 +770,25 @@
 				4378646120760CF700146B97 /* Localizable.strings */,
 			);
 			path = Resouce;
+			sourceTree = "<group>";
+		};
+		439859DF2080BC9700F8528B /* SLChatRoomView */ = {
+			isa = PBXGroup;
+			children = (
+				439859E02080BC9700F8528B /* SLChatIMManager.m */,
+				439859E12080BC9700F8528B /* SLChatRoomTableViewCell.m */,
+				439859E22080BC9700F8528B /* SLCharRoomContentHelp.h */,
+				439859E32080BC9700F8528B /* SLMessageInfo.h */,
+				439859E42080BC9700F8528B /* SLChatRoomView.h */,
+				439859E52080BC9700F8528B /* SLChatRoomMessage.h */,
+				439859E62080BC9700F8528B /* SLCharRoomContentHelp.m */,
+				439859E72080BC9700F8528B /* SLChatRoomTableViewCell.h */,
+				439859E82080BC9700F8528B /* SLChatIMManager.h */,
+				439859E92080BC9700F8528B /* SLChatRoomMessage.m */,
+				439859EA2080BC9700F8528B /* SLChatRoomView.m */,
+				439859EB2080BC9700F8528B /* SLMessageInfo.m */,
+			);
+			path = SLChatRoomView;
 			sourceTree = "<group>";
 		};
 		43F400D92072252400A06159 /* Model */ = {
@@ -1573,6 +1610,7 @@
 		936A197220788F02000A043A /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				439859DF2080BC9700F8528B /* SLChatRoomView */,
 				722AB8012078E2D000D5694D /* model */,
 				722AB8002078E2BA00D5694D /* view */,
 				936A197420788F19000A043A /* Contorller */,
@@ -1974,6 +2012,7 @@
 				93154E03206264B200BF088F /* SDCycleScrollView.m in Sources */,
 				93154E0B206264B200BF088F /* FBKVOController.m in Sources */,
 				93154E422062664C00BF088F /* HWPopTool.m in Sources */,
+				439859EC2080BC9700F8528B /* SLChatIMManager.m in Sources */,
 				936A1A142078ECAD000A043A /* AutoWhiteBalanceFilter.m in Sources */,
 				9316028B206CDEF500455B5F /* keccak.c in Sources */,
 				722AB7FC2078CE1300D5694D /* ShowLiveNewViewController.m in Sources */,
@@ -1987,6 +2026,7 @@
 				931602A8206CDFCD00455B5F /* crypto-scrypt-saltgen.c in Sources */,
 				936A1A152078ECAD000A043A /* ZZBeautyFilter_v2.m in Sources */,
 				93154CF72062396000BF088F /* UITextView+Rect.m in Sources */,
+				439859EF2080BC9700F8528B /* SLChatRoomMessage.m in Sources */,
 				936A1A182078ECAD000A043A /* GPU_rgb2yuv.m in Sources */,
 				93154E792062826500BF088F /* ShowErrorCode.m in Sources */,
 				93154D5620623C9400BF088F /* UIGestureRecognizer+BlocksKit.m in Sources */,
@@ -2073,6 +2113,7 @@
 				72AC02D6206CF1390016490A /* UserCenterViewController.m in Sources */,
 				93154E16206264B200BF088F /* STInteractiveTransitioning.m in Sources */,
 				931602A7206CDFCD00455B5F /* crypto_scrypt-hash.c in Sources */,
+				439859ED2080BC9700F8528B /* SLChatRoomTableViewCell.m in Sources */,
 				93154D002062396100BF088F /* KMUserDefaultUtils.m in Sources */,
 				431F6134207770A800B6C282 /* PrivacyModel.m in Sources */,
 				936A19922078A668000A043A /* UserInfoViewController.m in Sources */,
@@ -2093,6 +2134,7 @@
 				93154D4F20623C9400BF088F /* UINavigationController+Additions.m in Sources */,
 				936A1A132078ECAD000A043A /* BeautifyEffect.m in Sources */,
 				93154CF22062396000BF088F /* KMShareUtils.m in Sources */,
+				439859EE2080BC9700F8528B /* SLCharRoomContentHelp.m in Sources */,
 				430111372073B67B00DA3BA2 /* BaseTabBarController.m in Sources */,
 				93154E70206280D300BF088F /* ShowRequest.m in Sources */,
 				93154E23206264B200BF088F /* FLAnimatedImage.m in Sources */,
@@ -2105,6 +2147,7 @@
 				936A19962078A668000A043A /* ShowUserQRViewController.m in Sources */,
 				93154D6020623C9400BF088F /* NSString+Validation.m in Sources */,
 				93154CF52062396000BF088F /* UIImage+KMColor.m in Sources */,
+				439859F12080BC9700F8528B /* SLMessageInfo.m in Sources */,
 				93154E832062907200BF088F /* ShowAction.m in Sources */,
 				93154E4C2062669800BF088F /* MD5Encryption.m in Sources */,
 				93154E04206264B200BF088F /* UIView+SDExtension.m in Sources */,
@@ -2121,6 +2164,7 @@
 				93154E15206264B200BF088F /* STSwipeInteraction.m in Sources */,
 				93154E2B206264B200BF088F /* JPVideoPlayerCachePathTool.m in Sources */,
 				931199D720775D0400C58B9E /* ShowLoginViewController.m in Sources */,
+				439859F02080BC9700F8528B /* SLChatRoomView.m in Sources */,
 				936A19912078A668000A043A /* ChangeTextController.m in Sources */,
 				93154E2A206264B200BF088F /* UIView+WebVideoCache.m in Sources */,
 				93154D6520623C9400BF088F /* UIControl+BlocksKit.m in Sources */,
