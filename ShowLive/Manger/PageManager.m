@@ -8,8 +8,13 @@
 
 #import "PageManager.h"
 #import "ShowLoginViewController.h"
-#import "ShowLiveViewController.h"
 #import "SLChatViewController.h"
+#import "SLPrivateChatViewController.h"
+#import "SLLiveViewController.h"
+#import "SLAppMediaPerssion.h"
+#import "SLCommentViewController.h"
+#import "SLFansViewController.h"
+#import "SLFriendListViewController.h"
 
 @interface PageManager ()
 
@@ -50,7 +55,6 @@
 -(void)config{
     
 }
-
 #pragma mar dealloc
 -(void)dealloc{
     [[NSNotificationCenter defaultCenter] removeObserver:self];
@@ -124,9 +128,11 @@
     }
 }
 #pragma mark - 私信页面
+
 - (void)pushToChatViewController
 {
     SLChatViewController *vc = [[SLChatViewController alloc] init];
+    vc.hidesBottomBarWhenPushed  = YES;
     UINavigationController *nav = self.tabBarController.selectedViewController;
     [nav pushViewController:vc animated:YES];
 }
@@ -134,8 +140,28 @@
 #pragma mark - 开播页面
 -(void)presentLiveViewController
 {
-    UINavigationController *LiveNav = [[UINavigationController alloc]initWithRootViewController:[[ShowLiveViewController alloc]init]];
-    [self.tabBarController presentViewController:LiveNav animated:YES completion:nil];
+    [SLAppMediaPerssion requestMediaCapturerAccessWithCompletionHandler:^(SLDeviceErrorStatus status) {
+        switch (status) {
+            case 0:
+            {
+     
+                SLLiveViewController *vc = [[SLLiveViewController alloc] init];
+                vc.hidesBottomBarWhenPushed  = YES;
+                UINavigationController *nav = self.tabBarController.selectedViewController;
+                [nav pushViewController:vc animated:YES];
+            }
+                
+                break;
+            default:
+            {
+            
+                
+            }
+                break;
+        }
+        
+    }];
+
 }
 
 #pragma mark - 登录页面
@@ -143,6 +169,18 @@
     UINavigationController *loginNav = [[UINavigationController alloc]initWithRootViewController:[[ShowLoginViewController alloc]init]];
     [self.tabBarController presentViewController:loginNav animated:YES completion:nil];
     self.loginNav = loginNav;
+}
+#pragma mark - 聊天页面
+- (void)pushToChatViewControllerWithTargetUserId:(NSString *)targetUserId
+{
+    if (AccountUserInfoModel.userid) {
+            SLPrivateChatViewController *vc = [[SLPrivateChatViewController alloc] init];
+            vc.targetUid = targetUserId;
+            UINavigationController *nav = self.tabBarController.selectedViewController;
+            [nav pushViewController:vc animated:YES];
+    }else{
+        [self presentLoginViewController];
+    }
 }
 #pragma mark - logout
 -(void)logout:(NSString *)content{
@@ -168,4 +206,75 @@
     };
     dispatch_main_sync_safe(block);
 }
+
+#pragma mark - 跳转个人信息页
+-(void)pushtoUserInfoVC;
+{
+    UINavigationController *nav = self.tabBarController.selectedViewController;
+    UserInfoViewController *vc = [[UserInfoViewController alloc] init];
+    vc.hidesBottomBarWhenPushed = YES;
+    [nav pushViewController:vc animated:YES];
+
+}
+#pragma mark - 跳转设置页
+-(void)pushtoUserSettingVC;
+{
+    UINavigationController *nav = self.tabBarController.selectedViewController;
+    ShowSettingViewController *vc = [[ShowSettingViewController alloc] init];
+    vc.hidesBottomBarWhenPushed = YES;
+    [nav pushViewController:vc animated:YES];
+
+}
+
+#pragma mark - 跳转榜单页
+-(void)pushtoTopListVC
+{
+    UINavigationController *nav = self.tabBarController.selectedViewController;
+    SLTopListViewController *vc = [[SLTopListViewController alloc] init];
+    vc.hidesBottomBarWhenPushed = YES;
+    [nav pushViewController:vc animated:YES];
+
+}
+#pragma mark - 跳转评论页
+- (void)pushComment
+{
+    UINavigationController *nav = self.tabBarController.selectedViewController;
+    SLCommentViewController *vc = [[SLCommentViewController alloc] init];
+    vc.navTitle = @"评论";
+    [nav pushViewController:vc animated:YES];
+}
+#pragma mark - 跳转赞页
+- (void)pushLike
+{
+    UINavigationController *nav = self.tabBarController.selectedViewController;
+    SLCommentViewController *vc = [[SLCommentViewController alloc] init];
+    vc.navTitle = @"赞👍";
+    [nav pushViewController:vc animated:YES];
+}
+#pragma mark - 跳转fans
+- (void)pushFans
+{
+    UINavigationController *nav = self.tabBarController.selectedViewController;
+    SLFansViewController *vc = [[SLFansViewController alloc] init];
+    [nav pushViewController:vc animated:YES];
+}
+#pragma mark 个人页
+
+- (void)pushToUserCenterControllerWithUid:(NSString *)userID {
+    [self pushToUserCenterControllerWithUid:userID fromChat:NO];
+}
+
+- (void)pushToUserCenterControllerWithUid:(NSString *)userID fromChat:(BOOL)fromChat
+{
+    [ShowWaringView waringView:@"跳转个人页" style:WaringStyleBlue];
+}
+#pragma mark - 联系人
+
+- (void)pushToFriendListViewController
+{
+    SLFriendListViewController* vc=[SLFriendListViewController new];
+    UINavigationController *nav = self.tabBarController.selectedViewController;
+    [nav pushViewController:vc animated:YES];
+}
+
 @end
