@@ -15,6 +15,17 @@
 #import "AccountModel.h"
 
 #import "SLPlayerViewController.h"
+#import "SLChatRoomView.h"
+#import "AccountModel.h"
+#import "SLConfigAction.h"
+
+@interface showModel:BaseModel
+@property (nonatomic,strong)NSArray *array;
+@end
+
+@implementation showModel
+@end
+
 @interface ShowScrollerView: UIScrollView
 
 @end
@@ -44,7 +55,8 @@
 @property (nonatomic,strong)ShowScrollerView * bkscrollerView;
 @property (nonatomic, assign) NSInteger currentPage;
 
-
+@property (nonatomic,strong) ShowAction *action ;
+@property (nonatomic,strong) NSMutableArray *actionArray;
 
 @end
 
@@ -52,41 +64,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view.
     [self.navigationBarView setNavigationColor:NavigationColorBlack];
     self.view.backgroundColor = kThemeWhiteColor;
     [self setNavView];
-    
-//    ShowLoginAction *action = [ShowLoginAction action];
-//    action.phone = @"130000000000";
-//    action.pwd =@"123456";
-//    action.modelClass = [BaseModel class] ;
-//    action.finishedBlock = ^(id result) {
-//        //请求成功
-//        NSDictionary * response=(NSDictionary *)result;
-//        if ([response isKindOfClass:[NSDictionary class]])
-//        {
-//            //model转换或其他处理
-//        }
-//    };
-//    action.failedBlock = ^(NSError *error) {
-//
-//    };
-//    [action start];
-    ShowReqAction *action  = [ShowReqAction action];
-    action.type = @"phone";
-    action.tid = @"13011851573";
-    action.pwd = @"198755";
-    action.verify_code = @"198755";
-    [action startRequestSucess:^(id result) {
-        
-    } FaildBlock:^(NSError *error) {
-        
-    }];
-    
-    AccountModel *model = [AccountModel shared];
-    [NSKeyedArchiver  archivedDataWithRootObject:model];
-    
+    self.actionArray = [NSMutableArray arrayWithCapacity:0];
+//   SLChatRoomView *view =   [SLChatRoomView showInView:self.view WithChatRoomId:@""];
+//    [view j]
 }
 - (void)setNavView{
     [self.view addSubview:self.bkscrollerView];
@@ -95,6 +80,48 @@
     [self.bkscrollerView addSubview:self.secondVC.view];
     [self.bkscrollerView addSubview:self.thirdVC.view];
 }
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+//   if(!AccountUserInfoModel.uid){
+        [self request];
+//    }
+}
+- (void)request{
+    
+
+//    ShowReqAction * action = [ShowReqAction action];
+//    action.tid = @"13910031111";
+//    action.pwd = @"123456";
+//    action.verify_code = @"000001";
+//    action.type = @"phone";
+//    action.modelClass =  AccountModel.self ;
+//    [self startRequestAction:action Sucess:^(AccountModel * reponseModel) {
+//        AccountModel *model = [AccountModel shared];
+//        model.state = UserAccountState_Login;
+//        [model updateInfo:reponseModel];
+//        [model save];
+//    } FaildBlock:^(NSError *error) {
+//        [HDHud _showMessageInView:self.view title:error.userInfo[@"msg"]];
+//    }];
+    
+    ShowLoginAction *action  = [ShowLoginAction action];
+    action.pwd = @"123456";
+    action.phone = @"13910031111";
+    action.third_type = @"phone";
+    action.modelClass =  AccountModel.self ;
+    [self startRequestAction:action Sucess:^(AccountModel * reponseModel) {
+        AccountModel *model = [AccountModel shared];
+        model.state = UserAccountState_Login;
+        [model updateInfo:reponseModel];
+        [model save];
+        [IMSer connectRongCloud];
+    } FaildBlock:^(NSError *error) {
+
+    }];
+}
+
+
 -(HomeHeader *)homeheader
 {
     if (!_homeheader) {
@@ -126,30 +153,24 @@
 -(ShowHomeBaseController *)firstVC
 {
     if (!_firstVC) {
-        _firstVC = [ShowHomeBaseController initVC];
+        _firstVC = [[ShowHomeBaseController alloc]initWithViewCount:HomeViewLines_Two homeViewType:HomeViewType_Concer];
         _firstVC.view.frame = CGRectMake(0, 0, KScreenWidth, _bkscrollerView.height);
-        _firstVC.viewCount = 2;
-        _firstVC.viewTag = 1;
     }
     return _firstVC;
 }
 -(ShowHomeBaseController *)secondVC
 {
     if (!_secondVC) {
-        _secondVC = [ShowHomeBaseController initVC];
+        _secondVC = [[ShowHomeBaseController alloc] initWithViewCount:HomeViewLines_One homeViewType:HomeViewType_Hot];
         _secondVC.view.frame = CGRectMake(KScreenWidth, 0, KScreenWidth, _bkscrollerView.height);
-        _secondVC.viewCount = 1;
-        _secondVC.viewTag = 1;
     }
     return _secondVC;
 }
 -(ShowHomeBaseController *)thirdVC
 {
     if (!_thirdVC) {
-        _thirdVC = [ShowHomeBaseController initVC];
+        _thirdVC = [[ShowHomeBaseController alloc] initWithViewCount:HomeViewLines_Three homeViewType:HomeViewType_New];
         _thirdVC.view.frame = CGRectMake(KScreenWidth*2, 0, KScreenWidth, _bkscrollerView.height);
-        _thirdVC.viewCount = 3;
-        _thirdVC.viewTag = 1;
     }
     return _thirdVC;
 }
@@ -205,13 +226,13 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

@@ -6,7 +6,7 @@
 //  Copyright © 2018年 vning. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "SLCollectionViewController.h"
 typedef NS_ENUM(NSInteger,HomeViewLines) {//列样式
     HomeViewLines_One  = 1,
     HomeViewLines_Two  = 2,
@@ -18,9 +18,10 @@ typedef NS_ENUM(NSInteger,HomeViewType) {
     HomeViewType_New  = 2,//推荐
 };
 
-@interface ShowHomeBaseController : BaseViewController<UICollectionViewDelegate,UICollectionViewDataSource>
+@interface ShowHomeBaseController : SLCollectionViewController<UICollectionViewDelegate,UICollectionViewDataSource>
 @property (nonatomic,assign)HomeViewType viewTag;//类别
 @property (nonatomic,assign)HomeViewLines viewCount;//样式
 @property (nonatomic,strong)UICollectionView * mainCollectionView;
 
+- (instancetype)initWithViewCount:(HomeViewLines)viewCount homeViewType:(HomeViewType)homeViewType;
 @end
