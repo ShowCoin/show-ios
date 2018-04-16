@@ -30,7 +30,7 @@
     self.perpage = 5 ;
     
     @weakify(self)
-   //监听dataSource刷新tableView
+
     [[[[[RACObserve(self, dataSource) distinctUntilChanged] skip:1]deliverOnMainThread]takeUntil:self.rac_willDeallocSignal] subscribeNext:^(NSArray *dataSource) {
         @strongify(self);
         [self reloadData];
