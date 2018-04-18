@@ -80,6 +80,7 @@
 		439859EF2080BC9700F8528B /* SLChatRoomMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 439859E92080BC9700F8528B /* SLChatRoomMessage.m */; };
 		439859F02080BC9700F8528B /* SLChatRoomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 439859EA2080BC9700F8528B /* SLChatRoomView.m */; };
 		439859F12080BC9700F8528B /* SLMessageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 439859EB2080BC9700F8528B /* SLMessageInfo.m */; };
+		43AC096D20877919001E7773 /* ChatRoomMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 43AC096C20877919001E7773 /* ChatRoomMessage.m */; };
 		43F400DC2072255F00A06159 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F400DB2072255F00A06159 /* BaseModel.m */; };
 		43F400E22072272500A06159 /* TransactionRecordsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F400E12072272500A06159 /* TransactionRecordsModel.m */; };
 		43F400E5207228EE00A06159 /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F400E3207228EE00A06159 /* BaseTableViewCell.m */; };
@@ -439,6 +440,8 @@
 		439859E92080BC9700F8528B /* SLChatRoomMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLChatRoomMessage.m; sourceTree = "<group>"; };
 		439859EA2080BC9700F8528B /* SLChatRoomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLChatRoomView.m; sourceTree = "<group>"; };
 		439859EB2080BC9700F8528B /* SLMessageInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLMessageInfo.m; sourceTree = "<group>"; };
+		43AC096B20877919001E7773 /* ChatRoomMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatRoomMessage.h; sourceTree = "<group>"; };
+		43AC096C20877919001E7773 /* ChatRoomMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatRoomMessage.m; sourceTree = "<group>"; };
 		43F400DA2072255F00A06159 /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
 		43F400DB2072255F00A06159 /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
 		43F400E02072272500A06159 /* TransactionRecordsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransactionRecordsModel.h; sourceTree = "<group>"; };
@@ -1170,6 +1173,8 @@
 		439859DF2080BC9700F8528B /* SLChatRoomView */ = {
 			isa = PBXGroup;
 			children = (
+				43AC096B20877919001E7773 /* ChatRoomMessage.h */,
+				43AC096C20877919001E7773 /* ChatRoomMessage.m */,
 				439859E02080BC9700F8528B /* SLChatIMManager.m */,
 				439859E12080BC9700F8528B /* SLChatRoomTableViewCell.m */,
 				439859E22080BC9700F8528B /* SLCharRoomContentHelp.h */,
@@ -2387,6 +2392,7 @@
 				93154E20206264B200BF088F /* CYPromptCoverViewQueue.m in Sources */,
 				72FE9B6920621F59008DD3D5 /* main.m in Sources */,
 				431A5DDC20861A670052C04D /* SLConversationInputMoreCardView.m in Sources */,
+				43AC096D20877919001E7773 /* ChatRoomMessage.m in Sources */,
 				93154E0F206264B200BF088F /* UIImageView+ACMediaExt.m in Sources */,
 				93154E03206264B200BF088F /* SDCycleScrollView.m in Sources */,
 				93154E0B206264B200BF088F /* FBKVOController.m in Sources */,
