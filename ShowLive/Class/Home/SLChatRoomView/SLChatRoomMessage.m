@@ -1,6 +1,6 @@
 //
 //  BKMessageInfo.m
-//  Shell
+//  ShowLive
 //
 //  Created by mac on 16/5/27.
 //  Copyright © 2016年 SouYu. All rights reserved.

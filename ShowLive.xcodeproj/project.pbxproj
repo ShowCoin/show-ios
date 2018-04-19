@@ -246,6 +246,9 @@
 		931602AE206CDFCD00455B5F /* CMakeLists.txt in Resources */ = {isa = PBXBuildFile; fileRef = 931602A2206CDFCC00455B5F /* CMakeLists.txt */; };
 		931602AF206CDFCD00455B5F /* crypto-mcf.c in Sources */ = {isa = PBXBuildFile; fileRef = 931602A3206CDFCC00455B5F /* crypto-mcf.c */; };
 		931602B0206CDFCD00455B5F /* crypto_scrypt-nosse.c in Sources */ = {isa = PBXBuildFile; fileRef = 931602A4206CDFCC00455B5F /* crypto_scrypt-nosse.c */; };
+		9358804D20885CA400CDC705 /* SLRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9358804B20885CA400CDC705 /* SLRefreshFooter.m */; };
+		9358804E20885CA400CDC705 /* SLRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 9358804C20885CA400CDC705 /* SLRefreshHeader.m */; };
+		9358805220885CAB00CDC705 /* HFUTNotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9358805120885CAB00CDC705 /* HFUTNotificationCenter.m */; };
 		936A197D20788FF6000A043A /* ShowHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 936A197C20788FF6000A043A /* ShowHomeViewController.m */; };
 		936A198020789007000A043A /* ShowLiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 936A197F20789007000A043A /* ShowLiveViewController.m */; };
 		936A19902078A668000A043A /* ChangeheadportraitController.m in Sources */ = {isa = PBXBuildFile; fileRef = 936A19832078A665000A043A /* ChangeheadportraitController.m */; };
@@ -815,6 +818,12 @@
 		931602D0206CDFE700455B5F /* scrypt-jane-mix_chacha-xop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "scrypt-jane-mix_chacha-xop.h"; sourceTree = "<group>"; };
 		931602D1206CDFE700455B5F /* scrypt-jane-pbkdf2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "scrypt-jane-pbkdf2.h"; sourceTree = "<group>"; };
 		931602D2206CDFE800455B5F /* scrypt-jane-mix_chacha-sse2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "scrypt-jane-mix_chacha-sse2.h"; sourceTree = "<group>"; };
+		9358804920885CA400CDC705 /* SLRefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLRefreshHeader.h; sourceTree = "<group>"; };
+		9358804A20885CA400CDC705 /* SLRefreshFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLRefreshFooter.h; sourceTree = "<group>"; };
+		9358804B20885CA400CDC705 /* SLRefreshFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLRefreshFooter.m; sourceTree = "<group>"; };
+		9358804C20885CA400CDC705 /* SLRefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLRefreshHeader.m; sourceTree = "<group>"; };
+		9358805020885CAB00CDC705 /* HFUTNotificationCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFUTNotificationCenter.h; sourceTree = "<group>"; };
+		9358805120885CAB00CDC705 /* HFUTNotificationCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFUTNotificationCenter.m; sourceTree = "<group>"; };
 		936A197B20788FF6000A043A /* ShowHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowHomeViewController.h; sourceTree = "<group>"; };
 		936A197C20788FF6000A043A /* ShowHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowHomeViewController.m; sourceTree = "<group>"; };
 		936A197E20789007000A043A /* ShowLiveViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowLiveViewController.h; sourceTree = "<group>"; };
@@ -1450,6 +1459,8 @@
 		93154D0220623A1900BF088F /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				9358804F20885CAB00CDC705 /* HFUTNotificationCenter */,
+				9358804820885CA400CDC705 /* SLCustomRefreshView */,
 				93154E6020626EA700BF088F /* ShowNoDataView */,
 				93154E5920626D9800BF088F /* ShowHelper */,
 				93154E5220626D6400BF088F /* UserDefault */,
@@ -2000,6 +2011,26 @@
 			path = code;
 			sourceTree = "<group>";
 		};
+		9358804820885CA400CDC705 /* SLCustomRefreshView */ = {
+			isa = PBXGroup;
+			children = (
+				9358804920885CA400CDC705 /* SLRefreshHeader.h */,
+				9358804A20885CA400CDC705 /* SLRefreshFooter.h */,
+				9358804B20885CA400CDC705 /* SLRefreshFooter.m */,
+				9358804C20885CA400CDC705 /* SLRefreshHeader.m */,
+			);
+			path = SLCustomRefreshView;
+			sourceTree = "<group>";
+		};
+		9358804F20885CAB00CDC705 /* HFUTNotificationCenter */ = {
+			isa = PBXGroup;
+			children = (
+				9358805020885CAB00CDC705 /* HFUTNotificationCenter.h */,
+				9358805120885CAB00CDC705 /* HFUTNotificationCenter.m */,
+			);
+			path = HFUTNotificationCenter;
+			sourceTree = "<group>";
+		};
 		936A197220788F02000A043A /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -2390,6 +2421,7 @@
 				93154D1720623BAB00BF088F /* NSArray+Addition.m in Sources */,
 				93154CFC2062396000BF088F /* KMencryption.m in Sources */,
 				93154E20206264B200BF088F /* CYPromptCoverViewQueue.m in Sources */,
+				9358804D20885CA400CDC705 /* SLRefreshFooter.m in Sources */,
 				72FE9B6920621F59008DD3D5 /* main.m in Sources */,
 				431A5DDC20861A670052C04D /* SLConversationInputMoreCardView.m in Sources */,
 				43AC096D20877919001E7773 /* ChatRoomMessage.m in Sources */,
@@ -2481,6 +2513,7 @@
 				93154D5520623C9400BF088F /* UIViewController+XLBubbleTransition.m in Sources */,
 				936A19E82078B925000A043A /* GCDTimer.m in Sources */,
 				93154E18206264B200BF088F /* STAnimatedTransitioning.m in Sources */,
+				9358804E20885CA400CDC705 /* SLRefreshHeader.m in Sources */,
 				431A5DE120861A670052C04D /* SLEmojiHelper.m in Sources */,
 				722AB8042078E2EB00D5694D /* ShowHotListCell.m in Sources */,
 				93154E692062705900BF088F /* ShowNoNetView.m in Sources */,
@@ -2577,6 +2610,7 @@
 				93154E4C2062669800BF088F /* MD5Encryption.m in Sources */,
 				431A5DE020861A670052C04D /* SLEmojiPageCollectionCell.m in Sources */,
 				93154E04206264B200BF088F /* UIView+SDExtension.m in Sources */,
+				9358805220885CAB00CDC705 /* HFUTNotificationCenter.m in Sources */,
 				93154E10206264B200BF088F /* NSString+ACMediaExt.m in Sources */,
 				93154D5120623C9400BF088F /* NSData+ImageContentType.m in Sources */,
 				936A19902078A668000A043A /* ChangeheadportraitController.m in Sources */,
