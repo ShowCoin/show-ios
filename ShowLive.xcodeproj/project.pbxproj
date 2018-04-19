@@ -246,6 +246,10 @@
 		931602AE206CDFCD00455B5F /* CMakeLists.txt in Resources */ = {isa = PBXBuildFile; fileRef = 931602A2206CDFCC00455B5F /* CMakeLists.txt */; };
 		931602AF206CDFCD00455B5F /* crypto-mcf.c in Sources */ = {isa = PBXBuildFile; fileRef = 931602A3206CDFCC00455B5F /* crypto-mcf.c */; };
 		931602B0206CDFCD00455B5F /* crypto_scrypt-nosse.c in Sources */ = {isa = PBXBuildFile; fileRef = 931602A4206CDFCC00455B5F /* crypto_scrypt-nosse.c */; };
+		9358805E20885EF900CDC705 /* SLADModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9358805620885EF900CDC705 /* SLADModel.m */; };
+		9358805F20885EF900CDC705 /* SLADView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9358805820885EF900CDC705 /* SLADView.m */; };
+		9358806020885EF900CDC705 /* DALabeledCircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9358805920885EF900CDC705 /* DALabeledCircularProgressView.m */; };
+		9358806120885EF900CDC705 /* DACircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9358805A20885EF900CDC705 /* DACircularProgressView.m */; };
 		936A197D20788FF6000A043A /* ShowHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 936A197C20788FF6000A043A /* ShowHomeViewController.m */; };
 		936A198020789007000A043A /* ShowLiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 936A197F20789007000A043A /* ShowLiveViewController.m */; };
 		936A19902078A668000A043A /* ChangeheadportraitController.m in Sources */ = {isa = PBXBuildFile; fileRef = 936A19832078A665000A043A /* ChangeheadportraitController.m */; };
@@ -815,6 +819,14 @@
 		931602D0206CDFE700455B5F /* scrypt-jane-mix_chacha-xop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "scrypt-jane-mix_chacha-xop.h"; sourceTree = "<group>"; };
 		931602D1206CDFE700455B5F /* scrypt-jane-pbkdf2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "scrypt-jane-pbkdf2.h"; sourceTree = "<group>"; };
 		931602D2206CDFE800455B5F /* scrypt-jane-mix_chacha-sse2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "scrypt-jane-mix_chacha-sse2.h"; sourceTree = "<group>"; };
+		9358805520885EF900CDC705 /* SLADModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLADModel.h; sourceTree = "<group>"; };
+		9358805620885EF900CDC705 /* SLADModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLADModel.m; sourceTree = "<group>"; };
+		9358805820885EF900CDC705 /* SLADView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLADView.m; sourceTree = "<group>"; };
+		9358805920885EF900CDC705 /* DALabeledCircularProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DALabeledCircularProgressView.m; sourceTree = "<group>"; };
+		9358805A20885EF900CDC705 /* DACircularProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DACircularProgressView.m; sourceTree = "<group>"; };
+		9358805B20885EF900CDC705 /* DALabeledCircularProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DALabeledCircularProgressView.h; sourceTree = "<group>"; };
+		9358805C20885EF900CDC705 /* SLADView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLADView.h; sourceTree = "<group>"; };
+		9358805D20885EF900CDC705 /* DACircularProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DACircularProgressView.h; sourceTree = "<group>"; };
 		936A197B20788FF6000A043A /* ShowHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowHomeViewController.h; sourceTree = "<group>"; };
 		936A197C20788FF6000A043A /* ShowHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowHomeViewController.m; sourceTree = "<group>"; };
 		936A197E20789007000A043A /* ShowLiveViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowLiveViewController.h; sourceTree = "<group>"; };
@@ -1289,7 +1301,6 @@
 		72FE9B5820621F59008DD3D5 /* ShowLive */ = {
 			isa = PBXGroup;
 			children = (
-				431A5D5320861A670052C04D /* Chat */,
 				931602712068BD5300455B5F /* Class */,
 				43192C1820732FBF0048B8E4 /* Services */,
 				43F400D92072252400A06159 /* Model */,
@@ -1899,6 +1910,8 @@
 		931602712068BD5300455B5F /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				9358805320885EE800CDC705 /* AD */,
+				431A5D5320861A670052C04D /* Chat */,
 				936A197720788F54000A043A /* Live */,
 				936A197220788F02000A043A /* Home */,
 				931199D420775CEB00C58B9E /* Login */,
@@ -1998,6 +2011,37 @@
 				931602B3206CDFE000455B5F /* scrypt-jane-test-vectors.h */,
 			);
 			path = code;
+			sourceTree = "<group>";
+		};
+		9358805320885EE800CDC705 /* AD */ = {
+			isa = PBXGroup;
+			children = (
+				9358805420885EF900CDC705 /* Model */,
+				9358805720885EF900CDC705 /* View */,
+			);
+			path = AD;
+			sourceTree = "<group>";
+		};
+		9358805420885EF900CDC705 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9358805520885EF900CDC705 /* SLADModel.h */,
+				9358805620885EF900CDC705 /* SLADModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9358805720885EF900CDC705 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9358805820885EF900CDC705 /* SLADView.m */,
+				9358805920885EF900CDC705 /* DALabeledCircularProgressView.m */,
+				9358805A20885EF900CDC705 /* DACircularProgressView.m */,
+				9358805B20885EF900CDC705 /* DALabeledCircularProgressView.h */,
+				9358805C20885EF900CDC705 /* SLADView.h */,
+				9358805D20885EF900CDC705 /* DACircularProgressView.h */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		936A197220788F02000A043A /* Home */ = {
@@ -2392,6 +2436,7 @@
 				93154E20206264B200BF088F /* CYPromptCoverViewQueue.m in Sources */,
 				72FE9B6920621F59008DD3D5 /* main.m in Sources */,
 				431A5DDC20861A670052C04D /* SLConversationInputMoreCardView.m in Sources */,
+				9358806120885EF900CDC705 /* DACircularProgressView.m in Sources */,
 				43AC096D20877919001E7773 /* ChatRoomMessage.m in Sources */,
 				93154E0F206264B200BF088F /* UIImageView+ACMediaExt.m in Sources */,
 				93154E03206264B200BF088F /* SDCycleScrollView.m in Sources */,
@@ -2427,6 +2472,7 @@
 				431A5DF420861A680052C04D /* SLPrivateChatViewController+Common.m in Sources */,
 				722AB7E120774E8400D5694D /* UserInfoListCell.m in Sources */,
 				431A5DCE20861A670052C04D /* SLChatVoiceMessageCellViewModel.m in Sources */,
+				9358805F20885EF900CDC705 /* SLADView.m in Sources */,
 				93154E28206264B200BF088F /* JPVideoPlayerCacheConfig.m in Sources */,
 				93154E08206264B200BF088F /* TAAnimatedDotView.m in Sources */,
 				93154D5920623C9400BF088F /* UIImage+XFExtension.m in Sources */,
@@ -2575,7 +2621,9 @@
 				439859F12080BC9700F8528B /* SLMessageInfo.m in Sources */,
 				93154E832062907200BF088F /* ShowAction.m in Sources */,
 				93154E4C2062669800BF088F /* MD5Encryption.m in Sources */,
+				9358806020885EF900CDC705 /* DALabeledCircularProgressView.m in Sources */,
 				431A5DE020861A670052C04D /* SLEmojiPageCollectionCell.m in Sources */,
+				9358805E20885EF900CDC705 /* SLADModel.m in Sources */,
 				93154E04206264B200BF088F /* UIView+SDExtension.m in Sources */,
 				93154E10206264B200BF088F /* NSString+ACMediaExt.m in Sources */,
 				93154D5120623C9400BF088F /* NSData+ImageContentType.m in Sources */,
