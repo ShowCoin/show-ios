@@ -1,6 +1,6 @@
 //
 //  BKMessageInfo.h
-//  ShowLive
+//  Shell
 //
 //  Created by zhangxingong on 18/4/13.
 //  Copyright © 2018年 show.one All rights reserved.

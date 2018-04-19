@@ -2,8 +2,8 @@
 //  NSAttributedString+KMHeight.m
 //  ShowLive
 //
-//  Created by iori_chou on 18/4/1.
-//  Copyright © 2018年 show. All rights reserved.
+//  Created by sunjiaqi on 2017/11/28.
+//  Copyright © 2017年 show. All rights reserved.
 //
 
 #import "NSAttributedString+KMHeight.h"

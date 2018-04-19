@@ -1,9 +1,9 @@
 //
 //  NSString+Binary.h
-//  ShowLive
+//  Shell
 //
-//  Created by iori_chou on 18/4/1.
-//  Copyright © 2018年 show. All rights reserved.
+//  Created by sunjiaqi on 16/7/1.
+//  Copyright © 2016年 show. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
