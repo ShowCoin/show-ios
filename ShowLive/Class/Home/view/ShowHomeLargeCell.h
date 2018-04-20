@@ -8,9 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ShowHomeLargeCell : UICollectionViewCell
+@protocol ShowHomeLargeCellDelegate <NSObject>
+
+-(void)LargeCellConcernActionDelegateWithModel:(SLLiveListModel *)model;
+
+@optional
+
+@end
+@interface ShowHomeLargeCell : UICollectionViewCell<HeadPortraitDelegate>
 @property (nonatomic, strong) YYAnimatedImageView    * coverImage;
-@property (nonatomic, strong) UIButton               * headPortraitBtn;
+@property (nonatomic, strong) SLHeadPortrait         * headPortrait;
 @property (nonatomic, strong) UIButton               * addBtn;
 @property (nonatomic, strong) UIButton               * thumbBtn;
 @property (nonatomic, strong) UIButton               * commentBtn;
@@ -19,5 +26,7 @@
 @property (nonatomic, strong) UILabel                * peopleText;
 @property (nonatomic, strong) UILabel                * nickName;
 @property (nonatomic, strong) UILabel                * liveTitle;
+@property (nonatomic, strong) SLLiveListModel        * dataModel;
+@property (nonatomic, weak) id<ShowHomeLargeCellDelegate> delegate;
 
 @end

@@ -13,12 +13,11 @@
 @end
 
 @implementation SLCollectionViewController
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.dataSource = [NSMutableArray arrayWithCapacity:0];
     self.page =0 ;
-    self.perpage = 20 ;
+    self.perpage = 20;
     self.isRefresh = YES;
     //    self.viewCount = HomeViewLines_Two;
     @weakify(self);
@@ -64,7 +63,7 @@
     
     //下拉刷新统一处理
     if ([self shouldPullToRefresh]) {
-        self.mainCollectionView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        self.mainCollectionView.mj_header = [SLRefreshHeader headerWithRefreshingBlock:^{
             @strongify(self)
             self.page = 0;
             self.isRefresh = YES;
@@ -83,14 +82,14 @@
     }
     //上拉刷新统一处理
     if ([self shouldInfiniteScrolling]) {
+        @weakify(self);
         self.mainCollectionView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+            @strongify(self);
             self.isRefresh = NO;
-            @strongify(self)
             [self requestWithPage:self.page perPage:self.perpage paramters:[self createAction] SuccessBlock:^(id result) {
 //                self.page ++;
                 if ([[result objectForKey:@"next_cursor"] integerValue] == -1) {
                     [self.mainCollectionView.mj_footer endRefreshingWithNoMoreData];
-
                 }else{
                     [self.mainCollectionView.mj_footer endRefreshing];
                 }

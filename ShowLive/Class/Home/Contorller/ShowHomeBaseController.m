@@ -7,9 +7,6 @@
 //
 
 #import "ShowHomeBaseController.h"
-#import "ShowHomeSamallCell.h"
-#import "ShowHomeMiddleCell.h"
-#import "ShowHomeLargeCell.h"
 #import "NewReusableView.h"
 #import "ShowAction.h"
 
@@ -20,10 +17,9 @@
 
 @interface ShowHomeBaseController ()
 @property(nonatomic,assign)CGFloat cellWith;
+@property(nonatomic,assign)NSInteger indexRow;
 
 @end
-
-
 
 @implementation ShowHomeBaseController
 @dynamic mainCollectionView;
@@ -32,6 +28,7 @@
     if(self = [super init]){
         self.viewCount = viewCount ;
         self.viewTag = homeViewType ;
+        self.indexRow = 0;
     }
     return self;
 }
@@ -124,7 +121,6 @@
     return   nil ;
 }
 
-
 #pragma mark - ********************** collectionViewdelegate **********************
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
@@ -136,10 +132,10 @@
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    NSLog(@"ji入");
     if (_viewCount == HomeViewLines_One) {
         ShowHomeLargeCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ShowHomeLargeCell" forIndexPath:indexPath];
         cell.dataModel = [self.dataSource objectAtIndex:indexPath.row];
+        cell.delegate = self;
         return cell;
     }else if (_viewCount == HomeViewLines_Two){
         ShowHomeMiddleCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ShowHomeMiddleCell" forIndexPath:indexPath];
@@ -157,6 +153,7 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
  
     [PageMgr pushToLiveRoomControllerWithData:[self.dataSource objectAtIndex:indexPath.row]];
+    
 }
 
 -(UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
@@ -195,6 +192,16 @@
     }
     return CGSizeMake(KScreenWidth, 0);
 }
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    // 获取当前显示的cell的下标
+    NSIndexPath *firstIndexPath = [[self.mainCollectionView indexPathsForVisibleItems] firstObject];
+    // 赋值给记录当前坐标的变量
+    self.indexRow = firstIndexPath.row;
+    // 更新底部的数据
+    // ...
+}
+
+#pragma mark - ********************** actions **********************
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -203,12 +210,15 @@
     self.page = [[result objectForKey:@"next_cursor"] integerValue];
     NSMutableArray * dataArr = [[NSMutableArray alloc]init];
     dataArr = [SLLiveListModel mj_objectArrayWithKeyValuesArray:[result objectForKey:@"list"]];
-    NSMutableArray * modelArr = [[NSMutableArray alloc]init];
-    if (!self.isRefresh) {
-        [modelArr addObjectsFromArray:self.dataSource];
+    if (dataArr.count) {
+        NSMutableArray * modelArr = [[NSMutableArray alloc]init];
+        if (!self.isRefresh) {
+            [modelArr addObjectsFromArray:self.dataSource];
+        }
+        [modelArr addObjectsFromArray:dataArr];
+        self.dataSource = modelArr;
+        
     }
-    [modelArr addObjectsFromArray:dataArr];
-    self.dataSource = modelArr;
 
 }
 
@@ -228,7 +238,12 @@
         action.cursor =[NSString stringWithFormat:@"%ld",self.page];
         return   action ;
     }else if (_viewTag == HomeViewType_Concer){
-        SLShowConcernAction * action = [SLShowConcernAction action];
+//        SLShowConcernAction * action = [SLShowConcernAction action];
+//        action.count = [NSString stringWithFormat:@"%ld",self.perpage];
+//        action.cursor =[NSString stringWithFormat:@"%ld",self.page];
+//        return   action ;
+        SLHomeHotViewAction * action = [SLHomeHotViewAction action];
+        action.sort = @"top";
         action.count = [NSString stringWithFormat:@"%ld",self.perpage];
         action.cursor =[NSString stringWithFormat:@"%ld",self.page];
         return   action ;
@@ -248,6 +263,15 @@
 -(NSString *)emptyDataDesc{
     return @"";
 }
+
+#pragma mark - ********************** delegates **********************
+-(void)LargeCellConcernActionDelegateWithModel:(SLLiveListModel *)model
+{
+    [self.dataSource replaceObjectAtIndex:self.indexRow withObject:model];
+    [self.mainCollectionView reloadItemsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:self.indexRow inSection:0]]];
+}
+
+
 /*
 #pragma mark - Navigation
 

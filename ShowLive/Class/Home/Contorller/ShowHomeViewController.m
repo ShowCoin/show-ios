@@ -64,14 +64,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Do any additional setup after loading the view.
+        // Do any additional setup after loading the view.
     [self.navigationBarView setNavigationColor:NavigationColorBlack];
     self.view.backgroundColor = kThemeWhiteColor;
     [self setNavView];
     self.actionArray = [NSMutableArray arrayWithCapacity:0];
-//   SLChatRoomView *view =   [SLChatRoomView showInView:self.view WithChatRoomId:@""];
-//    [view j]
 }
 - (void)setNavView{
     [self.view addSubview:self.bkscrollerView];
@@ -83,32 +80,15 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-//   if(!AccountUserInfoModel.uid){
-        [self request];
-//    }
+   // [self request];
 }
 - (void)request{
-    
 
-//    ShowReqAction * action = [ShowReqAction action];
-//    action.tid = @"13910031111";
-//    action.pwd = @"123456";
-//    action.verify_code = @"000001";
-//    action.type = @"phone";
-//    action.modelClass =  AccountModel.self ;
-//    [self startRequestAction:action Sucess:^(AccountModel * reponseModel) {
-//        AccountModel *model = [AccountModel shared];
-//        model.state = UserAccountState_Login;
-//        [model updateInfo:reponseModel];
-//        [model save];
-//    } FaildBlock:^(NSError *error) {
-//        [HDHud _showMessageInView:self.view title:error.userInfo[@"msg"]];
-//    }];
-    
-    ShowLoginAction *action  = [ShowLoginAction action];
+    ShowReqAction * action = [ShowReqAction action];
+    action.tid = @"18910026892";
     action.pwd = @"123456";
-    action.phone = @"13910031111";
-    action.third_type = @"phone";
+    action.verify_code = @"000001";
+    action.type = @"phone";
     action.modelClass =  AccountModel.self ;
     [self startRequestAction:action Sucess:^(AccountModel * reponseModel) {
         AccountModel *model = [AccountModel shared];
@@ -117,8 +97,9 @@
         [model save];
         [IMSer connectRongCloud];
     } FaildBlock:^(NSError *error) {
-
+        [HDHud _showMessageInView:self.view title:error.userInfo[@"msg"]];
     }];
+
 }
 
 
@@ -190,9 +171,7 @@
 }
 -(void)leftBtnClick:(UIButton *)sender;
 {
-    SLPlayerViewController * playerVc = [[SLPlayerViewController alloc]init];
-    playerVc.hidesBottomBarWhenPushed=YES;
-    [self.navigationController pushViewController:playerVc animated:YES];
+
 }
 -(void)rightBtnClick:(UIButton *)sender;
 {
@@ -204,7 +183,6 @@
     if ( scrollView == _bkscrollerView) {
         int page = 0;
         page = floor((scrollView.contentOffset.x - kMainScreenWidth / 2) / kMainScreenWidth) + 1;
-        NSLog(@"^^^^^^^^^^^^^%d",page);
         if (_currentPage == page) {
             return;
         }
