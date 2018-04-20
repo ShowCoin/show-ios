@@ -223,10 +223,13 @@
 }
 
 -(void)hideErrorLoadingView{
+    @weakify(self);
     if (self.errorReloadView.superview) {
         [UIView animateWithDuration:0.25 animations:^{
+            @strongify(self);
             self.errorReloadView.alpha = 0;
         } completion:^(BOOL finished) {
+            @strongify(self);
             [self.errorReloadView removeFromSuperview];
         }];
     }

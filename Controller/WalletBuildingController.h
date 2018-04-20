@@ -9,6 +9,7 @@
 #import "BaseViewController.h"
 
 @interface WalletBuildingController : BaseViewController<UITableViewDelegate,UITableViewDataSource>
+
 @property (nonatomic,copy)NSString * password;
 @property (nonatomic,copy)NSString * nickName;
 
