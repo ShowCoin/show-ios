@@ -1,8 +1,8 @@
 //
 //  BaseTabBarController.m
-//  Shell
+//  showLive
 //
-//  Created by sunjiaqi on 16/5/10.
+//  Created by kyo on 16/5/10.
 //  Copyright © 2016年 show. All rights reserved.
 //
 

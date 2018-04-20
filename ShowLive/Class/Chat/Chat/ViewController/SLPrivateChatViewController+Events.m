@@ -69,7 +69,7 @@
         AVAuthorizationStatus authStatus = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
         if (authStatus == AVAuthorizationStatusRestricted || authStatus ==AVAuthorizationStatusDenied)
         {
-            UIAlertController *alertController =  [UIAlertController alertControllerWithTitle:@"提示" message:@"请在设备的设置-隐私-相机中允许访问相机! 若不允许，您将无法在SEEU中拍摄视频和照片" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertController *alertController =  [UIAlertController alertControllerWithTitle:@"提示" message:@"请在设备的设置-隐私-相机中允许访问相机! 若不允许，您将无法在SHOW中拍摄视频和照片" preferredStyle:UIAlertControllerStyleAlert];
             UIAlertAction *settingAction = [UIAlertAction actionWithTitle:@"设置" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                 [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
             }];

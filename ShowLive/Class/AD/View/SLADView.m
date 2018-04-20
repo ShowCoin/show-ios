@@ -224,7 +224,7 @@
     if (!_descImageView) {
         UIImageView *imageView = [[UIImageView alloc] init];
         imageView.frame = (CGRect){ (kScreenWidth - 192 ) /2.0,kScreenHeight - 80,192,29};
-        imageView.image = [UIImage imageNamed:@"seeu_desc_icon"];
+        imageView.image = [UIImage imageNamed:@"desc_icon"];
         imageView.contentMode = UIViewContentModeScaleAspectFill;
         _descImageView = imageView;
     }

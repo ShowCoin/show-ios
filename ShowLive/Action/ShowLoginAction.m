@@ -12,8 +12,6 @@
 - (void)start {
     ShowRequestData *rd = [[ShowRequestData alloc] init];
     rd.interface = @"login";
-    
-    
     [rd appendPostValue:self.phone key:@"phone"];
     [rd appendPostValue:self.pwd key:@"pwd"];
     
