@@ -32,12 +32,15 @@
     [encourageBtn setTitleColor:kThemeWhiteColor forState:UIControlStateNormal];
     [self.view addSubview:encourageBtn];
     
+    @weakify(self);
     [[contributionBtn rac_signalForControlEvents:UIControlEventTouchUpInside]subscribeNext:^(id x) {
+        @strongify(self);
         [contributionBtn setTitleColor:kThemeWhiteColor forState:UIControlStateNormal];
         [encourageBtn setTitleColor:kGrayWithaaaaaa forState:UIControlStateNormal];
         [self.bkscrollerView setContentOffset:CGPointMake(0, 0) animated:NO];
     }];
     [[encourageBtn rac_signalForControlEvents:UIControlEventTouchUpInside]subscribeNext:^(id x) {
+        @strongify(self);
         [encourageBtn setTitleColor:kThemeWhiteColor forState:UIControlStateNormal];
         [contributionBtn setTitleColor:kGrayWithaaaaaa forState:UIControlStateNormal];
         [self.bkscrollerView setContentOffset:CGPointMake(kMainScreenWidth, 0) animated:NO];
@@ -107,6 +110,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)dealloc{
+    
+}
 /*
 #pragma mark - Navigation
 
