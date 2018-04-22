@@ -107,22 +107,12 @@
 		931199CA2076032E00C58B9E /* ShowModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 931199C92076032E00C58B9E /* ShowModelViewController.m */; };
 		931199D320774D5F00C58B9E /* UIViewController+RightSlide.m in Sources */ = {isa = PBXBuildFile; fileRef = 931199D220774D5F00C58B9E /* UIViewController+RightSlide.m */; };
 		931199D720775D0400C58B9E /* ShowLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 931199D620775D0400C58B9E /* ShowLoginViewController.m */; };
-		93154CF12062396000BF088F /* KMUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 93154CCF2062394600BF088F /* KMUtils.m */; };
-		93154CF22062396000BF088F /* KMShareUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 93154CD12062394800BF088F /* KMShareUtils.m */; };
 		93154CF32062396000BF088F /* NSObject+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 93154CD22062394800BF088F /* NSObject+Safe.m */; };
-		93154CF42062396000BF088F /* KMPathUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 93154CD42062394A00BF088F /* KMPathUtils.m */; };
-		93154CF52062396000BF088F /* UIImage+KMColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 93154CD82062394D00BF088F /* UIImage+KMColor.m */; };
 		93154CF62062396000BF088F /* NSDate+TSJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 93154CD92062394E00BF088F /* NSDate+TSJ.m */; };
 		93154CF72062396000BF088F /* UITextView+Rect.m in Sources */ = {isa = PBXBuildFile; fileRef = 93154CDA2062394F00BF088F /* UITextView+Rect.m */; };
-		93154CF82062396000BF088F /* NSAttributedString+KMHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 93154CDB2062395000BF088F /* NSAttributedString+KMHeight.m */; };
-		93154CF92062396000BF088F /* HLLeadProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 93154CDE2062395200BF088F /* HLLeadProfile.m */; };
 		93154CFA2062396000BF088F /* UIFont+font.m in Sources */ = {isa = PBXBuildFile; fileRef = 93154CDF2062395300BF088F /* UIFont+font.m */; };
-		93154CFB2062396000BF088F /* UILabel+KMRect.m in Sources */ = {isa = PBXBuildFile; fileRef = 93154CE32062395600BF088F /* UILabel+KMRect.m */; };
-		93154CFC2062396000BF088F /* KMencryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 93154CE42062395700BF088F /* KMencryption.m */; };
 		93154CFD2062396100BF088F /* UITextView+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 93154CE52062395800BF088F /* UITextView+Placeholder.m */; };
-		93154CFE2062396100BF088F /* KMJPushUntils.m in Sources */ = {isa = PBXBuildFile; fileRef = 93154CE62062395800BF088F /* KMJPushUntils.m */; };
 		93154CFF2062396100BF088F /* NSDateFormatter+TSJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 93154CE82062395A00BF088F /* NSDateFormatter+TSJ.m */; };
-		93154D002062396100BF088F /* KMUserDefaultUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 93154CED2062395E00BF088F /* KMUserDefaultUtils.m */; };
 		93154D012062396100BF088F /* UIView+Coordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93154CEE2062395F00BF088F /* UIView+Coordinate.m */; };
 		93154D1220623BAB00BF088F /* UILabel+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 93154D0820623BA400BF088F /* UILabel+Addition.m */; };
 		93154D1320623BAB00BF088F /* NSNumber+str.m in Sources */ = {isa = PBXBuildFile; fileRef = 93154D0920623BA500BF088F /* NSNumber+str.m */; };
@@ -224,7 +214,6 @@
 		93154E732062810E00BF088F /* ShowRequestData.m in Sources */ = {isa = PBXBuildFile; fileRef = 93154E722062810E00BF088F /* ShowRequestData.m */; };
 		93154E762062824100BF088F /* ShowError.m in Sources */ = {isa = PBXBuildFile; fileRef = 93154E752062824100BF088F /* ShowError.m */; };
 		93154E792062826500BF088F /* ShowErrorCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 93154E782062826500BF088F /* ShowErrorCode.m */; };
-		93154E7C206282FE00BF088F /* ShowHTTPRequestSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 93154E7B206282FE00BF088F /* ShowHTTPRequestSerializer.m */; };
 		93154E7F206283A700BF088F /* ShowHTTPResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 93154E7E206283A700BF088F /* ShowHTTPResponseSerializer.m */; };
 		93154E832062907200BF088F /* ShowAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 93154E822062907200BF088F /* ShowAction.m */; };
 		93160275206B923E00455B5F /* ShowLoginAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 93160274206B923E00455B5F /* ShowLoginAction.m */; };
@@ -506,37 +495,26 @@
 		93154CCB2062373D00BF088F /* NotificationConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationConstant.h; sourceTree = "<group>"; };
 		93154CCC2062375900BF088F /* DefineConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefineConstant.h; sourceTree = "<group>"; };
 		93154CCD2062376900BF088F /* ApiConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiConstant.h; sourceTree = "<group>"; };
-		93154CCF2062394600BF088F /* KMUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMUtils.m; sourceTree = "<group>"; };
 		93154CD02062394700BF088F /* NSObject+Safe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Safe.h"; sourceTree = "<group>"; };
-		93154CD12062394800BF088F /* KMShareUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMShareUtils.m; sourceTree = "<group>"; };
 		93154CD22062394800BF088F /* NSObject+Safe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Safe.m"; sourceTree = "<group>"; };
 		93154CD32062394900BF088F /* KMencryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMencryption.h; sourceTree = "<group>"; };
-		93154CD42062394A00BF088F /* KMPathUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMPathUtils.m; sourceTree = "<group>"; };
 		93154CD52062394B00BF088F /* UITextView+Placeholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+Placeholder.h"; sourceTree = "<group>"; };
 		93154CD62062394C00BF088F /* NSAttributedString+KMHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+KMHeight.h"; sourceTree = "<group>"; };
 		93154CD72062394D00BF088F /* UIImage+KMColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+KMColor.h"; sourceTree = "<group>"; };
-		93154CD82062394D00BF088F /* UIImage+KMColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+KMColor.m"; sourceTree = "<group>"; };
 		93154CD92062394E00BF088F /* NSDate+TSJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+TSJ.m"; sourceTree = "<group>"; };
 		93154CDA2062394F00BF088F /* UITextView+Rect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Rect.m"; sourceTree = "<group>"; };
-		93154CDB2062395000BF088F /* NSAttributedString+KMHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+KMHeight.m"; sourceTree = "<group>"; };
 		93154CDC2062395100BF088F /* KMJPushUntils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMJPushUntils.h; sourceTree = "<group>"; };
 		93154CDD2062395100BF088F /* UIView+Coordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Coordinate.h"; sourceTree = "<group>"; };
-		93154CDE2062395200BF088F /* HLLeadProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLLeadProfile.m; sourceTree = "<group>"; };
 		93154CDF2062395300BF088F /* UIFont+font.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+font.m"; sourceTree = "<group>"; };
 		93154CE02062395400BF088F /* KMUserDefaultUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMUserDefaultUtils.h; sourceTree = "<group>"; };
 		93154CE12062395400BF088F /* UILabel+KMRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+KMRect.h"; sourceTree = "<group>"; };
 		93154CE22062395500BF088F /* KMShareUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMShareUtils.h; sourceTree = "<group>"; };
-		93154CE32062395600BF088F /* UILabel+KMRect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+KMRect.m"; sourceTree = "<group>"; };
-		93154CE42062395700BF088F /* KMencryption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMencryption.m; sourceTree = "<group>"; };
 		93154CE52062395800BF088F /* UITextView+Placeholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Placeholder.m"; sourceTree = "<group>"; };
-		93154CE62062395800BF088F /* KMJPushUntils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMJPushUntils.m; sourceTree = "<group>"; };
 		93154CE72062395900BF088F /* KMUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMUtils.h; sourceTree = "<group>"; };
 		93154CE82062395A00BF088F /* NSDateFormatter+TSJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+TSJ.m"; sourceTree = "<group>"; };
 		93154CE92062395B00BF088F /* NSDateFormatter+TSJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+TSJ.h"; sourceTree = "<group>"; };
-		93154CEA2062395B00BF088F /* HLLeadProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLLeadProfile.h; sourceTree = "<group>"; };
 		93154CEB2062395C00BF088F /* NSDate+TSJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+TSJ.h"; sourceTree = "<group>"; };
 		93154CEC2062395D00BF088F /* KMPathUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMPathUtils.h; sourceTree = "<group>"; };
-		93154CED2062395E00BF088F /* KMUserDefaultUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMUserDefaultUtils.m; sourceTree = "<group>"; };
 		93154CEE2062395F00BF088F /* UIView+Coordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Coordinate.m"; sourceTree = "<group>"; };
 		93154CEF2062395F00BF088F /* UIFont+font.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+font.h"; sourceTree = "<group>"; };
 		93154CF02062396000BF088F /* UITextView+Rect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+Rect.h"; sourceTree = "<group>"; };
@@ -750,7 +728,6 @@
 		93154E772062826500BF088F /* ShowErrorCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowErrorCode.h; sourceTree = "<group>"; };
 		93154E782062826500BF088F /* ShowErrorCode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowErrorCode.m; sourceTree = "<group>"; };
 		93154E7A206282FE00BF088F /* ShowHTTPRequestSerializer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowHTTPRequestSerializer.h; sourceTree = "<group>"; };
-		93154E7B206282FE00BF088F /* ShowHTTPRequestSerializer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowHTTPRequestSerializer.m; sourceTree = "<group>"; };
 		93154E7D206283A700BF088F /* ShowHTTPResponseSerializer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowHTTPResponseSerializer.h; sourceTree = "<group>"; };
 		93154E7E206283A700BF088F /* ShowHTTPResponseSerializer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowHTTPResponseSerializer.m; sourceTree = "<group>"; };
 		93154E812062907200BF088F /* ShowAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowAction.h; sourceTree = "<group>"; };
@@ -1420,22 +1397,13 @@
 			children = (
 				936A19E52078B916000A043A /* GCDTimer */,
 				431F61202077701300B6C282 /* BG */,
-				93154CEA2062395B00BF088F /* HLLeadProfile.h */,
-				93154CDE2062395200BF088F /* HLLeadProfile.m */,
 				93154CD32062394900BF088F /* KMencryption.h */,
-				93154CE42062395700BF088F /* KMencryption.m */,
 				93154CDC2062395100BF088F /* KMJPushUntils.h */,
-				93154CE62062395800BF088F /* KMJPushUntils.m */,
 				93154CEC2062395D00BF088F /* KMPathUtils.h */,
-				93154CD42062394A00BF088F /* KMPathUtils.m */,
 				93154CE22062395500BF088F /* KMShareUtils.h */,
-				93154CD12062394800BF088F /* KMShareUtils.m */,
 				93154CE02062395400BF088F /* KMUserDefaultUtils.h */,
-				93154CED2062395E00BF088F /* KMUserDefaultUtils.m */,
 				93154CE72062395900BF088F /* KMUtils.h */,
-				93154CCF2062394600BF088F /* KMUtils.m */,
 				93154CD62062394C00BF088F /* NSAttributedString+KMHeight.h */,
-				93154CDB2062395000BF088F /* NSAttributedString+KMHeight.m */,
 				93154CEB2062395C00BF088F /* NSDate+TSJ.h */,
 				93154CD92062394E00BF088F /* NSDate+TSJ.m */,
 				93154CE92062395B00BF088F /* NSDateFormatter+TSJ.h */,
@@ -1445,9 +1413,7 @@
 				93154CEF2062395F00BF088F /* UIFont+font.h */,
 				93154CDF2062395300BF088F /* UIFont+font.m */,
 				93154CD72062394D00BF088F /* UIImage+KMColor.h */,
-				93154CD82062394D00BF088F /* UIImage+KMColor.m */,
 				93154CE12062395400BF088F /* UILabel+KMRect.h */,
-				93154CE32062395600BF088F /* UILabel+KMRect.m */,
 				93154CD52062394B00BF088F /* UITextView+Placeholder.h */,
 				93154CE52062395800BF088F /* UITextView+Placeholder.m */,
 				93154CF02062396000BF088F /* UITextView+Rect.h */,
@@ -1876,7 +1842,6 @@
 				93154E772062826500BF088F /* ShowErrorCode.h */,
 				93154E782062826500BF088F /* ShowErrorCode.m */,
 				93154E7A206282FE00BF088F /* ShowHTTPRequestSerializer.h */,
-				93154E7B206282FE00BF088F /* ShowHTTPRequestSerializer.m */,
 				93154E7D206283A700BF088F /* ShowHTTPResponseSerializer.h */,
 				93154E7E206283A700BF088F /* ShowHTTPResponseSerializer.m */,
 			);
@@ -2420,7 +2385,6 @@
 				93154D6620623C9400BF088F /* UIViewController+TrackLoadLog.m in Sources */,
 				93154E4B2062669800BF088F /* Base64Util.m in Sources */,
 				431A5DED20861A680052C04D /* SLPrivateChatViewController+Business.m in Sources */,
-				93154CF92062396000BF088F /* HLLeadProfile.m in Sources */,
 				4382A95D2071F66C00E95A1F /* DemoTableViewController.m in Sources */,
 				431A5D5020861A1F0052C04D /* SLToplistSubView.m in Sources */,
 				93154D5C20623C9400BF088F /* UIImage+KMShortVideoPlayer.m in Sources */,
@@ -2429,10 +2393,8 @@
 				431A5DE520861A670052C04D /* SLEmojiCategoryView.m in Sources */,
 				93154E5720626D7800BF088F /* UserDefaultsUtils.m in Sources */,
 				4310F5A2206CDE3C00B2BFFF /* BaseViewController.m in Sources */,
-				93154CF12062396000BF088F /* KMUtils.m in Sources */,
 				93154E06206264B200BF088F /* TADotView.m in Sources */,
 				93154D1720623BAB00BF088F /* NSArray+Addition.m in Sources */,
-				93154CFC2062396000BF088F /* KMencryption.m in Sources */,
 				93154E20206264B200BF088F /* CYPromptCoverViewQueue.m in Sources */,
 				72FE9B6920621F59008DD3D5 /* main.m in Sources */,
 				431A5DDC20861A670052C04D /* SLConversationInputMoreCardView.m in Sources */,
@@ -2468,7 +2430,6 @@
 				93154D5620623C9400BF088F /* UIGestureRecognizer+BlocksKit.m in Sources */,
 				93154E2E206264B200BF088F /* JPVideoPlayerResourceLoader.m in Sources */,
 				93154E07206264B200BF088F /* TAPageControl.m in Sources */,
-				93154CFE2062396100BF088F /* KMJPushUntils.m in Sources */,
 				431A5DF420861A680052C04D /* SLPrivateChatViewController+Common.m in Sources */,
 				722AB7E120774E8400D5694D /* UserInfoListCell.m in Sources */,
 				431A5DCE20861A670052C04D /* SLChatVoiceMessageCellViewModel.m in Sources */,
@@ -2558,7 +2519,6 @@
 				9316028A206CDEF500455B5F /* NSString+SHA3.m in Sources */,
 				722AB7D5207650B800D5694D /* UserTableViewTypeTwoCell.m in Sources */,
 				431A5DC820861A670052C04D /* SLStringSizeCalculation.m in Sources */,
-				93154CF82062396000BF088F /* NSAttributedString+KMHeight.m in Sources */,
 				431A5DD320861A670052C04D /* SLChatMessageCellConfig.m in Sources */,
 				431A5DEC20861A680052C04D /* SLEmojiView.m in Sources */,
 				93154D1820623BAB00BF088F /* UIImageView+guideAnimation.m in Sources */,
@@ -2578,15 +2538,12 @@
 				431A5DEB20861A670052C04D /* SLEmojiCollectionCell.m in Sources */,
 				931602A7206CDFCD00455B5F /* crypto_scrypt-hash.c in Sources */,
 				439859ED2080BC9700F8528B /* SLChatRoomTableViewCell.m in Sources */,
-				93154D002062396100BF088F /* KMUserDefaultUtils.m in Sources */,
 				431F6134207770A800B6C282 /* PrivacyModel.m in Sources */,
 				936A19922078A668000A043A /* UserInfoViewController.m in Sources */,
 				431A5DF220861A680052C04D /* SLPrivateChatViewController+UserAndRelationInfo.m in Sources */,
 				431A5DD820861A670052C04D /* SLChatRichMessageCell.m in Sources */,
 				431A5DD920861A670052C04D /* SLChatRelationInfo.m in Sources */,
-				93154E7C206282FE00BF088F /* ShowHTTPRequestSerializer.m in Sources */,
 				93154E0A206264B200BF088F /* NSObject+FBKVOController.m in Sources */,
-				93154CFB2062396000BF088F /* UILabel+KMRect.m in Sources */,
 				431A5DDE20861A670052C04D /* SLEmojiCategoryCollectionCell.m in Sources */,
 				931199CA2076032E00C58B9E /* ShowModelViewController.m in Sources */,
 				722AB8072078E2FB00D5694D /* ShowNewListCell.m in Sources */,
@@ -2602,14 +2559,12 @@
 				93154D4F20623C9400BF088F /* UINavigationController+Additions.m in Sources */,
 				936A1A132078ECAD000A043A /* BeautifyEffect.m in Sources */,
 				431A5DE620861A670052C04D /* SLEmoji.m in Sources */,
-				93154CF22062396000BF088F /* KMShareUtils.m in Sources */,
 				439859EE2080BC9700F8528B /* SLCharRoomContentHelp.m in Sources */,
 				430111372073B67B00DA3BA2 /* BaseTabBarController.m in Sources */,
 				93154E70206280D300BF088F /* ShowRequest.m in Sources */,
 				431A5DD620861A670052C04D /* SLChatMessageBaseCell.m in Sources */,
 				93154E23206264B200BF088F /* FLAnimatedImage.m in Sources */,
 				93154E1B206264B200BF088F /* RNCryptor.m in Sources */,
-				93154CF42062396000BF088F /* KMPathUtils.m in Sources */,
 				93154D1220623BAB00BF088F /* UILabel+Addition.m in Sources */,
 				93154E29206264B200BF088F /* JPVideoPlayerCache.m in Sources */,
 				4310F5A8206CDE7100B2BFFF /* BaseTableVC.m in Sources */,
@@ -2617,7 +2572,6 @@
 				931602AF206CDFCD00455B5F /* crypto-mcf.c in Sources */,
 				936A19962078A668000A043A /* ShowUserQRViewController.m in Sources */,
 				93154D6020623C9400BF088F /* NSString+Validation.m in Sources */,
-				93154CF52062396000BF088F /* UIImage+KMColor.m in Sources */,
 				439859F12080BC9700F8528B /* SLMessageInfo.m in Sources */,
 				93154E832062907200BF088F /* ShowAction.m in Sources */,
 				93154E4C2062669800BF088F /* MD5Encryption.m in Sources */,
