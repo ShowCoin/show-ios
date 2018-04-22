@@ -10,9 +10,14 @@
 #import "SLChatRoomTableViewCell.h"
 #import "SLCharRoomContentHelp.h"
 #import "YYText.h"
+#import "SLChatIMManager.h"
+#import "AccountModel.h"
+#import "SLTextTableViewCell.h"
+#import "SLMessageInfo.h"
 
 @interface SLChatRoomView()<UITableViewDelegate,UITableViewDataSource>
 
+@property (copy,nonatomic) NSString *roomId;
 @property (strong,nonatomic)UITableView *chatTableView;
 @property (strong,nonatomic)UIView *chatTableHeaderView;
 @property (strong,nonatomic)UIView *chatTableFooterView;
@@ -25,17 +30,25 @@
 @property (weak,nonatomic)NSTimer *timer ;
 
 @property (strong,nonatomic)MASConstraint *bottomConstraint;
+@property (strong,nonatomic)SLChatIMManager *chatIMMangger;
+
+@property (strong,nonatomic)NSDictionary *paramDic;
+
+@property (assign,nonatomic)BOOL responseKeyboard;
 
 @end
 
 @implementation SLChatRoomView
 
-+(instancetype)showInView:(UIView *)fatherView{
++(instancetype)showInView:(UIView *)fatherView Paramters:(NSDictionary *)paramters{
     SLChatRoomView *chatRoomView = [[SLChatRoomView alloc]init];
+    chatRoomView.paramDic = paramters ;
+    chatRoomView.responseKeyboard = YES ;
+    [chatRoomView chatIMManggerWithParamters:paramters];
     [fatherView addSubview:chatRoomView];
     [chatRoomView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(fatherView);
-       chatRoomView.bottomConstraint =  make.bottom.equalTo(fatherView).with.offset(-KTabBarHeight);
+        chatRoomView.bottomConstraint =  make.bottom.equalTo(fatherView).with.offset(-KTabBarHeight);
         make.width.equalTo(fatherView).multipliedBy(0.64);
         make.height.equalTo(@200);
     }];
@@ -43,12 +56,25 @@
 }
 
 - (void)changeFrameYConstraints:(CGFloat)YConstraints UIView:(UIView *)fatherView{
-    [self mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(fatherView);
-        make.bottom.equalTo(fatherView).with.offset(-YConstraints);
-        make.width.equalTo(fatherView).multipliedBy(0.64);
-        make.height.equalTo(@200);
-    }];
+    if(!self.responseKeyboard){
+        return;
+    }
+    if(YConstraints <=80){ //键盘回收的动作
+        [self mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(fatherView);
+            make.bottom.equalTo(fatherView).with.offset(-KTabBarHeight);
+            make.width.equalTo(fatherView).multipliedBy(0.64);
+            make.height.equalTo(@200);
+        }];
+    }else{
+        [self mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(fatherView);
+            make.bottom.equalTo(fatherView).with.offset(-(YConstraints-KTabBarHeight-50));
+            make.width.equalTo(fatherView).multipliedBy(0.64);
+            make.height.equalTo(@200);
+        }];
+    }
+    
     [UIView animateWithDuration:0.8 animations:^{
         [fatherView layoutIfNeeded];
     }];
@@ -57,10 +83,31 @@
 - (instancetype)init{
     if(self = [super init]){
         self.scrollerToBottom = YES ;
+        [self chatIMMangger];
         [self configSubView];
+        @weakify(self);
+        [[[NSNotificationCenter defaultCenter] rac_addObserverForName:kNotificationChatRoomInput object:nil] subscribeNext:^(NSNotification * x) {
+            @strongify(self);
+            self.responseKeyboard = [x.object boolValue];
+        }];
     }
     return self ;
 }
+
+- (void)chatIMManggerWithParamters:(NSDictionary *)dic{
+    self.paramDic = dic ;
+    self.chatIMMangger = [[SLChatIMManager alloc]initWithchatRoomParamters:self.paramDic];
+    [self.chatIMMangger joinChatRoom:self.roomId];
+}
+
+- (void)quiteChatRoomSucess:(void(^)(void))sucess faild:(void(^)(RCErrorCode status))faild{
+    [[ShowCIoundIMService sharedManager] quitChatRoom:self.roomId  success:sucess error:faild];
+    [self.timer invalidate];
+}
+- (void)sendText:(NSString *)text{
+    [self.chatIMMangger sendMessage:text Type:SLChatRoomMessageTypeText];
+}
+
 
 - (void)configSubView{
     
@@ -81,25 +128,10 @@
         make.size.mas_equalTo(CGSizeMake(92.5, 19));
     }];
     
-    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:1.0f repeats:YES block:^(NSTimer * _Nonnull timer) {
-        if(self.dataSource.count  >20){
-            [timer invalidate ];
-            return ;
-        }
-        int a =  arc4random()%4 ;
-        NSMutableString *str = [NSMutableString stringWithString:@"土豪快来，抱抱大腿"];
-        
-        for (int index = 0; index<a; index ++) {
-            [str appendString:str];
-        }
-        NSAttributedString *att = [SLCharRoomContentHelp contentAttributedString:str];
-        [self.dataSource addObject:att];
-        [self reloadTableView];
-    }];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [timer fire];
-    });
+    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:0.1f target:self selector:@selector(refreshTableData) userInfo:nil repeats:YES];
+    [timer fire];
     self.timer = timer ;
+    
     @weakify(self);
     [[RACObserve(self,chatTableView.contentOffset) zipWith:self.chatTableView.panGestureRecognizer.rac_gestureSignal] subscribeNext:^(id x) {
         @strongify(self);
@@ -128,12 +160,18 @@
 }
 
 
+- (void)refreshTableData{
+    if(!self.chatIMMangger.messageArray.count){
+        return ;
+    }
+    NSInteger unReadMessageCount = self.chatIMMangger.messageArray.count;
+    [self.chatIMMangger addMessageFromDataSourceWithChatArray:self.dataSource]; 
+    [self reloadTableViewWithCount:unReadMessageCount];
+}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSAttributedString *string = self.dataSource [indexPath.row];
-    CGSize size = CGSizeMake(self.width-55, CGFLOAT_MAX);
-    YYTextLayout *layout = [YYTextLayout layoutWithContainerSize:size text:string];
-    CGFloat height = layout.textBoundingSize.height + 15;
-    return height ;
+    SLMessageInfo *info = self.dataSource[indexPath.row];
+    return info.height ;
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
@@ -143,14 +181,24 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     NSString * identifier = NSStringFromClass([SLChatRoomTableViewCell class]);
-    
-    SLChatRoomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
-    if(!cell){
-        cell = [[SLChatRoomTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+    NSString * textIdentifier = NSStringFromClass([SLTextTableViewCell class]);
+    SLMessageInfo *info = self.dataSource[indexPath.row];
+    BaseTableViewCell *cell = nil ;
+    if(!info.type){
+        cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+        if(!cell){
+            cell = [[SLChatRoomTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        }
+    }else{
+        cell = [tableView dequeueReusableCellWithIdentifier:textIdentifier];
+        if(!cell){
+            cell = [[SLTextTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:textIdentifier];
+        }
     }
     [cell bindModel:self.dataSource[indexPath.row]];
     return cell ;
 }
+
 
 - (UITableView *)chatTableView{
     if(!_chatTableView){
@@ -164,7 +212,6 @@
         _chatTableView.showsVerticalScrollIndicator = NO ;
         _chatTableView.separatorStyle  = UITableViewCellSeparatorStyleNone;
         _chatTableView.rowHeight = UITableViewAutomaticDimension;
-        
     }
     return _chatTableView;
 }
@@ -199,22 +246,23 @@
         headerLabel.layer.cornerRadius = 14.0f ;
         [_chatTableHeaderView addSubview:headerLabel];
         [headerLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.centerY.height.equalTo(_chatTableHeaderView);
+            make.centerY.height.equalTo(self.chatTableHeaderView);
             make.width.equalTo(@180);
-            make.left.equalTo(_chatTableHeaderView).with.offset(10);
+            make.left.equalTo(self.chatTableHeaderView).with.offset(10);
         }];
     }
     return _chatTableHeaderView;
 }
 
--(void)reloadTableView{
+-(void)reloadTableViewWithCount:(NSInteger)unReadMessageCount{
     [self.chatTableView reloadData];
     if(self.scrollerToBottom){
         self.unReadCount = 0 ;
-        [self.chatTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:self.dataSource.count-1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
-        
+        if(self.dataSource.count){
+            [self.chatTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:self.dataSource.count-1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+        }
     }else{
-        self.unReadCount ++ ;
+        self.unReadCount += unReadMessageCount ;
     }
 }
 
@@ -225,11 +273,11 @@
         _noReadView.textColor =HexRGBAlpha(0x24A4EB, 1);
         _noReadView.font = [UIFont systemFontOfSize:14.0f];
         _noReadView.text = @"V 1条新消息";
-        _noReadView.userInteractionEnabled = YES ;
-        _noReadView.layer.masksToBounds = YES ;
-        _noReadView.layer.cornerRadius = 3 ;
+        _noReadView.userInteractionEnabled = YES;
+        _noReadView.layer.masksToBounds = YES;
+        _noReadView.layer.cornerRadius = 3;
         _noReadView.textAlignment = NSTextAlignmentCenter;
-        _noReadView.hidden  = YES ;
+        _noReadView.hidden  = YES;
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]init];
         [_noReadView addGestureRecognizer:tap];
         @weakify(self);
@@ -237,13 +285,14 @@
             @strongify(self)
             [self.timer setFireDate:[NSDate distantFuture]];
             [self.chatTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:self.dataSource.count-1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
-            
         }];
     }
     return _noReadView;
 }
 
 - (void)dealloc{
+    [self.timer invalidate];
+    self.timer = nil ;
     [[NSNotificationCenter  defaultCenter]removeObserver:self];
 }
 @end

@@ -7,10 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "SLMessageInfo.h"
 @interface SLCharRoomContentHelp : NSObject
 
 
-+(NSAttributedString *)contentAttributedString:(NSString *)content;
++(SLMessageInfo *)contentAttributedString:(SLMessageInfo *)content;
 
 @end

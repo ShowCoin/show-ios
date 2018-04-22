@@ -8,6 +8,7 @@
 
 #import "BaseModel.h"
 
+
 @interface SLMessageInfo : BaseModel
 
 // 用户id
@@ -24,9 +25,24 @@
 @property (nonatomic, strong) NSString *messageTypeStr;
 //消息的类型名
 @property(nonatomic, strong) NSString *objectName;
+
+/*!
+ 消息的发送时间（Unix时间戳、毫秒）
+ */
+@property(nonatomic, assign) long long sentTime;
+
 @property(nonatomic, assign) long type;
 @property(nonatomic, strong) NSString * roomId;
 
 @property(nonatomic, strong) NSDictionary *data;
+
+@property(nonatomic, strong) NSAttributedString *attribute;
+
+@property(nonatomic, assign) CGFloat height ;
+
+@property(nonatomic, assign) CGFloat width;
+
+- (instancetype)initWithRCText:(RCMessage *)message;
+
 
 @end

@@ -7,13 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SLChatIMManager.h"
 
 @interface SLChatRoomView : UIView
 
 @property (strong,nonatomic)NSMutableArray *dataSource;
 
-+(instancetype)showInView:(UIView *)fatherView;
++(instancetype)showInView:(UIView *)fatherView Paramters:(NSDictionary *)paramters;
 
 - (void)changeFrameYConstraints:(CGFloat)YConstraints UIView:(UIView *)fatherView;
+
+- (void)quiteChatRoomSucess:(void(^)(void))sucess faild:(void(^)(RCErrorCode status))faild;
+
+- (void)sendText:(NSString *)text;
 
 @end
