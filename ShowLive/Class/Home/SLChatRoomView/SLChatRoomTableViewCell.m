@@ -9,7 +9,7 @@
 #import "SLChatRoomTableViewCell.h"
 #import "YYText.h"
 #import "SLMessageInfo.h"
-
+#import "SLHeadPortrait.h"
 
 #define UILABEL_LINE_SPACE 6
 
@@ -79,16 +79,14 @@
 - (void)bindModel:(SLMessageInfo *)object{
     self.contentLabel.attributedText  = object.attribute;
     NSURL *imageUrl = [NSURL URLWithString:[[NSString dictionaryWithJsonString:object.messageExtra] valueForKey:@"avatar"]];
-    [self.photoImageView sd_setImageWithURL:imageUrl placeholderImage:[UIImage imageNamed:@"userhome_admin_Img"] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
-        CGSize newSize=CGSizeMake(25, 25);
-        UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);
-        [image drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
-        UIImage * newImage = UIGraphicsGetImageFromCurrentImageContext();
-        UIGraphicsEndImageContext();
-        image = newImage ;
-    }];
+    [self.photoImageView sd_setImageWithURL:imageUrl placeholderImage:[UIImage imageNamed:@"userhome_admin_Img"] completed:nil];
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.contentLabel jk_setRoundedCorners:UIRectCornerAllCorners radius:5];
     });
+    if(object.height > 35){
+        self.contentLabel.textContainerInset = UIEdgeInsetsMake(3, 8, 1, 3);
+    }else{
+        self.contentLabel.textContainerInset = UIEdgeInsetsMake(3, 8, 1,5 );
+    }
 }
 @end

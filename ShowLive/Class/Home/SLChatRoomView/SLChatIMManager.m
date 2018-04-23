@@ -208,10 +208,6 @@
     NSMutableDictionary *dic=[[NSMutableDictionary alloc]init];
     [dic setValue:[AccountModel shared].uid forKey:@"id"];
     [dic setValue:[AccountModel shared].nickname forKey:@"nickName"];
-    [dic setValue:@"刘大炮" forKey:@"fromNickName"];
-    [dic setValue:@"炮仗" forKey:@"giftName"];
-    [dic setValue:@"兔子跑了，快去抓兔子" forKey:@"content"];
-    [dic setValue:@"背锅的人啊" forKey:@"opt_nickName"];//avatar
     [dic setValue:[AccountModel shared].avatar forKey:@"avatar"];
     [dic setValue:[AccountModel shared].fanLevel forKey:@"fanLevel"];
     [dic setValue:@(type) forKey:@"type"];
@@ -227,7 +223,7 @@
     messageInfo.portraitUri = [AccountModel shared].avatar;
     messageInfo.messageContent =inputText;
     messageInfo.messageExtra = [dic mj_JSONString];
-    messageInfo.messageTypeStr = @"";
+//  messageInfo.messageTypeStr = @"";
     messageInfo.type = [[dic valueForKey:@"type"] longValue];
     messageInfo.data = dic ;
     return messageInfo;

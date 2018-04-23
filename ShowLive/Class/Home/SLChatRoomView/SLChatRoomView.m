@@ -27,7 +27,7 @@
 @property (strong,nonatomic) UILabel *noReadView;
 
 @property (assign,nonatomic) NSInteger unReadCount;
-@property (weak,nonatomic)NSTimer *timer ;
+@property (weak,nonatomic) NSTimer *timer ;
 
 @property (strong,nonatomic)MASConstraint *bottomConstraint;
 @property (strong,nonatomic)SLChatIMManager *chatIMMangger;
@@ -36,13 +36,14 @@
 
 @property (assign,nonatomic)BOOL responseKeyboard;
 
+@property (assign,nonatomic)BOOL isMaster;
+
 @end
 
 @implementation SLChatRoomView
 
 +(instancetype)showInView:(UIView *)fatherView Paramters:(NSDictionary *)paramters{
-    SLChatRoomView *chatRoomView = [[SLChatRoomView alloc]init];
-    chatRoomView.paramDic = paramters ;
+    SLChatRoomView *chatRoomView = [[SLChatRoomView alloc]initWithParamters:paramters];
     chatRoomView.responseKeyboard = YES ;
     [chatRoomView chatIMManggerWithParamters:paramters];
     [fatherView addSubview:chatRoomView];
@@ -58,21 +59,11 @@
 - (void)changeFrameYConstraints:(CGFloat)YConstraints UIView:(UIView *)fatherView{
     if(!self.responseKeyboard){
         return;
-    }
+    }  //x 的高度341 ，83.0f ,7的高度 276，  49.0f
     if(YConstraints <=80){ //键盘回收的动作
-        [self mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(fatherView);
-            make.bottom.equalTo(fatherView).with.offset(-KTabBarHeight);
-            make.width.equalTo(fatherView).multipliedBy(0.64);
-            make.height.equalTo(@200);
-        }];
+        self.transform  = CGAffineTransformIdentity;
     }else{
-        [self mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(fatherView);
-            make.bottom.equalTo(fatherView).with.offset(-(YConstraints-KTabBarHeight-50));
-            make.width.equalTo(fatherView).multipliedBy(0.64);
-            make.height.equalTo(@200);
-        }];
+        self.transform  = CGAffineTransformMakeTranslation(0, -(YConstraints - 2*KTabBarHeight + KTabbarSafeBottomMargin -44));
     }
     
     [UIView animateWithDuration:0.8 animations:^{
@@ -80,8 +71,9 @@
     }];
 }
 
-- (instancetype)init{
+- (instancetype)initWithParamters:(NSDictionary *)paramters{
     if(self = [super init]){
+        self.paramDic = paramters ;
         self.scrollerToBottom = YES ;
         [self chatIMMangger];
         [self configSubView];
@@ -95,9 +87,8 @@
 }
 
 - (void)chatIMManggerWithParamters:(NSDictionary *)dic{
-    self.paramDic = dic ;
-    self.chatIMMangger = [[SLChatIMManager alloc]initWithchatRoomParamters:self.paramDic];
-    [self.chatIMMangger joinChatRoom:self.roomId];
+  self.chatIMMangger = [[SLChatIMManager alloc]initWithchatRoomParamters:self.paramDic];
+  [self.chatIMMangger joinChatRoom:self.roomId];
 }
 
 - (void)quiteChatRoomSucess:(void(^)(void))sucess faild:(void(^)(RCErrorCode status))faild{
@@ -118,14 +109,20 @@
         make.edges.equalTo(self);
     }];
     self.footerLabel.attributedText =[[NSAttributedString alloc]initWithString:@"欢迎大土豪进入房间"];
-    self.chatTableView.tableHeaderView = self.chatTableHeaderView;
+    if([self.paramDic.allKeys containsObject:@"ismaster"]){
+        if([self.paramDic[@"ismaster"] boolValue]){
+            self.chatTableView.tableHeaderView = nil;
+        }else{
+            self.chatTableView.tableHeaderView = self.chatTableHeaderView;
+        }
+    }
     self.chatTableView.tableFooterView = self.chatTableFooterView;
     
     [self addSubview:self.noReadView];
     [self.noReadView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.equalTo(self);
         make.centerX.equalTo(self);
-        make.size.mas_equalTo(CGSizeMake(92.5, 19));
+        make.size.mas_equalTo(CGSizeMake(100, 24));
     }];
     
     NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:0.1f target:self selector:@selector(refreshTableData) userInfo:nil repeats:YES];
@@ -150,7 +147,7 @@
     [[RACObserve(self, unReadCount) distinctUntilChanged] subscribeNext:^(id x) {
         @strongify(self);
         if(self.unReadCount > 0){
-            self.noReadView.text = [NSString stringWithFormat: @"V %ld条新消息",self.unReadCount];
+            self.noReadView.text = [NSString stringWithFormat: @"v %ld条新消息",self.unReadCount];
             self.noReadView.hidden = NO ;
         }else{
             self.noReadView.hidden = YES ;
@@ -255,6 +252,7 @@
 }
 
 -(void)reloadTableViewWithCount:(NSInteger)unReadMessageCount{
+
     [self.chatTableView reloadData];
     if(self.scrollerToBottom){
         self.unReadCount = 0 ;
@@ -272,7 +270,7 @@
         _noReadView.backgroundColor = [UIColor whiteColor];
         _noReadView.textColor =HexRGBAlpha(0x24A4EB, 1);
         _noReadView.font = [UIFont systemFontOfSize:14.0f];
-        _noReadView.text = @"V 1条新消息";
+        _noReadView.text = @"v 1条新消息";
         _noReadView.userInteractionEnabled = YES;
         _noReadView.layer.masksToBounds = YES;
         _noReadView.layer.cornerRadius = 3;

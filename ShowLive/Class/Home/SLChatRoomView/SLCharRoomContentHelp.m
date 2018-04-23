@@ -70,7 +70,7 @@ typedef NS_ENUM(NSInteger,Chat_User_level){
     NSString *string = [self creatstring:content];
     NSMutableAttributedString *textContent = [[NSMutableAttributedString alloc] initWithString:string?:@""];
     // 2. Set attributes to text, you can use almost all CoreText attributes.
-    textContent.yy_font = [UIFont boldSystemFontOfSize:15];
+    textContent.yy_font = [UIFont systemFontOfSize:15];
     textContent.yy_color = [self adapterColor:content];
     text.yy_lineSpacing = 2;
     [text appendAttributedString:textContent];

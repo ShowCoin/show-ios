@@ -49,8 +49,8 @@
     contentLabel.font = [UIFont systemFontOfSize:15.0f];
     contentLabel.textColor = [UIColor whiteColor];
     contentLabel.numberOfLines = 0;
-    contentLabel.lineBreakMode = UILineBreakModeCharacterWrap;
-    contentLabel.textContainerInset = UIEdgeInsetsMake(3, 8, 1, 3);
+    contentLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    contentLabel.textContainerInset = UIEdgeInsetsMake(3, 8, 1, 8);
     contentLabel.preferredMaxLayoutWidth = self.width -50;
     [self.contentView addSubview:contentLabel];
     
@@ -67,6 +67,11 @@
 }
 - (void)bindModel:(SLMessageInfo *)object{
     self.contentLabel.attributedText  = object.attribute;
+    if(object.height > 35){
+        self.contentLabel.textContainerInset = UIEdgeInsetsMake(3, 8, 1, 3);
+    }else{
+        self.contentLabel.textContainerInset = UIEdgeInsetsMake(3, 8, 1, 8);
+    }
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.contentLabel jk_setRoundedCorners:UIRectCornerAllCorners radius:5];
     });
