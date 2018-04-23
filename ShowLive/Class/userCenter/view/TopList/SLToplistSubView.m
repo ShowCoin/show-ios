@@ -126,18 +126,20 @@
     _aniLine.centerX = _allBtn.centerX;
     [self addSubview:_aniLine];
     
+    @weakify(self);
     [[_dayBtn rac_signalForControlEvents:UIControlEventTouchUpInside]subscribeNext:^(id x) {
-        [_bkscrollerView setContentOffset:CGPointMake(0, 0) animated:YES];
+        @strongify(self);
+        [self.bkscrollerView setContentOffset:CGPointMake(0, 0) animated:YES];
         
     }];
-    [[_weekBtn rac_signalForControlEvents:UIControlEventTouchUpInside]subscribeNext:^(id x) {
-        [_bkscrollerView setContentOffset:CGPointMake(kMainScreenWidth , 0) animated:YES];
+    [[_weekBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+        @strongify(self);
+        [self.bkscrollerView setContentOffset:CGPointMake(kMainScreenWidth , 0) animated:YES];
 
     }];
-    [[_allBtn rac_signalForControlEvents:UIControlEventTouchUpInside]subscribeNext:^(id x) {
-
-        
-        [_bkscrollerView setContentOffset:CGPointMake(kMainScreenWidth * 2, 0) animated:YES];
+    [[_allBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+        @strongify(self);
+        [self.bkscrollerView setContentOffset:CGPointMake(kMainScreenWidth * 2, 0) animated:YES];
     }];
 }
 

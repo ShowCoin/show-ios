@@ -34,6 +34,8 @@ typedef NS_ENUM(NSInteger,cellType) {//
 @property (strong,nonatomic)UIView * lineview;
 @property (assign,nonatomic)cellType celltype;
 @property(nonatomic,assign)TopListType topListType;
+@property(nonatomic,strong)ShowUserModel * datamodel;
+@property(nonatomic,assign)NSInteger index;
 
 
 @end
