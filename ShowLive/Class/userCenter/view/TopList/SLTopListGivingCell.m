@@ -7,16 +7,21 @@
 //
 #import "SLTopListGivingCell.h"
 
+
+@interface SLTopListGivingCell()
+
+@property(nonatomic,assign)CGFloat cellheight;
+
+@end
+
 @implementation SLTopListGivingCell
-{
-    CGFloat cellheight;
-}
+
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self){
         self.backgroundColor = [UIColor clearColor];
-        cellheight =  65*Proportion375;
+        self.cellheight =  65*Proportion375;
 
         [self.contentView addSubview:self.numLab];
         [self.contentView addSubview:self.numImg];
@@ -30,30 +35,30 @@
         [self.contentView addSubview:self.lineview];
 
         [self.numLab mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.centerY.equalTo(self.mas_top).offset(cellheight/2);
+            make.centerY.equalTo(self.mas_top).offset(self.cellheight/2);
             make.size.mas_equalTo(CGSizeMake(100, 50));
             make.left.equalTo(@(20*Proportion375));
         }];
         
         [self.numImg mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.center.mas_equalTo(_numLab);
+            make.center.mas_equalTo(self.numLab);
             make.size.mas_equalTo(CGSizeMake(35*Proportion375, 35*Proportion375));
         }];
         
         [self.avatar_normal mas_makeConstraints:^(MASConstraintMaker *make) {
             make.size.mas_equalTo(CGSizeMake(35*Proportion375, 35*Proportion375));
-            make.centerY.equalTo(_numLab);
+            make.centerY.equalTo(self.numLab);
             make.left.equalTo(@(70*Proportion375));
         }];
         [self.avatar_topTwo_bg mas_makeConstraints:^(MASConstraintMaker *make) {
             make.size.mas_equalTo(CGSizeMake(67*Proportion375, 67*Proportion375));
-            make.centerY.equalTo(_numLab);
-            make.centerX.equalTo(_avatar_normal);
+            make.centerY.equalTo(self.numLab);
+            make.centerX.equalTo(self.avatar_normal);
         }];
         [self.avatar_topTwo mas_makeConstraints:^(MASConstraintMaker *make) {
             make.size.mas_equalTo(CGSizeMake(50*Proportion375, 50*Proportion375));
-            make.centerY.equalTo(_avatar_topTwo_bg);
-            make.centerX.equalTo(_avatar_topTwo_bg);
+            make.centerY.equalTo(self.avatar_topTwo_bg);
+            make.centerX.equalTo(self.avatar_topTwo_bg);
         }];
         [self.avatar_topOne_bg mas_makeConstraints:^(MASConstraintMaker *make) {
             make.size.mas_equalTo(CGSizeMake(160*Proportion375, 160*Proportion375));
@@ -74,18 +79,18 @@
             make.width.lessThanOrEqualTo(@(140*Proportion375));
             make.left.equalTo(@(130*Proportion375));
             //            make.height.equalTo(@20);
-            make.top.equalTo(_avatar_normal);
+            make.top.equalTo(self.avatar_normal);
         }];
         [self.textLab mas_makeConstraints:^(MASConstraintMaker *make) {
             make.width.lessThanOrEqualTo(@(175*Proportion375));
-            make.left.equalTo(_nameLab);
+            make.left.equalTo(self.nameLab);
             //            make.height.equalTo(@15);
-            make.bottom.equalTo(_avatar_normal);
+            make.bottom.equalTo(self.avatar_normal);
         }];
         
         
         [self.concernBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.centerY.equalTo(_numLab);
+            make.centerY.equalTo(self.numLab);
             make.right.equalTo(self).offset(-15*Proportion375);
             make.size.mas_equalTo(CGSizeMake(45*Proportion375, 21*Proportion375));
         }];
@@ -106,7 +111,7 @@
     switch (celltype) {
         case CellType_Normal:
         {
-            cellheight = 65*Proportion375;
+            self.cellheight = 65*Proportion375;
             _numImg.hidden = YES;
             _numLab.hidden = NO;
             _avatar_topOne_bg.hidden = YES;
@@ -115,20 +120,20 @@
             _avatar_normal.hidden = NO;
 
             [_numLab mas_remakeConstraints:^(MASConstraintMaker *make) {
-                make.centerY.equalTo(self.mas_top).offset(cellheight/2);
+                make.centerY.equalTo(self.mas_top).offset(self.cellheight/2);
                 make.size.mas_equalTo(CGSizeMake(100, 50));
                 make.left.equalTo(@(20*Proportion375));
             }];
             
             [_numImg mas_remakeConstraints:^(MASConstraintMaker *make) {
-                make.centerY.equalTo(self.mas_top).offset(cellheight/2);
+                make.centerY.equalTo(self.mas_top).offset(self.cellheight/2);
                 make.left.equalTo(@(20*Proportion375));
                 make.size.mas_equalTo(CGSizeMake(35*Proportion375, 35*Proportion375));
             }];
 
             [_avatar_normal mas_remakeConstraints:^(MASConstraintMaker *make) {
                 make.size.mas_equalTo(CGSizeMake(35*Proportion375, 35*Proportion375));
-                make.centerY.equalTo(_numLab);
+                make.centerY.equalTo(self.numLab);
                 make.left.equalTo(@(70*Proportion375));
             }];
             
@@ -136,18 +141,18 @@
                 make.width.lessThanOrEqualTo(@(140*Proportion375));
                 make.left.equalTo(@(130*Proportion375));
                 //            make.height.equalTo(@20);
-                make.top.equalTo(_avatar_normal);
+                make.top.equalTo(self.avatar_normal);
             }];
             [_textLab mas_remakeConstraints:^(MASConstraintMaker *make) {
                 make.width.lessThanOrEqualTo(@(175*Proportion375));
-                make.left.equalTo(_nameLab);
+                make.left.equalTo(self.nameLab);
                 //            make.height.equalTo(@15);
-                make.bottom.equalTo(_avatar_normal);
+                make.bottom.equalTo(self.avatar_normal);
             }];
             
             
             [_concernBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
-                make.centerY.equalTo(_numLab);
+                make.centerY.equalTo(self.numLab);
                 make.right.equalTo(self).offset(-15*Proportion375);
                 make.size.mas_equalTo(CGSizeMake(45*Proportion375, 21*Proportion375));
             }];
@@ -160,7 +165,7 @@
             break;
         case CellType_First:
         {
-            cellheight = 230*Proportion375;
+            self.cellheight = 230*Proportion375;
             _numLab.hidden = YES;
             _numImg.hidden = NO;
             _avatar_topOne_bg.hidden = NO;
@@ -170,18 +175,18 @@
             self.backgroundColor = kGrayBGColor;
 
             [_numLab mas_remakeConstraints:^(MASConstraintMaker *make) {
-                make.centerY.equalTo(self.mas_top).offset(cellheight/2);
+                make.centerY.equalTo(self.mas_top).offset(self.cellheight/2);
                 make.size.mas_equalTo(CGSizeMake(100, 50));
                 make.left.equalTo(@(20*Proportion375));
             }];
             [_numImg mas_remakeConstraints:^(MASConstraintMaker *make) {
-                make.centerY.equalTo(self.mas_top).offset(cellheight/2);
+                make.centerY.equalTo(self.mas_top).offset(self.cellheight/2);
                 make.left.equalTo(@(20*Proportion375));
                 make.size.mas_equalTo(CGSizeMake(35*Proportion375, 35*Proportion375));
             }];
             [_avatar_normal mas_remakeConstraints:^(MASConstraintMaker *make) {
                 make.size.mas_equalTo(CGSizeMake(35*Proportion375, 35*Proportion375));
-                make.centerY.equalTo(_numLab);
+                make.centerY.equalTo(self.numLab);
                 make.left.equalTo(@(70*Proportion375));
             }];
 
@@ -189,18 +194,18 @@
                 make.width.lessThanOrEqualTo(@(140*Proportion375));
                 make.centerX.equalTo(self.contentView);
                 //            make.height.equalTo(@20);
-                make.top.equalTo(_avatar_topOne_bg.mas_bottom);
+                make.top.equalTo(self.avatar_topOne_bg.mas_bottom);
             }];
             [_textLab mas_remakeConstraints:^(MASConstraintMaker *make) {
                 make.width.lessThanOrEqualTo(@(175*Proportion375));
-                make.centerX.equalTo(_nameLab);
+                make.centerX.equalTo(self.nameLab);
                 //            make.height.equalTo(@15);
-                make.top.equalTo(_nameLab.mas_bottom);
+                make.top.equalTo(self.nameLab.mas_bottom);
             }];
             
             
             [_concernBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
-                make.centerY.equalTo(_numLab);
+                make.centerY.equalTo(self.numLab);
                 make.right.equalTo(self).offset(-15*Proportion375);
                 make.size.mas_equalTo(CGSizeMake(45*Proportion375, 21*Proportion375));
             }];
@@ -213,7 +218,7 @@
             break;
         case CellType_Second:
         {
-            cellheight = 92*Proportion375;
+            self.cellheight = 92*Proportion375;
             _numLab.hidden = YES;
             _numImg.hidden = NO;
             _avatar_topOne_bg.hidden = YES;
@@ -222,46 +227,46 @@
             _avatar_normal.hidden = YES;
             
             [_numLab mas_remakeConstraints:^(MASConstraintMaker *make) {
-                make.centerY.equalTo(self.mas_top).offset(cellheight/2);
+                make.centerY.equalTo(self.mas_top).offset(self.cellheight/2);
                 make.size.mas_equalTo(CGSizeMake(100, 50));
                 make.left.equalTo(@(20*Proportion375));
             }];
             [_numImg mas_remakeConstraints:^(MASConstraintMaker *make) {
-                make.centerY.equalTo(self.mas_top).offset(cellheight/2);
+                make.centerY.equalTo(self.mas_top).offset(self.cellheight/2);
                 make.left.equalTo(@(20*Proportion375));
                 make.size.mas_equalTo(CGSizeMake(35*Proportion375, 35*Proportion375));
             }];
             [_avatar_normal mas_remakeConstraints:^(MASConstraintMaker *make) {
                 make.size.mas_equalTo(CGSizeMake(35*Proportion375, 35*Proportion375));
-                make.centerY.equalTo(_numLab);
+                make.centerY.equalTo(self.numLab);
                 make.left.equalTo(@(70*Proportion375));
             }];
             [self.avatar_topTwo_bg mas_remakeConstraints:^(MASConstraintMaker *make) {
                 make.size.mas_equalTo(CGSizeMake(67*Proportion375, 67*Proportion375));
-                make.centerY.equalTo(_numLab);
-                make.centerX.equalTo(_avatar_normal);
+                make.centerY.equalTo(self.numLab);
+                make.centerX.equalTo(self.avatar_normal);
             }];
             [self.avatar_topTwo mas_remakeConstraints:^(MASConstraintMaker *make) {
                 make.size.mas_equalTo(CGSizeMake(50*Proportion375, 50*Proportion375));
-                make.centerY.equalTo(_avatar_topTwo_bg);
-                make.centerX.equalTo(_avatar_topTwo_bg);
+                make.centerY.equalTo(self.avatar_topTwo_bg);
+                make.centerX.equalTo(self.avatar_topTwo_bg);
             }];
 
             [_nameLab mas_remakeConstraints:^(MASConstraintMaker *make) {
                 make.width.lessThanOrEqualTo(@(140*Proportion375));
                 make.left.equalTo(@(130*Proportion375));
                 //            make.height.equalTo(@20);
-                make.top.equalTo(_avatar_normal);
+                make.top.equalTo(self.avatar_normal);
             }];
             [_textLab mas_remakeConstraints:^(MASConstraintMaker *make) {
                 make.width.lessThanOrEqualTo(@(175*Proportion375));
-                make.left.equalTo(_nameLab);
+                make.left.equalTo(self.nameLab);
                 //            make.height.equalTo(@15);
-                make.bottom.equalTo(_avatar_normal);
+                make.bottom.equalTo(self.avatar_normal);
             }];
             
             [_concernBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
-                make.centerY.equalTo(_numLab);
+                make.centerY.equalTo(self.numLab);
                 make.right.equalTo(self).offset(-15*Proportion375);
                 make.size.mas_equalTo(CGSizeMake(45*Proportion375, 21*Proportion375));
             }];
@@ -278,6 +283,8 @@
   
 
 }
+
+
 -(UILabel *)numLab
 {
     if (!_numLab ) {
@@ -298,7 +305,7 @@
         _avatar_normal = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"userhome_admin_Img"]];
         _avatar_normal.size = CGSizeMake(35*Proportion375, 35*Proportion375);
         _avatar_normal.right = 86*Proportion375;
-        _avatar_normal.centerY = cellheight/2;
+        _avatar_normal.centerY = self.cellheight/2;
         _avatar_normal.layer.borderColor = kGrayBGColor.CGColor;
         _avatar_normal.layer.borderWidth = 1.0;
         [_avatar_normal roundStyle];
@@ -310,6 +317,8 @@
     if (!_avatar_topTwo_bg) {
         _avatar_topTwo_bg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"userhome_level_second_bg"]];
         _avatar_topTwo_bg.clipsToBounds = YES;
+        
+        
         _avatar_topTwo = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"userhome_admin_Img"]];
         _avatar_topTwo.clipsToBounds = YES;
         _avatar_topTwo.layer.borderColor = kGrayBGColor.CGColor;
@@ -380,6 +389,41 @@
         _lineview.backgroundColor = kSeparationColor;
     }
     return _lineview;
+}
+
+
+
+-(void)setDatamodel:(ShowUserModel *)datamodel
+{
+    _datamodel = datamodel;
+    [self.avatar_normal yy_setImageWithURL:[NSURL URLWithString:_datamodel.avatar] placeholder:[UIImage imageNamed:@"userhome_admin_Img"]];
+    [self.avatar_topOne yy_setImageWithURL:[NSURL URLWithString:_datamodel.avatar] placeholder:[UIImage imageNamed:@"userhome_admin_Img"]];
+    [self.avatar_topTwo yy_setImageWithURL:[NSURL URLWithString:_datamodel.avatar] placeholder:[UIImage imageNamed:@"userhome_admin_Img"]];
+    [self.nameLab setText:_datamodel.nickname];
+    [self.textLab setText:[NSString stringWithFormat:@"获得了%@秀币奖励",_datamodel.total]];
+//    self.numImg
+}
+
+-(void)setIndex:(NSInteger)index
+{
+    _index = index;
+    [self.numLab setText:[NSString stringWithFormat:@"NO.%ld",(long)(index + 1)]];
+    if (index == 1) {
+        [self.avatar_topTwo_bg setImage:[UIImage imageNamed:@"userhome_level_second_bg"]];
+        [self.numImg setImage: [UIImage imageNamed:@"userhome_level_second_tag"]];
+
+    }else if (index == 2){
+        
+        [self.avatar_topTwo_bg setImage:[UIImage imageNamed:@"userhome_level_third_bg"]];
+        [self.numImg setImage: [UIImage imageNamed:@"userhome_level_third_tag"]];
+
+    }else if (index == 0){
+        [self.numImg setImage: [UIImage imageNamed:@"userhome_level_first_tag"]];
+    }
+    
+    
+    
+    
 }
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

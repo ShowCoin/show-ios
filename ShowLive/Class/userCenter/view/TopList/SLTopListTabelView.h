@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SLDefenderListAction.h"
+#import "SLUrgeListAction.h"
 typedef NS_ENUM(NSInteger,TopListType) {//
     TopListType_Contribution_Day  = 0,//贡献榜
     TopListType_Contribution_Week  = 1,
@@ -19,4 +21,17 @@ typedef NS_ENUM(NSInteger,TopListType) {//
 @interface SLTopListTabelView : UIView<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)UITableView * TableView;
 @property(nonatomic,assign)TopListType topListType;
+@property (nonatomic,strong)SLDefenderListAction *action;
+@property (nonatomic,strong)SLUrgeListAction *Urgeaction;
+
+@property (nonatomic,strong)NSString * testStr;
+@property (nonatomic,strong)NSString * cursor;
+@property (nonatomic,strong)NSString * count;
+@property (nonatomic,strong)NSMutableArray  * dataSource;
+@property (nonatomic,strong)NSMutableArray  * dataModelList;
+@property (nonatomic,strong)UILabel * headLab;
+@property (nonatomic,strong)NSString * urgeNum;
+
+
+
 @end
