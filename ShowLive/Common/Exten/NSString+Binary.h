@@ -1,8 +1,8 @@
 //
 //  NSString+Binary.h
-//  Shell
+//  show-ios
 //
-//  Created by sunjiaqi on 16/7/1.
+//  Created by sunjiaqi on 17/7/1.
 //  Copyright © 2016年 show. All rights reserved.
 //
 

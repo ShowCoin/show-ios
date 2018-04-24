@@ -19,6 +19,7 @@
 #import "SystemMessgae.h"
 
 
+static SLChatIMManager *imManager;
 @interface SLChatIMManager()
 
 //消息队列
@@ -31,6 +32,7 @@
 
 - (instancetype)initWithchatRoomParamters:(NSDictionary *)paramters{
     if(self = [super init]){
+        imManager  =self ;
         self.paramters = paramters;
         self.chatRoomId = [paramters valueForKey:@"roomId"];
         [self initDataSource];
@@ -39,12 +41,17 @@
     return self ;
 }
 
+- (void)removeLastObjeserver{
+    [[NSNotificationCenter defaultCenter]removeObserver:imManager];
+}
+
 - (void)initDataSource{
     self.sendErrorArray = [NSMutableArray arrayWithCapacity:0];
     self.messageArray = [NSMutableArray arrayWithCapacity:0];
     self.noSpeakArray = [NSMutableArray arrayWithCapacity:0];
 }
 - (void)registerNotifation{
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(delegate_ReceivedMessage:) name:SLLive_kNotification_ChatRoomMessage object:nil];
 }
 
@@ -97,11 +104,11 @@
             [self.messageQueue addObject:messageInfo];
         }
     }
-    
+    @weakify(self);
     //直接取0个元素
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         SLMessageInfo * firstInfo = nil;
-        
+        @strongify(self);
         @synchronized(self) {
            firstInfo = self.messageQueue[0];
            [self.messageQueue removeObjectAtIndex:0];
@@ -192,7 +199,6 @@
         [self loginSucessAction];
     } error:^(RCErrorCode status) {
         @strongify(self);
-
         if (status== KICKED_FROM_CHATROOM) {
             [[ShowCIoundIMService sharedManager] quitChatRoom:self.chatRoomId success:nil error:nil];
             [HDHud _showMessageInView:[UIApplication sharedApplication].keyWindow title:@"您已被踢出该房间！暂时无法加入"];

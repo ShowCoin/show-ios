@@ -80,7 +80,9 @@
     self.contentLabel.attributedText  = object.attribute;
     NSURL *imageUrl = [NSURL URLWithString:[[NSString dictionaryWithJsonString:object.messageExtra] valueForKey:@"avatar"]];
     [self.photoImageView sd_setImageWithURL:imageUrl placeholderImage:[UIImage imageNamed:@"userhome_admin_Img"] completed:nil];
+    @weakify(self);
     dispatch_async(dispatch_get_main_queue(), ^{
+        @strongify(self);
         [self.contentLabel jk_setRoundedCorners:UIRectCornerAllCorners radius:5];
     });
     if(object.height > 35){

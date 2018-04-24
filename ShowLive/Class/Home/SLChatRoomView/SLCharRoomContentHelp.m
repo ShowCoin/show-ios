@@ -103,9 +103,9 @@ typedef NS_ENUM(NSInteger,Chat_User_level){
     else if (message.type==SLChatRoomMessageTypeDianzan)
     {
         if ([[message.data valueForKey:@"isAdmin"] integerValue]==1)
-            str=[NSString stringWithFormat:@" %@:我为主播点了个赞",[message.data valueForKey:@"nickName"]];//[(+level_P+)] [(+红心+)] [(+level_%@+)][message.data valueForKey:@"fanLevel"], [(+level_%@+)]
+            str=[NSString stringWithFormat:@" @%@点了喜欢",[message.data valueForKey:@"nickName"]];//[(+level_P+)] [(+红心+)] [(+level_%@+)][message.data valueForKey:@"fanLevel"], [(+level_%@+)]
         else
-            str=[NSString stringWithFormat:@"%@:我为主播点了个赞",[message.data valueForKey:@"nickName"]];
+            str=[NSString stringWithFormat:@"@%@点了喜欢",[message.data valueForKey:@"nickName"]];
     }
     else if (message.type==SLChatRoomMessageTypeUserJoin)
     {
@@ -182,7 +182,7 @@ typedef NS_ENUM(NSInteger,Chat_User_level){
     {
         color = RGBACOLOR(43, 210, 182, 1);
     }
-    else if (message.type==1||message.type==7)
+    else if (message.type==1)
     {
         color = RGBACOLOR(255, 77, 106, 1);
     }
@@ -206,6 +206,8 @@ typedef NS_ENUM(NSInteger,Chat_User_level){
     {
         color = [UIColor whiteColor];
         
+    }else if(message.type == 7){
+        color = [UIColor blackColor];
     }
     return color ; 
 }
@@ -362,7 +364,7 @@ typedef NS_ENUM(NSInteger,Chat_User_level){
         countlabel.text = [NSString stringWithFormat:@"%@",chatModel.levelString];
         countlabel.textAlignment = NSTextAlignmentRight;
         countlabel.textColor = [UIColor whiteColor];
-        countlabel.font = [UIFont systemFontOfSize:10];
+        countlabel.font = Font_Trebuchet(10);
         [levelView addSubview:countlabel];
     });
     return levelView ;

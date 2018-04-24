@@ -45,7 +45,6 @@
     self.backgroundColor = [[UIColor clearColor]colorWithAlphaComponent:0];
     
     YYLabel *contentLabel = [[YYLabel alloc]init];
-    contentLabel.backgroundColor = [[UIColor blackColor]colorWithAlphaComponent:0.1];
     contentLabel.font = [UIFont systemFontOfSize:15.0f];
     contentLabel.textColor = [UIColor whiteColor];
     contentLabel.numberOfLines = 0;
@@ -72,8 +71,16 @@
     }else{
         self.contentLabel.textContainerInset = UIEdgeInsetsMake(3, 8, 1, 8);
     }
+    @weakify(self);
     dispatch_async(dispatch_get_main_queue(), ^{
+        @strongify(self);
         [self.contentLabel jk_setRoundedCorners:UIRectCornerAllCorners radius:5];
     });
+    
+    if(object.type == SLChatRoomMessageTypeDianzan){
+        self.contentLabel.backgroundColor = [UIColor whiteColor];
+    }else{
+        self.contentLabel.backgroundColor = [[UIColor blackColor]colorWithAlphaComponent:0.1];
+    }
 }
 @end

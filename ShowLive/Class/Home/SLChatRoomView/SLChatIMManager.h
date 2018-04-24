@@ -27,4 +27,5 @@
 
 -(void)sendMessage:(NSString *)inputText Type:(NSInteger)type;
 
+- (void)removeLastObjeserver;
 @end

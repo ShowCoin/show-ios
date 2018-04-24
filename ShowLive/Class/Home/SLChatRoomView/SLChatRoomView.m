@@ -14,29 +14,36 @@
 #import "AccountModel.h"
 #import "SLTextTableViewCell.h"
 #import "SLMessageInfo.h"
+#import "SLLiveListModel.h"
+#import "SLChatRoomMessageManager.h"
 
 @interface SLChatRoomView()<UITableViewDelegate,UITableViewDataSource>
 
-@property (copy,nonatomic) NSString *roomId;
-@property (strong,nonatomic)UITableView *chatTableView;
+@property (copy,nonatomic) NSString *roomId;//房间ID
+@property (strong,nonatomic)UITableView *chatTableView;//滚屏的View
 @property (strong,nonatomic)UIView *chatTableHeaderView;
 @property (strong,nonatomic)UIView *chatTableFooterView;
-
-@property (assign,nonatomic) BOOL scrollerToBottom;
 @property (weak,nonatomic)YYLabel *footerLabel ;
-@property (strong,nonatomic) UILabel *noReadView;
+@property (strong,nonatomic) UILabel *noReadView;//多少条消息未读
+@property (weak,nonatomic)UIButton *shareBtn;
+@property (weak,nonatomic)UIButton *headerBtn;
+@property (weak,nonatomic)YYLabel *descLabel;//欢迎来到直播间
 
 @property (assign,nonatomic) NSInteger unReadCount;
+
 @property (weak,nonatomic) NSTimer *timer ;
 
 @property (strong,nonatomic)MASConstraint *bottomConstraint;
-@property (strong,nonatomic)SLChatIMManager *chatIMMangger;
 
 @property (strong,nonatomic)NSDictionary *paramDic;
 
 @property (assign,nonatomic)BOOL responseKeyboard;
 
 @property (assign,nonatomic)BOOL isMaster;
+
+@property (assign,nonatomic) BOOL scrollerToBottom;
+
+@property (strong,nonatomic)ShowUserModel *master;
 
 @end
 
@@ -74,6 +81,7 @@
 - (instancetype)initWithParamters:(NSDictionary *)paramters{
     if(self = [super init]){
         self.paramDic = paramters ;
+        self.master = paramters[@"master"];
         self.scrollerToBottom = YES ;
         [self chatIMMangger];
         [self configSubView];
@@ -87,11 +95,12 @@
 }
 
 - (void)chatIMManggerWithParamters:(NSDictionary *)dic{
-  self.chatIMMangger = [[SLChatIMManager alloc]initWithchatRoomParamters:self.paramDic];
-  [self.chatIMMangger joinChatRoom:self.roomId];
+    self.chatIMMangger = [[SLChatIMManager alloc]initWithchatRoomParamters:self.paramDic];
+    [self.chatIMMangger joinChatRoom:self.roomId];
 }
 
 - (void)quiteChatRoomSucess:(void(^)(void))sucess faild:(void(^)(RCErrorCode status))faild{
+    [[SLChatRoomMessageManager shareInstance] removeChatRoomMessageNotification];
     [[ShowCIoundIMService sharedManager] quitChatRoom:self.roomId  success:sucess error:faild];
     [self.timer invalidate];
 }
@@ -109,14 +118,33 @@
         make.edges.equalTo(self);
     }];
     self.footerLabel.attributedText =[[NSAttributedString alloc]initWithString:@"欢迎大土豪进入房间"];
+    self.chatTableView.tableHeaderView = self.chatTableHeaderView;
+    self.chatTableView.tableFooterView = self.chatTableFooterView;
+    
     if([self.paramDic.allKeys containsObject:@"ismaster"]){
         if([self.paramDic[@"ismaster"] boolValue]){
-            self.chatTableView.tableHeaderView = nil;
+            self.chatTableHeaderView.height = 120;
         }else{
-            self.chatTableView.tableHeaderView = self.chatTableHeaderView;
+            if([self.master.isFollowed isEqualToString:@"1"]&& self.master){//关注过了
+                self.chatTableHeaderView.height = 154;
+                [self.headerBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
+                    make.width.equalTo(@180);
+                    make.height.equalTo(@0);
+                    make.left.equalTo(self.chatTableHeaderView).with.offset(10);
+                    make.top.equalTo(self.descLabel.mas_bottom).with.offset(0);
+                }];
+            }else{
+                self.chatTableHeaderView.height = 189;
+            }
         }
     }
-    self.chatTableView.tableFooterView = self.chatTableFooterView;
+    @weakify(self);
+    [[self.shareBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+        @strongify(self);
+        if(self.shareBlock){
+            self.shareBlock();
+        }
+    }];
     
     [self addSubview:self.noReadView];
     [self.noReadView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -129,7 +157,6 @@
     [timer fire];
     self.timer = timer ;
     
-    @weakify(self);
     [[RACObserve(self,chatTableView.contentOffset) zipWith:self.chatTableView.panGestureRecognizer.rac_gestureSignal] subscribeNext:^(id x) {
         @strongify(self);
         if((fabs(self.chatTableView.contentOffset.y)+self.chatTableView.height) <= self.chatTableView.contentSize.height -20){
@@ -162,7 +189,7 @@
         return ;
     }
     NSInteger unReadMessageCount = self.chatIMMangger.messageArray.count;
-    [self.chatIMMangger addMessageFromDataSourceWithChatArray:self.dataSource]; 
+    [self.chatIMMangger addMessageFromDataSourceWithChatArray:self.dataSource];
     [self reloadTableViewWithCount:unReadMessageCount];
 }
 
@@ -232,27 +259,68 @@
 }
 - (UIView *)chatTableHeaderView{
     if(!_chatTableHeaderView){
-        _chatTableHeaderView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.chatTableView.width, 28)];
-        UILabel *headerLabel = [[UILabel alloc]init];
-        headerLabel.textColor = [UIColor whiteColor];
-        headerLabel.font = [UIFont systemFontOfSize:14.0f];
-        headerLabel.textAlignment = NSTextAlignmentCenter;
-        headerLabel.text = @"关注主播，不再迷路 >";
-        headerLabel.backgroundColor = HexRGBAlpha(0x24A4EB, 1);
-        headerLabel.layer.masksToBounds = YES ;
-        headerLabel.layer.cornerRadius = 14.0f ;
-        [_chatTableHeaderView addSubview:headerLabel];
-        [headerLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.centerY.height.equalTo(self.chatTableHeaderView);
+        
+        _chatTableHeaderView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.chatTableView.width, 225)];
+        _chatTableHeaderView.layer.masksToBounds = YES ;
+        YYLabel *contentLabel = [[YYLabel alloc]init];
+        contentLabel.font = [UIFont systemFontOfSize:15.0f];
+        contentLabel.textColor = [UIColor whiteColor];
+        contentLabel.backgroundColor = [[UIColor blackColor]colorWithAlphaComponent:0.2];
+        contentLabel.numberOfLines = 0;
+        contentLabel.text = @"欢迎来到直播间！Show倡导绿色健康直播，不提倡未成年人进行充值，直播内容和评论严禁包含整治、低俗色情、吸烟酗酒等内容，若有违反，将视情节严重程度给予禁播、永久禁封或停封账户。";
+        contentLabel.lineBreakMode = NSLineBreakByWordWrapping;
+        contentLabel.textContainerInset = UIEdgeInsetsMake(3, 8, 1, 5);
+        contentLabel.layer.cornerRadius = 5 ;
+        contentLabel.layer.masksToBounds = YES ;
+        contentLabel.preferredMaxLayoutWidth = self.chatTableView.width-20;
+        [_chatTableHeaderView addSubview:contentLabel];
+        [contentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.width.equalTo(self.chatTableHeaderView).with.offset(-20);
+            make.left.equalTo(self.chatTableHeaderView).with.offset(7);
+            make.top.equalTo(self.chatTableHeaderView);
+            make.height.equalTo(@120);
+        }];
+        self.descLabel = contentLabel ;
+        
+        UIButton *headerBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [headerBtn setTitleColor: [[UIColor whiteColor] colorWithAlphaComponent:0.7] forState:UIControlStateNormal];
+        headerBtn.titleLabel.font = [UIFont systemFontOfSize:14.0f];
+        headerBtn.titleLabel.textAlignment = NSTextAlignmentCenter;
+        [headerBtn setTitle:@"关注主播，不再迷路 >" forState:UIControlStateNormal];
+        headerBtn.backgroundColor = HexRGBAlpha(0x24A4EB, 1);
+        headerBtn.layer.masksToBounds = YES ;
+        headerBtn.layer.cornerRadius = 14.0f ;
+        [_chatTableHeaderView addSubview:headerBtn];
+        [headerBtn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.width.equalTo(@180);
+            make.height.equalTo(@28);
+            make.left.equalTo(self.chatTableHeaderView).with.offset(10);
+            make.top.equalTo(contentLabel.mas_bottom).with.offset(5);
+        }];
+        self.headerBtn = headerBtn ;
+        
+        UIButton *shareBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [shareBtn setTitleColor: [[UIColor whiteColor] colorWithAlphaComponent:0.7] forState:UIControlStateNormal];
+        shareBtn.titleLabel.font = [UIFont systemFontOfSize:14.0f];
+        shareBtn.titleLabel.textAlignment = NSTextAlignmentCenter;
+        [shareBtn setTitle:@"我也要分享赚SHOW >" forState:UIControlStateNormal];
+        shareBtn.backgroundColor = HexRGBAlpha(0xFF37A0, 1);
+        shareBtn.layer.masksToBounds = YES ;
+        shareBtn.layer.cornerRadius = 14.0f ;
+        [_chatTableHeaderView addSubview:shareBtn];
+        [shareBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(headerBtn.mas_bottom).with.offset(5);
+            make.width.equalTo(@180);
+            make.height.equalTo(@28);
             make.left.equalTo(self.chatTableHeaderView).with.offset(10);
         }];
+        self.shareBtn = shareBtn;
     }
     return _chatTableHeaderView;
 }
 
 -(void)reloadTableViewWithCount:(NSInteger)unReadMessageCount{
-
+    
     [self.chatTableView reloadData];
     if(self.scrollerToBottom){
         self.unReadCount = 0 ;
@@ -267,7 +335,7 @@
 - (UILabel *)noReadView{
     if(!_noReadView){
         _noReadView = [[UILabel alloc]init];
-        _noReadView.backgroundColor = [UIColor whiteColor];
+        _noReadView.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.7];
         _noReadView.textColor =HexRGBAlpha(0x24A4EB, 1);
         _noReadView.font = [UIFont systemFontOfSize:14.0f];
         _noReadView.text = @"v 1条新消息";
