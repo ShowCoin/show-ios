@@ -22,7 +22,7 @@
 #if !defined(DEBUG)
     BugtagsOptions *options = [[BugtagsOptions alloc] init];
     options.trackingCrashes = YES; // 具体可设置的属性请查看 Bugtags.h
-    [Bugtags startWithAppKey:@"677579d9661a61ceeecddb0f31c24915"  invocationEvent:BTGInvocationEventNone  options:options];
+    [Bugtags startWithAppKey:@""  invocationEvent:BTGInvocationEventNone  options:options];
 #endif
 }
 #pragma mark - 友盟分享

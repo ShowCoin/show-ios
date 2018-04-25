@@ -48,6 +48,7 @@
             }
         }
     }];
+    
     //请求成功需要将error置为空
     [[[RACObserve(self, error) distinctUntilChanged] skip:1] subscribeNext:^(id x) {
         @strongify(self);
