@@ -261,6 +261,11 @@
 		936A1A172078ECAD000A043A /* ImageRawDataOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = 936A1A0E2078ECAA000A043A /* ImageRawDataOutput.m */; };
 		936A1A182078ECAD000A043A /* GPU_rgb2yuv.m in Sources */ = {isa = PBXBuildFile; fileRef = 936A1A102078ECAB000A043A /* GPU_rgb2yuv.m */; };
 		936A1A192078ECAD000A043A /* GPUImageBeautifyFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 936A1A112078ECAC000A043A /* GPUImageBeautifyFilter.m */; };
+		93B9CEDC2093820F00EEED30 /* SLWeakScriptMessageDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B9CED22093820D00EEED30 /* SLWeakScriptMessageDelegate.m */; };
+		93B9CEDD2093820F00EEED30 /* SLWebViewScriptMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B9CED62093820E00EEED30 /* SLWebViewScriptMessage.m */; };
+		93B9CEDE2093820F00EEED30 /* SLBaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B9CED72093820E00EEED30 /* SLBaseWebViewController.m */; };
+		93B9CEDF2093820F00EEED30 /* SLWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B9CED92093820F00EEED30 /* SLWebView.m */; };
+		93B9CEE02093820F00EEED30 /* SLBaseWebViewRequestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B9CEDB2093820F00EEED30 /* SLBaseWebViewRequestHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -851,6 +856,16 @@
 		936A1A102078ECAB000A043A /* GPU_rgb2yuv.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPU_rgb2yuv.m; sourceTree = "<group>"; };
 		936A1A112078ECAC000A043A /* GPUImageBeautifyFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPUImageBeautifyFilter.m; sourceTree = "<group>"; };
 		936A1A122078ECAD000A043A /* AutoWhiteBalanceFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoWhiteBalanceFilter.h; sourceTree = "<group>"; };
+		93B9CED22093820D00EEED30 /* SLWeakScriptMessageDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWeakScriptMessageDelegate.m; sourceTree = "<group>"; };
+		93B9CED32093820D00EEED30 /* SLBaseWebViewRequestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLBaseWebViewRequestHelper.h; sourceTree = "<group>"; };
+		93B9CED42093820E00EEED30 /* SLWeakScriptMessageDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWeakScriptMessageDelegate.h; sourceTree = "<group>"; };
+		93B9CED52093820E00EEED30 /* SLWebViewScriptMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWebViewScriptMessage.h; sourceTree = "<group>"; };
+		93B9CED62093820E00EEED30 /* SLWebViewScriptMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWebViewScriptMessage.m; sourceTree = "<group>"; };
+		93B9CED72093820E00EEED30 /* SLBaseWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLBaseWebViewController.m; sourceTree = "<group>"; };
+		93B9CED82093820F00EEED30 /* SLWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWebView.h; sourceTree = "<group>"; };
+		93B9CED92093820F00EEED30 /* SLWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWebView.m; sourceTree = "<group>"; };
+		93B9CEDA2093820F00EEED30 /* SLBaseWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLBaseWebViewController.h; sourceTree = "<group>"; };
+		93B9CEDB2093820F00EEED30 /* SLBaseWebViewRequestHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLBaseWebViewRequestHelper.m; sourceTree = "<group>"; };
 		AA2350AAA436CDCBB1E93DCE /* Pods-ShowLive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowLive.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShowLive/Pods-ShowLive.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1896,6 +1911,7 @@
 		931602712068BD5300455B5F /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				93B9CED1209381FA00EEED30 /* WebView */,
 				9358805320885EE800CDC705 /* AD */,
 				431A5D5320861A670052C04D /* Chat */,
 				936A197720788F54000A043A /* Live */,
@@ -2147,6 +2163,23 @@
 				936A1A102078ECAB000A043A /* GPU_rgb2yuv.m */,
 			);
 			path = Filter;
+			sourceTree = "<group>";
+		};
+		93B9CED1209381FA00EEED30 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				93B9CEDA2093820F00EEED30 /* SLBaseWebViewController.h */,
+				93B9CED72093820E00EEED30 /* SLBaseWebViewController.m */,
+				93B9CED82093820F00EEED30 /* SLWebView.h */,
+				93B9CED92093820F00EEED30 /* SLWebView.m */,
+				93B9CED32093820D00EEED30 /* SLBaseWebViewRequestHelper.h */,
+				93B9CEDB2093820F00EEED30 /* SLBaseWebViewRequestHelper.m */,
+				93B9CED52093820E00EEED30 /* SLWebViewScriptMessage.h */,
+				93B9CED62093820E00EEED30 /* SLWebViewScriptMessage.m */,
+				93B9CED42093820E00EEED30 /* SLWeakScriptMessageDelegate.h */,
+				93B9CED22093820D00EEED30 /* SLWeakScriptMessageDelegate.m */,
+			);
+			path = WebView;
 			sourceTree = "<group>";
 		};
 		D544A431CFB6EF8D747D9730 /* Pods */ = {
@@ -2403,6 +2436,7 @@
 				93154E1E206264B200BF088F /* RNEncryptor.m in Sources */,
 				431A5DD120861A670052C04D /* SLChatGiftMessageCellViewModel.m in Sources */,
 				93154D1620623BAB00BF088F /* NSAttributedString+Additon.m in Sources */,
+				93B9CEDC2093820F00EEED30 /* SLWeakScriptMessageDelegate.m in Sources */,
 				93154D6620623C9400BF088F /* UIViewController+TrackLoadLog.m in Sources */,
 				93154E4B2062669800BF088F /* Base64Util.m in Sources */,
 				431A5DED20861A680052C04D /* SLPrivateChatViewController+Business.m in Sources */,
@@ -2474,6 +2508,7 @@
 				93154E27206264B200BF088F /* JPVideoPlayerDownloader.m in Sources */,
 				431A5DDF20861A670052C04D /* SLEmojiPageCollectionView.m in Sources */,
 				43F400DC2072255F00A06159 /* BaseModel.m in Sources */,
+				93B9CEDD2093820F00EEED30 /* SLWebViewScriptMessage.m in Sources */,
 				93154E24206264B200BF088F /* FLAnimatedImageView.m in Sources */,
 				431A5DE220861A670052C04D /* SLEmojiCollectionViewLayout.m in Sources */,
 				43F400EB2072370600A06159 /* UIButton+FillColor.m in Sources */,
@@ -2503,6 +2538,7 @@
 				93154D5720623C9400BF088F /* UIColor+HexString.m in Sources */,
 				93154D1320623BAB00BF088F /* NSNumber+str.m in Sources */,
 				431A5DEA20861A670052C04D /* SLEmojiCollectionView.m in Sources */,
+				93B9CEDF2093820F00EEED30 /* SLWebView.m in Sources */,
 				431A5DE820861A670052C04D /* SLEmojiCategory.m in Sources */,
 				722AB7FF2078E29300D5694D /* ShowConcerListCell.m in Sources */,
 				93154E1F206264B200BF088F /* RNCryptorEngine.m in Sources */,
@@ -2512,6 +2548,7 @@
 				936A19E82078B925000A043A /* GCDTimer.m in Sources */,
 				93154E18206264B200BF088F /* STAnimatedTransitioning.m in Sources */,
 				431A5DE120861A670052C04D /* SLEmojiHelper.m in Sources */,
+				93B9CEDE2093820F00EEED30 /* SLBaseWebViewController.m in Sources */,
 				722AB8042078E2EB00D5694D /* ShowHotListCell.m in Sources */,
 				93154E692062705900BF088F /* ShowNoNetView.m in Sources */,
 				431A5DD520861A670052C04D /* SLChatVoiceMessageCell.m in Sources */,
@@ -2596,6 +2633,7 @@
 				93154D6020623C9400BF088F /* NSString+Validation.m in Sources */,
 				439859F12080BC9700F8528B /* SLMessageInfo.m in Sources */,
 				93154E832062907200BF088F /* ShowAction.m in Sources */,
+				93B9CEE02093820F00EEED30 /* SLBaseWebViewRequestHelper.m in Sources */,
 				93154E4C2062669800BF088F /* MD5Encryption.m in Sources */,
 				9358806020885EF900CDC705 /* DALabeledCircularProgressView.m in Sources */,
 				431A5DE020861A670052C04D /* SLEmojiPageCollectionCell.m in Sources */,
