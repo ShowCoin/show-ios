@@ -85,9 +85,6 @@
 		43F400E22072272500A06159 /* TransactionRecordsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F400E12072272500A06159 /* TransactionRecordsModel.m */; };
 		43F400E5207228EE00A06159 /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F400E3207228EE00A06159 /* BaseTableViewCell.m */; };
 		43F400EB2072370600A06159 /* UIButton+FillColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F400EA2072370600A06159 /* UIButton+FillColor.m */; };
-		722AB7D2207650A200D5694D /* UserTableViewTypeOneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 722AB7D1207650A200D5694D /* UserTableViewTypeOneCell.m */; };
-		722AB7D5207650B800D5694D /* UserTableViewTypeTwoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 722AB7D4207650B800D5694D /* UserTableViewTypeTwoCell.m */; };
-		722AB7D8207650CD00D5694D /* UserTableViewTypeThreeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 722AB7D7207650CD00D5694D /* UserTableViewTypeThreeCell.m */; };
 		722AB7E120774E8400D5694D /* UserInfoListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 722AB7E020774E8400D5694D /* UserInfoListCell.m */; };
 		722AB7F32078CCD400D5694D /* ShowLiveConcernsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 722AB7F22078CCD400D5694D /* ShowLiveConcernsController.m */; };
 		722AB7F62078CCED00D5694D /* ShowLiveHotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 722AB7F52078CCED00D5694D /* ShowLiveHotViewController.m */; };
@@ -447,12 +444,6 @@
 		43F400E4207228EE00A06159 /* BaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
 		43F400E92072370600A06159 /* UIButton+FillColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+FillColor.h"; sourceTree = "<group>"; };
 		43F400EA2072370600A06159 /* UIButton+FillColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+FillColor.m"; sourceTree = "<group>"; };
-		722AB7D0207650A200D5694D /* UserTableViewTypeOneCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserTableViewTypeOneCell.h; sourceTree = "<group>"; };
-		722AB7D1207650A200D5694D /* UserTableViewTypeOneCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserTableViewTypeOneCell.m; sourceTree = "<group>"; };
-		722AB7D3207650B800D5694D /* UserTableViewTypeTwoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserTableViewTypeTwoCell.h; sourceTree = "<group>"; };
-		722AB7D4207650B800D5694D /* UserTableViewTypeTwoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserTableViewTypeTwoCell.m; sourceTree = "<group>"; };
-		722AB7D6207650CD00D5694D /* UserTableViewTypeThreeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserTableViewTypeThreeCell.h; sourceTree = "<group>"; };
-		722AB7D7207650CD00D5694D /* UserTableViewTypeThreeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserTableViewTypeThreeCell.m; sourceTree = "<group>"; };
 		722AB7DF20774E8400D5694D /* UserInfoListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserInfoListCell.h; sourceTree = "<group>"; };
 		722AB7E020774E8400D5694D /* UserInfoListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserInfoListCell.m; sourceTree = "<group>"; };
 		722AB7F12078CCD400D5694D /* ShowLiveConcernsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowLiveConcernsController.h; sourceTree = "<group>"; };
@@ -1221,12 +1212,6 @@
 			children = (
 				727463D3208D979200F8AE94 /* TopList */,
 				936A19972078A69F000A043A /* Setting */,
-				722AB7D0207650A200D5694D /* UserTableViewTypeOneCell.h */,
-				722AB7D1207650A200D5694D /* UserTableViewTypeOneCell.m */,
-				722AB7D3207650B800D5694D /* UserTableViewTypeTwoCell.h */,
-				722AB7D4207650B800D5694D /* UserTableViewTypeTwoCell.m */,
-				722AB7D6207650CD00D5694D /* UserTableViewTypeThreeCell.h */,
-				722AB7D7207650CD00D5694D /* UserTableViewTypeThreeCell.m */,
 				722AB7DF20774E8400D5694D /* UserInfoListCell.h */,
 				722AB7E020774E8400D5694D /* UserInfoListCell.m */,
 			);
@@ -2509,7 +2494,6 @@
 				93154E12206264B200BF088F /* ACMediaImageCell.m in Sources */,
 				93154D5320623C9400BF088F /* UIView+Additional.m in Sources */,
 				93154E5F20626DBB00BF088F /* BMChineseSort.m in Sources */,
-				722AB7D8207650CD00D5694D /* UserTableViewTypeThreeCell.m in Sources */,
 				431F61302077701300B6C282 /* NSObject+BGModel.m in Sources */,
 				431A5DF020861A680052C04D /* SLPrivateChatViewController+Emoji.m in Sources */,
 				936A1A192078ECAD000A043A /* GPUImageBeautifyFilter.m in Sources */,
@@ -2556,7 +2540,6 @@
 				43F400E5207228EE00A06159 /* BaseTableViewCell.m in Sources */,
 				4378646B2076108200146B97 /* ShowResourcesService.m in Sources */,
 				9316028A206CDEF500455B5F /* NSString+SHA3.m in Sources */,
-				722AB7D5207650B800D5694D /* UserTableViewTypeTwoCell.m in Sources */,
 				431A5DC820861A670052C04D /* SLStringSizeCalculation.m in Sources */,
 				431A5DD320861A670052C04D /* SLChatMessageCellConfig.m in Sources */,
 				431A5DEC20861A680052C04D /* SLEmojiView.m in Sources */,
@@ -2588,7 +2571,6 @@
 				931199CA2076032E00C58B9E /* ShowModelViewController.m in Sources */,
 				722AB8072078E2FB00D5694D /* ShowNewListCell.m in Sources */,
 				93154E4D2062669800BF088F /* GTMBase64.m in Sources */,
-				722AB7D2207650A200D5694D /* UserTableViewTypeOneCell.m in Sources */,
 				93154E732062810E00BF088F /* ShowRequestData.m in Sources */,
 				93154E2D206264B200BF088F /* JPVideoPlayerActivityIndicator.m in Sources */,
 				93154CF32062396000BF088F /* NSObject+Safe.m in Sources */,
