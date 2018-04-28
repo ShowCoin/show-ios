@@ -1,7 +1,7 @@
 //
 //  ACMediaManager.m
 //
-//  Created by caoyq on 16/12/22.
+//  Created by  JokeSmileZhang on 16/12/22.
 //  Copyright © 2016年 ArthurCao. All rights reserved.
 //
 

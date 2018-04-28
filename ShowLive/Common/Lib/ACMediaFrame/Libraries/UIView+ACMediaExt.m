@@ -1,7 +1,7 @@
 //
 //  UIView+ACMediaExt.m
 //
-//  Created by caoyq on 16/12/24.
+//  Created by  JokeSmileZhang on 16/12/24.
 //  Copyright © 2016年 ArthurCao. All rights reserved.
 //
 

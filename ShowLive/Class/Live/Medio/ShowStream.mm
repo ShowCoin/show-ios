@@ -2,8 +2,8 @@
 //  ShowStream.m
 //  ShowLive
 //
-//  Created by 周华 on 2018/4/7.
-//  Copyright © 2018年 vning. All rights reserved.
+//  Created by Mac on 2018/4/7.
+//  Copyright © 2018年 VNing. All rights reserved.
 //
 
 #import "ShowStream.h"
@@ -137,7 +137,7 @@ static dispatch_queue_t streamQueue = dispatch_queue_create("stream", DISPATCH_Q
 + (void)cloudConfigUpdate
 {
     int uid = 12345678;
-    NSString* token = [KMUtils device_uuid];
+    NSString* token = [ShowUtils device_uuid];
     NSString* appverstr  = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
     int appvercode = CoreUtils::VerStringToVerCode(appverstr.UTF8String);
     const char* deviceToken = token.UTF8String;

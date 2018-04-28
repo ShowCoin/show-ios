@@ -2,14 +2,14 @@
 //  KMHelper.h
 //  ShowLive
 //
-//  Created by 周华 on 2018/3/21.
-//  Copyright © 2018年 vning. All rights reserved.
+//  Created by Mac on 2018/3/21.
+//  Copyright © 2018年 VNing. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import "GTMBase64.h"
 
-@interface KMHelper : NSObject
+@interface ShowHelper : NSObject
 #pragma mark 一些常用的公共方法
 
 

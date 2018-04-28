@@ -2,7 +2,7 @@
 //  UIViewController+TrackLoadLog.m
 //  ShowLive
 //
-//  Created by zhangqiubing on 2017/8/26.
+//  Created by BigHao on 2017/8/26.
 //  Copyright © 2017年 show. All rights reserved.
 //
 

@@ -2,8 +2,8 @@
 //  ShowNoDataView.m
 //  ShowLive
 //
-//  Created by 周华 on 2018/3/21.
-//  Copyright © 2018年 vning. All rights reserved.
+//  Created by Mac on 2018/3/21.
+//  Copyright © 2018年 VNing. All rights reserved.
 //
 
 #import "ShowNoDataView.h"
@@ -96,7 +96,7 @@
         [superView addSubview:self];
     }
     
-    dataLabel.text =  [KMHelper isBlankString:noDataString] ? @"暂无数据" : noDataString;
+    dataLabel.text =  [ShowHelper isBlankString:noDataString] ? @"暂无数据" : noDataString;
     if ([noDataString isEqualToString:@"好尴尬，冷到没有评论"]) {
         dataLabel.textColor = HexRGBAlpha(0x8C8888, 1);
     }
@@ -108,7 +108,7 @@
         [superView addSubview:self];
     }
     
-    dataLabel.text =  [KMHelper isBlankString:noDataString] ? @"暂无数据" : noDataString;
+    dataLabel.text =  [ShowHelper isBlankString:noDataString] ? @"暂无数据" : noDataString;
     GoChooseBtn.hidden = hide;
 }
 -(void)showNoDataView:(UIView *)superView tagsString:(NSString *)tagsString andminAge:(NSString *)minAge maxAge:(NSString *)maxAge
@@ -152,7 +152,7 @@
         [superView addSubview:self];
     }
     
-    dataLabel.text =  [KMHelper isBlankString:noDataString] ? @"暂无数据" : noDataString;
+    dataLabel.text =  [ShowHelper isBlankString:noDataString] ? @"暂无数据" : noDataString;
     
     
     [self setNoDataType:kNoDataType_Smile];

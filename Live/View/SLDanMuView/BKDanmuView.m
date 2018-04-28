@@ -1,8 +1,8 @@
 //
 //  BKDanmuView.m
-//  Shell
+//  Show
 //
-//  Created by mac on 16/6/13.
+//  Created by Mac on 16/6/13.
 //  Copyright © 2016年 SouYu. All rights reserved.
 //
 

@@ -2,8 +2,8 @@
 //  AppConstant.h
 //  ShowLive
 //
-//  Created by 周华 on 2018/3/21.
-//  Copyright © 2018年 vning. All rights reserved.
+//  Created by Mac on 2018/3/21.
+//  Copyright © 2018年 VNing. All rights reserved.
 //
 
 #ifndef AppConstant_h
@@ -36,7 +36,7 @@
 #import "IQKeyboardManager.h"
 #import "CYPromptCover.h"
 #import "UIControl+BlocksKit.h"
-#import "KMHelper.h"
+#import "ShowHelper.h"
 #import "UIImage+Additional.h"
 #import "UIView+Additional.h"
 #import "UILabel+Additional.h"
@@ -58,11 +58,11 @@
 #import "UIButton+FillColor.h"
 #pragma mark -
 #pragma mark utils
-#import "KMUtils.h"
-#import "KMPathUtils.h"
+#import "ShowUtils.h"
+#import "ShowPathUtils.h"
 #import "UIColor+HexString.h"
 #import "UIFont+font.h"
-#import "KMShareUtils.h"
+#import "ShowShareUtils.h"
 #import "ShowResourcesService.h"
 #import "ShowStringDefine.h"
 //#import "UINavigationController+Show.h"

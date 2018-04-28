@@ -154,7 +154,7 @@
     MBProgressHUD *HUDInView = [MBProgressHUD showHUDAddedTo:kMainWindow animated:NO];
     HUDInView.removeFromSuperViewOnHide = YES;
     HUDInView.mode = MBProgressHUDModeText;
-    HUDInView.detailsLabelText = KM_NET_ERROR;
+    HUDInView.detailsLabelText = SHOW_NET_ERROR;
     [HUDInView hide:YES afterDelay:0.5];
     return HUDInView;
 }
@@ -176,7 +176,7 @@
         return nil;
     }
     if (!ValidStr(title)) {
-        title = KM_NET_ERROR;
+        title = SHOW_NET_ERROR;
     }
     UIView* masterView=[kMainWindow viewWithTag:1001];
     if (masterView) {

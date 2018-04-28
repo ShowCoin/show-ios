@@ -2,11 +2,11 @@
 //  KMHelper.m
 //  ShowLive
 //
-//  Created by 周华 on 2018/3/21.
-//  Copyright © 2018年 vning. All rights reserved.
+//  Created by Mac on 2018/3/21.
+//  Copyright © 2018年 VNing. All rights reserved.
 //
 
-#import "KMHelper.h"
+#import "ShowHelper.h"
 #include <sys/utsname.h>
 #include <sys/socket.h>
 #include <sys/sysctl.h>
@@ -17,7 +17,7 @@
 #import <EventKit/EventKit.h>
 #import <AdSupport/ASIdentifierManager.h>
 
-@implementation KMHelper
+@implementation ShowHelper
 #pragma mark 一些常用的公共方法
 
 
@@ -542,7 +542,7 @@
     dateFormatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
     NSDate *d = [dateFormatter dateFromString:dateString];
     
-    return [KMHelper formatDateWithDate:d format:format];
+    return [ShowHelper formatDateWithDate:d format:format];
 }
 
 + (NSString *)formatTimeInterval:(NSTimeInterval)timeInterval format:(NSString *)format{

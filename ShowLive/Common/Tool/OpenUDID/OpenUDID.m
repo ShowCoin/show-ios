@@ -201,7 +201,7 @@ static int const kOpenUDIDRedundancySlots = 100;
         OpenUDIDLog(@"localDict = %@",localDict);
     }
     
-    // Here we go through a sequence of slots, each of which being a UIPasteboard created by each participating app
+    // Here we go through a sequence of slots, each of which being a UIPasteboard VNing each participating app
     // The idea behind this is to both multiple and redundant representations of OpenUDIDs, as well as serve as placeholder for potential opt-out
     //
     NSString* availableSlotPBid = nil;

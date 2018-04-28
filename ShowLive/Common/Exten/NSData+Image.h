@@ -2,7 +2,7 @@
 //  NSData+Image.h
 //  ShowLive
 //
-//  Created by GongXin on 16/10/17.
+//  Created by WorkNew on 16/10/17.
 //  Copyright © 2016年 show. All rights reserved.
 //
 

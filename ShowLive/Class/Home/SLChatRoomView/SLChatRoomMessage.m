@@ -2,7 +2,7 @@
 //  BKMessageInfo.m
 //  show-ios
 //
-//  Created by mac on 16/5/27.
+//  Created by Mac on 16/5/27.
 //  Copyright © 2016年 SouYu. All rights reserved.
 //
 

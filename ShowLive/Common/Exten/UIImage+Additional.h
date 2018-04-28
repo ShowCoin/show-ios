@@ -3,7 +3,7 @@
 //  
 //
 //  Created by Bob on 15/4/10.
-//  Copyright (c) 2015年 家伟 李. All rights reserved.
+//  Copyright (c) 2015年 WorkNew. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

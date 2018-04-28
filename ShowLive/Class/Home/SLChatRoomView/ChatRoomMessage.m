@@ -2,7 +2,7 @@
 //  BKChatRoomMessage.m
 //  showLive
 //
-//  Created by mac on 16/5/30.
+//  Created by Mac on 16/5/30.
 //  Copyright © 2016年 SouYu. All rights reserved.
 //
 

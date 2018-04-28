@@ -2,8 +2,8 @@
 //  SLLocationManager.m
 //  ShowLive
 //
-//  Created by gongxin on 2018/4/23.
-//  Copyright © 2018年 vning. All rights reserved.
+//  Created by WorkNew on 2018/4/23.
+//  Copyright © 2018年 VNing. All rights reserved.
 //
 
 #import "SLLocationManager.h"

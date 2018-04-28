@@ -2,8 +2,8 @@
 //  MyUtility.m
 //  ThuInfo
 //
-//  Created by WenHao on 12-10-30.
-//  Copyright (c) 2012年 WenHao. All rights reserved.
+//  Created by BigHao on 17-10-30.
+//  Copyright (c) 2012年 BigHao. All rights reserved.
 //
 
 #import "MD5Encryption.h"

@@ -2,8 +2,8 @@
 //  DefineConstant.h
 //  ShowLive
 //
-//  Created by 周华 on 2018/3/21.
-//  Copyright © 2018年 vning. All rights reserved.
+//  Created by Mac on 2018/3/21.
+//  Copyright © 2018年 VNing. All rights reserved.
 //
 
 #ifndef DefineConstant_h
@@ -197,7 +197,7 @@ typedef NSUInteger FrameType;
 #define  SHARETEXT @"我下载了ShowLive，我和我的小伙伴都惊呆了！(他提到了你)"
 
 //未知服务器错误的通用提示
-static NSString *const KM_NET_ERROR = @"网络连接不稳定，请重试";
+static NSString *const SHOW_NET_ERROR = @"网络连接不稳定，请重试";
 static NSString *const SECTION_SYSTEM_DEFAULT = @"欢迎来到ShowLive，我们等你好久啦！在这里你可以寻找到自己喜欢的帅哥美女，赶紧去体验一下吧:)";
 
 //#warning 旧的方式,准备废弃

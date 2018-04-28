@@ -2,8 +2,8 @@
 //  GCDTimer.m
 //  VideoMake
 //
-//  Created by sunlantao on 15/5/12.
-//  Copyright (c) 2015年 sunlantao. All rights reserved.
+//  Created by  JokeSmileZhang on 15/5/12.
+//  Copyright (c) 2015年 JokeSmileZhang. All rights reserved.
 //
 
 #import "GCDTimer.h"

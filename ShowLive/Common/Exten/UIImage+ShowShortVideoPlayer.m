@@ -2,16 +2,16 @@
 //  UIImage+KMShortVideoPlayer.m
 //  ShowLive
 //
-//  Created by GongXin on 16/10/9.
+//  Created by WorkNew on 16/10/9.
 //  Copyright © 2016年 show. All rights reserved.
 //
 
 #import "UIImage+KMShortVideoPlayer.h"
 @import AVFoundation;
 
-@implementation UIImage (KMShortVideoPlayer)
+@implementation UIImage (ShowShortVideoPlayer)
 
-+ (UIImage *)KM_previewImageWithVideoURL:(NSURL *)videoURL {
++ (UIImage *)SHOW_previewImageWithVideoURL:(NSURL *)videoURL {
     AVAsset *asset = [AVAsset assetWithURL:videoURL];
     
     AVAssetImageGenerator *generator = [AVAssetImageGenerator assetImageGeneratorWithAsset:asset];
