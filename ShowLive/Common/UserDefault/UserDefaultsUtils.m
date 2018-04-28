@@ -2,8 +2,8 @@
 //  Constants.h
 //  LoanCalculator
 //
-//  Created by haodai on 14-9-24.
-//  Copyright (c) 2014年 haodai. All rights reserved.
+//  Created by NicholasHao on 14-9-24.
+//  Copyright (c) 2014年 NicholasHao. All rights reserved.
 //
 
 #import "UserDefaultsUtils.h"

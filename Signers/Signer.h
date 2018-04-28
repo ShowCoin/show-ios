@@ -125,7 +125,7 @@ typedef enum SignerTextMessage {
 
 // Mnemonic Phrase
 //   - Watch-only wallets (just an address) do not have (known) mnemonic phrases
-//   - Secret storage JSON wallets created by ethers do
+//   - Secret storage JSON wallets VNing ethers do
 //   - Firefly (version 0) wallets do not
 @property (nonatomic, readonly) BOOL supportsMnemonicPhrase;
 

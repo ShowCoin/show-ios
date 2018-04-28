@@ -2,7 +2,7 @@
 //  BKChatRoomMessage.h
 //  show-ios
 //
-//  Created by mac on 18/4/15.
+//  Created by Mac on 18/4/15.
 //  Copyright © 2019年 SouYu. All rights reserved.
 //
 

@@ -2,8 +2,8 @@
 //  SLChatMessageBaseCellViewModel.m
 //  ShowLive
 //
-//  Created by 周华 on 2018/4/11.
-//  Copyright © 2018年 vning. All rights reserved.
+//  Created by Mac on 2018/4/11.
+//  Copyright © 2018年 VNing. All rights reserved.
 //
 
 #import "SLChatMessageBaseCellViewModel.h"
@@ -97,7 +97,7 @@
     // 时间展示:sentTime发送时间，无论是接收的消息还是发送的消息,服务器返回的时间是毫秒，13位数，而ios的时间戳是10位，所以除以1000
     NSTimeInterval time = self.rcMessage.sentTime * 0.001;
     NSDate *date = [NSDate dateWithTimeIntervalSince1970:time];
-    return [KMHelper DescriptionWithDate:date];
+    return [ShowHelper DescriptionWithDate:date];
 }
 
 - (BOOL)isVip

@@ -2,8 +2,8 @@
 //  SLInfoHeaderView.m
 //  ShowLive
 //
-//  Created by vning on 2018/4/24.
-//  Copyright © 2018年 vning. All rights reserved.
+//  Created by VNing on 2018/4/24.
+//  Copyright © 2018年 VNing. All rights reserved.
 //
 
 #import "SLInfoHeaderView.h"

@@ -1,8 +1,8 @@
 //
-//  UIImage+KMShortVideoPlayer.h
+//  UIImage+ShowShortVideoPlayer.h
 //  ShowLive
 //
-//  Created by GongXin on 16/10/9.
+//  Created by WorkNew on 16/10/9.
 //  Copyright © 2016年 show. All rights reserved.
 //
 
@@ -13,9 +13,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UIImage (KMShortVideoPlayer)
+@interface UIImage (ShowShortVideoPlayer)
 
-+ (UIImage *)KM_previewImageWithVideoURL:(NSURL *)videoURL;
++ (UIImage *)SL_previewImageWithVideoURL:(NSURL *)videoURL;
 
 @end
 

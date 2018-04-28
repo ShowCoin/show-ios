@@ -2,8 +2,8 @@
 //  SLMessageListCell.m
 //  ShowLive
 //
-//  Created by 周华 on 2018/4/10.
-//  Copyright © 2018年 vning. All rights reserved.
+//  Created by Mac on 2018/4/10.
+//  Copyright © 2018年 VNing. All rights reserved.
 //
 
 #import "SLMessageListCell.h"
@@ -189,7 +189,7 @@
     //时间
     NSTimeInterval time = _msgTime * 0.001; //服务器返回的时间是毫秒，13位数，而ios的时间戳是10位，所以除以1000
     //    NSDate *date = [NSDate dateWithTimeIntervalSince1970:time];
-    NSString * strTime=[KMHelper chatMessageListTimeStringWithInterval:time];
+    NSString * strTime=[ShowHelper chatMessageListTimeStringWithInterval:time];
     self.timeLabel.text = strTime;
 }
 

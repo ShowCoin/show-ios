@@ -1,7 +1,7 @@
 //
 //  BaseModel.m
 //
-//  Created by JokeSmileZhang on 17/12/30.
+//  Created by  JokeSmileZhang on 17/12/30.
 //  Copyright © 2016年 JokeSmileZhang. All rights reserved.
 //
 

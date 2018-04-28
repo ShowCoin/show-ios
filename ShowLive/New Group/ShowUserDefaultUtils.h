@@ -2,13 +2,13 @@
 //  KMUserDefaultUtils.h
 //  ShowLive
 //
-//  Created by 周华 on 2018/3/21.
-//  Copyright © 2018年 vning. All rights reserved.
+//  Created by Mac on 2018/3/21.
+//  Copyright © 2018年 VNing. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface KMUserDefaultUtils : NSObject
+@interface ShowUserDefaultUtils : NSObject
 
 #pragma mark - 首页
 #pragma mark 推荐

@@ -2,8 +2,8 @@
 //  UIView+UIView_Additional.h
 //  I500user
 //
-//  Created by shanWu on 15/4/9.
-//  Copyright (c) 2015年 家伟 李. All rights reserved.
+//  Created by ShanWu on 15/4/9.
+//  Copyright (c) 2015年 WorkNew. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

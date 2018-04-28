@@ -2,9 +2,9 @@
 //  UIViewController+XLBubbleTransition.h
 //  XLBubbleTransitionDemo
 //
-//  Created by MengXianLiang on 2017/4/1.
-//  Copyright © 2017年 MengXianLiang. All rights reserved.
-//  GitHub ：https://github.com/mengxianliang/XLBubbleTransition
+//  Created by  JokeSmileZhang on 2017/4/1.
+//  Copyright © 2017年 JokeSmileZhang. All rights reserved.
+//  GitHub ：https://github.com/JokeSmileZhang/XLBubbleTransition
 
 #import <UIKit/UIKit.h>
 #import "XLBubbleTransition.h"

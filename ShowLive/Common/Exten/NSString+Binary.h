@@ -2,7 +2,7 @@
 //  NSString+Binary.h
 //  show-ios
 //
-//  Created by sunjiaqi on 17/7/1.
+//  Created by Nicholas.Sun on 17/7/1.
 //  Copyright © 2016年 show. All rights reserved.
 //
 

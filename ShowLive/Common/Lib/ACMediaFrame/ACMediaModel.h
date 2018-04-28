@@ -1,7 +1,7 @@
 //
 //  ACMediaModel.h
 //
-//  Created by caoyq on 16/12/25.
+//  Created by  JokeSmileZhang on 16/12/25.
 //  Copyright © 2016年 ArthurCao. All rights reserved.
 //
 

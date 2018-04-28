@@ -2,8 +2,8 @@
 //  AppDelegate+RegisterService.h
 //  ShowLive
 //
-//  Created by 周华 on 2018/4/8.
-//  Copyright © 2018年 vning. All rights reserved.
+//  Created by Mac on 2018/4/8.
+//  Copyright © 2018年 VNing. All rights reserved.
 //
 
 #import "AppDelegate.h"

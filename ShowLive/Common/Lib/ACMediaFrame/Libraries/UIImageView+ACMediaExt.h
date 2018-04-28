@@ -2,7 +2,7 @@
 //  UIImageView+ACMediaExt.h
 //  ACMediaFrameExample
 //
-//  Created by caoyq on 2017/3/27.
+//  Created by  JokeSmileZhang on 2017/3/27.
 //  Copyright © 2017年 ArthurCao. All rights reserved.
 //
 

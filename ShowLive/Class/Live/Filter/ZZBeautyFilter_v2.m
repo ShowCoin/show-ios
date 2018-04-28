@@ -2,7 +2,7 @@
 //  ZZBeautyFilter_v2.m
 //  demo
 //
-//  Created by 郅鹏 宋 on 16/3/4.
+//  Created by Nicholas.Song on 16/3/4.
 //  Copyright © 2016年 songzhipeng. All rights reserved.
 //
 

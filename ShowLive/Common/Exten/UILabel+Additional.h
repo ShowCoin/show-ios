@@ -2,8 +2,8 @@
 //  UILabel+Additional.h
 //  PublicProject
 //
-//  Created by user on 15/8/26.
-//  Copyright (c) 2015年 家伟 李. All rights reserved.
+//  Created by WorkNew on 17/8/26.
+//  Copyright (c) 2015年 WorkNew. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

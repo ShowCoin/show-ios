@@ -1,8 +1,8 @@
 //
 //  UIImage+XFExtension.h
 //
-//  Created by xiaofan on 16/7/5.
-//  Copyright © 2016年 xiaofan. All rights reserved.
+//  Created by  JokeSmileZhang on 16/7/5.
+//  Copyright © 2016年 JokeSmileZhang. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
