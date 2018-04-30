@@ -310,7 +310,7 @@
             if ([self canSendMsgNow]) {
                 [self sendText:strMsgContent];
             }else{
-                [ShowWaringView waringView:@"消息发送过为频繁，请稍后再发" style:WaringStyleRed];
+                [ShowWaringView waringView:@"消息发送过于频繁，请稍后再发" style:WaringStyleRed];
             }
             
         }else{

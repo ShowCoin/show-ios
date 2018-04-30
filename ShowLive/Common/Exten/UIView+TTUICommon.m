@@ -29,7 +29,7 @@
 //TT_FIX_CATEGORY_BUG(UIView_TTUICommon)
 
 #define KLoadingViewTag 200
-#import "AppDelegate.h"
+#import "ShowAppDelegateAppDelegate.h"
 
 @implementation UIView (TTUICommon)
 

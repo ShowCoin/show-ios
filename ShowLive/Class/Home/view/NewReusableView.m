@@ -24,7 +24,7 @@
     if (!_coverImage) {
         _coverImage = [[UIImageView alloc]initWithFrame:self.bounds];
         _coverImage.contentMode = UIViewContentModeScaleToFill;
-        [_coverImage yy_setImageWithURL:[NSURL URLWithString:@"http://www.131mmw.com/uploads/allimg/180407/1-1P40G04248.jpg"] options:YYWebImageOptionProgressiveBlur | YYWebImageOptionSetImageWithFadeAnimation];
+        [_coverImage yy_setImageWithURL:[NSURL URLWithString:@""] options:YYWebImageOptionProgressiveBlur | YYWebImageOptionSetImageWithFadeAnimation];
         _coverImage.backgroundColor = [UIColor clearColor];
         [_coverImage setImage:[UIImage imageNamed:@"login_bg"]];
         _coverImage.clipsToBounds = YES;

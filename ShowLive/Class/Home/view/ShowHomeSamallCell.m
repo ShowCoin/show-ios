@@ -33,7 +33,6 @@
     if (!_coverImage) {
         _coverImage = [[YYAnimatedImageView alloc]initWithFrame:CGRectMake(0, 0,cellWith ,cellWith/3*4)];
         _coverImage.contentMode = UIViewContentModeScaleAspectFill;
-//        [_coverImage yy_setImageWithURL:[NSURL URLWithString:@"http://www.131mmw.com/uploads/allimg/180407/1-1P40G04248.jpg"] options:YYWebImageOptionProgressiveBlur | YYWebImageOptionSetImageWithFadeAnimation];
         _coverImage.backgroundColor = [UIColor clearColor];
         [_coverImage setImage:[UIImage imageNamed:@"login_bg"]];
         _coverImage.clipsToBounds = YES;

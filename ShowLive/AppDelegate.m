@@ -6,7 +6,7 @@
 //  Copyright © 2018年 VNing. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "ShowAppDelegateAppDelegate.h"
 #import "BaseTabBarController.h"
 
 @interface AppDelegate ()
