@@ -22,6 +22,7 @@
 		72FE9B6920621F59008DD3D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FE9B6820621F59008DD3D5 /* main.m */; };
 		72FE9B7320621F59008DD3D5 /* ShowLiveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FE9B7220621F59008DD3D5 /* ShowLiveTests.m */; };
 		72FE9B7E20621F59008DD3D5 /* ShowLiveUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FE9B7D20621F59008DD3D5 /* ShowLiveUITests.m */; };
+		938D2FFF20A0C822006A0CDE /* ShowAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 938D2FFE20A0C822006A0CDE /* ShowAction.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,8 @@
 		72FE9B7D20621F59008DD3D5 /* ShowLiveUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowLiveUITests.m; sourceTree = "<group>"; };
 		72FE9B7F20621F59008DD3D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93154D6820623EFE00BF088F /* ShowLive.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowLive.pch; sourceTree = "<group>"; };
+		938D2FFD20A0C821006A0CDE /* ShowAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowAction.h; sourceTree = "<group>"; };
+		938D2FFE20A0C822006A0CDE /* ShowAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowAction.m; sourceTree = "<group>"; };
 		AA2350AAA436CDCBB1E93DCE /* Pods-ShowLive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowLive.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShowLive/Pods-ShowLive.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,6 +142,8 @@
 		72C6166720A0C65200103C44 /* requestAction */ = {
 			isa = PBXGroup;
 			children = (
+				938D2FFD20A0C821006A0CDE /* ShowAction.h */,
+				938D2FFE20A0C822006A0CDE /* ShowAction.m */,
 				72C6166920A0C67500103C44 /* SLUrgeListAction.h */,
 				72C6166820A0C67500103C44 /* SLUrgeListAction.m */,
 			);
@@ -448,6 +453,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				938D2FFF20A0C822006A0CDE /* ShowAction.m in Sources */,
 				43D24A952094B4C500C59AC8 /* ShowNavigationBar.m in Sources */,
 				72FE9B6920621F59008DD3D5 /* main.m in Sources */,
 				72C6166A20A0C67500103C44 /* SLUrgeListAction.m in Sources */,
