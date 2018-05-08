@@ -37,6 +37,7 @@ extern const NSNotificationName ShowWalletAccountBalanceDidChangeNotification;
 
 // 如果活动帐户事务更改(包括确认计数)
 extern const NSNotificationName ShowWalletTransactionDidChangeNotification;
+// 账户历史更新
 extern const NSNotificationName ShowWalletAccountHistoryUpdatedNotification;
 
 extern const NSNotificationName ShowWalletActiveAccountDidChangeNotification;
