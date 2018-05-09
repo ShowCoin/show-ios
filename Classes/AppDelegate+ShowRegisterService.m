@@ -14,6 +14,9 @@
 #import "SLLocationManager.h"
 
 @implementation ShowAppDelegateAppDelegate (ShowRegisterService)
+/**
+ 注册  各种服务
+ */
 -(void)registerService:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
     [self show_registerBugtags];
     [self show_registerJPush:launchOptions];
