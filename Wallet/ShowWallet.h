@@ -87,6 +87,7 @@ typedef enum ShowWalletOptionsType {
 
 
 @interface ShowWallet : NSObject
+
 + (instancetype)show_walletWithKeychainKey: (NSString*)keychainKey;
 
 @property (nonatomic, readonly) NSString *keychainKey;
@@ -102,6 +103,7 @@ typedef enum ShowWalletOptionsType {
 
 @property (nonatomic, assign) AccountIndex activeAccountIndex;
 
+//当前使用中钱包的地址
 @property (nonatomic, readonly) show_Address *activeAccountAddress;
 @property (nonatomic, readonly) show_Provider *activeAccountProvider;
 @property (nonatomic, readonly) show_Account * account;
