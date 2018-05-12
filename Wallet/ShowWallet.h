@@ -110,7 +110,7 @@ typedef enum ShowWalletOptionsType {
 
 @property (nonatomic, assign) NSUInteger activeAccountBlockNumber;
 
-
+//当前账户数
 @property (nonatomic, readonly) NSUInteger numberOfAccounts;
 
 - (Address*)show_addressForIndex: (AccountIndex)index;
