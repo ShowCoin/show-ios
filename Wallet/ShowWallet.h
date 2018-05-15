@@ -39,18 +39,18 @@ extern const NSNotificationName ShowWalletAccountBalanceDidChangeNotification;
 extern const NSNotificationName ShowWalletTransactionDidChangeNotification;
 // 账户历史更新
 extern const NSNotificationName ShowWalletAccountHistoryUpdatedNotification;
-
+// 激活账户更新通知
 extern const NSNotificationName ShowWalletActiveAccountDidChangeNotification;
-
+// 账户同步通知
 extern const NSNotificationName ShowWalletDidSyncNotification;
 
 
 #pragma mark - Notification Keys
-
+// 账户地址私钥
 extern const NSString* ShowWalletNotificationAddressKey;
 extern const NSString* ShowWalletNotificationProviderKey;
 extern const NSString* ShowWalletNotificationIndexKey;
-
+// 账户名称
 extern const NSString* ShowWalletNotificationNicknameKey;
 
 extern const NSString* ShowWalletNotificationBalanceKey;
