@@ -19,6 +19,7 @@
 		43D24A922094A43600C59AC8 /* ShowAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D24A8F2094A43600C59AC8 /* ShowAppDelegate.m */; };
 		43D24A952094B4C500C59AC8 /* ShowNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D24A942094B4C500C59AC8 /* ShowNavigationBar.m */; };
 		720C304A20A35ACD00207500 /* SLGetWithdrawAddressAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 720C304920A35ACC00207500 /* SLGetWithdrawAddressAction.m */; };
+		725B98BD20AC837D00747F7A /* UserCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 725B98BC20AC837C00747F7A /* UserCenterViewController.m */; };
 		72C6166A20A0C67500103C44 /* SLUrgeListAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C6166820A0C67500103C44 /* SLUrgeListAction.m */; };
 		72F17B6A20AB18F60039E916 /* ShowForgetPwdAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F17B6820AB18F60039E916 /* ShowForgetPwdAction.m */; };
 		72F17B6B20AB18F60039E916 /* ShowVerifycodeAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F17B6920AB18F60039E916 /* ShowVerifycodeAction.m */; };
@@ -68,6 +69,7 @@
 		720C304820A35ACC00207500 /* SLGetWithdrawAddressAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLGetWithdrawAddressAction.h; sourceTree = "<group>"; };
 		720C304920A35ACC00207500 /* SLGetWithdrawAddressAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLGetWithdrawAddressAction.m; sourceTree = "<group>"; };
 		725B98BB20AC3D2F00747F7A /* UserCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCenterViewController.h; sourceTree = "<group>"; };
+		725B98BC20AC837C00747F7A /* UserCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCenterViewController.m; sourceTree = "<group>"; };
 		72C6166820A0C67500103C44 /* SLUrgeListAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLUrgeListAction.m; sourceTree = "<group>"; };
 		72C6166920A0C67500103C44 /* SLUrgeListAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLUrgeListAction.h; sourceTree = "<group>"; };
 		72C686F61D628C8898214FFC /* Pods-ShowLive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowLive.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShowLive/Pods-ShowLive.debug.xcconfig"; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				725B98BB20AC3D2F00747F7A /* UserCenterViewController.h */,
+				725B98BC20AC837C00747F7A /* UserCenterViewController.m */,
 			);
 			path = UserCenter;
 			sourceTree = "<group>";
@@ -508,6 +511,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				725B98BD20AC837D00747F7A /* UserCenterViewController.m in Sources */,
 				938D2FFF20A0C822006A0CDE /* ShowAction.m in Sources */,
 				720C304A20A35ACD00207500 /* SLGetWithdrawAddressAction.m in Sources */,
 				72F17B6A20AB18F60039E916 /* ShowForgetPwdAction.m in Sources */,
