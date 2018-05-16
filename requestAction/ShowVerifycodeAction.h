@@ -9,7 +9,10 @@
 #import "ShowAction.h"
 
 @interface ShowVerifycodeAction : ShowAction
+
+//手机号
 @property (nonatomic,copy)NSString * phone_number;
+//类型
 @property (nonatomic,copy)NSString * type;
 
 @end

@@ -9,6 +9,7 @@
 #import "SLUrgeListAction.h"
 
 @implementation SLUrgeListAction
+
 - (NSString *)interface{
     return  @"rank/urgeList";
 }
