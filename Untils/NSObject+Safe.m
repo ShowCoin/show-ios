@@ -10,6 +10,7 @@
 
 @implementation NSObject (Safe)
 
+
 - (instancetype)safeDictionary {
     if (![self isKindOfClass:[NSDictionary class]]) {
         return nil;
