@@ -74,7 +74,7 @@
 -(void)getUserInfo
 {
     self.action = [SLGetUserInfoAction action];
-//    self.action.modelClass = AccountModel.self;
+    //    self.action.modelClass = AccountModel.self;
     if (!_IsMe) {
         self.action.uid = _userModel.uid;
     }
@@ -98,7 +98,7 @@
         
     };
     [self.action start];
-
+    
 }
 -(void)fitDescriptionsHeight
 {
@@ -127,7 +127,7 @@
     YYTextLayout *layout = [YYTextLayout layoutWithContainerSize:size text:attributeStr];
     self.wordsHeight = layout.textBoundingSize.height;
     NSLog(@"==========%f",self.wordsHeight);
-
+    
     if (!self.dataSource.count) {
         [self.tableView setContentSize:CGSizeMake(kMainScreenWidth, HeaderHeightWithoutWords + self.wordsHeight + 100*Proportion375)];
     }
@@ -136,7 +136,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-
+    
     [self.navigationBarView setNavigationColor:NavigationColorBlack];
     self.navigationBarView.hidden = YES;
     self.view.backgroundColor = kThemeWhiteColor;
@@ -144,8 +144,8 @@
     self.dataSource = [NSMutableArray array];
     [self.view addSubview:self.mainCollectionView];
     [self.view addSubview:self.floatView];
-//    _nodataLab = [[UILabel alloc] initWithFrame:CGRectMake(0, HeaderHeightWithoutWords + self.wordsHeight + 70*Proportion375, kMainScreenWidth, 17)];
-
+    //    _nodataLab = [[UILabel alloc] initWithFrame:CGRectMake(0, HeaderHeightWithoutWords + self.wordsHeight + 70*Proportion375, kMainScreenWidth, 17)];
+    
     [self resetParameter];
     [self requestWithMore:NO];
 }
@@ -156,7 +156,7 @@
         flowlayout.itemSize = CGSizeMake(cellWith, cellWith /10 * 16);
         flowlayout.minimumLineSpacing = 1*Proportion375;
         flowlayout.minimumInteritemSpacing = 0;
-//        flowlayout.sectionHeadersPinToVisibleBounds = YES;
+        //        flowlayout.sectionHeadersPinToVisibleBounds = YES;
         _mainCollectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, kMainScreenWidth,kMainScreenHeight - KTabBarHeight) collectionViewLayout:flowlayout];
         if (!_IsMe) {
             _mainCollectionView.height = kMainScreenHeight;
@@ -176,11 +176,11 @@
         [_mainCollectionView registerClass:[ShowHomeMiddleCell class] forCellWithReuseIdentifier:@"ShowHomeMiddleCell"];
         [_mainCollectionView registerClass:[SLUserViewHeader class]forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header"];
         @weakify(self);
-//        _mainCollectionView.mj_header = [MJRefreshHeader headerWithRefreshingBlock:^{
-//            @strongify(self);
-//            [self resetParameter];
-//            [self requestWithMore:NO];
-//        }];
+        //        _mainCollectionView.mj_header = [MJRefreshHeader headerWithRefreshingBlock:^{
+        //            @strongify(self);
+        //            [self resetParameter];
+        //            [self requestWithMore:NO];
+        //        }];
         _mainCollectionView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
             @strongify(self);
             [self requestWithMore:YES];
@@ -194,14 +194,14 @@
     if (!_floatView) {
         _floatView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kMainScreenWidth, kNaviBarHeight)];
         _floatView.backgroundColor = kthemeBlackColor;
-         UIButton * _worksBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        UIButton * _worksBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         _worksBtn.frame = CGRectMake(0, 0, kMainScreenWidth/2, 45*Proportion375);
         _worksBtn.bottom = KNaviBarHeight;
         [_worksBtn setTitle:@"作品" forState:UIControlStateNormal];
         [_worksBtn setTitleColor:kThemeWhiteColor forState:UIControlStateNormal];
         _worksBtn.titleLabel.font = Font_Medium(15*Proportion375);
         [[_worksBtn rac_signalForControlEvents:UIControlEventTouchUpInside]subscribeNext:^(id x) {
-           
+            
         } ];
         [_floatView addSubview:_worksBtn];
         
@@ -246,7 +246,7 @@
     return cell;
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-
+    
     [PageMgr pushToReplayRoomControllerWithData:[self.dataSource objectAtIndex:indexPath.row]];
 }
 -(UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
@@ -258,21 +258,125 @@
         headerView.userModel = self.userModel;
         headerView.delegate = self;
         
-//        _nodataLab.frame = CGRectMake(0, HeaderHeightWithoutWords + self.wordsHeight + 70*Proportion375, kMainScreenWidth, 17);
-//        _nodataLab.text  = @"快去发布故事，用视频记录生活。";
-//        _nodataLab.textColor = kGrayWith999999;
-//        _nodataLab.font = Font_Regular(14*Proportion375);
-//        _nodataLab.textAlignment = NSTextAlignmentCenter;
-//        _nodataLab.backgroundColor = [UIColor clearColor];
-//        [headerView addSubview:_nodataLab];
+        //        _nodataLab.frame = CGRectMake(0, HeaderHeightWithoutWords + self.wordsHeight + 70*Proportion375, kMainScreenWidth, 17);
+        //        _nodataLab.text  = @"快去发布故事，用视频记录生活。";
+        //        _nodataLab.textColor = kGrayWith999999;
+        //        _nodataLab.font = Font_Regular(14*Proportion375);
+        //        _nodataLab.textAlignment = NSTextAlignmentCenter;
+        //        _nodataLab.backgroundColor = [UIColor clearColor];
+        //        [headerView addSubview:_nodataLab];
         
         return headerView;
     }
-   return nil;
+    return nil;
 }
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
     return CGSizeMake(kMainScreenWidth, HeaderHeightWithoutWords + self.wordsHeight + KTopHeight);
 }
+#pragma mark---------scrollView-----------
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    NSLog(@"%f",scrollView.contentOffset.y);
+    if (scrollView.contentOffset.y > HeaderHeightWithoutWords + _wordsHeight + KTopHeight - KNaviBarHeight) {
+        self.floatView.hidden = NO;
+    }else{
+        self.floatView.hidden = YES;
+    }
+    
+    if (scrollView.contentOffset.y <= 0) {
+        scrollView.contentOffset = CGPointMake(0, 0);
+    }
+}
+#pragma mark---------actions-----------
+
+-(void)walletViewclickAction:(UITapGestureRecognizer *)sender
+{
+    [PageMgr presentLoginViewController];
+}
+
+#pragma mark---------method-----------
+
+- (void)requestWithMore:(BOOL)more
+{
+    SLHistoryWorksAction * action = [SLHistoryWorksAction action];
+    if (!_IsMe) {
+        action.uid = _userModel.uid;
+    }
+    action.cursor = self.cursor;
+    action.count = self.count;
+    [self startRequestAction:action Sucess:^(id result) {
+        self.dataModelList = [SLLiveListModel mj_objectArrayWithKeyValuesArray:[result objectForKey:@"list"]];
+        if (more) {
+            [self.dataSource addObjectsFromArray:self.dataModelList];
+        }else{
+            self.dataSource = [NSMutableArray arrayWithArray:self.dataModelList];
+        }
+        self.cursor = [result objectForKey:@"next_cursor"];
+        
+        if (more) {
+            if (self.cursor.integerValue == -1) {
+                [self.mainCollectionView.mj_footer endRefreshingWithNoMoreData];
+            }else{
+                [self.mainCollectionView.mj_footer endRefreshing];
+            }
+        }else{
+            [self.mainCollectionView.mj_header endRefreshing];
+            if (self.dataSource.count == 0) {
+                self.mainCollectionView.contentInset = UIEdgeInsetsMake(0, 0, 200, 0);
+                
+                UIView * nodataview = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kMainScreenWidth, 200)];
+                nodataview.backgroundColor = HexRGBAlpha(0x242424, 1);
+                UILabel * nodataLab =[UILabel labelWithText:@"TA还没有发布过任何作品哦~" textColor:kGrayWith999999 font:Font_Medium(14*Proportion375) backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentCenter];
+                nodataLab.frame = CGRectMake(0, 90, kMainScreenWidth, 20);
+                [nodataview addSubview:nodataLab];
+                [self.mainCollectionView.mj_footer addSubview:nodataview];
+            }
+            
+        }
+        
+        [self.mainCollectionView reloadData];
+    } FaildBlock:^(NSError *error) {
+        
+    }];
+    
+}
+
+-(void)resetParameter
+{
+    self.cursor = @"0";
+    self.count = @"20";
+}
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+- (void)SLUserViewHeaderConcernActionDelegateWithShare
+{
+    [PageMgr.getCurrentWindow addSubview:self.shareview];
+    self.shareview.alpha=1;
+    UIImageView * imageview = [[UIImageView alloc]init];
+    NSURL *url =  [NSURL URLWithString:self.userModel.large_avatar] ;
+    [imageview yy_setImageWithURL:url placeholder:nil];
+    [self.shareview setShareType:SLShareType_User style:SLShareStyle_superBig andInfo:self. IsMe?AccountUserInfoModel.uid:self.userModel.uid  andUID:nil];
+    self.shareview.userName = self.IsMe ? AccountUserInfoModel.nickname : self.userModel.nickname;
+    self.shareview.userHeader = imageview.image;
+    self.shareview.backview.top = kScreenHeight;
+    [UIView animateWithDuration:0.3f animations:^{
+        self.shareview.backview.top=self.shareview.height-self.shareview.shareHeight;
+    } completion:^(BOOL finished) {
+        
+    }];
+    
+}
+/*
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end
 
