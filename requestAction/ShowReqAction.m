@@ -10,7 +10,7 @@
 
 @implementation ShowReqAction
 
-
+//注册
 -(NSString *)interface{
     return @"reg";
 }

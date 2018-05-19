@@ -10,7 +10,7 @@
 
 @implementation ShowForgetPwdAction
 
-
+//忘记密码
 - (NSString *)interface{
     return @"forgetPwd";
 }
