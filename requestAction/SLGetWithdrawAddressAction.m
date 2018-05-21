@@ -9,6 +9,7 @@
 #import "SLGetWithdrawAddressAction.h"
 
 @implementation SLGetWithdrawAddressAction
+//获取提现地址的接口
 - (NSString *)interface
 {
     return @"getWithdrawAddress";

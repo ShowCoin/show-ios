@@ -33,7 +33,7 @@
 #pragma mark - email
 //邮件
 @property (nonatomic,copy)NSString *email;
-
+//密码的设置
 @property (nonatomic,copy)NSString *pwd;
 
 @end
