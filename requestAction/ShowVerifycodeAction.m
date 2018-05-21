@@ -9,7 +9,7 @@
 #import "ShowVerifycodeAction.h"
 
 @implementation ShowVerifycodeAction
-
+//接口名
 - (NSString *)interface{
     return  @"get_verified_code";
 }
