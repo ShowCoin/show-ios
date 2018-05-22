@@ -7,7 +7,7 @@
 //
 
 #import "ShowAction.h"
-
+//获取提现地址的接口
 @interface SLGetWithdrawAddressAction : ShowAction
 
 @end

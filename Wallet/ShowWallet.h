@@ -52,7 +52,7 @@ extern const NSString* ShowWalletNotificationProviderKey;
 extern const NSString* ShowWalletNotificationIndexKey;
 // 账户名称
 extern const NSString* ShowWalletNotificationNicknameKey;
-
+// 余额变化
 extern const NSString* ShowWalletNotificationBalanceKey;
 extern const NSString* ShowWalletNotificationTransactionKey;
 
