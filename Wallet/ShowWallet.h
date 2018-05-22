@@ -88,7 +88,7 @@ typedef enum ShowWalletOptionsType {
 
 
 @interface ShowWallet : NSObject
-
+// 根据keychain获取钱包
 + (instancetype)show_walletWithKeychainKey: (NSString*)keychainKey;
 
 @property (nonatomic, readonly) NSString *keychainKey;
