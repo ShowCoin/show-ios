@@ -559,6 +559,169 @@
         _canUpload = NO;
     }
 }
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    
+    [textField resignFirstResponder];
+    
+    return YES;
+    
+}
+
+#pragma mark - delegates
+
+- (void)textFieldDidChange:(id)sender {
+    
+    
+    if (sender == self.nameTextField) {
+        
+        NSString *toBeString = self.nameTextField.text;
+        
+        NSLog(@" 打印信息toBeString:%@",toBeString);
+        
+        NSString *lang = [[self.nameTextField textInputMode] primaryLanguage]; // 键盘输入模式
+        if ([lang isEqualToString:@"zh-Hans"]||[lang isEqualToString:@"zh_CN"]) { // 简体中文输入，包括简体拼音，健体五笔，简体手写
+            
+            //判断markedTextRange是不是为Nil，如果为Nil的话就说明你现在没有未选中的字符，
+            //可以计算文字长度。否则此时计算出来的字符长度可能不正确
+            
+            UITextRange *selectedRange = [self.nameTextField markedTextRange];
+            //获取高亮部分(感觉输入中文的时候才有)
+            UITextPosition *position = [self.nameTextField positionFromPosition:selectedRange.start offset:0];
+            // 没有高亮选择的字，则对已输入的文字进行字数统计和限制
+            if (!position)
+            {
+                //中文和字符一起检测  中文是两个字符
+                if ([toBeString getStringLenthOfBytes] > 24)
+                {
+                    self.nameTextField.text = [toBeString subBytesOfstringToIndex:24];
+                }
+            }
+        }
+        else
+        {
+            if ([toBeString getStringLenthOfBytes] > 24)
+            {
+                self.nameTextField.text = [toBeString subBytesOfstringToIndex:24];
+            }
+        }
+        if ([AccountUserInfoModel.nickname isEqualToString:self.nameTextField.text]) {
+            _nicknameChanged = NO;
+        }else{
+            self.nickname = [NSString stringWithFormat:@"%@",self.nameTextField.text];
+            _nicknameChanged = YES;
+        }
+    }else if (sender == self.IDTextField){
+        
+        NSString *toBeString = self.IDTextField.text;
+        
+        NSLog(@" 打印信息toBeString:%@",toBeString);
+        
+        NSString *lang = [[self.IDTextField textInputMode] primaryLanguage]; // 键盘输入模式
+        if ([lang isEqualToString:@"zh-Hans"]||[lang isEqualToString:@"zh_CN"]) { // 简体中文输入，包括简体拼音，健体五笔，简体手写
+            
+            //判断markedTextRange是不是为Nil，如果为Nil的话就说明你现在没有未选中的字符，
+            //可以计算文字长度。否则此时计算出来的字符长度可能不正确
+            
+            UITextRange *selectedRange = [self.IDTextField markedTextRange];
+            //获取高亮部分(感觉输入中文的时候才有)
+            UITextPosition *position = [self.IDTextField positionFromPosition:selectedRange.start offset:0];
+            // 没有高亮选择的字，则对已输入的文字进行字数统计和限制
+            if (!position)
+            {
+                //中文和字符一起检测  中文是两个字符
+                if ([toBeString getStringLenthOfBytes] > 24)
+                {
+                    self.IDTextField.text = [toBeString subBytesOfstringToIndex:24];
+                }
+            }
+        }
+        else
+        {
+            if ([toBeString getStringLenthOfBytes] > 24)
+            {
+                self.IDTextField.text = [toBeString subBytesOfstringToIndex:24];
+            }
+        }
+        if ([AccountUserInfoModel.popularNo isEqualToString:self.IDTextField.text]) {
+            _popNumberChanged = NO;
+        }else{
+            self.popNumber = [NSString stringWithFormat:@"%@",self.IDTextField.text];
+            _popNumberChanged = YES;
+        }
+    }
+    NSString *toBeString = self.nameTextField.text;
+    
+    NSLog(@" 打印信息toBeString:%@",toBeString);
+
+}
+
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    switch (actionSheet.tag) {
+        case 9001:{
+            switch (buttonIndex) {
+                case 0:
+                    self.gender = @"1";
+                    break;
+                case 1:
+                    self.gender = @"2";
+                    break;
+                default:
+                    break;
+            }
+            NSIndexPath *indexPath=[NSIndexPath indexPathForRow:2 inSection:0];
+            [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:indexPath,nil] withRowAnimation:UITableViewRowAnimationNone];
+        }
+            break;
+        case 9002:
+            break;
+
+        default:
+            break;
+    }
+}
+#pragma mark picker view delegate
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+    if (pickerView.tag == 1000) {
+        return 1;
+    }else{
+        return 2;
+    }
+}
+
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
+{
+    if (pickerView.tag == 1000) {
+        
+        return percentArr.count;
+    }else{
+        if (component == 0) {
+            return characterArray.count;
+        }else{
+            return [NSArray arrayWithArray:[citysArray objectAtIndex:_characterIndex]].count;
+        }
+    }
+    return 0;
+}
+
+//- (NSString *)pickerView:(UIPickerView *)pickerView
+//             titleForRow:(NSInteger)row
+//            forComponent:(NSInteger)component
+//{
+//    NSString *titleStr;
+//    if (row < 60) {
+//
+//        titleStr =  [NSString stringWithFormat:@"%@ cm",[_constellationArray objectAtIndex:row]];
+//    }else{
+//        titleStr =  [_constellationArray objectAtIndex:row];
+//
+//    }
+//
+//    return titleStr;
+//}
+
 
 /*
 #pragma mark - Navigation
