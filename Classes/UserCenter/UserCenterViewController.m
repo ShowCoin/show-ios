@@ -7,12 +7,6 @@
 //
 
 #import "UserCenterViewController.h"
-//#import "ShowAccountViewController.h"
-//#import "WithdrawViewController.h"
-//#import "ShowWalletViewController.h"
-//#import "WithdrawAddressViewController.h"
-//#import <ethers/Account.h>
-//#import "WalletBuildingController.h"
 #import "ShowSettingViewController.h"
 #import "SLUserInfoViewController.h"
 #import "ShowHomeMiddleCell.h"
@@ -21,8 +15,6 @@
 #import "SLHistoryWorksAction.h"
 #import "SLLiveListModel.h"
 #import "UserInfoViewController.h"
-//#import "SLUserCenterHeaderView.h"
-//#import "SLUserViewHeader.h"
 #define cellWith        (KScreenWidth - 1)/2
 
 @interface UserCenterViewController ()<SLUserShareViewDelegate>
@@ -35,7 +27,6 @@
 @property (nonatomic,strong)NSString * count;
 @property (nonatomic,strong)NSMutableArray  * dataSource;
 @property (nonatomic,strong)NSMutableArray  * dataModelList;
-//@property (nonatomic,strong)UILabel * nodataLab;
 ///分享view
 @property (nonatomic, strong) SLUserShareView *shareview;
 
@@ -74,7 +65,6 @@
 -(void)getUserInfo
 {
     self.action = [SLGetUserInfoAction action];
-    //    self.action.modelClass = AccountModel.self;
     if (!_IsMe) {
         self.action.uid = _userModel.uid;
     }
@@ -156,7 +146,6 @@
         flowlayout.itemSize = CGSizeMake(cellWith, cellWith /10 * 16);
         flowlayout.minimumLineSpacing = 1*Proportion375;
         flowlayout.minimumInteritemSpacing = 0;
-        //        flowlayout.sectionHeadersPinToVisibleBounds = YES;
         _mainCollectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, kMainScreenWidth,kMainScreenHeight - KTabBarHeight) collectionViewLayout:flowlayout];
         if (!_IsMe) {
             _mainCollectionView.height = kMainScreenHeight;
@@ -176,11 +165,6 @@
         [_mainCollectionView registerClass:[ShowHomeMiddleCell class] forCellWithReuseIdentifier:@"ShowHomeMiddleCell"];
         [_mainCollectionView registerClass:[SLUserViewHeader class]forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header"];
         @weakify(self);
-        //        _mainCollectionView.mj_header = [MJRefreshHeader headerWithRefreshingBlock:^{
-        //            @strongify(self);
-        //            [self resetParameter];
-        //            [self requestWithMore:NO];
-        //        }];
         _mainCollectionView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
             @strongify(self);
             [self requestWithMore:YES];
@@ -257,14 +241,6 @@
         headerView.isMe = self.IsMe;
         headerView.userModel = self.userModel;
         headerView.delegate = self;
-        
-        //        _nodataLab.frame = CGRectMake(0, HeaderHeightWithoutWords + self.wordsHeight + 70*Proportion375, kMainScreenWidth, 17);
-        //        _nodataLab.text  = @"快去发布故事，用视频记录生活。";
-        //        _nodataLab.textColor = kGrayWith999999;
-        //        _nodataLab.font = Font_Regular(14*Proportion375);
-        //        _nodataLab.textAlignment = NSTextAlignmentCenter;
-        //        _nodataLab.backgroundColor = [UIColor clearColor];
-        //        [headerView addSubview:_nodataLab];
         
         return headerView;
     }
