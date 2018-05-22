@@ -54,6 +54,7 @@ extern const NSString* ShowWalletNotificationIndexKey;
 extern const NSString* ShowWalletNotificationNicknameKey;
 // 余额变化
 extern const NSString* ShowWalletNotificationBalanceKey;
+// 事务key
 extern const NSString* ShowWalletNotificationTransactionKey;
 
 extern const NSString* ShowWalletNotificationSyncDateKey;
