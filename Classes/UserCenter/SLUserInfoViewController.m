@@ -362,6 +362,203 @@
     return 30;
 }
 
+-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    if (section == 0) {
+        return nil;
+    }
+    UIView * view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kMainScreenWidth, 30)];
+    return view;
+}
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    if (section == 0) {
+        return 7;
+    }
+    return 1;
+}
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 2;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 52;
+ }
+-(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString * cellID = @"UserInfoListCell";
+    SLUserInfoListCell * cell=[tableView dequeueReusableCellWithIdentifier:cellID];
+//    if (!cell) {
+        cell = [[SLUserInfoListCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
+        cell.backgroundColor = [UIColor clearColor];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.accessoryType = UITableViewCellAccessoryNone;
+//    }
+    if (indexPath.section == 0) {
+        switch (indexPath.row) {
+            case 0:
+                cell.title.text = @"名称";
+                cell.title.textColor = kGrayWith999999;
+                [cell addSubview:self.nameTextField];
+                self.nameTextField.text = self.nickname;
+                cell.detailTextLab.hidden = NO;
+                cell.detailTextLab.text = @"只允许包含字母，数字，下划线和点，且只能修改一次";
+                break;
+            case 1:
+                cell.title.text = @"秀号";
+                cell.title.textColor = kGrayWith999999;
+                [cell addSubview:self.IDTextField];
+                self.IDTextField.text = self.popNumber;
+                break;
+            case 2:
+                cell.title.text = @"性别";
+                cell.title.textColor = kGrayWith999999;
+                cell.textLab.hidden = NO;
+                cell.textLab.text = self.gender.integerValue == 1?@"男":@"女";
+                cell.textLab.textColor = kBlackThemetextColor;
+                break;
+            case 3:
+                cell.title.text = @"生日";
+                cell.title.textColor = kGrayWith999999;
+                cell.textLab.hidden = NO;
+                cell.textLab.text = self.birthday;
+                cell.textLab.textColor = kBlackThemetextColor;
+
+                break;
+            case 4:
+                cell.title.text = @"地区";
+                cell.title.textColor = kGrayWith999999;
+                cell.textLab.hidden = NO;
+                cell.textLab.text = self.city;
+                cell.textLab.textColor = kBlackThemetextColor;
+
+                break;
+            case 5:
+                cell.title.text = @"签名";
+                cell.title.textColor = kGrayWith999999;
+                cell.arrow.hidden = NO;
+                cell.textLab.hidden = NO;
+                cell.textLab.text = self.descriptions;
+                cell.textLab.textColor = kBlackThemetextColor;
+
+                break;
+            case 6:
+                cell.title.text = @"我的二维码";
+                cell.title.textColor = kGrayWith999999;
+                cell.arrow.hidden = NO;
+
+                break;
+        
+            default:
+                break;
+                
+        }
+        
+    }else{
+        switch (indexPath.row) {
+            case 0:
+                cell.title.text = @"分成比例设置";
+                cell.title.textColor = kGrayWith999999;
+                cell.arrow.hidden = NO;
+                cell.textLab.hidden = NO;
+                cell.textLab.text = [NSString stringWithFormat:@"       %@%@",self.extract,@"%"];
+                cell.textLab.textColor = kBlackThemetextColor;
+
+                break;
+//            case 1:
+//                cell.title.text = @"运营分层设置";
+//                cell.title.textColor = kthemeBlackColor;
+//                cell.arrow.hidden = NO;
+//                cell.textLab.hidden = NO;
+//                cell.textLab.text = [NSString stringWithFormat:@"       %@%@",self.operation_extract,@"%"];
+//                cell.textLab.textColor = kthemeBlackColor;
+//
+//                break;
+            default:
+                break;
+        }
+        
+    }
+    return cell;
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if ([self.nameTextField isFirstResponder]) {
+        [self.nameTextField resignFirstResponder];
+        return;
+    }
+    if (indexPath.section == 0) {
+        switch (indexPath.row) {
+            case 0:
+                break;
+            case 1:
+            
+                break;
+            case 2:
+                
+                [self.userSexActionSheet showInView:self.view];
+                break;
+            case 3:
+                [self.nameTextField resignFirstResponder];
+                [self changeBirthday];
+                break;
+            case 4:
+                [self initPickerWithType:2];
+
+                break;
+            case 5:
+            {
+                ChangeTextController * F = [ChangeTextController initVC];
+                F.navtitle = @"签名";
+                F.type = textViewType_sign;
+                F.block = ^(NSString *changeText) {
+                    AccountUserInfoModel.descriptions = changeText;
+                    self.descriptions = changeText;
+                    [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:[NSIndexPath indexPathForRow:5 inSection:0],nil] withRowAnimation:NO];
+                };
+                
+                [self.navigationController pushViewController:F animated:YES];
+            }
+
+                break;
+            case 6:
+                [self.navigationController pushViewController:[ShowUserQRViewController initVC] animated:YES];
+                break;
+                
+            default:
+                break;
+                
+        }
+        
+    }else{
+        switch (indexPath.row) {
+            case 0:
+                [self initPickerWithType:1];
+                break;
+            case 1:
+                [self initPickerWithType:1];
+                break;
+            default:
+                break;
+        }
+        
+    }
+}
+#pragma mark - textField
+-(void)textDidChanged:(UITextField *)textField
+{
+    self.nicknameChanged = YES;
+    NSString * str =  textField.text;
+    BOOL isOrNo = [SLHelper isAvailableName:str];
+    NSLog(@"===================%@",isOrNo?@"yes":@"no");
+    self.nickname = textField.text;
+    if (isOrNo) {
+        _canUpload = YES;
+    }else{
+        _canUpload = NO;
+    }
+}
 
 /*
 #pragma mark - Navigation
