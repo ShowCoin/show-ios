@@ -54,8 +54,9 @@ extern const NSString* ShowWalletNotificationIndexKey;
 extern const NSString* ShowWalletNotificationNicknameKey;
 // 余额变化
 extern const NSString* ShowWalletNotificationBalanceKey;
+// 事务key
 extern const NSString* ShowWalletNotificationTransactionKey;
-
+// 同步时间
 extern const NSString* ShowWalletNotificationSyncDateKey;
 
 
@@ -87,9 +88,9 @@ typedef enum ShowWalletOptionsType {
 
 
 @interface ShowWallet : NSObject
-
+// 根据keychain获取钱包
 + (instancetype)show_walletWithKeychainKey: (NSString*)keychainKey;
-
+// keychain
 @property (nonatomic, readonly) NSString *keychainKey;
 
 @property (nonatomic, readonly) NSTimeInterval syncDate;
