@@ -18,6 +18,7 @@
 		43D24A912094A43600C59AC8 /* AppDelegate+ShowRegisterService.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D24A8D2094A43600C59AC8 /* AppDelegate+ShowRegisterService.m */; };
 		43D24A922094A43600C59AC8 /* ShowAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D24A8F2094A43600C59AC8 /* ShowAppDelegate.m */; };
 		43D24A952094B4C500C59AC8 /* ShowNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D24A942094B4C500C59AC8 /* ShowNavigationBar.m */; };
+		72058ACB20B5E17800458C2F /* ShowSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72058ACA20B5E17700458C2F /* ShowSettingViewController.m */; };
 		720C304A20A35ACD00207500 /* SLGetWithdrawAddressAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 720C304920A35ACC00207500 /* SLGetWithdrawAddressAction.m */; };
 		720F860420B2F59500AD0C54 /* SLFollowUserAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 720F85F620B2F59400AD0C54 /* SLFollowUserAction.m */; };
 		720F860520B2F59500AD0C54 /* SLConfigAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 720F85FA20B2F59400AD0C54 /* SLConfigAction.m */; };
@@ -75,6 +76,8 @@
 		43D24A902094A43600C59AC8 /* AppDelegate+ShowRegisterService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+ShowRegisterService.h"; sourceTree = "<group>"; };
 		43D24A932094B4C500C59AC8 /* ShowNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowNavigationBar.h; sourceTree = "<group>"; };
 		43D24A942094B4C500C59AC8 /* ShowNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowNavigationBar.m; sourceTree = "<group>"; };
+		72058AC920B5E17700458C2F /* ShowSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowSettingViewController.h; sourceTree = "<group>"; };
+		72058ACA20B5E17700458C2F /* ShowSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowSettingViewController.m; sourceTree = "<group>"; };
 		720C304820A35ACC00207500 /* SLGetWithdrawAddressAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLGetWithdrawAddressAction.h; sourceTree = "<group>"; };
 		720C304920A35ACC00207500 /* SLGetWithdrawAddressAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLGetWithdrawAddressAction.m; sourceTree = "<group>"; };
 		720F85F620B2F59400AD0C54 /* SLFollowUserAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLFollowUserAction.m; sourceTree = "<group>"; };
@@ -205,6 +208,8 @@
 				720F860E20B45EBB00AD0C54 /* SLUserInfoViewController.m */,
 				725B98BB20AC3D2F00747F7A /* UserCenterViewController.h */,
 				725B98BC20AC837C00747F7A /* UserCenterViewController.m */,
+				72058AC920B5E17700458C2F /* ShowSettingViewController.h */,
+				72058ACA20B5E17700458C2F /* ShowSettingViewController.m */,
 			);
 			path = UserCenter;
 			sourceTree = "<group>";
@@ -566,6 +571,7 @@
 				72F17B6B20AB18F60039E916 /* ShowVerifycodeAction.m in Sources */,
 				72FE9B6920621F59008DD3D5 /* main.m in Sources */,
 				72C6166A20A0C67500103C44 /* SLUrgeListAction.m in Sources */,
+				72058ACB20B5E17800458C2F /* ShowSettingViewController.m in Sources */,
 				720F860520B2F59500AD0C54 /* SLConfigAction.m in Sources */,
 				43968A6A20AC398C00149DCC /* NSObject+Safe.m in Sources */,
 				931DAAC720B571D2003A0B38 /* SLGiftAction.m in Sources */,
