@@ -213,10 +213,11 @@
         make.size.mas_equalTo(CGSizeMake(44, 44));
     }];
 }
-
+//设置左边的宽度
 - (void)show_setLeftWidth:(CGFloat) width {
     self.leftViewWidth.constant = width;
 }
+//设置右边的宽度
 - (void)setRightWidth:(CGFloat) width {
     self.rightViewWidth.constant = width;
 }
