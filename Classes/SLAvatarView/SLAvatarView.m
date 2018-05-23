@@ -44,7 +44,7 @@
 
 -(void)setAvatar:(NSString*)url
 {
-    [self.avatarView sd_setImageWithURL:[NSURL URLWithString:url] placeholderImage:[UIImage imageNamed:@"tab_userCenter"]];
+    [self.avatarView sd_setImageWithURL:[NSURL URLWithString:url] placeholderImage:[UIImage imageNamed:@"userCenter"]];
     
 }
 
