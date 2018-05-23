@@ -224,12 +224,13 @@
 
 
 #pragma mark - 左侧 & 右侧 的点击事件
-
+//左边的按钮响应
 - (void)show_clickLeftButton:(UIButton *)sender {
     if ([self.delegate respondsToSelector:@selector(clickLeftButton:)]) {
         [self.delegate clickLeftButton:sender];
     }
 }
+//右边的按钮响应
 - (void)show_clickRightButton:(UIButton *)sender {
     if ([self.delegate respondsToSelector:@selector(clickRightButton:)]) {
         [self.delegate clickRightButton:sender];
