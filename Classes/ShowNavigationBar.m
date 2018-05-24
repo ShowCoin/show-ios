@@ -8,14 +8,14 @@
 #import "ShowNavigationBar.h"
 
 @interface ShowNavigationBar(){
-    UIButton   *_leftBtn;
-    UIButton   *_rightBtn;
-    UILabel    *_titleLabel;
-    UIImageView*_titleImageView ;
+    UIButton   *_leftBtn;//左边的按钮
+    UIButton   *_rightBtn;//右边的按钮
+    UILabel    *_titleLabel;//标题
+    UIImageView*_titleImageView ;//标题的图
 }
 
-@property (weak, nonatomic)  NSLayoutConstraint *leftViewWidth;
-@property (weak, nonatomic)  NSLayoutConstraint *rightViewWidth;
+@property (weak, nonatomic)  NSLayoutConstraint *leftViewWidth;//左边视图的宽度
+@property (weak, nonatomic)  NSLayoutConstraint *rightViewWidth;//右边视图的宽度
 @property (strong, nonatomic)UIView *linView;
 
 @end
@@ -213,22 +213,24 @@
         make.size.mas_equalTo(CGSizeMake(44, 44));
     }];
 }
-
+//设置左边的宽度
 - (void)show_setLeftWidth:(CGFloat) width {
     self.leftViewWidth.constant = width;
 }
+//设置右边的宽度
 - (void)setRightWidth:(CGFloat) width {
     self.rightViewWidth.constant = width;
 }
 
 
 #pragma mark - 左侧 & 右侧 的点击事件
-
+//左边的按钮响应
 - (void)show_clickLeftButton:(UIButton *)sender {
     if ([self.delegate respondsToSelector:@selector(clickLeftButton:)]) {
         [self.delegate clickLeftButton:sender];
     }
 }
+//右边的按钮响应
 - (void)show_clickRightButton:(UIButton *)sender {
     if ([self.delegate respondsToSelector:@selector(clickRightButton:)]) {
         [self.delegate clickRightButton:sender];

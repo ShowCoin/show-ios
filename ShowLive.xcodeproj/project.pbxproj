@@ -18,6 +18,8 @@
 		43D24A912094A43600C59AC8 /* AppDelegate+ShowRegisterService.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D24A8D2094A43600C59AC8 /* AppDelegate+ShowRegisterService.m */; };
 		43D24A922094A43600C59AC8 /* ShowAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D24A8F2094A43600C59AC8 /* ShowAppDelegate.m */; };
 		43D24A952094B4C500C59AC8 /* ShowNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D24A942094B4C500C59AC8 /* ShowNavigationBar.m */; };
+		72058ACB20B5E17800458C2F /* ShowSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72058ACA20B5E17700458C2F /* ShowSettingViewController.m */; };
+		72058ACE20B5E23300458C2F /* SLNetDiagnoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72058ACD20B5E23200458C2F /* SLNetDiagnoViewController.m */; };
 		720C304A20A35ACD00207500 /* SLGetWithdrawAddressAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 720C304920A35ACC00207500 /* SLGetWithdrawAddressAction.m */; };
 		720F860420B2F59500AD0C54 /* SLFollowUserAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 720F85F620B2F59400AD0C54 /* SLFollowUserAction.m */; };
 		720F860520B2F59500AD0C54 /* SLConfigAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 720F85FA20B2F59400AD0C54 /* SLConfigAction.m */; };
@@ -75,6 +77,10 @@
 		43D24A902094A43600C59AC8 /* AppDelegate+ShowRegisterService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+ShowRegisterService.h"; sourceTree = "<group>"; };
 		43D24A932094B4C500C59AC8 /* ShowNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowNavigationBar.h; sourceTree = "<group>"; };
 		43D24A942094B4C500C59AC8 /* ShowNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowNavigationBar.m; sourceTree = "<group>"; };
+		72058AC920B5E17700458C2F /* ShowSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowSettingViewController.h; sourceTree = "<group>"; };
+		72058ACA20B5E17700458C2F /* ShowSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowSettingViewController.m; sourceTree = "<group>"; };
+		72058ACC20B5E1CF00458C2F /* SLNetDiagnoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLNetDiagnoViewController.h; sourceTree = "<group>"; };
+		72058ACD20B5E23200458C2F /* SLNetDiagnoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLNetDiagnoViewController.m; sourceTree = "<group>"; };
 		720C304820A35ACC00207500 /* SLGetWithdrawAddressAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLGetWithdrawAddressAction.h; sourceTree = "<group>"; };
 		720C304920A35ACC00207500 /* SLGetWithdrawAddressAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLGetWithdrawAddressAction.m; sourceTree = "<group>"; };
 		720F85F620B2F59400AD0C54 /* SLFollowUserAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLFollowUserAction.m; sourceTree = "<group>"; };
@@ -115,6 +121,7 @@
 		93154D6820623EFE00BF088F /* ShowLive.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowLive.pch; sourceTree = "<group>"; };
 		931DAAC520B571C5003A0B38 /* SLGiftAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLGiftAction.h; sourceTree = "<group>"; };
 		931DAAC620B571D2003A0B38 /* SLGiftAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLGiftAction.m; sourceTree = "<group>"; };
+		931DAAC820B5A7A6003A0B38 /* SLConvListSystemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLConvListSystemTableViewCell.h; sourceTree = "<group>"; };
 		934E1B9720AC39D900A0B080 /* SLChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLChatViewController.h; sourceTree = "<group>"; };
 		934E1B9820AC3A1E00A0B080 /* SLChatViewController+BlankView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SLChatViewController+BlankView.h"; sourceTree = "<group>"; };
 		938D2FFD20A0C821006A0CDE /* ShowAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowAction.h; sourceTree = "<group>"; };
@@ -204,6 +211,10 @@
 				720F860E20B45EBB00AD0C54 /* SLUserInfoViewController.m */,
 				725B98BB20AC3D2F00747F7A /* UserCenterViewController.h */,
 				725B98BC20AC837C00747F7A /* UserCenterViewController.m */,
+				72058AC920B5E17700458C2F /* ShowSettingViewController.h */,
+				72058ACA20B5E17700458C2F /* ShowSettingViewController.m */,
+				72058ACC20B5E1CF00458C2F /* SLNetDiagnoViewController.h */,
+				72058ACD20B5E23200458C2F /* SLNetDiagnoViewController.m */,
 			);
 			path = UserCenter;
 			sourceTree = "<group>";
@@ -317,6 +328,7 @@
 			children = (
 				934E1B9720AC39D900A0B080 /* SLChatViewController.h */,
 				934E1B9820AC3A1E00A0B080 /* SLChatViewController+BlankView.h */,
+				931DAAC820B5A7A6003A0B38 /* SLConvListSystemTableViewCell.h */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -564,6 +576,7 @@
 				72F17B6B20AB18F60039E916 /* ShowVerifycodeAction.m in Sources */,
 				72FE9B6920621F59008DD3D5 /* main.m in Sources */,
 				72C6166A20A0C67500103C44 /* SLUrgeListAction.m in Sources */,
+				72058ACB20B5E17800458C2F /* ShowSettingViewController.m in Sources */,
 				720F860520B2F59500AD0C54 /* SLConfigAction.m in Sources */,
 				43968A6A20AC398C00149DCC /* NSObject+Safe.m in Sources */,
 				931DAAC720B571D2003A0B38 /* SLGiftAction.m in Sources */,
@@ -576,6 +589,7 @@
 				720F860620B2F59500AD0C54 /* SLMeConcernListAction.m in Sources */,
 				720F860920B2F59500AD0C54 /* SLGetRyTokenAction.m in Sources */,
 				720F861020B45EBB00AD0C54 /* SLUserInfoViewController.m in Sources */,
+				72058ACE20B5E23300458C2F /* SLNetDiagnoViewController.m in Sources */,
 				720F860820B2F59500AD0C54 /* SLMeFansListAction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
