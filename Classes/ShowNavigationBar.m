@@ -331,6 +331,7 @@
             break;
     }
 }
+//设置左边的按钮样式
 - (void)show_setNavigationLeftBarStyle:(NavigationLeftBarType)barStyle{
     
     UIImage *image = nil ;
