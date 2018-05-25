@@ -333,6 +333,7 @@
             break;
     }
 }
+//设置左边的按钮样式
 - (void)show_setNavigationLeftBarStyle:(NavigationLeftBarType)barStyle{
     
     UIImage *image = nil ;
@@ -350,7 +351,7 @@
     [_leftBtn setImage:image forState:UIControlStateNormal];
     [_leftBtn setImage:image forState:UIControlStateHighlighted];
 }
-
+//设置右边的按钮样式
 - (void)show_setNavigationRightStyle:(NavigationRightBarType)barStyle{
     UIImage *image = nil ;
     switch (barStyle) {

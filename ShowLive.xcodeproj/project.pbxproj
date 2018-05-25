@@ -19,7 +19,6 @@
 		43D24A922094A43600C59AC8 /* ShowAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D24A8F2094A43600C59AC8 /* ShowAppDelegate.m */; };
 		43D24A952094B4C500C59AC8 /* ShowNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D24A942094B4C500C59AC8 /* ShowNavigationBar.m */; };
 		72058ACB20B5E17800458C2F /* ShowSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72058ACA20B5E17700458C2F /* ShowSettingViewController.m */; };
-		72058ACE20B5E23300458C2F /* SLNetDiagnoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72058ACD20B5E23200458C2F /* SLNetDiagnoViewController.m */; };
 		720C304A20A35ACD00207500 /* SLGetWithdrawAddressAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 720C304920A35ACC00207500 /* SLGetWithdrawAddressAction.m */; };
 		720F860420B2F59500AD0C54 /* SLFollowUserAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 720F85F620B2F59400AD0C54 /* SLFollowUserAction.m */; };
 		720F860520B2F59500AD0C54 /* SLConfigAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 720F85FA20B2F59400AD0C54 /* SLConfigAction.m */; };
@@ -79,8 +78,6 @@
 		43D24A942094B4C500C59AC8 /* ShowNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowNavigationBar.m; sourceTree = "<group>"; };
 		72058AC920B5E17700458C2F /* ShowSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowSettingViewController.h; sourceTree = "<group>"; };
 		72058ACA20B5E17700458C2F /* ShowSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowSettingViewController.m; sourceTree = "<group>"; };
-		72058ACC20B5E1CF00458C2F /* SLNetDiagnoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLNetDiagnoViewController.h; sourceTree = "<group>"; };
-		72058ACD20B5E23200458C2F /* SLNetDiagnoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLNetDiagnoViewController.m; sourceTree = "<group>"; };
 		720C304820A35ACC00207500 /* SLGetWithdrawAddressAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLGetWithdrawAddressAction.h; sourceTree = "<group>"; };
 		720C304920A35ACC00207500 /* SLGetWithdrawAddressAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLGetWithdrawAddressAction.m; sourceTree = "<group>"; };
 		720F85F620B2F59400AD0C54 /* SLFollowUserAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLFollowUserAction.m; sourceTree = "<group>"; };
@@ -119,6 +116,8 @@
 		72FE9B7D20621F59008DD3D5 /* ShowLiveUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowLiveUITests.m; sourceTree = "<group>"; };
 		72FE9B7F20621F59008DD3D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93154D6820623EFE00BF088F /* ShowLive.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowLive.pch; sourceTree = "<group>"; };
+		9319236920B7FF1C001C6144 /* SLFriendListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLFriendListViewController.h; sourceTree = "<group>"; };
+		9319236B20B7FF37001C6144 /* SLFriendListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLFriendListCell.h; sourceTree = "<group>"; };
 		931DAAC520B571C5003A0B38 /* SLGiftAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLGiftAction.h; sourceTree = "<group>"; };
 		931DAAC620B571D2003A0B38 /* SLGiftAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLGiftAction.m; sourceTree = "<group>"; };
 		931DAAC820B5A7A6003A0B38 /* SLConvListSystemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLConvListSystemTableViewCell.h; sourceTree = "<group>"; };
@@ -183,6 +182,7 @@
 		431439292094A2290059D373 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				9319236720B7FF05001C6144 /* FriendList */,
 				725B98BA20AC3CD400747F7A /* UserCenter */,
 				934E1B9620AC38E100A0B080 /* Chat */,
 				43D24A932094B4C500C59AC8 /* ShowNavigationBar.h */,
@@ -213,8 +213,6 @@
 				725B98BC20AC837C00747F7A /* UserCenterViewController.m */,
 				72058AC920B5E17700458C2F /* ShowSettingViewController.h */,
 				72058ACA20B5E17700458C2F /* ShowSettingViewController.m */,
-				72058ACC20B5E1CF00458C2F /* SLNetDiagnoViewController.h */,
-				72058ACD20B5E23200458C2F /* SLNetDiagnoViewController.m */,
 			);
 			path = UserCenter;
 			sourceTree = "<group>";
@@ -321,6 +319,31 @@
 				93154D6820623EFE00BF088F /* ShowLive.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9319236720B7FF05001C6144 /* FriendList */ = {
+			isa = PBXGroup;
+			children = (
+				9319236A20B7FF27001C6144 /* View */,
+				9319236820B7FF10001C6144 /* Controller */,
+			);
+			path = FriendList;
+			sourceTree = "<group>";
+		};
+		9319236820B7FF10001C6144 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9319236920B7FF1C001C6144 /* SLFriendListViewController.h */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9319236A20B7FF27001C6144 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9319236B20B7FF37001C6144 /* SLFriendListCell.h */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		934E1B9620AC38E100A0B080 /* Chat */ = {
@@ -589,7 +612,6 @@
 				720F860620B2F59500AD0C54 /* SLMeConcernListAction.m in Sources */,
 				720F860920B2F59500AD0C54 /* SLGetRyTokenAction.m in Sources */,
 				720F861020B45EBB00AD0C54 /* SLUserInfoViewController.m in Sources */,
-				72058ACE20B5E23300458C2F /* SLNetDiagnoViewController.m in Sources */,
 				720F860820B2F59500AD0C54 /* SLMeFansListAction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
