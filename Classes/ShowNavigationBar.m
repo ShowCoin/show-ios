@@ -365,7 +365,7 @@
     [_rightBtn setImage:image forState:UIControlStateNormal];
     [_rightBtn setImage:image forState:UIControlStateHighlighted];
 }
-
+//设置tabbar的隐藏显示
 - (void)show_setNavigationBarHidden:(BOOL)hidden animted:(BOOL)animted
 {
     NSTimeInterval interval = animted?0.5:0.0;
