@@ -138,6 +138,7 @@
 
     }
 }
+//设置左边的icon
 - (void)show_setLeftIconImage:(UIImage *) image forState:(UIControlState) state{
     if (_leftBtn) {
         [_leftBtn setImage:image forState:state];
