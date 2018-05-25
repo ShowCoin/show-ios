@@ -118,6 +118,7 @@
 		93154D6820623EFE00BF088F /* ShowLive.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowLive.pch; sourceTree = "<group>"; };
 		9319236920B7FF1C001C6144 /* SLFriendListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLFriendListViewController.h; sourceTree = "<group>"; };
 		9319236B20B7FF37001C6144 /* SLFriendListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLFriendListCell.h; sourceTree = "<group>"; };
+		9319236D20B897C6001C6144 /* SLVMFriendList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLVMFriendList.h; sourceTree = "<group>"; };
 		931DAAC520B571C5003A0B38 /* SLGiftAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLGiftAction.h; sourceTree = "<group>"; };
 		931DAAC620B571D2003A0B38 /* SLGiftAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLGiftAction.m; sourceTree = "<group>"; };
 		931DAAC820B5A7A6003A0B38 /* SLConvListSystemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLConvListSystemTableViewCell.h; sourceTree = "<group>"; };
@@ -324,6 +325,7 @@
 		9319236720B7FF05001C6144 /* FriendList */ = {
 			isa = PBXGroup;
 			children = (
+				9319236C20B897BB001C6144 /* Model */,
 				9319236A20B7FF27001C6144 /* View */,
 				9319236820B7FF10001C6144 /* Controller */,
 			);
@@ -344,6 +346,14 @@
 				9319236B20B7FF37001C6144 /* SLFriendListCell.h */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		9319236C20B897BB001C6144 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9319236D20B897C6001C6144 /* SLVMFriendList.h */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		934E1B9620AC38E100A0B080 /* Chat */ = {
