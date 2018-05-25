@@ -282,6 +282,8 @@
             break;
     }
 }
+
+//设置navigationBar的样式
 - (void)show_setNavigationBarStyle:(NavigationBarType)barStyle
 {
     self.leftView.hidden = YES;
