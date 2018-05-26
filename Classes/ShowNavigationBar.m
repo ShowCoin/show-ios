@@ -138,6 +138,7 @@
 
     }
 }
+//设置左边的icon
 - (void)show_setLeftIconImage:(UIImage *) image forState:(UIControlState) state{
     if (_leftBtn) {
         [_leftBtn setImage:image forState:state];
@@ -282,6 +283,8 @@
             break;
     }
 }
+
+//设置navigationBar的样式
 - (void)show_setNavigationBarStyle:(NavigationBarType)barStyle
 {
     self.leftView.hidden = YES;
@@ -331,6 +334,7 @@
             break;
     }
 }
+//设置左边的按钮样式
 - (void)show_setNavigationLeftBarStyle:(NavigationLeftBarType)barStyle{
     
     UIImage *image = nil ;
@@ -348,7 +352,7 @@
     [_leftBtn setImage:image forState:UIControlStateNormal];
     [_leftBtn setImage:image forState:UIControlStateHighlighted];
 }
-
+//设置右边的按钮样式
 - (void)show_setNavigationRightStyle:(NavigationRightBarType)barStyle{
     UIImage *image = nil ;
     switch (barStyle) {
@@ -362,7 +366,7 @@
     [_rightBtn setImage:image forState:UIControlStateNormal];
     [_rightBtn setImage:image forState:UIControlStateHighlighted];
 }
-
+//设置tabbar的隐藏显示
 - (void)show_setNavigationBarHidden:(BOOL)hidden animted:(BOOL)animted
 {
     NSTimeInterval interval = animted?0.5:0.0;
