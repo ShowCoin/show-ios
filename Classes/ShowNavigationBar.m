@@ -144,13 +144,14 @@
         [_leftBtn setImage:image forState:state];
     }
 }
+//设置右边的icon
 - (void)show_setRightIconImage:(UIImage *) image forState:(UIControlState) state{
     if (_rightBtn) {
         [_rightBtn setImage:image forState:state];
         [_rightBtn setImageEdgeInsets:UIEdgeInsetsMake(0.0f, -10.0f, 0.0f, 0.0f)];
     }
 }
-
+//设置右边的标题,颜色，字体
 - (void)show_setRightTitle:(NSString *)title titleColor:(UIColor *)color font:(UIFont *)font
 {
   if (_rightBtn) {
@@ -160,10 +161,12 @@
     [_rightBtn.titleLabel setFont:font];
   }
 }
+//设置右边的标题
 - (void)show_setRightTitle:(NSString *)title
 {
     [self setRightTitle:title titleColor:BlackColor font:[UIFont systemFontOfSize:15.0f]];
 }
+//设置左边的标题
 - (void)setLeftTitle:(NSString *)title titleColor:(UIColor *)color font:(UIFont *)font
 {
   if (_leftBtn) {
@@ -173,7 +176,7 @@
   }
 }
 
-
+//设置中间的标题
 - (void)show_setNavigationMiddleView:(UIView *)customerView {
     /**
      *  删除 middle View 下面的所有子view
@@ -191,6 +194,7 @@
         make.size.mas_equalTo(customerView.frame.size);
     }];
 }
+//展示左边的视图
 - (void)show_setNavigationLeftView:(UIView *)customerView {
     /**
      *  删除 left View 下面的所有子view
@@ -202,6 +206,7 @@
         make.size.mas_equalTo(CGSizeMake(44, 44));
     }];
 }
+//展示右边的视图
 - (void)show_setNavigationRightView:(UIView *)customerView {
     /**
      *  删除 right View 下面的所有子view
@@ -381,6 +386,7 @@
         }];
     }
 }
+//右边的按钮是否可以按
 - (void)show_setRightNavigationBarEnabled:(BOOL)enabled{
     [_rightBtn setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
     _rightBtn.enabled = enabled ;
