@@ -206,6 +206,7 @@
         make.size.mas_equalTo(CGSizeMake(44, 44));
     }];
 }
+//展示右边的视图
 - (void)show_setNavigationRightView:(UIView *)customerView {
     /**
      *  删除 right View 下面的所有子view
