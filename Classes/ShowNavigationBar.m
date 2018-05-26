@@ -161,10 +161,12 @@
     [_rightBtn.titleLabel setFont:font];
   }
 }
+//设置右边的标题
 - (void)show_setRightTitle:(NSString *)title
 {
     [self setRightTitle:title titleColor:BlackColor font:[UIFont systemFontOfSize:15.0f]];
 }
+//设置左边的标题
 - (void)setLeftTitle:(NSString *)title titleColor:(UIColor *)color font:(UIFont *)font
 {
   if (_leftBtn) {
@@ -174,7 +176,7 @@
   }
 }
 
-
+//设置中间的标题
 - (void)show_setNavigationMiddleView:(UIView *)customerView {
     /**
      *  删除 middle View 下面的所有子view
