@@ -194,6 +194,7 @@
         make.size.mas_equalTo(customerView.frame.size);
     }];
 }
+//展示左边的视图
 - (void)show_setNavigationLeftView:(UIView *)customerView {
     /**
      *  删除 left View 下面的所有子view
