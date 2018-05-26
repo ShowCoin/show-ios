@@ -386,6 +386,7 @@
         }];
     }
 }
+//右边的按钮是否可以按
 - (void)show_setRightNavigationBarEnabled:(BOOL)enabled{
     [_rightBtn setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
     _rightBtn.enabled = enabled ;
