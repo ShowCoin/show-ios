@@ -144,13 +144,14 @@
         [_leftBtn setImage:image forState:state];
     }
 }
+//设置右边的icon
 - (void)show_setRightIconImage:(UIImage *) image forState:(UIControlState) state{
     if (_rightBtn) {
         [_rightBtn setImage:image forState:state];
         [_rightBtn setImageEdgeInsets:UIEdgeInsetsMake(0.0f, -10.0f, 0.0f, 0.0f)];
     }
 }
-
+//设置右边的标题,颜色，字体
 - (void)show_setRightTitle:(NSString *)title titleColor:(UIColor *)color font:(UIFont *)font
 {
   if (_rightBtn) {
