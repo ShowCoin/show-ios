@@ -395,7 +395,7 @@
 - (void)show_setNavigationLineHidden:(BOOL)hidden{
     _linView.hidden = hidden ;
 }
-
+//设置线的类型
 - (void)show_setNavigationLineType:(NavigationLineType )type{
     switch (type) {
         case NavigationLineNone:
