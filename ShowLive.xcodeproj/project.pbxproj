@@ -37,6 +37,7 @@
 		72FE9B7320621F59008DD3D5 /* ShowLiveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FE9B7220621F59008DD3D5 /* ShowLiveTests.m */; };
 		72FE9B7E20621F59008DD3D5 /* ShowLiveUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FE9B7D20621F59008DD3D5 /* ShowLiveUITests.m */; };
 		931DAAC720B571D2003A0B38 /* SLGiftAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 931DAAC620B571D2003A0B38 /* SLGiftAction.m */; };
+		93595A8920B9E436005056CB /* SLVMFriendList.m in Sources */ = {isa = PBXBuildFile; fileRef = 93595A8820B9E436005056CB /* SLVMFriendList.m */; };
 		938D2FFF20A0C822006A0CDE /* ShowAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 938D2FFE20A0C822006A0CDE /* ShowAction.m */; };
 		938D302220A35B0A006A0CDE /* ShowReqAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 938D302120A35B0A006A0CDE /* ShowReqAction.m */; };
 /* End PBXBuildFile section */
@@ -124,6 +125,7 @@
 		931DAAC820B5A7A6003A0B38 /* SLConvListSystemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLConvListSystemTableViewCell.h; sourceTree = "<group>"; };
 		934E1B9720AC39D900A0B080 /* SLChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLChatViewController.h; sourceTree = "<group>"; };
 		934E1B9820AC3A1E00A0B080 /* SLChatViewController+BlankView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SLChatViewController+BlankView.h"; sourceTree = "<group>"; };
+		93595A8820B9E436005056CB /* SLVMFriendList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLVMFriendList.m; sourceTree = "<group>"; };
 		938D2FFD20A0C821006A0CDE /* ShowAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowAction.h; sourceTree = "<group>"; };
 		938D2FFE20A0C822006A0CDE /* ShowAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowAction.m; sourceTree = "<group>"; };
 		938D302020A35B0A006A0CDE /* ShowLoginAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowLoginAction.h; sourceTree = "<group>"; };
@@ -352,6 +354,7 @@
 			isa = PBXGroup;
 			children = (
 				9319236D20B897C6001C6144 /* SLVMFriendList.h */,
+				93595A8820B9E436005056CB /* SLVMFriendList.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -619,6 +622,7 @@
 				720F860A20B2F59500AD0C54 /* SLRelationAction.m in Sources */,
 				43D24A912094A43600C59AC8 /* AppDelegate+ShowRegisterService.m in Sources */,
 				43D24A922094A43600C59AC8 /* ShowAppDelegate.m in Sources */,
+				93595A8920B9E436005056CB /* SLVMFriendList.m in Sources */,
 				720F860620B2F59500AD0C54 /* SLMeConcernListAction.m in Sources */,
 				720F860920B2F59500AD0C54 /* SLGetRyTokenAction.m in Sources */,
 				720F861020B45EBB00AD0C54 /* SLUserInfoViewController.m in Sources */,
