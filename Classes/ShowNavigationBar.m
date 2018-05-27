@@ -409,7 +409,7 @@
             break;
     }
 }
-
+//设置线的颜色
 - (void)show_setNavigationLineColor:(UIColor *)color{
     if(_linView.hidden){
         return ;
