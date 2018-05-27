@@ -391,7 +391,7 @@
     [_rightBtn setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
     _rightBtn.enabled = enabled ;
 }
-
+//设置线的隐藏
 - (void)show_setNavigationLineHidden:(BOOL)hidden{
     _linView.hidden = hidden ;
 }
