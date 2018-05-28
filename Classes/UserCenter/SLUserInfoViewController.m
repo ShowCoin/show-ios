@@ -114,9 +114,8 @@
             _tableView.estimatedRowHeight = 0;
             _tableView.estimatedSectionHeaderHeight = 0;
             _tableView.estimatedSectionFooterHeight = 0;
-        } else {
-            
         }
+        
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         
     }
@@ -258,19 +257,6 @@
     self.bgView.backgroundColor = [UIColor whiteColor];
     [self.bgView cornerRadiusStyle];
     [self.bg addSubview:self.bgView];
-    
-    //    close = [[UIButton alloc] initWithFrame:CGRectMake(0, self.datePicker.bottom, 153*Proportion375, 52)];
-    //    [close setTitle:@"取消" forState:UIControlStateNormal];
-    //    [close lineDockTopWithColor:kSeparationColor];
-    //    [close setTitleColor :kthemeBlackColor forState:UIControlStateNormal];
-    //    [close addTarget:self action:@selector(closeView) forControlEvents:UIControlEventTouchUpInside];
-    //
-    //    sureBotton = [[UIButton alloc] initWithFrame:CGRectMake(153*Proportion375, _datePicker.bottom, 153*Proportion375, 52)];
-    //    [sureBotton setTitle:@"确定" forState:UIControlStateNormal];
-    //    [sureBotton setTitleColor :kthemeBlackColor forState:UIControlStateNormal];
-    //    [sureBotton lineDockTopWithColor:kSeparationColor];
-    //    [sureBotton lineDockLeftWithColor:kSeparationColor];
-    //    [sureBotton addTarget:self action:@selector(sureView) forControlEvents:UIControlEventTouchUpInside];
     
     [self.view addSubview:self.bg];
     [self.bgView addSubview:self.datePicker];
@@ -703,22 +689,6 @@
     return 0;
 }
 
-//- (NSString *)pickerView:(UIPickerView *)pickerView
-//             titleForRow:(NSInteger)row
-//            forComponent:(NSInteger)component
-//{
-//    NSString *titleStr;
-//    if (row < 60) {
-//
-//        titleStr =  [NSString stringWithFormat:@"%@ cm",[_constellationArray objectAtIndex:row]];
-//    }else{
-//        titleStr =  [_constellationArray objectAtIndex:row];
-//
-//    }
-//
-//    return titleStr;
-//}
-
 - (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view
 
 {
@@ -821,9 +791,6 @@
         [self.navigationController popViewControllerAnimated:YES];
         return;
     }
-    //    _updataUserInfoAction.desc = AccountUserInfoModel.descriptions;
-    //    _updataUserInfoAction.extract = AccountUserInfoModel.extract;
-    //    _updataUserInfoAction.operation_extract = AccountUserInfoModel.operation_extract;
     
     _updataUserInfoAction.finishedBlock = ^(id result) {
         
