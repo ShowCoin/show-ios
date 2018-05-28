@@ -39,6 +39,7 @@
 		931DAAC720B571D2003A0B38 /* SLGiftAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 931DAAC620B571D2003A0B38 /* SLGiftAction.m */; };
 		938D2FFF20A0C822006A0CDE /* ShowAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 938D2FFE20A0C822006A0CDE /* ShowAction.m */; };
 		938D302220A35B0A006A0CDE /* ShowReqAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 938D302120A35B0A006A0CDE /* ShowReqAction.m */; };
+		93D2C10B20BC66DE00C9D960 /* SLConvListSystemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D2C10A20BC66DE00C9D960 /* SLConvListSystemTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +130,7 @@
 		938D2FFE20A0C822006A0CDE /* ShowAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowAction.m; sourceTree = "<group>"; };
 		938D302020A35B0A006A0CDE /* ShowLoginAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowLoginAction.h; sourceTree = "<group>"; };
 		938D302120A35B0A006A0CDE /* ShowReqAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowReqAction.m; sourceTree = "<group>"; };
+		93D2C10A20BC66DE00C9D960 /* SLConvListSystemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLConvListSystemTableViewCell.m; sourceTree = "<group>"; };
 		AA2350AAA436CDCBB1E93DCE /* Pods-ShowLive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowLive.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShowLive/Pods-ShowLive.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -372,6 +374,7 @@
 				934E1B9720AC39D900A0B080 /* SLChatViewController.h */,
 				934E1B9820AC3A1E00A0B080 /* SLChatViewController+BlankView.h */,
 				931DAAC820B5A7A6003A0B38 /* SLConvListSystemTableViewCell.h */,
+				93D2C10A20BC66DE00C9D960 /* SLConvListSystemTableViewCell.m */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -613,6 +616,7 @@
 			files = (
 				725B98BD20AC837D00747F7A /* UserCenterViewController.m in Sources */,
 				938D2FFF20A0C822006A0CDE /* ShowAction.m in Sources */,
+				93D2C10B20BC66DE00C9D960 /* SLConvListSystemTableViewCell.m in Sources */,
 				720C304A20A35ACD00207500 /* SLGetWithdrawAddressAction.m in Sources */,
 				72F17B6A20AB18F60039E916 /* ShowForgetPwdAction.m in Sources */,
 				43D24A952094B4C500C59AC8 /* ShowNavigationBar.m in Sources */,
