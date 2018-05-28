@@ -226,36 +226,7 @@ static NSString* kLocalData4FriendList=@"kFriendListLocalData:%@";
         [self.dataDict setObject:array forKey:strKey];
     }
 }
--(void)handleData:(NSDictionary*)response{
-    if ([response valueForKey:@"list"]
-        &&[[response valueForKey:@"list"] isKindOfClass:[NSArray class]])
-    {
-        if (self.listAry==nil) {
-            self.listAry=[NSMutableArray array];
-        }
-        NSArray* userAry = [SLFansModel mj_objectArrayWithKeyValuesArray:[response valueForKey:@"list"]];
-        for (SLFansModel* userModel in userAry) {
-            ShowUserModel *chatUser = [[SLDatabaseManager sharedManager] findUserWithUid:userModel.uid];
-            if (chatUser) {
-                userModel.localRemarkName = chatUser.remarkName;
-            }
-            userModel.firstLetter=[BMChineseSort getFirstLetter1:userModel.nickname];
-            if ([userModel.firstLetter length]>1) {
-                userModel.firstLetter=[userModel.firstLetter substringToIndex:1];
-            }
-        }
-        if (_cursor < 1) {
-            [UserDefaultsUtils saveValue:[SLHelper jsonStringFromObject:response] forKey:[NSString stringWithFormat:kLocalData4FriendList,AccountUserInfoModel.uid]];
-            self.listAry=[NSMutableArray arrayWithArray:userAry];
-            
-        }else {
-            [self.listAry addObjectsFromArray:userAry];
-        }
-        if (!_isAt) {
-            [self updateData];
-        }
-    }
-}
+
 
 -(void)loadFromLocal{
     NSDictionary* dict=[SLHelper dictionaryWithJSON:[UserDefaultsUtils valueWithKey:[NSString stringWithFormat:kLocalData4FriendList,AccountUserInfoModel.uid]]];
