@@ -64,7 +64,6 @@
     //添加标题
     
     _titleLab = [UILabel labelWithFrame:CGRectMake(70, 20, kMainScreenWidth-128, 15) text:@"SEEU时刻" textColor:kthemeBlackColor font:[UIFont boldSystemFontOfSize:14] backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentLeft];
-    //        [_titleLab sizeToFit];
     [bgView addSubview:_titleLab];
     
     //添加消息内容label
