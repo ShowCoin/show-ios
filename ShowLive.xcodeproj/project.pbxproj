@@ -37,7 +37,6 @@
 		72FE9B7320621F59008DD3D5 /* ShowLiveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FE9B7220621F59008DD3D5 /* ShowLiveTests.m */; };
 		72FE9B7E20621F59008DD3D5 /* ShowLiveUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FE9B7D20621F59008DD3D5 /* ShowLiveUITests.m */; };
 		931DAAC720B571D2003A0B38 /* SLGiftAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 931DAAC620B571D2003A0B38 /* SLGiftAction.m */; };
-		93595A8920B9E436005056CB /* SLVMFriendList.m in Sources */ = {isa = PBXBuildFile; fileRef = 93595A8820B9E436005056CB /* SLVMFriendList.m */; };
 		938D2FFF20A0C822006A0CDE /* ShowAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 938D2FFE20A0C822006A0CDE /* ShowAction.m */; };
 		938D302220A35B0A006A0CDE /* ShowReqAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 938D302120A35B0A006A0CDE /* ShowReqAction.m */; };
 /* End PBXBuildFile section */
@@ -106,6 +105,7 @@
 		72F17B6720AB18F50039E916 /* ShowVerifycodeAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowVerifycodeAction.h; sourceTree = "<group>"; };
 		72F17B6820AB18F60039E916 /* ShowForgetPwdAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowForgetPwdAction.m; sourceTree = "<group>"; };
 		72F17B6920AB18F60039E916 /* ShowVerifycodeAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowVerifycodeAction.m; sourceTree = "<group>"; };
+		72FAE61F20BC50CA00E47E09 /* SLTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLTextView.h; sourceTree = "<group>"; };
 		72FE9B5620621F59008DD3D5 /* ShowLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShowLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72FE9B6520621F59008DD3D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		72FE9B6720621F59008DD3D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -125,7 +125,6 @@
 		931DAAC820B5A7A6003A0B38 /* SLConvListSystemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLConvListSystemTableViewCell.h; sourceTree = "<group>"; };
 		934E1B9720AC39D900A0B080 /* SLChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLChatViewController.h; sourceTree = "<group>"; };
 		934E1B9820AC3A1E00A0B080 /* SLChatViewController+BlankView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SLChatViewController+BlankView.h"; sourceTree = "<group>"; };
-		93595A8820B9E436005056CB /* SLVMFriendList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLVMFriendList.m; sourceTree = "<group>"; };
 		938D2FFD20A0C821006A0CDE /* ShowAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowAction.h; sourceTree = "<group>"; };
 		938D2FFE20A0C822006A0CDE /* ShowAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowAction.m; sourceTree = "<group>"; };
 		938D302020A35B0A006A0CDE /* ShowLoginAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowLoginAction.h; sourceTree = "<group>"; };
@@ -210,6 +209,8 @@
 		725B98BA20AC3CD400747F7A /* UserCenter */ = {
 			isa = PBXGroup;
 			children = (
+				72FAE62020BC56FB00E47E09 /* Toplist */,
+				72FAE61F20BC50CA00E47E09 /* SLTextView.h */,
 				720F860F20B45EBB00AD0C54 /* SLUserInfoViewController.h */,
 				720F860E20B45EBB00AD0C54 /* SLUserInfoViewController.m */,
 				725B98BB20AC3D2F00747F7A /* UserCenterViewController.h */,
@@ -253,6 +254,13 @@
 				720F860220B2F59500AD0C54 /* SLRelationAction.m */,
 			);
 			path = requestAction;
+			sourceTree = "<group>";
+		};
+		72FAE62020BC56FB00E47E09 /* Toplist */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Toplist;
 			sourceTree = "<group>";
 		};
 		72FE9B4D20621F59008DD3D5 = {
@@ -354,7 +362,6 @@
 			isa = PBXGroup;
 			children = (
 				9319236D20B897C6001C6144 /* SLVMFriendList.h */,
-				93595A8820B9E436005056CB /* SLVMFriendList.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -622,7 +629,6 @@
 				720F860A20B2F59500AD0C54 /* SLRelationAction.m in Sources */,
 				43D24A912094A43600C59AC8 /* AppDelegate+ShowRegisterService.m in Sources */,
 				43D24A922094A43600C59AC8 /* ShowAppDelegate.m in Sources */,
-				93595A8920B9E436005056CB /* SLVMFriendList.m in Sources */,
 				720F860620B2F59500AD0C54 /* SLMeConcernListAction.m in Sources */,
 				720F860920B2F59500AD0C54 /* SLGetRyTokenAction.m in Sources */,
 				720F861020B45EBB00AD0C54 /* SLUserInfoViewController.m in Sources */,
@@ -807,7 +813,7 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = R98BC2PLD7;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -858,7 +864,7 @@
 					"\"$(SRCROOT)/ShowLive/Vendor/MedioSDK/include\"",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -883,7 +889,7 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = R98BC2PLD7;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -934,7 +940,7 @@
 					"\"$(SRCROOT)/ShowLive/Vendor/MedioSDK/include\"",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
