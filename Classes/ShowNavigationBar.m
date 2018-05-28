@@ -391,11 +391,11 @@
     [_rightBtn setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
     _rightBtn.enabled = enabled ;
 }
-
+//设置线的隐藏
 - (void)show_setNavigationLineHidden:(BOOL)hidden{
     _linView.hidden = hidden ;
 }
-
+//设置线的类型
 - (void)show_setNavigationLineType:(NavigationLineType )type{
     switch (type) {
         case NavigationLineNone:
@@ -409,7 +409,7 @@
             break;
     }
 }
-
+//设置线的颜色
 - (void)show_setNavigationLineColor:(UIColor *)color{
     if(_linView.hidden){
         return ;
