@@ -95,10 +95,10 @@
     self.birthday = AccountUserInfoModel.birthday;
     self.city = AccountUserInfoModel.city;
     self.descriptions = AccountUserInfoModel.descriptions;
-//    self.extract = AccountUserInfoModel.extract;
+    //    self.extract = AccountUserInfoModel.extract;
     self.extract = @"10";
     self.operation_extract = AccountUserInfoModel.operation_extract;
-
+    
 }
 -(UITableView *)tableView
 {
@@ -142,10 +142,7 @@
         _nameTextField.textColor = kBlackThemetextColor;
         _nameTextField.tintColor = kBlackThemetextColor;
         [_nameTextField addTarget:self action:@selector(textDidChanged:) forControlEvents:UIControlEventEditingChanged];
-//        UIButton *clean = [_nameTextField valueForKey:@"_clearButton"]; //key是固定的
-//        [clean setImage:[UIImage imageNamed:@"name_cleanbtn"] forState:UIControlStateNormal];
-//        [clean setImage:[UIImage imageNamed:@"name_cleanbtn"] forState:UIControlStateHighlighted];
-
+        
     }
     return _nameTextField;
     
@@ -196,10 +193,10 @@
     }
     if (type == 1) {
         _PercentpickerView.tag = 1000;
-
+        
     }else{
         _PercentpickerView.tag = 2000;
-
+        
     }
     self.bg = [[UIButton alloc] initWithFrame:self.view.frame];
     [self.bg addTarget:self action:@selector(dissappaerAction) forControlEvents:UIControlEventTouchUpInside];
@@ -262,18 +259,18 @@
     [self.bgView cornerRadiusStyle];
     [self.bg addSubview:self.bgView];
     
-//    close = [[UIButton alloc] initWithFrame:CGRectMake(0, self.datePicker.bottom, 153*Proportion375, 52)];
-//    [close setTitle:@"取消" forState:UIControlStateNormal];
-//    [close lineDockTopWithColor:kSeparationColor];
-//    [close setTitleColor :kthemeBlackColor forState:UIControlStateNormal];
-//    [close addTarget:self action:@selector(closeView) forControlEvents:UIControlEventTouchUpInside];
-//
-//    sureBotton = [[UIButton alloc] initWithFrame:CGRectMake(153*Proportion375, _datePicker.bottom, 153*Proportion375, 52)];
-//    [sureBotton setTitle:@"确定" forState:UIControlStateNormal];
-//    [sureBotton setTitleColor :kthemeBlackColor forState:UIControlStateNormal];
-//    [sureBotton lineDockTopWithColor:kSeparationColor];
-//    [sureBotton lineDockLeftWithColor:kSeparationColor];
-//    [sureBotton addTarget:self action:@selector(sureView) forControlEvents:UIControlEventTouchUpInside];
+    //    close = [[UIButton alloc] initWithFrame:CGRectMake(0, self.datePicker.bottom, 153*Proportion375, 52)];
+    //    [close setTitle:@"取消" forState:UIControlStateNormal];
+    //    [close lineDockTopWithColor:kSeparationColor];
+    //    [close setTitleColor :kthemeBlackColor forState:UIControlStateNormal];
+    //    [close addTarget:self action:@selector(closeView) forControlEvents:UIControlEventTouchUpInside];
+    //
+    //    sureBotton = [[UIButton alloc] initWithFrame:CGRectMake(153*Proportion375, _datePicker.bottom, 153*Proportion375, 52)];
+    //    [sureBotton setTitle:@"确定" forState:UIControlStateNormal];
+    //    [sureBotton setTitleColor :kthemeBlackColor forState:UIControlStateNormal];
+    //    [sureBotton lineDockTopWithColor:kSeparationColor];
+    //    [sureBotton lineDockLeftWithColor:kSeparationColor];
+    //    [sureBotton addTarget:self action:@selector(sureView) forControlEvents:UIControlEventTouchUpInside];
     
     [self.view addSubview:self.bg];
     [self.bgView addSubview:self.datePicker];
@@ -308,7 +305,7 @@
                 self.PercentpickerView.top = kMainScreenHeight;
             }
         } completion:^(BOOL finished) {
-        
+            
             [UIView animateWithDuration:0.25 animations:^{
                 self.bg.alpha = 0;
             } completion:^(BOOL finished) {
@@ -326,7 +323,7 @@
                 self.bg = nil;
             }];
         }];
-
+        
     }
 }
 
@@ -384,17 +381,17 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 52;
- }
+}
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString * cellID = @"UserInfoListCell";
     SLUserInfoListCell * cell=[tableView dequeueReusableCellWithIdentifier:cellID];
-//    if (!cell) {
-        cell = [[SLUserInfoListCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
-        cell.backgroundColor = [UIColor clearColor];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        cell.accessoryType = UITableViewCellAccessoryNone;
-//    }
+    //    if (!cell) {
+    cell = [[SLUserInfoListCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
+    cell.backgroundColor = [UIColor clearColor];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.accessoryType = UITableViewCellAccessoryNone;
+    //    }
     if (indexPath.section == 0) {
         switch (indexPath.row) {
             case 0:
@@ -424,7 +421,7 @@
                 cell.textLab.hidden = NO;
                 cell.textLab.text = self.birthday;
                 cell.textLab.textColor = kBlackThemetextColor;
-
+                
                 break;
             case 4:
                 cell.title.text = @"地区";
@@ -432,7 +429,7 @@
                 cell.textLab.hidden = NO;
                 cell.textLab.text = self.city;
                 cell.textLab.textColor = kBlackThemetextColor;
-
+                
                 break;
             case 5:
                 cell.title.text = @"签名";
@@ -441,15 +438,15 @@
                 cell.textLab.hidden = NO;
                 cell.textLab.text = self.descriptions;
                 cell.textLab.textColor = kBlackThemetextColor;
-
+                
                 break;
             case 6:
                 cell.title.text = @"我的二维码";
                 cell.title.textColor = kGrayWith999999;
                 cell.arrow.hidden = NO;
-
+                
                 break;
-        
+                
             default:
                 break;
                 
@@ -464,17 +461,17 @@
                 cell.textLab.hidden = NO;
                 cell.textLab.text = [NSString stringWithFormat:@"       %@%@",self.extract,@"%"];
                 cell.textLab.textColor = kBlackThemetextColor;
-
+                
                 break;
-//            case 1:
-//                cell.title.text = @"运营分层设置";
-//                cell.title.textColor = kthemeBlackColor;
-//                cell.arrow.hidden = NO;
-//                cell.textLab.hidden = NO;
-//                cell.textLab.text = [NSString stringWithFormat:@"       %@%@",self.operation_extract,@"%"];
-//                cell.textLab.textColor = kthemeBlackColor;
-//
-//                break;
+                //            case 1:
+                //                cell.title.text = @"运营分层设置";
+                //                cell.title.textColor = kthemeBlackColor;
+                //                cell.arrow.hidden = NO;
+                //                cell.textLab.hidden = NO;
+                //                cell.textLab.text = [NSString stringWithFormat:@"       %@%@",self.operation_extract,@"%"];
+                //                cell.textLab.textColor = kthemeBlackColor;
+                //
+                //                break;
             default:
                 break;
         }
@@ -493,7 +490,7 @@
             case 0:
                 break;
             case 1:
-            
+                
                 break;
             case 2:
                 
@@ -505,7 +502,7 @@
                 break;
             case 4:
                 [self initPickerWithType:2];
-
+                
                 break;
             case 5:
             {
@@ -520,7 +517,7 @@
                 
                 [self.navigationController pushViewController:F animated:YES];
             }
-
+                
                 break;
             case 6:
                 [self.navigationController pushViewController:[ShowUserQRViewController initVC] animated:YES];
@@ -652,7 +649,7 @@
     NSString *toBeString = self.nameTextField.text;
     
     NSLog(@" 打印信息toBeString:%@",toBeString);
-
+    
 }
 
 -(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
@@ -675,7 +672,7 @@
             break;
         case 9002:
             break;
-
+            
         default:
             break;
     }
@@ -753,12 +750,12 @@
         }else{
             titleStr = [NSString stringWithFormat:@"%@",[[citysArray objectAtIndex:_characterIndex] objectAtIndex:row]];
             genderLabel.text = titleStr;
-
+            
         }
-
+        
     }
     return genderLabel;
-//    return nil;
+    //    return nil;
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
@@ -776,13 +773,13 @@
             self.city = [[citysArray objectAtIndex:_characterIndex] objectAtIndex:0];
             NSIndexPath * path = [NSIndexPath indexPathForRow:4 inSection:0];
             [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:path,nil] withRowAnimation:NO];
-
+            
         }else{
             _cityIndex = row;
             self.city = [[citysArray objectAtIndex:_characterIndex] objectAtIndex:row];
             NSIndexPath * path = [NSIndexPath indexPathForRow:4 inSection:0];
             [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:path,nil] withRowAnimation:NO];
-
+            
         }
         [self resetPickerSelectRow];
     }
@@ -824,22 +821,22 @@
         [self.navigationController popViewControllerAnimated:YES];
         return;
     }
-//    _updataUserInfoAction.desc = AccountUserInfoModel.descriptions;
-//    _updataUserInfoAction.extract = AccountUserInfoModel.extract;
-//    _updataUserInfoAction.operation_extract = AccountUserInfoModel.operation_extract;
-
+    //    _updataUserInfoAction.desc = AccountUserInfoModel.descriptions;
+    //    _updataUserInfoAction.extract = AccountUserInfoModel.extract;
+    //    _updataUserInfoAction.operation_extract = AccountUserInfoModel.operation_extract;
+    
     _updataUserInfoAction.finishedBlock = ^(id result) {
-
+        
         [weakSelf.navigationController popViewControllerAnimated:YES];
     };
-//    @weakify(self);
+    //    @weakify(self);
     _updataUserInfoAction.failedBlock = ^(NSError *error) {
-//        @strongify(self);
+        //        @strongify(self);
         [ShowWaringView waringView:error.userInfo[@"msg"] style:WaringStyleRed];
-
+        
     };
     [_updataUserInfoAction start];
-
+    
 }
 
 
@@ -863,16 +860,16 @@
     }
     [self.nameTextField resignFirstResponder];
     [self.IDTextField resignFirstResponder];
-
+    
 }
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end
