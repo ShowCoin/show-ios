@@ -10,6 +10,10 @@
 #import <AVFoundation/AVFoundation.h>
 @implementation SLAppMediaPerssion
 
+//应用程序需要事先申请音视频使用权限
++ (void)requestMediaCapturerAccessWithCompletionHandler:(void (^)(SLDeviceErrorStatus status))handler{
+   
+}
 
 @end
 
