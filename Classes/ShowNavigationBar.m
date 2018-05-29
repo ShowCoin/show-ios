@@ -22,6 +22,7 @@
 
 @implementation ShowNavigationBar
 
+//创建navigationbar
 + (instancetype)show_createNavigationBar
 {
     ShowNavigationBar *bar =  [[self alloc]init];
@@ -34,7 +35,7 @@
     bar.backgroundColor = kThemeYellowColor;
     return bar;
 }
-
+//7.0 以后是64，以前是44
 - (void)show_layout
 {
     CGFloat height = 0;
@@ -131,7 +132,7 @@
     
     [self setNavigationLeftBarStyle:NavigationBarLeftDefault];
 }
-
+//设置标题
 - (void)show_setNavigationTitle:(NSString *) title{
     if (_titleLabel) {
         _titleLabel.text = title;
