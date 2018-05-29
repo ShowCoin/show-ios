@@ -34,7 +34,7 @@
     bar.backgroundColor = kThemeYellowColor;
     return bar;
 }
-
+//7.0 以后是64，以前是44
 - (void)show_layout
 {
     CGFloat height = 0;
