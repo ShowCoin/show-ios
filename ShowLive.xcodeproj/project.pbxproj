@@ -33,6 +33,7 @@
 		7239EB3820BD38FC00588BED /* SLCropImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7239EB2F20BD38FC00588BED /* SLCropImageViewController.m */; };
 		7239EB3A20BD393C00588BED /* ChangeheadportraitController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7239EB3920BD393C00588BED /* ChangeheadportraitController.m */; };
 		7239EB3D20BD5BC900588BED /* ShowForUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7239EB3C20BD5BC900588BED /* ShowForUsViewController.m */; };
+		7239EB3F20BD97D200588BED /* ShowSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7239EB3E20BD97D100588BED /* ShowSettingViewController.m */; };
 		72C6166A20A0C67500103C44 /* SLUrgeListAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C6166820A0C67500103C44 /* SLUrgeListAction.m */; };
 		72F17B6A20AB18F60039E916 /* ShowForgetPwdAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F17B6820AB18F60039E916 /* ShowForgetPwdAction.m */; };
 		72F17B6B20AB18F60039E916 /* ShowVerifycodeAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F17B6920AB18F60039E916 /* ShowVerifycodeAction.m */; };
@@ -49,6 +50,7 @@
 		93D2C11220BD238500C9D960 /* SLFriendListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D2C11120BD238500C9D960 /* SLFriendListCell.m */; };
 		93D2C11420BD5F5100C9D960 /* SLFriendListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D2C11320BD5F5100C9D960 /* SLFriendListViewController.m */; };
 		93D2C11620BDAE5200C9D960 /* SLChatViewController+BlankView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D2C11520BDAE5200C9D960 /* SLChatViewController+BlankView.m */; };
+		A99892BE20BD79600026BA03 /* SLConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = A99892BC20BD79600026BA03 /* SLConfig.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +123,7 @@
 		7239EB3920BD393C00588BED /* ChangeheadportraitController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeheadportraitController.m; sourceTree = "<group>"; };
 		7239EB3B20BD468F00588BED /* ChangeTextController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChangeTextController.h; sourceTree = "<group>"; };
 		7239EB3C20BD5BC900588BED /* ShowForUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowForUsViewController.m; sourceTree = "<group>"; };
+		7239EB3E20BD97D100588BED /* ShowSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowSettingViewController.m; sourceTree = "<group>"; };
 		72C6166820A0C67500103C44 /* SLUrgeListAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLUrgeListAction.m; sourceTree = "<group>"; };
 		72C6166920A0C67500103C44 /* SLUrgeListAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLUrgeListAction.h; sourceTree = "<group>"; };
 		72C686F61D628C8898214FFC /* Pods-ShowLive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowLive.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShowLive/Pods-ShowLive.debug.xcconfig"; sourceTree = "<group>"; };
@@ -158,6 +161,8 @@
 		93D2C11120BD238500C9D960 /* SLFriendListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLFriendListCell.m; sourceTree = "<group>"; };
 		93D2C11320BD5F5100C9D960 /* SLFriendListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLFriendListViewController.m; sourceTree = "<group>"; };
 		93D2C11520BDAE5200C9D960 /* SLChatViewController+BlankView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SLChatViewController+BlankView.m"; sourceTree = "<group>"; };
+		A99892BC20BD79600026BA03 /* SLConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLConfig.m; sourceTree = "<group>"; };
+		A99892BD20BD79600026BA03 /* SLConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLConfig.h; sourceTree = "<group>"; };
 		AA2350AAA436CDCBB1E93DCE /* Pods-ShowLive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowLive.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShowLive/Pods-ShowLive.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -245,6 +250,7 @@
 				7239EB2E20BD38FC00588BED /* ShowForUsViewController.h */,
 				7239EB3C20BD5BC900588BED /* ShowForUsViewController.m */,
 				7239EB2820BD38FC00588BED /* ShowSettingViewController.h */,
+				7239EB3E20BD97D100588BED /* ShowSettingViewController.m */,
 				7239EB2920BD38FC00588BED /* ShowUserQRViewController.h */,
 				7239EB2A20BD38FC00588BED /* ShowUserQRViewController.m */,
 				7239EB3420BD38FC00588BED /* SLCropImageViewController.h */,
@@ -319,6 +325,7 @@
 				431438AC209432E30059D373 /* Base.lproj */,
 				431438A8209432D50059D373 /* zh-Hans.lproj */,
 				431439292094A2290059D373 /* Classes */,
+				A99892BB20BD79600026BA03 /* Other */,
 				43143748209432BE0059D373 /* Wallet */,
 				93154CBF206235FD00BF088F /* Supporting Files */,
 				72FE9B7120621F59008DD3D5 /* ShowLiveTests */,
@@ -422,6 +429,15 @@
 				93D2C10A20BC66DE00C9D960 /* SLConvListSystemTableViewCell.m */,
 			);
 			path = Chat;
+			sourceTree = "<group>";
+		};
+		A99892BB20BD79600026BA03 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				A99892BD20BD79600026BA03 /* SLConfig.h */,
+				A99892BC20BD79600026BA03 /* SLConfig.m */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 		D544A431CFB6EF8D747D9730 /* Pods */ = {
@@ -659,6 +675,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7239EB3F20BD97D200588BED /* ShowSettingViewController.m in Sources */,
 				93D2C11020BD228900C9D960 /* SLVMFriendList.m in Sources */,
 				938D2FFF20A0C822006A0CDE /* ShowAction.m in Sources */,
 				93D2C10B20BC66DE00C9D960 /* SLConvListSystemTableViewCell.m in Sources */,
@@ -686,6 +703,7 @@
 				43D24A922094A43600C59AC8 /* ShowAppDelegate.m in Sources */,
 				7239EB3620BD38FC00588BED /* ShowUserQRViewController.m in Sources */,
 				720F860620B2F59500AD0C54 /* SLMeConcernListAction.m in Sources */,
+				A99892BE20BD79600026BA03 /* SLConfig.m in Sources */,
 				7239EB3720BD38FC00588BED /* SLTextView.m in Sources */,
 				93D2C11220BD238500C9D960 /* SLFriendListCell.m in Sources */,
 				720F860920B2F59500AD0C54 /* SLGetRyTokenAction.m in Sources */,
