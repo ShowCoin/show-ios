@@ -22,6 +22,7 @@
 
 @implementation ShowNavigationBar
 
+//创建navigationbar
 + (instancetype)show_createNavigationBar
 {
     ShowNavigationBar *bar =  [[self alloc]init];
