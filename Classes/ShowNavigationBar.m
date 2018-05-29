@@ -300,16 +300,16 @@
     NSInteger style = barStyle;
 
     switch (style) {
-        case NavigationBarLeft:
+        case NavigationBarLeft://显示左边
             [self.leftView setHidden:NO];
             break;
-        case NavigationBarMiddle:
+        case NavigationBarMiddle://显示中间
             [self.middleView setHidden:NO];
             break;
-        case NavigationBarRight:
+        case NavigationBarRight://显示右边
             [self.rightView setHidden:NO];
             break;
-        case (NavigationBarLeft|NavigationBarMiddle):
+        case (NavigationBarLeft|NavigationBarMiddle)://显示左边中间
             [self.leftView setHidden:NO];
             [self.middleView setHidden:NO];
             break;
