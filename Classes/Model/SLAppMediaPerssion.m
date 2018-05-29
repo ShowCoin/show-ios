@@ -19,6 +19,36 @@
     if (AVAuthorizationStatusAuthorized == videoAuthorStatus && AVAuthorizationStatusAuthorized == audioAuthorStatus) {
         handler(AVDeviceNOErrorStatus);
         
+    }else{
+        
+        //相机没开，麦克风开
+        if ((AVAuthorizationStatusRestricted == videoAuthorStatus || AVAuthorizationStatusDenied == videoAuthorStatus)&&(AVAuthorizationStatusAuthorized == audioAuthorStatus)) {
+            
+            handler(VedioDeviceErrorStatus);
+            
+            return;
+        }
+        
+        //麦克风没开，相机开
+        else if ((AVAuthorizationStatusRestricted == audioAuthorStatus || AVAuthorizationStatusDenied == audioAuthorStatus)&&(AVAuthorizationStatusAuthorized == videoAuthorStatus)) {
+            
+            handler(AudioDeviceErrorStatus);
+            
+            return;
+        }
+        
+        //相机麦克风都没开
+        else if ((AVAuthorizationStatusRestricted == audioAuthorStatus || AVAuthorizationStatusDenied == audioAuthorStatus)&&(AVAuthorizationStatusRestricted == videoAuthorStatus || AVAuthorizationStatusDenied == videoAuthorStatus)) {
+            
+            handler(AVDeviceErrorStatus);
+            
+            return;
+        }else
+        {
+            
+      
+            
+        }
     }
     
  
