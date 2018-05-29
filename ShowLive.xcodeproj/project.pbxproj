@@ -38,6 +38,7 @@
 		938D302220A35B0A006A0CDE /* ShowReqAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 938D302120A35B0A006A0CDE /* ShowReqAction.m */; };
 		93D2C10B20BC66DE00C9D960 /* SLConvListSystemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D2C10A20BC66DE00C9D960 /* SLConvListSystemTableViewCell.m */; };
 		93D2C10E20BC678600C9D960 /* SLUrgeListAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D2C10D20BC678600C9D960 /* SLUrgeListAction.m */; };
+		93D2C11020BD228900C9D960 /* SLVMFriendList.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D2C10F20BD228900C9D960 /* SLVMFriendList.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +129,7 @@
 		93D2C10A20BC66DE00C9D960 /* SLConvListSystemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLConvListSystemTableViewCell.m; sourceTree = "<group>"; };
 		93D2C10C20BC677B00C9D960 /* SLUrgeListAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLUrgeListAction.h; path = "../../Desktop/show-ios/ShowLive/Request/Action/SLUrgeListAction.h"; sourceTree = "<group>"; };
 		93D2C10D20BC678600C9D960 /* SLUrgeListAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLUrgeListAction.m; path = "../../Desktop/show-ios/ShowLive/Request/Action/SLUrgeListAction.m"; sourceTree = "<group>"; };
+		93D2C10F20BD228900C9D960 /* SLVMFriendList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLVMFriendList.m; path = "../../../../Desktop/show-ios/ShowLive/Class/FriendList/Model/SLVMFriendList.m"; sourceTree = "<group>"; };
 		AA2350AAA436CDCBB1E93DCE /* Pods-ShowLive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowLive.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShowLive/Pods-ShowLive.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -360,6 +362,7 @@
 			isa = PBXGroup;
 			children = (
 				9319236D20B897C6001C6144 /* SLVMFriendList.h */,
+				93D2C10F20BD228900C9D960 /* SLVMFriendList.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -610,6 +613,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				725B98BD20AC837D00747F7A /* UserCenterViewController.m in Sources */,
+				93D2C11020BD228900C9D960 /* SLVMFriendList.m in Sources */,
 				938D2FFF20A0C822006A0CDE /* ShowAction.m in Sources */,
 				93D2C10B20BC66DE00C9D960 /* SLConvListSystemTableViewCell.m in Sources */,
 				720C304A20A35ACD00207500 /* SLGetWithdrawAddressAction.m in Sources */,
