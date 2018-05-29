@@ -168,7 +168,106 @@
     }
 }
 
+- (void)openAlbum
+{
+    //    [self.photoSelect startPhotoSelect:YHEPhotoSelectFromLibrary];
+    UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
+    imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    imagePicker.navigationBar.backgroundColor = kthemeBlackColor;
+    imagePicker.navigationBar.barTintColor = kthemeBlackColor;
+    imagePicker.navigationBar.translucent=YES;
+    imagePicker.delegate = self;
+    [self presentViewController:imagePicker animated:YES completion:^{
+    }];
+    
+    //    SLImagePickerControllerV *imagePickController = [[SLImagePickerControllerV alloc] initWithMaxImagesCount:1 delegate:self];
+    //    [self presentViewController:imagePickController animated:YES completion:nil];
+}
+#pragma mark - Delegates
 
+#pragma mark - TZImagePickerControllerDelegate
+- (void)imagePickerController:(TZImagePickerController *)picker didFinishPickingPhotos:(NSArray<UIImage *> *)photos sourceAssets:(NSArray *)assets isSelectOriginalPhoto:(BOOL)isSelectOriginalPhoto{
+    UIImage *image =photos.firstObject;
+    
+    NSData * imageData = UIImageJPEGRepresentation(image, 1);
+    if (image.size.width >1080&&imageData.length/1000>200) {
+        self.uploadImage = image;
+        [self supportRetryUploadAvatar];
+    }
+    else
+    {
+        [ShowWaringView waringView:@"头像尺寸不符合规则,请重新选择" style:WaringStyleRed];
+        self.uploadImage = [UIImage imageNamed:@"userhome_avatar_image"];
+    }
+    
+}
+- (void)notificationHandler: (NSNotification *)notification {
+    self.uploadSmallImage = notification.object[0];
+    self.uploadImage = notification.object[1];
+    
+    [self supportRetryUploadAvatar];
+    [self.headerBtn setImage:self.uploadImage];
+    
+}
+
+- (void)dissmissPickerAction:(NSNotification *)notification{
+    [self.Imgpicker dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - UIImagePickerControllerDelegate
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    image = [UIImage fixOrientation:[info objectForKey:UIImagePickerControllerOriginalImage]];
+    if (picker.sourceType == UIImagePickerControllerSourceTypeCamera) {
+        if (picker.cameraDevice == 1) {
+            image = [self normalImageWithoriginalImage:image];
+        }
+    }
+    
+    NSData * imageData = UIImageJPEGRepresentation(image, 1);
+    if (image.size.width >=1080&&image.size.height >=1080&&imageData.length/1000>200) {
+        self.uploadImage = image;
+        SLCropImageViewController *cropImg = [[SLCropImageViewController alloc] initWithCropImage:image];
+        cropImg.isShoot = (picker.sourceType == UIImagePickerControllerSourceTypeCamera);
+        self.Imgpicker = picker;
+        [self.Imgpicker presentViewController:cropImg animated:YES completion:^{
+            [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dissmissPickerAction:) name:@"DISSMISSPICKER" object:nil];
+        }];
+    }
+    else
+    {
+        UIAlertView *alertview = [[UIAlertView alloc]initWithTitle:@"头像尺寸不符合规则,请重新选择" message:@"选择头像标准为1080P,比例为16:10,且不小于200k" delegate:self cancelButtonTitle:@"知道了" otherButtonTitles: nil];
+        [alertview show];
+        //        [ShowWaringView waringView:@"头像尺寸不符合规则,请重新选择" style:WaringStyleRed];
+    }
+    
+}
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    [picker dismissViewControllerAnimated:YES completion:nil];
+}
+- (void)alertViewCancel:(UIAlertView *)alertView
+{
+    [self.Imgpicker dismissViewControllerAnimated:YES completion:nil];
+}
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+- (UIImage *)normalImageWithoriginalImage:(UIImage *)originalImage {
+    UIImageOrientation imgOrientation; //拍摄后获取的的图像方向
+    
+    
+    
+    // 前置摄像头图像方向 UIImageOrientationLeftMirrored
+    // IOS前置摄像头左右成像
+    imgOrientation = UIImageOrientationLeftMirrored;
+    
+    NSLog(@"前置摄像头");
+    
+    return [[UIImage alloc]initWithCGImage:originalImage.CGImage scale:1.0f orientation:imgOrientation];
+}
 /*
 #pragma mark - Navigation
 
