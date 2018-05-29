@@ -58,3 +58,28 @@ CGFloat const kSLToolViewH  = 140;
 
 @end
 
+@implementation SLTitleView
+
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        UILabel *title = [UILabel new];
+        title.font = [UIFont systemFontOfSize:12];
+        title.textColor = kGrayWith999999;
+        title.textAlignment = NSTextAlignmentCenter;
+        [self addSubview:title];
+        self.titleLabel = title;
+        
+        self.backgroundColor = [UIColor colorWithWhite:0 alpha:0.5];
+    }
+    return self;
+}
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    self.titleLabel.frame = self.bounds;
+}
+
+@end
+
