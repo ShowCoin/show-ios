@@ -131,7 +131,7 @@
     
     [self setNavigationLeftBarStyle:NavigationBarLeftDefault];
 }
-
+//设置标题
 - (void)show_setNavigationTitle:(NSString *) title{
     if (_titleLabel) {
         _titleLabel.text = title;
