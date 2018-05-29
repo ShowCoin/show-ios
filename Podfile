@@ -1,4 +1,5 @@
 platform :ios,'10.0'
+inhibit_all_warnings!
 
 target 'ShowLive' do
     pod 'ReactiveCocoa', :git => 'https://github.com/zhao0/ReactiveCocoa.git', :tag => '2.5.2'
