@@ -48,6 +48,7 @@
 		93D2C11020BD228900C9D960 /* SLVMFriendList.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D2C10F20BD228900C9D960 /* SLVMFriendList.m */; };
 		93D2C11220BD238500C9D960 /* SLFriendListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D2C11120BD238500C9D960 /* SLFriendListCell.m */; };
 		93D2C11420BD5F5100C9D960 /* SLFriendListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D2C11320BD5F5100C9D960 /* SLFriendListViewController.m */; };
+		93D2C11620BDAE5200C9D960 /* SLChatViewController+BlankView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D2C11520BDAE5200C9D960 /* SLChatViewController+BlankView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -156,6 +157,7 @@
 		93D2C10F20BD228900C9D960 /* SLVMFriendList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLVMFriendList.m; path = "../../../../Desktop/show-ios/ShowLive/Class/FriendList/Model/SLVMFriendList.m"; sourceTree = "<group>"; };
 		93D2C11120BD238500C9D960 /* SLFriendListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLFriendListCell.m; sourceTree = "<group>"; };
 		93D2C11320BD5F5100C9D960 /* SLFriendListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLFriendListViewController.m; sourceTree = "<group>"; };
+		93D2C11520BDAE5200C9D960 /* SLChatViewController+BlankView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SLChatViewController+BlankView.m"; sourceTree = "<group>"; };
 		AA2350AAA436CDCBB1E93DCE /* Pods-ShowLive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowLive.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShowLive/Pods-ShowLive.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -415,6 +417,7 @@
 			children = (
 				934E1B9720AC39D900A0B080 /* SLChatViewController.h */,
 				934E1B9820AC3A1E00A0B080 /* SLChatViewController+BlankView.h */,
+				93D2C11520BDAE5200C9D960 /* SLChatViewController+BlankView.m */,
 				931DAAC820B5A7A6003A0B38 /* SLConvListSystemTableViewCell.h */,
 				93D2C10A20BC66DE00C9D960 /* SLConvListSystemTableViewCell.m */,
 			);
@@ -670,6 +673,7 @@
 				93D2C10E20BC678600C9D960 /* SLUrgeListAction.m in Sources */,
 				7239EB3820BD38FC00588BED /* SLCropImageViewController.m in Sources */,
 				720F860520B2F59500AD0C54 /* SLConfigAction.m in Sources */,
+				93D2C11620BDAE5200C9D960 /* SLChatViewController+BlankView.m in Sources */,
 				43968A6A20AC398C00149DCC /* NSObject+Safe.m in Sources */,
 				931DAAC720B571D2003A0B38 /* SLGiftAction.m in Sources */,
 				720F860420B2F59500AD0C54 /* SLFollowUserAction.m in Sources */,
