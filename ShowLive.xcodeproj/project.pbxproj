@@ -48,6 +48,7 @@
 		93D2C11020BD228900C9D960 /* SLVMFriendList.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D2C10F20BD228900C9D960 /* SLVMFriendList.m */; };
 		93D2C11220BD238500C9D960 /* SLFriendListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D2C11120BD238500C9D960 /* SLFriendListCell.m */; };
 		93D2C11420BD5F5100C9D960 /* SLFriendListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D2C11320BD5F5100C9D960 /* SLFriendListViewController.m */; };
+		A99892BE20BD79600026BA03 /* SLConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = A99892BC20BD79600026BA03 /* SLConfig.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -156,6 +157,8 @@
 		93D2C10F20BD228900C9D960 /* SLVMFriendList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLVMFriendList.m; path = "../../../../Desktop/show-ios/ShowLive/Class/FriendList/Model/SLVMFriendList.m"; sourceTree = "<group>"; };
 		93D2C11120BD238500C9D960 /* SLFriendListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLFriendListCell.m; sourceTree = "<group>"; };
 		93D2C11320BD5F5100C9D960 /* SLFriendListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLFriendListViewController.m; sourceTree = "<group>"; };
+		A99892BC20BD79600026BA03 /* SLConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLConfig.m; sourceTree = "<group>"; };
+		A99892BD20BD79600026BA03 /* SLConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLConfig.h; sourceTree = "<group>"; };
 		AA2350AAA436CDCBB1E93DCE /* Pods-ShowLive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowLive.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShowLive/Pods-ShowLive.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -317,6 +320,7 @@
 				431438AC209432E30059D373 /* Base.lproj */,
 				431438A8209432D50059D373 /* zh-Hans.lproj */,
 				431439292094A2290059D373 /* Classes */,
+				A99892BB20BD79600026BA03 /* Other */,
 				43143748209432BE0059D373 /* Wallet */,
 				93154CBF206235FD00BF088F /* Supporting Files */,
 				72FE9B7120621F59008DD3D5 /* ShowLiveTests */,
@@ -419,6 +423,15 @@
 				93D2C10A20BC66DE00C9D960 /* SLConvListSystemTableViewCell.m */,
 			);
 			path = Chat;
+			sourceTree = "<group>";
+		};
+		A99892BB20BD79600026BA03 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				A99892BD20BD79600026BA03 /* SLConfig.h */,
+				A99892BC20BD79600026BA03 /* SLConfig.m */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 		D544A431CFB6EF8D747D9730 /* Pods */ = {
@@ -682,6 +695,7 @@
 				43D24A922094A43600C59AC8 /* ShowAppDelegate.m in Sources */,
 				7239EB3620BD38FC00588BED /* ShowUserQRViewController.m in Sources */,
 				720F860620B2F59500AD0C54 /* SLMeConcernListAction.m in Sources */,
+				A99892BE20BD79600026BA03 /* SLConfig.m in Sources */,
 				7239EB3720BD38FC00588BED /* SLTextView.m in Sources */,
 				93D2C11220BD238500C9D960 /* SLFriendListCell.m in Sources */,
 				720F860920B2F59500AD0C54 /* SLGetRyTokenAction.m in Sources */,
