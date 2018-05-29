@@ -313,15 +313,15 @@
             [self.leftView setHidden:NO];
             [self.middleView setHidden:NO];
             break;
-        case (NavigationBarLeft|NavigationBarRight):
+        case (NavigationBarLeft|NavigationBarRight)://显示左边，右边
             [self.leftView setHidden:NO];
             [self.rightView setHidden:NO];
             break;
-        case (NavigationBarMiddle|NavigationBarRight):
+        case (NavigationBarMiddle|NavigationBarRight)://显示中间，右边
             [self.middleView setHidden:NO];
             [self.rightView setHidden:NO];
             break;
-        case (NavigationBarLeft|NavigationBarRight|NavigationBarMiddle):
+        case (NavigationBarLeft|NavigationBarRight|NavigationBarMiddle)://显示左边，右边，中间
             [self.leftView setHidden:NO];
             [self.middleView setHidden:NO];
             [self.rightView setHidden:NO];
