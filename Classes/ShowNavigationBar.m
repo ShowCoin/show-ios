@@ -16,7 +16,7 @@
 
 @property (weak, nonatomic)  NSLayoutConstraint *leftViewWidth;//左边视图的宽度
 @property (weak, nonatomic)  NSLayoutConstraint *rightViewWidth;//右边视图的宽度
-@property (strong, nonatomic)UIView *linView;
+@property (strong, nonatomic)UIView *linView;//navigation的线
 
 @end
 
@@ -300,38 +300,38 @@
     NSInteger style = barStyle;
 
     switch (style) {
-        case NavigationBarLeft:
+        case NavigationBarLeft://显示左边
             [self.leftView setHidden:NO];
             break;
-        case NavigationBarMiddle:
+        case NavigationBarMiddle://显示中间
             [self.middleView setHidden:NO];
             break;
-        case NavigationBarRight:
+        case NavigationBarRight://显示右边
             [self.rightView setHidden:NO];
             break;
-        case (NavigationBarLeft|NavigationBarMiddle):
+        case (NavigationBarLeft|NavigationBarMiddle)://显示左边中间
             [self.leftView setHidden:NO];
             [self.middleView setHidden:NO];
             break;
-        case (NavigationBarLeft|NavigationBarRight):
+        case (NavigationBarLeft|NavigationBarRight)://显示左边，右边
             [self.leftView setHidden:NO];
             [self.rightView setHidden:NO];
             break;
-        case (NavigationBarMiddle|NavigationBarRight):
-            [self.middleView setHidden:NO];
-            [self.rightView setHidden:NO];
-            break;
-        case (NavigationBarLeft|NavigationBarRight|NavigationBarMiddle):
-            [self.leftView setHidden:NO];
+        case (NavigationBarMiddle|NavigationBarRight)://显示中间，右边
             [self.middleView setHidden:NO];
             [self.rightView setHidden:NO];
             break;
-        case (NavigationBarAll):
+        case (NavigationBarLeft|NavigationBarRight|NavigationBarMiddle)://显示左边，右边，中间
             [self.leftView setHidden:NO];
             [self.middleView setHidden:NO];
             [self.rightView setHidden:NO];
             break;
-        case (NavigationBarNone):
+        case (NavigationBarAll)://显示所有偶
+            [self.leftView setHidden:NO];
+            [self.middleView setHidden:NO];
+            [self.rightView setHidden:NO];
+            break;
+        case (NavigationBarNone)://什么都不显示
             [self.leftView setHidden:YES];
             [self.middleView setHidden:YES];
             [self.rightView setHidden:YES];
