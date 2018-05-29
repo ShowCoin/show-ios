@@ -56,7 +56,6 @@
     
     [contributionBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self.navigationBarView.leftView);
-        //        make.right.equalTo(self.view).with.offset(kMainScreenWidth/2);
         make.left.equalTo(self.view).with.offset(kMainScreenWidth/2 - 100*Proportion375);
         
         make.size.mas_equalTo(CGSizeMake(100*Proportion375, 40));
