@@ -56,7 +56,109 @@
     
 }
 
-
+#pragma mark - delegates
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 205*WScale;
+}
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    ShowForUsView * headerView = [[ShowForUsView alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth, 205*WScale)];
+    return headerView;
+}
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 6;
+}
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 50*WScale;
+}
+-(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell * Cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    if (!Cell) {
+        Cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+        Cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        Cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        Cell.textLabel.textColor = kBlackThemetextColor;
+        Cell.backgroundColor = kBlackThemeBGColor;
+    }
+    switch (indexPath.row) {
+        case 0:
+            Cell.textLabel.text = @"社区公约";
+            break;
+        case 1:
+            Cell.textLabel.text = @"隐私政策";
+            
+            break;
+        case 2:
+            Cell.textLabel.text = @"服务条款";
+            break;
+        case 3:
+            Cell.textLabel.text = @"SHOW主播规范管理";
+            break;
+        case 4:
+            Cell.textLabel.text = @"SHOW社区用户违规管理规则";
+            break;
+        case 5:
+            Cell.textLabel.text = @"联系我们";
+            break;
+        default:
+            break;
+    }
+    return Cell;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
+{
+    NSString * requestUrl;
+    switch (indexPath.row) {
+        case 1:
+        {
+            if(IS_EXIST_STR(SysConfig.privacy_page))
+            {
+                requestUrl = SysConfig.privacy_page;
+            }else
+            {
+                requestUrl = @"http://www.xiubi.com/privacy.html";
+            }
+            [PageMgr pushToWebController:requestUrl title:@"隐私政策" share:NO];
+        }
+            break;
+        case 2:
+        {
+            if(IS_EXIST_STR(SysConfig.service_page))
+            {
+                requestUrl = SysConfig.service_page;
+            }else
+            {
+                requestUrl = @"http://www.xiubi.com/service.html";
+            }
+            [PageMgr pushToWebController:requestUrl title:@"服务条款" share:NO];
+        }
+            break;
+        case 5:
+        {
+            if(IS_EXIST_STR(SysConfig.contact_page))
+            {
+                requestUrl = SysConfig.contact_page;
+            }else
+            {
+                requestUrl = @"http://www.xiubi.com/contact.html";
+            }
+            [PageMgr pushToWebController:requestUrl title:@"联系我们" share:NO];
+        }
+            break;
+        default:
+            break;
+    }
+    
+    
+}
 /*
 #pragma mark - Navigation
 
