@@ -96,7 +96,6 @@ static CGFloat lableMargin = 14;
     _btnOperation.titleLabel.font  = Font_Medium(10);
     [_btnOperation setImage:[UIImage imageNamed:@"friendlistfollow"] forState:UIControlStateNormal];
     [_btnOperation addTarget:self action:@selector(operationClick:) forControlEvents:UIControlEventTouchUpInside];
-    //    [_btnOperation setAttributedTitle:[[NSAttributedString alloc] initWithString:@"聊天" attributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:12],NSForegroundColorAttributeName:HexRGBAlpha(0xffffff, 1)}] forState:UIControlStateNormal];
     [self addSubview:self.btnOperation];
     
     _moneyLabel.right = _btnOperation.left -10;
@@ -163,7 +162,6 @@ static CGFloat lableMargin = 14;
         [self.nickNameLabel setAttributedText:attstring];
     }else{
         _nickNameLabel.frame=CGRectMake(_headPortrait.right + 10, lableMargin, 105*Proportion375,20);
-//        self.nickNameLabel.centerY = _headPortrait.centerY-10;
     }
     
     _lblID.text = userListModel.descriptions?[NSString stringWithFormat:@"%@",userListModel.descriptions]:@"这个人很懒,没留下任何东西";
@@ -172,29 +170,9 @@ static CGFloat lableMargin = 14;
 -(void)operationClick:(UIButton*)sender{
     NSString * follow_state = self.userListModel.isFollowed;
     if ([follow_state integerValue]>0) {
-        //        if (_isAt)
-        //        {
-        //            sender.selected = !sender.selected;
-        //            if (sender.selected) {
-        //                sender.backgroundColor = kGrayTextColor;
-        //                [sender setTitleColor:kGrayTextColor forState:UIControlStateNormal];
-        //            }
-        //            else
-        //            {
-        //                sender.backgroundColor = RGBACOLOR(100, 194, 248, 1);
-        //                [sender setTitleColor:kBlackThemetextColor forState:UIControlStateNormal];
-        //            }
-        //            if (_functionDelegate && [_functionDelegate respondsToSelector:@selector(onClickAt:button:)])
-        //            {
-        //                [_functionDelegate onClickAt:self.userListModel button:sender];
-        //            }
-        //        }
-        //        else
-        //        {
         if (_functionDelegate && [_functionDelegate respondsToSelector:@selector(onClickChat:)]) {
             [_functionDelegate onClickChat:self.userListModel];
         }
-        //        }
     }
     else{
         if (_functionDelegate && [_functionDelegate respondsToSelector:@selector(onClickFollow:withData:)]) {
