@@ -82,11 +82,6 @@
         [_mainView addSubview:_IDLab];
         
         _qrCodeImgView = [[UIImageView alloc] initWithFrame:CGRectMake((_mainView.width-280*Proportion375)*0.5, 150*Proportion375, 280*Proportion375, 280*Proportion375)];
-//        CIFilter *filter = [CIFilter filterWithName:@"CIQRCodeGenerator"];
-//        [filter setDefaults];
-//        NSData *data = [AccountUserInfoModel.popularNo dataUsingEncoding:NSISOLatin1StringEncoding];
-//        [filter setValue:data forKeyPath:@"inputMessage"];
-//        CIImage *image = [filter outputImage];
         _qrCodeImgView.image = [UIImage createNonInterpolatedUIImageFormStr:AccountUserInfoModel.popularNo];
         [_mainView addSubview:_qrCodeImgView];
         _qrCodeImgView.backgroundColor = kThemeRedColor;
