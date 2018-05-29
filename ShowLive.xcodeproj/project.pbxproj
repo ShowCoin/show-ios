@@ -47,6 +47,7 @@
 		93D2C10E20BC678600C9D960 /* SLUrgeListAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D2C10D20BC678600C9D960 /* SLUrgeListAction.m */; };
 		93D2C11020BD228900C9D960 /* SLVMFriendList.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D2C10F20BD228900C9D960 /* SLVMFriendList.m */; };
 		93D2C11220BD238500C9D960 /* SLFriendListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D2C11120BD238500C9D960 /* SLFriendListCell.m */; };
+		93D2C11420BD5F5100C9D960 /* SLFriendListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D2C11320BD5F5100C9D960 /* SLFriendListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -154,6 +155,7 @@
 		93D2C10D20BC678600C9D960 /* SLUrgeListAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLUrgeListAction.m; path = "../../Desktop/show-ios/ShowLive/Request/Action/SLUrgeListAction.m"; sourceTree = "<group>"; };
 		93D2C10F20BD228900C9D960 /* SLVMFriendList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLVMFriendList.m; path = "../../../../Desktop/show-ios/ShowLive/Class/FriendList/Model/SLVMFriendList.m"; sourceTree = "<group>"; };
 		93D2C11120BD238500C9D960 /* SLFriendListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLFriendListCell.m; sourceTree = "<group>"; };
+		93D2C11320BD5F5100C9D960 /* SLFriendListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLFriendListViewController.m; sourceTree = "<group>"; };
 		AA2350AAA436CDCBB1E93DCE /* Pods-ShowLive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowLive.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShowLive/Pods-ShowLive.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -385,6 +387,7 @@
 			isa = PBXGroup;
 			children = (
 				9319236920B7FF1C001C6144 /* SLFriendListViewController.h */,
+				93D2C11320BD5F5100C9D960 /* SLFriendListViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -670,6 +673,7 @@
 				43968A6A20AC398C00149DCC /* NSObject+Safe.m in Sources */,
 				931DAAC720B571D2003A0B38 /* SLGiftAction.m in Sources */,
 				720F860420B2F59500AD0C54 /* SLFollowUserAction.m in Sources */,
+				93D2C11420BD5F5100C9D960 /* SLFriendListViewController.m in Sources */,
 				720F860720B2F59500AD0C54 /* SLChatStatisticsAction.m in Sources */,
 				938D302220A35B0A006A0CDE /* ShowReqAction.m in Sources */,
 				7239EB3520BD38FC00588BED /* ChangeTextController.m in Sources */,
