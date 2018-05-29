@@ -55,6 +55,36 @@ CGFloat const kSLToolViewH  = 140;
     return self;
 }
 
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    
+    CGFloat w = self.frame.size.width;
+    CGFloat h = self.frame.size.height;
+    
+    self.topView.frame = CGRectMake(0, 0, w, kTitleViewH);
+    
+    CGFloat y = (h - kMAButtonH - kTitleViewH) / 2;
+    NSInteger count = self.views.count;
+    CGFloat margin = (w - count * kMAButtonW) / (count + 1);
+    CGFloat x = margin;
+    for (int i = 0; i < self.views.count; i++) {
+        UIView *v = self.views[i];
+        v.frame = CGRectMake(x, y + kTitleViewH, kMAButtonW, kMAButtonH);
+        x += margin + kMAButtonW;
+    }
+}
+
+- (void)buttonAction:(UIButton *)button {
+    if (button.tag == SLLiveToolTypeClear) {
+        button.selected = !button.selected;
+        self.clearSelect = button.selected;
+    }
+    if (self.clickBlock) {
+        self.clickBlock(button.tag);
+    }
+}
+
+
 
 @end
 
