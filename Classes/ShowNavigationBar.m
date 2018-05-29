@@ -326,12 +326,12 @@
             [self.middleView setHidden:NO];
             [self.rightView setHidden:NO];
             break;
-        case (NavigationBarAll):
+        case (NavigationBarAll)://显示所有偶
             [self.leftView setHidden:NO];
             [self.middleView setHidden:NO];
             [self.rightView setHidden:NO];
             break;
-        case (NavigationBarNone):
+        case (NavigationBarNone)://什么都不显示
             [self.leftView setHidden:YES];
             [self.middleView setHidden:YES];
             [self.rightView setHidden:YES];
