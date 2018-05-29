@@ -12,6 +12,11 @@
 
 //应用程序需要事先申请音视频使用权限
 + (void)requestMediaCapturerAccessWithCompletionHandler:(void (^)(SLDeviceErrorStatus status))handler{
+    
+    AVAuthorizationStatus videoAuthorStatus = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
+    AVAuthorizationStatus audioAuthorStatus = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeAudio];
+    
+ 
    
 }
 
