@@ -45,7 +45,46 @@
             return;
         }else
         {
-            
+            //请求相机
+            [AVCaptureDevice requestAccessForMediaType:AVMediaTypeVideo completionHandler:^(BOOL granted) {
+                
+                if (granted) {
+                    //请求麦克风
+                    [[AVAudioSession sharedInstance] requestRecordPermission:^(BOOL granted) {
+                        if (granted) {
+                            
+                            dispatch_async(dispatch_get_main_queue(), ^{
+                                
+                                handler(AVDeviceNOErrorStatus);
+                                
+                            });
+                            
+                        }else{
+                            
+                            dispatch_async(dispatch_get_main_queue(), ^{
+                                
+                                handler(AudioDeviceErrorStatus);
+                            });
+                            
+                        }
+                    }];
+                    
+                }else{
+                    
+                    [[AVAudioSession sharedInstance] requestRecordPermission:^(BOOL granted) {
+                        if (granted) {
+                            dispatch_async(dispatch_get_main_queue(), ^{
+                                
+                                handler(VedioDeviceErrorStatus );
+                            });
+                        }else{
+                            dispatch_async(dispatch_get_main_queue(), ^{
+                                handler(AVDeviceErrorStatus);
+                            });
+                        }
+                    }];
+                }
+            }];
       
             
         }
