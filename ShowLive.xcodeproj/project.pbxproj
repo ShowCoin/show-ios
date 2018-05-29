@@ -18,7 +18,6 @@
 		43D24A912094A43600C59AC8 /* AppDelegate+ShowRegisterService.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D24A8D2094A43600C59AC8 /* AppDelegate+ShowRegisterService.m */; };
 		43D24A922094A43600C59AC8 /* ShowAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D24A8F2094A43600C59AC8 /* ShowAppDelegate.m */; };
 		43D24A952094B4C500C59AC8 /* ShowNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D24A942094B4C500C59AC8 /* ShowNavigationBar.m */; };
-		72058ACB20B5E17800458C2F /* ShowSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72058ACA20B5E17700458C2F /* ShowSettingViewController.m */; };
 		720C304A20A35ACD00207500 /* SLGetWithdrawAddressAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 720C304920A35ACC00207500 /* SLGetWithdrawAddressAction.m */; };
 		720F860420B2F59500AD0C54 /* SLFollowUserAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 720F85F620B2F59400AD0C54 /* SLFollowUserAction.m */; };
 		720F860520B2F59500AD0C54 /* SLConfigAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 720F85FA20B2F59400AD0C54 /* SLConfigAction.m */; };
@@ -27,8 +26,6 @@
 		720F860820B2F59500AD0C54 /* SLMeFansListAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 720F860020B2F59500AD0C54 /* SLMeFansListAction.m */; };
 		720F860920B2F59500AD0C54 /* SLGetRyTokenAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 720F860120B2F59500AD0C54 /* SLGetRyTokenAction.m */; };
 		720F860A20B2F59500AD0C54 /* SLRelationAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 720F860220B2F59500AD0C54 /* SLRelationAction.m */; };
-		720F861020B45EBB00AD0C54 /* SLUserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 720F860E20B45EBB00AD0C54 /* SLUserInfoViewController.m */; };
-		725B98BD20AC837D00747F7A /* UserCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 725B98BC20AC837C00747F7A /* UserCenterViewController.m */; };
 		72C6166A20A0C67500103C44 /* SLUrgeListAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C6166820A0C67500103C44 /* SLUrgeListAction.m */; };
 		72F17B6A20AB18F60039E916 /* ShowForgetPwdAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F17B6820AB18F60039E916 /* ShowForgetPwdAction.m */; };
 		72F17B6B20AB18F60039E916 /* ShowVerifycodeAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F17B6920AB18F60039E916 /* ShowVerifycodeAction.m */; };
@@ -37,9 +34,12 @@
 		72FE9B7320621F59008DD3D5 /* ShowLiveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FE9B7220621F59008DD3D5 /* ShowLiveTests.m */; };
 		72FE9B7E20621F59008DD3D5 /* ShowLiveUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FE9B7D20621F59008DD3D5 /* ShowLiveUITests.m */; };
 		931DAAC720B571D2003A0B38 /* SLGiftAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 931DAAC620B571D2003A0B38 /* SLGiftAction.m */; };
-		93595A8920B9E436005056CB /* SLVMFriendList.m in Sources */ = {isa = PBXBuildFile; fileRef = 93595A8820B9E436005056CB /* SLVMFriendList.m */; };
 		938D2FFF20A0C822006A0CDE /* ShowAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 938D2FFE20A0C822006A0CDE /* ShowAction.m */; };
 		938D302220A35B0A006A0CDE /* ShowReqAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 938D302120A35B0A006A0CDE /* ShowReqAction.m */; };
+		93D2C10B20BC66DE00C9D960 /* SLConvListSystemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D2C10A20BC66DE00C9D960 /* SLConvListSystemTableViewCell.m */; };
+		93D2C10E20BC678600C9D960 /* SLUrgeListAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D2C10D20BC678600C9D960 /* SLUrgeListAction.m */; };
+		93D2C11020BD228900C9D960 /* SLVMFriendList.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D2C10F20BD228900C9D960 /* SLVMFriendList.m */; };
+		93D2C11220BD238500C9D960 /* SLFriendListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D2C11120BD238500C9D960 /* SLFriendListCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,7 +78,6 @@
 		43D24A932094B4C500C59AC8 /* ShowNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowNavigationBar.h; sourceTree = "<group>"; };
 		43D24A942094B4C500C59AC8 /* ShowNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowNavigationBar.m; sourceTree = "<group>"; };
 		72058AC920B5E17700458C2F /* ShowSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowSettingViewController.h; sourceTree = "<group>"; };
-		72058ACA20B5E17700458C2F /* ShowSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowSettingViewController.m; sourceTree = "<group>"; };
 		720C304820A35ACC00207500 /* SLGetWithdrawAddressAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLGetWithdrawAddressAction.h; sourceTree = "<group>"; };
 		720C304920A35ACC00207500 /* SLGetWithdrawAddressAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLGetWithdrawAddressAction.m; sourceTree = "<group>"; };
 		720F85F620B2F59400AD0C54 /* SLFollowUserAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLFollowUserAction.m; sourceTree = "<group>"; };
@@ -95,10 +94,8 @@
 		720F860120B2F59500AD0C54 /* SLGetRyTokenAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLGetRyTokenAction.m; sourceTree = "<group>"; };
 		720F860220B2F59500AD0C54 /* SLRelationAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLRelationAction.m; sourceTree = "<group>"; };
 		720F860320B2F59500AD0C54 /* SLGetRyTokenAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLGetRyTokenAction.h; sourceTree = "<group>"; };
-		720F860E20B45EBB00AD0C54 /* SLUserInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLUserInfoViewController.m; sourceTree = "<group>"; };
 		720F860F20B45EBB00AD0C54 /* SLUserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLUserInfoViewController.h; sourceTree = "<group>"; };
 		725B98BB20AC3D2F00747F7A /* UserCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCenterViewController.h; sourceTree = "<group>"; };
-		725B98BC20AC837C00747F7A /* UserCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCenterViewController.m; sourceTree = "<group>"; };
 		72C6166820A0C67500103C44 /* SLUrgeListAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLUrgeListAction.m; sourceTree = "<group>"; };
 		72C6166920A0C67500103C44 /* SLUrgeListAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLUrgeListAction.h; sourceTree = "<group>"; };
 		72C686F61D628C8898214FFC /* Pods-ShowLive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowLive.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShowLive/Pods-ShowLive.debug.xcconfig"; sourceTree = "<group>"; };
@@ -106,6 +103,7 @@
 		72F17B6720AB18F50039E916 /* ShowVerifycodeAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowVerifycodeAction.h; sourceTree = "<group>"; };
 		72F17B6820AB18F60039E916 /* ShowForgetPwdAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowForgetPwdAction.m; sourceTree = "<group>"; };
 		72F17B6920AB18F60039E916 /* ShowVerifycodeAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowVerifycodeAction.m; sourceTree = "<group>"; };
+		72FAE61F20BC50CA00E47E09 /* SLTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLTextView.h; sourceTree = "<group>"; };
 		72FE9B5620621F59008DD3D5 /* ShowLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShowLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72FE9B6520621F59008DD3D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		72FE9B6720621F59008DD3D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -125,11 +123,15 @@
 		931DAAC820B5A7A6003A0B38 /* SLConvListSystemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLConvListSystemTableViewCell.h; sourceTree = "<group>"; };
 		934E1B9720AC39D900A0B080 /* SLChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLChatViewController.h; sourceTree = "<group>"; };
 		934E1B9820AC3A1E00A0B080 /* SLChatViewController+BlankView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SLChatViewController+BlankView.h"; sourceTree = "<group>"; };
-		93595A8820B9E436005056CB /* SLVMFriendList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLVMFriendList.m; sourceTree = "<group>"; };
 		938D2FFD20A0C821006A0CDE /* ShowAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowAction.h; sourceTree = "<group>"; };
 		938D2FFE20A0C822006A0CDE /* ShowAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowAction.m; sourceTree = "<group>"; };
 		938D302020A35B0A006A0CDE /* ShowLoginAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowLoginAction.h; sourceTree = "<group>"; };
 		938D302120A35B0A006A0CDE /* ShowReqAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowReqAction.m; sourceTree = "<group>"; };
+		93D2C10A20BC66DE00C9D960 /* SLConvListSystemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLConvListSystemTableViewCell.m; sourceTree = "<group>"; };
+		93D2C10C20BC677B00C9D960 /* SLUrgeListAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLUrgeListAction.h; path = "../../Desktop/show-ios/ShowLive/Request/Action/SLUrgeListAction.h"; sourceTree = "<group>"; };
+		93D2C10D20BC678600C9D960 /* SLUrgeListAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLUrgeListAction.m; path = "../../Desktop/show-ios/ShowLive/Request/Action/SLUrgeListAction.m"; sourceTree = "<group>"; };
+		93D2C10F20BD228900C9D960 /* SLVMFriendList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLVMFriendList.m; path = "../../../../Desktop/show-ios/ShowLive/Class/FriendList/Model/SLVMFriendList.m"; sourceTree = "<group>"; };
+		93D2C11120BD238500C9D960 /* SLFriendListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLFriendListCell.m; sourceTree = "<group>"; };
 		AA2350AAA436CDCBB1E93DCE /* Pods-ShowLive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowLive.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShowLive/Pods-ShowLive.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -210,12 +212,11 @@
 		725B98BA20AC3CD400747F7A /* UserCenter */ = {
 			isa = PBXGroup;
 			children = (
+				72FAE62020BC56FB00E47E09 /* Toplist */,
+				72FAE61F20BC50CA00E47E09 /* SLTextView.h */,
 				720F860F20B45EBB00AD0C54 /* SLUserInfoViewController.h */,
-				720F860E20B45EBB00AD0C54 /* SLUserInfoViewController.m */,
 				725B98BB20AC3D2F00747F7A /* UserCenterViewController.h */,
-				725B98BC20AC837C00747F7A /* UserCenterViewController.m */,
 				72058AC920B5E17700458C2F /* ShowSettingViewController.h */,
-				72058ACA20B5E17700458C2F /* ShowSettingViewController.m */,
 			);
 			path = UserCenter;
 			sourceTree = "<group>";
@@ -223,6 +224,8 @@
 		72C6166720A0C65200103C44 /* requestAction */ = {
 			isa = PBXGroup;
 			children = (
+				93D2C10C20BC677B00C9D960 /* SLUrgeListAction.h */,
+				93D2C10D20BC678600C9D960 /* SLUrgeListAction.m */,
 				938D2FFD20A0C821006A0CDE /* ShowAction.h */,
 				938D2FFE20A0C822006A0CDE /* ShowAction.m */,
 				931DAAC520B571C5003A0B38 /* SLGiftAction.h */,
@@ -253,6 +256,13 @@
 				720F860220B2F59500AD0C54 /* SLRelationAction.m */,
 			);
 			path = requestAction;
+			sourceTree = "<group>";
+		};
+		72FAE62020BC56FB00E47E09 /* Toplist */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Toplist;
 			sourceTree = "<group>";
 		};
 		72FE9B4D20621F59008DD3D5 = {
@@ -346,6 +356,7 @@
 			isa = PBXGroup;
 			children = (
 				9319236B20B7FF37001C6144 /* SLFriendListCell.h */,
+				93D2C11120BD238500C9D960 /* SLFriendListCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -354,7 +365,7 @@
 			isa = PBXGroup;
 			children = (
 				9319236D20B897C6001C6144 /* SLVMFriendList.h */,
-				93595A8820B9E436005056CB /* SLVMFriendList.m */,
+				93D2C10F20BD228900C9D960 /* SLVMFriendList.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -365,6 +376,7 @@
 				934E1B9720AC39D900A0B080 /* SLChatViewController.h */,
 				934E1B9820AC3A1E00A0B080 /* SLChatViewController+BlankView.h */,
 				931DAAC820B5A7A6003A0B38 /* SLConvListSystemTableViewCell.h */,
+				93D2C10A20BC66DE00C9D960 /* SLConvListSystemTableViewCell.m */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -604,15 +616,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				725B98BD20AC837D00747F7A /* UserCenterViewController.m in Sources */,
+				93D2C11020BD228900C9D960 /* SLVMFriendList.m in Sources */,
 				938D2FFF20A0C822006A0CDE /* ShowAction.m in Sources */,
+				93D2C10B20BC66DE00C9D960 /* SLConvListSystemTableViewCell.m in Sources */,
 				720C304A20A35ACD00207500 /* SLGetWithdrawAddressAction.m in Sources */,
 				72F17B6A20AB18F60039E916 /* ShowForgetPwdAction.m in Sources */,
 				43D24A952094B4C500C59AC8 /* ShowNavigationBar.m in Sources */,
 				72F17B6B20AB18F60039E916 /* ShowVerifycodeAction.m in Sources */,
 				72FE9B6920621F59008DD3D5 /* main.m in Sources */,
 				72C6166A20A0C67500103C44 /* SLUrgeListAction.m in Sources */,
-				72058ACB20B5E17800458C2F /* ShowSettingViewController.m in Sources */,
+				93D2C10E20BC678600C9D960 /* SLUrgeListAction.m in Sources */,
 				720F860520B2F59500AD0C54 /* SLConfigAction.m in Sources */,
 				43968A6A20AC398C00149DCC /* NSObject+Safe.m in Sources */,
 				931DAAC720B571D2003A0B38 /* SLGiftAction.m in Sources */,
@@ -622,10 +635,9 @@
 				720F860A20B2F59500AD0C54 /* SLRelationAction.m in Sources */,
 				43D24A912094A43600C59AC8 /* AppDelegate+ShowRegisterService.m in Sources */,
 				43D24A922094A43600C59AC8 /* ShowAppDelegate.m in Sources */,
-				93595A8920B9E436005056CB /* SLVMFriendList.m in Sources */,
 				720F860620B2F59500AD0C54 /* SLMeConcernListAction.m in Sources */,
+				93D2C11220BD238500C9D960 /* SLFriendListCell.m in Sources */,
 				720F860920B2F59500AD0C54 /* SLGetRyTokenAction.m in Sources */,
-				720F861020B45EBB00AD0C54 /* SLUserInfoViewController.m in Sources */,
 				720F860820B2F59500AD0C54 /* SLMeFansListAction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -807,7 +819,7 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = R98BC2PLD7;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -858,7 +870,7 @@
 					"\"$(SRCROOT)/ShowLive/Vendor/MedioSDK/include\"",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -883,7 +895,7 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = R98BC2PLD7;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -934,7 +946,7 @@
 					"\"$(SRCROOT)/ShowLive/Vendor/MedioSDK/include\"",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
