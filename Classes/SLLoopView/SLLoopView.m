@@ -82,6 +82,24 @@ typedef void(^LoopBlock)(CAAnimation *anim, BOOL flag);
     return _imageView;
 }
 
+- (void)setup {
+    CAReplicatorLayer *layer = [CAReplicatorLayer layer];
+    [layer addSublayer:self.titleView.layer];
+    [layer addSublayer:self.imageView.layer];
+    layer.instanceCount = 2;
+    [self.layer addSublayer:layer];
+    self.reLayer = layer;
+}
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    CGFloat w = self.frame.size.width;
+    CGFloat h = self.frame.size.height;
+    
+    self.titleView.frame = CGRectMake(0, 0, w / 2, h);
+    self.imageView.frame = CGRectMake(CGRectGetMaxX(self.titleView.frame), 0, CGRectGetWidth(self.titleView.frame), h);
+}
+
 
 #pragma mark - Public
 
