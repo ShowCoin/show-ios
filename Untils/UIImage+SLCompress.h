@@ -20,4 +20,5 @@
 - (UIImage*)imageByScalingAndCroppingForSize:(CGSize)targetSize;
 - (UIImage *)blurredImageWithRadius:(CGFloat)radius iterations:(NSUInteger)iterations tintColor:(UIColor *)tintColor;
 - (UIImage *)cutCircleImage;
+- (UIImage *)squareImageFromImage:(UIImage *)image scaledToSize:(CGFloat)newSize;
 @end
