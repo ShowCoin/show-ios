@@ -100,6 +100,70 @@ typedef void(^LoopBlock)(CAAnimation *anim, BOOL flag);
     self.imageView.frame = CGRectMake(CGRectGetMaxX(self.titleView.frame), 0, CGRectGetWidth(self.titleView.frame), h);
 }
 
+- (void)layoutSublayersOfLayer:(CALayer *)layer {
+    [super layoutSublayersOfLayer:layer];
+    CGFloat w = layer.frame.size.width;
+    CGFloat h = layer.frame.size.height;
+    
+    self.reLayer.frame = CGRectMake(0, 0, w, h);
+    self.reLayer.instanceTransform = CATransform3DMakeTranslation(w, 0, 0);
+}
+
+- (CAAnimation *)keyframeAnimationStartX:(CGFloat)x {
+    CAKeyframeAnimation *keyAni = [CAKeyframeAnimation animation];
+    keyAni.keyPath = @"bounds.origin.x";
+    CGFloat y = self.frame.origin.y;
+    CGFloat w = UIScreen.mainScreen.bounds.size.width;
+    keyAni.values = @[[NSValue valueWithCGPoint:CGPointMake(w * 0.00 + x, y)],
+                      [NSValue valueWithCGPoint:CGPointMake(w * 0.62 + x, y)],
+                      [NSValue valueWithCGPoint:CGPointMake(w * 0.82 + x, y)],
+                      [NSValue valueWithCGPoint:CGPointMake(w * 0.92 + x, y)],
+                      [NSValue valueWithCGPoint:CGPointMake(w * 1.00 + x, y)]];
+    keyAni.keyTimes = @[@0, @0.3, @0.5, @0.7, @1];
+    keyAni.duration = 0.6;
+    keyAni.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+    keyAni.removedOnCompletion = NO;
+    keyAni.fillMode = kCAFillModeForwards;//x == 0 ? kCAFillModeForwards : kCAFillModeRemoved;
+    LoopAnimationDelegate *delegate = [LoopAnimationDelegate new];
+    @weakify(self)
+    delegate.loopBlock = ^(CAAnimation *anim, BOOL flag) {
+        @strongify(self)
+        [self animationDidStop:anim finished:flag];
+    };
+    keyAni.delegate = delegate;
+    NSString *value = x == 0 ? kAnimationSecond : kAnimationFirst;
+    [keyAni setValue:value forKey:kAnimationKey];
+    return keyAni;
+}
+
+
+- (void)startAnimation:(NSNumber *)x {
+    if (isEndAni) return;
+    //NSLog(@"x900 ----- %lf - startAnimation", x.floatValue);
+    CAAnimation *ani = [self keyframeAnimationStartX:[x floatValue]];
+    [self.layer addAnimation:ani forKey:nil];
+}
+
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
+    if (flag == NO) return;
+    if ([[anim valueForKey:kAnimationKey] isEqualToString:kAnimationSecond]) {
+        //NSLog(@"x900 ----- 第二段动画 - %@", [anim valueForKey:kAnimationKey]);
+        // 第二段动画
+        CGFloat x = UIScreen.mainScreen.bounds.size.width;
+        NSNumber *number = [NSNumber numberWithFloat:x];
+        [self performSelector:@selector(startAnimation:) withObject:number afterDelay:3 inModes:@[NSRunLoopCommonModes]];
+    } else {
+        //NSLog(@"x900 ----- 第一段动画 - %@", [anim valueForKey:kAnimationKey]);
+        // 第一段动画
+        [self performSelector:@selector(startAnimation:) withObject:nil afterDelay:15 inModes:@[NSRunLoopCommonModes]];
+        [self.layer removeAllAnimations];
+    }
+}
+
+- (void)didMoveToSuperview {
+    [self.imageView.imageView addRotationAnimated];
+    //    [self performSelector:@selector(startAnimation:) withObject:nil afterDelay:3];
+}
 
 #pragma mark - Public
 
