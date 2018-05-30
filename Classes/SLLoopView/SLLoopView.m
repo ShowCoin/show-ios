@@ -82,6 +82,28 @@ typedef void(^LoopBlock)(CAAnimation *anim, BOOL flag);
     return _imageView;
 }
 
+
+#pragma mark - Public
+
+- (void)setTitle:(NSString *)title subTitle:(NSString *)subTitle {
+    self.titleView.textLabel.text = title;
+}
+
+static BOOL isFirst = YES;
+
+- (void)beginAnimation {
+    isEndAni = NO;
+    NSTimeInterval t = isFirst ? 7 : 3;
+    isFirst = NO;
+    [self performSelector:@selector(startAnimation:) withObject:nil afterDelay:t];
+}
+
+- (void)endAnimation {
+    isEndAni = YES;
+    [self.layer removeAllAnimations];
+}
+
+
 @end
 
 @interface SLLoopContentView ()
