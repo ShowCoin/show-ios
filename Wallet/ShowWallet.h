@@ -95,7 +95,7 @@ typedef enum ShowWalletOptionsType {
 @property (nonatomic, readonly) NSString *keychainKey;
 // 同步的事件
 @property (nonatomic, readonly) NSTimeInterval syncDate;
-
+//价格
 @property (nonatomic, readonly) float etherPrice;
 
 - (void)show_refresh: (void (^)(BOOL))callback;
