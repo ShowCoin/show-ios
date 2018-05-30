@@ -542,6 +542,116 @@
         
     }
 }
+#pragma mark - textField
+-(void)textDidChanged:(UITextField *)textField
+{
+    self.nicknameChanged = YES;
+    NSString * str =  textField.text;
+    BOOL isOrNo = [SLHelper isAvailableName:str];
+    NSLog(@"===================%@",isOrNo?@"yes":@"no");
+    self.nickname = textField.text;
+    if (isOrNo) {
+        _canUpload = YES;
+    }else{
+        _canUpload = NO;
+    }
+}
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    
+    [textField resignFirstResponder];
+    
+    return YES;
+    
+}
+
+#pragma mark - delegates
+
+- (void)textFieldDidChange:(id)sender {
+    
+    
+    if (sender == self.nameTextField) {
+        
+        NSString *toBeString = self.nameTextField.text;
+        
+        NSLog(@" 打印信息toBeString:%@",toBeString);
+        
+        NSString *lang = [[self.nameTextField textInputMode] primaryLanguage]; // 键盘输入模式
+        if ([lang isEqualToString:@"zh-Hans"]||[lang isEqualToString:@"zh_CN"]) { // 简体中文输入，包括简体拼音，健体五笔，简体手写
+            
+            //判断markedTextRange是不是为Nil，如果为Nil的话就说明你现在没有未选中的字符，
+            //可以计算文字长度。否则此时计算出来的字符长度可能不正确
+            
+            UITextRange *selectedRange = [self.nameTextField markedTextRange];
+            //获取高亮部分(感觉输入中文的时候才有)
+            UITextPosition *position = [self.nameTextField positionFromPosition:selectedRange.start offset:0];
+            // 没有高亮选择的字，则对已输入的文字进行字数统计和限制
+            if (!position)
+            {
+                //中文和字符一起检测  中文是两个字符
+                if ([toBeString getStringLenthOfBytes] > 24)
+                {
+                    self.nameTextField.text = [toBeString subBytesOfstringToIndex:24];
+                }
+            }
+        }
+        else
+        {
+            if ([toBeString getStringLenthOfBytes] > 24)
+            {
+                self.nameTextField.text = [toBeString subBytesOfstringToIndex:24];
+            }
+        }
+        if ([AccountUserInfoModel.nickname isEqualToString:self.nameTextField.text]) {
+            _nicknameChanged = NO;
+        }else{
+            self.nickname = [NSString stringWithFormat:@"%@",self.nameTextField.text];
+            _nicknameChanged = YES;
+        }
+    }else if (sender == self.IDTextField){
+        
+        NSString *toBeString = self.IDTextField.text;
+        
+        NSLog(@" 打印信息toBeString:%@",toBeString);
+        
+        NSString *lang = [[self.IDTextField textInputMode] primaryLanguage]; // 键盘输入模式
+        if ([lang isEqualToString:@"zh-Hans"]||[lang isEqualToString:@"zh_CN"]) { // 简体中文输入，包括简体拼音，健体五笔，简体手写
+            
+            //判断markedTextRange是不是为Nil，如果为Nil的话就说明你现在没有未选中的字符，
+            //可以计算文字长度。否则此时计算出来的字符长度可能不正确
+            
+            UITextRange *selectedRange = [self.IDTextField markedTextRange];
+            //获取高亮部分(感觉输入中文的时候才有)
+            UITextPosition *position = [self.IDTextField positionFromPosition:selectedRange.start offset:0];
+            // 没有高亮选择的字，则对已输入的文字进行字数统计和限制
+            if (!position)
+            {
+                //中文和字符一起检测  中文是两个字符
+                if ([toBeString getStringLenthOfBytes] > 24)
+                {
+                    self.IDTextField.text = [toBeString subBytesOfstringToIndex:24];
+                }
+            }
+        }
+        else
+        {
+            if ([toBeString getStringLenthOfBytes] > 24)
+            {
+                self.IDTextField.text = [toBeString subBytesOfstringToIndex:24];
+            }
+        }
+        if ([AccountUserInfoModel.popularNo isEqualToString:self.IDTextField.text]) {
+            _popNumberChanged = NO;
+        }else{
+            self.popNumber = [NSString stringWithFormat:@"%@",self.IDTextField.text];
+            _popNumberChanged = YES;
+        }
+    }
+    NSString *toBeString = self.nameTextField.text;
+    
+    NSLog(@" 打印信息toBeString:%@",toBeString);
+    
+}
+
 
 #pragma mark - delegates
 
