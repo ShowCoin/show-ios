@@ -66,11 +66,21 @@ typedef void(^LoopBlock)(CAAnimation *anim, BOOL flag);
     return self;
 }
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    [self setup];
+- (SLLoopContentView *)titleView {
+    if (!_titleView) {
+        _titleView = [[SLLoopContentView alloc] init];
+        _titleView.imageView.hidden = YES;
+    }
+    return _titleView;
 }
 
+- (SLLoopContentView *)imageView {
+    if (!_imageView) {
+        _imageView = [[SLLoopContentView alloc] init];
+        _imageView.textLabel.text = @"我是音乐: 一条鱼~~";
+    }
+    return _imageView;
+}
 
 @end
 
