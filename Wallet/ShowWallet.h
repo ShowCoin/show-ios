@@ -97,7 +97,7 @@ typedef enum ShowWalletOptionsType {
 @property (nonatomic, readonly) NSTimeInterval syncDate;
 //价格
 @property (nonatomic, readonly) float etherPrice;
-
+//回调
 - (void)show_refresh: (void (^)(BOOL))callback;
 
 
