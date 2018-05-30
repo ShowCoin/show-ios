@@ -98,5 +98,17 @@ typedef void(^LoopBlock)(CAAnimation *anim, BOOL flag);
 
 @implementation SLRotationImageView
 
+- (void)addRotationAnimated {
+    [self.layer removeAllAnimations];
+    CABasicAnimation *ani = [CABasicAnimation animation];
+    ani.keyPath = @"transform.rotation.z";
+    ani.fromValue = @0;
+    ani.toValue = @(M_PI *2);
+    ani.duration = 10;
+    ani.repeatCount = HUGE_VALF;
+    ani.fillMode = kCAFillModeForwards;
+    ani.removedOnCompletion = NO;
+    [self.layer addAnimation:ani forKey:@"imageViewAni"];
+}
 
 @end
