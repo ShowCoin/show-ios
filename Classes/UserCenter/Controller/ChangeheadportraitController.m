@@ -170,7 +170,6 @@
 
 - (void)openAlbum
 {
-    //    [self.photoSelect startPhotoSelect:YHEPhotoSelectFromLibrary];
     UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
     imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     imagePicker.navigationBar.backgroundColor = kthemeBlackColor;
@@ -179,9 +178,6 @@
     imagePicker.delegate = self;
     [self presentViewController:imagePicker animated:YES completion:^{
     }];
-    
-    //    SLImagePickerControllerV *imagePickController = [[SLImagePickerControllerV alloc] initWithMaxImagesCount:1 delegate:self];
-    //    [self presentViewController:imagePickController animated:YES completion:nil];
 }
 #pragma mark - Delegates
 
