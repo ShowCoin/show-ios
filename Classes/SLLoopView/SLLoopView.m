@@ -93,6 +93,47 @@ typedef void(^LoopBlock)(CAAnimation *anim, BOOL flag);
 
 @implementation SLLoopContentView
 
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self setupUI];
+    }
+    return self;
+}
+
+- (void)setupUI {
+    UILabel *textLabel = [SLShadowLabel new];
+    textLabel.text = @"textLabel textLabel";
+    textLabel.textColor = kThemeWhiteColor;
+    textLabel.font = Font_Medium(14);
+    textLabel.layer.shadowRadius = 0.0f;
+    textLabel.layer.shadowOpacity = 0.3;
+    textLabel.layer.shadowColor = [UIColor blackColor].CGColor;
+    textLabel.layer.shadowOffset = CGSizeMake(1,1);
+    textLabel.layer.masksToBounds = NO;
+    [self addSubview:textLabel];
+    self.textLabel = textLabel;
+    
+    SLRotationImageView *imageView = [[SLRotationImageView alloc] init];
+    imageView.image = [UIImage imageNamed:@"live_bottom_music"];
+    [self addSubview:imageView];
+    self.imageView = imageView;
+}
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    CGFloat w = self.frame.size.width;
+    CGFloat h = self.frame.size.height;
+    self.textLabel.frame = CGRectMake(15, 0, w * 0.7, h);
+    CGFloat margin = 5;
+    CGFloat imageWH = h - margin * 2;
+    self.imageView.frame = CGRectMake(w - 10 - imageWH, margin, imageWH, imageWH);
+}
+
+- (void)didMoveToSuperview {
+    [self.imageView addRotationAnimated];
+}
 
 @end
 
