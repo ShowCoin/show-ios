@@ -120,6 +120,7 @@ typedef enum ShowWalletOptionsType {
 - (Address*)show_addressForIndex: (AccountIndex)index;
 //下标对应的余额
 - (BigNumber*)show_balanceForIndex: (AccountIndex)index;
+//chainID 对应的下标
 - (ChainId)show_chainIdForIndex: (AccountIndex)index;
 - (NSString*)show_nicknameForIndex: (AccountIndex)index;
 - (void)show_setNickname: (NSString*)nickname forIndex: (AccountIndex)index;
