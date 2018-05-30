@@ -239,7 +239,6 @@
         self.friendTotal = [NSString stringWithFormat:@"%lu个SHOW好友",[self.vmFrieldList.listAry count]];
         if ([self.vmFrieldList.listAry count]==0) {
             [self.tableView.tableFooterView setHidden:YES];
-            //            [self showNoDataViewInView:self.tableView noDataString:@"你没有SHOW好友哦" withOrigin:CGPointMake(0, 98*Proportion375)];
         }else{
             [self.tableView.tableFooterView setHidden:NO];
             [self.tableView.mj_footer endRefreshing];
@@ -258,6 +257,108 @@
         [self.tableView.mj_header endRefreshing];
         self.tableView.tableFooterView = [self footView];
     }];
+}
+- (void)btnApplicationClick:(id)sender{
+    
+}
+
+- (void)btnAddressClick:(id)sender{
+    
+}
+
+#pragma tableview
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    if (_bSearchTableView) {
+        return nil;
+    } else {
+        UIView* headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kMainScreenWidth, 30)];
+        [headView setBackgroundColor:kBlackThemeBGColor];
+        NSString* key=nil;
+        if ([[_vmFrieldList.dataDict allKeys] count]>section) {
+            key = [_vmFrieldList.sortArray objectAtIndex:section];
+        } else {
+            key = @"#";
+        }
+        NSString* title=@"我的联系人";
+        CGSize size=[title sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]}];
+        UILabel *lblTitle = [[UILabel alloc] initWithFrame:CGRectMake(15, 0, size.width, 30)];
+        lblTitle.font = [UIFont systemFontOfSize:14];
+        lblTitle.backgroundColor = kBlackThemeBGColor;
+        lblTitle.textAlignment = NSTextAlignmentLeft;
+        lblTitle.textColor = kGrayWith999999;
+        lblTitle.text = title;
+        //        if (section < [_sortArray count]) {
+        //            lblTitle.text = title;
+        //
+        [headView addSubview:lblTitle];
+        return headView;
+    }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    if (_bSearchTableView) {
+        return 0;
+    }else{
+        return 30;
+    }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 66;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (_bSearchTableView) {
+        
+        _bSearchTableView = NO;
+        [_tableView reloadData];
+    }
+}
+
+#pragma mark SLFriendCellDelegate
+- (void)onClickUser:(SLFansModel*)data{
+    [PageMgr pushToUserCenterControllerWithUid:data.uid];
+}
+
+- (void)onClickChat:(SLFansModel*)data{
+    
+    
+    ShowUserModel* user=[ShowUserModel new];
+    user.uid=data.uid;
+    user.nickname=data.nickname;
+    user.avatar=data.avatar;
+    user.gender=data.gender;
+    user.age=data.age;
+    user.remarkName=data.localRemarkName;
+    
+    [PageMgr pushToChatViewControllerWithTargetUser:user];
+}
+
+- (void)onClickFollow:(SuccessBlock)block withData:(SLFansModel*)data{
+    _followUserAction = [SLFollowUserAction action];
+    _followUserAction.to_uid =data.uid;
+    _followUserAction.type = FollowTypeAdd;
+    _followUserAction.finishedBlock = ^(id result) {
+        if (block) {
+            block(YES);
+        }
+    };
+    _followUserAction.failedBlock = ^(NSError *error) {
+        if (block) {
+            block(NO);
+        }
+        [ShowWaringView waringView:error.userInfo[@"msg"] style:WaringStyleRed];
+    };
+    _followUserAction.cancelledBlock = ^{
+        if (block) {
+            block(NO);
+        }
+    };
+    [_followUserAction start];
 }
 
 @end
