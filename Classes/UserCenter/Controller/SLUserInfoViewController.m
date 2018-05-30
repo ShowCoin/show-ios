@@ -652,6 +652,144 @@
     
 }
 
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    switch (actionSheet.tag) {
+        case 9001:{
+            switch (buttonIndex) {
+                case 0:
+                    self.gender = @"1";
+                    break;
+                case 1:
+                    self.gender = @"2";
+                    break;
+                default:
+                    break;
+            }
+            NSIndexPath *indexPath=[NSIndexPath indexPathForRow:2 inSection:0];
+            [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:indexPath,nil] withRowAnimation:UITableViewRowAnimationNone];
+        }
+            break;
+        case 9002:
+            break;
+            
+        default:
+            break;
+    }
+}
+#pragma mark picker view delegate
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+    if (pickerView.tag == 1000) {
+        return 1;
+    }else{
+        return 2;
+    }
+}
+
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
+{
+    if (pickerView.tag == 1000) {
+        
+        return percentArr.count;
+    }else{
+        if (component == 0) {
+            return characterArray.count;
+        }else{
+            return [NSArray arrayWithArray:[citysArray objectAtIndex:_characterIndex]].count;
+        }
+    }
+    return 0;
+}
+
+//- (NSString *)pickerView:(UIPickerView *)pickerView
+//             titleForRow:(NSInteger)row
+//            forComponent:(NSInteger)component
+//{
+//    NSString *titleStr;
+//    if (row < 60) {
+//
+//        titleStr =  [NSString stringWithFormat:@"%@ cm",[_constellationArray objectAtIndex:row]];
+//    }else{
+//        titleStr =  [_constellationArray objectAtIndex:row];
+//
+//    }
+//
+//    return titleStr;
+//}
+
+- (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view
+
+{
+    
+    //设置分割线的颜色
+    
+    for(UIView *singleLine in pickerView.subviews)
+        
+    {
+        if (singleLine.frame.size.height < 1)
+        {
+            singleLine.backgroundColor = kSeparationColor;
+        }
+    }
+    //设置文字的属性
+    UILabel *genderLabel = [UILabel new];
+    genderLabel.textAlignment = NSTextAlignmentCenter;
+    genderLabel.textColor = kthemeBlackColor;
+    NSString *titleStr;
+    if (pickerView.tag == 1000) {
+        
+        titleStr = [NSString stringWithFormat:@"%@%@",[percentArr objectAtIndex:row],@"%"];
+        genderLabel.text = titleStr;
+    }else{
+        if (component == 0) {
+            
+            titleStr = [NSString stringWithFormat:@"%@",[characterArray objectAtIndex:row]];
+            genderLabel.text = titleStr;
+        }else{
+            titleStr = [NSString stringWithFormat:@"%@",[[citysArray objectAtIndex:_characterIndex] objectAtIndex:row]];
+            genderLabel.text = titleStr;
+            
+        }
+        
+    }
+    return genderLabel;
+    //    return nil;
+}
+
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
+{
+    if (pickerView.tag == 1000) {
+        self.extract= [percentArr objectAtIndex:row];
+        NSIndexPath * path = [NSIndexPath indexPathForRow:0 inSection:1];
+        [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:path,nil] withRowAnimation:NO];
+        
+    }else{
+        if (component == 0) {
+            _characterIndex = row;
+            _cityIndex = 0;
+            [_PercentpickerView reloadComponent:1];
+            self.city = [[citysArray objectAtIndex:_characterIndex] objectAtIndex:0];
+            NSIndexPath * path = [NSIndexPath indexPathForRow:4 inSection:0];
+            [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:path,nil] withRowAnimation:NO];
+            
+        }else{
+            _cityIndex = row;
+            self.city = [[citysArray objectAtIndex:_characterIndex] objectAtIndex:row];
+            NSIndexPath * path = [NSIndexPath indexPathForRow:4 inSection:0];
+            [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:path,nil] withRowAnimation:NO];
+            
+        }
+        [self resetPickerSelectRow];
+    }
+}
+-(void)resetPickerSelectRow
+{
+    [self.PercentpickerView selectRow:_characterIndex inComponent:0 animated:YES];
+    [self.PercentpickerView selectRow:_cityIndex inComponent:1 animated:YES];
+}
+#pragma mark - actions
 
 #pragma mark - delegates
 
