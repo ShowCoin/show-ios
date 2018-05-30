@@ -187,5 +187,77 @@
         }];
     }];
 }
+- (void)onObserverNotify:(NSNotification*)notification {
+    if ([notification.name isEqualToString:kNotificationFriendRequestCount]) {
+        NSNumber* count=@0;
+        if (!notification.object) {
+            count=[UserDefaultsUtils valueWithKey:kNotificationFriendRequestCount];
+        }
+        else{
+            [UserDefaultsUtils saveValue:notification.object forKey:kNotificationFriendRequestCount];
+            count=notification.object;
+        }
+        
+        if ([count integerValue]>0) {
+            CGSize size=[[count stringValue] sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:10]}];
+            size=CGSizeMake(size.width+6*Proportion375, size.height+6*Proportion375);
+            if (size.height<16*Proportion375) {
+                size.height=16*Proportion375;
+            }
+            if (size.width<size.height) {
+                size.width=size.height;
+            }
+            _lblFriendReqCount.text=[count stringValue];
+            _vwFriendReqCount.frame=CGRectMake(kMainScreenWidth-36*Proportion375-size.width-6*Proportion375, 27*Proportion375-3*Proportion375-size.height/2, size.width, size.height);
+            
+            [_vwFriendReqCount.layer setCornerRadius:size.height/2];
+            [_vwFriendReqCount.layer masksToBounds];
+            _lblFriendReqCount.frame=CGRectMake(0, 0, size.width, size.height);
+            [_vwFriendReqCount setHidden:NO];
+        }else{
+            [_vwFriendReqCount setHidden:YES];
+        }
+    }
+}
+
+- (void)loadData {
+    [_vmFrieldList loadFromLocal];
+    
+    [self searchBarCancelButtonClicked:self.searchBar];
+    if (self.isLoading) {
+        return ;
+    }
+    self.isLoading=YES;
+    [self.tableView.mj_footer resetNoMoreData];
+    @weakify(self)
+    [self.vmFrieldList refreshData:^(BOOL ikMastPage) {
+        @strongify(self)
+        self.isLoading = NO;
+        
+        [self.tableView.mj_header endRefreshing];
+        [self.tableView.mj_footer endRefreshing];
+        self.friendTotal = [NSString stringWithFormat:@"%lu个SHOW好友",[self.vmFrieldList.listAry count]];
+        if ([self.vmFrieldList.listAry count]==0) {
+            [self.tableView.tableFooterView setHidden:YES];
+            //            [self showNoDataViewInView:self.tableView noDataString:@"你没有SHOW好友哦" withOrigin:CGPointMake(0, 98*Proportion375)];
+        }else{
+            [self.tableView.tableFooterView setHidden:NO];
+            [self.tableView.mj_footer endRefreshing];
+        }
+        if (ikMastPage) {
+            self.tableView.mj_footer.hidden = YES;
+        } else {
+            self.tableView.mj_footer.hidden = NO;
+        }
+        [self.tableView reloadData];
+        self.tableView.tableFooterView = [self footView];
+        
+    } withFail:^(NSString *failDesc) {
+        @strongify(self)
+        self.isLoading = NO;
+        [self.tableView.mj_header endRefreshing];
+        self.tableView.tableFooterView = [self footView];
+    }];
+}
 
 @end
