@@ -57,6 +57,20 @@ typedef void(^LoopBlock)(CAAnimation *anim, BOOL flag);
     return instance;
 }
 
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self setup];
+    }
+    return self;
+}
+
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    [self setup];
+}
+
 
 @end
 
