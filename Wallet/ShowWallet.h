@@ -109,6 +109,7 @@ typedef enum ShowWalletOptionsType {
 //当前使用中钱包的地址
 @property (nonatomic, readonly) show_Address *activeAccountAddress;
 @property (nonatomic, readonly) show_Provider *activeAccountProvider;
+//账户
 @property (nonatomic, readonly) show_Account * account;
 
 @property (nonatomic, assign) NSUInteger activeAccountBlockNumber;
