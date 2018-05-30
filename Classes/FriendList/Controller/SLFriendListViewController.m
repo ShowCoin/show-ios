@@ -360,5 +360,65 @@
     };
     [_followUserAction start];
 }
+#pragma mark SLSearchBarDelegate
+- (void)searchBarSearchButtonClicked:(SLSearchBar *)searchBar {
+    [self searchBarCancelButtonClicked:searchBar];
+}
+
+- (void)searchBar:(SLSearchBar *)searchBar textDidChange:(NSString *)searchText {
+    if ([searchText length]>0) {
+        _bSearchTableView=YES;
+        _vmFrieldList.searchKey=searchText;
+        self.lblFriendTotals.hidden = YES;
+    }
+    else
+    {
+        _bSearchTableView=NO;
+        _vmFrieldList.searchKey=searchText;
+        self.lblFriendTotals.hidden = NO;
+    }
+}
+
+- (void)searchBarCancelButtonClicked:(SLSearchBar *)searchBar {
+    [searchBar setText:@""];
+    [searchBar resignFirstResponder];
+    _bSearchTableView=NO;
+    _vmFrieldList.searchKey=@"";
+}
+
+- (void)searchBarTextDidEndEditing:(SLSearchBar *)searchBar
+{
+    [self searchBarCancelButtonClicked:searchBar];
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (UIView *)footView
+{
+    self.tableView.tableFooterView = nil;
+    
+    // footerView
+    CGFloat height = 0;
+    if (self.tableView.contentSize.height >= self.tableView.height) {
+        height = 40;
+    } else {
+        height = MAX(self.tableView.height - self.tableView.contentSize.height, 40);
+    }
+    
+    
+    UIView* footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kMainScreenWidth, height)];
+    
+    self.lblFriendTotals=[footerView buildLabel:@"0个SHOW好友" withFrame:CGRectMake(0, height - 35,kMainScreenWidth,20) withFont:[UIFont systemFontOfSize:15] withTextColor:RGBCOLOR(156, 158, 171) withTextAlign:NSTextAlignmentCenter];
+    
+    if (self.friendTotal) {
+        self.lblFriendTotals.text = self.friendTotal;
+    }
+    
+    
+    return footerView;
+}
 
 @end
