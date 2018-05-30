@@ -118,6 +118,7 @@ typedef enum ShowWalletOptionsType {
 @property (nonatomic, readonly) NSUInteger numberOfAccounts;
 //下标对应的账户
 - (Address*)show_addressForIndex: (AccountIndex)index;
+//下标对应的余额
 - (BigNumber*)show_balanceForIndex: (AccountIndex)index;
 - (ChainId)show_chainIdForIndex: (AccountIndex)index;
 - (NSString*)show_nicknameForIndex: (AccountIndex)index;
