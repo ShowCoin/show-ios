@@ -18,4 +18,7 @@
 -(NSData *)compressedDataWithRate;
 -(NSData *)compressedData:(CGFloat)compressionQuality;
 - (UIImage*)imageByScalingAndCroppingForSize:(CGSize)targetSize;
+
+- (UIImage *)blurredImageWithRadius:(CGFloat)radius iterations:(NSUInteger)iterations tintColor:(UIColor *)tintColor;
+
 @end
