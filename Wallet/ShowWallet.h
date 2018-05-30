@@ -103,6 +103,7 @@ typedef enum ShowWalletOptionsType {
 
 #pragma mark - Accounts
 
+//活跃账户的下标
 @property (nonatomic, assign) AccountIndex activeAccountIndex;
 
 //当前使用中钱包的地址
