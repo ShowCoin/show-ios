@@ -5,6 +5,8 @@
 //  Created by 陈英豪 on 2018/5/23.
 //  Copyright © 2018年 chuxia. All rights reserved.
 //
+//
+// loop view animater with ContentView and RotationImageView
 
 #import <UIKit/UIKit.h>
 

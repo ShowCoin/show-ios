@@ -130,6 +130,7 @@ typedef void(^LoopBlock)(CAAnimation *anim, BOOL flag);
         @strongify(self)
         [self animationDidStop:anim finished:flag];
     };
+    
     keyAni.delegate = delegate;
     NSString *value = x == 0 ? kAnimationSecond : kAnimationFirst;
     [keyAni setValue:value forKey:kAnimationKey];
@@ -161,6 +162,7 @@ typedef void(^LoopBlock)(CAAnimation *anim, BOOL flag);
 }
 
 - (void)didMoveToSuperview {
+    // when move to superview do animated
     [self.imageView.imageView addRotationAnimated];
     //    [self performSelector:@selector(startAnimation:) withObject:nil afterDelay:3];
 }
