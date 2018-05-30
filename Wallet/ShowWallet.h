@@ -80,7 +80,8 @@ typedef enum ShowWalletTransactionAction {
     ShowWalletTransactionActionRush = 1,
     ShowWalletTransactionActionCancel = 2
 } WalletTransactionAction ;
-//设置类型
+//设置类型ear
+
 typedef enum ShowWalletOptionsType {
     ShowWalletOptionsTypeDebug,
     ShowWalletOptionsTypeFirefly
@@ -92,7 +93,7 @@ typedef enum ShowWalletOptionsType {
 + (instancetype)show_walletWithKeychainKey: (NSString*)keychainKey;
 // keychain
 @property (nonatomic, readonly) NSString *keychainKey;
-
+// 同步的事件
 @property (nonatomic, readonly) NSTimeInterval syncDate;
 
 @property (nonatomic, readonly) float etherPrice;
