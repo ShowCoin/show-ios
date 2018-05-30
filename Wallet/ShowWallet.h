@@ -80,7 +80,8 @@ typedef enum ShowWalletTransactionAction {
     ShowWalletTransactionActionRush = 1,
     ShowWalletTransactionActionCancel = 2
 } WalletTransactionAction ;
-//设置类型
+//设置类型ear
+
 typedef enum ShowWalletOptionsType {
     ShowWalletOptionsTypeDebug,
     ShowWalletOptionsTypeFirefly
@@ -92,31 +93,36 @@ typedef enum ShowWalletOptionsType {
 + (instancetype)show_walletWithKeychainKey: (NSString*)keychainKey;
 // keychain
 @property (nonatomic, readonly) NSString *keychainKey;
-
+// 同步的事件
 @property (nonatomic, readonly) NSTimeInterval syncDate;
-
+//价格
 @property (nonatomic, readonly) float etherPrice;
-
+//回调
 - (void)show_refresh: (void (^)(BOOL))callback;
 
 
 #pragma mark - Accounts
 
+//活跃账户的下标
 @property (nonatomic, assign) AccountIndex activeAccountIndex;
 
 //当前使用中钱包的地址
 @property (nonatomic, readonly) show_Address *activeAccountAddress;
 @property (nonatomic, readonly) show_Provider *activeAccountProvider;
+//账户
 @property (nonatomic, readonly) show_Account * account;
 
 @property (nonatomic, assign) NSUInteger activeAccountBlockNumber;
 
 //当前账户数
 @property (nonatomic, readonly) NSUInteger numberOfAccounts;
-
+//下标对应的账户
 - (Address*)show_addressForIndex: (AccountIndex)index;
+//下标对应的余额
 - (BigNumber*)show_balanceForIndex: (AccountIndex)index;
+//chainID 对应的下标
 - (ChainId)show_chainIdForIndex: (AccountIndex)index;
+//名字对应下标
 - (NSString*)show_nicknameForIndex: (AccountIndex)index;
 - (void)show_setNickname: (NSString*)nickname forIndex: (AccountIndex)index;
 - (NSArray<TransactionInfo*>*)show_transactionHistoryForIndex: (AccountIndex)index;
