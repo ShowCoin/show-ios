@@ -220,6 +220,7 @@
 		431439292094A2290059D373 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				72FAE62020BC56FB00E47E09 /* Toplist */,
 				9319236720B7FF05001C6144 /* FriendList */,
 				725B98BA20AC3CD400747F7A /* UserCenter */,
 				934E1B9620AC38E100A0B080 /* Chat */,
@@ -245,6 +246,22 @@
 		725B98BA20AC3CD400747F7A /* UserCenter */ = {
 			isa = PBXGroup;
 			children = (
+				7297A17A20BED7E30012DBEB /* Controller */,
+				7297A17920BED7D00012DBEB /* View */,
+			);
+			path = UserCenter;
+			sourceTree = "<group>";
+		};
+		7297A17920BED7D00012DBEB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7297A17A20BED7E30012DBEB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
 				7239EB2D20BD38FC00588BED /* ChangeheadportraitController.h */,
 				7239EB3920BD393C00588BED /* ChangeheadportraitController.m */,
 				7239EB3B20BD468F00588BED /* ChangeTextController.h */,
@@ -264,9 +281,8 @@
 				7239EB3120BD38FC00588BED /* SLUserInfoViewController.h */,
 				7239EB3320BD38FC00588BED /* UserCenterViewController.h */,
 				7239EB2B20BD38FC00588BED /* UserInfoViewController.h */,
-				72FAE62020BC56FB00E47E09 /* Toplist */,
 			);
-			path = UserCenter;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		72C6166720A0C65200103C44 /* requestAction */ = {
