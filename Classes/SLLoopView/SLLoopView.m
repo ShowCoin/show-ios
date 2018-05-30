@@ -42,7 +42,20 @@ typedef void(^LoopBlock)(CAAnimation *anim, BOOL flag);
 
 @end
 
-@implementation SLLoopView
+@implementation SLLoopView{
+    BOOL isEndAni;
+}
+
++ (instancetype)shared {
+    static SLLoopView *instance = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        instance = [[SLLoopView alloc] init];
+        instance.frame = CGRectMake(0, 0, KScreenWidth * 2, kSLLoopViewHeight);
+        //[instance addTimer];
+    });
+    return instance;
+}
 
 
 @end
