@@ -790,7 +790,82 @@
     [self.PercentpickerView selectRow:_cityIndex inComponent:1 animated:YES];
 }
 #pragma mark - actions
+- (void)clickRightButton:(UIButton *)sender;
+{
+    if (!_canUpload) {
+        [HDHud showMessageInView:self.view  title:@"昵称不能超过8个字符"];
+        return;
+    }
+    __weak typeof(self) weakSelf = self;
+    _updataUserInfoAction = [SLUpdataUserInfoAction action];
+    if (_nicknameChanged) {
+        _updataUserInfoAction.nickname = self.nickname;
+    }
+    if (_popNumberChanged) {
+        _updataUserInfoAction.popularNo = self.popNumber;
+    }
+    if (![AccountUserInfoModel.gender isEqualToString:self.gender]) {
+        _genderChanged = YES;
+        _updataUserInfoAction.gender = self.gender;
+    }
+    if (![AccountUserInfoModel.birthday isEqualToString:self.birthday]) {
+        _birthdayChanged = YES;
+        _updataUserInfoAction.birthday = [NSString stringWithFormat:@"%@",self.birthday];
+    }
+    if (![AccountUserInfoModel.city isEqualToString:self.city]) {
+        _cityChanged = YES;
+        _updataUserInfoAction.city = self.city;
+    }
+    if (![AccountUserInfoModel.extract isEqualToString:self.extract]) {
+        _extractChanged = YES;
+        _updataUserInfoAction.extract = self.extract;
+    }
+    if (_nicknameChanged == NO &&_popNumberChanged == NO &&_genderChanged == NO &&_birthdayChanged == NO &&_cityChanged == NO &&_extractChanged == NO) {
+        
+        [self.navigationController popViewControllerAnimated:YES];
+        return;
+    }
+    //    _updataUserInfoAction.desc = AccountUserInfoModel.descriptions;
+    //    _updataUserInfoAction.extract = AccountUserInfoModel.extract;
+    //    _updataUserInfoAction.operation_extract = AccountUserInfoModel.operation_extract;
+    
+    _updataUserInfoAction.finishedBlock = ^(id result) {
+        
+        [weakSelf.navigationController popViewControllerAnimated:YES];
+    };
+    //    @weakify(self);
+    _updataUserInfoAction.failedBlock = ^(NSError *error) {
+        //        @strongify(self);
+        [ShowWaringView waringView:error.userInfo[@"msg"] style:WaringStyleRed];
+        
+    };
+    [_updataUserInfoAction start];
+    
+}
 
+
+-(void)fingerTapped:(UITapGestureRecognizer *)gestureRecognizer
+
+{
+    
+    [self.view endEditing:YES];
+    
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+#pragma mark---------scrollView-----------
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    if (scrollView.contentOffset.y <= 0) {
+        scrollView.contentOffset = CGPointMake(0, 0);
+    }
+    [self.nameTextField resignFirstResponder];
+    [self.IDTextField resignFirstResponder];
+    
+}
 #pragma mark - delegates
 
 /*
