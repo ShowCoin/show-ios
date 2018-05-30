@@ -26,6 +26,12 @@ typedef void(^LoopBlock)(CAAnimation *anim, BOOL flag);
 
 @implementation LoopAnimationDelegate
 
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
+    if (self.loopBlock) {
+        self.loopBlock(anim, flag);
+    }
+}
+
 @end
 
 @interface SLLoopView () <CAAnimationDelegate>
