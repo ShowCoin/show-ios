@@ -16,5 +16,6 @@
 -(NSData *)compressedData;
 -(NSData *)compressedDataSize:(float)size;          //kb
 -(NSData *)compressedDataWithRate;
+-(NSData *)compressedData:(CGFloat)compressionQuality;
 
 @end
