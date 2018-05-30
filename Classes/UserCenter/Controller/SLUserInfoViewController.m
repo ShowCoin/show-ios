@@ -212,6 +212,124 @@
     }];
     
 }
+- (UIDatePicker *)datePicker
+{
+    if (!_datePicker)
+    {
+        _datePicker   = [[UIDatePicker alloc] init];
+        _datePicker.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"];
+        _datePicker.backgroundColor = [UIColor whiteColor];
+        // UIDatePicker默认高度216
+        _datePicker.datePickerMode = UIDatePickerModeDate;
+        _datePicker.frame = CGRectMake(0, 0 ,kMainScreenWidth, _datePicker.height);
+        NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+        
+        NSDate *currentDate = [NSDate date];
+        NSDateComponents *comps = [[NSDateComponents alloc] init];
+        [comps setYear:-18];
+        
+        NSDate *maxDate = [calendar dateByAddingComponents:comps toDate:currentDate options:0];
+        [comps setYear:-99];
+        NSDate *minDate = [calendar dateByAddingComponents:comps toDate:currentDate options:0];
+        
+        NSDateFormatter*formatter=[[NSDateFormatter alloc]init];
+        
+        [formatter setDateFormat:@"yyyy-MM-dd"];
+        NSDate*date=[formatter dateFromString:AccountUserInfoModel.birthday];
+        if (date!=nil) {
+            [_datePicker setDate:date];
+        }
+        else
+        {
+            [_datePicker setDate:[formatter dateFromString:@"1990-01-01"]];
+        }
+        [_datePicker setMaximumDate:maxDate];
+        [_datePicker setMinimumDate:minDate];
+    }
+    return _datePicker;
+}
+-(void)changeBirthday
+{
+    self.bg = [[UIButton alloc] initWithFrame:self.view.frame];
+    [self.bg addTarget:self action:@selector(dissappaerAction) forControlEvents:UIControlEventTouchUpInside];
+    self.bg.backgroundColor = [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0.5];
+    self.bg.alpha = 0;
+    
+    self.bgView = [[UIView alloc] initWithFrame:CGRectMake(0,kMainScreenHeight - 216, kMainScreenWidth, 216)];
+    self.bgView.top = kMainScreenHeight;
+    self.bgView.backgroundColor = [UIColor whiteColor];
+    [self.bgView cornerRadiusStyle];
+    [self.bg addSubview:self.bgView];
+    
+    //    close = [[UIButton alloc] initWithFrame:CGRectMake(0, self.datePicker.bottom, 153*Proportion375, 52)];
+    //    [close setTitle:@"取消" forState:UIControlStateNormal];
+    //    [close lineDockTopWithColor:kSeparationColor];
+    //    [close setTitleColor :kthemeBlackColor forState:UIControlStateNormal];
+    //    [close addTarget:self action:@selector(closeView) forControlEvents:UIControlEventTouchUpInside];
+    //
+    //    sureBotton = [[UIButton alloc] initWithFrame:CGRectMake(153*Proportion375, _datePicker.bottom, 153*Proportion375, 52)];
+    //    [sureBotton setTitle:@"确定" forState:UIControlStateNormal];
+    //    [sureBotton setTitleColor :kthemeBlackColor forState:UIControlStateNormal];
+    //    [sureBotton lineDockTopWithColor:kSeparationColor];
+    //    [sureBotton lineDockLeftWithColor:kSeparationColor];
+    //    [sureBotton addTarget:self action:@selector(sureView) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.view addSubview:self.bg];
+    [self.bgView addSubview:self.datePicker];
+    @weakify(self);
+    [UIView animateWithDuration:0.25 animations:^{
+        @strongify(self);
+        self.bg.alpha = 1;
+        self.bgView.top = kMainScreenHeight - 216;
+    }];
+}
+
+- (void)dissappaerAction{
+    [self sureView];
+}
+-(void)sureView
+{
+    NSDate *select = self.datePicker.date;
+    NSDateFormatter *dateFormmater = [[NSDateFormatter alloc]init];
+    [dateFormmater setDateFormat:@"yyyy-MM-dd"];
+    self.birthday = [dateFormmater stringFromDate:select];
+    NSIndexPath *indexPath=[NSIndexPath indexPathForRow:3 inSection:0];
+    [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:indexPath,nil] withRowAnimation:UITableViewRowAnimationNone];
+    [self closeView];
+}
+-(void)closeView{
+    if (self.bg) {
+        [UIView animateWithDuration:0.25 animations:^{
+            if (self.bgView) {
+                self.bgView.top = kMainScreenHeight;
+            }
+            if (self.PercentpickerView) {
+                self.PercentpickerView.top = kMainScreenHeight;
+            }
+        } completion:^(BOOL finished) {
+            
+            [UIView animateWithDuration:0.25 animations:^{
+                self.bg.alpha = 0;
+            } completion:^(BOOL finished) {
+                
+                if (self.datePicker) {
+                    [self.datePicker removeFromSuperview];
+                    self.datePicker = nil;
+                }
+                if (self.PercentpickerView) {
+                    [self.PercentpickerView removeFromSuperview];
+                    self.PercentpickerView = nil;
+                }
+                
+                [self.bg removeFromSuperview];
+                self.bg = nil;
+            }];
+        }];
+        
+    }
+}
+
+#pragma mark - delegates
 
 /*
 #pragma mark - Navigation
