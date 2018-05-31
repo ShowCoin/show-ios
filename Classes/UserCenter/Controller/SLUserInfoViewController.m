@@ -703,21 +703,6 @@
     return 0;
 }
 
-//- (NSString *)pickerView:(UIPickerView *)pickerView
-//             titleForRow:(NSInteger)row
-//            forComponent:(NSInteger)component
-//{
-//    NSString *titleStr;
-//    if (row < 60) {
-//
-//        titleStr =  [NSString stringWithFormat:@"%@ cm",[_constellationArray objectAtIndex:row]];
-//    }else{
-//        titleStr =  [_constellationArray objectAtIndex:row];
-//
-//    }
-//
-//    return titleStr;
-//}
 
 - (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view
 

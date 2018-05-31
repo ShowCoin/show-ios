@@ -107,6 +107,265 @@ static NSUInteger const CellAndSectionHeight = 75;  //cell的高度
     }
     [self setRefreshHeader];
 }
+-(void)loadConversationList
+{
+    NSMutableArray *historyMsgArray = [[IMSer conversationList] mutableCopy];
+    RCConversation *conver2 = nil ;
+    for (RCConversation * conver in historyMsgArray) {
+        if (conver.conversationType==ConversationType_SYSTEM) {
+            conver2 = conver;
+            break;
+        }
+    }
+    if(conver2){
+        [historyMsgArray removeObject:conver2];
+        [historyMsgArray insertObject:conver2 atIndex:0];
+    }
+    self.dataArray = historyMsgArray;
+#if KMMessageList_Show_Online_Status
+    [self startOnlineStatusAction];
+#else
+    [self stopLoadData];
+    [self.tableView reloadData];
+#endif
+}
+
+-(void)stopLoadData
+{
+    [self.tableView.mj_header endRefreshing];
+}
+-(void)setShowUnreadCount:(NSUInteger)slUnreadCount
+{
+    [BaseTabBarController shareTabBarController].slMsgUnreadCount = 1;
+}
+
+#pragma mark - RefreshHeader
+- (void)setRefreshHeader
+{
+    @weakify(self);
+    self.tableView.mj_header = [SLRefreshHeader headerWithRefreshingBlock:^{
+        @strongify(self);
+        [self loadConversationList];
+    }];
+}
+
+- (void)hideRefreshHeader
+{
+    _tableView.mj_header = nil;
+}
+#pragma mark - UITableViewDelegate
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 100*WScale;
+}
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    SLMessageListHeader * headerView = [[SLMessageListHeader alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth, 100*WScale)];
+    [headerView lineDockBottomWithColor:kBlackSeparationColor];
+    return headerView;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
+{
+    return CellAndSectionHeight;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
+{
+    if (self.searchController.active) {
+        return self.searchResultsArray.count ;
+    }
+    return self.dataArray.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
+{
+    UITableViewCell *cell = nil;
+    @weakify_old(self)
+    RCConversation *conv = nil;
+    if (self.searchController.active) {
+        conv = self.searchResultsArray[indexPath.row];
+    } else {
+        conv = self.dataArray[indexPath.row];
+    }
+    
+    SLMessageListCell * convCell = [self.tableView dequeueReusableCellWithIdentifier:TABLEVIEW_CELL_REUSEKEY_CONV];
+    if (convCell) {
+        
+        convCell.cellData = conv;
+        [convCell setAvatarTapedBlock:^(SLMessageListCell *sender){
+            [self tapedConvCellAvatar:sender];
+        }];
+        [convCell setLongPressBlock:^(SLMessageListCell *sender){
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil
+                                                                           message:nil
+                                                                    preferredStyle:UIAlertControllerStyleActionSheet];
+            NSString* topTitle=conv.isTop ? @"取消置顶" : @"置顶";
+            UIAlertAction *actionTop = [UIAlertAction actionWithTitle:topTitle style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+                [IMSer setConversationToTop:ConversationType_PRIVATE targetId:conv.targetId isTop:!conv.isTop];
+                [weak_self loadConversationList];
+                
+            }];
+            UIAlertAction *actionDel = [UIAlertAction actionWithTitle:@"删除" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+                [IMSer removeConversation:ConversationType_PRIVATE targetId:conv.targetId];
+                [IMSer clearMessages:ConversationType_PRIVATE targetId:conv.targetId];
+                
+                [weak_self loadConversationList];
+                
+            }];
+            UIAlertAction *actionCancle = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+            [alert addAction:actionTop];
+            [alert addAction:actionDel];
+            [alert addAction:actionCancle];
+            [weak_self presentViewController:alert animated:YES completion:nil];
+            
+        }];
+        cell = convCell;
+    }
+    
+    
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
+{
+    RCConversation *conv = nil;
+    if (self.searchController.active) {
+        conv = self.searchResultsArray[indexPath.row];
+    } else {
+        conv = self.dataArray[indexPath.row];
+    }
+    
+    if (![conv isKindOfClass:[RCConversation class]]) {
+        return;
+    }
+    [PageMgr pushToChatViewControllerWithTargetUserId:conv.targetId];
+    
+    if (conv.unreadMessageCount > 0) {
+        SLMessageListCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+        if (cell && [cell isKindOfClass:[SLMessageListCell class]]) {
+            cell.unreadCount = 0;
+        }
+    }
+}
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
+}
+
+- (nullable NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (self.searchController.active) {
+        return @[];
+    }
+    
+    // 兼容
+    if (!self.dataArray || indexPath.row > self.dataArray.count) {
+        return @[];
+    }
+    
+    @weakify_old(self)
+    RCConversation *conv = self.dataArray[indexPath.row];
+    BOOL isTop = conv.isTop;
+    NSString *targetId = conv.targetId;
+    
+    NSString *topString = conv.isTop ? @"取消置顶" : @"置顶";
+    UITableViewRowAction *editAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:topString handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+        
+        [IMSer setConversationToTop:ConversationType_PRIVATE targetId:targetId isTop:!isTop];
+        [weak_self loadConversationList];
+        
+    }];
+    UITableViewRowAction *deleteAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"删除" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+        if (indexPath.row == 0) {
+            [IMSer removeConversation:ConversationType_SYSTEM targetId:targetId];
+            [IMSer clearMessages:ConversationType_SYSTEM targetId:targetId];
+        }
+        else
+        {
+            [IMSer removeConversation:ConversationType_PRIVATE targetId:targetId];
+            [IMSer clearMessages:ConversationType_PRIVATE targetId:targetId];
+        }
+        
+        [weak_self loadConversationList];
+    }];
+    return @[deleteAction,indexPath.row==0?nil:editAction];
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    editingStyle = UITableViewCellEditingStyleDelete;
+}
+#pragma mark - Actions
+-(void)tapedSystemCellHeader:(SLConvListSystemTableViewCell *)sender
+{
+    if (sender && [sender isKindOfClass:[SLConvListSystemTableViewCell class]]) {
+        [PageMgr pushToUserCenterControllerWithUid:SysConfig.official_user_id];
+    }
+}
+-(void)tapedConvCellAvatar:(SLMessageListCell *)sender
+{
+    if (sender && [sender isKindOfClass:[SLMessageListCell class]]) {
+        [PageMgr pushToUserCenterControllerWithUid:sender.cellData.targetId];
+        
+    }
+}
+- (void)doubleTapAction
+{
+    
+    if ([IMSer getTotalUnreadCount] > 0) {
+        int index = 0;
+        for (int i = 1; i < self.dataArray.count; i++){
+            RCConversation *conversation = self.dataArray[i];
+            if ([conversation isKindOfClass:[RCConversation class]]) {
+                if (conversation.unreadMessageCount >0 && i >= self.currentScrollIndex && self.tableView.contentOffset.y < (self.tableView.contentSize.height - self.tableView.height)) {
+                    index = i;
+                    break;
+                }
+            }
+        }
+        if (index > 0) {
+            [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:index inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:YES];
+        }
+        self.currentScrollIndex = index;
+    }else{
+        if (!self.tableView.mj_header.isRefreshing) {
+            [self.tableView.mj_header beginRefreshing];
+        }
+    }
+}
+
+#pragma mark - Notification
+- (void)addNotifications
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifyReceivedConvMsg:) name:kNotify_Received_RongCloud_ConvMsg object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didReceiveLogoutNotification:) name:kNotificationLogout object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didReceiveRongCloudLoginSuccessNotification:) name:kKMRongCloudLoginSuccessNotification object:nil];
+}
+
+- (void)notifyReceivedConvMsg:(NSNotification *)notification
+{
+    id objcet = notification.object;
+    if (objcet && [objcet isKindOfClass:[RCMessage class]]) {
+        if (self.searchController.isActive) {
+            self.shouldReloadAfterSearchResignActive = YES;
+        } else {
+            [self loadConversationList];
+        }
+    }
+}
+
+- (void)didReceiveLogoutNotification:(NSNotification *)notification
+{
+    [IMSer updateTotalUnreadCount];
+    
+    [self.dataArray removeAllObjects];
+    [self stopLoadData];
+    [self.tableView reloadData];
+}
+
+- (void)didReceiveRongCloudLoginSuccessNotification:(NSNotification *)notification
+{
+    [self loadConversationList];
+}
 /*
 #pragma mark - Navigation
 
