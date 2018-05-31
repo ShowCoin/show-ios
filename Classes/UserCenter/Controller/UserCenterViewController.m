@@ -277,6 +277,20 @@
     return CGSizeMake(kMainScreenWidth, HeaderHeightWithoutWords + self.wordsHeight + KTopHeight);
 }
 
+#pragma mark---------scrollView-----------
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    NSLog(@"%f",scrollView.contentOffset.y);
+    if (scrollView.contentOffset.y > HeaderHeightWithoutWords + _wordsHeight + KTopHeight - KNaviBarHeight) {
+        self.floatView.hidden = NO;
+    }else{
+        self.floatView.hidden = YES;
+    }
+    
+    if (scrollView.contentOffset.y <= 0) {
+        scrollView.contentOffset = CGPointMake(0, 0);
+    }
+}
 
 
 
