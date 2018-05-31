@@ -152,6 +152,86 @@
     }];
 }
 
+- (UICollectionView*)mainCollectionView {
+    if (!_mainCollectionView) {
+        UICollectionViewFlowLayout *flowlayout;
+        flowlayout = [[UICollectionViewFlowLayout alloc] init];
+        flowlayout.itemSize = CGSizeMake(cellWith, cellWith /10 * 16);
+        flowlayout.minimumLineSpacing = 1*Proportion375;
+        flowlayout.minimumInteritemSpacing = 0;
+        //        flowlayout.sectionHeadersPinToVisibleBounds = YES;
+        _mainCollectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, kMainScreenWidth,kMainScreenHeight - KTabBarHeight) collectionViewLayout:flowlayout];
+        if (!_IsMe) {
+            _mainCollectionView.height = kMainScreenHeight;
+        }
+        if (@available(iOS 11.0, *)) {
+            _mainCollectionView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        }else{
+            self.automaticallyAdjustsScrollViewInsets = NO;
+        }
+        _mainCollectionView.alwaysBounceHorizontal = NO;
+        _mainCollectionView.backgroundColor = kGrayWith242424;
+        _mainCollectionView.delegate = self;
+        _mainCollectionView.dataSource = self;
+        _mainCollectionView.scrollEnabled = YES;
+        _mainCollectionView.showsHorizontalScrollIndicator = NO;
+        _mainCollectionView.showsVerticalScrollIndicator = NO;
+        [_mainCollectionView registerClass:[ShowHomeMiddleCell class] forCellWithReuseIdentifier:@"ShowHomeMiddleCell"];
+        [_mainCollectionView registerClass:[SLUserViewHeader class]forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header"];
+        @weakify(self);
+        //        _mainCollectionView.mj_header = [MJRefreshHeader headerWithRefreshingBlock:^{
+        //            @strongify(self);
+        //            [self resetParameter];
+        //            [self requestWithMore:NO];
+        //        }];
+        _mainCollectionView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+            @strongify(self);
+            [self requestWithMore:YES];
+        }];
+    }
+    return _mainCollectionView;
+}
+
+- (UIView*)floatView
+{
+    if (!_floatView) {
+        _floatView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kMainScreenWidth, kNaviBarHeight)];
+        _floatView.backgroundColor = kthemeBlackColor;
+        UIButton * _worksBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        _worksBtn.frame = CGRectMake(0, 0, kMainScreenWidth/2, 45*Proportion375);
+        _worksBtn.bottom = KNaviBarHeight;
+        [_worksBtn setTitle:@"作品" forState:UIControlStateNormal];
+        [_worksBtn setTitleColor:kThemeWhiteColor forState:UIControlStateNormal];
+        _worksBtn.titleLabel.font = Font_Medium(15*Proportion375);
+        [[_worksBtn rac_signalForControlEvents:UIControlEventTouchUpInside]subscribeNext:^(id x) {
+            
+        } ];
+        [_floatView addSubview:_worksBtn];
+        
+        UIButton * _likesBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        _likesBtn.frame = CGRectMake(kMainScreenWidth/2, 0, kMainScreenWidth/2, 45*Proportion375);
+        _likesBtn.bottom = KNaviBarHeight;
+        [_likesBtn setTitle:@"喜欢" forState:UIControlStateNormal];
+        [_likesBtn setTitleColor:kThemeWhiteColor forState:UIControlStateNormal];
+        _likesBtn.titleLabel.font = Font_Medium(15*Proportion375);
+        [[_likesBtn rac_signalForControlEvents:UIControlEventTouchUpInside]subscribeNext:^(id x) {
+            
+        }
+         ];
+        [_floatView addSubview:_likesBtn];
+        _floatView.hidden = YES;
+    }
+    return _floatView;
+}
+
+- (SLUserShareView *)shareview {
+    if (!_shareview) {
+        _shareview = [[SLUserShareView alloc]initWithFrame:CGRectMake(0, 0, kMainScreenWidth, kMainScreenHeight)];
+        _shareview.delegaet = self;
+        _shareview.alpha = 0;
+    }
+    return _shareview;
+}
 
 
 
