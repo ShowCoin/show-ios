@@ -13,19 +13,20 @@
 #import "SLPushManager.h"
 #import "SLPushManager+Carema.h"
 #import "SLPushManager+Publisher.h"
+
 @interface SLLiveMoreView() <UICollectionViewDelegate,UICollectionViewDataSource>
 
-@property(nonatomic,strong)UIButton * closeButton;
-@property(nonatomic,strong)UICollectionView * collectionView;
-@property(nonatomic,strong)NSArray * dataArray;
+@property (nonatomic, strong) UIButton * closeButton;
+@property (nonatomic, strong) UICollectionView * collectionView;
+@property (nonatomic, strong) NSArray * dataArray;
 @property (nonatomic, assign) BOOL isSelect;
 
-@property(nonatomic,assign)BOOL frontDevice;
-@property(nonatomic,assign)BOOL lightOpen;
-@property(nonatomic,assign)BOOL mute;
-
+@property (nonatomic, assign) BOOL frontDevice;
+@property (nonatomic, assign) BOOL lightOpen;
+@property (nonatomic, assign) BOOL mute;
 
 @end
+
 @implementation SLLiveMoreView
 
 - (void)dealloc
@@ -34,16 +35,13 @@
     [NSObject cancelPreviousPerformRequestsWithTarget:self];
 }
 
--(void)show
+- (void)show
 {
     [super show];
     self.isSelect = NO;
 
     self.frontDevice = [self caremaFront];
     self.lightOpen = NO;
-
-    
-
 }
 
 -(void)hide
@@ -60,7 +58,6 @@
     [self addEffect:UIBlurEffectStyleDark];
     [self addSubview:self.collectionView];
     [self addSubview:self.closeButton];
-
 }
 
 - (void)modalViewDidAppare
@@ -75,7 +72,7 @@
     
 }
 
--(void)initData
+- (void)initData
 {
     
     self.dataArray = @[@{@"image":@"live_more_message",@"title":@"私信"},@{@"image":@"live_more_carema",@"title":@"反转"},[self getThirdDict],[self getMuteDict]];
@@ -85,7 +82,6 @@
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section
 {
-    
     return (CGSize){kScreenWidth,42};
 }
 
@@ -107,7 +103,7 @@
     return nil;
 }
 
--(void)moreViewClose
+- (void)moreViewClose
 {
     NSLog(@"[gx] more view close ");
 }
@@ -134,10 +130,8 @@
     return cell;
 }
 
--(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-
-    
     if (self.isSelect == NO) {
         
         self.isSelect = YES;
@@ -232,7 +226,7 @@
 
 #pragma mark - Getters and Setters
 
--(UIButton*)closeButton
+- (UIButton*)closeButton
 {
     if (!_closeButton) {
         _closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -243,7 +237,7 @@
     return _closeButton;
 }
 
--(UICollectionView*)collectionView
+- (UICollectionView*)collectionView
 {
     if (!_collectionView) {
         //普通集合视图布局
@@ -270,28 +264,28 @@
     return _collectionView;
 }
 
--(NSDictionary*)getMuteDict
+- (NSDictionary*)getMuteDict
 {
     return (self.mute==NO)?@{@"image":@"live_more_mute",@"title":@"静音开"}:@{@"image":@"live_more_unmute",@"title":@"静音关"};
 }
 
--(NSDictionary*)updateThirdDict:(BOOL)front
+- (NSDictionary*)updateThirdDict:(BOOL)front
 {
      return (front)?@{@"image":@"live_more_mirror",@"title":@"镜像"}:[self lightDict:self.lightOpen];
 }
 
--(NSDictionary*)getThirdDict
+- (NSDictionary*)getThirdDict
 {
     return ([self caremaFront])?@{@"image":@"live_more_mirror",@"title":@"镜像"}:[self lightDict:self.lightOpen];
 }
 
--(NSDictionary*)lightDict:(BOOL)open
+- (NSDictionary*)lightDict:(BOOL)open
 {
     return (open==YES)?@{@"image":@"live_light_close",@"title":@"闪光灯关"}:@{@"image":@"live_light_open",@"title":@"闪光灯开"};
 }
 
 
--(BOOL)caremaFront
+- (BOOL)caremaFront
 {
     return [SLPushManager shareInstance].currentCameraDevcie==[SLPushManager shareInstance].frontCameraDevcie;
 }

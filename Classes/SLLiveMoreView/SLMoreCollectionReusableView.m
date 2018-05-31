@@ -7,15 +7,17 @@
 //
 
 #import "SLMoreCollectionReusableView.h"
+
 @interface SLMoreCollectionReusableView ()
 
-@property(nonatomic,strong)UILabel * headerLabel;
-@property(nonatomic,strong)UIView * lineView;
+@property (nonatomic, strong) UILabel * headerLabel;
+@property (nonatomic, strong) UIView * lineView;
 
 @end
+
 @implementation SLMoreCollectionReusableView
 
--(id)initWithFrame:(CGRect)frame
+- (id)initWithFrame:(CGRect)frame
 {
     self=[super initWithFrame:frame];
     if (self) {
@@ -25,10 +27,9 @@
         [self addSubview:self.lineView];
     }
     return self;
-    
 }
 
--(UIView*)lineView
+- (UIView*)lineView
 {
     if (!_lineView) {
         _lineView = [[UIView alloc]initWithFrame:CGRectMake(0, 41.5, KScreenWidth, 0.5)];
@@ -37,12 +38,12 @@
     return _lineView;
 }
 
-
--(UILabel*)headerLabel
+- (UILabel*)headerLabel
 {
     if (!_headerLabel) {
         _headerLabel = [[UILabel alloc]init];
-        _headerLabel.frame = CGRectMake(24, 0,KScreenWidth-48, 41.5);
+        _headerLabel.frame = CGRectMake(24, 0,
+                                        KScreenWidth - 48, 41.5);
         _headerLabel.textColor = [UIColor whiteColor];
         _headerLabel.font = [UIFont systemFontOfSize:16];
         _headerLabel.textAlignment = NSTextAlignmentCenter;
@@ -50,8 +51,5 @@
     }
     return _headerLabel;
 }
-
-
-
 
 @end

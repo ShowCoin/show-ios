@@ -10,6 +10,4 @@
 
 @interface SLMoreCollectionReusableView : UICollectionReusableView
 
-
-
 @end

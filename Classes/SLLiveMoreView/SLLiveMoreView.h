@@ -12,9 +12,13 @@
 
 @optional
 
--(void)moreViewClickMessage;
+/**
+ perform message click
+ */
+- (void)moreViewClickMessage;
 
 @end
+
 @interface SLLiveMoreView : SLBaseModalView
 
 @property (nonatomic, weak) id <SLLiveMoreViewProtocol> protocol;

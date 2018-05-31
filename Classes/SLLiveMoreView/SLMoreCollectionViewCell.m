@@ -10,36 +10,31 @@
 
 @interface SLMoreCollectionViewCell ()
 
-@property(nonatomic,strong)UIImageView * imageView;
-
-@property(nonatomic,strong)UILabel * label;
-
+@property (nonatomic, strong) UIImageView * imageView;
+@property (nonatomic, strong) UILabel * label;
 
 @end
-@implementation SLMoreCollectionViewCell
 
+@implementation SLMoreCollectionViewCell
 
 -(id)initWithFrame:(CGRect)frame
 {
-    self=[super initWithFrame:frame];
+    self = [super initWithFrame:frame];
     if (self) {
-        
         [self.contentView addSubview:self.imageView];
         [self.contentView addSubview:self.label];
-        
     }
     return self;
-    
 }
 
--(void)setDict:(NSDictionary *)dict
+- (void)setDict:(NSDictionary *)dict
 {
     _dict = dict;
     [self.imageView setImage:[UIImage imageNamed:[dict valueForKey:@"image"]]];
     [self.label setText:[dict valueForKey:@"title"]];
 }
 
--(UIImageView*)imageView
+- (UIImageView*)imageView
 {
     if (!_imageView) {
         _imageView = [[UIImageView alloc]init];
@@ -48,7 +43,7 @@
     return _imageView;
 }
 
--(UILabel*)label
+- (UILabel*)label
 {
     if (!_label) {
         _label =  [[UILabel alloc]init];
@@ -58,7 +53,6 @@
         _label.textAlignment = NSTextAlignmentCenter;
     }
     return _label;
-    
 }
 
 @end

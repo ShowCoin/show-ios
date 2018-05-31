@@ -10,6 +10,9 @@
 
 @interface SLMoreCollectionViewCell : UICollectionViewCell
 
-@property(nonatomic,strong)NSDictionary * dict;
+/**
+ dict for cell
+ */
+@property (nonatomic, strong) NSDictionary * dict;
 
 @end
