@@ -8,6 +8,24 @@
 
 #import "SLSystemAlertView.h"
 
+/**
+ define color
+
+ @param rgbValue red green blue
+ @param a create 0xColor
+ @return UIColor
+ */
+#define HexRGBAlpha(rgbValue,a) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:(a)]
+
+/**
+ General Gray
+
+ @param 0x999999 vaule
+ @param 1 Gray
+ @return Gray Color
+ */
+#define kGrayWith999999         HexRGBAlpha(0x999999, 1)
+
 @interface SLSystemAlertView ()
 
 @property (nonatomic, copy) NSString *message;
@@ -28,9 +46,6 @@
     [UIApplication.sharedApplication.windows.firstObject addSubview:view];
     return view;
 }
-#define HexRGBAlpha(rgbValue,a) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:(a)]
-
-#define kGrayWith999999         HexRGBAlpha(0x999999, 1)
 
 - (instancetype)initWithFrame:(CGRect)frame
 {

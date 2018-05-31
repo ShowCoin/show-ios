@@ -10,7 +10,17 @@
 
 @interface SLSystemAlertView : UIView
 
+/**
+ show alert view on window
+
+ @param msg info
+ @return instance
+ */
 + (instancetype)createAlert:(NSString *)msg;
+
+/**
+ only need show view, and auto remove from superview
+ */
 - (void)show;
 
 @end
