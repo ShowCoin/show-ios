@@ -8,9 +8,9 @@
 
 #import "BaseViewController.h"
 typedef NS_ENUM(NSInteger,textViewType) {//列样式
-    textViewType_name  = 1,
-    textViewType_city  = 2,
-    textViewType_sign  = 3,
+    textViewType_name  = 1, //名字
+    textViewType_city  = 2, //城市
+    textViewType_sign  = 3, //签名
 };
 
 typedef void (^inputblock)(NSString * changeText);
