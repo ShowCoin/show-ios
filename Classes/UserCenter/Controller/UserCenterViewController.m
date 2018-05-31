@@ -291,7 +291,83 @@
         scrollView.contentOffset = CGPointMake(0, 0);
     }
 }
+#pragma mark---------actions-----------
 
+- (void)walletViewclickAction:(UITapGestureRecognizer *)sender
+{
+    [PageMgr presentLoginViewController];
+}
+
+#pragma mark---------method-----------
+
+- (void)requestWithMore:(BOOL)more
+{
+    SLHistoryWorksAction * action = [SLHistoryWorksAction action];
+    if (!_IsMe) {
+        action.uid = _userModel.uid;
+    }
+    action.cursor = self.cursor;
+    action.count = self.count;
+    [self startRequestAction:action Sucess:^(id result) {
+        self.dataModelList = [SLLiveListModel mj_objectArrayWithKeyValuesArray:[result objectForKey:@"list"]];
+        if (more) {
+            [self.dataSource addObjectsFromArray:self.dataModelList];
+        }else{
+            self.dataSource = [NSMutableArray arrayWithArray:self.dataModelList];
+        }
+        self.cursor = [result objectForKey:@"next_cursor"];
+        
+        if (more) {
+            if (self.cursor.integerValue == -1) {
+                [self.mainCollectionView.mj_footer endRefreshingWithNoMoreData];
+            }else{
+                [self.mainCollectionView.mj_footer endRefreshing];
+            }
+        }else{
+            [self.mainCollectionView.mj_header endRefreshing];
+            if (self.dataSource.count == 0) {
+                self.mainCollectionView.contentInset = UIEdgeInsetsMake(0, 0, 200, 0);
+                
+                UIView * nodataview = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kMainScreenWidth, 200)];
+                nodataview.backgroundColor = HexRGBAlpha(0x242424, 1);
+                UILabel * nodataLab =[UILabel labelWithText:@"TA还没有发布过任何作品哦~" textColor:kGrayWith999999 font:Font_Medium(14*Proportion375) backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentCenter];
+                nodataLab.frame = CGRectMake(0, 90, kMainScreenWidth, 20);
+                [nodataview addSubview:nodataLab];
+                [self.mainCollectionView.mj_footer addSubview:nodataview];
+            }
+        }
+        
+        [self.mainCollectionView reloadData];
+    } FaildBlock:^(NSError *error) {
+        
+    }];
+    
+}
+
+- (void)resetParameter
+{
+    self.cursor = @"0";
+    self.count = @"20";
+}
+
+- (void)SLUserViewHeaderConcernActionDelegateWithShare
+{
+    [PageMgr.getCurrentWindow addSubview:self.shareview];
+    self.shareview.alpha=1;
+    UIImageView * imageview = [[UIImageView alloc]init];
+    NSURL *url =  [NSURL URLWithString:self.userModel.large_avatar] ;
+    [imageview yy_setImageWithURL:url placeholder:nil];
+    [self.shareview setShareType:SLShareType_User style:SLShareStyle_superBig andInfo:self. IsMe?AccountUserInfoModel.uid:self.userModel.uid  andUID:nil];
+    self.shareview.userName = self.IsMe ? AccountUserInfoModel.nickname : self.userModel.nickname;
+    self.shareview.userHeader = imageview.image;
+    self.shareview.backview.top = kScreenHeight;
+    [UIView animateWithDuration:0.3f animations:^{
+        self.shareview.backview.top=self.shareview.height-self.shareview.shareHeight;
+    } completion:^(BOOL finished) {
+        
+    }];
+    
+}
 
 
 @end
