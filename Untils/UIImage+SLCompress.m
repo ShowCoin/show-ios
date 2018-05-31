@@ -139,6 +139,31 @@
     
     return UIImageJPEGRepresentation(self, compressionQuality);
 }
+-(CGFloat)compressionQuality {
+    NSData *data = UIImageJPEGRepresentation(self, 1.0);
+    NSUInteger dataLength = [data length];
+    if(dataLength > MAX_IMAGEDATA_LEN) {
+        return 1.0 - MAX_IMAGEDATA_LEN / dataLength;
+    } else {
+        return 1.0;
+    }
+}
 
+-(CGFloat)compressionQuality:(float)size {
+    // size kb单位 * 1024 字节长度
+    size = size*1000;
+    NSData *data = UIImageJPEGRepresentation(self, 1.0);
+    NSUInteger dataLength = [data length];
+    if(dataLength > size) {
+        return size / dataLength;
+    } else {
+        return 1.0;
+    }
+}
+-(NSData *)compressedData {
+    CGFloat quality = [self compressionQuality];
+    
+    return [self compressedData:quality];
+}
 
 @end
