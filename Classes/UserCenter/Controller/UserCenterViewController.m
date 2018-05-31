@@ -233,6 +233,51 @@
     return _shareview;
 }
 
+#pragma mark---------collectionDelegates-----------
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
+    return 1;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    return self.dataSource.count;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    ShowHomeMiddleCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ShowHomeMiddleCell" forIndexPath:indexPath];
+    SLLiveListModel * model =[self.dataSource objectAtIndex:indexPath.row];
+    model.cellType = SLLiveListCellType_Usercenter;
+    cell.dataModel = model;
+    return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    @weakify(self);
+    [PageMgr pushToReplayRoomControllerWithData:[self.dataSource objectAtIndex:indexPath.row] RefreshBlock:^{
+        @strongify(self);
+        self.cursor = 0;
+        [self requestWithMore:NO];
+        [self.mainCollectionView.mj_header beginRefreshing];
+    } isMe:self.IsMe];
+}
+
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
+{
+    
+    if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
+        SLUserViewHeader * headerView = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"header"forIndexPath:indexPath];
+        headerView.isMe = self.IsMe;
+        headerView.userModel = self.userModel;
+        headerView.delegate = self;
+        return headerView;
+    }
+    return nil;
+}
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
+    return CGSizeMake(kMainScreenWidth, HeaderHeightWithoutWords + self.wordsHeight + KTopHeight);
+}
+
+
 
 
 @end
