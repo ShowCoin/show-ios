@@ -28,7 +28,7 @@
     // Do any additional setup after loading the view.
     [self.navigationBarView setNavigationTitle:self.navtitle];
     [self.navigationBarView setNavigationColor:NavigationColorBlack];
-//    [self.navigationBarView setRightTitle:@"保存"];
+
     [self.navigationBarView setRightTitle:@"保存" titleColor:kThemeWhiteColor font:Font_Regular(15)];
     self.view.backgroundColor = kBlackThemeBGColor;
     switch (_type) {
@@ -45,8 +45,7 @@
             break;
     }
     [self.view addSubview:self.textFieldBackground];
-//    [self.view addSubview:self.textStyleOne];
-//    [self.view addSubview:self.textStyleTwo];
+
     self.inputTextView.textAlignment = NSTextAlignmentCenter;
 
 

@@ -7,10 +7,8 @@
 //
 
 #import "SLCropImageViewController.h"
-#import "TKImageView.h"
 
 @interface SLCropImageViewController ()
-@property (nonatomic,strong)TKImageView *tkImageView;
 @property (nonatomic,strong)UIImage *cropImg;
 
 @end
@@ -41,27 +39,6 @@
 - (void)viewConfig{
     
     
-    self.tkImageView = [[TKImageView alloc] initWithFrame:CGRectMake(0, KTabBarHeight, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height-KTabBarHeight-KNaviBarHeight-5)];
-    [self.view addSubview:_tkImageView];
-    
-    
-    _tkImageView.toCropImage = self.cropImg;
-    _tkImageView.showMidLines = YES;
-    _tkImageView.needScaleCrop = YES;
-    _tkImageView.showCrossLines = YES;
-    _tkImageView.cornerBorderInImage = YES;
-    _tkImageView.cropAreaCornerWidth = 3;
-    _tkImageView.cropAreaCornerHeight = 3;
-    _tkImageView.minSpace = 30;
-    _tkImageView.cropAreaCornerLineColor = ClearColor;
-    _tkImageView.cropAreaBorderLineColor = ClearColor;
-    _tkImageView.cropAreaCornerLineWidth = 6;
-    _tkImageView.cropAreaBorderLineWidth = 6;
-    _tkImageView.cropAreaMidLineWidth = 30;
-    _tkImageView.cropAreaMidLineHeight = 8;
-    _tkImageView.cropAreaMidLineColor = ClearColor;
-    _tkImageView.cropAreaCrossLineColor = ClearColor;
-    _tkImageView.cropAreaCrossLineWidth = 1;
     
     UIButton *cancleBtn = [UIButton buttonWithType:(UIButtonTypeCustom)];
     cancleBtn.frame = CGRectMake(0, kMainScreenHeight- KTabBarHeight, [UIScreen mainScreen].bounds.size.width/2, 50);
@@ -88,24 +65,6 @@
     _tkImageView.cropAspectRatio = 0;
 }
 
-#pragma mark buttonAction
-- (void)cancleBtnAction{
-    
-    [self dismissViewControllerAnimated:!self.isShoot completion:^{
-        if (self.isShoot) {
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"DISSMISSPICKER" object:nil];
-        }
-    }];
-}
-
-- (void)okBtnAction{
-    
-    [self dismissViewControllerAnimated:NO completion:^{
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"CropOK" object: @[[self->_tkImageView currentCroppedImage],[self->_tkImageView currentImage]]];
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"DISSMISSPICKER" object:nil];
-    }];
-    
-}
 
 /*
 #pragma mark - Navigation

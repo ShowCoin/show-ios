@@ -7,7 +7,7 @@
 //
 
 #import "BaseViewController.h"
-
+//用户信息相关
 @interface SLUserInfoViewController : BaseViewController<UITextFieldDelegate>
 
 @end
