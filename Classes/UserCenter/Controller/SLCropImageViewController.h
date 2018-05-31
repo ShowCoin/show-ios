@@ -7,7 +7,7 @@
 //
 
 #import "BaseViewController.h"
-
+//裁剪图片
 @interface SLCropImageViewController : BaseViewController
 
 @property (nonatomic,assign)BOOL isShoot;
