@@ -390,5 +390,13 @@
     CGImageRelease(imageRef);
     return cropped;
 }
+- (UIImage *)correctTheDirectionWithImage {
+    if (self.imageOrientation == UIImageOrientationUp) return self;
+    UIGraphicsBeginImageContextWithOptions(self.size, YES, 0);
+    [self drawInRect:(CGRect){0, 0, self.size}];
+    UIImage *normalizedImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return normalizedImage;
+}
 
 @end
