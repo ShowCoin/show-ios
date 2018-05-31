@@ -352,5 +352,24 @@
     
     return image;
 }
+// 把图片剪切成指定大小的正方形图片
++ (UIImage *)squareImage:(UIImage *)image size:(CGFloat)size
+{
+    UIImage *cropped;
+    
+    if (image.size.height > image.size.width)
+    {
+        CGFloat ypos = (image.size.height - image.size.width) / 2;
+        cropped = [self cropImage:image x:ypos y:0 width:image.size.width height:image.size.width];
+    }
+    else
+    {
+        CGFloat xpos = (image.size.width - image.size.height) / 2;
+        cropped = [self cropImage:image x:xpos y:0 width:image.size.height height:image.size.height];
+    }
+    
+    UIImage *resized = [self resizeImage:cropped width:size height:size];
+    return resized;
+}
 
 @end
