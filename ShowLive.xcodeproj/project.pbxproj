@@ -400,11 +400,9 @@
 		7239EB3520BD38FC00588BED /* ChangeTextController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7239EB2720BD38FC00588BED /* ChangeTextController.m */; };
 		7239EB3620BD38FC00588BED /* ShowUserQRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7239EB2A20BD38FC00588BED /* ShowUserQRViewController.m */; };
 		7239EB3720BD38FC00588BED /* SLTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7239EB2C20BD38FC00588BED /* SLTextView.m */; };
-		7239EB3820BD38FC00588BED /* SLCropImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7239EB2F20BD38FC00588BED /* SLCropImageViewController.m */; };
 		7239EB3A20BD393C00588BED /* ChangeheadportraitController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7239EB3920BD393C00588BED /* ChangeheadportraitController.m */; };
 		7239EB3D20BD5BC900588BED /* ShowForUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7239EB3C20BD5BC900588BED /* ShowForUsViewController.m */; };
 		7239EB3F20BD97D200588BED /* ShowSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7239EB3E20BD97D100588BED /* ShowSettingViewController.m */; };
-		7239EB4120BDDDD400588BED /* SLNetDiagnoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7239EB4020BDDDD400588BED /* SLNetDiagnoViewController.m */; };
 		72C6166A20A0C67500103C44 /* SLUrgeListAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C6166820A0C67500103C44 /* SLUrgeListAction.m */; };
 		72F17B6A20AB18F60039E916 /* ShowForgetPwdAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F17B6820AB18F60039E916 /* ShowForgetPwdAction.m */; };
 		72F17B6B20AB18F60039E916 /* ShowVerifycodeAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F17B6920AB18F60039E916 /* ShowVerifycodeAction.m */; };
@@ -416,6 +414,7 @@
 		938D302220A35B0A006A0CDE /* ShowReqAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 938D302120A35B0A006A0CDE /* ShowReqAction.m */; };
 		9391AA8320BF078A00D520F1 /* SLTimerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9391AA8220BF078A00D520F1 /* SLTimerLabel.m */; };
 		9391AA8720BF09D600D520F1 /* SLVerticalAlignLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9391AA8620BF09D600D520F1 /* SLVerticalAlignLabel.m */; };
+		9391AA9720C03A4300D520F1 /* SLWebViewJSFuncNameConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 9391AA9620C03A4300D520F1 /* SLWebViewJSFuncNameConst.m */; };
 		93D2C11020BD228900C9D960 /* SLVMFriendList.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D2C10F20BD228900C9D960 /* SLVMFriendList.m */; };
 		93D2C11220BD238500C9D960 /* SLFriendListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D2C11120BD238500C9D960 /* SLFriendListCell.m */; };
 		93D2C11420BD5F5100C9D960 /* SLFriendListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D2C11320BD5F5100C9D960 /* SLFriendListViewController.m */; };
@@ -1176,7 +1175,6 @@
 		7239EB2C20BD38FC00588BED /* SLTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLTextView.m; sourceTree = "<group>"; };
 		7239EB2D20BD38FC00588BED /* ChangeheadportraitController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeheadportraitController.h; sourceTree = "<group>"; };
 		7239EB2E20BD38FC00588BED /* ShowForUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowForUsViewController.h; sourceTree = "<group>"; };
-		7239EB2F20BD38FC00588BED /* SLCropImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLCropImageViewController.m; sourceTree = "<group>"; };
 		7239EB3020BD38FC00588BED /* SLNetDiagnoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLNetDiagnoViewController.h; sourceTree = "<group>"; };
 		7239EB3120BD38FC00588BED /* SLUserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLUserInfoViewController.h; sourceTree = "<group>"; };
 		7239EB3220BD38FC00588BED /* SLTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLTextView.h; sourceTree = "<group>"; };
@@ -1186,8 +1184,8 @@
 		7239EB3B20BD468F00588BED /* ChangeTextController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChangeTextController.h; sourceTree = "<group>"; };
 		7239EB3C20BD5BC900588BED /* ShowForUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowForUsViewController.m; sourceTree = "<group>"; };
 		7239EB3E20BD97D100588BED /* ShowSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowSettingViewController.m; sourceTree = "<group>"; };
-		7239EB4020BDDDD400588BED /* SLNetDiagnoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLNetDiagnoViewController.m; sourceTree = "<group>"; };
 		724DBA3520C0307800EF6406 /* UserCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCenterViewController.m; sourceTree = "<group>"; };
+		724DBA3820C0377F00EF6406 /* SLUserViewHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLUserViewHeader.h; sourceTree = "<group>"; };
 		72C6166820A0C67500103C44 /* SLUrgeListAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLUrgeListAction.m; sourceTree = "<group>"; };
 		72C6166920A0C67500103C44 /* SLUrgeListAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLUrgeListAction.h; sourceTree = "<group>"; };
 		72C686F61D628C8898214FFC /* Pods-ShowLive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowLive.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShowLive/Pods-ShowLive.debug.xcconfig"; sourceTree = "<group>"; };
@@ -1221,6 +1219,13 @@
 		9391AA8220BF078A00D520F1 /* SLTimerLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLTimerLabel.m; sourceTree = "<group>"; };
 		9391AA8520BF085D00D520F1 /* SLVerticalAlignLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLVerticalAlignLabel.h; sourceTree = "<group>"; };
 		9391AA8620BF09D600D520F1 /* SLVerticalAlignLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLVerticalAlignLabel.m; sourceTree = "<group>"; };
+		9391AA8C20C0369100D520F1 /* SLBlankView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLBlankView.h; sourceTree = "<group>"; };
+		9391AA8D20C036DC00D520F1 /* SLChatBusiness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLChatBusiness.h; sourceTree = "<group>"; };
+		9391AA8E20C0376B00D520F1 /* SLPureColorImageGenerate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLPureColorImageGenerate.h; sourceTree = "<group>"; };
+		9391AA9020C0380800D520F1 /* SLStringSizeCalculation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLStringSizeCalculation.h; sourceTree = "<group>"; };
+		9391AA9220C038C000D520F1 /* SLWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWebViewController.h; sourceTree = "<group>"; };
+		9391AA9520C039BB00D520F1 /* SLWebViewJSFuncNameConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWebViewJSFuncNameConst.h; sourceTree = "<group>"; };
+		9391AA9620C03A4300D520F1 /* SLWebViewJSFuncNameConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWebViewJSFuncNameConst.m; sourceTree = "<group>"; };
 		93D2C10F20BD228900C9D960 /* SLVMFriendList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLVMFriendList.m; path = "../../../../Desktop/show-ios/ShowLive/Class/FriendList/Model/SLVMFriendList.m"; sourceTree = "<group>"; };
 		93D2C11120BD238500C9D960 /* SLFriendListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLFriendListCell.m; sourceTree = "<group>"; };
 		93D2C11320BD5F5100C9D960 /* SLFriendListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLFriendListViewController.m; sourceTree = "<group>"; };
@@ -1280,6 +1285,7 @@
 		431439292094A2290059D373 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				9391AA9120C038A000D520F1 /* WebView */,
 				72FAE62020BC56FB00E47E09 /* Toplist */,
 				9319236720B7FF05001C6144 /* FriendList */,
 				725B98BA20AC3CD400747F7A /* UserCenter */,
@@ -3194,6 +3200,7 @@
 		7297A17920BED7D00012DBEB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				724DBA3820C0377F00EF6406 /* SLUserViewHeader.h */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -3212,9 +3219,7 @@
 				7239EB2920BD38FC00588BED /* ShowUserQRViewController.h */,
 				7239EB2A20BD38FC00588BED /* ShowUserQRViewController.m */,
 				7239EB3420BD38FC00588BED /* SLCropImageViewController.h */,
-				7239EB2F20BD38FC00588BED /* SLCropImageViewController.m */,
 				7239EB3020BD38FC00588BED /* SLNetDiagnoViewController.h */,
-				7239EB4020BDDDD400588BED /* SLNetDiagnoViewController.m */,
 				7239EB3220BD38FC00588BED /* SLTextView.h */,
 				7239EB2C20BD38FC00588BED /* SLTextView.m */,
 				7239EB3120BD38FC00588BED /* SLUserInfoViewController.h */,
@@ -3380,6 +3385,10 @@
 		934E1B9620AC38E100A0B080 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				9391AA8C20C0369100D520F1 /* SLBlankView.h */,
+				9391AA8D20C036DC00D520F1 /* SLChatBusiness.h */,
+				9391AA8E20C0376B00D520F1 /* SLPureColorImageGenerate.h */,
+				9391AA9020C0380800D520F1 /* SLStringSizeCalculation.h */,
 				934E1B9720AC39D900A0B080 /* SLChatViewController.h */,
 				934E1B9820AC3A1E00A0B080 /* SLChatViewController+BlankView.h */,
 				931DAAC820B5A7A6003A0B38 /* SLConvListSystemTableViewCell.h */,
@@ -3413,6 +3422,16 @@
 				9391AA8620BF09D600D520F1 /* SLVerticalAlignLabel.m */,
 			);
 			path = SLVerticalAlignLabel;
+			sourceTree = "<group>";
+		};
+		9391AA9120C038A000D520F1 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				9391AA9220C038C000D520F1 /* SLWebViewController.h */,
+				9391AA9520C039BB00D520F1 /* SLWebViewJSFuncNameConst.h */,
+				9391AA9620C03A4300D520F1 /* SLWebViewJSFuncNameConst.m */,
+			);
+			path = WebView;
 			sourceTree = "<group>";
 		};
 		A99892BB20BD79600026BA03 /* Other */ = {
@@ -3837,7 +3856,6 @@
 				435E3BF020C02BB2002B7A7F /* UIImage+JKMerge.m in Sources */,
 				435E3CAE20C02BB2002B7A7F /* NSManagedObjectContext+JKObjectClear.m in Sources */,
 				435E3C7420C02BB2002B7A7F /* NSString+JKEmoji.m in Sources */,
-				7239EB4120BDDDD400588BED /* SLNetDiagnoViewController.m in Sources */,
 				435E3C0E20C02BB2002B7A7F /* UIButton+JKBlock.m in Sources */,
 				72F17B6B20AB18F60039E916 /* ShowVerifycodeAction.m in Sources */,
 				72FE9B6920621F59008DD3D5 /* main.m in Sources */,
@@ -3883,7 +3901,6 @@
 				435E3C7B20C02BB2002B7A7F /* NSString+JKMatcher.m in Sources */,
 				435E3B8A20C02BB2002B7A7F /* UINavigationBarDemoViewController.m in Sources */,
 				435E3BC820C02BB2002B7A7F /* NSURLSessionDemoViewController.m in Sources */,
-				7239EB3820BD38FC00588BED /* SLCropImageViewController.m in Sources */,
 				435E3CA320C02BB2002B7A7F /* NSRunLoop+JKPerformBlock.m in Sources */,
 				435E3BF520C02BB2002B7A7F /* UIImage+JKCapture.m in Sources */,
 				435E3BDB20C02BB2002B7A7F /* CAMediaTimingFunctionDemoViewController.m in Sources */,
@@ -4010,6 +4027,7 @@
 				435E3C0520C02BB2002B7A7F /* UITableViewCell+JKDelaysContentTouches.m in Sources */,
 				435E3CAD20C02BB2002B7A7F /* NSManagedObject+JKDictionary.m in Sources */,
 				435E3CBE20C02BB2002B7A7F /* UIApplication+JKPermissions.m in Sources */,
+				9391AA9720C03A4300D520F1 /* SLWebViewJSFuncNameConst.m in Sources */,
 				435E3BE320C02BB2002B7A7F /* CATransactionDemoViewController.m in Sources */,
 				435E3C0120C02BB2002B7A7F /* UIApplication+JKNetworkActivityIndicator.m in Sources */,
 				435E3BEA20C02BB2002B7A7F /* UIImage+JKBlur.m in Sources */,
