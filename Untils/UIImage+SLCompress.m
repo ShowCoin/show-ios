@@ -166,4 +166,27 @@
     return [self compressedData:quality];
 }
 
+- (NSData *)compressedDataSize:(float)size
+{
+    CGFloat quality = [self compressionQuality:size];
+    
+    return [self compressedData:quality];
+}
+-(NSData *)compressedDataWithRate
+{
+    UIImage *image = nil;
+    if (self.size.width > 480 ) {
+        
+        float rate = 480 * 1.0 / self.size.width < 720 * 1.0 / self.size.height ? 480 * 1.0 / self.size.width : 720 * 1.0 / self.size.height;
+        
+        int toheight = self.size.height * rate;
+        int towidth = self.size.width * rate;
+        
+        image = [self imageByScalingAndCroppingForSize:CGSizeMake(towidth, toheight)];
+    }
+    
+    NSData * data = [image compressedData];
+    return data;
+}
+
 @end
