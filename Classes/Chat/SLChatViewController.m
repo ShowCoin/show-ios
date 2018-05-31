@@ -158,6 +158,96 @@ static NSUInteger const CellAndSectionHeight = 75;  //cell的高度
 {
     return 100*WScale;
 }
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    SLMessageListHeader * headerView = [[SLMessageListHeader alloc] initWithFrame:CGRectMake(0, 0, KScreenWidth, 100*WScale)];
+    [headerView lineDockBottomWithColor:kBlackSeparationColor];
+    return headerView;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
+{
+    return CellAndSectionHeight;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
+{
+    if (self.searchController.active) {
+        return self.searchResultsArray.count ;
+    }
+    return self.dataArray.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
+{
+    UITableViewCell *cell = nil;
+    @weakify_old(self)
+    RCConversation *conv = nil;
+    if (self.searchController.active) {
+        conv = self.searchResultsArray[indexPath.row];
+    } else {
+        conv = self.dataArray[indexPath.row];
+    }
+    
+    SLMessageListCell * convCell = [self.tableView dequeueReusableCellWithIdentifier:TABLEVIEW_CELL_REUSEKEY_CONV];
+    if (convCell) {
+        
+        convCell.cellData = conv;
+        [convCell setAvatarTapedBlock:^(SLMessageListCell *sender){
+            [self tapedConvCellAvatar:sender];
+        }];
+        [convCell setLongPressBlock:^(SLMessageListCell *sender){
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil
+                                                                           message:nil
+                                                                    preferredStyle:UIAlertControllerStyleActionSheet];
+            NSString* topTitle=conv.isTop ? @"取消置顶" : @"置顶";
+            UIAlertAction *actionTop = [UIAlertAction actionWithTitle:topTitle style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+                [IMSer setConversationToTop:ConversationType_PRIVATE targetId:conv.targetId isTop:!conv.isTop];
+                [weak_self loadConversationList];
+                
+            }];
+            UIAlertAction *actionDel = [UIAlertAction actionWithTitle:@"删除" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+                [IMSer removeConversation:ConversationType_PRIVATE targetId:conv.targetId];
+                [IMSer clearMessages:ConversationType_PRIVATE targetId:conv.targetId];
+                
+                [weak_self loadConversationList];
+                
+            }];
+            UIAlertAction *actionCancle = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+            [alert addAction:actionTop];
+            [alert addAction:actionDel];
+            [alert addAction:actionCancle];
+            [weak_self presentViewController:alert animated:YES completion:nil];
+            
+        }];
+        cell = convCell;
+    }
+    
+    
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
+{
+    RCConversation *conv = nil;
+    if (self.searchController.active) {
+        conv = self.searchResultsArray[indexPath.row];
+    } else {
+        conv = self.dataArray[indexPath.row];
+    }
+    
+    if (![conv isKindOfClass:[RCConversation class]]) {
+        return;
+    }
+    [PageMgr pushToChatViewControllerWithTargetUserId:conv.targetId];
+    
+    if (conv.unreadMessageCount > 0) {
+        SLMessageListCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+        if (cell && [cell isKindOfClass:[SLMessageListCell class]]) {
+            cell.unreadCount = 0;
+        }
+    }
+}
 
 /*
 #pragma mark - Navigation
