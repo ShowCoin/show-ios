@@ -13,13 +13,9 @@
 #import "SLPushManager+Carema.h"
 #import "SLPushManager+Publisher.h"
 #import "SLToolView.h"
+#import "SLLMFlowLayout.h"
 
 CGFloat const kSLLiveMoreViewH = 100 * 2 + 44;
-static NSInteger const kRow = 3; // list row count
-
-@interface SLLMFlowLayout : UICollectionViewFlowLayout
-
-@end
 
 @interface SLLiveMoreView() <UICollectionViewDelegate,UICollectionViewDataSource>
 
@@ -163,22 +159,6 @@ static NSInteger const kRow = 3; // list row count
 - (BOOL)caremaFront
 {
     return [SLPushManager shareInstance].currentCameraDevcie==[SLPushManager shareInstance].frontCameraDevcie;
-}
-
-@end
-
-@implementation SLLMFlowLayout
-
-- (void)prepareLayout {
-    [super prepareLayout];
-
-    self.minimumLineSpacing = kMargin10;
-    self.minimumInteritemSpacing = 0;
-    self.sectionInset = UIEdgeInsetsMake(14, 20, 0, 20);
-    
-    CGFloat w = self.collectionView.frame.size.width - self.sectionInset.left - self.sectionInset.right;
-    CGFloat itemW = w / kRow;
-    self.itemSize = CGSizeMake(itemW, 80);
 }
 
 @end
