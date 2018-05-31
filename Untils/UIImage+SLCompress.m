@@ -381,5 +381,14 @@
     UIGraphicsEndImageContext();
     return resized;
 }
+// 从指定位置，尺寸修改图片
++ (UIImage *)cropImage:(UIImage *)image x:(CGFloat)x y:(CGFloat)y width:(CGFloat)width height:(CGFloat)height
+{
+    CGRect rect = CGRectMake(x, y, width, height);
+    CGImageRef imageRef = CGImageCreateWithImageInRect([image CGImage], rect);
+    UIImage *cropped = [UIImage imageWithCGImage:imageRef];
+    CGImageRelease(imageRef);
+    return cropped;
+}
 
 @end
