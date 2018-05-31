@@ -15,7 +15,7 @@
 #import "SLToolView.h"
 
 CGFloat const kSLLiveMoreViewH = 100 * 2 + 44;
-static NSInteger const kRow = 3;
+static NSInteger const kRow = 3; // list row count
 
 @interface SLLMFlowLayout : UICollectionViewFlowLayout
 
@@ -60,6 +60,7 @@ static NSInteger const kRow = 3;
     [self addSubview:t];
     
     CGRect frame = CGRectMake(0, kTitleViewH, KScreenWidth, kSLLiveMoreViewH);
+    // SLLMFlowLayout
     SLLMFlowLayout *layout = [[SLLMFlowLayout alloc] init];
     _collectionView = [[UICollectionView alloc] initWithFrame:frame collectionViewLayout:layout];
     _collectionView.dataSource = self;
@@ -109,6 +110,7 @@ static NSInteger const kRow = 3;
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    // just do every click and change image
     SLLMModel *model = self.dataArray[indexPath.row];
     
     if (model.type == SLLMTypeMessage) {

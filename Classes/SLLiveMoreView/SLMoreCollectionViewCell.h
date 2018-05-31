@@ -10,6 +10,7 @@
 
 @class SLLMModel;
 
+// all selector type
 typedef NS_ENUM(NSUInteger, SLLMType) {
     SLLMTypeMessage = 0,
     SLLMTypeFront,
@@ -38,7 +39,7 @@ static NSString * const kSLMoreCollectionViewCellID = @"kSLMoreCollectionViewCel
 @property (nonatomic, assign) BOOL select;
 @property (nonatomic, assign) SLLMType type;
 
-
+// create model
 + (instancetype)initWithTitle:(NSString *)t image:(NSString *)i;
 + (instancetype)sl_create:(SLLMType)type;
 
