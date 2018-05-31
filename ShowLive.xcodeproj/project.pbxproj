@@ -1222,6 +1222,7 @@
 		9391AA8D20C036DC00D520F1 /* SLChatBusiness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLChatBusiness.h; sourceTree = "<group>"; };
 		9391AA8E20C0376B00D520F1 /* SLPureColorImageGenerate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLPureColorImageGenerate.h; sourceTree = "<group>"; };
 		9391AA9020C0380800D520F1 /* SLStringSizeCalculation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLStringSizeCalculation.h; sourceTree = "<group>"; };
+		9391AA9220C038C000D520F1 /* SLWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWebViewController.h; sourceTree = "<group>"; };
 		93D2C10F20BD228900C9D960 /* SLVMFriendList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLVMFriendList.m; path = "../../../../Desktop/show-ios/ShowLive/Class/FriendList/Model/SLVMFriendList.m"; sourceTree = "<group>"; };
 		93D2C11120BD238500C9D960 /* SLFriendListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLFriendListCell.m; sourceTree = "<group>"; };
 		93D2C11320BD5F5100C9D960 /* SLFriendListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLFriendListViewController.m; sourceTree = "<group>"; };
@@ -1281,6 +1282,7 @@
 		431439292094A2290059D373 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				9391AA9120C038A000D520F1 /* WebView */,
 				72FAE62020BC56FB00E47E09 /* Toplist */,
 				9319236720B7FF05001C6144 /* FriendList */,
 				725B98BA20AC3CD400747F7A /* UserCenter */,
@@ -3417,6 +3419,14 @@
 				9391AA8620BF09D600D520F1 /* SLVerticalAlignLabel.m */,
 			);
 			path = SLVerticalAlignLabel;
+			sourceTree = "<group>";
+		};
+		9391AA9120C038A000D520F1 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				9391AA9220C038C000D520F1 /* SLWebViewController.h */,
+			);
+			path = WebView;
 			sourceTree = "<group>";
 		};
 		A99892BB20BD79600026BA03 /* Other */ = {
