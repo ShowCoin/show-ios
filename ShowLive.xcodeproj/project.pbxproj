@@ -48,12 +48,9 @@
 		938D302220A35B0A006A0CDE /* ShowReqAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 938D302120A35B0A006A0CDE /* ShowReqAction.m */; };
 		9391AA8320BF078A00D520F1 /* SLTimerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9391AA8220BF078A00D520F1 /* SLTimerLabel.m */; };
 		9391AA8720BF09D600D520F1 /* SLVerticalAlignLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9391AA8620BF09D600D520F1 /* SLVerticalAlignLabel.m */; };
-		9391AA8920BFAA3D00D520F1 /* SLChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9391AA8820BFAA3D00D520F1 /* SLChatViewController.m */; };
-		93D2C10B20BC66DE00C9D960 /* SLConvListSystemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D2C10A20BC66DE00C9D960 /* SLConvListSystemTableViewCell.m */; };
 		93D2C11020BD228900C9D960 /* SLVMFriendList.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D2C10F20BD228900C9D960 /* SLVMFriendList.m */; };
 		93D2C11220BD238500C9D960 /* SLFriendListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D2C11120BD238500C9D960 /* SLFriendListCell.m */; };
 		93D2C11420BD5F5100C9D960 /* SLFriendListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D2C11320BD5F5100C9D960 /* SLFriendListViewController.m */; };
-		93D2C11620BDAE5200C9D960 /* SLChatViewController+BlankView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D2C11520BDAE5200C9D960 /* SLChatViewController+BlankView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -163,12 +160,9 @@
 		9391AA8220BF078A00D520F1 /* SLTimerLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLTimerLabel.m; sourceTree = "<group>"; };
 		9391AA8520BF085D00D520F1 /* SLVerticalAlignLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLVerticalAlignLabel.h; sourceTree = "<group>"; };
 		9391AA8620BF09D600D520F1 /* SLVerticalAlignLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLVerticalAlignLabel.m; sourceTree = "<group>"; };
-		9391AA8820BFAA3D00D520F1 /* SLChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLChatViewController.m; sourceTree = "<group>"; };
-		93D2C10A20BC66DE00C9D960 /* SLConvListSystemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLConvListSystemTableViewCell.m; sourceTree = "<group>"; };
 		93D2C10F20BD228900C9D960 /* SLVMFriendList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLVMFriendList.m; path = "../../../../Desktop/show-ios/ShowLive/Class/FriendList/Model/SLVMFriendList.m"; sourceTree = "<group>"; };
 		93D2C11120BD238500C9D960 /* SLFriendListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLFriendListCell.m; sourceTree = "<group>"; };
 		93D2C11320BD5F5100C9D960 /* SLFriendListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLFriendListViewController.m; sourceTree = "<group>"; };
-		93D2C11520BDAE5200C9D960 /* SLChatViewController+BlankView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SLChatViewController+BlankView.m"; sourceTree = "<group>"; };
 		A99892BD20BD79600026BA03 /* SLConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLConfig.h; sourceTree = "<group>"; };
 		AA2350AAA436CDCBB1E93DCE /* Pods-ShowLive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowLive.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShowLive/Pods-ShowLive.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -447,11 +441,8 @@
 			isa = PBXGroup;
 			children = (
 				934E1B9720AC39D900A0B080 /* SLChatViewController.h */,
-				9391AA8820BFAA3D00D520F1 /* SLChatViewController.m */,
 				934E1B9820AC3A1E00A0B080 /* SLChatViewController+BlankView.h */,
-				93D2C11520BDAE5200C9D960 /* SLChatViewController+BlankView.m */,
 				931DAAC820B5A7A6003A0B38 /* SLConvListSystemTableViewCell.h */,
-				93D2C10A20BC66DE00C9D960 /* SLConvListSystemTableViewCell.m */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -729,7 +720,6 @@
 				7239EB3F20BD97D200588BED /* ShowSettingViewController.m in Sources */,
 				93D2C11020BD228900C9D960 /* SLVMFriendList.m in Sources */,
 				7297A17E20BED92B0012DBEB /* SLUserInfoViewController.m in Sources */,
-				93D2C10B20BC66DE00C9D960 /* SLConvListSystemTableViewCell.m in Sources */,
 				720C304A20A35ACD00207500 /* SLGetWithdrawAddressAction.m in Sources */,
 				72F17B6A20AB18F60039E916 /* ShowForgetPwdAction.m in Sources */,
 				43D24A952094B4C500C59AC8 /* ShowNavigationBar.m in Sources */,
@@ -739,10 +729,8 @@
 				72C6166A20A0C67500103C44 /* SLUrgeListAction.m in Sources */,
 				7239EB3A20BD393C00588BED /* ChangeheadportraitController.m in Sources */,
 				7239EB2620BD38D300588BED /* SLTopListViewController.m in Sources */,
-				9391AA8920BFAA3D00D520F1 /* SLChatViewController.m in Sources */,
 				7239EB3820BD38FC00588BED /* SLCropImageViewController.m in Sources */,
 				720F860520B2F59500AD0C54 /* SLConfigAction.m in Sources */,
-				93D2C11620BDAE5200C9D960 /* SLChatViewController+BlankView.m in Sources */,
 				7297A17C20BED9100012DBEB /* UserInfoViewController.m in Sources */,
 				43968A6A20AC398C00149DCC /* NSObject+Safe.m in Sources */,
 				931DAAC720B571D2003A0B38 /* SLGiftAction.m in Sources */,
