@@ -134,6 +134,11 @@
     
     return newImage;
 }
+-(NSData *)compressedData:(CGFloat)compressionQuality {
+    assert(compressionQuality <= 1.0 && compressionQuality >= 0);
+    
+    return UIImageJPEGRepresentation(self, compressionQuality);
+}
 
 
 @end
