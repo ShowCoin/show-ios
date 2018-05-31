@@ -145,7 +145,78 @@
     
 }
 #pragma textViewDelegate
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    
+    return YES;
+}
 
+
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range
+ replacementText:(NSString *)text {
+    //内容（滚动视图）高度大于一定数值时
+    NSLog(@"==== = ====== %f",textView.contentSize.height);
+    NSLog(@"==== = ====== %f",200*Proportion375);
+    _needTosave = YES;
+    if (textView.contentSize.height >220*Proportion375)
+    {
+        //删除最后一行的第一个字符，以便减少一行。
+        if (textView.text.length>=1) {
+            textView.text = [textView.text substringToIndex:[textView.text length]-1];
+            return NO;
+        }
+        return YES;
+    }
+    
+    return YES;
+}
+
+- (void)updateUserInfo
+{
+    __weak typeof(self) weakSelf = self;
+    _updataUserInfoAction = [SLUpdataUserInfoAction action];
+    _updataUserInfoAction.desc = self.inputTextView.text;
+    @weakify(self)
+    _updataUserInfoAction.finishedBlock = ^(id result) {
+        @strongify(self)
+        if ([result isKindOfClass:[NSDictionary class]]) {
+            NSLog(@"  response %@" ,result);
+            self.block(self.inputTextView.text);
+            [[NSNotificationCenter defaultCenter]postNotificationName:kUserInfoChange object:nil];
+            [weakSelf.navigationController popViewControllerAnimated:YES];
+        }
+    };
+    _updataUserInfoAction.failedBlock = ^(NSError *error) {
+        [ShowWaringView waringView:error.userInfo[@"msg"] style:WaringStyleRed];
+
+    };
+    [_updataUserInfoAction start];
+    
+}
+
+-(void)clickLeftButton:(UIButton *)sender
+{
+    [self.inputTextView resignFirstResponder];
+    if (_needTosave) {
+        UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"是否保存修改" delegate:self cancelButtonTitle:@"放弃" otherButtonTitles:@"确认", nil];
+        alert.delegate = self;
+        [alert show];
+    }else{
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+}
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 0) {
+        [self.navigationController popViewControllerAnimated:YES];
+    }else{
+        [self updateUserInfo];
+    }
+}
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
 
 /*
 #pragma mark - Navigation
