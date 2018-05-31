@@ -42,7 +42,41 @@ static NSUInteger const CellAndSectionHeight = 75;  //cell的高度
 {
     [PageMgr pushToFriendListViewController];
 }
+#pragma mark - Life Cycle
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.tableView.mj_header endRefreshing];
+    
+    //让聊天室恢复对键盘的响应
+    [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationChatRoomInput object:@(YES)];
+    
+    PageMgr.rootController.enableSimultaneouslyGesture = YES;
+    self.tableView.hidden = NO;
+    [self hideBlankView];
+    [self loadConversationList];
+    
+    if (@available(iOS 11.0, *)) {
+        [IMSer getTotalUnreadCount];
+    }
+    
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    //让聊天室失去对键盘的响应
+    [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationChatRoomInput object:@(NO)];
+    PageMgr.rootController.enableSimultaneouslyGesture = NO;
+    if ([self.searchController isActive]) {
+        [self.searchController setActive:NO];
+    }
+}
 
 /*
 #pragma mark - Navigation
