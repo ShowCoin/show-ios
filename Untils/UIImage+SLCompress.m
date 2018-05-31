@@ -371,5 +371,15 @@
     UIImage *resized = [self resizeImage:cropped width:size height:size];
     return resized;
 }
++ (UIImage *)resizeImage:(UIImage *)image width:(CGFloat)width height:(CGFloat)height
+{
+    CGSize size = CGSizeMake(width, height);
+    CGRect rect = CGRectMake(0, 0, size.width, size.height);
+    UIGraphicsBeginImageContextWithOptions(size, NO, 1.0);
+    [image drawInRect:rect];
+    UIImage *resized = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return resized;
+}
 
 @end
