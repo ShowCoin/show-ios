@@ -100,22 +100,21 @@
     
 }
 -(void) supportRetryUploadAvatar{
-//    [HDHud showHUDInView:self.view title:@"上传中..."];
+
     @weakify(self);
     NSString *imagePath = [SLPathUtils tempSaveImage:self.uploadSmallImage];
     [[SLBusinessManager manager] uploadPhotoToUserInfo:imagePath upNumber:0 progress:nil finish:^(id result, NSString *imagePath, NSString *videoPath) {
         @strongify(self);
         if ([result isKindOfClass:[NSDictionary class]]) {
-            if (IsValidString([result valueForKey:@"avatar"]))
+            if (IsValidString([result valueForKey:@"ava"]))
             {
-                AccountUserInfoModel.avatar =[result valueForKey:@"avatar"];
+                AccountUserInfoModel.avatar =[result valueForKey:@"ava"];
                 [AccountUserInfoModel save];
             }
         }
         [self supportRetryUploadBigAvatar];
     } failed:^(NSError *error) {
-//        @strongify(self);
-//        [HDHud hideHUDInView:self.view];
+
     }];
 }
 -(void)supportRetryUploadBigAvatar{
@@ -124,9 +123,9 @@
     [[SLBusinessManager manager] uploadPhotoToUserInfo:imagePath upNumber:1 progress:nil finish:^(id result, NSString *imagePath, NSString *videoPath) {
         @strongify(self);
         if ([result isKindOfClass:[NSDictionary class]]) {
-            if (IsValidString([result valueForKey:@"large_avatar"]))
+            if (IsValidString([result valueForKey:@"large_ava"]))
             {
-                AccountUserInfoModel.large_avatar =[result valueForKey:@"large_avatar"];
+                AccountUserInfoModel.large_avatar =[result valueForKey:@"large_ava"];
                 [AccountUserInfoModel save];
             }
         }
@@ -193,7 +192,7 @@
     else
     {
         [ShowWaringView waringView:@"头像尺寸不符合规则,请重新选择" style:WaringStyleRed];
-        self.uploadImage = [UIImage imageNamed:@"userhome_avatar_image"];
+        self.uploadImage = [UIImage imageNamed:@""];
     }
     
 }
@@ -233,7 +232,7 @@
     }
     else
     {
-        UIAlertView *alertview = [[UIAlertView alloc]initWithTitle:@"头像尺寸不符合规则,请重新选择" message:@"选择头像标准为1080P,比例为16:10,且不小于200k" delegate:self cancelButtonTitle:@"知道了" otherButtonTitles: nil];
+        UIAlertView *alertview = [[UIAlertView alloc]initWithTitle:@"头像尺寸不符合规则,请重新选择" message:@"" delegate:self cancelButtonTitle:@"知道了" otherButtonTitles: nil];
         [alertview show];
         //        [ShowWaringView waringView:@"头像尺寸不符合规则,请重新选择" style:WaringStyleRed];
     }

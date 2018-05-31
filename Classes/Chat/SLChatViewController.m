@@ -107,6 +107,58 @@ static NSUInteger const CellAndSectionHeight = 75;  //cell的高度
     }
     [self setRefreshHeader];
 }
+-(void)loadConversationList
+{
+    NSMutableArray *historyMsgArray = [[IMSer conversationList] mutableCopy];
+    RCConversation *conver2 = nil ;
+    for (RCConversation * conver in historyMsgArray) {
+        if (conver.conversationType==ConversationType_SYSTEM) {
+            conver2 = conver;
+            break;
+        }
+    }
+    if(conver2){
+        [historyMsgArray removeObject:conver2];
+        [historyMsgArray insertObject:conver2 atIndex:0];
+    }
+    self.dataArray = historyMsgArray;
+#if KMMessageList_Show_Online_Status
+    [self startOnlineStatusAction];
+#else
+    [self stopLoadData];
+    [self.tableView reloadData];
+#endif
+}
+
+-(void)stopLoadData
+{
+    [self.tableView.mj_header endRefreshing];
+}
+-(void)setShowUnreadCount:(NSUInteger)slUnreadCount
+{
+    [BaseTabBarController shareTabBarController].slMsgUnreadCount = 1;
+}
+
+#pragma mark - RefreshHeader
+- (void)setRefreshHeader
+{
+    @weakify(self);
+    self.tableView.mj_header = [SLRefreshHeader headerWithRefreshingBlock:^{
+        @strongify(self);
+        [self loadConversationList];
+    }];
+}
+
+- (void)hideRefreshHeader
+{
+    _tableView.mj_header = nil;
+}
+#pragma mark - UITableViewDelegate
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 100*WScale;
+}
+
 /*
 #pragma mark - Navigation
 
