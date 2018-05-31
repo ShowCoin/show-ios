@@ -415,6 +415,7 @@
 		938D302220A35B0A006A0CDE /* ShowReqAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 938D302120A35B0A006A0CDE /* ShowReqAction.m */; };
 		9391AA8320BF078A00D520F1 /* SLTimerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9391AA8220BF078A00D520F1 /* SLTimerLabel.m */; };
 		9391AA8720BF09D600D520F1 /* SLVerticalAlignLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9391AA8620BF09D600D520F1 /* SLVerticalAlignLabel.m */; };
+		9391AA9720C03A4300D520F1 /* SLWebViewJSFuncNameConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 9391AA9620C03A4300D520F1 /* SLWebViewJSFuncNameConst.m */; };
 		93D2C11020BD228900C9D960 /* SLVMFriendList.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D2C10F20BD228900C9D960 /* SLVMFriendList.m */; };
 		93D2C11220BD238500C9D960 /* SLFriendListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D2C11120BD238500C9D960 /* SLFriendListCell.m */; };
 		93D2C11420BD5F5100C9D960 /* SLFriendListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D2C11320BD5F5100C9D960 /* SLFriendListViewController.m */; };
@@ -1223,6 +1224,11 @@
 		9391AA8C20C0369100D520F1 /* SLBlankView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLBlankView.h; sourceTree = "<group>"; };
 		9391AA8D20C036DC00D520F1 /* SLChatBusiness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLChatBusiness.h; sourceTree = "<group>"; };
 		9391AA8E20C0376B00D520F1 /* SLPureColorImageGenerate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLPureColorImageGenerate.h; sourceTree = "<group>"; };
+		9391AA9020C0380800D520F1 /* SLStringSizeCalculation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLStringSizeCalculation.h; sourceTree = "<group>"; };
+		9391AA9220C038C000D520F1 /* SLWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWebViewController.h; sourceTree = "<group>"; };
+		9391AA9520C039BB00D520F1 /* SLWebViewJSFuncNameConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWebViewJSFuncNameConst.h; sourceTree = "<group>"; };
+		9391AA9620C03A4300D520F1 /* SLWebViewJSFuncNameConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWebViewJSFuncNameConst.m; sourceTree = "<group>"; };
+		9391AA9820C046B800D520F1 /* SLWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWebView.h; sourceTree = "<group>"; };
 		93D2C10F20BD228900C9D960 /* SLVMFriendList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLVMFriendList.m; path = "../../../../Desktop/show-ios/ShowLive/Class/FriendList/Model/SLVMFriendList.m"; sourceTree = "<group>"; };
 		93D2C11120BD238500C9D960 /* SLFriendListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLFriendListCell.m; sourceTree = "<group>"; };
 		93D2C11320BD5F5100C9D960 /* SLFriendListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLFriendListViewController.m; sourceTree = "<group>"; };
@@ -1282,6 +1288,7 @@
 		431439292094A2290059D373 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				9391AA9120C038A000D520F1 /* WebView */,
 				72FAE62020BC56FB00E47E09 /* Toplist */,
 				9319236720B7FF05001C6144 /* FriendList */,
 				725B98BA20AC3CD400747F7A /* UserCenter */,
@@ -3385,6 +3392,7 @@
 				9391AA8C20C0369100D520F1 /* SLBlankView.h */,
 				9391AA8D20C036DC00D520F1 /* SLChatBusiness.h */,
 				9391AA8E20C0376B00D520F1 /* SLPureColorImageGenerate.h */,
+				9391AA9020C0380800D520F1 /* SLStringSizeCalculation.h */,
 				934E1B9720AC39D900A0B080 /* SLChatViewController.h */,
 				934E1B9820AC3A1E00A0B080 /* SLChatViewController+BlankView.h */,
 				931DAAC820B5A7A6003A0B38 /* SLConvListSystemTableViewCell.h */,
@@ -3418,6 +3426,17 @@
 				9391AA8620BF09D600D520F1 /* SLVerticalAlignLabel.m */,
 			);
 			path = SLVerticalAlignLabel;
+			sourceTree = "<group>";
+		};
+		9391AA9120C038A000D520F1 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				9391AA9820C046B800D520F1 /* SLWebView.h */,
+				9391AA9220C038C000D520F1 /* SLWebViewController.h */,
+				9391AA9520C039BB00D520F1 /* SLWebViewJSFuncNameConst.h */,
+				9391AA9620C03A4300D520F1 /* SLWebViewJSFuncNameConst.m */,
+			);
+			path = WebView;
 			sourceTree = "<group>";
 		};
 		A99892BB20BD79600026BA03 /* Other */ = {
@@ -4014,6 +4033,7 @@
 				435E3C0520C02BB2002B7A7F /* UITableViewCell+JKDelaysContentTouches.m in Sources */,
 				435E3CAD20C02BB2002B7A7F /* NSManagedObject+JKDictionary.m in Sources */,
 				435E3CBE20C02BB2002B7A7F /* UIApplication+JKPermissions.m in Sources */,
+				9391AA9720C03A4300D520F1 /* SLWebViewJSFuncNameConst.m in Sources */,
 				435E3BE320C02BB2002B7A7F /* CATransactionDemoViewController.m in Sources */,
 				435E3C0120C02BB2002B7A7F /* UIApplication+JKNetworkActivityIndicator.m in Sources */,
 				435E3BEA20C02BB2002B7A7F /* UIImage+JKBlur.m in Sources */,
