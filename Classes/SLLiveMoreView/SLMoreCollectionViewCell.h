@@ -8,11 +8,38 @@
 
 #import <UIKit/UIKit.h>
 
+@class SLLMModel;
+
+typedef NS_ENUM(NSUInteger, SLLMType) {
+    SLLMTypeMessage = 0,
+    SLLMTypeFront,
+    SLLMTypeMirror,
+    SLLMTypeMute,
+    SLLMTypeShoot,
+    SLLMTypeBack,
+    SLLMTypeLight
+    
+};
+
+static NSString * const kSLMoreCollectionViewCellID = @"kSLMoreCollectionViewCellID";
+
 @interface SLMoreCollectionViewCell : UICollectionViewCell
 
-/**
- dict for cell
- */
-@property (nonatomic, strong) NSDictionary * dict;
+@property (nonatomic, strong) SLLMModel *model;
+
+@end
+
+@interface SLLMModel : NSObject
+
+@property (nonatomic, copy) NSString *title;
+@property (nonatomic, copy) NSString *image;
+@property (nonatomic, copy) NSString *selectTitle;
+@property (nonatomic, copy) NSString *selectImage;
+@property (nonatomic, assign) BOOL select;
+@property (nonatomic, assign) SLLMType type;
+
+
++ (instancetype)initWithTitle:(NSString *)t image:(NSString *)i;
++ (instancetype)sl_create:(SLLMType)type;
 
 @end
