@@ -36,5 +36,31 @@
 @property (nonatomic,strong)UILabel * cityLab;
 @property (nonatomic,strong)UILabel * constellationLab;
 
+//@property (nonatomic,strong)UILabel * idPreLab;
+@property (nonatomic,strong)UILabel * idLab;
+@property (nonatomic,strong)UILabel * wordsLab;
+@property (nonatomic,strong)UIView * bottomWhiteView;
+@property (nonatomic,strong)UIButton * fansBtn;
+@property (nonatomic,strong)UIButton * concerBtn;
+@property (nonatomic,strong)UIButton * walletBtn;
+@property (nonatomic,strong)UIButton * shareBtn;
+@property (nonatomic,strong)UIButton * toConcerBtn;
+@property (nonatomic,strong)UIButton * tosendMessageBtn;
 
+@property (nonatomic,strong)UIImageView * headImgView;
+@property (nonatomic,strong)UIView * effColorView;
+@property (nonatomic,strong)UIVisualEffectView * effectview;
+
+@property (nonatomic,strong)UIButton * worksBtn;
+@property (nonatomic,strong)UIButton * likesBtn;
+@property (nonatomic,strong)UIView * bottomAnimationLine;
+
+@property (nonatomic,strong)ShowUserModel * userModel;
+@property(nonatomic,assign)BOOL isMe;
+@property(nonatomic,assign)BOOL isMiniCard;
+@property(nonatomic,assign)CGFloat labelHeight;
+@property (nonatomic, weak) id<SLUserViewHeaderDelegate> delegate;
+@property(nonatomic,strong)BaseViewController * Controller;
+
+@property(nonatomic, strong)UIScrollView *scrollerContentView;
 @end
