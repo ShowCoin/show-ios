@@ -77,7 +77,36 @@ static NSUInteger const CellAndSectionHeight = 75;  //cell的高度
         [self.searchController setActive:NO];
     }
 }
+#pragma mark - Set up
+- (UITableView *)tableView
+{
+    if (!_tableView) {
+        _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
+        _tableView.dataSource = self;
+        _tableView.delegate = self;
+        _tableView.scrollEnabled = YES;
+        _tableView.backgroundColor = kBlackThemeBGColor;
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    }
+    return _tableView;
+}
 
+-(void)setupViews
+{
+    self.tableView.frame = CGRectMake(0, kNaviBarHeight, kMainScreenWidth,kMainScreenHeight - kNaviBarHeight);
+    [self.view addSubview:self.tableView];
+    [self.tableView registerClass:[SLMessageListCell class] forCellReuseIdentifier:TABLEVIEW_CELL_REUSEKEY_CONV];
+    
+    if (@available(iOS 11.0, *)) {
+        _tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        _tableView.estimatedRowHeight = 0;
+        _tableView.estimatedSectionHeaderHeight = 0;
+        _tableView.estimatedSectionFooterHeight = 0;
+    } else {
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
+    [self setRefreshHeader];
+}
 /*
 #pragma mark - Navigation
 
