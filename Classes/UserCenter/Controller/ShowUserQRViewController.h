@@ -7,7 +7,7 @@
 //
 
 #import "BaseViewController.h"
-
+//设置二维码
 @interface ShowUserQRViewController : BaseViewController
 
 @end
