@@ -1,5 +1,5 @@
 //
-//  SLMoreCollectionViewCell.h
+//  SLMoreCollectionReusableView.h
 //  ShowLive
 //
 //  Created by gongxin on 2018/4/24.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SLMoreCollectionViewCell : UICollectionViewCell
+@interface SLMoreCollectionReusableView : UICollectionReusableView
 
-@property(nonatomic,strong)NSDictionary * dict;
+
 
 @end
