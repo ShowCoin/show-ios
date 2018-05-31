@@ -46,6 +46,9 @@
 		72FE9B7E20621F59008DD3D5 /* ShowLiveUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FE9B7D20621F59008DD3D5 /* ShowLiveUITests.m */; };
 		931DAAC720B571D2003A0B38 /* SLGiftAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 931DAAC620B571D2003A0B38 /* SLGiftAction.m */; };
 		938D302220A35B0A006A0CDE /* ShowReqAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 938D302120A35B0A006A0CDE /* ShowReqAction.m */; };
+		9391AA8320BF078A00D520F1 /* SLTimerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9391AA8220BF078A00D520F1 /* SLTimerLabel.m */; };
+		9391AA8720BF09D600D520F1 /* SLVerticalAlignLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9391AA8620BF09D600D520F1 /* SLVerticalAlignLabel.m */; };
+		9391AA8920BFAA3D00D520F1 /* SLChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9391AA8820BFAA3D00D520F1 /* SLChatViewController.m */; };
 		93D2C10B20BC66DE00C9D960 /* SLConvListSystemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D2C10A20BC66DE00C9D960 /* SLConvListSystemTableViewCell.m */; };
 		93D2C11020BD228900C9D960 /* SLVMFriendList.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D2C10F20BD228900C9D960 /* SLVMFriendList.m */; };
 		93D2C11220BD238500C9D960 /* SLFriendListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D2C11120BD238500C9D960 /* SLFriendListCell.m */; };
@@ -157,6 +160,11 @@
 		938D2FFD20A0C821006A0CDE /* ShowAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowAction.h; sourceTree = "<group>"; };
 		938D302020A35B0A006A0CDE /* ShowLoginAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowLoginAction.h; sourceTree = "<group>"; };
 		938D302120A35B0A006A0CDE /* ShowReqAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowReqAction.m; sourceTree = "<group>"; };
+		9391AA8120BF070300D520F1 /* SLTimerLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLTimerLabel.h; sourceTree = "<group>"; };
+		9391AA8220BF078A00D520F1 /* SLTimerLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLTimerLabel.m; sourceTree = "<group>"; };
+		9391AA8520BF085D00D520F1 /* SLVerticalAlignLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLVerticalAlignLabel.h; sourceTree = "<group>"; };
+		9391AA8620BF09D600D520F1 /* SLVerticalAlignLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLVerticalAlignLabel.m; sourceTree = "<group>"; };
+		9391AA8820BFAA3D00D520F1 /* SLChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLChatViewController.m; sourceTree = "<group>"; };
 		93D2C10A20BC66DE00C9D960 /* SLConvListSystemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLConvListSystemTableViewCell.m; sourceTree = "<group>"; };
 		93D2C10F20BD228900C9D960 /* SLVMFriendList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLVMFriendList.m; path = "../../../../Desktop/show-ios/ShowLive/Class/FriendList/Model/SLVMFriendList.m"; sourceTree = "<group>"; };
 		93D2C11120BD238500C9D960 /* SLFriendListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLFriendListCell.m; sourceTree = "<group>"; };
@@ -342,6 +350,7 @@
 				431438AC209432E30059D373 /* Base.lproj */,
 				431438A8209432D50059D373 /* zh-Hans.lproj */,
 				431439292094A2290059D373 /* Classes */,
+				9391AA7F20BF06EB00D520F1 /* Common */,
 				A99892BB20BD79600026BA03 /* Other */,
 				43143748209432BE0059D373 /* Wallet */,
 				93154CBF206235FD00BF088F /* Supporting Files */,
@@ -440,12 +449,40 @@
 			isa = PBXGroup;
 			children = (
 				934E1B9720AC39D900A0B080 /* SLChatViewController.h */,
+				9391AA8820BFAA3D00D520F1 /* SLChatViewController.m */,
 				934E1B9820AC3A1E00A0B080 /* SLChatViewController+BlankView.h */,
 				93D2C11520BDAE5200C9D960 /* SLChatViewController+BlankView.m */,
 				931DAAC820B5A7A6003A0B38 /* SLConvListSystemTableViewCell.h */,
 				93D2C10A20BC66DE00C9D960 /* SLConvListSystemTableViewCell.m */,
 			);
 			path = Chat;
+			sourceTree = "<group>";
+		};
+		9391AA7F20BF06EB00D520F1 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				9391AA8420BF085200D520F1 /* SLVerticalAlignLabel */,
+				9391AA8020BF06F400D520F1 /* SLTimerLabel */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		9391AA8020BF06F400D520F1 /* SLTimerLabel */ = {
+			isa = PBXGroup;
+			children = (
+				9391AA8120BF070300D520F1 /* SLTimerLabel.h */,
+				9391AA8220BF078A00D520F1 /* SLTimerLabel.m */,
+			);
+			path = SLTimerLabel;
+			sourceTree = "<group>";
+		};
+		9391AA8420BF085200D520F1 /* SLVerticalAlignLabel */ = {
+			isa = PBXGroup;
+			children = (
+				9391AA8520BF085D00D520F1 /* SLVerticalAlignLabel.h */,
+				9391AA8620BF09D600D520F1 /* SLVerticalAlignLabel.m */,
+			);
+			path = SLVerticalAlignLabel;
 			sourceTree = "<group>";
 		};
 		A99892BB20BD79600026BA03 /* Other */ = {
@@ -705,6 +742,11 @@
 				72C6166A20A0C67500103C44 /* SLUrgeListAction.m in Sources */,
 				7239EB3A20BD393C00588BED /* ChangeheadportraitController.m in Sources */,
 				7239EB2620BD38D300588BED /* SLTopListViewController.m in Sources */,
+<<<<<<< HEAD
+=======
+				93D2C10E20BC678600C9D960 /* SLUrgeListAction.m in Sources */,
+				9391AA8920BFAA3D00D520F1 /* SLChatViewController.m in Sources */,
+>>>>>>> 2ccde5181800ab04de142f226e90d9f4b22d80ff
 				7239EB3820BD38FC00588BED /* SLCropImageViewController.m in Sources */,
 				720F860520B2F59500AD0C54 /* SLConfigAction.m in Sources */,
 				93D2C11620BDAE5200C9D960 /* SLChatViewController+BlankView.m in Sources */,
@@ -713,6 +755,7 @@
 				931DAAC720B571D2003A0B38 /* SLGiftAction.m in Sources */,
 				720F860420B2F59500AD0C54 /* SLFollowUserAction.m in Sources */,
 				93D2C11420BD5F5100C9D960 /* SLFriendListViewController.m in Sources */,
+				9391AA8320BF078A00D520F1 /* SLTimerLabel.m in Sources */,
 				720F860720B2F59500AD0C54 /* SLChatStatisticsAction.m in Sources */,
 				938D302220A35B0A006A0CDE /* ShowReqAction.m in Sources */,
 				7239EB3520BD38FC00588BED /* ChangeTextController.m in Sources */,
@@ -721,6 +764,7 @@
 				43D24A922094A43600C59AC8 /* ShowAppDelegate.m in Sources */,
 				7239EB3620BD38FC00588BED /* ShowUserQRViewController.m in Sources */,
 				720F860620B2F59500AD0C54 /* SLMeConcernListAction.m in Sources */,
+				9391AA8720BF09D600D520F1 /* SLVerticalAlignLabel.m in Sources */,
 				A99892BE20BD79600026BA03 /* SLConfig.m in Sources */,
 				7239EB3720BD38FC00588BED /* SLTextView.m in Sources */,
 				93D2C11220BD238500C9D960 /* SLFriendListCell.m in Sources */,
