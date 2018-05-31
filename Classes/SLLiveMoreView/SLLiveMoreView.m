@@ -14,6 +14,7 @@
 #import "SLPushManager+Publisher.h"
 #import "SLToolView.h"
 #import "SLLMFlowLayout.h"
+#import "SLLMModel.h"
 
 CGFloat const kSLLiveMoreViewH = 100 * 2 + 44;
 
