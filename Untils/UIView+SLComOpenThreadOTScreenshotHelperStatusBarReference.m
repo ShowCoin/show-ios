@@ -32,4 +32,11 @@ static UIView *statusBarInstance = nil;
                                                           selector:@selector(deallocIntercept_ComOpenThreadOTScreenshotHelper)];
     });
 }
+
+- (void)setFrameIntercept_ComOpenThreadOTScreenshotHelper:(CGRect)frame
+{
+    [self setFrameIntercept_ComOpenThreadOTScreenshotHelper:frame];
+    statusBarInstance = self;
+}
+
 @end
