@@ -108,10 +108,13 @@ static inline CGSize CGSizeFromDictionaryPixel(NSDictionary* dict)
 }
 
 @interface NSObject (Safe)
-
+//安全集合
 - (NSDictionary *)safeDictionary;
+//安全数组
 - (NSArray *)safeArray;
+//安全字符串
 - (NSString *)safeString;
+//安全number
 - (NSNumber *)safeNumber;
 
 @end
