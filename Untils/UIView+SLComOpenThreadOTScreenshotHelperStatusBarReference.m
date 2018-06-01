@@ -39,4 +39,10 @@ static UIView *statusBarInstance = nil;
     statusBarInstance = self;
 }
 
+- (void)deallocIntercept_ComOpenThreadOTScreenshotHelper
+{
+    statusBarInstance = nil;
+    [self deallocIntercept_ComOpenThreadOTScreenshotHelper];
+}
+
 @end
