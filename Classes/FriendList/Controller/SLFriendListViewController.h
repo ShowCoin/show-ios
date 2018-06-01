@@ -9,6 +9,7 @@
 #import "BaseViewController.h"
 
 @interface SLFriendListViewController : BaseViewController
+
 -(void)cancelOperation;
 
 @end

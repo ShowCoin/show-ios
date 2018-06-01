@@ -13,6 +13,7 @@
 #import "UIView+Extend.h"
 #import "UILabel+Additional.h"
 @protocol SLFriendListCellelegate <NSObject>
+
 - (void)onClickUser:(SLFansModel*)data;
 - (void)onClickChat:(SLFansModel*)data;
 - (void)onClickFollow:(SuccessBlock)block withData:(SLFansModel*)data;
@@ -21,9 +22,13 @@
 @end
 
 @interface SLFriendListCell : BaseTableViewCell
+
 +(id)cellWithTableView:(UITableView*)tableView;
 +(id)cellWithTableView:(UITableView*)tableView separatorLineFull:(BOOL)separatorLineFull;
+
+//粉丝相关
 @property(nonatomic,strong)SLFansModel * userListModel;
+//用户信息
 @property(nonatomic,strong)ShowUserModel * userModel;
 @property(nonatomic,strong)UILabel          * moneyLabel; //未读消息数量
 
