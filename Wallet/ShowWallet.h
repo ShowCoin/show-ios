@@ -143,14 +143,14 @@ typedef enum ShowWalletOptionsType {
 
 //scan回调
 - (void)ShowScan: (void (^)(Transaction*, NSError*))callback;
-
+//发送交易
 - (void)show_sendPayment: (Payment*)payment callback: (void (^)(Transaction*, NSError*))callback;
 - (void)show_sendTransaction: (Transaction*)transaction callback:(void (^)(Transaction*, NSError*))callback;
 
 - (void)show_overrideTransaction: (TransactionInfo*)oldTransaction
                      action: (WalletTransactionAction)action
                    callback:(void (^)(Transaction*, NSError*))callback;
-
+//签名的信息
 - (void)show_signMessage: (NSData*)message callback:(void (^)(Signature*, NSError*))callback;
 
 #pragma mark - Debug (Modal UI)
