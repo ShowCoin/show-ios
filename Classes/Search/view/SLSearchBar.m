@@ -320,6 +320,77 @@ NS_ASSUME_NONNULL_END
     return self.textField.text;
 }
 
+- (SLSearchTextField *)textField
+{
+    if (!_textField) {
+        SLSearchTextField *textField = [[SLSearchTextField alloc] initWithFrame:CGRectMake(self.leadingOrTailMargin, 8, self.frame.size.width-self.leadingOrTailMargin*2 - (_showsCancelButton?0:_buttonCancel.width), SLTextFieldHeight)];
+        textField.delegate = self;
+        textField.borderStyle = UITextBorderStyleNone;
+        textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+        textField.returnKeyType = UIReturnKeySearch;
+        textField.enablesReturnKeyAutomatically = YES;
+        textField.font = [UIFont systemFontOfSize:14.0f];
+        textField.clearButtonMode = UITextFieldViewModeWhileEditing;
+        [textField addTarget:self
+                      action:@selector(textFieldDidChange:)
+            forControlEvents:UIControlEventEditingChanged];
+        textField.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+        textField.borderStyle=UITextBorderStyleNone;
+        [textField.layer setCornerRadius:4];
+        [textField setLeftViewMode:UITextFieldViewModeAlways];
+        textField.leftView = self.imageIcon;
+//        textField.backgroundColor=write_L3_COLOR;
+        textField.textColor=kThemeWhiteColor;
+        textField.tintColor=kThemeWhiteColor;
 
+        _textField = textField;
+        
+    }
+    return _textField;
+}
+
+- (UIButton *)buttonCancel
+{
+    if (!_buttonCancel) {
+        UIButton *buttonCancel = [UIButton buttonWithType:UIButtonTypeCustom];
+        buttonCancel.frame = CGRectMake(self.frame.size.width, 0, 60, SLSearchBarHeight);
+        buttonCancel.titleLabel.font = [UIFont systemFontOfSize:16.0f];
+        [buttonCancel addTarget:self
+                         action:@selector(cancelButtonTouched)
+               forControlEvents:UIControlEventTouchUpInside];
+        [buttonCancel setTitle:@"取消" forState:UIControlStateNormal];
+        [buttonCancel setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+        [buttonCancel setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
+        buttonCancel.autoresizingMask =UIViewAutoresizingFlexibleLeftMargin;
+        buttonCancel.hidden = _hiddenCancelbutton?YES:NO;
+        _buttonCancel = buttonCancel;
+    }
+    return _buttonCancel;
+}
+
+- (UIButton *)buttonCenter
+{
+    if (!_buttonCenter) {
+        UIButton *buttonCenter = [UIButton buttonWithType:UIButtonTypeCustom];
+        [buttonCenter setImage:[UIImage imageNamed:@"icon_STSearchBar"] forState:UIControlStateNormal];
+        [buttonCenter setTitleColor:kThemeWhiteColor forState:UIControlStateNormal];
+        [buttonCenter.titleLabel setFont:[UIFont systemFontOfSize:14]];
+        [buttonCenter setEnabled:NO];
+        buttonCenter.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+        [buttonCenter sizeToFit];
+        _buttonCenter = buttonCenter;
+    }
+    return _buttonCenter;
+}
+
+- (UIImageView *)imageIcon
+{
+    if (!_imageIcon) {
+        UIImageView *imageIcon = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"icon_STSearchBar"]];
+        [imageIcon setHidden:YES];
+        _imageIcon = imageIcon;
+    }
+    return _imageIcon;
+}
 
 @end
