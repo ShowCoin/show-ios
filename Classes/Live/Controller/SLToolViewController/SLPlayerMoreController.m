@@ -40,11 +40,25 @@ static dispatch_once_t onceToken;
     BOOL _isPresent;
 }
 
+/**
+ <#Description#>
+
+ @param dismissed <#dismissed description#>
+ @return <#return value description#>
+ */
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
     _isPresent = NO;
     return self;
 }
 
+/**
+ <#Description#>
+
+ @param presented <#presented description#>
+ @param presenting <#presenting description#>
+ @param source <#source description#>
+ @return <#return value description#>
+ */
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
     _isPresent = YES;
     return self;
