@@ -43,7 +43,7 @@ static dispatch_once_t onceToken;
 /**
  do animator delegate objc
 
- @param dismissed <#dismissed description#>
+ @param dismissed view
  @return <#return value description#>
  */
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
