@@ -187,6 +187,75 @@ NS_ASSUME_NONNULL_END
     }
     return YES;
 }
+- (BOOL)textFieldShouldClear:(UITextField *)textField
+{
+    if (self.delegate && [self.delegate respondsToSelector:@selector(searchBar:textDidChange:)])
+    {
+        [self.delegate searchBar:self textDidChange:@""];
+    }
+    return YES;
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+//    [textField resignFirstResponder];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(searchBarSearchButtonClicked:)])
+    {
+        [self.delegate searchBarSearchButtonClicked:self];
+    }
+    return YES;
+}
+#pragma mark - --- 3. event response 事件相应 ---
+-(void)cancelButtonTouched
+{
+    self.textField.text = @"";
+    [self.textField resignFirstResponder];
+    [self.buttonCenter setHidden:NO];
+    [self.imageIcon setHidden:YES];
+    self.textField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"" attributes:@{NSForegroundColorAttributeName:self.placeholderColor}];
+    if (self.canHideCancelButton) {
+        [UIView animateWithDuration:0.3 animations:^{
+            if (self.showsCancelButton) {
+                self.buttonCancel.frame = CGRectMake(self.frame.size.width, 0, 60, SLSearchBarHeight);
+                self.textField.frame = CGRectMake(self.leadingOrTailMargin, 8, self.frame.size.width-self.leadingOrTailMargin*2, SLTextFieldHeight);
+            }
+            self.buttonCenter.center = self.textField.center;
+        } completion:^(BOOL finished) {
+    
+        }];
+    }
+
+    if (self.delegate && [self.delegate respondsToSelector:@selector(searchBarCancelButtonClicked:)])
+    {
+        [self.delegate searchBarCancelButtonClicked:self];
+    }
+}
+#pragma mark - --- 4. private methods 私有方法 ---
+- (BOOL)becomeFirstResponder
+{
+    return [self.textField becomeFirstResponder];
+}
+
+- (BOOL)resignFirstResponder
+{
+    [super resignFirstResponder];
+    return [self.textField resignFirstResponder];
+}
+#pragma mark - --- 5. setters 属性 ---
+- (void)setPlaceholder:(NSString *)placeholder
+{
+    _placeholder = placeholder;
+    [self.buttonCenter setTitle:placeholder forState:UIControlStateNormal];
+    [self.buttonCenter sizeToFit];
+    [self.buttonCenter layoutButtonWithEdgeInsetsStyle:MKButtonEdgeInsetsStyleLeft imageTitleSpace:5];
+
+    self.buttonCenter.center = self.textField.center;
+    // if buttonCenter.width > self.width
+    // buttonCenter need reset frame
+    self.buttonCenter.width += 20;
+    self.buttonCenter.left = CGRectGetMinX(self.textField.frame) + 10;
+}
+
 
 
 @end
