@@ -22,9 +22,9 @@ static id _instance = nil;
 static dispatch_once_t onceToken;
 
 /**
- <#Description#>
+ shared
 
- @return <#return value description#>
+ @return a SLPlayerMoreController objc
  */
 + (instancetype)shared {
     dispatch_once(&onceToken, ^{
