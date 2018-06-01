@@ -12,7 +12,10 @@ static UIView *statusBarInstance = nil;
 
 @implementation UIView (SLComOpenThreadOTScreenshotHelperStatusBarReference)
 
-
++ (UIView *)statusBarInstance_ComOpenThreadOTScreenshotHelper
+{
+    return statusBarInstance;
+}
 
 
 @end
