@@ -8,8 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+@class SLLMModel;
+
+static NSString * const kSLMoreCollectionViewCellID = @"kSLMoreCollectionViewCellID";
+
 @interface SLMoreCollectionViewCell : UICollectionViewCell
 
-@property(nonatomic,strong)NSDictionary * dict;
+@property (nonatomic, strong) SLLMModel *model;
+
+@end
+
+@interface SLLMModel : NSObject
 
 @end

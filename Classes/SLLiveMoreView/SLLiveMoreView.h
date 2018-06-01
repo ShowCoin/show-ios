@@ -12,9 +12,21 @@
 
 @optional
 
--(void)moreViewClickMessage;
+/**
+ message click
+ */
+- (void)moreViewClickMessage;
+
+/**
+ screenShoot click
+ */
+- (void)moreViewScreenShoot;
 
 @end
+
+// use kSLLiveMoreViewH set View frame
+UIKIT_EXTERN CGFloat const kSLLiveMoreViewH;
+
 @interface SLLiveMoreView : SLBaseModalView
 
 @property (nonatomic, weak) id <SLLiveMoreViewProtocol> protocol;

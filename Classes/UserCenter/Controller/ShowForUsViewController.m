@@ -30,6 +30,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 -(UITableView *)tableView
 {
     if (!_tableView) {
@@ -57,6 +58,8 @@
 }
 
 #pragma mark - delegates
+
+
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     return 205*WScale;
