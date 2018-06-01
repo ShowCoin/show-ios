@@ -30,7 +30,5 @@
     NSLog(@"shake");
 }
 
-- (void)motionCancelled:(UIEventSubtype)motion withEvent:(UIEvent *)event
-{
-}
+
 @end
