@@ -7,7 +7,6 @@
 //
 
 #import "UIWindow+SLMotion.h"
-//#import "SULogger.h"
 
 #define UIEventSubtypeMotionShakeNotification @"UIEventSubtypeMotionShakeNotification"
 
