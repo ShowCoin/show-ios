@@ -36,10 +36,21 @@ static CGFloat kMessageViewH = 75 + 44 + 10;
 
 #pragma mark - <UIViewControllerAnimatedTransitioning>
 
+/**
+ <#Description#>
+
+ @param transitionContext <#transitionContext description#>
+ @return <#return value description#>
+ */
 - (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext {
     return 0.25;
 }
 
+/**
+ <#Description#>
+
+ @param transitionContext <#transitionContext description#>
+ */
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext {
     CGFloat h = UIScreen.mainScreen.bounds.size.height;
     CGFloat w = UIScreen.mainScreen.bounds.size.width;
