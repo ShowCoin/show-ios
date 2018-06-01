@@ -124,33 +124,37 @@ typedef enum ShowWalletOptionsType {
 - (ChainId)show_chainIdForIndex: (AccountIndex)index;
 //名字对应下标
 - (NSString*)show_nicknameForIndex: (AccountIndex)index;
+//设置下标对应的名字
 - (void)show_setNickname: (NSString*)nickname forIndex: (AccountIndex)index;
+//显示下标对应的历史
 - (NSArray<TransactionInfo*>*)show_transactionHistoryForIndex: (AccountIndex)index;
-
+//显示下标对应的账户
 - (void)show_moveAccountAtIndex: (NSUInteger)fromIndex toIndex: (NSUInteger)toIndex;
 
 
 #pragma mark - Account Management (Modal UI)
-
+//添加账户回调
 - (void)show_addAccountCallback ;
+//主管账户回调
 - (void)show_manageAccountAtIndex: (AccountIndex)index callback: (void (^)(void))callback;
 
 
 #pragma mark - Transactions (Modal UI)
 
+//scan回调
 - (void)ShowScan: (void (^)(Transaction*, NSError*))callback;
-
+//发送交易
 - (void)show_sendPayment: (Payment*)payment callback: (void (^)(Transaction*, NSError*))callback;
 - (void)show_sendTransaction: (Transaction*)transaction callback:(void (^)(Transaction*, NSError*))callback;
 
 - (void)show_overrideTransaction: (TransactionInfo*)oldTransaction
                      action: (WalletTransactionAction)action
                    callback:(void (^)(Transaction*, NSError*))callback;
-
+//签名的信息
 - (void)show_signMessage: (NSData*)message callback:(void (^)(Signature*, NSError*))callback;
 
 #pragma mark - Debug (Modal UI)
-
+//显示debug的信息
 - (void)show_showDebuggingOptions: (WalletOptionsType)walletOptionsType callback: (void (^)(void))callback;
 
 

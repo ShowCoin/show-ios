@@ -26,6 +26,10 @@
  */
 #define kGrayWith999999         HexRGBAlpha(0x999999, 1)
 
+
+/**
+ <#Description#>
+ */
 @interface SLSystemAlertView ()
 
 @property (nonatomic, copy) NSString *message;
@@ -39,6 +43,12 @@
 
 @implementation SLSystemAlertView
 
+/**
+ <#Description#>
+
+ @param msg <#msg description#>
+ @return <#return value description#>
+ */
 + (instancetype)createAlert:(NSString *)msg {
     SLSystemAlertView *view = [[SLSystemAlertView alloc] initWithFrame:UIScreen.mainScreen.bounds];
     view.message = msg;
@@ -47,6 +57,13 @@
     return view;
 }
 
+
+/**
+ <#Description#>
+
+ @param frame <#frame description#>
+ @return <#return value description#>
+ */
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -86,6 +103,9 @@
     return self;
 }
 
+/**
+ <#Description#>
+ */
 - (void)layoutSubviews {
     [super layoutSubviews];
     
@@ -132,6 +152,9 @@
     [self hidden];
 }
 
+/**
+ <#Description#>
+ */
 - (void)hidden {
     [UIView animateWithDuration:0.25 animations:^{
         self.alpha = 0;
