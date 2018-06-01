@@ -17,7 +17,7 @@
 @end
 
 @implementation ShowAppDelegate
-
+//入口函数
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     __weak typeof(self) weaks = self;
     dispatch_async(dispatch_get_main_queue(), ^{
