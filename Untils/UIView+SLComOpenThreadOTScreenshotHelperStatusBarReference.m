@@ -18,4 +18,18 @@ static UIView *statusBarInstance = nil;
 }
 
 
++ (void)load
+{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        Class statusBarClass = NSClassFromString(@"UIStatusBar");
+        [SLComOpenThreadOTScreenshotHelperSwizzleHelper swizzClass:statusBarClass
+                                                          selector:@selector(setFrame:)
+                                                          selector:@selector(setFrameIntercept_ComOpenThreadOTScreenshotHelper:)];
+        
+        [SLComOpenThreadOTScreenshotHelperSwizzleHelper swizzClass:statusBarClass
+                                                          selector:NSSelectorFromString(@"dealloc")
+                                                          selector:@selector(deallocIntercept_ComOpenThreadOTScreenshotHelper)];
+    });
+}
 @end
