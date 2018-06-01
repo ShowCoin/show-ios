@@ -154,7 +154,7 @@ typedef enum ShowWalletOptionsType {
 - (void)show_signMessage: (NSData*)message callback:(void (^)(Signature*, NSError*))callback;
 
 #pragma mark - Debug (Modal UI)
-
+//显示debug的信息
 - (void)show_showDebuggingOptions: (WalletOptionsType)walletOptionsType callback: (void (^)(void))callback;
 
 

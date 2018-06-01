@@ -1209,6 +1209,7 @@
 		93615AEC20C1461A000D5658 /* SLBaseWebViewRequestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLBaseWebViewRequestHelper.h; sourceTree = "<group>"; };
 		93615AED20C14746000D5658 /* SLWebViewScriptMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWebViewScriptMessage.h; sourceTree = "<group>"; };
 		93615AEE20C14834000D5658 /* SLWeakScriptMessageDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWeakScriptMessageDelegate.h; sourceTree = "<group>"; };
+		93615AF120C14947000D5658 /* SLSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLSearchBar.h; sourceTree = "<group>"; };
 		938D2FFD20A0C821006A0CDE /* ShowAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowAction.h; sourceTree = "<group>"; };
 		938D302020A35B0A006A0CDE /* ShowLoginAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowLoginAction.h; sourceTree = "<group>"; };
 		9391AA8120BF070300D520F1 /* SLTimerLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLTimerLabel.h; sourceTree = "<group>"; };
@@ -1282,6 +1283,7 @@
 		431439292094A2290059D373 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				93615AEF20C14923000D5658 /* Search */,
 				9391AA9120C038A000D520F1 /* WebView */,
 				72FAE62020BC56FB00E47E09 /* Toplist */,
 				9319236720B7FF05001C6144 /* FriendList */,
@@ -3398,6 +3400,22 @@
 				93615AEE20C14834000D5658 /* SLWeakScriptMessageDelegate.h */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		93615AEF20C14923000D5658 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				93615AF020C14932000D5658 /* view */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		93615AF020C14932000D5658 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				93615AF120C14947000D5658 /* SLSearchBar.h */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 		9391AA7F20BF06EB00D520F1 /* Common */ = {
