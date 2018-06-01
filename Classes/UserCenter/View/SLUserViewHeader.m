@@ -893,4 +893,43 @@
     }
 }
 
+-(void)concerAction{
+    SLFollowUserAction *action  = [SLFollowUserAction action];
+    
+    action.to_uid = self.userModel.uid;
+    if (self.userModel.isFollowed.integerValue == 1) {
+        action.type = FollowTypeDelete;
+    }else{
+        action.type = FollowTypeAdd;
+    }
+    @weakify(self);
+    [self sl_startRequestAction:action Sucess:^(id result) {
+        @strongify(self);
+        if (self.userModel.isFollowed.integerValue == 1) {
+            self.userModel.isFollowed = @"0";
+            [self.toConcerBtn setTitle:@"+ 关注" forState:UIControlStateNormal];
+            self.toConcerBtn.layer.borderWidth = 0*Proportion375;
+            self.toConcerBtn.layer.borderColor = kThemeWhiteColor.CGColor;
+            self.toConcerBtn.backgroundColor = kThemeRedColor;
+        }else{
+            self.userModel.isFollowed = @"1";
+            [self.toConcerBtn setTitle:@"已关注" forState:UIControlStateNormal];
+            self.toConcerBtn.layer.borderWidth = 0.5*Proportion375;
+            self.toConcerBtn.layer.borderColor = kThemeWhiteColor.CGColor;
+            self.toConcerBtn.backgroundColor = [UIColor clearColor];
+        }
+        NSMutableDictionary * dic = [NSMutableDictionary dictionary];
+        [dic setObject:self.userModel.isFollowed forKey:@"isFollowed"];
+        [[NSNotificationCenter defaultCenter] postNotificationName:kCorcernNotification object:nil userInfo:dic];
+        
+        NSDictionary * dict = @{@"type":@(action.type),@"uid":self.userModel.uid};
+        [[NSNotificationCenter defaultCenter]postNotificationName:kFollowUserStatusWithUidNotification object:dict];
+        
+    } FaildBlock:^(NSError *error) {
+        [ShowWaringView waringView:error.userInfo[@"msg"] style:WaringStyleRed];
+        
+    }];
+}
+
+
 @end
