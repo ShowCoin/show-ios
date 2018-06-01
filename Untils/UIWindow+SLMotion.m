@@ -13,6 +13,9 @@
 
 @implementation UIWindow (SLMotion)
 
+- (BOOL)canBecomeFirstResponder {//默认是NO，所以得重写此方法，设成YES
+    return YES;
+}
 
 
 @end
