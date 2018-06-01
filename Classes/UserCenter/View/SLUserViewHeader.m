@@ -738,5 +738,13 @@
     }
     return _likesBtn;
 }
-
+//刷新ui
+- (void)userinfoChange:(NSNotification *)notif
+{
+    [self setLabelSpace:self.wordsLab withValue:@"" withFont:Font_Regular(14*Proportion375)];
+    [_headPortrait setRoundStyle:YES imageUrl:AccountUserInfoModel.avatar imageHeight:95 vip:[_userModel.uid isEqualToString:kSystemNumber_RongCloud]?:NO attestation:NO];
+    [_nickLab setText:AccountUserInfoModel.nickname];
+    _sexImg .image=[AccountUserInfoModel.gender  isEqualToString:@"1"]?[UIImage imageNamed:@"userhome_sex_man"]:[UIImage imageNamed:@"userhome_sex_women"];
+    
+}
 @end
