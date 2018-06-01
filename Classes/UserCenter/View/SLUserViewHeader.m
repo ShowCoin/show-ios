@@ -245,5 +245,43 @@
     return self;
 }
 
-是
+-(void)setIsMe:(BOOL)isMe
+{
+    _isMe = isMe;
+    if (!isMe) {
+        self.leftBtn.hidden = NO;
+        [self.leftBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self).with.offset(20*Proportion375 + KTopHeight);
+            make.left.equalTo(self);
+            make.size.mas_equalTo(CGSizeMake(73*Proportion375, 30*Proportion375));
+        }];
+        [self.listBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.centerY.equalTo(self.headPortrait).with.offset(-10*Proportion375);
+            make.left.equalTo(self);
+            make.size.mas_equalTo(CGSizeMake(73*Proportion375, 30*Proportion375));
+        }];
+        
+        [self.toConcerBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.fansBtn.mas_bottom).with.offset(20*Proportion375);
+            make.left.equalTo(self).with.offset(35*Proportion375);
+            make.size.mas_equalTo(CGSizeMake((kMainScreenWidth - 70*Proportion375 - 20 *Proportion375)/3, 31*Proportion375));
+        }];
+        [self.tosendMessageBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.fansBtn.mas_bottom).with.offset(20*Proportion375);
+            make.left.equalTo(self.toConcerBtn.mas_right).with.offset(10*Proportion375);
+            make.size.mas_equalTo(CGSizeMake((kMainScreenWidth - 70*Proportion375 - 20 *Proportion375)/3, 31*Proportion375));
+        }];
+        [self.shareBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.fansBtn.mas_bottom).with.offset(20*Proportion375);
+            make.left.equalTo(self.tosendMessageBtn.mas_right).with.offset(10*Proportion375);
+            make.size.mas_equalTo(CGSizeMake((kMainScreenWidth - 70*Proportion375 - 20 *Proportion375)/3, 31*Proportion375));
+        }];
+        
+        self.settingBtn.hidden = YES;
+        self.giftStoreBtn.hidden = YES;
+    }else{
+        self.leftBtn.hidden = YES;
+    }
+}
+
 @end
