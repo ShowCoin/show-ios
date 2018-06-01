@@ -256,6 +256,70 @@ NS_ASSUME_NONNULL_END
     self.buttonCenter.left = CGRectGetMinX(self.textField.frame) + 10;
 }
 
+- (void)setText:(NSString *)text
+{
+    self.textField.text = text?:@"";
+    if (text.length > 0) {
+        [self textFieldShouldBeginEditing:self.textField];
+    }
+}
+
+- (void)setInputAccessoryView:(UIView *)inputAccessoryView
+{
+    _inputAccessoryView = inputAccessoryView;
+    self.textField.inputAccessoryView = inputAccessoryView;
+}
+
+- (void)setTextColor:(UIColor *)textColor
+{
+    _textColor = textColor;
+    self.textField.textColor = textColor;
+}
+
+- (void)setPlaceholderColor:(UIColor *)placeholderColor
+{
+    _placeholderColor = placeholderColor;
+    NSAssert(_placeholder, @"Please set placeholder before setting placeholdercolor");
+    self.textField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:self.placeholder attributes:@{NSForegroundColorAttributeName:placeholderColor}];
+    [self.buttonCenter setTitleColor:placeholderColor forState:UIControlStateNormal];
+}
+
+- (void)setFont:(UIFont *)font
+{
+    _font = font;
+    self.textField.font = font;
+    self.buttonCenter.titleLabel.font = font;
+    [self.buttonCenter sizeToFit];
+}
+
+- (void)setCanHideCancelButton:(BOOL)canHideCancelButton
+{
+    _canHideCancelButton = canHideCancelButton;
+    if (_canHideCancelButton) {
+        self.buttonCancel.frame = CGRectMake(self.frame.size.width, 0, 60, SLSearchBarHeight);
+        self.textField.frame = CGRectMake(self.leadingOrTailMargin, 8, self.frame.size.width-self.leadingOrTailMargin*2, SLTextFieldHeight);
+        self.buttonCenter.center = self.textField.center;
+    }
+}
+
+- (void)setLeadingOrTailMargin:(NSInteger)leadingOrTailMargin
+{
+    _leadingOrTailMargin = leadingOrTailMargin;
+ 
+    if (_canHideCancelButton) {
+        self.buttonCancel.frame = CGRectMake(self.frame.size.width, 0, 60, SLSearchBarHeight);
+        self.textField.frame = CGRectMake(self.leadingOrTailMargin, 8, self.frame.size.width-self.leadingOrTailMargin*2, SLTextFieldHeight);
+        self.buttonCenter.center = self.textField.center;
+    }
+}
+
+#pragma mark - --- 6. getters 属性 —
+
+- (NSString *)text
+{
+    return self.textField.text;
+}
+
 
 
 @end
