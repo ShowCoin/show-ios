@@ -9,6 +9,7 @@
 #import "SLTopListViewController.h"
 #import "SLToplistSubView.h"
 
+//激励相关
 @interface SLTopListViewController ()<UIScrollViewDelegate>
 @property (nonatomic,strong)UIScrollView * bkscrollerView;
 @property (nonatomic,strong)SLToplistSubView * contributionView;//贡献榜
@@ -21,10 +22,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self.navigationBarView setNavigationColor:NavigationColorBlack];
-    
-    
-    
 }
+
 -(void)setUid:(NSString *)uid
 {
     _uid = uid;
@@ -50,9 +49,7 @@
         [encourageBtn setTitleColor:kThemeWhiteColor forState:UIControlStateNormal];
         [contributionBtn setTitleColor:kGrayWithaaaaaa forState:UIControlStateNormal];
         [self.bkscrollerView setContentOffset:CGPointMake(kMainScreenWidth, 0) animated:NO];
-        
     }];
-    
     
     [contributionBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self.navigationBarView.leftView);
