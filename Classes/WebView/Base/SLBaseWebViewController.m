@@ -40,8 +40,6 @@
 - (void)setupData
 {
     [self.view addSubview:self.webView];
-//    [self.Customview addSubview:self.backButton];
-//    [self.Customview addSubview:self.closeBtn];
 }
 
 - (void)loadUrlRequest
