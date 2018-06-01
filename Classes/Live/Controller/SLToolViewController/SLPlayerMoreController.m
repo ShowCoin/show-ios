@@ -22,9 +22,9 @@ static id _instance = nil;
 static dispatch_once_t onceToken;
 
 /**
- <#Description#>
+ shared
 
- @return <#return value description#>
+ @return a SLPlayerMoreController objc
  */
 + (instancetype)shared {
     dispatch_once(&onceToken, ^{
@@ -41,9 +41,9 @@ static dispatch_once_t onceToken;
 }
 
 /**
- <#Description#>
+ do animator delegate objc
 
- @param dismissed <#dismissed description#>
+ @param dismissed view
  @return <#return value description#>
  */
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {

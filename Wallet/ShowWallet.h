@@ -133,26 +133,28 @@ typedef enum ShowWalletOptionsType {
 
 
 #pragma mark - Account Management (Modal UI)
-
+//添加账户回调
 - (void)show_addAccountCallback ;
+//主管账户回调
 - (void)show_manageAccountAtIndex: (AccountIndex)index callback: (void (^)(void))callback;
 
 
 #pragma mark - Transactions (Modal UI)
 
+//scan回调
 - (void)ShowScan: (void (^)(Transaction*, NSError*))callback;
-
+//发送交易
 - (void)show_sendPayment: (Payment*)payment callback: (void (^)(Transaction*, NSError*))callback;
 - (void)show_sendTransaction: (Transaction*)transaction callback:(void (^)(Transaction*, NSError*))callback;
 
 - (void)show_overrideTransaction: (TransactionInfo*)oldTransaction
                      action: (WalletTransactionAction)action
                    callback:(void (^)(Transaction*, NSError*))callback;
-
+//签名的信息
 - (void)show_signMessage: (NSData*)message callback:(void (^)(Signature*, NSError*))callback;
 
 #pragma mark - Debug (Modal UI)
-
+//显示debug的信息
 - (void)show_showDebuggingOptions: (WalletOptionsType)walletOptionsType callback: (void (^)(void))callback;
 
 
