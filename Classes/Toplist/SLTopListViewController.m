@@ -49,9 +49,7 @@
         [encourageBtn setTitleColor:kThemeWhiteColor forState:UIControlStateNormal];
         [contributionBtn setTitleColor:kGrayWithaaaaaa forState:UIControlStateNormal];
         [self.bkscrollerView setContentOffset:CGPointMake(kMainScreenWidth, 0) animated:NO];
-        
     }];
-    
     
     [contributionBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self.navigationBarView.leftView);
