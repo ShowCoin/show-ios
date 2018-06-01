@@ -41,7 +41,7 @@ static dispatch_once_t onceToken;
 }
 
 /**
- do animator delegate objc
+ do dismissed animator delegate objc
 
  @param dismissed view
  @return protocal vc <UIViewControllerAnimatedTransitioning>
