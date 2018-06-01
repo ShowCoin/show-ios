@@ -402,6 +402,10 @@
 		7239EB3A20BD393C00588BED /* ChangeheadportraitController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7239EB3920BD393C00588BED /* ChangeheadportraitController.m */; };
 		7239EB3D20BD5BC900588BED /* ShowForUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7239EB3C20BD5BC900588BED /* ShowForUsViewController.m */; };
 		7239EB3F20BD97D200588BED /* ShowSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7239EB3E20BD97D100588BED /* ShowSettingViewController.m */; };
+		724DBA3B20C046E600EF6406 /* SLUserViewHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 724DBA3A20C046E600EF6406 /* SLUserViewHeader.m */; };
+		72C6166A20A0C67500103C44 /* SLUrgeListAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C6166820A0C67500103C44 /* SLUrgeListAction.m */; };
+		72F17B6A20AB18F60039E916 /* ShowForgetPwdAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F17B6820AB18F60039E916 /* ShowForgetPwdAction.m */; };
+		72F17B6B20AB18F60039E916 /* ShowVerifycodeAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F17B6920AB18F60039E916 /* ShowVerifycodeAction.m */; };
 		72FE9B6620621F59008DD3D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72FE9B6420621F59008DD3D5 /* LaunchScreen.storyboard */; };
 		72FE9B6920621F59008DD3D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FE9B6820621F59008DD3D5 /* main.m */; };
 		72FE9B7320621F59008DD3D5 /* ShowLiveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FE9B7220621F59008DD3D5 /* ShowLiveTests.m */; };
@@ -1179,6 +1183,8 @@
 		7239EB3E20BD97D100588BED /* ShowSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowSettingViewController.m; sourceTree = "<group>"; };
 		724DBA3520C0307800EF6406 /* UserCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCenterViewController.m; sourceTree = "<group>"; };
 		724DBA3820C0377F00EF6406 /* SLUserViewHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLUserViewHeader.h; sourceTree = "<group>"; };
+		724DBA3A20C046E600EF6406 /* SLUserViewHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLUserViewHeader.m; sourceTree = "<group>"; };
+		72C6166820A0C67500103C44 /* SLUrgeListAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLUrgeListAction.m; sourceTree = "<group>"; };
 		72C6166920A0C67500103C44 /* SLUrgeListAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLUrgeListAction.h; sourceTree = "<group>"; };
 		72C686F61D628C8898214FFC /* Pods-ShowLive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowLive.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShowLive/Pods-ShowLive.debug.xcconfig"; sourceTree = "<group>"; };
 		72F17B6620AB18F50039E916 /* ShowForgetPwdAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowForgetPwdAction.h; sourceTree = "<group>"; };
@@ -1214,6 +1220,7 @@
 		9391AA9220C038C000D520F1 /* SLWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWebViewController.h; sourceTree = "<group>"; };
 		9391AA9520C039BB00D520F1 /* SLWebViewJSFuncNameConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWebViewJSFuncNameConst.h; sourceTree = "<group>"; };
 		9391AA9620C03A4300D520F1 /* SLWebViewJSFuncNameConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWebViewJSFuncNameConst.m; sourceTree = "<group>"; };
+		9391AA9820C046B800D520F1 /* SLWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWebView.h; sourceTree = "<group>"; };
 		93D2C10F20BD228900C9D960 /* SLVMFriendList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLVMFriendList.m; path = "../../../../Desktop/show-ios/ShowLive/Class/FriendList/Model/SLVMFriendList.m"; sourceTree = "<group>"; };
 		93D2C11120BD238500C9D960 /* SLFriendListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLFriendListCell.m; sourceTree = "<group>"; };
 		93D2C11320BD5F5100C9D960 /* SLFriendListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLFriendListViewController.m; sourceTree = "<group>"; };
@@ -3189,6 +3196,7 @@
 			isa = PBXGroup;
 			children = (
 				724DBA3820C0377F00EF6406 /* SLUserViewHeader.h */,
+				724DBA3A20C046E600EF6406 /* SLUserViewHeader.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -3409,6 +3417,7 @@
 		9391AA9120C038A000D520F1 /* WebView */ = {
 			isa = PBXGroup;
 			children = (
+				9391AA9820C046B800D520F1 /* SLWebView.h */,
 				9391AA9220C038C000D520F1 /* SLWebViewController.h */,
 				9391AA9520C039BB00D520F1 /* SLWebViewJSFuncNameConst.h */,
 				9391AA9620C03A4300D520F1 /* SLWebViewJSFuncNameConst.m */,
@@ -3862,6 +3871,7 @@
 				435E3BFD20C02BB2002B7A7F /* UIScrollView+JKAddition.m in Sources */,
 				435E3C5D20C02BB2002B7A7F /* NSDictionary+JKURL.m in Sources */,
 				435E3CA420C02BB2002B7A7F /* NSDate+JKLunarCalendar.m in Sources */,
+				724DBA3B20C046E600EF6406 /* SLUserViewHeader.m in Sources */,
 				435E3C6F20C02BB2002B7A7F /* NSData+JKPCM.m in Sources */,
 				435E3C5020C02BB2002B7A7F /* UITableView+JKiOS7Style.m in Sources */,
 				435E3C0820C02BB2002B7A7F /* UIButton+JKSubmitting.m in Sources */,
