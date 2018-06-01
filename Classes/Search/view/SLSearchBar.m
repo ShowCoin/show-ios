@@ -88,6 +88,51 @@ NS_ASSUME_NONNULL_END
     [self.textField setTintColor:kthemeBlackColor];
     [_buttonCenter setTitleColor:_searchHeight>0?RGBACOLOR(255, 255, 255, .40):kThemeWhiteColor forState:UIControlStateNormal];
 }
+#pragma mark - --- 2. delegate 视图委托 ---
+#pragma mark - UITextField delegate
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+{
+    if (self.canHideCancelButton) {
+        CGRect frameButtonCenter = self.buttonCenter.frame;
+        frameButtonCenter.origin.x = self.leadingOrTailMargin*2;
+        [UIView animateWithDuration:0.3 animations:^{
+            self.buttonCenter.frame = frameButtonCenter;
+            if (self.showsCancelButton) {
+                self.buttonCancel.frame = CGRectMake(self.frame.size.width - 60, 0, 60, SLSearchBarHeight);
+                self.textField.frame = CGRectMake(self.leadingOrTailMargin, 8, self.buttonCancel.frame.origin.x-self.leadingOrTailMargin, SLTextFieldHeight);
+            }
+        } completion:^(BOOL finished) {
+            [self.buttonCenter setHidden:YES];
+            [self.imageIcon setHidden:NO];
+            self.textField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:self.placeholder attributes:@{NSForegroundColorAttributeName:self.placeholderColor}];
+        }];
+    } else {
+        [self.buttonCenter setHidden:YES];
+        [self.imageIcon setHidden:NO];
+        self.textField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:self.placeholder attributes:@{NSForegroundColorAttributeName:self.placeholderColor}];
+    }
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(searchBarShouldBeginEditing:)])
+    {
+        return [self.delegate searchBarShouldBeginEditing:self];
+    }
+    return YES;
+}
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    if (self.delegate && [self.delegate respondsToSelector:@selector(searchBarTextDidBeginEditing:)])
+    {
+        [self.delegate searchBarTextDidBeginEditing:self];
+    }
+}
+- (BOOL)textFieldShouldEndEditing:(UITextField *)textField
+{
+    if (self.delegate && [self.delegate respondsToSelector:@selector(searchBarShouldEndEditing:)])
+    {
+        return [self.delegate searchBarShouldEndEditing:self];
+    }
+    return YES;
+}
 
 
 @end
