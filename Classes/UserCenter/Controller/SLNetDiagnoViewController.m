@@ -91,7 +91,37 @@
 }
 
 
+- (void)netDiagnosisDidEnd:(NSString *)allLogInfo;
+{
+    NSLog(@"logInfo>>>>>\n%@", allLogInfo);
+    //可以保存到文件，也可以通过邮件发送回来
+    @weakify(self)
+    dispatch_async(dispatch_get_main_queue(), ^{
+        @strongify(self)
+        [self.indicatorView stopAnimating];
+        self.isRunning = NO;
+    });
+}
 
+- (void)emailLogInfo
+{
+    [_netDiagnoService printLogInfo];
+}
+
+
+#pragma mark -
+#pragma mark - textFieldDelegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
 
 /*
 #pragma mark - Navigation
