@@ -17,5 +17,13 @@
     return YES;
 }
 
+- (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    if (event.type == UIEventSubtypeMotionShake) {
+        //   [SULogger visibleChange];
+    }
+}
+
+
 
 @end
