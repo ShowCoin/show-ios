@@ -824,4 +824,73 @@
     [self setAttributeBtnTextWithButton:self.walletBtn andStr:_userModel.showCoinStr];
     
 }
+-(void)setAttributeBtnTextWithButton:(UIButton *)sender andStr:(NSString *)str
+{
+    NSMutableAttributedString * firstPart = [[NSMutableAttributedString alloc] initWithString:@"0"];
+    if (sender == self.fansBtn) {
+        
+        if (!IsStrEmpty(str)) {
+            firstPart = [[NSMutableAttributedString alloc] initWithString:str];
+        }
+        NSDictionary * firstAttributes = @{ NSFontAttributeName:Font_Regular(20*Proportion375),NSForegroundColorAttributeName:kThemeWhiteColor,};
+        [firstPart setAttributes:firstAttributes range:NSMakeRange(0,firstPart.length)];
+        
+        NSMutableAttributedString * secondPart = [[NSMutableAttributedString alloc] initWithString:@"\n"];
+        NSDictionary * secondAttributes = @{NSFontAttributeName:[UIFont systemFontOfSize:10],NSForegroundColorAttributeName:[UIColor blueColor],};
+        [secondPart setAttributes:secondAttributes range:NSMakeRange(0,secondPart.length)];
+        
+        NSMutableAttributedString * thirdPart = [[NSMutableAttributedString alloc] initWithString:@"粉丝"];
+        NSDictionary * thirdAttributes = @{NSFontAttributeName:Font_Medium(14*Proportion375),NSForegroundColorAttributeName:kThemeWhiteColor,};
+        [thirdPart setAttributes:thirdAttributes range:NSMakeRange(0,thirdPart.length)];
+        
+        [firstPart appendAttributedString:secondPart];
+        [firstPart appendAttributedString:thirdPart];
+        [firstPart addAttribute:NSShadowAttributeName value:_shadowColor range:NSMakeRange(0,firstPart.length)];
+        [self.fansBtn setAttributedTitle:firstPart forState:UIControlStateNormal];
+        
+    }else if (sender == self.concerBtn){
+        
+        if (!IsStrEmpty(str)) {
+            firstPart = [[NSMutableAttributedString alloc] initWithString:str];
+        }
+        NSDictionary * firstAttributes = @{ NSFontAttributeName:Font_Regular(20*Proportion375),NSForegroundColorAttributeName:kThemeWhiteColor,};
+        [firstPart setAttributes:firstAttributes range:NSMakeRange(0,firstPart.length)];
+        
+        NSMutableAttributedString * secondPart = [[NSMutableAttributedString alloc] initWithString:@"\n"];
+        NSDictionary * secondAttributes = @{NSFontAttributeName:[UIFont systemFontOfSize:10],NSForegroundColorAttributeName:[UIColor blueColor],};
+        [secondPart setAttributes:secondAttributes range:NSMakeRange(0,secondPart.length)];
+        
+        NSMutableAttributedString * thirdPart = [[NSMutableAttributedString alloc] initWithString:@"关注"];
+        NSDictionary * thirdAttributes = @{NSFontAttributeName:Font_Medium(14*Proportion375),NSForegroundColorAttributeName:kThemeWhiteColor,};
+        [thirdPart setAttributes:thirdAttributes range:NSMakeRange(0,thirdPart.length)];
+        
+        [firstPart appendAttributedString:secondPart];
+        [firstPart appendAttributedString:thirdPart];
+        [firstPart addAttribute:NSShadowAttributeName value:_shadowColor range:NSMakeRange(0,firstPart.length)];
+        
+        [self.concerBtn setAttributedTitle:firstPart forState:UIControlStateNormal];
+        
+    }else{
+        if (!IsStrEmpty(str)) {
+            firstPart = [[NSMutableAttributedString alloc] initWithString:str];
+        }
+        NSDictionary * firstAttributes = @{ NSFontAttributeName:Font_Regular(20*Proportion375),NSForegroundColorAttributeName:kThemeWhiteColor,};
+        [firstPart setAttributes:firstAttributes range:NSMakeRange(0,firstPart.length)];
+        
+        NSMutableAttributedString * secondPart = [[NSMutableAttributedString alloc] initWithString:@"\n"];
+        NSDictionary * secondAttributes = @{NSFontAttributeName:[UIFont systemFontOfSize:10],NSForegroundColorAttributeName:[UIColor blueColor],};
+        [secondPart setAttributes:secondAttributes range:NSMakeRange(0,secondPart.length)];
+        
+        NSMutableAttributedString * thirdPart = [[NSMutableAttributedString alloc] initWithString:@"钱包"];
+        NSDictionary * thirdAttributes = @{NSFontAttributeName:Font_Medium(14*Proportion375),NSForegroundColorAttributeName:kThemeWhiteColor,};
+        [thirdPart setAttributes:thirdAttributes range:NSMakeRange(0,thirdPart.length)];
+        
+        [firstPart appendAttributedString:secondPart];
+        [firstPart appendAttributedString:thirdPart];
+        [firstPart addAttribute:NSShadowAttributeName value:_shadowColor range:NSMakeRange(0,firstPart.length)];
+        
+        [self.walletBtn setAttributedTitle:firstPart forState:UIControlStateNormal];
+    }
+}
+
 @end
