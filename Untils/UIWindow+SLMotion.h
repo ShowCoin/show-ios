@@ -11,6 +11,6 @@
 @interface UIWindow (SLMotion)
 
 - (BOOL)canBecomeFirstResponder;
-
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event;
 
 @end
