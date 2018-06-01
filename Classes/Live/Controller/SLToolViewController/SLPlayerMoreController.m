@@ -44,7 +44,7 @@ static dispatch_once_t onceToken;
  do animator delegate objc
 
  @param dismissed view
- @return <#return value description#>
+ @return protocal vc <UIViewControllerAnimatedTransitioning>
  */
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
     _isPresent = NO;
