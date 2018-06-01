@@ -747,4 +747,36 @@
     _sexImg .image=[AccountUserInfoModel.gender  isEqualToString:@"1"]?[UIImage imageNamed:@"userhome_sex_man"]:[UIImage imageNamed:@"userhome_sex_women"];
     
 }
+
+-(UIView *)bottomAnimationLine
+{
+    if (!_bottomAnimationLine) {
+        _bottomAnimationLine = [[UIView alloc] init];
+        _bottomAnimationLine.backgroundColor = kThemeWhiteColor;
+    }
+    return _bottomAnimationLine;
+}
+
+-(void)setLabelSpace:(UILabel*)label withValue:(NSString*)str withFont:(UIFont*)font {
+    if (!str.length) {
+        return;
+    }
+    NSMutableParagraphStyle *paraStyle = [[NSMutableParagraphStyle alloc] init];
+    paraStyle.lineBreakMode = NSLineBreakByCharWrapping;
+    paraStyle.alignment = NSTextAlignmentCenter;
+    paraStyle.lineSpacing = 0; //设置行间距
+    paraStyle.hyphenationFactor = 1.0;
+    paraStyle.firstLineHeadIndent = 0.0;
+    paraStyle.paragraphSpacingBefore = 0.0;
+    paraStyle.headIndent = 0;
+    paraStyle.tailIndent = 0;
+    //    设置字间距 NSKernAttributeName:@1.5f
+    NSDictionary *dic = @{NSFontAttributeName:font, NSParagraphStyleAttributeName:paraStyle, NSKernAttributeName:@0.5f
+                          };
+    
+    NSAttributedString *attributeStr = [[NSAttributedString alloc] initWithString:str attributes:dic];
+    label.attributedText = attributeStr;
+    self.labelHeight = label.height;
+}
+
 @end
