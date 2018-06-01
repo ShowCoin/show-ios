@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface UITextView (Rect)
+- (NSArray<NSValue *>*)getAllCharacterRects;
 
 @end
