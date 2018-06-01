@@ -1207,6 +1207,7 @@
 		931DAAC820B5A7A6003A0B38 /* SLConvListSystemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLConvListSystemTableViewCell.h; sourceTree = "<group>"; };
 		934E1B9720AC39D900A0B080 /* SLChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLChatViewController.h; sourceTree = "<group>"; };
 		934E1B9820AC3A1E00A0B080 /* SLChatViewController+BlankView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SLChatViewController+BlankView.h"; sourceTree = "<group>"; };
+		93615AE820C142D7000D5658 /* SLBaseWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLBaseWebViewController.h; sourceTree = "<group>"; };
 		938D2FFD20A0C821006A0CDE /* ShowAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowAction.h; sourceTree = "<group>"; };
 		938D302020A35B0A006A0CDE /* ShowLoginAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowLoginAction.h; sourceTree = "<group>"; };
 		9391AA8120BF070300D520F1 /* SLTimerLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLTimerLabel.h; sourceTree = "<group>"; };
@@ -3386,6 +3387,14 @@
 			path = Chat;
 			sourceTree = "<group>";
 		};
+		93615AE720C142C9000D5658 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				93615AE820C142D7000D5658 /* SLBaseWebViewController.h */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		9391AA7F20BF06EB00D520F1 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -3417,6 +3426,7 @@
 		9391AA9120C038A000D520F1 /* WebView */ = {
 			isa = PBXGroup;
 			children = (
+				93615AE720C142C9000D5658 /* Base */,
 				9391AA9820C046B800D520F1 /* SLWebView.h */,
 				9391AA9220C038C000D520F1 /* SLWebViewController.h */,
 				9391AA9520C039BB00D520F1 /* SLWebViewJSFuncNameConst.h */,
