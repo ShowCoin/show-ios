@@ -18,6 +18,22 @@ static CGFloat kMessageViewH = 75 + 44 + 10;
 
 @implementation SLPlayerMoreController
 
+static id _instance = nil;
+static dispatch_once_t onceToken;
+
+/**
+ <#Description#>
+
+ @return <#return value description#>
+ */
++ (instancetype)shared {
+    dispatch_once(&onceToken, ^{
+        _instance = [[self alloc] init];
+    });
+    return _instance;
+}
+
+
 @end
 
 @implementation SLMoreAnimater {
