@@ -133,13 +133,15 @@ typedef enum ShowWalletOptionsType {
 
 
 #pragma mark - Account Management (Modal UI)
-
+//添加账户回调
 - (void)show_addAccountCallback ;
+//主管账户回调
 - (void)show_manageAccountAtIndex: (AccountIndex)index callback: (void (^)(void))callback;
 
 
 #pragma mark - Transactions (Modal UI)
 
+//scan回调
 - (void)ShowScan: (void (^)(Transaction*, NSError*))callback;
 
 - (void)show_sendPayment: (Payment*)payment callback: (void (^)(Transaction*, NSError*))callback;
