@@ -41,7 +41,7 @@ static dispatch_once_t onceToken;
 }
 
 /**
- <#Description#>
+ do animator delegate objc
 
  @param dismissed <#dismissed description#>
  @return <#return value description#>
