@@ -10,5 +10,7 @@
 
 @interface SLJPushUntils : NSObject
 
++(void)loginJPush;
+
 
 @end
