@@ -25,5 +25,12 @@
 }
 
 
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    NSLog(@"shake");
+}
 
+- (void)motionCancelled:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+}
 @end
