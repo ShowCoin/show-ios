@@ -10,6 +10,7 @@
 
 @interface UIWindow (SLMotion)
 
+- (BOOL)canBecomeFirstResponder;
 
 
 @end
