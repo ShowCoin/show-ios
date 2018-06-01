@@ -476,5 +476,267 @@
     }
     return _constellationLab;
 }
+-(UILabel *)wordsLab
+{
+    if (!_wordsLab) {
+        _wordsLab = [UILabel labelWithText:@"" textColor:kThemeWhiteColor font:Font_Medium(14*Proportion375) backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentCenter];
+        _wordsLab.numberOfLines = 0;
+        _wordsLab.preferredMaxLayoutWidth = kMainScreenWidth-40 *Proportion375;
+    }
+    return _wordsLab;
+}
+-(UIImageView *)headImgView
+{
+    if (!_headImgView) {
+        _headImgView = [[UIImageView alloc] init];
+        _headImgView.layer.masksToBounds = YES;
+        //        _headImgView.alpha = 0;
+        _headImgView.contentMode =UIViewContentModeScaleAspectFill;
+        
+    }
+    return _headImgView;
+}
+-(UIView *)effColorView
+{
+    if (!_effColorView) {
+        _effColorView  = [[UIView alloc] init];
+        _effColorView.backgroundColor = HexRGBAlpha(0x000000, 0);
+    }
+    return _effColorView;
+}
+-(UIVisualEffectView *)effectview
+{
+    if (!_effectview) {
+        
+        UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+        
+        _effectview = [[UIVisualEffectView alloc] initWithEffect:blur];
+        //        _effectview.alpha = 0.97;
+    }
+    return _effectview;
+}
+
+-(UIView *)bottomWhiteView
+{
+    if (!_bottomWhiteView) {
+        _bottomWhiteView = [[UIView alloc] init];
+        _bottomWhiteView.backgroundColor = kThemeWhiteColor;
+        
+    }
+    return _bottomWhiteView;
+}
+-(UIButton *)fansBtn
+{
+    if (!_fansBtn) {
+        _fansBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        _fansBtn.titleLabel.numberOfLines = 0;
+        _fansBtn.titleLabel.textAlignment = NSTextAlignmentCenter;
+        NSMutableAttributedString * firstPart = [[NSMutableAttributedString alloc] initWithString:@"0"];
+        
+        if (!IsStrEmpty(AccountUserInfoModel.fansCount)) {
+            firstPart = [[NSMutableAttributedString alloc] initWithString:AccountUserInfoModel.fansCount];
+        }
+        NSDictionary * firstAttributes = @{ NSFontAttributeName:Font_Regular(20*Proportion375),NSForegroundColorAttributeName:kThemeWhiteColor,};
+        [firstPart setAttributes:firstAttributes range:NSMakeRange(0,firstPart.length)];
+        
+        NSMutableAttributedString * secondPart = [[NSMutableAttributedString alloc] initWithString:@"\n"];
+        NSDictionary * secondAttributes = @{NSFontAttributeName:[UIFont systemFontOfSize:10],NSForegroundColorAttributeName:[UIColor blueColor],};
+        [secondPart setAttributes:secondAttributes range:NSMakeRange(0,secondPart.length)];
+        
+        NSMutableAttributedString * thirdPart = [[NSMutableAttributedString alloc] initWithString:@"粉丝"];
+        NSDictionary * thirdAttributes = @{NSFontAttributeName:Font_Medium(14*Proportion375),NSForegroundColorAttributeName:kThemeWhiteColor,};
+        [thirdPart setAttributes:thirdAttributes range:NSMakeRange(0,thirdPart.length)];
+        
+        [firstPart appendAttributedString:secondPart];
+        [firstPart appendAttributedString:thirdPart];
+        @weakify(self)
+        [[_fansBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+            @strongify(self)
+            [PageMgr pushFansWithType:1 andUid:self.userModel.uid viewcontroller:self.Controller?:(BaseViewController *)self.viewController];
+        }];
+        
+        [_fansBtn setAttributedTitle:firstPart forState:UIControlStateNormal];
+    }
+    return _fansBtn;
+}
+
+-(UIButton *)concerBtn
+{
+    if (!_concerBtn) {
+        _concerBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        _concerBtn.titleLabel.numberOfLines = 0;
+        _concerBtn.titleLabel.textAlignment = NSTextAlignmentCenter;
+        NSMutableAttributedString * firstPart = [[NSMutableAttributedString alloc] initWithString:@"0"];
+        //        _concerBtn.backgroundColor = kThemeRedColor;
+        
+        if (!IsStrEmpty(AccountUserInfoModel.followCount)) {
+            firstPart = [[NSMutableAttributedString alloc] initWithString:AccountUserInfoModel.followCount];
+        }
+        
+        NSDictionary * firstAttributes = @{ NSFontAttributeName:Font_Regular(20*Proportion375),NSForegroundColorAttributeName:kThemeWhiteColor,};
+        [firstPart setAttributes:firstAttributes range:NSMakeRange(0,firstPart.length)];
+        
+        NSMutableAttributedString * secondPart = [[NSMutableAttributedString alloc] initWithString:@"\n"];
+        NSDictionary * secondAttributes = @{NSFontAttributeName:[UIFont systemFontOfSize:10],NSForegroundColorAttributeName:[UIColor blueColor],};
+        [secondPart setAttributes:secondAttributes range:NSMakeRange(0,secondPart.length)];
+        
+        NSMutableAttributedString * thirdPart = [[NSMutableAttributedString alloc] initWithString:@"关注"];
+        NSDictionary * thirdAttributes = @{NSFontAttributeName:Font_Medium(14*Proportion375),NSForegroundColorAttributeName:kThemeWhiteColor,};
+        [thirdPart setAttributes:thirdAttributes range:NSMakeRange(0,thirdPart.length)];
+        
+        [firstPart appendAttributedString:secondPart];
+        [firstPart appendAttributedString:thirdPart];
+        
+        [_concerBtn setAttributedTitle:firstPart forState:UIControlStateNormal];
+        @weakify(self)
+        [[_concerBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+            @strongify(self)
+            [PageMgr pushFansWithType:0 andUid:self.userModel.uid viewcontroller:self.Controller?:(BaseViewController *)self.viewController];
+        }];
+        
+        [_concerBtn setTitleShadowColor:kThemeShadowColor forState:UIControlStateNormal];
+        [_concerBtn.titleLabel setShadowOffset:CGSizeMake(1, 1)];
+        
+    }
+    return _concerBtn;
+}
+-(UIButton *)walletBtn
+{
+    if (!_walletBtn) {
+        _walletBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        _walletBtn.titleLabel.numberOfLines = 0;
+        _walletBtn.titleLabel.textAlignment = NSTextAlignmentCenter;
+        
+        NSMutableAttributedString * firstPart = [[NSMutableAttributedString alloc] initWithString:@"0"];
+        
+        if (!IsStrEmpty(AccountUserInfoModel.showCoinStr)) {
+            firstPart = [[NSMutableAttributedString alloc] initWithString:AccountUserInfoModel.showCoinStr];
+        }
+        NSDictionary * firstAttributes = @{ NSFontAttributeName:Font_Regular(20*Proportion375),NSForegroundColorAttributeName:kThemeWhiteColor,};
+        [firstPart setAttributes:firstAttributes range:NSMakeRange(0,firstPart.length)];
+        
+        NSMutableAttributedString * secondPart = [[NSMutableAttributedString alloc] initWithString:@"\n"];
+        NSDictionary * secondAttributes = @{NSFontAttributeName:[UIFont systemFontOfSize:10],NSForegroundColorAttributeName:[UIColor blueColor],};
+        [secondPart setAttributes:secondAttributes range:NSMakeRange(0,secondPart.length)];
+        
+        NSMutableAttributedString * thirdPart = [[NSMutableAttributedString alloc] initWithString:@"钱包"];
+        NSDictionary * thirdAttributes = @{NSFontAttributeName:Font_Medium(14*Proportion375),NSForegroundColorAttributeName:kThemeWhiteColor,};
+        [thirdPart setAttributes:thirdAttributes range:NSMakeRange(0,thirdPart.length)];
+        
+        [firstPart appendAttributedString:secondPart];
+        [firstPart appendAttributedString:thirdPart];
+        
+        [_walletBtn setAttributedTitle:firstPart forState:UIControlStateNormal];
+        @weakify(self)
+        [[_walletBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+            @strongify(self)
+            [PageMgr pushToWalletController:self.userModel viewcontroller:self.Controller?:(BaseViewController *)self.viewController];
+        }];
+        [_walletBtn setTitleShadowColor:kThemeShadowColor forState:UIControlStateNormal];
+        [_walletBtn.titleLabel setShadowOffset:CGSizeMake(1, 1)];
+        
+    }
+    return _walletBtn;
+}
+-(UIButton *)toConcerBtn
+{
+    if (!_toConcerBtn) {
+        _toConcerBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_toConcerBtn setTitle:@"+关注" forState:UIControlStateNormal];
+        [_toConcerBtn setTitleColor:kThemeWhiteColor forState:UIControlStateNormal];
+        _toConcerBtn.titleLabel.font = Font_Semibold(14*Proportion375);
+        _toConcerBtn.layer.borderWidth = 0.5*Proportion375;
+        _toConcerBtn.layer.borderColor = kThemeWhiteColor.CGColor;
+        //        _toConcerBtn.layer.cornerRadius = 6*Proportion375;
+        @weakify(self)
+        [[_toConcerBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+            @strongify(self)
+            [self concerAction];
+        }];
+    }
+    return _toConcerBtn;
+}
+-(UIButton *)tosendMessageBtn
+{
+    if (!_tosendMessageBtn) {
+        _tosendMessageBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_tosendMessageBtn setTitle:@"发消息" forState:UIControlStateNormal];
+        [_tosendMessageBtn setTitleColor:kThemeWhiteColor forState:UIControlStateNormal];
+        _tosendMessageBtn.titleLabel.font = Font_Semibold(14*Proportion375);
+        _tosendMessageBtn.layer.borderWidth = 0.5*Proportion375;
+        _tosendMessageBtn.layer.borderColor = kThemeWhiteColor.CGColor;
+        //        _tosendMessageBtn.layer.cornerRadius = 6*Proportion375;
+        @weakify(self)
+        [[_tosendMessageBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+            @strongify(self)
+            [ PageMgr pushToChatViewControllerWithTargetUser:self.userModel];
+            //            if (self.delegate && [self.delegate respondsToSelector:@selector(SLUserViewHeaderConcernActionDelegateWithShare)] ) {
+            //                [self.delegate SLUserViewHeaderConcernActionDelegateWithShare];
+            //            }
+        }];
+        
+    }
+    return _tosendMessageBtn;
+}
+-(UIButton *)shareBtn
+{
+    if (!_shareBtn) {
+        _shareBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_shareBtn setTitle:@"分享主页" forState:UIControlStateNormal];
+        [_shareBtn setTitleColor:kThemeWhiteColor forState:UIControlStateNormal];
+        _shareBtn.titleLabel.font = Font_Semibold(14*Proportion375);
+        _shareBtn.layer.borderWidth = 0.5*Proportion375;
+        _shareBtn.layer.borderColor = kThemeWhiteColor.CGColor;
+        //        _shareBtn.layer.cornerRadius = 6*Proportion375;
+        @weakify(self)
+        [[_shareBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+            @strongify(self)
+            [HDHud showMessageInView:self.viewController.view title:@"敬请期待"];
+            //            if (self.delegate && [self.delegate respondsToSelector:@selector(SLUserViewHeaderConcernActionDelegateWithShare)] ) {
+            //                [self.delegate SLUserViewHeaderConcernActionDelegateWithShare];
+            //            }
+            
+        }];
+        
+    }
+    return _shareBtn;
+}
+-(UIButton *)worksBtn
+{
+    if (!_worksBtn) {
+        _worksBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        _worksBtn.titleLabel.font = Font_Medium(15*Proportion375);
+        [_worksBtn setTitle:@"作品" forState:UIControlStateNormal];
+        [_worksBtn setTitleColor:kThemeWhiteColor forState:UIControlStateNormal];
+        [_worksBtn setBackgroundColor:kthemeBlackColor forState:UIControlStateNormal];
+        [[_worksBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+            [self.bottomAnimationLine mas_remakeConstraints:^(MASConstraintMaker *make) {
+                make.bottom.equalTo(self);
+                make.centerX.equalTo(self.worksBtn);
+                make.size.mas_equalTo(CGSizeMake(40*Proportion375, 1*Proportion375));
+            }];
+            [UIView animateWithDuration:0.2 animations:^{
+                
+                [self layoutIfNeeded];
+            }];
+        }];
+    }
+    return _worksBtn;
+}
+-(UIButton *)likesBtn
+{
+    if (!_likesBtn) {
+        _likesBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        _likesBtn.titleLabel.font = Font_Medium(15*Proportion375);
+        [_likesBtn setTitle:@"喜欢" forState:UIControlStateNormal];
+        [_likesBtn setTitleColor:kThemeWhiteColor forState:UIControlStateNormal];
+        [_likesBtn setBackgroundColor:kthemeBlackColor forState:UIControlStateNormal];
+        [[_likesBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+            [HDHud showMessageInView:self title:@"敬请期待"];
+        }];
+        
+    }
+    return _likesBtn;
+}
 
 @end
