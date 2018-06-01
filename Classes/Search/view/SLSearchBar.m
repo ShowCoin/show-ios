@@ -133,6 +133,60 @@ NS_ASSUME_NONNULL_END
     }
     return YES;
 }
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    if (textField.text.length>0) {
+        
+    }
+    else
+    {
+        [self.buttonCenter setHidden:NO];
+        [self.imageIcon setHidden:YES];
+        self.textField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"" attributes:@{NSForegroundColorAttributeName:self.placeholderColor}];
+        self.textField.text = @"";
+    }
+    
+    if (self.canHideCancelButton) {
+        [UIView animateWithDuration:0.3 animations:^{
+            if (self.showsCancelButton) {
+                self.buttonCancel.frame = CGRectMake(self.frame.size.width, 0, 60, SLSearchBarHeight);
+                self.textField.frame = CGRectMake(self.leadingOrTailMargin, 8, self.frame.size.width-self.leadingOrTailMargin*2, SLTextFieldHeight);
+            }
+            self.buttonCenter.center = self.textField.center;
+            //            self.buttonCenter.left= CGRectGetMinX(self.textField.frame)+15;
+        } completion:^(BOOL finished) {
+            
+        }];
+    }
+
+    if (self.delegate && [self.delegate respondsToSelector:@selector(searchBarTextDidEndEditing:)])
+    {
+        [self.delegate searchBarTextDidEndEditing:self];
+    }
+    
+}
+-(void)textFieldDidChange:(UITextField *)textField
+{
+    
+    if (textField.text.length > 0) {
+        [self.buttonCancel setHighlighted:YES];
+    }else {
+        [self.buttonCancel setHighlighted:NO];
+    }
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(searchBar:textDidChange:)])
+    {
+        [self.delegate searchBar:self textDidChange:textField.text];
+    }
+}
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    if (self.delegate && [self.delegate respondsToSelector:@selector(searchBar:shouldChangeTextInRange:replacementText:)])
+    {
+        return [self.delegate searchBar:self shouldChangeTextInRange:range replacementText:string];
+    }
+    return YES;
+}
 
 
 @end
