@@ -824,4 +824,112 @@
     [self setAttributeBtnTextWithButton:self.walletBtn andStr:_userModel.showCoinStr];
     
 }
+-(void)setAttributeBtnTextWithButton:(UIButton *)sender andStr:(NSString *)str
+{
+    NSMutableAttributedString * firstPart = [[NSMutableAttributedString alloc] initWithString:@"0"];
+    if (sender == self.fansBtn) {
+        
+        if (!IsStrEmpty(str)) {
+            firstPart = [[NSMutableAttributedString alloc] initWithString:str];
+        }
+        NSDictionary * firstAttributes = @{ NSFontAttributeName:Font_Regular(20*Proportion375),NSForegroundColorAttributeName:kThemeWhiteColor,};
+        [firstPart setAttributes:firstAttributes range:NSMakeRange(0,firstPart.length)];
+        
+        NSMutableAttributedString * secondPart = [[NSMutableAttributedString alloc] initWithString:@"\n"];
+        NSDictionary * secondAttributes = @{NSFontAttributeName:[UIFont systemFontOfSize:10],NSForegroundColorAttributeName:[UIColor blueColor],};
+        [secondPart setAttributes:secondAttributes range:NSMakeRange(0,secondPart.length)];
+        
+        NSMutableAttributedString * thirdPart = [[NSMutableAttributedString alloc] initWithString:@"粉丝"];
+        NSDictionary * thirdAttributes = @{NSFontAttributeName:Font_Medium(14*Proportion375),NSForegroundColorAttributeName:kThemeWhiteColor,};
+        [thirdPart setAttributes:thirdAttributes range:NSMakeRange(0,thirdPart.length)];
+        
+        [firstPart appendAttributedString:secondPart];
+        [firstPart appendAttributedString:thirdPart];
+        [firstPart addAttribute:NSShadowAttributeName value:_shadowColor range:NSMakeRange(0,firstPart.length)];
+        [self.fansBtn setAttributedTitle:firstPart forState:UIControlStateNormal];
+        
+    }else if (sender == self.concerBtn){
+        
+        if (!IsStrEmpty(str)) {
+            firstPart = [[NSMutableAttributedString alloc] initWithString:str];
+        }
+        NSDictionary * firstAttributes = @{ NSFontAttributeName:Font_Regular(20*Proportion375),NSForegroundColorAttributeName:kThemeWhiteColor,};
+        [firstPart setAttributes:firstAttributes range:NSMakeRange(0,firstPart.length)];
+        
+        NSMutableAttributedString * secondPart = [[NSMutableAttributedString alloc] initWithString:@"\n"];
+        NSDictionary * secondAttributes = @{NSFontAttributeName:[UIFont systemFontOfSize:10],NSForegroundColorAttributeName:[UIColor blueColor],};
+        [secondPart setAttributes:secondAttributes range:NSMakeRange(0,secondPart.length)];
+        
+        NSMutableAttributedString * thirdPart = [[NSMutableAttributedString alloc] initWithString:@"关注"];
+        NSDictionary * thirdAttributes = @{NSFontAttributeName:Font_Medium(14*Proportion375),NSForegroundColorAttributeName:kThemeWhiteColor,};
+        [thirdPart setAttributes:thirdAttributes range:NSMakeRange(0,thirdPart.length)];
+        
+        [firstPart appendAttributedString:secondPart];
+        [firstPart appendAttributedString:thirdPart];
+        [firstPart addAttribute:NSShadowAttributeName value:_shadowColor range:NSMakeRange(0,firstPart.length)];
+        
+        [self.concerBtn setAttributedTitle:firstPart forState:UIControlStateNormal];
+        
+    }else{
+        if (!IsStrEmpty(str)) {
+            firstPart = [[NSMutableAttributedString alloc] initWithString:str];
+        }
+        NSDictionary * firstAttributes = @{ NSFontAttributeName:Font_Regular(20*Proportion375),NSForegroundColorAttributeName:kThemeWhiteColor,};
+        [firstPart setAttributes:firstAttributes range:NSMakeRange(0,firstPart.length)];
+        
+        NSMutableAttributedString * secondPart = [[NSMutableAttributedString alloc] initWithString:@"\n"];
+        NSDictionary * secondAttributes = @{NSFontAttributeName:[UIFont systemFontOfSize:10],NSForegroundColorAttributeName:[UIColor blueColor],};
+        [secondPart setAttributes:secondAttributes range:NSMakeRange(0,secondPart.length)];
+        
+        NSMutableAttributedString * thirdPart = [[NSMutableAttributedString alloc] initWithString:@"钱包"];
+        NSDictionary * thirdAttributes = @{NSFontAttributeName:Font_Medium(14*Proportion375),NSForegroundColorAttributeName:kThemeWhiteColor,};
+        [thirdPart setAttributes:thirdAttributes range:NSMakeRange(0,thirdPart.length)];
+        
+        [firstPart appendAttributedString:secondPart];
+        [firstPart appendAttributedString:thirdPart];
+        [firstPart addAttribute:NSShadowAttributeName value:_shadowColor range:NSMakeRange(0,firstPart.length)];
+        
+        [self.walletBtn setAttributedTitle:firstPart forState:UIControlStateNormal];
+    }
+}
+
+-(void)concerAction{
+    SLFollowUserAction *action  = [SLFollowUserAction action];
+    
+    action.to_uid = self.userModel.uid;
+    if (self.userModel.isFollowed.integerValue == 1) {
+        action.type = FollowTypeDelete;
+    }else{
+        action.type = FollowTypeAdd;
+    }
+    @weakify(self);
+    [self sl_startRequestAction:action Sucess:^(id result) {
+        @strongify(self);
+        if (self.userModel.isFollowed.integerValue == 1) {
+            self.userModel.isFollowed = @"0";
+            [self.toConcerBtn setTitle:@"+ 关注" forState:UIControlStateNormal];
+            self.toConcerBtn.layer.borderWidth = 0*Proportion375;
+            self.toConcerBtn.layer.borderColor = kThemeWhiteColor.CGColor;
+            self.toConcerBtn.backgroundColor = kThemeRedColor;
+        }else{
+            self.userModel.isFollowed = @"1";
+            [self.toConcerBtn setTitle:@"已关注" forState:UIControlStateNormal];
+            self.toConcerBtn.layer.borderWidth = 0.5*Proportion375;
+            self.toConcerBtn.layer.borderColor = kThemeWhiteColor.CGColor;
+            self.toConcerBtn.backgroundColor = [UIColor clearColor];
+        }
+        NSMutableDictionary * dic = [NSMutableDictionary dictionary];
+        [dic setObject:self.userModel.isFollowed forKey:@"isFollowed"];
+        [[NSNotificationCenter defaultCenter] postNotificationName:kCorcernNotification object:nil userInfo:dic];
+        
+        NSDictionary * dict = @{@"type":@(action.type),@"uid":self.userModel.uid};
+        [[NSNotificationCenter defaultCenter]postNotificationName:kFollowUserStatusWithUidNotification object:dict];
+        
+    } FaildBlock:^(NSError *error) {
+        [ShowWaringView waringView:error.userInfo[@"msg"] style:WaringStyleRed];
+        
+    }];
+}
+
+
 @end

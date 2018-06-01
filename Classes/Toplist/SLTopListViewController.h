@@ -9,5 +9,7 @@
 #import "BaseViewController.h"
 
 @interface SLTopListViewController : BaseViewController
+
 @property(retain,nonatomic)NSString * uid;
+
 @end
