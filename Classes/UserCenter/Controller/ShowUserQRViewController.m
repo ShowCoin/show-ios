@@ -41,10 +41,7 @@
     [self.navigationBarView setNavigationColor:NavigationColorBlack];
     [self.navigationBarView setRightIconImage:[UIImage imageNamed:@"userhome_avatar_more"] forState:UIControlStateNormal];
 
-
-
     [self setupViews];
-
 }
 - (void)setupViews {
     [self.view setBackgroundColor:kBlackThemeBGColor];

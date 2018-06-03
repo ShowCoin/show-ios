@@ -30,4 +30,5 @@ typedef NS_ENUM(NSInteger,SLLiveListCellType) {
 
 - (instancetype)initWithIsMe:(BOOL)isme andUserModel:(ShowUserModel *)usermodel;
 //跳转他们个人页数据模型   初始化填入
+
 @end
