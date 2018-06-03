@@ -47,13 +47,17 @@
 @property (nonatomic,strong)UIButton * shareBtn;
 @property (nonatomic,strong)UIButton * toConcerBtn;
 @property (nonatomic,strong)UIButton * tosendMessageBtn;
-
+//头部视图
 @property (nonatomic,strong)UIImageView * headImgView;
+//磨砂颜色
 @property (nonatomic,strong)UIView * effColorView;
+//磨砂视图
 @property (nonatomic,strong)UIVisualEffectView * effectview;
-
+//活跃
 @property (nonatomic,strong)UIButton * worksBtn;
+//喜欢
 @property (nonatomic,strong)UIButton * likesBtn;
+//底部的线
 @property (nonatomic,strong)UIView * bottomAnimationLine;
 
 //用户模型
