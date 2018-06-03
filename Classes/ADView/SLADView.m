@@ -175,6 +175,52 @@
     }
 }
 
+-(MPMoviePlayerController *)moviePlayer{
+    if (!_moviePlayer) {
+        NSString *path=[[NSBundle mainBundle] pathForResource:@"1" ofType:@"mp4"];
+        NSURL *movieURL = [NSURL fileURLWithPath:path];
+        MPMoviePlayerController *moviePlayer = [[MPMoviePlayerController alloc] initWithContentURL:movieURL];
+        moviePlayer.view.frame =CGRectMake(0, 0, kMainScreenWidth, kMainScreenHeight);
+        moviePlayer.movieSourceType=MPMovieSourceTypeFile;
+        [moviePlayer setScalingMode:MPMovieScalingModeAspectFill];
+        moviePlayer.controlStyle = MPMovieControlStyleNone;
+        moviePlayer.repeatMode = MPMovieRepeatModeOne;
+        _moviePlayer = moviePlayer;
+    }
+    return _moviePlayer;
+}
+
+-(UIImageView *)adImageView{
+    if (!_adImageView) {
+        YYAnimatedImageView *imageView = [[YYAnimatedImageView alloc] initWithFrame: CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
+        imageView.contentMode = UIViewContentModeScaleAspectFill;
+        imageView.userInteractionEnabled = YES;
+        UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget: self action: @selector(didTapAdImageView)];
+        [imageView addGestureRecognizer: singleTap];
+        _adImageView = imageView;
+    }
+    return _adImageView;
+}
+
+-(UIButton *)progressButtonView{
+    if (!_progressButtonView) {
+        UIButton *button = [[UIButton alloc] initWithFrame: CGRectMake([UIScreen mainScreen].bounds.size.width - 70, kMainScreenHeight-55, 50, 30)];
+        [button setTitle: @"跳过" forState: UIControlStateNormal];
+        [button setTitleColor:kGrayBGColor  forState: UIControlStateNormal];
+        
+        button.titleLabel.textAlignment = NSTextAlignmentCenter;
+        button.titleLabel.font = Font_Regular(13);
+        button.backgroundColor = [UIColor clearColor];
+        [button addTarget: self  action: @selector(didClickHideButton) forControlEvents: UIControlEventTouchUpInside];
+        
+        button.layer.borderWidth = 1.0f;
+        button.layer.borderColor = Color(@"ffffff").CGColor;
+        button.layer.masksToBounds = YES;
+        button.layer.cornerRadius = 6;
+        _progressButtonView = button;
+    }
+    return _progressButtonView;
+}
 
 /*
 // Only override drawRect: if you perform custom drawing.
