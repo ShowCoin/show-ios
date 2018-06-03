@@ -396,11 +396,8 @@
 		720F860920B2F59500AD0C54 /* SLGetRyTokenAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 720F860120B2F59500AD0C54 /* SLGetRyTokenAction.m */; };
 		720F860A20B2F59500AD0C54 /* SLRelationAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 720F860220B2F59500AD0C54 /* SLRelationAction.m */; };
 		7239EB2620BD38D300588BED /* SLTopListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7239EB2420BD38D300588BED /* SLTopListViewController.m */; };
-		7239EB3520BD38FC00588BED /* ChangeTextController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7239EB2720BD38FC00588BED /* ChangeTextController.m */; };
 		7239EB3620BD38FC00588BED /* ShowUserQRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7239EB2A20BD38FC00588BED /* ShowUserQRViewController.m */; };
 		7239EB3720BD38FC00588BED /* SLTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7239EB2C20BD38FC00588BED /* SLTextView.m */; };
-		7239EB3A20BD393C00588BED /* ChangeheadportraitController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7239EB3920BD393C00588BED /* ChangeheadportraitController.m */; };
-		7239EB3D20BD5BC900588BED /* ShowForUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7239EB3C20BD5BC900588BED /* ShowForUsViewController.m */; };
 		7239EB3F20BD97D200588BED /* ShowSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7239EB3E20BD97D100588BED /* ShowSettingViewController.m */; };
 		72C7B4F920C3EDE600065BC2 /* SLADView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C7B4F820C3EDE600065BC2 /* SLADView.m */; };
 		72FE9B6620621F59008DD3D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72FE9B6420621F59008DD3D5 /* LaunchScreen.storyboard */; };
@@ -1162,7 +1159,6 @@
 		720F860320B2F59500AD0C54 /* SLGetRyTokenAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLGetRyTokenAction.h; sourceTree = "<group>"; };
 		7239EB2420BD38D300588BED /* SLTopListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLTopListViewController.m; sourceTree = "<group>"; };
 		7239EB2520BD38D300588BED /* SLTopListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLTopListViewController.h; sourceTree = "<group>"; };
-		7239EB2720BD38FC00588BED /* ChangeTextController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeTextController.m; sourceTree = "<group>"; };
 		7239EB2820BD38FC00588BED /* ShowSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowSettingViewController.h; sourceTree = "<group>"; };
 		7239EB2920BD38FC00588BED /* ShowUserQRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowUserQRViewController.h; sourceTree = "<group>"; };
 		7239EB2A20BD38FC00588BED /* ShowUserQRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowUserQRViewController.m; sourceTree = "<group>"; };
@@ -1175,9 +1171,7 @@
 		7239EB3220BD38FC00588BED /* SLTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLTextView.h; sourceTree = "<group>"; };
 		7239EB3320BD38FC00588BED /* UserCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCenterViewController.h; sourceTree = "<group>"; };
 		7239EB3420BD38FC00588BED /* SLCropImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLCropImageViewController.h; sourceTree = "<group>"; };
-		7239EB3920BD393C00588BED /* ChangeheadportraitController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeheadportraitController.m; sourceTree = "<group>"; };
 		7239EB3B20BD468F00588BED /* ChangeTextController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChangeTextController.h; sourceTree = "<group>"; };
-		7239EB3C20BD5BC900588BED /* ShowForUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowForUsViewController.m; sourceTree = "<group>"; };
 		7239EB3E20BD97D100588BED /* ShowSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowSettingViewController.m; sourceTree = "<group>"; };
 		724DBA3820C0377F00EF6406 /* SLUserViewHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLUserViewHeader.h; sourceTree = "<group>"; };
 		72C6166920A0C67500103C44 /* SLUrgeListAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLUrgeListAction.h; sourceTree = "<group>"; };
@@ -3209,11 +3203,8 @@
 			isa = PBXGroup;
 			children = (
 				7239EB2D20BD38FC00588BED /* ChangeheadportraitController.h */,
-				7239EB3920BD393C00588BED /* ChangeheadportraitController.m */,
 				7239EB3B20BD468F00588BED /* ChangeTextController.h */,
-				7239EB2720BD38FC00588BED /* ChangeTextController.m */,
 				7239EB2E20BD38FC00588BED /* ShowForUsViewController.h */,
-				7239EB3C20BD5BC900588BED /* ShowForUsViewController.m */,
 				7239EB2820BD38FC00588BED /* ShowSettingViewController.h */,
 				7239EB3E20BD97D100588BED /* ShowSettingViewController.m */,
 				7239EB2920BD38FC00588BED /* ShowUserQRViewController.h */,
@@ -3892,7 +3883,6 @@
 				435E3C1220C02BB2002B7A7F /* UIColor+JKModify.m in Sources */,
 				435E3C4A20C02BB2002B7A7F /* UIViewController+JKBlockSegue.m in Sources */,
 				435E3CBB20C02BB2002B7A7F /* CATransaction+JKAnimateWithDuration.m in Sources */,
-				7239EB3A20BD393C00588BED /* ChangeheadportraitController.m in Sources */,
 				435E3B6A20C02BB2002B7A7F /* UIApplicationDemoViewController.m in Sources */,
 				435E3C4220C02BB2002B7A7F /* UIImageView+JKLetters.m in Sources */,
 				435E3C2120C02BB2002B7A7F /* UIView+JKNib.m in Sources */,
@@ -4018,7 +4008,6 @@
 				435E3CC720C02BB2002B7A7F /* UIScrollView+EmptyDataSet.m in Sources */,
 				435E3C4620C02BB2002B7A7F /* UINavigationBar+JKAwesome.m in Sources */,
 				435E3C9F20C02BB2002B7A7F /* NSObject+JKAddProperty.m in Sources */,
-				7239EB3520BD38FC00588BED /* ChangeTextController.m in Sources */,
 				435E3B9C20C02BB2002B7A7F /* NSHTTPCookieStorageDemoViewController.m in Sources */,
 				720F860A20B2F59500AD0C54 /* SLRelationAction.m in Sources */,
 				435E3C9520C02BB2002B7A7F /* NSTimer+JKBlocks.m in Sources */,
@@ -4102,7 +4091,6 @@
 				435E3CCD20C02BB2002B7A7F /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				720F860920B2F59500AD0C54 /* SLGetRyTokenAction.m in Sources */,
 				720F860820B2F59500AD0C54 /* SLMeFansListAction.m in Sources */,
-				7239EB3D20BD5BC900588BED /* ShowForUsViewController.m in Sources */,
 				435E3CAC20C02BB2002B7A7F /* NSManagedObject+JKExtensions.m in Sources */,
 				435E3C8120C02BB2002B7A7F /* NSString+JKRemoveEmoji.m in Sources */,
 				435E3B8620C02BB2002B7A7F /* UIBezierPathDemoViewController.m in Sources */,
