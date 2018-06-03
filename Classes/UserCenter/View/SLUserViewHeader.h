@@ -56,12 +56,18 @@
 @property (nonatomic,strong)UIButton * likesBtn;
 @property (nonatomic,strong)UIView * bottomAnimationLine;
 
+//用户模型
 @property (nonatomic,strong)ShowUserModel * userModel;
+//本人的表识
 @property(nonatomic,assign)BOOL isMe;
+//迷你卡
 @property(nonatomic,assign)BOOL isMiniCard;
+//文字高度
 @property(nonatomic,assign)CGFloat labelHeight;
+//代理
 @property (nonatomic, weak) id<SLUserViewHeaderDelegate> delegate;
+//控制器
 @property(nonatomic,strong)BaseViewController * Controller;
-
+//滚动视图
 @property(nonatomic, strong)UIScrollView *scrollerContentView;
 @end
