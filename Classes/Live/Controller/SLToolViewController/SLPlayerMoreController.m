@@ -52,7 +52,7 @@ static dispatch_once_t onceToken;
 }
 
 /**
- <#Description#>
+ UIViewControllerAnimatedTransitioning
 
  @param presented <#presented description#>
  @param presenting <#presenting description#>
