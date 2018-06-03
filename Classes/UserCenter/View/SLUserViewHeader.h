@@ -19,6 +19,7 @@
 @interface SLUserViewHeader : UICollectionReusableView<HeadPortraitDelegate>{
     NSShadow * _shadowColor;
 }
+
 @property (nonatomic,strong)UILabel * navLab;
 @property (nonatomic,strong)UIButton * leftBtn;
 @property (nonatomic,strong)UIButton * listBtn;
