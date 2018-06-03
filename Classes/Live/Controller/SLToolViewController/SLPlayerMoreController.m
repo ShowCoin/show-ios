@@ -57,7 +57,7 @@ static dispatch_once_t onceToken;
  @param presented presented
  @param presenting presenting
  @param source source
- @return <#return value description#>
+ @return UIViewControllerAnimatedTransitioning
  */
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
     _isPresent = YES;
