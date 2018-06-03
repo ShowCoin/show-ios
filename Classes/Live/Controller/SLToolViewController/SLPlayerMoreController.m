@@ -79,7 +79,7 @@ static dispatch_once_t onceToken;
 /**
  animateTransition
 
- @param transitionContext transitionConte
+ @param transitionContext transitionCont
  */
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext {
     CGFloat h = UIScreen.mainScreen.bounds.size.height;
