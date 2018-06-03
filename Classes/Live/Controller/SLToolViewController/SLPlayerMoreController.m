@@ -67,7 +67,7 @@ static dispatch_once_t onceToken;
 #pragma mark - <UIViewControllerAnimatedTransitioning>
 
 /**
- <#Description#>
+ time
 
  @param transitionContext transitionContext
  @return NSTimeInterval
