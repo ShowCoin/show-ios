@@ -67,6 +67,59 @@
         return 50;
     }
 }
+-(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString * cellID = @"UserInfoListCell";
+    UserInfoListCell * cell=[tableView dequeueReusableCellWithIdentifier:cellID];
+    if (!cell) {
+        cell = [[UserInfoListCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
+        cell.backgroundColor = [UIColor clearColor];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
+    switch (indexPath.row) {
+        case 0:
+            cell.name.text = STRING_USER_EDIT_HEADPORTRAIT_64;
+            [cell.avatar setRoundStyle:YES imageUrl:AccountUserInfoModel.avatar imageHeight:45 vip:NO attestation:NO];
+            break;
+        case 1:
+            cell.name.text = STRING_USER_EDIT_NAME_65;
+            cell.text.text = AccountUserInfoModel.nickname;
+            break;
+        case 2:
+            cell.name.text = STRING_USER_EDIT_ID_66;
+            cell.text.text = AccountUserInfoModel.popularNo;
+            break;
+        case 3:
+            cell.name.text = STRING_USER_EDIT_GENDER_67;
+            cell.text.text = [AccountUserInfoModel.gender isEqualToString:@"1"]?@"男":@"女";
+            break;
+        case 4:
+            cell.name.text = STRING_USER_EDIT_AREA_68;
+            cell.text.text = AccountUserInfoModel.city;
+            break;
+        case 5:
+            cell.name.text = STRING_USER_EDIT_SIGNATURE_69;
+            cell.text.text = AccountUserInfoModel.descriptions;
+            break;
+        case 6:
+            cell.name.text = STRING_USER_EDIT_MYCODE_70;
+            break;
+        default:
+            break;
+    }
+    if (indexPath.row == 0) {
+        [cell setCelltype:firstcellType];
+    }else{
+        [cell setCelltype:othertcellType];
+    }
+    return cell;
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
 
 /*
 #pragma mark - Navigation
