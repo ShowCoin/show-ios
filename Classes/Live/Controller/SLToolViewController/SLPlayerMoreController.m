@@ -54,10 +54,10 @@ static dispatch_once_t onceToken;
 /**
  UIViewControllerAnimatedTransitioning
 
- @param presented <#presented description#>
- @param presenting <#presenting description#>
- @param source <#source description#>
- @return <#return value description#>
+ @param presented presented
+ @param presenting presenting
+ @param source source
+ @return UIViewControllerAnimatedTransitioning
  */
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
     _isPresent = YES;
@@ -67,10 +67,10 @@ static dispatch_once_t onceToken;
 #pragma mark - <UIViewControllerAnimatedTransitioning>
 
 /**
- <#Description#>
+ time
 
- @param transitionContext <#transitionContext description#>
- @return <#return value description#>
+ @param transitionContext transitionContext
+ @return NSTimeInterval
  */
 - (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext {
     return 0.25;
