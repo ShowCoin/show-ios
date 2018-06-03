@@ -222,6 +222,49 @@
     return _progressButtonView;
 }
 
+#pragma mark - 消失动画
+- (void) didClickHideButton {
+    [UIView animateWithDuration: 0.4 animations:^{
+        self.alpha = 0;
+    }completion:^(BOOL finished) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationAdViewDisappear object:nil];
+        [self.delegate ADViewWillDisappear];
+        [self removeFromSuperview];
+        
+    }];
+}
+
+#pragma mark - 图片点击事件
+- (void)didTapAdImageView{
+    
+    [_delegate ADViewWillDisappear];
+    
+}
+
+#pragma mark - 下载图片
+- (void) downloadAdImage {
+    if (self.imageURL.length >0) {
+        [[SDWebImageManager sharedManager].imageDownloader downloadImageWithURL:[[NSURL alloc] initWithString: self.imageURL]options:SDWebImageDownloaderLowPriority  progress:nil  completed:nil];
+    }
+}
+
+
+- (NSString *) imageURL {
+    return SysConfig.start_ad_image;
+}
+
+- (void)hide  {
+    
+    [UIView animateWithDuration:0.8 animations:^{
+        self.alpha = 0;
+    }completion:^(BOOL finished) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationAdViewDisappear object:nil];
+        [self removeFromSuperview];
+        [self.delegate ADViewWillDisappear];
+    }];
+}
+
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
