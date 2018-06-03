@@ -70,7 +70,7 @@ static dispatch_once_t onceToken;
  <#Description#>
 
  @param transitionContext transitionContext
- @return <#return value description#>
+ @return NSTimeInterval
  */
 - (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext {
     return 0.25;
