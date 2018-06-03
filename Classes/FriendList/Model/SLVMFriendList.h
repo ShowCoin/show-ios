@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface SLVMFriendList : NSObject
+//好友列表
 @property (nonatomic,strong)NSMutableDictionary* dataDict;
 @property (nonatomic,strong)NSMutableArray* listAry;
 @property (nonatomic,strong)NSMutableArray* sortArray;
