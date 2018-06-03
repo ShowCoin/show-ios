@@ -77,7 +77,7 @@ static dispatch_once_t onceToken;
 }
 
 /**
- <#Description#>
+ animateTransition
 
  @param transitionContext <#transitionContext description#>
  */
