@@ -333,7 +333,29 @@
     [self.playerLayer addAnimation:scaleAnimation forKey:nil];
 }
 
+- (void)removeFromSuperview {
+    [self.player pause];
+    self.player = nil;
+    self.scaleAnimation.delegate = nil;
+    self.scaleAnimation = nil;
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [super removeFromSuperview];
+}
 
+- (void)playbackFinished:(NSNotification *)notifation {
+    // 回到视频的播放起点
+    [self hide];
+
+//    [self.player seekToTime:kCMTimeZero];
+//    [self.player play];
+}
+- (void)applicationDidBecomeActiveNotification:(NSNotification*)notify {
+    [self.player play];
+}
+
+- (void)applicationWillResignActiveNotification:(NSNotification*)notify {
+    [self.player pause];
+}
 
 /*
 // Only override drawRect: if you perform custom drawing.
