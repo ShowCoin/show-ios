@@ -264,6 +264,76 @@
     }];
 }
 
+-(SLHeadPortrait *)iconImageView{
+    if (!_iconImageView) {
+        SLHeadPortrait *imageView = [[SLHeadPortrait alloc] init];
+        imageView.frame = (CGRect){(kScreenWidth - 70)/2.0,190 * HScale,70,70};
+        imageView.selfFrame = imageView.frame;
+        _iconImageView = imageView;
+    }
+    return _iconImageView;
+}
+
+-(UILabel *)descLabel{
+    if (!_descLabel) {
+        UILabel *label = [[UILabel alloc] init];
+        label.numberOfLines = 0;
+        label.frame = (CGRect){0,285 *HScale ,kScreenWidth,60};
+        label.font = Font_Regular(16);
+        label.textColor = Color(@"333333");
+        label.textAlignment = NSTextAlignmentCenter;
+        _descLabel = label;
+    }
+    return _descLabel;
+}
+
+-(UILabel *)nameLabel{
+    if (!_nameLabel) {
+        UILabel *label = [[UILabel alloc] init];
+        label.numberOfLines = 0;
+        label.frame = (CGRect){0,260 *HScale ,kScreenWidth,60};
+        label.font = Font_Regular(17);
+        label.textColor = Color(@"333333");
+        label.textAlignment = NSTextAlignmentCenter;
+        _nameLabel = label;
+    }
+    return _nameLabel;
+}
+
+-(UIImageView *)descImageView{
+    if (!_descImageView) {
+        UIImageView *imageView = [[UIImageView alloc] init];
+        imageView.frame = (CGRect){ (kScreenWidth - 192 ) /2.0,kScreenHeight - 80,192,29};
+        imageView.image = [UIImage imageNamed:@"desc_icon"];
+        imageView.contentMode = UIViewContentModeScaleAspectFill;
+        _descImageView = imageView;
+    }
+    return _descImageView;
+}
+
+-(void)dealloc{
+    NSLog(@"---%s----",__func__);
+}
+
+- (void)setMovieURL:(NSURL *)movieURL {
+    _movieURL = movieURL;
+}
+
+- (void)willMoveToSuperview:(UIView *)newSuperview {
+    [super willMoveToSuperview:newSuperview];
+    CABasicAnimation *scaleAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
+    self.scaleAnimation = scaleAnimation;
+    scaleAnimation.fromValue = [NSNumber numberWithFloat:0.0];
+    scaleAnimation.toValue = [NSNumber numberWithFloat:1.0];
+    scaleAnimation.duration = 0;
+    scaleAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    AnimationDelegate *animationDelegate = [AnimationDelegate new];
+    animationDelegate.player = self.player;
+    scaleAnimation.delegate = animationDelegate;
+    [self.playerLayer addAnimation:scaleAnimation forKey:nil];
+}
+
+
 
 /*
 // Only override drawRect: if you perform custom drawing.
