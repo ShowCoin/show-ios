@@ -12,4 +12,16 @@
 @implementation NSString (Trim)
 
 
++ (NSString *)trim:(NSString *)val trimCharacterSet:(NSCharacterSet *)characterSet {
+    NSString *returnVal = @"";
+    
+    NSString * vall = [NSString stringWithFormat:@"%@",val]; //加保护
+    if (vall) {
+        returnVal = [vall stringByTrimmingCharactersInSet:characterSet];
+    }
+    
+    return returnVal;
+}
+
+
 @end
