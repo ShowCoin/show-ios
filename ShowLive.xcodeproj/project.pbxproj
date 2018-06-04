@@ -388,8 +388,6 @@
 		43D24A912094A43600C59AC8 /* AppDelegate+ShowRegisterService.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D24A8D2094A43600C59AC8 /* AppDelegate+ShowRegisterService.m */; };
 		43D24A922094A43600C59AC8 /* ShowAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D24A8F2094A43600C59AC8 /* ShowAppDelegate.m */; };
 		43D24A952094B4C500C59AC8 /* ShowNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D24A942094B4C500C59AC8 /* ShowNavigationBar.m */; };
-		720F860420B2F59500AD0C54 /* SLFollowUserAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 720F85F620B2F59400AD0C54 /* SLFollowUserAction.m */; };
-		720F860520B2F59500AD0C54 /* SLConfigAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 720F85FA20B2F59400AD0C54 /* SLConfigAction.m */; };
 		720F860620B2F59500AD0C54 /* SLMeConcernListAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 720F85FB20B2F59400AD0C54 /* SLMeConcernListAction.m */; };
 		720F860720B2F59500AD0C54 /* SLChatStatisticsAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 720F85FE20B2F59500AD0C54 /* SLChatStatisticsAction.m */; };
 		720F860820B2F59500AD0C54 /* SLMeFansListAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 720F860020B2F59500AD0C54 /* SLMeFansListAction.m */; };
@@ -1147,11 +1145,9 @@
 		43D24A932094B4C500C59AC8 /* ShowNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowNavigationBar.h; sourceTree = "<group>"; };
 		43D24A942094B4C500C59AC8 /* ShowNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowNavigationBar.m; sourceTree = "<group>"; };
 		720C304820A35ACC00207500 /* SLGetWithdrawAddressAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLGetWithdrawAddressAction.h; sourceTree = "<group>"; };
-		720F85F620B2F59400AD0C54 /* SLFollowUserAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLFollowUserAction.m; sourceTree = "<group>"; };
 		720F85F720B2F59400AD0C54 /* SLChatStatisticsAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLChatStatisticsAction.h; sourceTree = "<group>"; };
 		720F85F820B2F59400AD0C54 /* SLConfigAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLConfigAction.h; sourceTree = "<group>"; };
 		720F85F920B2F59400AD0C54 /* SLMeConcernListAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLMeConcernListAction.h; sourceTree = "<group>"; };
-		720F85FA20B2F59400AD0C54 /* SLConfigAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLConfigAction.m; sourceTree = "<group>"; };
 		720F85FB20B2F59400AD0C54 /* SLMeConcernListAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLMeConcernListAction.m; sourceTree = "<group>"; };
 		720F85FC20B2F59400AD0C54 /* SLRelationAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLRelationAction.h; sourceTree = "<group>"; };
 		720F85FD20B2F59500AD0C54 /* SLFollowUserAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLFollowUserAction.h; sourceTree = "<group>"; };
@@ -3245,9 +3241,7 @@
 				720F85F720B2F59400AD0C54 /* SLChatStatisticsAction.h */,
 				720F85FE20B2F59500AD0C54 /* SLChatStatisticsAction.m */,
 				720F85F820B2F59400AD0C54 /* SLConfigAction.h */,
-				720F85FA20B2F59400AD0C54 /* SLConfigAction.m */,
 				720F85FD20B2F59500AD0C54 /* SLFollowUserAction.h */,
-				720F85F620B2F59400AD0C54 /* SLFollowUserAction.m */,
 				720F860320B2F59500AD0C54 /* SLGetRyTokenAction.h */,
 				720F860120B2F59500AD0C54 /* SLGetRyTokenAction.m */,
 				720F85F920B2F59400AD0C54 /* SLMeConcernListAction.h */,
@@ -3948,7 +3942,6 @@
 				435E3C3620C02BB2002B7A7F /* UITextView+JKPlaceHolder.m in Sources */,
 				435E3C5820C02BB2002B7A7F /* UITextField+JKInputLimit.m in Sources */,
 				435E3C0720C02BB2002B7A7F /* UIResponder+JKChain.m in Sources */,
-				720F860520B2F59500AD0C54 /* SLConfigAction.m in Sources */,
 				435E3B7420C02BB2002B7A7F /* UIWebViewDemoViewController.m in Sources */,
 				435E3CCE20C02BB2002B7A7F /* UIWebView+Alert.m in Sources */,
 				435E3C2320C02BB2002B7A7F /* UIView+JKConstraints.m in Sources */,
@@ -3986,7 +3979,6 @@
 				435E3C9620C02BB2002B7A7F /* NSSet+JKBlock.m in Sources */,
 				435E3B9320C02BB2002B7A7F /* UISearchBarDemoViewController.m in Sources */,
 				435E3CC020C02BB2002B7A7F /* UITableView+FDKeyedHeightCache.m in Sources */,
-				720F860420B2F59500AD0C54 /* SLFollowUserAction.m in Sources */,
 				435E3C0C20C02BB2002B7A7F /* UIButton+JKMiddleAligning.m in Sources */,
 				435E3BF720C02BB2002B7A7F /* UIImage+JKSuperCompress.m in Sources */,
 				435E3C7920C02BB2002B7A7F /* NSString+JKNormalRegex.m in Sources */,
