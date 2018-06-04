@@ -9,6 +9,8 @@
 #import "BaseViewController.h"
 
 @interface SLFriendListViewController : BaseViewController
+
+//取消操作
 -(void)cancelOperation;
 
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "BaseViewController.h"
-
+//网络相关
 @interface SLNetDiagnoViewController : BaseViewController
 
 @end

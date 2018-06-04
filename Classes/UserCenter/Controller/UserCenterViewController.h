@@ -12,6 +12,7 @@
 #define HeaderHeightWithoutWords        455*Proportion375
 
 @protocol UserCenterDelegate <NSObject>
+
 typedef NS_ENUM(NSInteger,SLLiveListCellType) {
     SLLiveListCellType_homeView  = 1,
     SLLiveListCellType_Usercenter  = 2,
@@ -21,13 +22,22 @@ typedef NS_ENUM(NSInteger,SLLiveListCellType) {
 @optional
 
 @end
+
 @interface UserCenterViewController : BaseViewController<UICollectionViewDelegate,UICollectionViewDataSource,SLUserViewHeaderDelegate>
+
+//用户中心
 @property (nonatomic,strong)UICollectionView * mainCollectionView;
+//浮层
 @property (nonatomic,strong)UIView * floatView;
+//是否是我
 @property (nonatomic,assign)BOOL IsMe;
+//用户模型
 @property (nonatomic,strong)ShowUserModel * userModel;
+//用户中心代理
 @property (nonatomic, weak) id<UserCenterDelegate> delegate;
 
-- (instancetype)initWithIsMe:(BOOL)isme andUserModel:(ShowUserModel *)usermodel;
 //跳转他们个人页数据模型   初始化填入
+- (instancetype)initWithIsMe:(BOOL)isme andUserModel:(ShowUserModel *)usermodel;
+
+
 @end

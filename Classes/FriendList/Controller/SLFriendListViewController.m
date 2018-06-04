@@ -20,13 +20,19 @@
     UILabel *_lblFriendReqCount;
     UIView  *_vwFriendReqCount;
 }
-
+//lbl用户label
 @property (nonatomic, strong) UILabel *lblFriendTotals;
+//列表
 @property (nonatomic, strong) UITableView *tableView;
+//搜索条目
 @property (nonatomic, strong) SLSearchBar *searchBar;
+//是否在加载
 @property (nonatomic, assign) BOOL isLoading;
+//朋友total
 @property (strong, nonatomic) NSString *friendTotal;
+//朋友列表
 @property (nonatomic, strong) SLVMFriendList *vmFrieldList;
+//关注好友请求
 @property (nonatomic, strong) SLFollowUserAction *followUserAction;
 
 @end
@@ -220,6 +226,7 @@
     }
 }
 
+//从本地加载数据
 - (void)loadData {
     [_vmFrieldList loadFromLocal];
     
@@ -266,7 +273,7 @@
     
 }
 
-#pragma tableview
+#pragma tableview header section
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     if (_bSearchTableView) {
@@ -320,6 +327,7 @@
 }
 
 #pragma mark SLFriendCellDelegate
+
 - (void)onClickUser:(SLFansModel*)data{
     [PageMgr pushToUserCenterControllerWithUid:data.uid];
 }
