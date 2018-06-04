@@ -74,6 +74,12 @@ CGFloat const kSLToolViewH  = 140;
     }
 }
 
+
+/**
+ Button click
+
+ @param button UIButton
+ */
 - (void)buttonAction:(UIButton *)button {
     if (button.tag == SLLiveToolTypeClear) {
         button.selected = !button.selected;
