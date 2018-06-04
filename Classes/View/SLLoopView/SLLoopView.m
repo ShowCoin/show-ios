@@ -150,7 +150,7 @@ typedef void(^LoopBlock)(CAAnimation *anim, BOOL flag);
  do CAAnimation method
 
  @param anim ani
- @param flag <#flag description#>
+ @param flag isFinsh
  */
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
     if (flag == NO) return;
