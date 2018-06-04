@@ -83,4 +83,70 @@
 }
 
 // Common initialisation. Must be done once during construction.
+- (void)setupTextSystem
+{
+    _selectableRanges = [NSMutableArray array];
+    // Create a text container and set it up to match our label properties
+    self.textContainer = [[NSTextContainer alloc] init];
+    self.textContainer.lineFragmentPadding = 0;
+    self.textContainer.maximumNumberOfLines = self.numberOfLines;
+    self.textContainer.lineBreakMode = self.lineBreakMode;
+    self.textContainer.size = self.frame.size;
+    
+    // Create a layout manager for rendering
+    self.layoutManager = [[NSLayoutManager alloc] init];
+    self.layoutManager.delegate = self;
+    [self.layoutManager addTextContainer:self.textContainer];
+    
+    // Attach the layou manager to the container and storage
+    [self.textContainer setLayoutManager:self.layoutManager];
+    
+    // Make sure user interaction is enabled so we can accept touches
+    self.userInteractionEnabled = YES;
+    
+    // Establish the text store with our current text
+    [self updateTextStoreWithText];
+    
+}
+
+#pragma mark - Text Storage Management
+
+- (void)setSkipColorForAutomaticDetection:(UIColor *)skipColorForAutomaticDetection
+{
+    _skipColorForAutomaticDetection = skipColorForAutomaticDetection;
+    self.automaticForegroundColorDetectionEnabled = _automaticForegroundColorDetectionEnabled;
+}
+
+- (void)setAutomaticDetectionBackgroundHighlightColor:(UIColor *)automaticDetectionBackgroundHighlightColor
+{
+    _automaticDetectionBackgroundHighlightColor = automaticDetectionBackgroundHighlightColor;
+    self.automaticForegroundColorDetectionEnabled = _automaticForegroundColorDetectionEnabled;
+}
+
+- (void)setAutomaticForegroundColorDetectionEnabled:(BOOL)automaticForegroundColorDetectionEnabled
+{
+    _automaticForegroundColorDetectionEnabled = automaticForegroundColorDetectionEnabled;
+    
+    if (automaticForegroundColorDetectionEnabled) {
+        __weak typeof(self) weakSelf = self;
+        
+        NSMutableArray *ranges = [NSMutableArray array];
+        [self.attributedText enumerateAttribute:NSForegroundColorAttributeName
+                            inRange:NSMakeRange(0,self.attributedText.length)
+                            options:NSAttributedStringEnumerationLongestEffectiveRangeNotRequired
+                         usingBlock:^(id value, NSRange range, BOOL *stop)
+        {
+            if (!weakSelf.skipColorForAutomaticDetection || (weakSelf.skipColorForAutomaticDetection && ![weakSelf.skipColorForAutomaticDetection isEqualToColor:value])) {
+                [ranges addObject:[MZSelectableLabelRange selectableRangeWithRange:range color:self.automaticDetectionBackgroundHighlightColor]];
+            }
+
+        }];
+        self.detectedSelectableRanges = [ranges copy];
+
+    } else {
+        self.detectedSelectableRanges = nil;
+    }
+    [self updateTextStoreWithText];
+}
+
 @end
