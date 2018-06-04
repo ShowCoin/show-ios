@@ -78,7 +78,7 @@ CGFloat const kSLToolViewH  = 140;
 /**
  Button click
 
- @param button UIButton
+ @param button UIButto n
  */
 - (void)buttonAction:(UIButton *)button {
     if (button.tag == SLLiveToolTypeClear) {
