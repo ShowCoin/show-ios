@@ -23,5 +23,9 @@
     return returnVal;
 }
 
++ (NSString *)trimWhitespace:(NSString *)val {
+    return [self trim:val trimCharacterSet:[NSCharacterSet whitespaceCharacterSet]]; //去掉前后空格
+}
+
 
 @end
