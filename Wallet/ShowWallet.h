@@ -63,6 +63,43 @@ extern const NSString* ShowWalletNotificationSyncDateKey;
 #pragma mark - Errors
 
 extern NSErrorDomain WalletErrorDomain;
+//钱包的错误类型
+typedef enum ShowWalletError {
+    ShowWalletErrorNetwork                   =  -1,
+    ShowWalletErrorUnknown                   =  -5,
+    ShowWalletErrorSendCancelled             = -11,
+    ShowWalletErrorSendInsufficientFunds     = -12,
+    ShowWalletErrorNoAccount                 = -40,
+    ShowWalletErrorNotImplemented            = -50,
+} WalletError;
+
+#pragma mark - Constants
+//交易类型
+typedef enum ShowWalletTransactionAction {
+    ShowWalletTransactionActionNormal = 0,
+    ShowWalletTransactionActionRush = 1,
+    ShowWalletTransactionActionCancel = 2
+} WalletTransactionAction ;
+//设置类型ear
+
+typedef enum ShowWalletOptionsType {
+    ShowWalletOptionsTypeDebug,
+    ShowWalletOptionsTypeFirefly
+} WalletOptionsType;
+
+
+@interface ShowWallet : NSObject
+// 根据keychain获取钱包
++ (instancetype)show_walletWithKeychainKey: (NSString*)keychainKey;
+// keychain
+@property (nonatomic, readonly) NSString *keychainKey;
+// 同步的事件
+@property (nonatomic, readonly) NSTimeInterval syncDate;
+//价格
+@property (nonatomic, readonly) float etherPrice;
+//回调
+- (void)show_refresh: (void (^)(BOOL))callback;
+
 
 #pragma mark - Accounts
 
