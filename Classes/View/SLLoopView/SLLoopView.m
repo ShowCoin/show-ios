@@ -145,6 +145,13 @@ typedef void(^LoopBlock)(CAAnimation *anim, BOOL flag);
     [self.layer addAnimation:ani forKey:nil];
 }
 
+
+/**
+ <#Description#>
+
+ @param anim <#anim description#>
+ @param flag <#flag description#>
+ */
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
     if (flag == NO) return;
     if ([[anim valueForKey:kAnimationKey] isEqualToString:kAnimationSecond]) {
