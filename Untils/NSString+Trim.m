@@ -27,5 +27,9 @@
     return [self trim:val trimCharacterSet:[NSCharacterSet whitespaceCharacterSet]]; //去掉前后空格
 }
 
++ (NSString *)trimNewline:(NSString *)val {
+    return [self trim:val trimCharacterSet:[NSCharacterSet newlineCharacterSet]]; //去掉前后回车符
+}
+
 
 @end
