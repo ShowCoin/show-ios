@@ -31,5 +31,9 @@
     return [self trim:val trimCharacterSet:[NSCharacterSet newlineCharacterSet]]; //去掉前后回车符
 }
 
++ (NSString *)trimWhitespaceAndNewline:(NSString *)val {
+    return [self trim:val trimCharacterSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]; //去掉前后空格和回车符
+}
+
 
 @end
