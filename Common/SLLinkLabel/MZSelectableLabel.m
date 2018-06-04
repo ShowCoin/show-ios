@@ -502,4 +502,58 @@
 }
 
 
+#pragma mark - Layout manager delegate
+
+- (BOOL)layoutManager:(NSLayoutManager *)layoutManager shouldBreakLineByWordBeforeCharacterAtIndex:(NSUInteger)charIndex
+{
+    // Don't allow line breaks inside URLs
+    NSRange range;
+    NSURL *linkURL = [layoutManager.textStorage attribute:NSLinkAttributeName
+                                                  atIndex:charIndex
+                                           effectiveRange:&range];
+    
+    return !(linkURL && (charIndex > range.location) && (charIndex <= NSMaxRange(range)));
+}
+
+
++ (NSAttributedString *)sanitizeAttributedString:(NSAttributedString *)attributedString
+{
+    // Setup paragraph alignement properly. IB applies the line break style
+    // to the attributed string. The problem is that the text container then
+    // breaks at the first line of text. If we set the line break to wrapping
+    // then the text container defines the break mode and it works.
+    // NOTE: This is either an Apple bug or something I've misunderstood.
+    
+    // Get the current paragraph style. IB only allows a single paragraph so
+    // getting the style of the first char is fine.
+    NSRange range;
+    NSParagraphStyle *paragraphStyle = [attributedString attribute:NSParagraphStyleAttributeName atIndex:0 effectiveRange:&range];
+    
+    if (paragraphStyle == nil)
+    {
+        return attributedString;
+    }
+    
+    // Remove the line breaks
+    NSMutableParagraphStyle *mutableParagraphStyle = [paragraphStyle mutableCopy];
+    mutableParagraphStyle.lineBreakMode = NSLineBreakByWordWrapping;
+    
+    // Apply new style
+    NSMutableAttributedString *restyled = [[NSMutableAttributedString alloc] initWithAttributedString:attributedString];
+    [restyled addAttribute:NSParagraphStyleAttributeName value:mutableParagraphStyle range:NSMakeRange(0, restyled.length)];
+    
+    return restyled;
+}
+
+@end
+
+@implementation MZSelectableLabelRange
+
++ (instancetype)selectableRangeWithRange:(NSRange)range color:(UIColor *)color
+{
+    MZSelectableLabelRange *selectableRange = [[[self class] alloc] init];
+    selectableRange.range = range;
+    selectableRange.color = color;
+    return selectableRange;
+}
 @end
