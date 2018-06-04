@@ -3,7 +3,7 @@
 //  show gx
 //
 //  Created by show on 2017/10/10.
-//  Copyright © 2017年 Beijing Dreamer. All rights reserved.
+//  Copyright © 2017年 show. All rights reserved.
 //
 
 #ifndef NSString_Trim_h
