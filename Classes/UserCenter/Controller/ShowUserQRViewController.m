@@ -43,6 +43,7 @@
 
     [self setupViews];
 }
+//
 - (void)setupViews {
     [self.view setBackgroundColor:kBlackThemeBGColor];
     [self.view addSubview:self.mainView];

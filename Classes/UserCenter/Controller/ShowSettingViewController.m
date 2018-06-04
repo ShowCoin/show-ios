@@ -65,7 +65,6 @@
         _tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
         _tableView.separatorColor = kBlackThemeColor;
         _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
-        
     }
     return _tableView;
     

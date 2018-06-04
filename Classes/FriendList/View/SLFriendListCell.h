@@ -14,7 +14,6 @@
 #import "UILabel+Additional.h"
 @protocol SLFriendListCellelegate <NSObject>
 
-- (void)onClickUser:(SLFansModel*)data;
 - (void)onClickChat:(SLFansModel*)data;
 - (void)onClickFollow:(SuccessBlock)block withData:(SLFansModel*)data;
 - (void)onClickAt:(SLFansModel*)data button:(UIButton *)sender;
@@ -30,8 +29,9 @@
 @property(nonatomic,strong)SLFansModel * userListModel;
 //用户信息
 @property(nonatomic,strong)ShowUserModel * userModel;
-@property(nonatomic,strong)UILabel          * moneyLabel; //未读消息数量
-
+//未读消息数量
+@property(nonatomic,strong)UILabel          * moneyLabel;
+//用户代理
 @property (nonatomic,weak)id<SLFriendListCellelegate>  functionDelegate;
 @property (nonatomic,assign)BOOL isAt;
 

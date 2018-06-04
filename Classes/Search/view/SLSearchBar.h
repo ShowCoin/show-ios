@@ -26,9 +26,13 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 @interface SLSearchBar : UIView
+//搜索代理
 @property(nullable,nonatomic,weak) id<SLSearchBarDelegate> delegate; // default is nil. weak reference
+//文字
 @property(nullable,nonatomic,copy) NSString  *text;                  // current/starting search text
+//站位文字
 @property(nullable,nonatomic,copy) NSString  *placeholder;           // default is nil. string is drawn 70% gray
+//
 @property(nonatomic) BOOL  showsCancelButton;                        // default is yes
 @property(nullable,nonatomic,strong) UIColor *textColor;             // default is nil. use opaque black
 @property(nullable,nonatomic,strong) UIFont  *font;                  // default is nil. use system font 12 pt

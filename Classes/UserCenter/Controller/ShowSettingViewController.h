@@ -8,6 +8,7 @@
 
 #import "BaseViewController.h"
 
+//设置视图
 @interface ShowSettingViewController : BaseViewController
 
 @end

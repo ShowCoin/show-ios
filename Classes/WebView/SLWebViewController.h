@@ -18,21 +18,21 @@
     NJKWebViewProgress *_webViewProgress;
 }
 
-
+//返回按钮
 @property(nonatomic,strong)UIButton * BackButton;
-
+//浏览器页面
 @property(nonatomic,strong)UIWebView * WebView;
-
+//请求的Url
 @property(nonatomic,copy)NSString *  requestUrl;
-
+//web标题
 @property(nonatomic,copy)NSString * webTitle;
-
+//返回的image
 @property (nonatomic,strong)UIImage * backimage;
-
+//分享
 @property (nonatomic, strong) SLUserShareView *shareview;
-
+//分享的id
 @property (nonatomic, strong) NSString *shareUid;
-
+//分享的视图Avaliable
 @property (assign, nonatomic) BOOL shareViewAvaliable;
 
 
