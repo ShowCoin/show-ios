@@ -308,4 +308,130 @@
 }
 
 // Returns the XY offset of the range of glyphs from the view's origin
+- (CGPoint)calcTextOffsetForGlyphRange:(NSRange)glyphRange
+{
+    CGPoint textOffset = CGPointZero;
+    
+    CGRect textBounds = [self.layoutManager boundingRectForGlyphRange:glyphRange inTextContainer:self.textContainer];
+    CGFloat paddingHeight = (self.bounds.size.height - textBounds.size.height) / 2.0f;
+    if (paddingHeight > 0)
+    {
+        textOffset.y = paddingHeight;
+    }
+    
+    return textOffset;
+}
+
+#pragma mark - Layout and Rendering
+
+// Returns attributed string attributes based on the text properties set on the label.
+// These are styles that are only applied when NOT using the attributedText directly.
+- (NSDictionary *)attributesFromProperties
+{
+    // Setup shadow attributes
+    NSShadow *shadow = shadow = [[NSShadow alloc] init];
+    if (self.shadowColor)
+    {
+        shadow.shadowColor = self.shadowColor;
+        shadow.shadowOffset = self.shadowOffset;
+    }
+    else
+    {
+        shadow.shadowOffset = CGSizeMake(0, -1);
+        shadow.shadowColor = nil;
+    }
+    
+    // Setup colour attributes
+    UIColor *colour = self.textColor;
+    if (!self.isEnabled)
+    {
+        colour = [UIColor lightGrayColor];
+    }
+    else if (self.isHighlighted)
+    {
+        colour = self.highlightedTextColor;
+    }
+    
+    // Setup paragraph attributes
+    NSMutableParagraphStyle *paragraph = [[NSMutableParagraphStyle alloc] init];
+    paragraph.alignment = self.textAlignment;
+    
+    // Create the dictionary
+    NSDictionary *attributes = @{
+                                 NSFontAttributeName : self.font,
+                                 NSForegroundColorAttributeName : colour,
+                                 NSShadowAttributeName : shadow,
+                                 NSParagraphStyleAttributeName : paragraph };
+    return attributes;
+}
+
+- (CGRect)textRectForBounds:(CGRect)bounds limitedToNumberOfLines:(NSInteger)numberOfLines
+{
+    // Use our text container to calculate the bounds required. First save our
+    // current text container setup
+    CGSize savedTextContainerSize = self.textContainer.size;
+    NSInteger savedTextContainerNumberOfLines = self.textContainer.maximumNumberOfLines;
+    
+    // Apply the new potential bounds and number of lines
+    self.textContainer.size = bounds.size;
+    self.textContainer.maximumNumberOfLines = numberOfLines;
+    
+    // Measure the text with the new state
+    CGRect textBounds;
+    @try
+    {
+        NSRange glyphRange = [self.layoutManager glyphRangeForTextContainer:self.textContainer];
+        textBounds = [self.layoutManager boundingRectForGlyphRange:glyphRange inTextContainer:self.textContainer];
+        
+        // Position the bounds and round up the size for good measure
+        textBounds.origin = bounds.origin;
+        textBounds.size.width = ceilf(textBounds.size.width);
+        textBounds.size.height = ceilf(textBounds.size.height);
+    }
+    @finally
+    {
+        // Restore the old container state before we exit under any circumstances
+        self.textContainer.size = savedTextContainerSize;
+        self.textContainer.maximumNumberOfLines = savedTextContainerNumberOfLines;
+    }
+    
+    return textBounds;
+}
+
+- (void)drawTextInRect:(CGRect)rect
+{
+    // Don't call super implementation. Might want to uncomment this out when
+    // debugging layout and rendering problems.
+    //        [super drawTextInRect:rect];
+    
+    // Calculate the offset of the text in the view
+    CGPoint textOffset;
+    NSRange glyphRange = [self.layoutManager glyphRangeForTextContainer:self.textContainer];
+    textOffset = [self calcTextOffsetForGlyphRange:glyphRange];
+    
+    // Drawing code
+    [self.layoutManager drawBackgroundForGlyphRange:glyphRange atPoint:textOffset];
+    [self.layoutManager drawGlyphsForGlyphRange:glyphRange atPoint:textOffset];
+}
+
+- (void)setFrame:(CGRect)frame
+{
+    [super setFrame:frame];
+    self.textContainer.size = self.bounds.size;
+}
+
+- (void)setBounds:(CGRect)bounds
+{
+    [super setBounds:bounds];
+    self.textContainer.size = self.bounds.size;
+}
+
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    
+    // Update our container size when the view frame changes
+    self.textContainer.size = self.bounds.size;
+}
+
 @end
