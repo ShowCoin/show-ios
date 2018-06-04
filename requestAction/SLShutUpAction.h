@@ -10,8 +10,11 @@
 
 @interface SLShutUpAction : ShowAction
 
+//用户uid
 @property (nonatomic,copy) NSString * uid;
+//房间id
 @property (nonatomic,copy) NSString * roomId;
+//时间
 @property (nonatomic,copy) NSString * minute;
 
 @end

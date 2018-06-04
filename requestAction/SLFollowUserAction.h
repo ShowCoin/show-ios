@@ -13,7 +13,10 @@ typedef enum : NSUInteger {
 } FollowType;
 
 @interface SLFollowUserAction : ShowAction
+
+//类型
 @property (nonatomic, assign) FollowType type;
+//关注人的uid
 @property (nonatomic, strong) NSString *to_uid;
 
 @end
