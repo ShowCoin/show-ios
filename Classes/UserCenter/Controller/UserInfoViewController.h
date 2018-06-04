@@ -8,7 +8,7 @@
 
 #import "BaseViewController.h"
 
-//
+//用户信息的info
 @interface UserInfoViewController : BaseViewController
 
 @end
