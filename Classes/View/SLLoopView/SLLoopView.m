@@ -147,7 +147,7 @@ typedef void(^LoopBlock)(CAAnimation *anim, BOOL flag);
 
 
 /**
- 3git
+ 3gitgit
 
  @param anim <#anim description#>
  @param flag <#flag description#>
