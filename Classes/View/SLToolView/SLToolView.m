@@ -76,7 +76,7 @@ CGFloat const kSLToolViewH  = 140;
 
 
 /**
- Button
+ Button click
 
  @param button <#button description#>
  */
