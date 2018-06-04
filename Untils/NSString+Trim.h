@@ -14,7 +14,8 @@
 @interface NSString (Trim)
 + (NSString *)trim:(NSString *)val trimCharacterSet:(NSCharacterSet *)characterSet;
 + (NSString *)trimWhitespace:(NSString *)val;
-;
++ (NSString *)trimNewline:(NSString *)val;
+
 
 @end
 
