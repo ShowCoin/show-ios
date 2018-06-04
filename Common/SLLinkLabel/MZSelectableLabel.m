@@ -434,4 +434,72 @@
     self.textContainer.size = self.bounds.size;
 }
 
+#pragma mark - Interactions
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    self.isTouchMoved = NO;
+    
+    // Get the info for the touched link if there is one
+    MZSelectableLabelRange *touchedRange;
+    CGPoint touchLocation = [[touches anyObject] locationInView:self];
+    touchedRange = [self rangeValueAtLocation:touchLocation];
+    
+    if (touchedRange)
+    {
+        self.selectedRange = touchedRange.range;
+    }
+    else
+    {
+        [super touchesBegan:touches withEvent:event];
+    }
+}
+
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [super touchesMoved:touches withEvent:event];
+    
+    self.isTouchMoved = YES;
+}
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [super touchesEnded:touches withEvent:event];
+    
+    // If the user dragged their finger we ignore the touch
+    if (self.isTouchMoved)
+    {
+        self.selectedRange = NSMakeRange(0, 0);
+        
+        return;
+    }
+    
+    // Get the info for the touched link if there is one
+    MZSelectableLabelRange *touchedRange;
+    CGPoint touchLocation = [[touches anyObject] locationInView:self];
+    touchedRange = [self rangeValueAtLocation:touchLocation];
+    
+    if (touchedRange)
+    {
+        if (self.selectionHandler) {
+            self.selectionHandler(touchedRange.range, [[self.attributedText string] substringWithRange:touchedRange.range]);
+        }
+    }
+    else
+    {
+        [super touchesBegan:touches withEvent:event];
+    }
+    
+    self.selectedRange = NSMakeRange(0, 0);
+}
+
+- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [super touchesCancelled:touches withEvent:event];
+    
+    // Make sure we don't leave a selection when the touch is cancelled
+    self.selectedRange = NSMakeRange(0, 0);
+}
+
+
 @end
