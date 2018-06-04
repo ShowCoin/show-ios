@@ -11,7 +11,7 @@
 #import "SLWebView.h"
 
 NS_ASSUME_NONNULL_BEGIN
-
+//基本的web
 /// Subclass override to implement JS call back
 @protocol SLBaseWebViewControllerSubclassJSHooks <NSObject>
 @optional
