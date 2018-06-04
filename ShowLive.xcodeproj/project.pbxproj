@@ -26,7 +26,6 @@
 		720F860920B2F59500AD0C54 /* SLGetRyTokenAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 720F860120B2F59500AD0C54 /* SLGetRyTokenAction.m */; };
 		7239EB3620BD38FC00588BED /* ShowUserQRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7239EB2A20BD38FC00588BED /* ShowUserQRViewController.m */; };
 		7239EB3720BD38FC00588BED /* SLTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7239EB2C20BD38FC00588BED /* SLTextView.m */; };
-		7239EB3F20BD97D200588BED /* ShowSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7239EB3E20BD97D100588BED /* ShowSettingViewController.m */; };
 		72C7B4F920C3EDE600065BC2 /* SLADView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C7B4F820C3EDE600065BC2 /* SLADView.m */; };
 		72FE9B6620621F59008DD3D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72FE9B6420621F59008DD3D5 /* LaunchScreen.storyboard */; };
 		72FE9B6920621F59008DD3D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FE9B6820621F59008DD3D5 /* main.m */; };
@@ -93,7 +92,6 @@
 		7239EB2820BD38FC00588BED /* ShowSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowSettingViewController.h; sourceTree = "<group>"; };
 		7239EB2920BD38FC00588BED /* ShowUserQRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowUserQRViewController.h; sourceTree = "<group>"; };
 		7239EB2A20BD38FC00588BED /* ShowUserQRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowUserQRViewController.m; sourceTree = "<group>"; };
-		7239EB2B20BD38FC00588BED /* UserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoViewController.h; sourceTree = "<group>"; };
 		7239EB2C20BD38FC00588BED /* SLTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLTextView.m; sourceTree = "<group>"; };
 		7239EB2D20BD38FC00588BED /* ChangeheadportraitController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeheadportraitController.h; sourceTree = "<group>"; };
 		7239EB2E20BD38FC00588BED /* ShowForUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowForUsViewController.h; sourceTree = "<group>"; };
@@ -103,7 +101,6 @@
 		7239EB3320BD38FC00588BED /* UserCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCenterViewController.h; sourceTree = "<group>"; };
 		7239EB3420BD38FC00588BED /* SLCropImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLCropImageViewController.h; sourceTree = "<group>"; };
 		7239EB3B20BD468F00588BED /* ChangeTextController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChangeTextController.h; sourceTree = "<group>"; };
-		7239EB3E20BD97D100588BED /* ShowSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowSettingViewController.m; sourceTree = "<group>"; };
 		724DBA3820C0377F00EF6406 /* SLUserViewHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLUserViewHeader.h; sourceTree = "<group>"; };
 		72C6166920A0C67500103C44 /* SLUrgeListAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLUrgeListAction.h; sourceTree = "<group>"; };
 		72C686F61D628C8898214FFC /* Pods-ShowLive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowLive.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShowLive/Pods-ShowLive.debug.xcconfig"; sourceTree = "<group>"; };
@@ -273,7 +270,6 @@
 				7239EB3B20BD468F00588BED /* ChangeTextController.h */,
 				7239EB2E20BD38FC00588BED /* ShowForUsViewController.h */,
 				7239EB2820BD38FC00588BED /* ShowSettingViewController.h */,
-				7239EB3E20BD97D100588BED /* ShowSettingViewController.m */,
 				7239EB2920BD38FC00588BED /* ShowUserQRViewController.h */,
 				7239EB2A20BD38FC00588BED /* ShowUserQRViewController.m */,
 				7239EB3420BD38FC00588BED /* SLCropImageViewController.h */,
@@ -282,7 +278,6 @@
 				7239EB2C20BD38FC00588BED /* SLTextView.m */,
 				7239EB3120BD38FC00588BED /* SLUserInfoViewController.h */,
 				7239EB3320BD38FC00588BED /* UserCenterViewController.h */,
-				7239EB2B20BD38FC00588BED /* UserInfoViewController.h */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -760,7 +755,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7239EB3F20BD97D200588BED /* ShowSettingViewController.m in Sources */,
 				43D24A952094B4C500C59AC8 /* ShowNavigationBar.m in Sources */,
 				435E3C9220C02BB2002B7A7F /* NSDecimalNumber+JKCalculatingByString.m in Sources */,
 				72FE9B6920621F59008DD3D5 /* main.m in Sources */,
