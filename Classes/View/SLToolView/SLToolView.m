@@ -76,7 +76,7 @@ CGFloat const kSLToolViewH  = 140;
 
 
 /**
- <#Description#>
+ UIButton
 
  @param button <#button description#>
  */
