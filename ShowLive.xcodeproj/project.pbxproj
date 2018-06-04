@@ -128,6 +128,7 @@
 		9314D1DF20C5394500BB2429 /* SLAttentionListAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLAttentionListAction.h; sourceTree = "<group>"; };
 		9314D1E120C539D400BB2429 /* SLShutUpAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLShutUpAction.h; sourceTree = "<group>"; };
 		9314D1E220C53A3B00BB2429 /* SLHistoryWorksAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLHistoryWorksAction.h; sourceTree = "<group>"; };
+		9314D1E520C53AE900BB2429 /* SLHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLHelper.h; sourceTree = "<group>"; };
 		93154D6820623EFE00BF088F /* ShowLive.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowLive.pch; sourceTree = "<group>"; };
 		9319236920B7FF1C001C6144 /* SLFriendListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLFriendListViewController.h; sourceTree = "<group>"; };
 		9319236B20B7FF37001C6144 /* SLFriendListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLFriendListCell.h; sourceTree = "<group>"; };
@@ -245,6 +246,7 @@
 		43968A6720AC397000149DCC /* Untils */ = {
 			isa = PBXGroup;
 			children = (
+				9314D1E420C53ACE00BB2429 /* SLHelper */,
 				43968A6820AC398B00149DCC /* NSObject+Safe.h */,
 				43968A6920AC398C00149DCC /* NSObject+Safe.m */,
 			);
@@ -400,6 +402,14 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9314D1E420C53ACE00BB2429 /* SLHelper */ = {
+			isa = PBXGroup;
+			children = (
+				9314D1E520C53AE900BB2429 /* SLHelper.h */,
+			);
+			path = SLHelper;
 			sourceTree = "<group>";
 		};
 		93154CBF206235FD00BF088F /* Supporting Files */ = {
