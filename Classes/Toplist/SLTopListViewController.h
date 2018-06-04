@@ -9,7 +9,7 @@
 #import "BaseViewController.h"
 
 @interface SLTopListViewController : BaseViewController
-
+//用户uid
 @property(retain,nonatomic)NSString * uid;
 
 @end
