@@ -32,4 +32,12 @@
                                repeats:repeats];
 }
 
++(void)blockInvoke:(NSTimer *)timer
+{
+    void (^block)(void) = timer.userInfo;
+    if (block) {
+        block();
+    }
+}
+
 @end
