@@ -147,7 +147,7 @@ typedef void(^LoopBlock)(CAAnimation *anim, BOOL flag);
 
 
 /**
- CAAnimation
+ do CAAnimation
 
  @param anim <#anim description#>
  @param flag <#flag description#>
