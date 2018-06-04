@@ -149,4 +149,163 @@
     [self updateTextStoreWithText];
 }
 
+- (void)setText:(NSString *)text
+{
+    [super setText:text];
+    [self updateTextStoreWithText];
+}
+
+- (void)setAttributedText:(NSAttributedString *)attributedText
+{
+    [super setAttributedText:attributedText];
+    [self updateTextStoreWithText];
+}
+
+- (void)setSelectableRange:(NSRange)range hightlightedBackgroundColor:(UIColor *)color
+{
+    [self.selectableRanges addObject:[MZSelectableLabelRange selectableRangeWithRange:range color:color]];
+}
+
+- (void)setSelectableRange:(NSRange)range
+{
+    [self setSelectableRange:range hightlightedBackgroundColor:nil];
+}
+
+// Applies background colour to selected range. Used to hilight touched links
+- (void)setSelectedRange:(NSRange)range
+{
+    // Remove the current selection if the selection is changing
+    if (self.selectedRange.length && !NSEqualRanges(self.selectedRange, range))
+    {
+        [self.textStorage removeAttribute:NSBackgroundColorAttributeName
+                                    range:self.selectedRange];
+    }
+    
+    MZSelectableLabelRange *selectedRange = [self rangeValueAtRange:range];
+    
+    // Apply the new selection to the text
+    if (range.length && selectedRange && selectedRange.color)
+    {
+        [self.textStorage addAttribute:NSBackgroundColorAttributeName
+                                 value:selectedRange.color
+                                 range:range];
+    }
+    
+    // Save the new range
+    _selectedRange = range;
+    
+    [self setNeedsDisplay];
+}
+
+- (void)updateTextStoreWithText
+{
+    // Now update our storage from either the attributedString or the plain text
+    if (self.attributedText)
+    {
+        [self updateTextStoreWithAttributedString:self.attributedText];
+    }
+    else if (self.text)
+    {
+        [self updateTextStoreWithAttributedString:[[NSAttributedString alloc] initWithString:self.text attributes:[self attributesFromProperties]]];
+    }
+    else
+    {
+        [self updateTextStoreWithAttributedString:[[NSAttributedString alloc] initWithString:@"" attributes:[self attributesFromProperties]]];
+    }
+    
+    [self setNeedsDisplay];
+}
+
+- (void)updateTextStoreWithAttributedString:(NSAttributedString *)attributedString
+{
+    if (attributedString.length != 0)
+    {
+        attributedString = [MZSelectableLabel sanitizeAttributedString:attributedString];
+    }
+    
+    if (self.textStorage)
+    {
+        // Set the string on the storage
+        [self.textStorage setAttributedString:attributedString];
+    }
+    else
+    {
+        // Create a new text storage and attach it correctly to the layout manager
+        self.textStorage = [[NSTextStorage alloc] initWithAttributedString:attributedString];
+        [self.textStorage addLayoutManager:self.layoutManager];
+        [self.layoutManager setTextStorage:self.textStorage];
+    }
+}
+
+- (MZSelectableLabelRange *)rangeValueAtRange:(NSRange)range
+{
+    for (MZSelectableLabelRange *selectableRange in self.selectableRanges) {
+        if (NSEqualRanges(selectableRange.range, range)) {
+            return selectableRange;
+        }
+    }
+    
+    for (MZSelectableLabelRange *selectableRange in self.detectedSelectableRanges) {
+        if (NSEqualRanges(selectableRange.range, range)) {
+            return selectableRange;
+        }
+    }
+    
+    return nil;
+}
+
+
+- (MZSelectableLabelRange *)rangeValueAtLocation:(CGPoint)location
+{
+    // Do nothing if we have no text
+    if (self.textStorage.string.length == 0)
+    {
+        return nil;
+    }
+    
+    // Work out the offset of the text in the view
+    CGPoint textOffset;
+    NSRange glyphRange = [self.layoutManager glyphRangeForTextContainer:self.textContainer];
+    textOffset = [self calcTextOffsetForGlyphRange:glyphRange];
+    
+    // Get the touch location and use text offset to convert to text cotainer coords
+    location.x -= textOffset.x;
+    location.y -= textOffset.y;
+    
+    NSUInteger touchedChar = [self.layoutManager glyphIndexForPoint:location inTextContainer:self.textContainer];
+    
+    // If the touch is in white space after the last glyph on the line we don't
+    // count it as a hit on the text
+    NSRange lineRange;
+    CGRect lineRect = [self.layoutManager lineFragmentUsedRectForGlyphAtIndex:touchedChar effectiveRange:&lineRange];
+    if (CGRectContainsPoint(lineRect, location) == NO)
+    {
+        return nil;
+    }
+    
+    // Find the word that was touched and call the detection block
+    for (MZSelectableLabelRange *rangeValue in self.selectableRanges)
+    {
+        NSRange range = rangeValue.range;
+        
+        if ((touchedChar >= range.location) && touchedChar < (range.location + range.length))
+        {
+            return rangeValue;
+        }
+    }
+    
+    for (MZSelectableLabelRange *rangeValue in self.detectedSelectableRanges)
+    {
+        NSRange range = rangeValue.range;
+        
+        if ((touchedChar >= range.location) && touchedChar < (range.location + range.length))
+        {
+            return rangeValue;
+        }
+    }
+    
+    return nil;
+}
+
+// Returns the XY offset of the range of glyphs from the view's origin
 @end
