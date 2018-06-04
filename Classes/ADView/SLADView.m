@@ -127,51 +127,6 @@
         [self.adImageView yy_setImageWithURL:url placeholder:adImage options:YYWebImageOptionSetImageWithFadeAnimation completion:^(UIImage * _Nullable image, NSURL * _Nonnull url, YYWebImageFromType from, YYWebImageStage stage, NSError * _Nullable error) {
             weaks.progressButtonView.hidden = NO;
         }];
-    }else{
-        [self addSubview:self.adImageView];
-        self.adImageView.image = adImage;
-        self.backgroundColor = [UIColor whiteColor];
-        
-        [self addSubview:self.iconImageView];
-        [self addSubview:self.nameLabel];
-        [self addSubview:self.descLabel];
-        
-        UIImage *image = [[YYWebImageManager sharedManager].cache getImageForKey:AccountUserInfoModel.avatar];
-        if (image == nil && AccountUserInfoModel.avatar.length >0) {
-            [[YYWebImageManager sharedManager] requestImageWithURL:[NSURL URLWithString:AccountUserInfoModel.avatar] options:0 progress:nil transform:nil completion:nil];
-        }
-        image = image == nil? [UIImage imageNamed:@"userhome_admin_Img"] : image;
-        if (image) {
-            [self.iconImageView setRoundStyle:YES imageUrl:@"" imageHeight:90 vip:NO attestation:NO];
-            self.iconImageView.imageView.image = image;
-        }
-        
-        self.nameLabel.text = [NSString stringWithFormat:@"Hi %@",AccountUserInfoModel.nickname?AccountUserInfoModel.nickname:@"老铁"];
-        self.descLabel.text =  @"欢迎回来";
-        
-        self.iconImageView.alpha = 0;
-        [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
-            self.iconImageView.transform = CGAffineTransformMakeTranslation(0, -20 *HScale);
-            self.iconImageView.alpha = 1;
-        } completion:^(BOOL finished) {
-            
-        }];
-        
-        self.nameLabel.alpha = 0;
-        [UIView animateWithDuration:0.5 delay:0.5 options:UIViewAnimationOptionCurveEaseOut animations:^{
-            self.nameLabel.transform = CGAffineTransformMakeTranslation(0, -20 *HScale);
-            self.nameLabel.alpha = 1;
-        } completion:^(BOOL finished) {
-            
-        }];
-        
-        self.descLabel.alpha = 0;
-        [UIView animateWithDuration:0.5 delay:1 options:UIViewAnimationOptionCurveEaseOut animations:^{
-            self.descLabel.transform = CGAffineTransformMakeTranslation(0, -20 *HScale);
-            self.descLabel.alpha = 1;
-        } completion:^(BOOL finished) {
-            
-        }];
     }
 }
 
