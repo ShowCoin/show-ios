@@ -19,33 +19,54 @@
 @interface SLUserViewHeader : UICollectionReusableView<HeadPortraitDelegate>{
     NSShadow * _shadowColor;
 }
-
+//活跃
 @property (nonatomic,strong)UILabel * navLab;
+//左边的按钮
 @property (nonatomic,strong)UIButton * leftBtn;
+//列表按钮
 @property (nonatomic,strong)UIButton * listBtn;
+//设置按钮
 @property (nonatomic,strong)UIButton * settingBtn;
+//礼物按钮
 @property (nonatomic,strong)UIButton * giftStoreBtn;
+//头像
 @property (nonatomic,strong)SLHeadPortrait * headPortrait;
+//名称label
 @property (nonatomic,strong)UILabel * nickLab;
 
+//主播等级
 @property (nonatomic,strong)SLLevelMarkView *  masterLevel;
+//show等级
 @property (nonatomic,strong)SLLevelMarkView *  showLevel;
 
+//性别view
 @property (nonatomic,strong)UIView * sexbg;
+//性别image
 @property (nonatomic,strong)UIImageView * sexImg;
+//性别label
 @property (nonatomic,strong)UILabel * sexlab;
+//城市label
 @property (nonatomic,strong)UILabel * cityLab;
+//自我介绍按钮
 @property (nonatomic,strong)UILabel * constellationLab;
 
 //@property (nonatomic,strong)UILabel * idPreLab;
 @property (nonatomic,strong)UILabel * idLab;
+//词label
 @property (nonatomic,strong)UILabel * wordsLab;
+//底部视图
 @property (nonatomic,strong)UIView * bottomWhiteView;
+//粉丝按钮
 @property (nonatomic,strong)UIButton * fansBtn;
+//关注按钮
 @property (nonatomic,strong)UIButton * concerBtn;
+//钱包按钮
 @property (nonatomic,strong)UIButton * walletBtn;
+//分享按钮
 @property (nonatomic,strong)UIButton * shareBtn;
+//跳转关注按钮
 @property (nonatomic,strong)UIButton * toConcerBtn;
+//跳转发送按钮
 @property (nonatomic,strong)UIButton * tosendMessageBtn;
 //头部视图
 @property (nonatomic,strong)UIImageView * headImgView;
