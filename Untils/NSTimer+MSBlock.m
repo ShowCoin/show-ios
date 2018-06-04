@@ -21,6 +21,9 @@
                                         repeats:repeats];
 }
 
++(NSTimer *)timerWithTimeInterval:(NSTimeInterval)interval
+                            block:(void (^)(void))block
+                          repeats:(BOOL)repeats
 
 
 @end
