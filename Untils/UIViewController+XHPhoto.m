@@ -12,5 +12,23 @@
 #import "DeviceInfo.h"
 #import <Photos/Photos.h>
 
+#ifdef DEBUG
+#define debugLog(...)    NSLog(__VA_ARGS__)
+#else
+#define debugLog(...)
+#endif
+
+static  BOOL canEdit = YES;
+static  char blockKey;
+
+@interface UIViewController()<UIActionSheetDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate,UIAlertViewDelegate>
+
+@property (nonatomic,copy)photoBlock photoBlock;
+
+@end
+
+@implementation UIViewController (XHPhoto)
+
+#pragma mark-set
 
 @end
