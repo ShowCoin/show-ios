@@ -49,6 +49,7 @@
     return self;
 }
 
+
 - (id)initWithLabel:(UILabel*)theLabel{
     return [self initWithLabel:theLabel andTimerType:kDefaultTimerType];
 }

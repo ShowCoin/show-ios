@@ -9,6 +9,7 @@
 #import "ShowAction.h"
 
 @interface SLChatStatisticsAction : ShowAction
+//参数tid
 @property (nonatomic, copy) NSString *tid;
 
 @end

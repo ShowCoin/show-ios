@@ -21,8 +21,9 @@
 @end
 
 @interface SLFriendListCell : BaseTableViewCell
-
+//根据tableView得出cell
 +(id)cellWithTableView:(UITableView*)tableView;
+//根据tableView得出cell，是否到头
 +(id)cellWithTableView:(UITableView*)tableView separatorLineFull:(BOOL)separatorLineFull;
 
 //粉丝相关

@@ -9,9 +9,9 @@
 #import "BaseViewController.h"
 //裁剪图片
 @interface SLCropImageViewController : BaseViewController
-
+//是否拍照
 @property (nonatomic,assign)BOOL isShoot;
-
+//根据cropImage初始化
 - (instancetype)initWithCropImage:(UIImage *)cropImage;
 
 @end
