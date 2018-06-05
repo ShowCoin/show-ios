@@ -24,6 +24,7 @@
 		43D24A922094A43600C59AC8 /* ShowAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D24A8F2094A43600C59AC8 /* ShowAppDelegate.m */; };
 		43D24A952094B4C500C59AC8 /* ShowNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D24A942094B4C500C59AC8 /* ShowNavigationBar.m */; };
 		720F860920B2F59500AD0C54 /* SLGetRyTokenAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 720F860120B2F59500AD0C54 /* SLGetRyTokenAction.m */; };
+		723816B420C689AB00C3885E /* SLLevelMarkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 723816B320C689AB00C3885E /* SLLevelMarkView.m */; };
 		7239EB3620BD38FC00588BED /* ShowUserQRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7239EB2A20BD38FC00588BED /* ShowUserQRViewController.m */; };
 		7239EB3720BD38FC00588BED /* SLTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7239EB2C20BD38FC00588BED /* SLTextView.m */; };
 		72C7B4F920C3EDE600065BC2 /* SLADView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C7B4F820C3EDE600065BC2 /* SLADView.m */; };
@@ -88,6 +89,8 @@
 		720F85FF20B2F59500AD0C54 /* SLMeFansListAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLMeFansListAction.h; sourceTree = "<group>"; };
 		720F860120B2F59500AD0C54 /* SLGetRyTokenAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLGetRyTokenAction.m; sourceTree = "<group>"; };
 		720F860320B2F59500AD0C54 /* SLGetRyTokenAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLGetRyTokenAction.h; sourceTree = "<group>"; };
+		723816B220C689AB00C3885E /* SLLevelMarkView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLLevelMarkView.h; sourceTree = "<group>"; };
+		723816B320C689AB00C3885E /* SLLevelMarkView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLLevelMarkView.m; sourceTree = "<group>"; };
 		7239EB2520BD38D300588BED /* SLTopListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLTopListViewController.h; sourceTree = "<group>"; };
 		7239EB2820BD38FC00588BED /* ShowSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowSettingViewController.h; sourceTree = "<group>"; };
 		7239EB2920BD38FC00588BED /* ShowUserQRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowUserQRViewController.h; sourceTree = "<group>"; };
@@ -258,6 +261,8 @@
 		723816B120C688FC00C3885E /* SLLevelView */ = {
 			isa = PBXGroup;
 			children = (
+				723816B220C689AB00C3885E /* SLLevelMarkView.h */,
+				723816B320C689AB00C3885E /* SLLevelMarkView.m */,
 			);
 			path = SLLevelView;
 			sourceTree = "<group>";
@@ -807,6 +812,7 @@
 				93615AEB20C1453A000D5658 /* SLBaseWebViewController.m in Sources */,
 				9391AA9720C03A4300D520F1 /* SLWebViewJSFuncNameConst.m in Sources */,
 				7239EB3720BD38FC00588BED /* SLTextView.m in Sources */,
+				723816B420C689AB00C3885E /* SLLevelMarkView.m in Sources */,
 				93D2C11220BD238500C9D960 /* SLFriendListCell.m in Sources */,
 				720F860920B2F59500AD0C54 /* SLGetRyTokenAction.m in Sources */,
 			);
