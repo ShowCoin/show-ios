@@ -34,7 +34,31 @@
     }
     return _levelView;
 }
+- (void)setLevel:(NSString *)level
+{
+    _level = level;
+    
+    [_levelView setTitle:level forState:UIControlStateNormal];
+     _levelView.titleLabel.font = Font_Medium(self.height*.55f);
+    [_levelView layoutButtonWithEdgeInsetsStyle:MKButtonEdgeInsetsStyleLeft imageTitleSpace:3-level.length];
+    switch (_type) {
+        case LevelType_Host:
+        {
+            [_levelView setImage:[UIImage imageNamed:@"masterLevel"] forState:UIControlStateNormal];
+            _levelView.backgroundColor = HexRGBAlpha(0xff8b00, 1);
+        }
+            break;
+        case LevelType_ShowCoin:
+        {
+            [_levelView setImage:[UIImage imageNamed:@"ShowCoinLevel"] forState:UIControlStateNormal];
+            _levelView.backgroundColor = kThemeYellowColor;
+        }
+            break;
+        default:
+            break;
+    }
 
+}
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
