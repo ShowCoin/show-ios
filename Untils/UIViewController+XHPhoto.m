@@ -34,5 +34,10 @@ static  char blockKey;
 {
     objc_setAssociatedObject(self, &blockKey, photoBlock, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
+#pragma mark-get
+- (photoBlock )photoBlock
+{
+    return objc_getAssociatedObject(self, &blockKey);
+}
 
 @end
