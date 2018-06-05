@@ -13,7 +13,6 @@ static CGFloat kMessageViewH = 75 + 44 + 10;
 
 @interface SLPlayerMoreController ()
 
-
 @end
 
 @implementation SLPlayerMoreController
