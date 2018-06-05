@@ -66,6 +66,83 @@ static  char blockKey;
     [self openPhotoWithTag:1];
 }
 
+-(void)openPhotoWithTag:(NSInteger)tag
+{
+    
+    UIImagePickerController* imagePickerController = [[UIImagePickerController alloc] init];
+    imagePickerController.delegate = self;
+    imagePickerController.allowsEditing = canEdit;
+    switch (tag)
+    {
+        case 0:
+        {
+            //拍照
+            //是否支持相机
+            [AVCaptureDevice requestAccessForMediaType:AVMediaTypeVideo completionHandler:^(BOOL granted) {
+                if (granted) {
+                    if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
+                    {
+                        
+#warning Ant fix bug #10316
+                        dispatch_async(dispatch_get_main_queue(), ^{
+                            
+                            imagePickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
+                            [self presentViewController:imagePickerController animated:YES completion:NULL];
+                        });
+                    }
+                    else
+                    {
+                        dispatch_async(dispatch_get_main_queue(), ^{
+                            
+                            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:DLLocalizedString(@"Alert", nil) message:DLLocalizedString(@"1.0_161", nil) delegate:nil cancelButtonTitle:DLLocalizedString(@"enter", nil) otherButtonTitles:nil, nil];
+                            [alert show];
+                            
+                        });
+                    }
+                } else{
+                    
+#warning Ant fix bug #10316
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        
+                        UIAlertView * alert=[[UIAlertView alloc]initWithTitle:nil message:DLLocalizedString(@"Device_Error_003", nil) delegate:self cancelButtonTitle:DLLocalizedString(@"1.0_055", nil) otherButtonTitles:DLLocalizedString(@"1.0_054", nil), nil];
+                        [alert show];
+                    });
+                }
+            }];
+        }
+            break;
+        case 1:
+        {
+            [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
+                //相册
+#warning Ant fix bug #10316
+                if (status == PHAuthorizationStatusAuthorized) {
+                    
+                    // ant  回主线程
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        
+                        imagePickerController.sourceType =UIImagePickerControllerSourceTypePhotoLibrary;
+                        [self presentViewController:imagePickerController animated:YES completion:NULL];
+                    });
+                    
+                }else{
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        
+                        UIAlertView * alert=[[UIAlertView alloc]initWithTitle:nil message:DLLocalizedString(@"Device_Error_003", nil) delegate:self cancelButtonTitle:DLLocalizedString(@"1.0_055", nil) otherButtonTitles:DLLocalizedString(@"1.0_054", nil), nil];
+                        
+                        [alert show];
+                    });
+                }
+            }];
+        }
+        default:
+            break;
+    }
+    
+}
+
+
+
 
 
 @end
