@@ -181,7 +181,25 @@ static  char blockKey;
 }
 
 
-
+#pragma mark - image picker delegte
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    
+    UIImage *image = nil;
+    
+    //是否要裁剪
+    if ([picker allowsEditing]) {
+        //编辑之后的图像
+        image = [info objectForKey:UIImagePickerControllerEditedImage];
+    } else {
+        image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    }
+    
+    if(self.photoBlock) {
+        self.photoBlock(image);
+    }
+}
 /*
  #pragma mark - UINavigationControllerDelegate
  - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
