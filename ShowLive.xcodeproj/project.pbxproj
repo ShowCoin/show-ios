@@ -26,6 +26,8 @@
 		720F860920B2F59500AD0C54 /* SLGetRyTokenAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 720F860120B2F59500AD0C54 /* SLGetRyTokenAction.m */; };
 		723816B420C689AB00C3885E /* SLLevelMarkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 723816B320C689AB00C3885E /* SLLevelMarkView.m */; };
 		723816B720C68B3C00C3885E /* SLHeadPortrait.m in Sources */ = {isa = PBXBuildFile; fileRef = 723816B620C68B3C00C3885E /* SLHeadPortrait.m */; };
+		723816BE20C6ABFF00C3885E /* UIColor+Equalable.m in Sources */ = {isa = PBXBuildFile; fileRef = 723816B920C6ABFE00C3885E /* UIColor+Equalable.m */; };
+		723816BF20C6ABFF00C3885E /* SLVerticalAlignLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 723816BB20C6ABFF00C3885E /* SLVerticalAlignLabel.m */; };
 		7239EB3720BD38FC00588BED /* SLTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7239EB2C20BD38FC00588BED /* SLTextView.m */; };
 		72C7B4F920C3EDE600065BC2 /* SLADView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C7B4F820C3EDE600065BC2 /* SLADView.m */; };
 		72FE9B6620621F59008DD3D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72FE9B6420621F59008DD3D5 /* LaunchScreen.storyboard */; };
@@ -92,6 +94,9 @@
 		723816B220C689AB00C3885E /* SLLevelMarkView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLLevelMarkView.h; sourceTree = "<group>"; };
 		723816B320C689AB00C3885E /* SLLevelMarkView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLLevelMarkView.m; sourceTree = "<group>"; };
 		723816B620C68B3C00C3885E /* SLHeadPortrait.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLHeadPortrait.m; sourceTree = "<group>"; };
+		723816B920C6ABFE00C3885E /* UIColor+Equalable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Equalable.m"; sourceTree = "<group>"; };
+		723816BB20C6ABFF00C3885E /* SLVerticalAlignLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLVerticalAlignLabel.m; sourceTree = "<group>"; };
+		723816BC20C6ABFF00C3885E /* SLVerticalAlignLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLVerticalAlignLabel.h; sourceTree = "<group>"; };
 		7239EB2520BD38D300588BED /* SLTopListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLTopListViewController.h; sourceTree = "<group>"; };
 		7239EB2820BD38FC00588BED /* ShowSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowSettingViewController.h; sourceTree = "<group>"; };
 		7239EB2920BD38FC00588BED /* ShowUserQRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowUserQRViewController.h; sourceTree = "<group>"; };
@@ -275,6 +280,30 @@
 				723816B620C68B3C00C3885E /* SLHeadPortrait.m */,
 			);
 			path = userHeader;
+			sourceTree = "<group>";
+		};
+		723816B820C6ABFE00C3885E /* SLLinkLabel */ = {
+			isa = PBXGroup;
+			children = (
+				723816B920C6ABFE00C3885E /* UIColor+Equalable.m */,
+			);
+			path = SLLinkLabel;
+			sourceTree = "<group>";
+		};
+		723816BA20C6ABFF00C3885E /* SLVerticalAlignLabel */ = {
+			isa = PBXGroup;
+			children = (
+				723816BB20C6ABFF00C3885E /* SLVerticalAlignLabel.m */,
+				723816BC20C6ABFF00C3885E /* SLVerticalAlignLabel.h */,
+			);
+			path = SLVerticalAlignLabel;
+			sourceTree = "<group>";
+		};
+		723816BD20C6ABFF00C3885E /* JKCategories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = JKCategories;
 			sourceTree = "<group>";
 		};
 		725B98BA20AC3CD400747F7A /* UserCenter */ = {
@@ -535,6 +564,9 @@
 		9391AA7F20BF06EB00D520F1 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				723816BD20C6ABFF00C3885E /* JKCategories */,
+				723816B820C6ABFE00C3885E /* SLLinkLabel */,
+				723816BA20C6ABFF00C3885E /* SLVerticalAlignLabel */,
 				723816B520C68A6E00C3885E /* userHeader */,
 				723816B120C688FC00C3885E /* SLLevelView */,
 				9391AA8020BF06F400D520F1 /* SLTimerLabel */,
@@ -820,7 +852,9 @@
 				93615AF320C14BB2000D5658 /* SLSearchBar.m in Sources */,
 				43D24A912094A43600C59AC8 /* AppDelegate+ShowRegisterService.m in Sources */,
 				43D24A922094A43600C59AC8 /* ShowAppDelegate.m in Sources */,
+				723816BE20C6ABFF00C3885E /* UIColor+Equalable.m in Sources */,
 				723816B720C68B3C00C3885E /* SLHeadPortrait.m in Sources */,
+				723816BF20C6ABFF00C3885E /* SLVerticalAlignLabel.m in Sources */,
 				93615AEB20C1453A000D5658 /* SLBaseWebViewController.m in Sources */,
 				9391AA9720C03A4300D520F1 /* SLWebViewJSFuncNameConst.m in Sources */,
 				7239EB3720BD38FC00588BED /* SLTextView.m in Sources */,
