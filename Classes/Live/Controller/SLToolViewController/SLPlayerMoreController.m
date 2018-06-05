@@ -13,7 +13,6 @@ static CGFloat kMessageViewH = 75 + 44 + 10;
 
 @interface SLPlayerMoreController ()
 
-
 @end
 
 @implementation SLPlayerMoreController
@@ -33,6 +32,36 @@ static dispatch_once_t onceToken;
     return _instance;
 }
 
+- (void)postNotification:(BOOL)select {
+    [[NSNotificationCenter defaultCenter]postNotificationName:SLPlayerBottomCollectionNotification object:@(select)];
+    [PageMgr setRootScrollEnabled:!select];
+}
+
+@synthesize clear = _clear;
+
+- (BOOL)clear {
+    return self.toolView.clearSelect;
+}
+
+- (void)setClear:(BOOL)clear {
+    _clear = clear;
+    if (clear == NO) {
+        [self.toolView resetView];
+        [self.delegate sl_playerToolClearScreen:NO];
+        
+        [self postNotification:NO];
+    }
+}
+
+#pragma mark - Public
+
++ (void)resetTool {
+    [SLPlayerMoreController.shared.toolView resetView];
+}
+
++ (void)dismiss {
+    [SLPlayerMoreController.shared dismissViewControllerAnimated:YES completion:nil];
+}
 
 @end
 
@@ -105,6 +134,58 @@ static dispatch_once_t onceToken;
         }];
     }
 }
+
+@end
+
+
+@implementation PAPhotoAuthorized
+
+
+/// Return YES if Authorized 返回YES如果得到了授权
++ (BOOL)authorizationStatusAuthorized {
+    NSInteger status = [self.class authorizationStatus];
+    if (status == 0) {
+        /**
+         * 当某些情况下AuthorizationStatus == AuthorizationStatusNotDetermined时，无法弹出系统首次使用的授权alertView，系统应用设置里亦没有相册的设置，此时将无法使用，故作以下操作，弹出系统首次使用的授权alertView
+         */
+        [self requestAuthorizationWithCompletion:nil];
+    }
+    
+    return status == 3;
+}
+
++ (NSInteger)authorizationStatus {
+    if (iOS8Later) {
+        return [PHPhotoLibrary authorizationStatus];
+    } else {
+        return [ALAssetsLibrary authorizationStatus];
+    }
+    return NO;
+}
+
++ (void)requestAuthorizationWithCompletion:(void (^)(void))completion {
+    void (^callCompletionBlock)(void) = ^(){
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (completion) {
+                completion();
+            }
+        });
+    };
+    
+    if (iOS8Later) {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
+                callCompletionBlock();
+            }];
+        });
+    } else {
+        ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
+        [library enumerateGroupsWithTypes:ALAssetsGroupAll usingBlock:^(ALAssetsGroup *group, BOOL *stop) {
+            callCompletionBlock();
+        } failureBlock:^(NSError *error) {
+            callCompletionBlock();
+        }];
+    }
 }
 
 @end
