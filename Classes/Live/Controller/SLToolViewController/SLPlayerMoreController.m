@@ -32,6 +32,11 @@ static dispatch_once_t onceToken;
     return _instance;
 }
 
+#pragma mark - Public
+
++ (void)resetTool {
+    [SLPlayerMoreController.shared.toolView resetView];
+}
 
 + (void)dismiss {
     [SLPlayerMoreController.shared dismissViewControllerAnimated:YES completion:nil];
