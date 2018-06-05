@@ -40,11 +40,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-//    [self.navigationBarView setRightIconImage:[UIImage imageNamed:@"userhome_avatar_more"] forState:UIControlStateNormal];
     [self.navigationBarView setNavigationLeftBarStyle:NavigationBarLeftDefault];
     [self.navigationBarView setNavigationTitle:[UserCacheMgr getLocalUserByUid:self.targetUid].nickname];
     [self.navigationBarView setNavigationColor:NavigationColorBlack];
-//    self.view.backgroundColor = kBlackThemeBGColor;
     [self setup];
     [self.viewDidLoadSignal sendNext:nil];
 }
@@ -55,7 +53,6 @@
             self.callBackBlock(nil);
         }
     }
-//    [PageMgr pushToReportViewController];
 }
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -64,8 +61,6 @@
 
     [self addKeyBoardObserver];
     [self updateUserInfo];
-
-    // update
 }
 
 
