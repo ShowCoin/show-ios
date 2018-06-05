@@ -24,6 +24,7 @@
     }
     return self;
 }
+//等级视图
 - (UIButton *)levelView
 {
     if (!_levelView) {
@@ -34,6 +35,8 @@
     }
     return _levelView;
 }
+
+//设置level的地方
 - (void)setLevel:(NSString *)level
 {
     _level = level;
