@@ -3,8 +3,8 @@
 
 //  XHPhotoExample
 //
-//  Created by frank on 17/2/1.
-//  Copyright © 2017年 frank. All rights reserved.
+//  Created by showgx on 17/2/1.
+//  Copyright © 2017年 showgx. All rights reserved.
 
 #import "UIViewController+XHPhoto.h"
 #import "objc/runtime.h"
