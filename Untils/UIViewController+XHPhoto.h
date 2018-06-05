@@ -9,6 +9,9 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^photoBlock)(UIImage *photo);
+
+@interface UIViewController (XHPhoto)
 
 
 @end
