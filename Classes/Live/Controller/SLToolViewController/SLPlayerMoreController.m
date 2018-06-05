@@ -124,4 +124,13 @@ static dispatch_once_t onceToken;
     return status == 3;
 }
 
++ (NSInteger)authorizationStatus {
+    if (iOS8Later) {
+        return [PHPhotoLibrary authorizationStatus];
+    } else {
+        return [ALAssetsLibrary authorizationStatus];
+    }
+    return NO;
+}
+
 @end
