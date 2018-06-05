@@ -30,5 +30,9 @@ static  char blockKey;
 @implementation UIViewController (XHPhoto)
 
 #pragma mark-set
+-(void)setPhotoBlock:(photoBlock)photoBlock
+{
+    objc_setAssociatedObject(self, &blockKey, photoBlock, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
 
 @end
