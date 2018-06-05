@@ -122,6 +122,11 @@
 		9314D1E120C539D400BB2429 /* SLShutUpAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLShutUpAction.h; sourceTree = "<group>"; };
 		9314D1E220C53A3B00BB2429 /* SLHistoryWorksAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLHistoryWorksAction.h; sourceTree = "<group>"; };
 		9314D1E520C53AE900BB2429 /* SLHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLHelper.h; sourceTree = "<group>"; };
+		9314D1E720C57AEF00BB2429 /* SLPrivateChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLPrivateChatViewController.h; sourceTree = "<group>"; };
+		9314D1E820C57B1F00BB2429 /* SLPrivateChatViewController+Business.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SLPrivateChatViewController+Business.h"; sourceTree = "<group>"; };
+		9314D1E920C57B7800BB2429 /* SLPrivateChatViewController+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SLPrivateChatViewController+Common.h"; sourceTree = "<group>"; };
+		9314D1EA20C57BAD00BB2429 /* SLPrivateChatViewController+Events.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SLPrivateChatViewController+Events.h"; sourceTree = "<group>"; };
+		9314D1EB20C57D0900BB2429 /* SLPrivateChatViewController+Gesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SLPrivateChatViewController+Gesture.h"; sourceTree = "<group>"; };
 		93154D6820623EFE00BF088F /* ShowLive.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowLive.pch; sourceTree = "<group>"; };
 		9319236920B7FF1C001C6144 /* SLFriendListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLFriendListViewController.h; sourceTree = "<group>"; };
 		9319236B20B7FF37001C6144 /* SLFriendListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLFriendListCell.h; sourceTree = "<group>"; };
@@ -393,6 +398,18 @@
 			path = SLHelper;
 			sourceTree = "<group>";
 		};
+		9314D1E620C57AD100BB2429 /* singleChat */ = {
+			isa = PBXGroup;
+			children = (
+				9314D1E720C57AEF00BB2429 /* SLPrivateChatViewController.h */,
+				9314D1E820C57B1F00BB2429 /* SLPrivateChatViewController+Business.h */,
+				9314D1E920C57B7800BB2429 /* SLPrivateChatViewController+Common.h */,
+				9314D1EA20C57BAD00BB2429 /* SLPrivateChatViewController+Events.h */,
+				9314D1EB20C57D0900BB2429 /* SLPrivateChatViewController+Gesture.h */,
+			);
+			path = singleChat;
+			sourceTree = "<group>";
+		};
 		93154CBF206235FD00BF088F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -443,6 +460,7 @@
 		934E1B9620AC38E100A0B080 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				9314D1E620C57AD100BB2429 /* singleChat */,
 				9391AA8C20C0369100D520F1 /* SLBlankView.h */,
 				9391AA8D20C036DC00D520F1 /* SLChatBusiness.h */,
 				9391AA8E20C0376B00D520F1 /* SLPureColorImageGenerate.h */,
