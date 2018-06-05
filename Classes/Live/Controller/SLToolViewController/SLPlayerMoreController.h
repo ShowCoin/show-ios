@@ -44,3 +44,8 @@
 @interface SLMoreAnimater : NSObject <UIViewControllerTransitioningDelegate, UIViewControllerAnimatedTransitioning>
 
 @end
+
+@interface PAPhotoAuthorized : NSObject
+
+
+@end
