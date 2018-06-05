@@ -141,6 +141,32 @@ static  char blockKey;
     
 }
 
+#pragma mark - action sheet delegte
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (actionSheet.tag==2599)
+    {
+        
+        switch (buttonIndex)
+        {
+            case 0:
+            {
+                [self openPhotoWithTag:0];
+                
+            }
+                break;
+            case 1:
+            {
+                
+                [self openPhotoWithTag:1];
+                
+            }
+            default:
+                break;
+        }
+    }
+}
+
 
 
 
