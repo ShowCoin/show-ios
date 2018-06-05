@@ -107,3 +107,8 @@ static dispatch_once_t onceToken;
 }
 
 @end
+
+
+@implementation PAPhotoAuthorized
+
+@end
