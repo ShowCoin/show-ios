@@ -33,6 +33,10 @@ static dispatch_once_t onceToken;
 }
 
 
++ (void)dismiss {
+    [SLPlayerMoreController.shared dismissViewControllerAnimated:YES completion:nil];
+}
+
 @end
 
 @implementation SLMoreAnimater {
