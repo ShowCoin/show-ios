@@ -32,6 +32,11 @@ static dispatch_once_t onceToken;
     return _instance;
 }
 
+- (void)postNotification:(BOOL)select {
+    [[NSNotificationCenter defaultCenter]postNotificationName:SLPlayerBottomCollectionNotification object:@(select)];
+    [PageMgr setRootScrollEnabled:!select];
+}
+
 @synthesize clear = _clear;
 
 - (BOOL)clear {
