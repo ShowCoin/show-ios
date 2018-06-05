@@ -39,5 +39,33 @@ static  char blockKey;
 {
     return objc_getAssociatedObject(self, &blockKey);
 }
+-(void)showCanEdit:(BOOL)edit photo:(photoBlock)block
+{
+    canEdit = edit;
+    
+    self.photoBlock = [block copy];
+    UIActionSheet *sheet  = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:DLLocalizedString(@"cancel", nil) destructiveButtonTitle:nil otherButtonTitles:DLLocalizedString(@"Camera", nil), DLLocalizedString(@"PhotoGallery", nil), nil];
+    sheet.tag = 2599;
+    [sheet showInView:self.view];
+    
+}
+
+-(void)takephtoEdit:(BOOL)edit photo:(photoBlock)block
+{
+    canEdit = edit;
+    self.photoBlock = [block copy];
+    [self openPhotoWithTag:0];
+    
+}
+
+
+-(void)cameraChooseEdit:(BOOL)edit photo:(photoBlock)block
+{
+    canEdit = edit;
+    self.photoBlock = [block copy];
+    [self openPhotoWithTag:1];
+}
+
+
 
 @end
