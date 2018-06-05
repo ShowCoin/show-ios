@@ -110,6 +110,8 @@ static dispatch_once_t onceToken;
 
 @implementation PAPhotoAuthorized
 
+
+/// Return YES if Authorized 返回YES如果得到了授权
 + (BOOL)authorizationStatusAuthorized {
     NSInteger status = [self.class authorizationStatus];
     if (status == 0) {
