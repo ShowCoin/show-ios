@@ -104,7 +104,6 @@ static dispatch_once_t onceToken;
         }];
     }
 }
-}
 
 @end
 
