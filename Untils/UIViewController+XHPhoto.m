@@ -168,6 +168,31 @@ static  char blockKey;
 }
 
 
+#pragma mark - alertDelegate
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    
+    
+    if (buttonIndex==1) {
+        [DeviceInfo openAPPSetting];
+    }
+    
+}
+
+
+
+/*
+ #pragma mark - UINavigationControllerDelegate
+ - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
+ if ([navigationController isKindOfClass:[UIImagePickerController class]] &&
+ ((UIImagePickerController *)navigationController).sourceType ==     UIImagePickerControllerSourceTypePhotoLibrary) {
+ [[UIApplication sharedApplication] setStatusBarHidden:NO];
+ 
+ [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
+ }
+ }
+ */
 
 
 
