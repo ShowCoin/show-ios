@@ -32,6 +32,41 @@ static dispatch_once_t onceToken;
     return _instance;
 }
 
+#pragma mark - Privte
+
+- (void)toolAction:(SLLiveToolType)type {
+    [SLPlayerMoreController dismiss];
+    
+    if (   type == SLLiveToolTypeClear
+        && [self.delegate respondsToSelector:@selector(sl_playerToolClearScreen:)]) {
+        // do clear screen
+        [self.delegate sl_playerToolClearScreen:self.toolView.clearSelect];
+        [self postNotification:self.toolView.clearSelect];
+        return;
+    }
+    
+    if (   type == SLLiveToolTypeScreenShot
+        && [self.delegate respondsToSelector:@selector(sl_playerToolScreenShoot)]) {
+        [self.delegate sl_playerToolScreenShoot];
+        return;
+    }
+    
+    if (type != SLLiveToolTypePause) return;
+    if ([self.delegate respondsToSelector:(@selector(sl_playerToolPause))]) {
+        [self.delegate sl_playerToolPause];
+    }
+    [SLPauseView.shared show:YES];
+    SLPlayerMoreController.shared.pause = YES;
+    @weakify(self)
+    SLPauseView.shared.hiddenBlock = ^{
+        @strongify(self)
+        if ([self.delegate respondsToSelector:@selector(sl_playerToolResume)]) {
+            [self.delegate sl_playerToolResume];
+        }
+        SLPlayerMoreController.shared.pause = NO;
+    };
+}
+
 - (void)postNotification:(BOOL)select {
     [[NSNotificationCenter defaultCenter]postNotificationName:SLPlayerBottomCollectionNotification object:@(select)];
     [PageMgr setRootScrollEnabled:!select];
