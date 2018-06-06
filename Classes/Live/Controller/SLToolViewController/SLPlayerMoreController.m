@@ -32,6 +32,11 @@ static dispatch_once_t onceToken;
     return _instance;
 }
 
+- (void)logoutAction {
+    [SLPlayerMoreController dismiss];
+    onceToken = 0;
+    _instance = nil;
+}
 
 - (void)setupUI {
     self.view.backgroundColor = [UIColor clearColor];
@@ -52,6 +57,9 @@ static dispatch_once_t onceToken;
     self.chatView = [[SLLiveChatVC alloc] init];
     self.chatView.formType = SLLiveContollerTypePlayer;
     self.chatView.Controller = self.Controller;
+    
+    
+    
     
     UIWindow *window = [[UIWindow alloc] init];
     window.backgroundColor = [UIColor clearColor];
