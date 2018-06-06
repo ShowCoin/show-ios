@@ -42,15 +42,15 @@
 - (void)cancelOperation {
     [_searchBar resignFirstResponder];
 }
-
+//生命周期将要出现
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 }
-
+//生命周期将要消失
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
 }
-
+//视图加载完成
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -64,7 +64,7 @@
     [self setupControls];
     [self loadData];
 }
-
+//点击右边按钮
 - (void)clickRightButton:(id)sender {
 
 }

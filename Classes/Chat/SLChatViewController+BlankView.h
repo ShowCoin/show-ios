@@ -13,7 +13,9 @@
 @end
 
 @interface SLChatViewController (BlankView)
+//根据类型展示
 - (void)showBlankViewWithType:(SLMessageBlankViewType)type;
+//隐藏blankView
 - (void)hideBlankView;
 
 @end
