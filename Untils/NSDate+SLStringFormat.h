@@ -17,5 +17,6 @@
 // 返回当前时间的字符串格式
 + (NSString *)getNowTimeStr;
 
+//时间戳转date;
 
 @end
