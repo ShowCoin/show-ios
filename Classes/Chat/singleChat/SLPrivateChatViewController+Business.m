@@ -95,5 +95,18 @@
     });
 }
 
+#pragma mark - Update
+- (void)updateCurrentDataViewModelTimeHiddenAndGiftTag
+{
+    @weakify(self);
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        @strongify(self);
+        NSArray *dataArray = self.dataArray;
+        [self markViewModelTimeHiddenAndGiftModelTag:dataArray];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self reloadTableViewWithData:dataArray];
+        });
+    });
+}
 
 @end
