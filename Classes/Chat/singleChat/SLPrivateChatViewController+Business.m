@@ -56,4 +56,44 @@
     });
 }
 
+- (void)loadMoreMessageData
+{
+    @weakify(self);
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        @strongify(self);
+        self.priorCount = self.dataArray.count;
+        long oldestMessageId = 0;
+        if (self.dataArray.count > 0) {
+            id<SLChatMessageBaseCellViewModel> first = [self.dataArray firstObject];
+            oldestMessageId = first.rcMessage.messageId;
+        }
+        
+        NSArray<RCMessage*> *messages = [self.business fetchMessagesWithOldestMessageId:oldestMessageId];
+        if (!ValidArray(messages)){
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self endTableRefreshAnimation];
+            });
+            return;
+        }
+        
+        NSMutableArray *dataArray = [[NSMutableArray alloc] init];
+        NSArray *viewModels = [self viewModelsWithRCMessages:messages];
+        [dataArray addObjectsFromArray:viewModels];
+        [dataArray addObjectsFromArray:self.dataArray];
+        
+        [self updateViewModelTimeAndSizeWithDataArray:dataArray];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self endTableRefreshAnimation];
+            [self reloadTableViewWithData:dataArray];
+            [self updateTableRefreshHeaderWithEachRefreshCount:dataArray.count];
+            if (self.priorCount > 0 && dataArray.count > self.priorCount) {
+                NSInteger row = dataArray.count - self.priorCount;
+                [self scrollToRow:row animated:NO position:UITableViewScrollPositionTop];
+            }
+        });
+    });
+}
+
+
 @end
