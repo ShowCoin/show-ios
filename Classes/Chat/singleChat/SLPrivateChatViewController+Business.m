@@ -184,4 +184,37 @@
     });
 }
 
+#pragma mark - Add
+- (void)addNewMessageDataAtEndWithMessageId:(long)messageId
+{
+    [self addNewMessageDataAtEndWithMessageId:messageId scrollToBottom:YES scrollToBottomAnimated:YES];
+}
+
+- (void)addNewMessageDataAtEndWithMessageId:(long)messageId scrollToBottom:(BOOL)scrollToBottom scrollToBottomAnimated:(BOOL)animated
+{
+    RCMessage *rcMessage = [self.business getMessageWithMessageId:messageId];
+    if (!rcMessage) {
+        return;
+    }
+    @weakify(self);
+    dispatch_async(self.messageWorkQueue, ^{
+        @strongify(self);
+        id<SLChatMessageBaseCellViewModel> viewModel = [[self viewModelsWithRCMessages:@[rcMessage]] firstObject];
+        
+        NSMutableArray *dataArray = [[NSMutableArray alloc] init];
+        [dataArray addObjectsFromArray:self.dataArray];
+        [dataArray addObject:viewModel];
+        
+        [self updateViewModelTimeAndSizeWithDataArray:dataArray];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self insertRow:self.dataArray.count animated:NO newDataArray:dataArray];
+            [self endTableRefreshAnimation];
+            if (scrollToBottom) {
+                [self scrollToBottomAnimated:animated];
+            }
+        });
+    });
+}
+
 @end
