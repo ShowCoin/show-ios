@@ -780,5 +780,116 @@
 }
 
 #pragma mark- datas
+-(void)setUserModel:(ShowUserModel *)userModel
+{
+    _userModel = userModel;
+    @weakify(self);
+    UIImageView * imag = [[UIImageView alloc] init];
+    [imag yy_setImageWithURL:[NSURL URLWithString:_userModel.avatar] placeholder:nil options:YYWebImageOptionProgressiveBlur | YYWebImageOptionSetImageWithFadeAnimation completion:^(UIImage * _Nullable image, NSURL * _Nonnull url, YYWebImageFromType from, YYWebImageStage stage, NSError * _Nullable error) {
+        @strongify(self);
+        [self.headImgView yy_setImageWithURL:[NSURL URLWithString:userModel.middle_avatar] placeholder:image ];
+        [self.headPortrait setRoundStyle:YES imageUrl:self.userModel.avatar.length>0?self.userModel.avatar:self.userModel.middle_avatar holdImg:image  imageHeight:95 vip:[self.userModel.uid isEqualToString:kSystemNumber_RongCloud]?:NO  attestation:NO];
+    }];
+
+    [self.masterLevel setLevel:[NSString stringWithFormat:@"%ld",(long)_userModel.masterLevel]];
+    [self.showLevel setLevel:[NSString stringWithFormat:@"%ld",(long)_userModel.showLevel]];
+
+    [self.nickLab setText:_userModel.nickname];
+    [self.sexImg setImage:userModel.gender.integerValue == 1?[UIImage imageNamed:@"userhome_sex_man"]:[UIImage imageNamed:@"userhome_sex_women"]];
+    [self.sexlab setText:[NSString stringWithFormat:@"%@岁",_userModel.age.length>0?_userModel.age:@"未知"]];
+    [self.idLab setText:[NSString stringWithFormat:@"秀号 %@",_userModel.popularNo]];
+    
+    [self.constellationLab setText:[NSString stringWithFormat:@"%@",_userModel.constellation.length>0?_userModel.constellation:@"未知"]];
+    [self.cityLab setText:IsStrEmpty(_userModel.city)?@"未知":[NSString stringWithFormat:@"%@    ",_userModel.city]];
+    if (_userModel.isFollowed.boolValue && !_isMe) {
+        [self.toConcerBtn setTitle:@"已关注" forState:UIControlStateNormal];
+        _toConcerBtn.layer.borderWidth = 0.5*Proportion375;
+        _toConcerBtn.layer.borderColor = kThemeWhiteColor.CGColor;
+//        _toConcerBtn.layer.cornerRadius = 6*Proportion375;
+        self.toConcerBtn.backgroundColor = [UIColor clearColor];
+
+    }else{
+        [self.toConcerBtn setTitle:@"+ 关注" forState:UIControlStateNormal];
+        _toConcerBtn.layer.borderWidth = 0*Proportion375;
+        _toConcerBtn.layer.borderColor = kThemeWhiteColor.CGColor;
+        self.toConcerBtn.backgroundColor = kThemeRedColor;
+    }
+    [self setLabelSpace:self.wordsLab withValue:_userModel.descriptions withFont:Font_Regular(14*Proportion375)];
+    
+    [self setAttributeBtnTextWithButton:self.fansBtn andStr:_userModel.fansCount];
+    [self setAttributeBtnTextWithButton:self.concerBtn andStr:_userModel.followCount];
+    [self setAttributeBtnTextWithButton:self.walletBtn andStr:_userModel.showCoinStr];
+
+}
+
+-(void)setAttributeBtnTextWithButton:(UIButton *)sender andStr:(NSString *)str
+{
+    NSMutableAttributedString * firstPart = [[NSMutableAttributedString alloc] initWithString:@"0"];
+    if (sender == self.fansBtn) {
+        
+        if (!IsStrEmpty(str)) {
+            firstPart = [[NSMutableAttributedString alloc] initWithString:str];
+        }
+        NSDictionary * firstAttributes = @{ NSFontAttributeName:Font_Regular(20*Proportion375),NSForegroundColorAttributeName:kThemeWhiteColor,};
+        [firstPart setAttributes:firstAttributes range:NSMakeRange(0,firstPart.length)];
+        
+        NSMutableAttributedString * secondPart = [[NSMutableAttributedString alloc] initWithString:@"\n"];
+        NSDictionary * secondAttributes = @{NSFontAttributeName:[UIFont systemFontOfSize:10],NSForegroundColorAttributeName:[UIColor blueColor],};
+        [secondPart setAttributes:secondAttributes range:NSMakeRange(0,secondPart.length)];
+        
+        NSMutableAttributedString * thirdPart = [[NSMutableAttributedString alloc] initWithString:@"粉丝"];
+        NSDictionary * thirdAttributes = @{NSFontAttributeName:Font_Medium(14*Proportion375),NSForegroundColorAttributeName:kThemeWhiteColor,};
+        [thirdPart setAttributes:thirdAttributes range:NSMakeRange(0,thirdPart.length)];
+        
+        [firstPart appendAttributedString:secondPart];
+        [firstPart appendAttributedString:thirdPart];
+        [firstPart addAttribute:NSShadowAttributeName value:_shadowColor range:NSMakeRange(0,firstPart.length)];
+        [self.fansBtn setAttributedTitle:firstPart forState:UIControlStateNormal];
+
+    }else if (sender == self.concerBtn){
+        
+        if (!IsStrEmpty(str)) {
+            firstPart = [[NSMutableAttributedString alloc] initWithString:str];
+        }
+        NSDictionary * firstAttributes = @{ NSFontAttributeName:Font_Regular(20*Proportion375),NSForegroundColorAttributeName:kThemeWhiteColor,};
+        [firstPart setAttributes:firstAttributes range:NSMakeRange(0,firstPart.length)];
+        
+        NSMutableAttributedString * secondPart = [[NSMutableAttributedString alloc] initWithString:@"\n"];
+        NSDictionary * secondAttributes = @{NSFontAttributeName:[UIFont systemFontOfSize:10],NSForegroundColorAttributeName:[UIColor blueColor],};
+        [secondPart setAttributes:secondAttributes range:NSMakeRange(0,secondPart.length)];
+        
+        NSMutableAttributedString * thirdPart = [[NSMutableAttributedString alloc] initWithString:@"关注"];
+        NSDictionary * thirdAttributes = @{NSFontAttributeName:Font_Medium(14*Proportion375),NSForegroundColorAttributeName:kThemeWhiteColor,};
+        [thirdPart setAttributes:thirdAttributes range:NSMakeRange(0,thirdPart.length)];
+        
+        [firstPart appendAttributedString:secondPart];
+        [firstPart appendAttributedString:thirdPart];
+        [firstPart addAttribute:NSShadowAttributeName value:_shadowColor range:NSMakeRange(0,firstPart.length)];
+
+        [self.concerBtn setAttributedTitle:firstPart forState:UIControlStateNormal];
+
+    }else{
+        if (!IsStrEmpty(str)) {
+            firstPart = [[NSMutableAttributedString alloc] initWithString:str];
+        }
+        NSDictionary * firstAttributes = @{ NSFontAttributeName:Font_Regular(20*Proportion375),NSForegroundColorAttributeName:kThemeWhiteColor,};
+        [firstPart setAttributes:firstAttributes range:NSMakeRange(0,firstPart.length)];
+        
+        NSMutableAttributedString * secondPart = [[NSMutableAttributedString alloc] initWithString:@"\n"];
+        NSDictionary * secondAttributes = @{NSFontAttributeName:[UIFont systemFontOfSize:10],NSForegroundColorAttributeName:[UIColor blueColor],};
+        [secondPart setAttributes:secondAttributes range:NSMakeRange(0,secondPart.length)];
+        
+        NSMutableAttributedString * thirdPart = [[NSMutableAttributedString alloc] initWithString:@"钱包"];
+        NSDictionary * thirdAttributes = @{NSFontAttributeName:Font_Medium(14*Proportion375),NSForegroundColorAttributeName:kThemeWhiteColor,};
+        [thirdPart setAttributes:thirdAttributes range:NSMakeRange(0,thirdPart.length)];
+        
+        [firstPart appendAttributedString:secondPart];
+        [firstPart appendAttributedString:thirdPart];
+        [firstPart addAttribute:NSShadowAttributeName value:_shadowColor range:NSMakeRange(0,firstPart.length)];
+
+        [self.walletBtn setAttributedTitle:firstPart forState:UIControlStateNormal];
+    }
+}
+
 
 @end
