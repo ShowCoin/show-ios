@@ -32,6 +32,18 @@ static dispatch_once_t onceToken;
     return _instance;
 }
 
+- (CGFloat)backY {
+    return self.windowY - kMargin10;
+}
+
+- (CGFloat)windowY {
+    return self.toolY - 8 - self.window.mj_h;
+}
+
+- (CGFloat)toolY {
+    return KScreenHeight - kSLToolViewH  - kMargin10 - (__IphoneX__ ? 32 : 0);
+}
+
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [SLPlayerMoreController dismiss];
 }
