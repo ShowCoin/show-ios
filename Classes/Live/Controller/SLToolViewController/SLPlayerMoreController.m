@@ -33,6 +33,11 @@ static dispatch_once_t onceToken;
 }
 
 
+- (void)setupUI {
+    self.view.backgroundColor = [UIColor clearColor];
+    
+}
+
 #pragma mark - Animator
 
 - (CGFloat)backY {
