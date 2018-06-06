@@ -53,6 +53,22 @@ static dispatch_once_t onceToken;
     self.chatView.formType = SLLiveContollerTypePlayer;
     self.chatView.Controller = self.Controller;
     
+    UIWindow *window = [[UIWindow alloc] init];
+    window.backgroundColor = [UIColor clearColor];
+    window.frame = CGRectMake(kMargin10, KScreenHeight, w, kMessageViewH);
+    window.windowLevel = UIApplication.sharedApplication.keyWindow.windowLevel + 1;
+    window.layer.cornerRadius = 15;
+    window.layer.masksToBounds = YES;
+    [window makeKeyAndVisible];
+    [IQKeyboardManager sharedManager].enable = YES;
+    window.rootViewController = [[UINavigationController alloc] initWithRootViewController:self.chatView];
+    self.window = window;
+    
+    self.backView = [UIView new];
+    CGFloat h = KScreenHeight - self.backY;
+    self.backView.frame = CGRectMake(0, self.backY, KScreenWidth, h);
+    self.backView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.2];
+    [self.view insertSubview:self.backView atIndex:0];
 }
 
 #pragma mark - Animator
