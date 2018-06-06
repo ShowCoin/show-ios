@@ -13,5 +13,6 @@
 - (NSString *)formattedStringWithDateString:(NSString *)string;
 
 // 给一个结束时间(秒) 返回一个结束时间字符串
++ (NSString *)getEndTimeStr:(NSTimeInterval)end;
 
 @end
