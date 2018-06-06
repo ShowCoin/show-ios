@@ -300,5 +300,103 @@
     return _navLab;
 }
 
+-(UIButton *)leftBtn
+{
+    if (!_leftBtn) {
+        _leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+//        [_leftBtn setTitle:@"" forState:UIControlStateNormal];
+//        _leftBtn.titleLabel.font = Font_Medium(12*Proportion375);
+//        [_leftBtn setTitleColor:kThemeWhiteColor forState:UIControlStateNormal];
+//        [_leftBtn MelineDockTopWithColor:kThemeWhiteColor];
+        [_leftBtn setImage:[UIImage imageNamed:@"account_navBack"] forState:UIControlStateNormal];
+        [[_leftBtn rac_signalForControlEvents:UIControlEventTouchUpInside]subscribeNext:^(id x) {
+            [PageMgr popActionFromViewcontroller:self.Controller?:(BaseViewController *)self.viewController];
+        }];
+    }
+    return _leftBtn;
+}
+-(UIButton *)listBtn
+{
+    if (!_listBtn) {
+        _listBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_listBtn setTitle:@"排行榜" forState:UIControlStateNormal];
+        [_listBtn setTitleShadowColor:kThemeShadowColor forState:UIControlStateNormal];
+        [_listBtn.titleLabel setShadowOffset:CGSizeMake(1, 1)];
+        _listBtn.titleLabel.font = Font_Medium(14*Proportion375);
+        [_listBtn setTitleColor:kThemeWhiteColor forState:UIControlStateNormal];
+        [_listBtn MelineDockTopWithColor:kThemeWhiteColor];
+        @weakify(self)
+        [[_listBtn rac_signalForControlEvents:UIControlEventTouchUpInside]subscribeNext:^(id x) {
+            @strongify(self)
+            [PageMgr pushtoTopListVCwithUid:self.userModel.uid viewcontroller:self.Controller?:(BaseViewController *)self.viewController];
+        }];
+    }
+    return _listBtn;
+}
+-(UIButton *)giftStoreBtn
+{
+    if (!_giftStoreBtn) {
+        _giftStoreBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        
+        [_giftStoreBtn setTitle:@"礼物商城" forState:UIControlStateNormal];
+        [_giftStoreBtn setTitleShadowColor:kThemeShadowColor forState:UIControlStateNormal];
+        [_giftStoreBtn.titleLabel setShadowOffset:CGSizeMake(1, 1)];
+
+        _giftStoreBtn.titleLabel.font = Font_Medium(14*Proportion375);
+        [_giftStoreBtn setTitleColor:kThemeWhiteColor forState:UIControlStateNormal];
+        [_giftStoreBtn MelineDockTopWithColor:kThemeWhiteColor];
+        [[_giftStoreBtn rac_signalForControlEvents:UIControlEventTouchUpInside]subscribeNext:^(id x) {
+            [HDHud showMessageInView:self.viewController.view title:@"敬请期待"];// [PageMgr pushtoTopListVCwithUid:self.userModel.uid];
+        }];
+    }
+    return _giftStoreBtn;
+}
+- (SLHeadPortrait *)headPortrait
+{
+    if (!_headPortrait) {
+        _headPortrait = [[SLHeadPortrait alloc] initWithFrame:CGRectMake(0, 53*Proportion375, 95*Proportion375, 95*Proportion375)];
+        _headPortrait.centerX = kMainScreenWidth/2;
+        _headPortrait.delegate = self;
+    }
+    return _headPortrait;
+}
+-(UIButton *)settingBtn
+{
+    if (!_settingBtn) {
+        _settingBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        _settingBtn.titleLabel.font = Font_Medium(14*Proportion375);
+        [_settingBtn setTitle:@"设置" forState:UIControlStateNormal];
+        [_settingBtn setTitleShadowColor:kThemeShadowColor forState:UIControlStateNormal];
+        [_settingBtn.titleLabel setShadowOffset:CGSizeMake(1, 1)];
+        [_settingBtn setTitleColor:kThemeWhiteColor forState:UIControlStateNormal];
+        [_settingBtn MelineDockTopWithColor:kThemeWhiteColor];
+        [[_settingBtn rac_signalForControlEvents:UIControlEventTouchUpInside]subscribeNext:^(id x) {
+            [PageMgr pushtoUserSettingVC];
+        }];
+    }
+    return _settingBtn;
+}
+
+-(UILabel *)nickLab
+{
+    if (!_nickLab) {
+        _nickLab = [UILabel labelWithText:AccountUserInfoModel.nickname textColor:kThemeWhiteColor font:Font_Semibold(24*Proportion375) backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentCenter];
+        _nickLab.layer.shadowRadius = 0.0f;
+        _nickLab.layer.shadowOpacity = 0.3;
+        _nickLab.layer.shadowColor = [UIColor blackColor].CGColor;
+        _nickLab.layer.shadowOffset = CGSizeMake(1,1);
+
+    }
+    return _nickLab;
+}
+-(SLLevelMarkView *)masterLevel
+{
+    if (!_masterLevel) {
+        _masterLevel = [[SLLevelMarkView alloc]initWithFrame:CGRectMake(0, 0, 30*WScale, 15*WScale) withType:LevelType_Host];
+        _masterLevel.level =Int2String(_userModel.masterLevel) ;
+        _masterLevel.clipsToBounds = YES;
+    }
+    return _masterLevel;
+}
 
 @end
