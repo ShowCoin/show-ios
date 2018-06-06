@@ -32,6 +32,21 @@ static dispatch_once_t onceToken;
     return _instance;
 }
 
+- (void)dealloc {
+    self.window = nil;
+    [NSNotificationCenter.defaultCenter removeObserver:self];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self showWindow:YES];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self showWindow:NO];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
