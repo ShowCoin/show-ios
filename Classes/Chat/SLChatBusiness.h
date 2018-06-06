@@ -61,6 +61,7 @@ typedef void (^MessageSendErrorBlock)(RCErrorCode nErrorCode, long messageId);
 //根据ID设置消息状态
 - (BOOL)setMessageSentStatusWithMessageId:(long)messageId sentStatus:(RCSentStatus)sentStatus;
 - (void)checSLessageNetwork;
+//更具ID删除消息
 - (BOOL)deleteMessageWithId:(long)messageId;
 - (void)recallRCMessage:(RCMessage *)rcMessage success:(void (^)(long messageId))successBlock error:(void(^)(RCErrorCode errorcode))errorBlock;
 
