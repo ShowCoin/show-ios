@@ -32,6 +32,9 @@ static dispatch_once_t onceToken;
     return _instance;
 }
 
+
+#pragma mark - Animator
+
 - (CGFloat)backY {
     return self.windowY - kMargin10;
 }
