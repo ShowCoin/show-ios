@@ -26,12 +26,15 @@
 		720F860920B2F59500AD0C54 /* SLGetRyTokenAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 720F860120B2F59500AD0C54 /* SLGetRyTokenAction.m */; };
 		723816B420C689AB00C3885E /* SLLevelMarkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 723816B320C689AB00C3885E /* SLLevelMarkView.m */; };
 		723816B720C68B3C00C3885E /* SLHeadPortrait.m in Sources */ = {isa = PBXBuildFile; fileRef = 723816B620C68B3C00C3885E /* SLHeadPortrait.m */; };
+		723816BE20C6ABFF00C3885E /* UIColor+Equalable.m in Sources */ = {isa = PBXBuildFile; fileRef = 723816B920C6ABFE00C3885E /* UIColor+Equalable.m */; };
+		723816C520C6B6E300C3885E /* SLLinkLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 723816C420C6B6E300C3885E /* SLLinkLabel.m */; };
 		7239EB3720BD38FC00588BED /* SLTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7239EB2C20BD38FC00588BED /* SLTextView.m */; };
 		72C7B4F920C3EDE600065BC2 /* SLADView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C7B4F820C3EDE600065BC2 /* SLADView.m */; };
 		72FE9B6620621F59008DD3D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72FE9B6420621F59008DD3D5 /* LaunchScreen.storyboard */; };
 		72FE9B6920621F59008DD3D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FE9B6820621F59008DD3D5 /* main.m */; };
 		72FE9B7320621F59008DD3D5 /* ShowLiveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FE9B7220621F59008DD3D5 /* ShowLiveTests.m */; };
 		72FE9B7E20621F59008DD3D5 /* ShowLiveUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FE9B7D20621F59008DD3D5 /* ShowLiveUITests.m */; };
+		9314D1F520C6B83400BB2429 /* SLPrivateChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9314D1F420C6B83300BB2429 /* SLPrivateChatViewController.m */; };
 		93615AEB20C1453A000D5658 /* SLBaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93615AEA20C1453A000D5658 /* SLBaseWebViewController.m */; };
 		93615AF320C14BB2000D5658 /* SLSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 93615AF220C14BB2000D5658 /* SLSearchBar.m */; };
 		9391AA8320BF078A00D520F1 /* SLTimerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9391AA8220BF078A00D520F1 /* SLTimerLabel.m */; };
@@ -92,6 +95,11 @@
 		723816B220C689AB00C3885E /* SLLevelMarkView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLLevelMarkView.h; sourceTree = "<group>"; };
 		723816B320C689AB00C3885E /* SLLevelMarkView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLLevelMarkView.m; sourceTree = "<group>"; };
 		723816B620C68B3C00C3885E /* SLHeadPortrait.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLHeadPortrait.m; sourceTree = "<group>"; };
+		723816B920C6ABFE00C3885E /* UIColor+Equalable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Equalable.m"; sourceTree = "<group>"; };
+		723816BC20C6ABFF00C3885E /* SLVerticalAlignLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLVerticalAlignLabel.h; sourceTree = "<group>"; };
+		723816C120C6AC5300C3885E /* SLLinkLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLLinkLabel.h; sourceTree = "<group>"; };
+		723816C320C6AC5C00C3885E /* UIColor+Equalable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Equalable.h"; sourceTree = "<group>"; };
+		723816C420C6B6E300C3885E /* SLLinkLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLLinkLabel.m; sourceTree = "<group>"; };
 		7239EB2520BD38D300588BED /* SLTopListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLTopListViewController.h; sourceTree = "<group>"; };
 		7239EB2820BD38FC00588BED /* ShowSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowSettingViewController.h; sourceTree = "<group>"; };
 		7239EB2920BD38FC00588BED /* ShowUserQRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowUserQRViewController.h; sourceTree = "<group>"; };
@@ -133,6 +141,11 @@
 		9314D1ED20C6691D00BB2429 /* SLPrivateChatViewController+InputMoreCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SLPrivateChatViewController+InputMoreCardView.h"; sourceTree = "<group>"; };
 		9314D1EE20C669AB00BB2429 /* SLPrivateChatViewController+Emoji.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SLPrivateChatViewController+Emoji.h"; sourceTree = "<group>"; };
 		9314D1EF20C669FD00BB2429 /* SLPrivateChatViewController+MessageReceived.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SLPrivateChatViewController+MessageReceived.h"; sourceTree = "<group>"; };
+		9314D1F020C6AB0C00BB2429 /* SLPrivateChatViewController+MessageSend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SLPrivateChatViewController+MessageSend.h"; sourceTree = "<group>"; };
+		9314D1F120C6AB5100BB2429 /* SLPrivateChatViewController+TableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SLPrivateChatViewController+TableView.h"; sourceTree = "<group>"; };
+		9314D1F220C6AB9600BB2429 /* SLPrivateChatViewController+UserAndRelationInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SLPrivateChatViewController+UserAndRelationInfo.h"; sourceTree = "<group>"; };
+		9314D1F320C6B59900BB2429 /* SLPrivateChatViewController+SLAdjustLiveChatPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SLPrivateChatViewController+SLAdjustLiveChatPrivate.h"; sourceTree = "<group>"; };
+		9314D1F420C6B83300BB2429 /* SLPrivateChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLPrivateChatViewController.m; sourceTree = "<group>"; };
 		93154D6820623EFE00BF088F /* ShowLive.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowLive.pch; sourceTree = "<group>"; };
 		9319236920B7FF1C001C6144 /* SLFriendListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLFriendListViewController.h; sourceTree = "<group>"; };
 		9319236B20B7FF37001C6144 /* SLFriendListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLFriendListCell.h; sourceTree = "<group>"; };
@@ -272,6 +285,32 @@
 				723816B620C68B3C00C3885E /* SLHeadPortrait.m */,
 			);
 			path = userHeader;
+			sourceTree = "<group>";
+		};
+		723816B820C6ABFE00C3885E /* SLLinkLabel */ = {
+			isa = PBXGroup;
+			children = (
+				723816C320C6AC5C00C3885E /* UIColor+Equalable.h */,
+				723816B920C6ABFE00C3885E /* UIColor+Equalable.m */,
+				723816C120C6AC5300C3885E /* SLLinkLabel.h */,
+				723816C420C6B6E300C3885E /* SLLinkLabel.m */,
+			);
+			path = SLLinkLabel;
+			sourceTree = "<group>";
+		};
+		723816BA20C6ABFF00C3885E /* SLVerticalAlignLabel */ = {
+			isa = PBXGroup;
+			children = (
+				723816BC20C6ABFF00C3885E /* SLVerticalAlignLabel.h */,
+			);
+			path = SLVerticalAlignLabel;
+			sourceTree = "<group>";
+		};
+		723816BD20C6ABFF00C3885E /* JKCategories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = JKCategories;
 			sourceTree = "<group>";
 		};
 		725B98BA20AC3CD400747F7A /* UserCenter */ = {
@@ -423,6 +462,7 @@
 			isa = PBXGroup;
 			children = (
 				9314D1E720C57AEF00BB2429 /* SLPrivateChatViewController.h */,
+				9314D1F420C6B83300BB2429 /* SLPrivateChatViewController.m */,
 				9314D1E820C57B1F00BB2429 /* SLPrivateChatViewController+Business.h */,
 				9314D1E920C57B7800BB2429 /* SLPrivateChatViewController+Common.h */,
 				9314D1EA20C57BAD00BB2429 /* SLPrivateChatViewController+Events.h */,
@@ -431,6 +471,10 @@
 				9314D1EC20C668E100BB2429 /* SLPrivateChatViewController+InputView.h */,
 				9314D1EE20C669AB00BB2429 /* SLPrivateChatViewController+Emoji.h */,
 				9314D1EF20C669FD00BB2429 /* SLPrivateChatViewController+MessageReceived.h */,
+				9314D1F020C6AB0C00BB2429 /* SLPrivateChatViewController+MessageSend.h */,
+				9314D1F120C6AB5100BB2429 /* SLPrivateChatViewController+TableView.h */,
+				9314D1F220C6AB9600BB2429 /* SLPrivateChatViewController+UserAndRelationInfo.h */,
+				9314D1F320C6B59900BB2429 /* SLPrivateChatViewController+SLAdjustLiveChatPrivate.h */,
 			);
 			path = singleChat;
 			sourceTree = "<group>";
@@ -529,6 +573,9 @@
 		9391AA7F20BF06EB00D520F1 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				723816BD20C6ABFF00C3885E /* JKCategories */,
+				723816B820C6ABFE00C3885E /* SLLinkLabel */,
+				723816BA20C6ABFF00C3885E /* SLVerticalAlignLabel */,
 				723816B520C68A6E00C3885E /* userHeader */,
 				723816B120C688FC00C3885E /* SLLevelView */,
 				9391AA8020BF06F400D520F1 /* SLTimerLabel */,
@@ -805,15 +852,18 @@
 				72FE9B6920621F59008DD3D5 /* main.m in Sources */,
 				435E3C9020C02BB2002B7A7F /* NSNumber+JKRound.m in Sources */,
 				435E3C8F20C02BB2002B7A7F /* NSDecimalNumber+JKExtensions.m in Sources */,
+				723816C520C6B6E300C3885E /* SLLinkLabel.m in Sources */,
 				43968A6A20AC398C00149DCC /* NSObject+Safe.m in Sources */,
 				435E3C9120C02BB2002B7A7F /* NSNumber+JKCGFloat.m in Sources */,
 				72C7B4F920C3EDE600065BC2 /* SLADView.m in Sources */,
+				9314D1F520C6B83400BB2429 /* SLPrivateChatViewController.m in Sources */,
 				93D2C11420BD5F5100C9D960 /* SLFriendListViewController.m in Sources */,
 				435E3C9320C02BB2002B7A7F /* NSNumber+JKRomanNumerals.m in Sources */,
 				9391AA8320BF078A00D520F1 /* SLTimerLabel.m in Sources */,
 				93615AF320C14BB2000D5658 /* SLSearchBar.m in Sources */,
 				43D24A912094A43600C59AC8 /* AppDelegate+ShowRegisterService.m in Sources */,
 				43D24A922094A43600C59AC8 /* ShowAppDelegate.m in Sources */,
+				723816BE20C6ABFF00C3885E /* UIColor+Equalable.m in Sources */,
 				723816B720C68B3C00C3885E /* SLHeadPortrait.m in Sources */,
 				93615AEB20C1453A000D5658 /* SLBaseWebViewController.m in Sources */,
 				9391AA9720C03A4300D520F1 /* SLWebViewJSFuncNameConst.m in Sources */,

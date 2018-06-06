@@ -12,6 +12,7 @@
 
 @end
 @implementation SLHeadPortrait
+//用户头像初始化方法
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -27,6 +28,7 @@
     }
     return self;
 }
+//用户头像初始化，和上面区分开来
 - (id)init
 {
     self = [super init];

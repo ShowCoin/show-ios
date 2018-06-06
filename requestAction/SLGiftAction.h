@@ -7,7 +7,7 @@
 //
 
 #import "ShowAction.h"
-
+//礼物请求
 @interface SLGiftAction : ShowAction
 
 @end
