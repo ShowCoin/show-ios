@@ -32,6 +32,14 @@ static dispatch_once_t onceToken;
     return _instance;
 }
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    [self setupUI];
+    
+    [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(logoutAction) name:kNotificationLogout object:nil];
+}
+
 - (void)logoutAction {
     [SLPlayerMoreController dismiss];
     onceToken = 0;
