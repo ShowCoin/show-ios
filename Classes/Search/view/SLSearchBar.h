@@ -32,11 +32,14 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nullable,nonatomic,copy) NSString  *text;                  // current/starting search text
 //站位文字
 @property(nullable,nonatomic,copy) NSString  *placeholder;           // default is nil. string is drawn 70% gray
-//
-@property(nonatomic) BOOL  showsCancelButton;                        // default is yes
-@property(nullable,nonatomic,strong) UIColor *textColor;             // default is nil. use opaque black
-@property(nullable,nonatomic,strong) UIFont  *font;                  // default is nil. use system font 12 pt
-@property(nullable,nonatomic,strong) UIColor *placeholderColor;      // default is drawn 70% gray
+//显示取消按钮
+@property(nonatomic) BOOL  showsCancelButton;
+//文字颜色
+@property(nullable,nonatomic,strong) UIColor *textColor;
+//文字字体
+@property(nullable,nonatomic,strong) UIFont  *font;
+//占位文字
+@property(nullable,nonatomic,strong) UIColor *placeholderColor;
 
 /* Allow placement of an input accessory view to the keyboard for the search bar
  */

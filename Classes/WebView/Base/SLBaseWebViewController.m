@@ -41,7 +41,7 @@
 {
     [self.view addSubview:self.webView];
 }
-
+//加载URL
 - (void)loadUrlRequest
 {
     if (!self.requestUrl) {

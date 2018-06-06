@@ -38,7 +38,7 @@ static CGFloat lableMargin = 14;
 +(id)cellWithTableView:(UITableView*)tableView{
     return [SLFriendListCell cellWithTableView:tableView separatorLineFull:YES];
 }
-
+//类型，是否线到头
 +(id)cellWithTableView:(UITableView*)tableView separatorLineFull:(BOOL)separatorLineFull{
     static NSString *CellIdentifier = @"FriendListCell";
     SLFriendListCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -51,14 +51,13 @@ static CGFloat lableMargin = 14;
     }
     return cell;
 }
+//类型，复用池
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self)
     {
         self.selectionStyle = UITableViewCellSelectionStyleNone;
-        //        [self.contentView addSubview:self.sexImageView];
-        //        [self.contentView addSubview:self.vipImageView];
         
         self.frame = CGRectMake(0, 0, kMainScreenWidth, 72*Proportion375);
         self.backgroundColor = kthemeBlackColor;
