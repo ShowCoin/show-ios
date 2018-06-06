@@ -32,6 +32,10 @@ static dispatch_once_t onceToken;
     return _instance;
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [SLPlayerMoreController dismiss];
+}
+
 #pragma mark - Privte
 
 - (void)toolAction:(SLLiveToolType)type {
