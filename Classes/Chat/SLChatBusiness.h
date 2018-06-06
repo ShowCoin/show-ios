@@ -56,7 +56,9 @@ typedef void (^MessageSendErrorBlock)(RCErrorCode nErrorCode, long messageId);
 - (void)sendReadReceiptMessageWithLastSentTime:(long)lastSentTime;
 /*******  更新消息 *******/
 - (RCMessage *)insertOutgoingMessage:(RCMessageContent *)message;
+//设置请求状态根据ID，融云接收的状态
 - (BOOL)setMessageReceivedStatusWithMessageId:(long)messageId rcReceivedStatus:(NSUInteger)status;
+//根据ID设置消息状态
 - (BOOL)setMessageSentStatusWithMessageId:(long)messageId sentStatus:(RCSentStatus)sentStatus;
 - (void)checSLessageNetwork;
 - (BOOL)deleteMessageWithId:(long)messageId;
