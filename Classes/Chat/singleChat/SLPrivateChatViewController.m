@@ -63,6 +63,59 @@
     [self updateUserInfo];
 }
 
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
+    [self sendReceivedMessageReadReceiptWithLastSentTimeInDataBase];
+    [self findAndSetUnreadMessageAfterViewDidApperar];
+    [self callUpKeyboardWhenDraftExistAfterUpdateDraft];
+}
 
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    [self saveInputTextToDraft];
+    
+    self.isInputMoreCardViewShow = NO;
+    self.isEmojiViewShow = NO;
+    
+    // clear all message`s unread state
+    [self clearConversationMessageUnreadState];
+    [self setLastestMessageToReadState];
+}
+
+-(void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    [[SLAudioManager sharedManager] stopAudio];
+    
+    [self resignChatViewFirstResponder];
+    [self removeKeyBoardObserver];
+}
+
+#pragma mark - Private Setup
+- (void)setup
+{
+    // setup
+    [self setupBusiness];
+    [self setupChatTableView];
+    if (!self.isSYSTEMMessage) {
+        [self setupInputView];
+    }
+    //    [self setupNavigationBar];
+    
+    [self setupGestures];
+    [self setupMenuItems];
+    self.neverSendMessageSinceCome = YES;
+    
+    // load data
+    [self loadMessageData];
+    [self scrollToBottomAnimated:YES];
+    [self addMessageReceivedObservers];
+    [self addNetStatusObserver];
+    // start
+}
 
 @end
