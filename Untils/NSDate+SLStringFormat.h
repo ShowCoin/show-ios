@@ -10,5 +10,7 @@
 
 @interface NSDate (DLStringFormat)
 
+- (NSString *)formattedStringWithDateString:(NSString *)string;
+
 
 @end
