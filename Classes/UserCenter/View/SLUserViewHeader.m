@@ -494,5 +494,120 @@
     }
     return _wordsLab;
 }
+-(UIImageView *)headImgView
+{
+    if (!_headImgView) {
+        _headImgView = [[UIImageView alloc] init];
+        _headImgView.layer.masksToBounds = YES;
+//        _headImgView.alpha = 0;
+        _headImgView.contentMode =UIViewContentModeScaleAspectFill;
+        
+    }
+    return _headImgView;
+}
+-(UIView *)effColorView
+{
+    if (!_effColorView) {
+        _effColorView  = [[UIView alloc] init];
+        _effColorView.backgroundColor = HexRGBAlpha(0x000000, 0);
+    }
+    return _effColorView;
+}
+-(UIVisualEffectView *)effectview
+{
+    if (!_effectview) {
+        
+        UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+        
+        _effectview = [[UIVisualEffectView alloc] initWithEffect:blur];
+//        _effectview.alpha = 0.97;
+    }
+    return _effectview;
+}
+
+-(UIView *)bottomWhiteView
+{
+    if (!_bottomWhiteView) {
+        _bottomWhiteView = [[UIView alloc] init];
+        _bottomWhiteView.backgroundColor = kThemeWhiteColor;
+        
+    }
+    return _bottomWhiteView;
+}
+-(UIButton *)fansBtn
+{
+    if (!_fansBtn) {
+        _fansBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        _fansBtn.titleLabel.numberOfLines = 0;
+        _fansBtn.titleLabel.textAlignment = NSTextAlignmentCenter;
+        NSMutableAttributedString * firstPart = [[NSMutableAttributedString alloc] initWithString:@"0"];
+
+        if (!IsStrEmpty(AccountUserInfoModel.fansCount)) {
+            firstPart = [[NSMutableAttributedString alloc] initWithString:AccountUserInfoModel.fansCount];
+        }
+        NSDictionary * firstAttributes = @{ NSFontAttributeName:Font_Regular(20*Proportion375),NSForegroundColorAttributeName:kThemeWhiteColor,};
+        [firstPart setAttributes:firstAttributes range:NSMakeRange(0,firstPart.length)];
+        
+        NSMutableAttributedString * secondPart = [[NSMutableAttributedString alloc] initWithString:@"\n"];
+        NSDictionary * secondAttributes = @{NSFontAttributeName:[UIFont systemFontOfSize:10],NSForegroundColorAttributeName:[UIColor blueColor],};
+        [secondPart setAttributes:secondAttributes range:NSMakeRange(0,secondPart.length)];
+        
+        NSMutableAttributedString * thirdPart = [[NSMutableAttributedString alloc] initWithString:@"粉丝"];
+        NSDictionary * thirdAttributes = @{NSFontAttributeName:Font_Medium(14*Proportion375),NSForegroundColorAttributeName:kThemeWhiteColor,};
+        [thirdPart setAttributes:thirdAttributes range:NSMakeRange(0,thirdPart.length)];
+        
+        [firstPart appendAttributedString:secondPart];
+        [firstPart appendAttributedString:thirdPart];
+        @weakify(self)
+        [[_fansBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+            @strongify(self)
+            [PageMgr pushFansWithType:1 andUid:self.userModel.uid viewcontroller:self.Controller?:(BaseViewController *)self.viewController];
+        }];
+
+        [_fansBtn setAttributedTitle:firstPart forState:UIControlStateNormal];
+    }
+    return _fansBtn;
+}
+
+-(UIButton *)concerBtn
+{
+    if (!_concerBtn) {
+        _concerBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        _concerBtn.titleLabel.numberOfLines = 0;
+        _concerBtn.titleLabel.textAlignment = NSTextAlignmentCenter;
+        NSMutableAttributedString * firstPart = [[NSMutableAttributedString alloc] initWithString:@"0"];
+//        _concerBtn.backgroundColor = kThemeRedColor;
+
+        if (!IsStrEmpty(AccountUserInfoModel.followCount)) {
+            firstPart = [[NSMutableAttributedString alloc] initWithString:AccountUserInfoModel.followCount];
+        }
+
+        NSDictionary * firstAttributes = @{ NSFontAttributeName:Font_Regular(20*Proportion375),NSForegroundColorAttributeName:kThemeWhiteColor,};
+        [firstPart setAttributes:firstAttributes range:NSMakeRange(0,firstPart.length)];
+        
+        NSMutableAttributedString * secondPart = [[NSMutableAttributedString alloc] initWithString:@"\n"];
+        NSDictionary * secondAttributes = @{NSFontAttributeName:[UIFont systemFontOfSize:10],NSForegroundColorAttributeName:[UIColor blueColor],};
+        [secondPart setAttributes:secondAttributes range:NSMakeRange(0,secondPart.length)];
+        
+        NSMutableAttributedString * thirdPart = [[NSMutableAttributedString alloc] initWithString:@"关注"];
+        NSDictionary * thirdAttributes = @{NSFontAttributeName:Font_Medium(14*Proportion375),NSForegroundColorAttributeName:kThemeWhiteColor,};
+        [thirdPart setAttributes:thirdAttributes range:NSMakeRange(0,thirdPart.length)];
+        
+        [firstPart appendAttributedString:secondPart];
+        [firstPart appendAttributedString:thirdPart];
+
+        [_concerBtn setAttributedTitle:firstPart forState:UIControlStateNormal];
+        @weakify(self)
+        [[_concerBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+            @strongify(self)
+            [PageMgr pushFansWithType:0 andUid:self.userModel.uid viewcontroller:self.Controller?:(BaseViewController *)self.viewController];
+        }];
+
+        [_concerBtn setTitleShadowColor:kThemeShadowColor forState:UIControlStateNormal];
+        [_concerBtn.titleLabel setShadowOffset:CGSizeMake(1, 1)];
+
+    }
+    return _concerBtn;
+}
 
 @end
