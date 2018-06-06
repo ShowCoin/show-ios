@@ -49,7 +49,9 @@ static dispatch_once_t onceToken;
     [self.toolView addEffect:UIBlurEffectStyleDark];
     [self.view addSubview:self.toolView];
     
-    
+    self.chatView = [[SLLiveChatVC alloc] init];
+    self.chatView.formType = SLLiveContollerTypePlayer;
+    self.chatView.Controller = self.Controller;
     
 }
 
