@@ -710,5 +710,75 @@
     }
     return _shareBtn;
 }
+-(UIButton *)worksBtn
+{
+    if (!_worksBtn) {
+        _worksBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        _worksBtn.titleLabel.font = Font_Medium(15*Proportion375);
+        [_worksBtn setTitle:@"作品" forState:UIControlStateNormal];
+        [_worksBtn setTitleColor:kThemeWhiteColor forState:UIControlStateNormal];
+        [_worksBtn setBackgroundColor:kthemeBlackColor forState:UIControlStateNormal];
+        [[_worksBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+            [self.bottomAnimationLine mas_remakeConstraints:^(MASConstraintMaker *make) {
+                make.bottom.equalTo(self);
+                make.centerX.equalTo(self.worksBtn);
+                make.size.mas_equalTo(CGSizeMake(40*Proportion375, 1*Proportion375));
+            }];
+            [UIView animateWithDuration:0.2 animations:^{
+                
+                [self layoutIfNeeded];
+            }];
+        }];
+    }
+    return _worksBtn;
+}
+-(UIButton *)likesBtn
+{
+    if (!_likesBtn) {
+        _likesBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        _likesBtn.titleLabel.font = Font_Medium(15*Proportion375);
+        [_likesBtn setTitle:@"喜欢" forState:UIControlStateNormal];
+        [_likesBtn setTitleColor:kThemeWhiteColor forState:UIControlStateNormal];
+        [_likesBtn setBackgroundColor:kthemeBlackColor forState:UIControlStateNormal];
+        [[_likesBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+            [HDHud showMessageInView:self title:@"敬请期待"];
+        }];
+
+    }
+    return _likesBtn;
+}
+-(UIView *)bottomAnimationLine
+{
+    if (!_bottomAnimationLine) {
+        _bottomAnimationLine = [[UIView alloc] init];
+        _bottomAnimationLine.backgroundColor = kThemeWhiteColor;
+    }
+    return _bottomAnimationLine;
+}
+#pragma mark---------method-----------
+
+-(void)setLabelSpace:(UILabel*)label withValue:(NSString*)str withFont:(UIFont*)font {
+    if (!str.length) {
+        return;
+    }
+    NSMutableParagraphStyle *paraStyle = [[NSMutableParagraphStyle alloc] init];
+    paraStyle.lineBreakMode = NSLineBreakByCharWrapping;
+    paraStyle.alignment = NSTextAlignmentCenter;
+    paraStyle.lineSpacing = 0; //设置行间距
+    paraStyle.hyphenationFactor = 1.0;
+    paraStyle.firstLineHeadIndent = 0.0;
+    paraStyle.paragraphSpacingBefore = 0.0;
+    paraStyle.headIndent = 0;
+    paraStyle.tailIndent = 0;
+    //    设置字间距 NSKernAttributeName:@1.5f
+    NSDictionary *dic = @{NSFontAttributeName:font, NSParagraphStyleAttributeName:paraStyle, NSKernAttributeName:@0.5f
+                          };
+    
+    NSAttributedString *attributeStr = [[NSAttributedString alloc] initWithString:str attributes:dic];
+    label.attributedText = attributeStr;
+    self.labelHeight = label.height;
+}
+
+#pragma mark- datas
 
 @end
