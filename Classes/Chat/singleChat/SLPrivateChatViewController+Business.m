@@ -243,4 +243,44 @@
     return nil;
 }
 
+- (void)findAndSetUnreadMessageAfterViewDidApperar
+{
+    NSInteger unreadCount = [self.business getUnreadMessageCount];
+    if (!unreadCount) {
+        return;
+    }
+    
+    unreadCount = MIN(self.dataArray.count, unreadCount);
+    
+}
+
+- (long)findLastReceivedMessageSentTime
+{
+    // find last sentTime
+    __block long lastSentTime = 0;
+    [self.dataArray enumerateObjectsWithOptions:NSEnumerationReverse usingBlock:^(id<SLChatMessageBaseCellViewModel>  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        id<SLChatMessageBaseCellViewModel> viewModel = obj;
+        if (viewModel.messageDirection == SLChatMessageDirectionReceived) {
+            RCMessage *message = viewModel.rcMessage;
+            lastSentTime = message.sentTime;
+            *stop = YES;
+        }
+    }];
+    return lastSentTime;
+}
+
+#pragma mark - Private Filter
+- (void)updateViewModelTimeAndSizeWithDataArray:(NSMutableArray *)dataArray
+{
+    [self markViewModelTimeHiddenAndGiftModelTag:dataArray];
+    
+    id<SLChatMessageBaseCellViewModel> lastViewModel = [dataArray lastObject];
+    [self markLastViewModel:lastViewModel];
+    
+    // re calculate cell height
+    for (id<SLChatMessageBaseCellViewModel> viewModel in dataArray) {
+        [viewModel updateCachedHeightIfNeed];
+    }
+}
+
 @end
