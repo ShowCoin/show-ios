@@ -14,5 +14,6 @@
 
 // 给一个结束时间(秒) 返回一个结束时间字符串
 + (NSString *)getEndTimeStr:(NSTimeInterval)end;
+// 返回当前时间的字符串格式
 
 @end
