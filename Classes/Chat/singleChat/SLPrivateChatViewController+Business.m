@@ -24,4 +24,36 @@
     }
 }
 
+#pragma mark - Load Messages
+- (void)loadMessageData
+{
+    @weakify(self);
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        @strongify(self);
+        NSArray<RCMessage*> *messages = [self.business fetchLatestMessages];
+        if (!ValidArray(messages)){
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self endTableRefreshAnimation];
+                self.tableView.dataArray = nil;
+                [self.tableView reloadData];
+            });
+            return;
+        }
+        
+        NSMutableArray *dataArray = [NSMutableArray array];
+        NSArray<id<SLChatMessageBaseCellViewModel>> *viewModels = [self viewModelsWithRCMessages:messages];
+        
+        [dataArray addObjectsFromArray:viewModels];
+        
+        [self updateViewModelTimeAndSizeWithDataArray:dataArray];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self reloadTableViewWithData:dataArray];
+            [self updateTableRefreshHeaderWithEachRefreshCount:dataArray.count];
+            [self endTableRefreshAnimation];
+            [self scrollToBottomAnimated:NO];
+        });
+    });
+}
+
 @end
