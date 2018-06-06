@@ -27,12 +27,15 @@ typedef void (^MessageSendErrorBlock)(RCErrorCode nErrorCode, long messageId);
 
 - (instancetype)init NS_UNAVAILABLE;
 - (instancetype)initWithTargetUid:(NSString *)targetUid eachPageMaxCount:(NSInteger)eachPageMaxCount NS_DESIGNATED_INITIALIZER;
-
+//获取最新的message
 - (NSArray<RCMessage*> *)fetchLatestMessages;
+//根据oldID获取信息
 - (NSArray<RCMessage*> *)fetchMessagesWithOldestMessageId:(long)oldestMessageId;
+//根据ID获取信息
 - (RCMessage *)getMessageWithMessageId:(long)messageId;
-
+//获取relation信息
 - (void)fetchRelationInfo:(RequestCompleteHandle)completeHandle;
+//获取用户信息
 - (void)fetchUserInfo:(RequestCompleteHandle)completeHandle;
 
 // 消息发送成功的统计
