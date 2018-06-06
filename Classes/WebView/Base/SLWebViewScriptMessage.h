@@ -11,7 +11,7 @@
 @interface SLWebViewScriptMessage : NSObject
 @property (strong, nonatomic) id body;
 @property (strong, nonatomic) NSString *name;
-
+//消息内容和消息体
 + (instancetype)messageWithName:(NSString *)name body:(id)body;
 
 @end

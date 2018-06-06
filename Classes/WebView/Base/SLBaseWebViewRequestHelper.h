@@ -10,6 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 @interface SLBaseWebViewRequestHelper : NSObject
+//请求内容中加入APP信息
 + (NSURLRequest *)requestAppendAppInfo:(NSURLRequest *)request;
 @end
 NS_ASSUME_NONNULL_END

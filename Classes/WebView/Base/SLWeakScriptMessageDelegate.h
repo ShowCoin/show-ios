@@ -10,7 +10,7 @@
 #import <WebKit/WebKit.h>
 @interface SLWeakScriptMessageDelegate : NSObject<WKScriptMessageHandler>
 @property (nonatomic, assign) id<WKScriptMessageHandler> scriptDelegate;
-
+//初始化delegate
 - (instancetype)initWithDelegate:(id<WKScriptMessageHandler>)scriptDelegate;
 
 @end

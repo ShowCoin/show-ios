@@ -38,7 +38,7 @@
 @end
 
 @implementation SLFriendListViewController
-
+//
 - (void)cancelOperation {
     [_searchBar resignFirstResponder];
 }
