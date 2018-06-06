@@ -38,7 +38,7 @@
 @end
 
 @implementation SLFriendListViewController
-//
+//取消操作
 - (void)cancelOperation {
     [_searchBar resignFirstResponder];
 }
@@ -68,7 +68,7 @@
 - (void)clickRightButton:(id)sender {
 
 }
-
+//初始化控件
 - (void)setupControls {
     
     // headerView
@@ -193,6 +193,7 @@
         }];
     }];
 }
+//监听通知
 - (void)onObserverNotify:(NSNotification*)notification {
     if ([notification.name isEqualToString:kNotificationFriendRequestCount]) {
         NSNumber* count=@0;
@@ -302,7 +303,7 @@
         return headView;
     }
 }
-
+//tableview的height
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     if (_bSearchTableView) {
@@ -311,12 +312,12 @@
         return 30;
     }
 }
-
+//cell高度
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 66;
 }
-
+//选中cell的事件
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (_bSearchTableView) {
@@ -327,13 +328,12 @@
 }
 
 #pragma mark SLFriendCellDelegate
-
+//点击用户
 - (void)onClickUser:(SLFansModel*)data{
     [PageMgr pushToUserCenterControllerWithUid:data.uid];
 }
-
+//点击聊天
 - (void)onClickChat:(SLFansModel*)data{
-    
     
     ShowUserModel* user=[ShowUserModel new];
     user.uid=data.uid;
@@ -345,7 +345,7 @@
     
     [PageMgr pushToChatViewControllerWithTargetUser:user];
 }
-
+//点击关注
 - (void)onClickFollow:(SuccessBlock)block withData:(SLFansModel*)data{
     _followUserAction = [SLFollowUserAction action];
     _followUserAction.to_uid =data.uid;
