@@ -98,5 +98,101 @@
         }];
         [self.settingBtn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self).with.offset(70*Proportion375 + KTopHeight);
+            make.right.equalTo(self);
+            make.size.mas_equalTo(CGSizeMake(73*Proportion375, 30*Proportion375));
+        }];
+        [self.giftStoreBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self).with.offset(120*Proportion375 + KTopHeight);
+            make.left.equalTo(self);
+            make.size.mas_equalTo(CGSizeMake(73*Proportion375, 30*Proportion375));
+        }];
+        [self.headPortrait mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self).with.offset(54*Proportion375 + KTopHeight);
+            make.centerX.equalTo(self);
+            make.size.mas_equalTo(CGSizeMake(93*Proportion375, 93*Proportion375));
+        }];
+        
+        [self.nickLab mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.headPortrait.mas_bottom).with.offset(12*Proportion375);
+            make.left.equalTo(self);
+            make.size.mas_equalTo(CGSizeMake(kMainScreenWidth, 27*Proportion375));
+        }];
+//        [self.idPreLab mas_makeConstraints:^(MASConstraintMaker *make) {
+//            make.top.equalTo(self.nickLab.mas_bottom).with.offset(7*Proportion375);
+//            make.right.equalTo(self.mas_centerX);
+//            make.height.equalTo(@(13*Proportion375));
+//        }];
+        [self.idLab mas_makeConstraints:^(MASConstraintMaker *make) {
+//            make.top.equalTo(self.nickLab.mas_bottom).with.offset(6*Proportion375);
+//            make.left.equalTo(self).equalTo(self.idPreLab.mas_right).with.offset(2*Proportion375);
+//            make.size.mas_equalTo(CGSizeMake(kMainScreenWidth, 16*Proportion375));
+            make.top.equalTo(self.nickLab.mas_bottom).with.offset(6*Proportion375);
+            make.centerX.equalTo(self);
+//            make.size.mas_equalTo(CGSizeMake(100, 16*Proportion375));
+            make.height.equalTo(@(16*Proportion375));
 
+        }];
+//        [self.idPreLab mas_remakeConstraints:^(MASConstraintMaker *make) {
+//            make.top.equalTo(self.nickLab.mas_bottom).with.offset(7*Proportion375);
+//            make.right.equalTo(self.mas_centerX).with.offset((self.idPreLab.width + self.idLab.mas_width)/2 - self.idPreLab.mas_width);
+//            make.size.mas_equalTo(CGSizeMake(100, 13*Proportion375));
+//        }];
+        [self.masterLevel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.idLab.mas_bottom).with.offset(12*Proportion375);
+            make.right.equalTo(self.mas_centerX).with.offset(-4*Proportion375);
+            make.size.mas_equalTo(CGSizeMake(28*Proportion375, 15*Proportion375));
+        }];
+        [self.showLevel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.idLab.mas_bottom).with.offset(12*Proportion375);
+            make.left.equalTo(self.mas_centerX).with.offset(4*Proportion375);
+            make.size.mas_equalTo(CGSizeMake(28*Proportion375, 15*Proportion375));
+        }];
+        [self.cityLab mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.showLevel.mas_bottom).with.offset(6*Proportion375);
+            make.centerX.equalTo(self);
+//            make.size.mas_equalTo(CGSizeMake(50*Proportion375, 20*Proportion375));
+            make.width.lessThanOrEqualTo(@(100*Proportion375));
+            make.width.greaterThanOrEqualTo(@(50*Proportion375));
+            make.height.equalTo(@(20*Proportion375));
+
+        }];
+        [self.constellationLab mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.showLevel.mas_bottom).with.offset(6*Proportion375);
+            make.left.equalTo(self.cityLab.mas_right).with.offset(10*Proportion375);
+            make.size.mas_equalTo(CGSizeMake(50*Proportion375, 20*Proportion375));
+        }];
+        [self.sexbg mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.showLevel.mas_bottom).with.offset(6*Proportion375);
+            make.right.equalTo(self.cityLab.mas_left).with.offset(-10*Proportion375);
+            make.size.mas_equalTo(CGSizeMake(50*Proportion375, 20*Proportion375));
+        }];
+        [self.sexImg mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.sexbg).with.offset(5*Proportion375);
+            make.left.equalTo(self.sexbg).with.offset(7*Proportion375);
+            make.size.mas_equalTo(CGSizeMake(10*Proportion375, 10*Proportion375));
+        }];
+        [self.sexlab mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.sexbg);
+            make.left.equalTo(self.sexImg.mas_right).with.offset(1*Proportion375);
+            make.size.mas_equalTo(CGSizeMake(30*Proportion375, 20*Proportion375));
+        }];
+        [self.wordsLab mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.cityLab.mas_bottom).with.offset(20*Proportion375);
+            make.left.equalTo(self).with.offset(20*Proportion375);
+            make.width.equalTo(@(kMainScreenWidth-40*Proportion375));
+        }];
+        
+        
+//        [self.bottomWhiteView mas_makeConstraints:^(MASConstraintMaker *make) {
+//            make.top.equalTo(self.wordsLab.mas_bottom).with.offset(7);
+//            make.width.equalTo(self);
+//            make.bottom.equalTo(self);
+//
+//        }];
+        [self.fansBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.wordsLab.mas_bottom).with.offset(20*Proportion375);
+            make.centerX.equalTo(self);
+            make.size.mas_equalTo(CGSizeMake(100*Proportion375, 40*Proportion375));
+        }];
+ 
 @end
