@@ -117,5 +117,35 @@
     [self addNetStatusObserver];
     // start
 }
+#pragma mark - Setter
+
+-(void)setTargetUid:(NSString *)targetUid
+{
+    _targetUid = targetUid;
+}
+
+- (void)setTargetUser:(ShowUserModel *)targetUser
+{
+    _targetUser = targetUser;
+    // 如果不存在，更新
+    if (![UserCacheMgr getLocalUserByUid:targetUser.uid]) {
+        [UserCacheMgr updateUser:targetUser];
+    } else if(!IsValidString(targetUser.nickname) ||
+              !IsValidString(targetUser.remarkName)){
+        // 昵称或备注不完整，重新获取
+        ShowUserModel *user = [UserCacheMgr getLocalUserByUid:targetUser.uid];
+        if (user) {
+            _targetUser = user;
+        } else {
+            [self updateUserInfo];
+        }
+    }
+    _targetUid = _targetUser.uid;
+}
+
+- (BOOL)isSYSTEMMessage
+{
+    return [self.targetUid isEqualToString:kSystemNumber_RongCloud];
+}
 
 @end
