@@ -36,6 +36,21 @@ static dispatch_once_t onceToken;
 - (void)setupUI {
     self.view.backgroundColor = [UIColor clearColor];
     
+    CGFloat w = KScreenWidth - kMargin10 * 2;
+    self.toolView = [SLToolView new];
+    self.toolView.frame = CGRectMake(kMargin10, self.toolY, w, kSLToolViewH);
+    self.toolView.layer.cornerRadius = 15;
+    self.toolView.layer.masksToBounds = YES;
+    @weakify(self)
+    self.toolView.clickBlock = ^(SLLiveToolType type) {
+        @strongify(self)
+        [self toolAction:type];
+    };
+    [self.toolView addEffect:UIBlurEffectStyleDark];
+    [self.view addSubview:self.toolView];
+    
+    
+    
 }
 
 #pragma mark - Animator
