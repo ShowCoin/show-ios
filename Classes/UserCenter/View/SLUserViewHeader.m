@@ -398,5 +398,101 @@
     }
     return _masterLevel;
 }
+-(SLLevelMarkView *)showLevel
+{
+    if (!_showLevel) {
+        _showLevel = [[SLLevelMarkView alloc]initWithFrame:CGRectMake(0, 0, 30*WScale, 15*WScale) withType:LevelType_ShowCoin];
+        _showLevel.level =Int2String(_userModel.showLevel);
+        _showLevel.clipsToBounds = YES;
+
+    }
+    return _showLevel;
+}
+-(UIView *)sexbg
+{
+    if (!_sexbg) {
+        _sexbg = [[UIView alloc] init];
+        _sexbg.clipsToBounds = YES;
+        _sexbg.layer.cornerRadius = 10*Proportion375;
+        _sexbg.backgroundColor = HexRGBAlpha(0x8a7acc, 1);
+        
+//        UILabel * label = [UILabel labelWithFrame:CGRectMake(33*Proportion375, 3.5*Proportion375, 12*Proportion375, 12*Proportion375) text:@"岁" textColor:kThemeWhiteColor font:Font_Medium(12*Proportion375) backgroundColor:[UIColor clearColor]];
+//        label.textAlignment = NSTextAlignmentLeft;
+//        [_sexbg addSubview:label];
+    }
+    return _sexbg;
+}
+-(UIImageView *)sexImg
+{
+    if (!_sexImg) {
+        _sexImg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"userhome_sex_man"]];
+        _sexImg.clipsToBounds = YES;
+    }
+    return _sexImg;
+}
+-(UILabel *)sexlab
+{
+    if (!_sexlab) {
+        _sexlab = [UILabel labelWithText:@"22岁" textColor:kThemeWhiteColor font:Font_Medium(10*Proportion375) backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentCenter];
+        _sexlab.clipsToBounds = YES;
+    }
+    return _sexlab;
+}
+
+-(UILabel*)idLab
+{
+    if (!_idLab) {
+        _idLab = [UILabel labelWithText:[NSString stringWithFormat:@"%@",AccountUserInfoModel.popularNo] textColor:kThemeWhiteColor font:Font_Regular(16*Proportion375) backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentLeft];
+        _idLab.layer.shadowRadius = 0.0f;
+        _idLab.layer.shadowOpacity = 0.3;
+        _idLab.layer.shadowColor = [UIColor blackColor].CGColor;
+        _idLab.layer.shadowOffset = CGSizeMake(1,1);
+
+    }
+    return _idLab;
+}
+//-(UILabel*)idPreLab
+//{
+//    if (!_idPreLab) {
+//        _idPreLab = [UILabel labelWithText:@"秀号" textColor:kThemeWhiteColor font:Font_Medium(13*Proportion375) backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentRight];
+//        _idPreLab.layer.shadowRadius = 0.0f;
+//        _idPreLab.layer.shadowOpacity = 0.3;
+//        _idPreLab.layer.shadowColor = [UIColor blackColor].CGColor;
+//        _idPreLab.layer.shadowOffset = CGSizeMake(1,1);
+//
+//    }
+//    return _idPreLab;
+//}
+
+-(UILabel*)cityLab
+{
+    if (!_cityLab) {
+        _cityLab = [UILabel labelWithText:AccountUserInfoModel.city textColor:kThemeWhiteColor font:Font_Semibold(10*Proportion375) backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentCenter];
+        _cityLab.layer.cornerRadius = 10*Proportion375;
+        _cityLab.clipsToBounds = YES;
+        _cityLab.backgroundColor = HexRGBAlpha(0x14c5ed, 1);
+    }
+    return _cityLab;
+}
+-(UILabel*)constellationLab
+{
+    if (!_constellationLab) {
+        _constellationLab = [UILabel labelWithText:AccountUserInfoModel.constellation textColor:kThemeWhiteColor font:Font_Semibold(10*Proportion375) backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentCenter];
+        _constellationLab.layer.cornerRadius = 10*Proportion375;
+        _constellationLab.clipsToBounds = YES;
+        _constellationLab.backgroundColor = HexRGBAlpha(0xeb5299, 1);
+
+    }
+    return _constellationLab;
+}
+-(UILabel *)wordsLab
+{
+    if (!_wordsLab) {
+        _wordsLab = [UILabel labelWithText:@"" textColor:kThemeWhiteColor font:Font_Medium(14*Proportion375) backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentCenter];
+        _wordsLab.numberOfLines = 0;
+        _wordsLab.preferredMaxLayoutWidth = kMainScreenWidth-40 *Proportion375;
+    }
+    return _wordsLab;
+}
 
 @end
