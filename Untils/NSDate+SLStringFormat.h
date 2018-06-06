@@ -18,5 +18,6 @@
 + (NSString *)getNowTimeStr;
 
 //时间戳转date;
++(NSDate*)dateWithTimeStamp:(NSString*)timestamp;
 
 @end
