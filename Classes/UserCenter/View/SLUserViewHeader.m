@@ -609,5 +609,106 @@
     }
     return _concerBtn;
 }
+-(UIButton *)walletBtn
+{
+    if (!_walletBtn) {
+        _walletBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        _walletBtn.titleLabel.numberOfLines = 0;
+        _walletBtn.titleLabel.textAlignment = NSTextAlignmentCenter;
+
+        NSMutableAttributedString * firstPart = [[NSMutableAttributedString alloc] initWithString:@"0"];
+        
+        if (!IsStrEmpty(AccountUserInfoModel.showCoinStr)) {
+            firstPart = [[NSMutableAttributedString alloc] initWithString:AccountUserInfoModel.showCoinStr];
+        }
+        NSDictionary * firstAttributes = @{ NSFontAttributeName:Font_Regular(20*Proportion375),NSForegroundColorAttributeName:kThemeWhiteColor,};
+        [firstPart setAttributes:firstAttributes range:NSMakeRange(0,firstPart.length)];
+        
+        NSMutableAttributedString * secondPart = [[NSMutableAttributedString alloc] initWithString:@"\n"];
+        NSDictionary * secondAttributes = @{NSFontAttributeName:[UIFont systemFontOfSize:10],NSForegroundColorAttributeName:[UIColor blueColor],};
+        [secondPart setAttributes:secondAttributes range:NSMakeRange(0,secondPart.length)];
+        
+        NSMutableAttributedString * thirdPart = [[NSMutableAttributedString alloc] initWithString:@"钱包"];
+        NSDictionary * thirdAttributes = @{NSFontAttributeName:Font_Medium(14*Proportion375),NSForegroundColorAttributeName:kThemeWhiteColor,};
+        [thirdPart setAttributes:thirdAttributes range:NSMakeRange(0,thirdPart.length)];
+        
+        [firstPart appendAttributedString:secondPart];
+        [firstPart appendAttributedString:thirdPart];
+        
+        [_walletBtn setAttributedTitle:firstPart forState:UIControlStateNormal];
+        @weakify(self)
+        [[_walletBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+            @strongify(self)
+            [PageMgr pushToWalletController:self.userModel viewcontroller:self.Controller?:(BaseViewController *)self.viewController];
+        }];
+        [_walletBtn setTitleShadowColor:kThemeShadowColor forState:UIControlStateNormal];
+        [_walletBtn.titleLabel setShadowOffset:CGSizeMake(1, 1)];
+
+    }
+    return _walletBtn;
+}
+-(UIButton *)toConcerBtn
+{
+    if (!_toConcerBtn) {
+        _toConcerBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_toConcerBtn setTitle:@"+关注" forState:UIControlStateNormal];
+        [_toConcerBtn setTitleColor:kThemeWhiteColor forState:UIControlStateNormal];
+        _toConcerBtn.titleLabel.font = Font_Semibold(14*Proportion375);
+        _toConcerBtn.layer.borderWidth = 0.5*Proportion375;
+        _toConcerBtn.layer.borderColor = kThemeWhiteColor.CGColor;
+//        _toConcerBtn.layer.cornerRadius = 6*Proportion375;
+        @weakify(self)
+        [[_toConcerBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+            @strongify(self)
+            [self concerAction];
+        }];
+    }
+    return _toConcerBtn;
+}
+-(UIButton *)tosendMessageBtn
+{
+    if (!_tosendMessageBtn) {
+        _tosendMessageBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_tosendMessageBtn setTitle:@"发消息" forState:UIControlStateNormal];
+        [_tosendMessageBtn setTitleColor:kThemeWhiteColor forState:UIControlStateNormal];
+        _tosendMessageBtn.titleLabel.font = Font_Semibold(14*Proportion375);
+        _tosendMessageBtn.layer.borderWidth = 0.5*Proportion375;
+        _tosendMessageBtn.layer.borderColor = kThemeWhiteColor.CGColor;
+//        _tosendMessageBtn.layer.cornerRadius = 6*Proportion375;
+        @weakify(self)
+        [[_tosendMessageBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+            @strongify(self)
+            [ PageMgr pushToChatViewControllerWithTargetUser:self.userModel];
+//            if (self.delegate && [self.delegate respondsToSelector:@selector(SLUserViewHeaderConcernActionDelegateWithShare)] ) {
+//                [self.delegate SLUserViewHeaderConcernActionDelegateWithShare];
+//            }
+        }];
+        
+    }
+    return _tosendMessageBtn;
+}
+-(UIButton *)shareBtn
+{
+    if (!_shareBtn) {
+        _shareBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_shareBtn setTitle:@"分享主页" forState:UIControlStateNormal];
+        [_shareBtn setTitleColor:kThemeWhiteColor forState:UIControlStateNormal];
+        _shareBtn.titleLabel.font = Font_Semibold(14*Proportion375);
+        _shareBtn.layer.borderWidth = 0.5*Proportion375;
+        _shareBtn.layer.borderColor = kThemeWhiteColor.CGColor;
+//        _shareBtn.layer.cornerRadius = 6*Proportion375;
+        @weakify(self)
+        [[_shareBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+            @strongify(self)
+            [HDHud showMessageInView:self.viewController.view title:@"敬请期待"];
+//            if (self.delegate && [self.delegate respondsToSelector:@selector(SLUserViewHeaderConcernActionDelegateWithShare)] ) {
+//                [self.delegate SLUserViewHeaderConcernActionDelegateWithShare];
+//            }
+            
+        }];
+
+    }
+    return _shareBtn;
+}
 
 @end
