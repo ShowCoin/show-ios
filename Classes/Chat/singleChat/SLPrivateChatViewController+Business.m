@@ -217,4 +217,30 @@
     });
 }
 
+#pragma mark - Find
+- (NSInteger)indexOfDataArrayWithMessageId:(long)messageId
+{
+    // because last message will use this method,we find from last one
+    NSInteger index = -1;
+    for (NSInteger i = self.dataArray.count - 1; i >= 0; i--) {
+        id<SLChatMessageBaseCellViewModel> viewModel = self.dataArray[i];
+        RCMessage *rcMessage = viewModel.rcMessage;
+        if (rcMessage.messageId == messageId) {
+            index = i;
+            break;
+        }
+    }
+    return index;
+}
+
+- (id<SLChatMessageBaseCellViewModel>)findViewModelInDataArrayWithRCMessageId:(long)messageId
+{
+    NSInteger index = [self indexOfDataArrayWithMessageId:messageId];
+    if (index >= 0) {
+        id<SLChatMessageBaseCellViewModel> viewModel = self.dataArray[index];
+        return viewModel;
+    }
+    return nil;
+}
+
 @end
