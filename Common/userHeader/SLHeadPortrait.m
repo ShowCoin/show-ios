@@ -101,7 +101,7 @@
         [_imageView cornerRadiusStyle];
 }
 
-
+//设置是否圆角，URL，height
 - (void)setRoundStyle:(BOOL)roundStyle imageUrl:(NSString *)imageUrl imageHeight:(float)imageheight vip:(BOOL)vip attestation:(BOOL)attestation{
     
     if([imageUrl isKindOfClass:[NSNull class]]){
@@ -118,7 +118,6 @@
     {
         [self layerWithView:_imageView withColor:kGrayBGColor width:1];
     }
-    
     if (imageheight==64) {
         [self layerWithView:_imageView withColor:RGBCOLOR(139, 96, 236) width:6];
     }else if (imageheight==75||imageheight==84) {
@@ -161,10 +160,10 @@
     if([imageUrl isKindOfClass:[NSNull class]]){
         imageUrl = nil ;
     }
-    @weakify_old(self)
+    @weakify(self)
     [_imageView yy_setImageWithURL:[NSURL URLWithString:imageUrl] placeholder:holdImg options:YYWebImageOptionAvoidSetImage completion:^(UIImage * _Nullable image, NSURL * _Nonnull url, YYWebImageFromType from, YYWebImageStage stage, NSError * _Nullable error) {
-        @strongify_old(self)
-        if (strong_self &&[strong_self isKindOfClass:[SLHeadPortrait class]]&& strong_self.imageView&&image) {
+        @strongify(self)
+        if (self &&[self isKindOfClass:[SLHeadPortrait class]]&& self.imageView&&image) {
             [strong_self.imageView setImage:image];
         }
     }];

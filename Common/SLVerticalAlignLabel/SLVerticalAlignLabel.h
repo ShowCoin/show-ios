@@ -19,6 +19,7 @@ typedef enum
     @private
     VerticalAlignment _verticalAlignment;
 }
-
+//对齐方式
 @property(nonatomic)VerticalAlignment verticalAlignment;
+
 @end
