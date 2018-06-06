@@ -123,5 +123,34 @@
     });
 }
 
+- (void)updateCellDataAtRow:(NSUInteger)row messageId:(long)messageId
+{
+    if (self.dataArray.count <= row) {
+        return;
+    }
+    @weakify(self);
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        @strongify(self);
+        NSMutableArray *dataArray = [NSMutableArray array];
+        [dataArray addObjectsFromArray:self.dataArray];
+        
+        // create new viewModel
+        RCMessage *rcMessage = [self.business getMessageWithMessageId:messageId];
+        id<SLChatMessageBaseCellViewModel> viewModel = [[self viewModelsWithRCMessages:@[rcMessage]] firstObject];
+        
+        // replace
+        [dataArray replaceObjectAtIndex:row withObject:viewModel];
+        [self updateViewModelTimeAndSizeWithDataArray:dataArray];
+        self.tableView.dataArray = dataArray;
+        // update dataArray
+        dispatch_async(dispatch_get_main_queue(), ^{
+            @strongify(self)
+            [self reloadRow:row animated:YES];
+            [self endTableRefreshAnimation];
+            [self scrollToBottomAnimated:YES];
+        });
+        
+    });
+}
 
 @end
