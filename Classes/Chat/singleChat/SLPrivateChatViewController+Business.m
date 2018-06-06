@@ -109,4 +109,19 @@
     });
 }
 
+- (void)updateCellDataWithMessageId:(long)messageId
+{
+    @weakify(self);
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        @strongify(self);
+        id<SLChatMessageBaseCellViewModel> viewModel = [self findViewModelInDataArrayWithRCMessageId:messageId];
+        if (!viewModel) {
+            return;
+        }
+        NSInteger index = [self.dataArray indexOfObject:viewModel];
+        [self updateCellDataAtRow:index messageId:messageId];
+    });
+}
+
+
 @end
