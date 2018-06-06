@@ -194,5 +194,111 @@
             make.centerX.equalTo(self);
             make.size.mas_equalTo(CGSizeMake(100*Proportion375, 40*Proportion375));
         }];
- 
+        [self.concerBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.fansBtn);
+            make.right.equalTo(self.fansBtn.mas_left);
+            make.size.mas_equalTo(CGSizeMake(100*Proportion375, 40*Proportion375));
+        }];
+        [self.walletBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.fansBtn);
+            make.left.equalTo(self.fansBtn.mas_right);
+            make.size.mas_equalTo(CGSizeMake(100*Proportion375, 40*Proportion375));
+        }];
+        
+        [self.toConcerBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.fansBtn.mas_bottom).with.offset(20*Proportion375);
+            make.left.equalTo(self).with.offset(10*Proportion375);
+            make.size.mas_equalTo(CGSizeMake(0, 31*Proportion375));
+        }];
+        [self.tosendMessageBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.fansBtn.mas_bottom).with.offset(20*Proportion375);
+            make.left.equalTo(self).with.offset(10*Proportion375);
+            make.size.mas_equalTo(CGSizeMake(0, 31*Proportion375));
+        }];
+        [self.shareBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.fansBtn.mas_bottom).with.offset(20*Proportion375);
+            make.centerX.equalTo(self);
+            make.size.mas_equalTo(CGSizeMake(295*Proportion375, 31*Proportion375));
+        }];
+        
+//        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userinfoChange:) name:kUserInfoChange object:nil];
+
+        
+        [self.worksBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.bottom.equalTo(self);
+            make.left.equalTo(self);
+            make.size.mas_equalTo(CGSizeMake(kMainScreenWidth/2, 40*Proportion375));
+        }];
+        
+        [self.likesBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.bottom.equalTo(self);
+            make.right.equalTo(self);
+            make.size.mas_equalTo(CGSizeMake(kMainScreenWidth/2, 40*Proportion375));
+        }];
+        
+        [self.bottomAnimationLine mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.bottom.equalTo(self);
+            make.centerX.equalTo(self.worksBtn);
+            make.size.mas_equalTo(CGSizeMake(40*Proportion375, 2*Proportion375));
+        }];
+    }
+    return self;
+}
+
+-(void)setIsMe:(BOOL)isMe
+{
+    _isMe = isMe;
+    if (!isMe) {
+        self.leftBtn.hidden = NO;
+        [self.leftBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self).with.offset(20*Proportion375 + KTopHeight);
+            make.left.equalTo(self);
+            make.size.mas_equalTo(CGSizeMake(73*Proportion375, 30*Proportion375));
+        }];
+        [self.listBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.centerY.equalTo(self.headPortrait).with.offset(-10*Proportion375);
+            make.left.equalTo(self);
+            make.size.mas_equalTo(CGSizeMake(73*Proportion375, 30*Proportion375));
+        }];
+
+        [self.toConcerBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.fansBtn.mas_bottom).with.offset(20*Proportion375);
+            make.left.equalTo(self).with.offset(35*Proportion375);
+            make.size.mas_equalTo(CGSizeMake((kMainScreenWidth - 70*Proportion375 - 20 *Proportion375)/3, 31*Proportion375));
+        }];
+        [self.tosendMessageBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.fansBtn.mas_bottom).with.offset(20*Proportion375);
+            make.left.equalTo(self.toConcerBtn.mas_right).with.offset(10*Proportion375);
+            make.size.mas_equalTo(CGSizeMake((kMainScreenWidth - 70*Proportion375 - 20 *Proportion375)/3, 31*Proportion375));
+        }];
+        [self.shareBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.fansBtn.mas_bottom).with.offset(20*Proportion375);
+            make.left.equalTo(self.tosendMessageBtn.mas_right).with.offset(10*Proportion375);
+            make.size.mas_equalTo(CGSizeMake((kMainScreenWidth - 70*Proportion375 - 20 *Proportion375)/3, 31*Proportion375));
+        }];
+        
+        self.settingBtn.hidden = YES;
+        self.giftStoreBtn.hidden = YES;
+    }else{
+        self.leftBtn.hidden = YES;
+    }
+}
+//刷新ui
+- (void)userinfoChange:(NSNotification *)notif
+{
+    [self setLabelSpace:self.wordsLab withValue:@"" withFont:Font_Regular(14*Proportion375)];
+    [_headPortrait setRoundStyle:YES imageUrl:AccountUserInfoModel.avatar imageHeight:95 vip:[_userModel.uid isEqualToString:kSystemNumber_RongCloud]?:NO attestation:NO];
+    [_nickLab setText:AccountUserInfoModel.nickname];
+    _sexImg .image=[AccountUserInfoModel.gender  isEqualToString:@"1"]?[UIImage imageNamed:@"userhome_sex_man"]:[UIImage imageNamed:@"userhome_sex_women"];
+
+}
+-(UILabel *)navLab
+{
+    if (!_navLab) {
+        _navLab = [UILabel labelWithText:@"" textColor:kthemeBlackColor font:Font_Regular(16) backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentCenter];
+    }
+    return _navLab;
+}
+
+
 @end
