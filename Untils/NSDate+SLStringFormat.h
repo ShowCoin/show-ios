@@ -20,4 +20,6 @@
 //时间戳转date;
 +(NSDate*)dateWithTimeStamp:(NSString*)timestamp;
 
+//时间字符串转date
++(NSDate*)dateWithStringTime:(NSString*)stringtime;
 @end
