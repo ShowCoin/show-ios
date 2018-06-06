@@ -33,13 +33,6 @@
         [[SLFPSStatus sharedInstance] open];
     #endif
     
-    AVAudioSession *session = [AVAudioSession sharedInstance];
-    [session setCategory:AVAudioSessionCategoryAmbient error:nil];
-    [session setActive:YES error:nil];
-    NSError *error;
-    [[AVAudioSession sharedInstance] setActive:YES error:&error];
-    [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
-    
     return YES;
 }
 
