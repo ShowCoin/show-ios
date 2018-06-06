@@ -153,4 +153,35 @@
     });
 }
 
+- (void)updateMessageReadStateBeforeLastSentTime:(long)time
+{
+    @weakify(self);
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        @strongify(self);
+        NSMutableArray *dataArray = [NSMutableArray array];
+        [dataArray addObjectsFromArray:self.dataArray];
+        
+        for (NSInteger i = dataArray.count - 1; i >= 0; i--) {
+            id<SLChatMessageBaseCellViewModel> viewModel = dataArray[i];
+            if (!viewModel.showSentMessageReadState) {
+                continue;
+            }
+            
+            // find lastest read message,all before this was read
+            if (viewModel.isSentMessageRead) {
+                break;
+            }
+            
+            // before this time, set to read
+            RCMessage *message = viewModel.rcMessage;
+            if (message.sentTime <= time) {
+                viewModel.isSentMessageRead = YES;
+            }
+        }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self reloadTableViewWithData:dataArray];
+        });
+    });
+}
+
 @end
