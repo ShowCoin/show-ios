@@ -346,4 +346,21 @@
 {
     return [self.business getTextDraft];
 }
+#pragma mark - Clear Unread State
+- (void)clearConversationMessageUnreadState
+{
+    [self.business clearConversationMessageUnreadState];
+}
+
+- (void)setLastestMessageToReadState
+{
+    id<SLChatMessageBaseCellViewModel> lastModel = [self.dataArray lastObject];
+    RCMessage *message = lastModel.rcMessage;
+    [self.business setMessageReceivedStatusWithMessageId:message.messageId rcReceivedStatus:ReceivedStatus_READ];
+}
+
+- (NSInteger)getUnreadMessageCount
+{
+    return [self.business getUnreadMessageCount];
+}
 @end
