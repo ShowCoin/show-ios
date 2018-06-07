@@ -35,5 +35,12 @@ static char SLMKitStringJsonDictionaryAddress;
 
 
 @implementation NSDictionary (SLKitExtension)
-
+- (NSString *)slkit_jsonString
+{
+    NSData *data = [NSJSONSerialization dataWithJSONObject:self
+                                                   options:0
+                                                     error:nil];
+    return data ? [[NSString alloc] initWithData:data
+                                        encoding:NSUTF8StringEncoding] : nil;
+}
 @end
