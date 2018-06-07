@@ -17,6 +17,11 @@ CGFloat const kMessageMaxH = kMCellH * 3 + kMTViewH;
 
 @interface SLPlayerMoreController ()
 
+@property (nonatomic, strong) SLLiveChatVC *chatView;
+@property (nonatomic, strong) UIWindow *window;
+@property (nonatomic, assign) BOOL pause;
+@property (nonatomic, strong) UIView *backView;
+
 @end
 
 @implementation SLPlayerMoreController
