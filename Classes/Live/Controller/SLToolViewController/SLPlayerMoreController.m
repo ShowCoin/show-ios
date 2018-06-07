@@ -58,10 +58,8 @@ static dispatch_once_t onceToken;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     [self setupUI];
-    
-    [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(logoutAction) name:kNotificationLogout object:nil];
+    [self addNotification];
 }
 
 - (void)logoutAction {
