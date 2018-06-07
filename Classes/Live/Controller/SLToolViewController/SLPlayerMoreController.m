@@ -290,7 +290,7 @@ static dispatch_once_t onceToken;
 
 
 /**
- @return photo 
+ @return photo authorizationStatus
  */
 + (NSInteger)authorizationStatus {
     if (iOS8Later) {
