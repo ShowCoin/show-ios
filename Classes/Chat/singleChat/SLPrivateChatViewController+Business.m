@@ -363,4 +363,19 @@
 {
     return [self.business getUnreadMessageCount];
 }
+#pragma mark - Delete
+
+- (void)deleteCellDataAndMessageAtRow:(NSUInteger)row animation:(BOOL)animation
+{
+    if (row >= self.dataArray.count) {
+        return;
+    }
+    
+    id<SLChatMessageBaseCellViewModel> viewModel = self.dataArray[row];
+    
+    RCMessage *message = viewModel.rcMessage;
+    [self.business deleteMessageWithId:message.messageId];
+    
+    [self deleteCellAtRow:row animation:animation];
+}
 @end
