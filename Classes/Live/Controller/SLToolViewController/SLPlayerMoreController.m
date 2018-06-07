@@ -62,6 +62,11 @@ static dispatch_once_t onceToken;
     [self addNotification];
 }
 
+- (void)addNotification {
+    [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(logoutAction) name:kNotificationLogout object:nil];
+    [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(sl_didReceiveMessage) name:kNotify_Received_RongCloud_ConvMsg object:nil];
+}
+
 - (void)logoutAction {
     [SLPlayerMoreController dismiss];
     onceToken = 0;
