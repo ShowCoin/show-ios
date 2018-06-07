@@ -9,7 +9,11 @@
 #import "SLPlayerMoreController.h"
 #import "SLLiveChatVC.h"
 
-static CGFloat kMessageViewH = 75 + 44 + 10;
+// 75 = chat cell height
+CGFloat const kMCellH = 75;
+CGFloat const kMTViewH = 44 + 10;
+CGFloat const kMessageViewH = kMCellH + kMTViewH;
+CGFloat const kMessageMaxH = kMCellH * 3 + kMTViewH;
 
 @interface SLPlayerMoreController ()
 
