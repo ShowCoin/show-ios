@@ -321,5 +321,17 @@
         lastViewModel.showNotDisturbTips = YES;
     }
 }
-
+- (NSArray<id<SLChatMessageBaseCellViewModel>> *)viewModelsWithRCMessages:(NSArray<RCMessage*> *)messages
+{
+    NSMutableArray<id<SLChatMessageBaseCellViewModel>> *dataArray = [NSMutableArray array];
+    for (NSInteger i = messages.count -1; i >= 0; i--) {
+        RCMessage *message = messages[i];
+        NSString *className = [SLChatMessageCellConfig cellViewModelImpClassNameWithRCMessage:message];
+        id<SLChatMessageBaseCellViewModel> viewModel = [NSClassFromString(className) viewModelWithRcMessage:message];
+        
+        
+        [dataArray addObject:viewModel];
+    }
+    return dataArray;
+}
 @end
