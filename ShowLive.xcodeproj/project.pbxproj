@@ -19,6 +19,7 @@
 		434DDB5420C932AB00191FC1 /* CALayerDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 434DDB5320C932AA00191FC1 /* CALayerDemoViewController.m */; };
 		434DDB5720C932DB00191FC1 /* CAMediaTimingFunction+JKAdditionalEquations.m in Sources */ = {isa = PBXBuildFile; fileRef = 434DDB5520C932DB00191FC1 /* CAMediaTimingFunction+JKAdditionalEquations.m */; };
 		434DDB5A20C932FC00191FC1 /* CAShapeLayer+JKUIBezierPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 434DDB5920C932FC00191FC1 /* CAShapeLayer+JKUIBezierPath.m */; };
+		434DDB5D20C9332700191FC1 /* CATransaction+JKAnimateWithDuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 434DDB5B20C9332700191FC1 /* CATransaction+JKAnimateWithDuration.m */; };
 		435E3C8F20C02BB2002B7A7F /* NSDecimalNumber+JKExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 435E3AB420C02BB1002B7A7F /* NSDecimalNumber+JKExtensions.m */; };
 		435E3C9020C02BB2002B7A7F /* NSNumber+JKRound.m in Sources */ = {isa = PBXBuildFile; fileRef = 435E3AB720C02BB1002B7A7F /* NSNumber+JKRound.m */; };
 		435E3C9120C02BB2002B7A7F /* NSNumber+JKCGFloat.m in Sources */ = {isa = PBXBuildFile; fileRef = 435E3AB820C02BB1002B7A7F /* NSNumber+JKCGFloat.m */; };
@@ -89,6 +90,8 @@
 		434DDB5620C932DB00191FC1 /* CAMediaTimingFunction+JKAdditionalEquations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAMediaTimingFunction+JKAdditionalEquations.h"; sourceTree = "<group>"; };
 		434DDB5820C932FC00191FC1 /* CAShapeLayer+JKUIBezierPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAShapeLayer+JKUIBezierPath.h"; sourceTree = "<group>"; };
 		434DDB5920C932FC00191FC1 /* CAShapeLayer+JKUIBezierPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAShapeLayer+JKUIBezierPath.m"; sourceTree = "<group>"; };
+		434DDB5B20C9332700191FC1 /* CATransaction+JKAnimateWithDuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CATransaction+JKAnimateWithDuration.m"; sourceTree = "<group>"; };
+		434DDB5C20C9332700191FC1 /* CATransaction+JKAnimateWithDuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CATransaction+JKAnimateWithDuration.h"; sourceTree = "<group>"; };
 		435E3AB420C02BB1002B7A7F /* NSDecimalNumber+JKExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDecimalNumber+JKExtensions.m"; sourceTree = "<group>"; };
 		435E3AB720C02BB1002B7A7F /* NSNumber+JKRound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+JKRound.m"; sourceTree = "<group>"; };
 		435E3AB820C02BB1002B7A7F /* NSNumber+JKCGFloat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+JKCGFloat.m"; sourceTree = "<group>"; };
@@ -281,6 +284,8 @@
 			children = (
 				434DDB5820C932FC00191FC1 /* CAShapeLayer+JKUIBezierPath.h */,
 				434DDB5920C932FC00191FC1 /* CAShapeLayer+JKUIBezierPath.m */,
+				434DDB5C20C9332700191FC1 /* CATransaction+JKAnimateWithDuration.h */,
+				434DDB5B20C9332700191FC1 /* CATransaction+JKAnimateWithDuration.m */,
 				434DDB5620C932DB00191FC1 /* CAMediaTimingFunction+JKAdditionalEquations.h */,
 				434DDB5520C932DB00191FC1 /* CAMediaTimingFunction+JKAdditionalEquations.m */,
 				434DDB5220C932AA00191FC1 /* CALayerDemoViewController.h */,
@@ -921,6 +926,7 @@
 				435E3C9220C02BB2002B7A7F /* NSDecimalNumber+JKCalculatingByString.m in Sources */,
 				72FE9B6920621F59008DD3D5 /* main.m in Sources */,
 				435E3C9020C02BB2002B7A7F /* NSNumber+JKRound.m in Sources */,
+				434DDB5D20C9332700191FC1 /* CATransaction+JKAnimateWithDuration.m in Sources */,
 				435E3C8F20C02BB2002B7A7F /* NSDecimalNumber+JKExtensions.m in Sources */,
 				723816C520C6B6E300C3885E /* SLLinkLabel.m in Sources */,
 				43968A6A20AC398C00149DCC /* NSObject+Safe.m in Sources */,
