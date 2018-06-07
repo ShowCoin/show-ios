@@ -334,4 +334,16 @@
     }
     return dataArray;
 }
+
+#pragma mark - Text Draft
+- (void)saveInputTextToDraft
+{
+    NSString *draft = [self.chatInputView.inputTextView.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    [self.business saveTextToDraft:draft];
+}
+
+- (NSString *)getInputTextDraft
+{
+    return [self.business getTextDraft];
+}
 @end
