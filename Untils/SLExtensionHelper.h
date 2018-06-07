@@ -9,3 +9,8 @@
 
 - (NSDictionary *)nimkit_jsonDict;
 @end
+
+
+@interface NSDictionary (SLMKitExtension)
+- (NSString *)nimkit_jsonString;
+@end
