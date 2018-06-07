@@ -252,6 +252,10 @@ static BOOL isFirst = YES;
 
 @implementation SLRotationImageView
 
+
+/**
+ <#Description#>
+ */
 - (void)addRotationAnimated {
     [self.layer removeAllAnimations];
     CABasicAnimation *ani = [CABasicAnimation animation];
