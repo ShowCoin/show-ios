@@ -301,5 +301,25 @@
     }
     
 }
+- (void)markLastViewModel:(id<SLChatMessageBaseCellViewModel>)lastViewModel
+{
+    // > 3分钟，不是好友，接受的消息，最后一条提示 免打扰信息
+    BOOL isReceivedMessage = (lastViewModel.rcMessage.messageDirection == MessageDirection_RECEIVE);
+    if (!isReceivedMessage) {
+        return;
+    }
+    
+    // 可能没有请求到数据，此时不展示
+    
+    
+    // sent time since now
+    NSTimeInterval lastSentTimeInterval = lastViewModel.rcMessage.sentTime/1000;
+    NSDate *lastDate = [NSDate dateWithTimeIntervalSince1970:lastSentTimeInterval];
+    NSTimeInterval sinceNowInterval = [[NSDate date] timeIntervalSinceDate:lastDate];
+    // > 3 min
+    if (sinceNowInterval > 3*60)  {
+        lastViewModel.showNotDisturbTips = YES;
+    }
+}
 
 @end
