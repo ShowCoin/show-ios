@@ -169,6 +169,8 @@ static dispatch_once_t onceToken;
     [PageMgr setRootScrollEnabled:!select];
 }
 
+#pragma mark - setter getter
+
 @synthesize clear = _clear;
 
 - (BOOL)clear {
