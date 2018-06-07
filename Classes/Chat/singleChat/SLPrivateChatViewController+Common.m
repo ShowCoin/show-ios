@@ -12,11 +12,6 @@
 @implementation SLPrivateChatViewController (Common)
 #pragma mark - Toast
 
-- (void)addNetStatusObserver
-{
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(netWorkDidChanged:) name:AFNetworkingReachabilityDidChangeNotification object:nil];
-}
-
 - (void)netWorkDidChanged:(NSNotification *)notification
 {
     NSNumber *statusNumber = [notification userInfo][AFNetworkingReachabilityNotificationStatusItem];
