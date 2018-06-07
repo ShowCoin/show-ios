@@ -15,6 +15,7 @@
 		43143927209497E80059D373 /* UNLICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 43143922209497E80059D373 /* UNLICENSE */; };
 		43143928209497E80059D373 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 43143923209497E80059D373 /* Cartfile */; };
 		434DDB4E20C9324F00191FC1 /* CAAnimation+JKEasingEquations.m in Sources */ = {isa = PBXBuildFile; fileRef = 434DDB4C20C9324F00191FC1 /* CAAnimation+JKEasingEquations.m */; };
+		434DDB5120C9326800191FC1 /* CALayer+JKBorderColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 434DDB5020C9326800191FC1 /* CALayer+JKBorderColor.m */; };
 		435E3C8F20C02BB2002B7A7F /* NSDecimalNumber+JKExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 435E3AB420C02BB1002B7A7F /* NSDecimalNumber+JKExtensions.m */; };
 		435E3C9020C02BB2002B7A7F /* NSNumber+JKRound.m in Sources */ = {isa = PBXBuildFile; fileRef = 435E3AB720C02BB1002B7A7F /* NSNumber+JKRound.m */; };
 		435E3C9120C02BB2002B7A7F /* NSNumber+JKCGFloat.m in Sources */ = {isa = PBXBuildFile; fileRef = 435E3AB820C02BB1002B7A7F /* NSNumber+JKCGFloat.m */; };
@@ -77,6 +78,8 @@
 		43143923209497E80059D373 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		434DDB4C20C9324F00191FC1 /* CAAnimation+JKEasingEquations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAAnimation+JKEasingEquations.m"; sourceTree = "<group>"; };
 		434DDB4D20C9324F00191FC1 /* CAAnimation+JKEasingEquations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAAnimation+JKEasingEquations.h"; sourceTree = "<group>"; };
+		434DDB4F20C9326800191FC1 /* CALayer+JKBorderColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+JKBorderColor.h"; sourceTree = "<group>"; };
+		434DDB5020C9326800191FC1 /* CALayer+JKBorderColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+JKBorderColor.m"; sourceTree = "<group>"; };
 		435E3AB420C02BB1002B7A7F /* NSDecimalNumber+JKExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDecimalNumber+JKExtensions.m"; sourceTree = "<group>"; };
 		435E3AB720C02BB1002B7A7F /* NSNumber+JKRound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+JKRound.m"; sourceTree = "<group>"; };
 		435E3AB820C02BB1002B7A7F /* NSNumber+JKCGFloat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+JKCGFloat.m"; sourceTree = "<group>"; };
@@ -267,6 +270,8 @@
 		434DDB4B20C92B4E00191FC1 /* JKCategories */ = {
 			isa = PBXGroup;
 			children = (
+				434DDB4F20C9326800191FC1 /* CALayer+JKBorderColor.h */,
+				434DDB5020C9326800191FC1 /* CALayer+JKBorderColor.m */,
 				434DDB4D20C9324F00191FC1 /* CAAnimation+JKEasingEquations.h */,
 				434DDB4C20C9324F00191FC1 /* CAAnimation+JKEasingEquations.m */,
 			);
@@ -906,6 +911,7 @@
 				43968A6A20AC398C00149DCC /* NSObject+Safe.m in Sources */,
 				722957B120C80779000D0719 /* SLUserViewHeader.m in Sources */,
 				435E3C9120C02BB2002B7A7F /* NSNumber+JKCGFloat.m in Sources */,
+				434DDB5120C9326800191FC1 /* CALayer+JKBorderColor.m in Sources */,
 				72C7B4F920C3EDE600065BC2 /* SLADView.m in Sources */,
 				434DDB4E20C9324F00191FC1 /* CAAnimation+JKEasingEquations.m in Sources */,
 				9314D1F520C6B83400BB2429 /* SLPrivateChatViewController.m in Sources */,
