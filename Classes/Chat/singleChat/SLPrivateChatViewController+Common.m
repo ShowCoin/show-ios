@@ -17,5 +17,23 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(netWorkDidChanged:) name:AFNetworkingReachabilityDidChangeNotification object:nil];
 }
 
+- (void)netWorkDidChanged:(NSNotification *)notification
+{
+    NSNumber *statusNumber = [notification userInfo][AFNetworkingReachabilityNotificationStatusItem];
+    if (statusNumber) {
+        switch (statusNumber.integerValue) {
+            case AFNetworkReachabilityStatusUnknown:
+            case AFNetworkReachabilityStatusNotReachable:{
+                break;
+            }
+            case AFNetworkReachabilityStatusReachableViaWWAN:
+            case AFNetworkReachabilityStatusReachableViaWiFi:{
+                break;
+            }
+            default:
+                break;
+        }
+    }
+}
 
 @end
