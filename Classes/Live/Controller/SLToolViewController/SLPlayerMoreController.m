@@ -67,6 +67,10 @@ static dispatch_once_t onceToken;
     [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(sl_didReceiveMessage) name:kNotify_Received_RongCloud_ConvMsg object:nil];
 }
 
+- (void)sl_didReceiveMessage {
+    [self.chatView loadConversationList];
+}
+
 - (void)logoutAction {
     [SLPlayerMoreController dismiss];
     onceToken = 0;
