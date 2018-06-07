@@ -11,3 +11,22 @@
 
 static char SLMKitStringJsonDictionaryAddress;
 
+- (NSDictionary *)slkit_jsonDict
+{
+    NSDictionary *dict = [objc_getAssociatedObject(self, &SLKitStringJsonDictionaryAddress) copy];
+    if (dict == nil)    //解析过一次后就缓存解析结果，避免多次解析
+    {
+        NSData *data = [self dataUsingEncoding:NSUTF8StringEncoding];
+        dict = [NSJSONSerialization JSONObjectWithData:data
+                                               options:0
+                                                 error:nil];
+        if (![dict isKindOfClass:[NSDictionary class]])
+        {
+            dict = [NSDictionary dictionary];
+        }
+        objc_setAssociatedObject(self,&SLKitStringJsonDictionaryAddress,dict,OBJC_ASSOCIATION_COPY);
+    }
+    return dict;
+    
+}
+
