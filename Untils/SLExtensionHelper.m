@@ -9,5 +9,5 @@
 
 @implementation NSString (SLMKitExtension)
 
-static char NIMKitStringJsonDictionaryAddress;
+static char SLMKitStringJsonDictionaryAddress;
 
