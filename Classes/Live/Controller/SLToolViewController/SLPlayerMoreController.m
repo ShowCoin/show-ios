@@ -301,6 +301,12 @@ static dispatch_once_t onceToken;
     return NO;
 }
 
+
+/**
+ request Authorization
+
+ @param completion <#completion description#>
+ */
 + (void)requestAuthorizationWithCompletion:(void (^)(void))completion {
     void (^callCompletionBlock)(void) = ^(){
         dispatch_async(dispatch_get_main_queue(), ^{
