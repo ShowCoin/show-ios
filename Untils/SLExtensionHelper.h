@@ -7,3 +7,5 @@
 
 @interface NSString (SLMKitExtension)
 
+- (NSDictionary *)nimkit_jsonDict;
+@end
