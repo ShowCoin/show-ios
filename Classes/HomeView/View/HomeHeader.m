@@ -155,6 +155,94 @@ static BOOL isHot = NO;
     return _navBtnC;
 }
 
+-(UIButton *)leftBtn
+{
+    if (!_leftBtn) {
+        _leftBtn=[UIButton buttonWithType:UIButtonTypeCustom];
+        _leftBtn.frame = CGRectMake(6, 17+KTopHeight, 50, 50);
+        [ _leftBtn setImage:[UIImage imageNamed:@"home_left_img"] forState:UIControlStateNormal];
+        
+        _leftBtn.alpha = .5f;
+        _leftBtn.hidden = YES ;
+        @weakify(self);
+        [[_leftBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+            @strongify(self);
+//            if (self.delegate && [self.delegate respondsToSelector:@selector(leftBtnClick:)]) {
+//                [self.delegate leftBtnClick:nil];
+//            }
+            [HDHud showMessageInView:self.viewController.view title:@"敬请期待"];
+        }];
+    }
+    return _leftBtn;
+}
+
+-(UIView *)lineView
+{
+    if (!_lineView) {
+        _lineView = [[UIView alloc] initWithFrame:CGRectMake(0, KNaviBarHeight-2*Proportion375, 35*Proportion375, 2*Proportion375)];
+        _lineView.backgroundColor = kThemeWhiteColor;
+        _lineView.layer.cornerRadius = 1*Proportion375;
+        _lineView.centerX = _navBtnB.centerX;
+    }
+    return _lineView;
+}
+
+-(void)changePageIndex:(NSInteger)index
+{
+    isHot = (index == 1);
+    [[NSNotificationCenter defaultCenter]postNotificationName:SLHomeHideTabbarReleaseTimerNotification object:@(index ==1)];
+    switch (index) {
+        case 0:
+        {
+            @weakify(self);
+            [UIView animateWithDuration:0.25 animations:^{
+                @strongify(self);
+                [self.navBtnA setTitleColor:kThemeWhiteColor forState:UIControlStateNormal];
+                [self.navBtnA.titleLabel setFont:Font_Medium(20*Proportion375)];
+                [self.navBtnB setTitleColor:kThemeAlphWhiteColor forState:UIControlStateNormal];
+                [self.navBtnB.titleLabel setFont:Font_Medium(18*Proportion375)];
+                [self.navBtnC setTitleColor:kThemeAlphWhiteColor forState:UIControlStateNormal];
+                [self.navBtnC.titleLabel setFont:Font_Medium(18*Proportion375)];
+            }];
+            self.lineView.centerX = self.navBtnA.centerX;
+        }
+            break;
+        case 1:
+        {
+            @weakify(self);
+            [UIView animateWithDuration:0.25 animations:^{
+                @strongify(self);
+                [self.navBtnA setTitleColor:kThemeAlphWhiteColor forState:UIControlStateNormal];
+                [self.navBtnA.titleLabel setFont:Font_Medium(18*Proportion375)];
+                [self.navBtnB setTitleColor:kThemeWhiteColor forState:UIControlStateNormal];
+                [self.navBtnB.titleLabel setFont:Font_Medium(20*Proportion375)];
+                [self.navBtnC setTitleColor:kThemeAlphWhiteColor forState:UIControlStateNormal];
+                [self.navBtnC.titleLabel setFont:Font_Medium(18*Proportion375)];
+            }];
+            self.lineView.centerX = self.navBtnB.centerX;
+        }
+            break;
+        case 2:
+        {
+            @weakify(self);
+            [UIView animateWithDuration:0.25 animations:^{
+                @strongify(self);
+                [self.navBtnA setTitleColor:kThemeAlphWhiteColor forState:UIControlStateNormal];
+                [self.navBtnA.titleLabel setFont:Font_Medium(18*Proportion375)];
+                [self.navBtnB setTitleColor:kThemeAlphWhiteColor forState:UIControlStateNormal];
+                [self.navBtnB.titleLabel setFont:Font_Medium(18*Proportion375)];
+                [self.navBtnC setTitleColor:kThemeWhiteColor forState:UIControlStateNormal];
+                [self.navBtnC.titleLabel setFont:Font_Medium(20*Proportion375)];
+            }];
+            self.lineView.centerX = self.navBtnC.centerX;
+        }
+            break;
+            
+        default:
+            break;
+    }
+}
+
 
 
 @end
