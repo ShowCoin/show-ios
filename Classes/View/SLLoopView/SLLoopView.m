@@ -197,6 +197,11 @@ static BOOL isFirst = YES;
 
 @end
 
+
+
+/**
+ <#Description#>
+ */
 @interface SLLoopContentView ()
 
 @property (nonatomic, weak) SLRotationImageView *imageView;
