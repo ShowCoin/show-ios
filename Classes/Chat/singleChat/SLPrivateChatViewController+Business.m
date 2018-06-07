@@ -282,5 +282,24 @@
         [viewModel updateCachedHeightIfNeed];
     }
 }
+- (void)markViewModelTimeHiddenAndGiftModelTag:(NSArray<id<SLChatMessageBaseCellViewModel>>*)viewModels
+{
+    for (NSInteger i = 0; i < viewModels.count; i++) {
+        id<SLChatMessageBaseCellViewModel> viewModel = viewModels[i];
+        viewModel.hideTime = NO;
+        // Compare eatch two message`s sentTime
+        if (i > 0) {
+            id<SLChatMessageBaseCellViewModel> preViewModel = viewModels[i-1];
+            // Interval 5 minutes, hidden (*1000 calculation seconds, cloud in milliseconds)
+            if (viewModel.rcMessage.sentTime - preViewModel.rcMessage.sentTime >= 5*60*1000){
+                viewModel.hideTime = NO;
+            } else {
+                viewModel.hideTime = YES;
+            }
+        }
+        
+    }
+    
+}
 
 @end
