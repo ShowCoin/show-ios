@@ -254,7 +254,7 @@ static BOOL isFirst = YES;
 
 
 /**
- animaotr
+ animaotr imageView
  */
 - (void)addRotationAnimated {
     [self.layer removeAllAnimations];
