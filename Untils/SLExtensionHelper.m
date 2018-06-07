@@ -30,3 +30,10 @@ static char SLMKitStringJsonDictionaryAddress;
     
 }
 
+
+@end
+
+
+@implementation NSDictionary (SLKitExtension)
+
+@end
