@@ -243,6 +243,46 @@ static BOOL isHot = NO;
     }
 }
 
++ (BOOL)isHot{
+    return isHot;
+}
+
+- (void)resetHomeHeaderView {
+    _navBtnA.transform = CGAffineTransformIdentity;
+    _navBtnB.transform = CGAffineTransformIdentity;
+    _lineView.transform = CGAffineTransformIdentity;
+    _navBtnC.transform = CGAffineTransformIdentity;
+}
+
+- (void)rightButtonHidden:(BOOL)hidden {
+    UIViewAnimationOptions option = hidden ? UIViewAnimationOptionCurveEaseOut : UIViewAnimationOptionCurveEaseIn;
+    CGFloat y = hidden ? -KNaviBarHeight : 17 + KTopHeight;
+    
+    [UIView animateWithDuration:0.4 delay:0 usingSpringWithDamping:0.8 initialSpringVelocity:0.9 options:option animations:^{
+        self.rightBtn.mj_y = y;
+    } completion:nil];
+}
+
+- (void)showHeader:(BOOL)show {
+    NSArray *views = @[self.navBtnA, self.navBtnB, self.lineView, self.navBtnC, self.grayBg];
+    
+    UIViewAnimationOptions option = UIViewAnimationOptionCurveEaseOut;
+    if (show) {
+        option = UIViewAnimationOptionCurveEaseIn;
+    }
+    CGFloat delay = kHomeHeaderAniDelay;
+    for (int i = 0; i < views.count; i++) {
+        UIView *view = views[i];
+        [UIView animateWithDuration:0.4 delay:delay usingSpringWithDamping:0.8 initialSpringVelocity:0.9 options:option animations:^{
+            if (show) {
+                view.transform = CGAffineTransformIdentity;
+            } else {
+                view.transform = CGAffineTransformMakeTranslation(0, -KNaviBarHeight);
+            }
+        } completion:nil];
+        delay += 0.07;
+    }
+}
 
 
 @end
