@@ -252,7 +252,6 @@ static BOOL isFirst = YES;
 
 @implementation SLRotationImageView
 
-
 /**
  do animaotr imageView layer
  */
