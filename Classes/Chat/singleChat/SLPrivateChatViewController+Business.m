@@ -378,4 +378,44 @@
     
     [self deleteCellAtRow:row animation:animation];
 }
+
+#pragma mark - Replace
+- (void)replaceWithOldMessageId:(NSInteger)oldMessageId ofNewMessageIdAtEnd:(NSInteger)newMessageId scrollToBottom:(BOOL)scrollToBottom scrollToBottomAnimated:(BOOL)scrollToBottomAnimated
+{
+    NSInteger oldMessageIndex = [self indexOfDataArrayWithMessageId:oldMessageId];
+    if (oldMessageIndex >= self.dataArray.count) {
+        return;
+    }
+    
+    RCMessage *newMessage = [self.business getMessageWithMessageId:newMessageId];
+    if (!newMessage) {
+        return;
+    }
+    @weakify(self);
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        @strongify(self);
+        id<SLChatMessageBaseCellViewModel> viewModel = [[self viewModelsWithRCMessages:@[newMessage]] firstObject];
+        NSMutableArray *dataArray = [[NSMutableArray alloc] init];
+        
+        [dataArray addObjectsFromArray:self.dataArray];
+        [dataArray removeObjectAtIndex:oldMessageIndex];
+        [dataArray addObject:viewModel];
+        
+        [self updateViewModelTimeAndSizeWithDataArray:dataArray];
+        self.tableView.dataArray = dataArray;
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSIndexPath *oldMessageIndexPath = [NSIndexPath indexPathForRow:oldMessageIndex inSection:0];
+            NSIndexPath *newMessageIndexPath = [NSIndexPath indexPathForRow:self.dataArray.count-1 inSection:0];
+            [self.tableView beginUpdates];
+            [self.tableView deleteRowsAtIndexPaths:@[oldMessageIndexPath] withRowAnimation:UITableViewRowAnimationNone];
+            [self.tableView insertRowsAtIndexPaths:@[newMessageIndexPath] withRowAnimation:UITableViewRowAnimationNone];
+            [self.tableView endUpdates];
+            [self endTableRefreshAnimation];
+            if (scrollToBottom) {
+                [self scrollToBottomAnimated:scrollToBottomAnimated];
+            }
+        });
+    });
+}
 @end
