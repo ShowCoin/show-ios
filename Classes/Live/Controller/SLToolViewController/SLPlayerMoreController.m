@@ -305,7 +305,7 @@ static dispatch_once_t onceToken;
 /**
  request Authorization
 
- @param completion <#completion description#>
+ @param completion block
  */
 + (void)requestAuthorizationWithCompletion:(void (^)(void))completion {
     void (^callCompletionBlock)(void) = ^(){
