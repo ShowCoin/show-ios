@@ -122,6 +122,9 @@ static dispatch_once_t onceToken;
 
 
 - (void)cx_windowMore:(BOOL)more {
+    if (self.window.mj_h == kMessageMaxH) return;
+    CGFloat h = kMessageMaxH - self.window.mj_h;
+    
     
 }
 
