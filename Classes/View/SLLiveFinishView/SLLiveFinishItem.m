@@ -34,6 +34,7 @@
 
 -(void)setValue:(NSString *)value
 {
-    
+    _value = value;
+    _valueLabel.text = value;
 }
 @end
