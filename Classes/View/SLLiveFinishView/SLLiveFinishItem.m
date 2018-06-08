@@ -17,4 +17,14 @@
 
 @implementation SLLiveFinishItem
 
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self _initView];
+    }
+    return self;
+}
+
+
 @end
