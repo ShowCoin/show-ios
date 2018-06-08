@@ -46,6 +46,8 @@
 
 - (void)setValueColor:(UIColor *)valueColor {
 
+    _valueColor = valueColor;
+    self.valueLabel.textColor = _valueColor;
 
 }
 
