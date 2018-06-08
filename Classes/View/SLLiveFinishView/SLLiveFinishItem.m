@@ -57,4 +57,9 @@
     _valueLabel.width = self.width;
 }
 
+-(void)setValueFont:(UIFont*)font
+{
+    self.valueLabel.font = font;
+}
+
 @end
