@@ -120,6 +120,11 @@ static dispatch_once_t onceToken;
 
 #pragma mark - Animator
 
+
+- (void)cx_windowMore:(BOOL)more {
+    
+}
+
 - (CGFloat)backY {
     return self.windowY - kMargin10;
 }
