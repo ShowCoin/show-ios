@@ -37,4 +37,10 @@
     _value = value;
     _valueLabel.text = value;
 }
+
+- (void)setTitleColor:(UIColor *)titleColor {
+
+}
+
+
 @end
