@@ -124,6 +124,17 @@ static dispatch_once_t onceToken;
     return self.windowY - kMargin10;
 }
 
+- (CGFloat)windowH {
+    NSInteger count = [self.chatView.dataSource.firstObject count];
+    if (count == 0) {
+        return kMessageViewH;
+    }
+    if (count <= 3) {
+        return kMTViewH + count * kMCellH;
+    }
+    return kMessageMaxH;
+}
+
 - (CGFloat)windowY {
     return self.toolY - 8 - self.window.mj_h;
 }
