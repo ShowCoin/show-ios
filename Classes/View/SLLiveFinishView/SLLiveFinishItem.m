@@ -32,4 +32,8 @@
     _titleLabel.text = title;
 }
 
+-(void)setValue:(NSString *)value
+{
+    
+}
 @end
