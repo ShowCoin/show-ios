@@ -44,5 +44,10 @@
     self.titleLabel.textColor = _titleColor;
 }
 
+- (void)setValueColor:(UIColor *)valueColor {
+
+
+}
+
 
 @end
