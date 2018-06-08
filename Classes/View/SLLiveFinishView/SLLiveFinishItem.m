@@ -10,6 +10,9 @@
 
 @interface SLLiveFinishItem ()
 
+@property(nonatomic, strong)UILabel *titleLabel;
+@property(nonatomic, strong)UILabel *valueLabel;
+
 @end
 
 @implementation SLLiveFinishItem
