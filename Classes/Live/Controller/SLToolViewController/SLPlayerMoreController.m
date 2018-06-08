@@ -122,7 +122,7 @@ static dispatch_once_t onceToken;
 
 
 /**
- <#Description#>
+ when show window is need auto show max height
 
  @param more isShow more
  */
