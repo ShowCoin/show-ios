@@ -51,5 +51,10 @@
 
 }
 
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    _titleLabel.width = self.width;
+    _valueLabel.width = self.width;
+}
 
 @end
