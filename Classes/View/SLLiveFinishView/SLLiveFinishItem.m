@@ -40,6 +40,8 @@
 
 - (void)setTitleColor:(UIColor *)titleColor {
 
+    _titleColor = titleColor;
+    self.titleLabel.textColor = _titleColor;
 }
 
 
