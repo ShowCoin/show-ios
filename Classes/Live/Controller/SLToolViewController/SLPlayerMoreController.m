@@ -77,6 +77,10 @@ static dispatch_once_t onceToken;
     _instance = nil;
 }
 
+
+/**
+ <#Description#>
+ */
 - (void)setupUI {
     self.view.backgroundColor = [UIColor clearColor];
     
