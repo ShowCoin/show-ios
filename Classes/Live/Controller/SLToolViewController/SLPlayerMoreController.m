@@ -125,7 +125,19 @@ static dispatch_once_t onceToken;
     if (self.window.mj_h == kMessageMaxH) return;
     CGFloat h = kMessageMaxH - self.window.mj_h;
     
-    
+    [UIView animateWithDuration:0.25 delay:0 options:0 animations:^{
+        if (more) {
+            self.window.mj_y -= h;
+            self.window.mj_h += h;
+            self.backView.mj_y -= h;
+            self.backView.mj_h += h;
+        } else {
+            self.window.mj_y += h;
+            self.window.mj_h -= h;
+            self.backView.mj_y += h;
+            self.backView.mj_h -= h;
+        }
+    } completion:nil];
 }
 
 - (CGFloat)backY {
