@@ -62,4 +62,9 @@
     self.valueLabel.font = font;
 }
 
+-(void)setTitleFont:(UIFont*)font
+{
+    self.titleLabel.font = font;
+}
+
 @end
