@@ -337,6 +337,8 @@ static dispatch_once_t onceToken;
 
 
 /**
+ get 
+ 
  @return photo authorizationStatus
  */
 + (NSInteger)authorizationStatus {
