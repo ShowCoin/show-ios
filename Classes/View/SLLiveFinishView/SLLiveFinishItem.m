@@ -86,4 +86,14 @@
     [self addSubview:_valueLabel];
 }
 
+-(void)_initTitleLabel
+{
+    CGFloat fontSize = (KScreenWidth>320)?18:16;
+    _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,self.height/2, self.width, self.height/2)];
+    _titleLabel.font = [UIFont systemFontOfSize:fontSize];
+    _titleLabel.textColor =[[UIColor whiteColor] colorWithAlphaComponent:0.5];
+    _titleLabel.textAlignment = NSTextAlignmentCenter;
+    [self addSubview:_titleLabel];
+}
+
 @end
