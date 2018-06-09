@@ -324,7 +324,7 @@ static dispatch_once_t onceToken;
 /**
  Return YES if Authorized 返回YES如果得到了授权
 
- @return <#return value description#>
+ @return is authorizeation
  */
 + (BOOL)authorizationStatusAuthorized {
     NSInteger status = [self.class authorizationStatus];
