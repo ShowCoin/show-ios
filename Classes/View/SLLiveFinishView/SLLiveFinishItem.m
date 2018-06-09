@@ -10,8 +10,8 @@
 
 @interface SLLiveFinishItem ()
 
-@property(nonatomic, strong)UILabel *titleLabel;
-@property(nonatomic, strong)UILabel *valueLabel;
+@property (nonatomic, strong) UILabel *titleLabel;
+@property (nonatomic, strong) UILabel *valueLabel;
 
 @end
 
@@ -26,13 +26,13 @@
     return self;
 }
 
--(void)setTitle:(NSString *)title
+- (void)setTitle:(NSString *)title
 {
     _title = title;
     _titleLabel.text = title;
 }
 
--(void)setValue:(NSString *)value
+- (void)setValue:(NSString *)value
 {
     _value = value;
     _valueLabel.text = value;
@@ -57,25 +57,25 @@
     _valueLabel.width = self.width;
 }
 
--(void)setValueFont:(UIFont*)font
+- (void)setValueFont:(UIFont*)font
 {
     self.valueLabel.font = font;
 }
 
--(void)setTitleFont:(UIFont*)font
+- (void)setTitleFont:(UIFont*)font
 {
     self.titleLabel.font = font;
 }
 
 #pragma mark - private
 
--(void)_initView
+- (void)_initView
 {
     [self _initValueLabel];
     [self _initTitleLabel];
 }
 
--(void)_initValueLabel
+- (void)_initValueLabel
 {
     CGFloat fontSize = (KScreenWidth>320)?18:16;
     
@@ -86,7 +86,7 @@
     [self addSubview:_valueLabel];
 }
 
--(void)_initTitleLabel
+- (void)_initTitleLabel
 {
     CGFloat fontSize = (KScreenWidth>320)?18:16;
     _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,self.height/2, self.width, self.height/2)];
