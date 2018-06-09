@@ -67,4 +67,12 @@
     self.titleLabel.font = font;
 }
 
+#pragma mark - private
+
+-(void)_initView
+{
+    [self _initValueLabel];
+    [self _initTitleLabel];
+}
+
 @end
