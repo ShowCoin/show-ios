@@ -13,5 +13,7 @@
 
 @interface SLLiveFinishView : UIView
 
+@property(nonatomic, strong) UIButton * backButton;
+
 
 @end
