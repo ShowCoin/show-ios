@@ -337,7 +337,7 @@ static dispatch_once_t onceToken;
 
 
 /**
- get 
+ get authorization Status
  
  @return photo authorizationStatus
  */
