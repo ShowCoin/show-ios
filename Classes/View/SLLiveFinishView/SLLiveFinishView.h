@@ -13,7 +13,19 @@
 
 @interface SLLiveFinishView : UIView
 
-@property(nonatomic, strong) UIButton * backButton;
+@property (nonatomic, strong) UIButton * backButton;
 
+
+- (void)showOnView:(UIView*)view
+            reason:(SLLiveFinishType)reason
+             model:(SLLiveStartModel*)model;
+
+- (void)showOnView:(UIView*)view
+             model:(SLLiveListModel*)model;
+
+- (void)showOnView:(UIView*)view
+       finishModel:(SLFinishModel*)finishModel
+         liveModel:(SLLiveListModel*)liveModel
+          isAnchor:(BOOL)isAnchor;
 
 @end
