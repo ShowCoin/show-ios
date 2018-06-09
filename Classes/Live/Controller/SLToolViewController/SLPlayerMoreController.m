@@ -351,7 +351,7 @@ static dispatch_once_t onceToken;
 
 /**
  request Authorization
- // note auth
+ // note auth---
  @param completion block
  */
 + (void)requestAuthorizationWithCompletion:(void (^)(void))completion {
