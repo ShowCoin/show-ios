@@ -321,8 +321,11 @@ static dispatch_once_t onceToken;
 
 @implementation PAPhotoAuthorized
 
+/**
+ Return YES if Authorized 返回YES如果得到了授权
 
-/// Return YES if Authorized 返回YES如果得到了授权
+ @return is authorizeation
+ */
 + (BOOL)authorizationStatusAuthorized {
     NSInteger status = [self.class authorizationStatus];
     if (status == 0) {
@@ -337,6 +340,8 @@ static dispatch_once_t onceToken;
 
 
 /**
+ get authorization Status
+ 
  @return photo authorizationStatus
  */
 + (NSInteger)authorizationStatus {
@@ -351,7 +356,7 @@ static dispatch_once_t onceToken;
 
 /**
  request Authorization
-
+ // note auth---
  @param completion block
  */
 + (void)requestAuthorizationWithCompletion:(void (^)(void))completion {
