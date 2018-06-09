@@ -15,5 +15,7 @@
 @property (nonatomic, strong) UIColor *titleColor;
 @property (nonatomic, strong) UIColor *valueColor;
 
+-(void)setValueFont:(UIFont*)font;
 
+-(void)setTitleFont:(UIFont*)font;
 @end
