@@ -10,5 +10,10 @@
 
 @interface SLLiveFinishItem : UIView
 
+@property(nonatomic, copy)NSString *title;
+@property(nonatomic, copy)NSString *value;
+@property (nonatomic, strong) UIColor *titleColor;
+@property (nonatomic, strong) UIColor *valueColor;
+
 
 @end
