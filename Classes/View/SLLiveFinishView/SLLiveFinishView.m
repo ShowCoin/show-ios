@@ -36,6 +36,14 @@
 @property(nonatomic,strong) UIButton * closeShareButton;
 @property(nonatomic,strong) UIImageView * qrcodeImageView;
 @property(nonatomic,strong) UIImageView * shareView;
+//朋友圈
+@property (nonatomic,strong) UIButton * friendBotton;
+//微信
+@property (nonatomic,strong) UIButton * wechatBotton;
+//手机
+@property (nonatomic,strong) UIButton * phoneBotton;
+@property (nonatomic,copy) NSString * liveid;
+@property (nonatomic,strong) SLLiveDelete * action;
 
 
 @end
