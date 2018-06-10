@@ -105,5 +105,21 @@
     [self setFinishModel:finishModel];
 }
 
+-(void)addAnchorChildView
+{
+    
+    [self addSubview:self.bgImageView];
+    [self addSubview:self.effectView];
+    [self addSubview:self.titleLabel];
+    [self addSubview:self.avatarView];
+    [self addSubview:self.nickLabel];
+    [self addSubview:self.line1];
+    [self addSubview:self.receiveItem];
+    [self addSubview:self.cnyitem];
+    [self addSubview:self.line2];
+    [self addSubview:self.watchesItem];
+    [self addSubview:self.backButton];
+    
+}
 
 @end
