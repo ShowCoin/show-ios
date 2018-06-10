@@ -246,20 +246,7 @@ static dispatch_once_t onceToken;
 
 @end
 
-@implementation SLMoreAnimater {
-    BOOL _isPresent;
-}
-
-/**
- do dismissed animator delegate objc
-
- @param dismissed view
- @return protocal vc <UIViewControllerAnimatedTransitioning>
- */
-- (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
-    _isPresent = NO;
-    return self;
-}
+@implementation SLMoreAnimater
 
 @end
 
