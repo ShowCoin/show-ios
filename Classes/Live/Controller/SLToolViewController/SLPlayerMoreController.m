@@ -353,35 +353,4 @@ static dispatch_once_t onceToken;
     return NO;
 }
 
-
-/**
- request Authorization
- // note auth---
- @param completion block
- */
-+ (void)requestAuthorizationWithCompletion:(void (^)(void))completion {
-    void (^callCompletionBlock)(void) = ^(){
-        dispatch_async(dispatch_get_main_queue(), ^{
-            if (completion) {
-                completion();
-            }
-        });
-    };
-    
-    if (iOS8Later) {
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
-                callCompletionBlock();
-            }];
-        });
-    } else {
-        ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
-        [library enumerateGroupsWithTypes:ALAssetsGroupAll usingBlock:^(ALAssetsGroup *group, BOOL *stop) {
-            callCompletionBlock();
-        } failureBlock:^(NSError *error) {
-            callCompletionBlock();
-        }];
-    }
-}
-
 @end
