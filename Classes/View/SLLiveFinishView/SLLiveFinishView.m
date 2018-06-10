@@ -122,4 +122,9 @@
     
 }
 
+-(void)setPara:(NSString*)para
+{
+    self.paragraphLabel.text = para;
+}
+
 @end
