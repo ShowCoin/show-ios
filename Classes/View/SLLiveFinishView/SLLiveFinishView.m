@@ -79,8 +79,30 @@
     finishModel.liked  = [model.liked integerValue];
     finishModel.receive  = [model.receive integerValue];
     finishModel.viewed  = [model.online_users integerValue];
-    [self showOnView:view finishModel:finishModel liveModel:model isAnchor:NO];
+    [self showOn
+     
+     View:view finishModel:finishModel liveModel:model isAnchor:NO];
     
+}
+
+-(void)showOnView:(UIView*)view
+      finishModel:(SLFinishModel*)finishModel
+        liveModel:(SLLiveListModel*)liveModel
+         isAnchor:(BOOL)isAnchor
+
+{
+    
+    [view addSubview:self];
+    [self addAnchorChildView];
+    if (isAnchor==YES) {
+        [self addSubview:self.deleteButton];
+        [self addSubview:self.shareButton];
+        [self addSubview:self.paragraphLabel];
+        [self addSubview:self.rankLabel];
+        [self addSubview:self.qrcodeImageView];
+    }
+    [self setLiveListModel:liveModel];
+    [self setFinishModel:finishModel];
 }
 
 
