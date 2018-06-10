@@ -50,6 +50,12 @@
 
 @implementation SLLiveFinishView
 
+-(void)dealloc
+{
+    NSLog(@"[gx] finishView dealloc");
+}
+
+
 
 
 @end
