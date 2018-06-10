@@ -55,6 +55,22 @@
     NSLog(@"[gx] finishView dealloc");
 }
 
+-(void)showOnView:(UIView*)view
+           reason:(SLLiveFinishType)reason
+            model:(SLLiveStartModel*)model
+{
+    
+    _liveid = model.liveId;
+    [view addSubview:self];
+    [self addAnchorChildView];
+    [self addSubview:self.deleteButton];
+    [self addSubview:self.shareButton];
+    [self addSubview:self.paragraphLabel];
+    [self addSubview:self.rankLabel];
+    [self addSubview:self.qrcodeImageView];
+    [self initData:reason];
+    [self requestData:model];
+}
 
 
 
