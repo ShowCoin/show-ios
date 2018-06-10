@@ -305,15 +305,7 @@ static dispatch_once_t onceToken;
         }completion:^(BOOL finished) {
             [transitionContext completeTransition:YES];
         }];
-    } else {
-        UIView *dismissedView = [transitionContext viewForKey:UITransitionContextFromViewKey];
-        [containerView addSubview:dismissedView];
-        [UIView animateWithDuration:time delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
-            dismissedView.frame =CGRectMake(0, h, w, h);
-        }completion:^(BOOL finished) {
-            [transitionContext completeTransition:YES];
-        }];
-    }
+    } 
 }
 
 @end
