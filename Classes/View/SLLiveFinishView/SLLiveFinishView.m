@@ -127,4 +127,11 @@
     self.paragraphLabel.text = para;
 }
 
+-(void)setRank:(NSString*)rank
+         total:(NSString*)total
+{
+    
+    
+}
+
 @end
