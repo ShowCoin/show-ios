@@ -31,6 +31,12 @@
 @property(nonatomic,strong) UILabel * paragraphLabel;
 @property(nonatomic,strong) UILabel * rankLabel;
 
+@property(nonatomic,strong) UIButton * deleteButton;
+@property(nonatomic,strong) UIButton * shareButton;
+@property(nonatomic,strong) UIButton * closeShareButton;
+@property(nonatomic,strong) UIImageView * qrcodeImageView;
+@property(nonatomic,strong) UIImageView * shareView;
+
 
 @end
 
