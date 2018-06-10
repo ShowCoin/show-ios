@@ -274,27 +274,6 @@ static dispatch_once_t onceToken;
     return self;
 }
 
-#pragma mark - <UIViewControllerAnimatedTransitioning>
-
-/**
- time
-
- @param transitionContext transitionContext
- @return NSTimeInterval
- */
-- (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext {
-    return 0.25;
-}
-
-/**
- animateTransition
-
- @param transitionContext transitionCont
- */
-- (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext {
-    
-}
-
 @end
 
 
