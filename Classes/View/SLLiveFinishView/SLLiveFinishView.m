@@ -72,6 +72,16 @@
     [self requestData:model];
 }
 
+-(void)showOnView:(UIView*)view
+            model:(SLLiveListModel*)model
+{
+    SLFinishModel * finishModel = [[SLFinishModel alloc]init];
+    finishModel.liked  = [model.liked integerValue];
+    finishModel.receive  = [model.receive integerValue];
+    finishModel.viewed  = [model.online_users integerValue];
+    [self showOnView:view finishModel:finishModel liveModel:model isAnchor:NO];
+    
+}
 
 
 @end
