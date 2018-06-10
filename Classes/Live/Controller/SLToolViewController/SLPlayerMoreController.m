@@ -292,20 +292,7 @@ static dispatch_once_t onceToken;
  @param transitionContext transitionCont
  */
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext {
-    CGFloat h = UIScreen.mainScreen.bounds.size.height;
-    CGFloat w = UIScreen.mainScreen.bounds.size.width;
-    NSTimeInterval time = [self transitionDuration:transitionContext];
-    UIView *containerView = [transitionContext containerView];
-    if (_isPresent) {
-        UIView *presentedView = [transitionContext viewForKey:UITransitionContextToViewKey];
-        [containerView addSubview:presentedView];
-        presentedView.frame = CGRectMake(0, h, w, h);
-        [UIView animateWithDuration:time delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
-            presentedView.frame = CGRectMake(0, 0, w, h);
-        }completion:^(BOOL finished) {
-            [transitionContext completeTransition:YES];
-        }];
-    } 
+    
 }
 
 @end
