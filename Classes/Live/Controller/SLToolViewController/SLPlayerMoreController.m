@@ -172,6 +172,13 @@ static dispatch_once_t onceToken;
     return KScreenHeight - kSLToolViewH  - kMargin10 - (__IphoneX__ ? 32 : 0);
 }
 
+
+/**
+ <#Description#>
+
+ @param touches <#touches description#>
+ @param event <#event description#>
+ */
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [SLPlayerMoreController dismiss];
 }
