@@ -141,6 +141,8 @@
     NSDictionary * attris = @{NSForegroundColorAttributeName:[UIColor yellowColor],NSBackgroundColorAttributeName:[UIColor clearColor],NSFontAttributeName: [UIFont boldSystemFontOfSize:30*WScale]};
     [mutableAttriStr setAttributes:attris range:NSMakeRange(0,1)];
     
+    NSDictionary * attris1 = @{NSForegroundColorAttributeName:[UIColor yellowColor],NSBackgroundColorAttributeName:[UIColor clearColor],NSFontAttributeName: Font_Trebuchet(40*WScale)};
+    [mutableAttriStr setAttributes:attris1 range:NSMakeRange(1,rank.length)];
     
 }
 
