@@ -169,4 +169,10 @@
     self.titleLabel.text = @"直播结束";
 }
 
+-(void)initData:(SLLiveFinishType)reason
+{
+    
+    
+}
+
 @end
