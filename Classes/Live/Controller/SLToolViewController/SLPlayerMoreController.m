@@ -215,7 +215,7 @@ static dispatch_once_t onceToken;
 /**
  post notification
 
- @param select <#select description#>
+ @param select is select
  */
 - (void)postNotification:(BOOL)select {
     [[NSNotificationCenter defaultCenter]postNotificationName:SLPlayerBottomCollectionNotification object:@(select)];
