@@ -136,7 +136,7 @@
         return;
     }
     
-    
+     NSMutableAttributedString * mutableAttriStr = [[NSMutableAttributedString alloc] initWithString:string];
     
     
 }
