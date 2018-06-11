@@ -172,7 +172,8 @@
 -(void)initData:(SLLiveFinishType)reason
 {
     
-    
+    [self.bgImageView sd_setImageWithURL:[NSURL URLWithString:[AccountModel shared].large_avatar]];
+
 }
 
 @end
