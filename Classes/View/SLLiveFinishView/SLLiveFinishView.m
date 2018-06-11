@@ -144,6 +144,9 @@
     NSDictionary * attris1 = @{NSForegroundColorAttributeName:[UIColor yellowColor],NSBackgroundColorAttributeName:[UIColor clearColor],NSFontAttributeName: Font_Trebuchet(40*WScale)};
     [mutableAttriStr setAttributes:attris1 range:NSMakeRange(1,rank.length)];
     
+    NSDictionary * attris2 = @{NSForegroundColorAttributeName:[UIColor whiteColor],NSBackgroundColorAttributeName:[UIColor clearColor],NSFontAttributeName:[UIFont boldSystemFontOfSize:30*WScale]};
+    [mutableAttriStr setAttributes:attris2 range:NSMakeRange(rank.length+1,1)];
+    self.rankLabel.attributedText = mutableAttriStr;
 }
 
 @end
