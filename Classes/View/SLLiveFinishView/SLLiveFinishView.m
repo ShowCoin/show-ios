@@ -173,6 +173,7 @@
 {
     
     [self.bgImageView sd_setImageWithURL:[NSURL URLWithString:[AccountModel shared].large_avatar]];
+    self.nickLabel.text = [NSString stringWithFormat:@"%@",[AccountModel shared].nickname];
 
 }
 
