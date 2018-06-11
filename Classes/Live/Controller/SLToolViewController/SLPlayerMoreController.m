@@ -181,7 +181,7 @@ static dispatch_once_t onceToken;
 /**
  tool click method
 
- @param type <#type description#>
+ @param type SLLiveToolType
  */
 - (void)toolAction:(SLLiveToolType)type {
     [SLPlayerMoreController dismiss];
