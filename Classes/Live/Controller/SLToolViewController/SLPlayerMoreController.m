@@ -216,24 +216,6 @@ static dispatch_once_t onceToken;
     [PageMgr setRootScrollEnabled:!select];
 }
 
-#pragma mark - setter getter
-
-@synthesize clear = _clear;
-
-- (BOOL)clear {
-    return self.toolView.clearSelect;
-}
-
-- (void)setClear:(BOOL)clear {
-    _clear = clear;
-    if (clear == NO) {
-        [self.toolView resetView];
-        [self.delegate sl_playerToolClearScreen:NO];
-        
-        [self postNotification:NO];
-    }
-}
-
 #pragma mark - Public
 
 + (void)resetTool {
