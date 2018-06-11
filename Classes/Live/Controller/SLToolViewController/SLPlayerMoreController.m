@@ -178,6 +178,11 @@ static dispatch_once_t onceToken;
 
 #pragma mark - Privte
 
+/**
+ <#Description#>
+
+ @param type <#type description#>
+ */
 - (void)toolAction:(SLLiveToolType)type {
     [SLPlayerMoreController dismiss];
     
