@@ -174,7 +174,7 @@ static dispatch_once_t onceToken;
 
 
 /**
- <#Description#>
+ touchesBegan
 
  @param touches <#touches description#>
  @param event <#event description#>
