@@ -172,12 +172,24 @@ static dispatch_once_t onceToken;
     return KScreenHeight - kSLToolViewH  - kMargin10 - (__IphoneX__ ? 32 : 0);
 }
 
+
+/**
+ touchesBegan
+
+ @param touches <#touches description#>
+ @param event <#event description#>
+ */
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [SLPlayerMoreController dismiss];
 }
 
 #pragma mark - Privte
 
+/**
+ tool click method
+
+ @param type SLLiveToolType
+ */
 - (void)toolAction:(SLLiveToolType)type {
     [SLPlayerMoreController dismiss];
     
@@ -211,27 +223,15 @@ static dispatch_once_t onceToken;
     };
 }
 
+
+/**
+ post notification
+
+ @param select is select
+ */
 - (void)postNotification:(BOOL)select {
     [[NSNotificationCenter defaultCenter]postNotificationName:SLPlayerBottomCollectionNotification object:@(select)];
     [PageMgr setRootScrollEnabled:!select];
-}
-
-#pragma mark - setter getter
-
-@synthesize clear = _clear;
-
-- (BOOL)clear {
-    return self.toolView.clearSelect;
-}
-
-- (void)setClear:(BOOL)clear {
-    _clear = clear;
-    if (clear == NO) {
-        [self.toolView resetView];
-        [self.delegate sl_playerToolClearScreen:NO];
-        
-        [self postNotification:NO];
-    }
 }
 
 #pragma mark - Public
