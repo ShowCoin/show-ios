@@ -149,4 +149,13 @@
     self.rankLabel.attributedText = mutableAttriStr;
 }
 
+-(void)setFinishModel:(SLFinishModel*)model
+{
+    self.cnyitem.value = [NSString stringWithFormat:@"%.2f",model.cny];
+    self.watchesItem.value =[NSString stringWithFormat:@"%ld",model.viewed];
+    self.receiveItem.value = [NSString stringWithFormat:@"%ld",(long)model.receive];
+    self.titleLabel.text = [NSString stringWithFormat:@"%@",model.gradeTitle];
+    [self setPara:[NSString stringWithFormat:@"%@",model.gradeDuan]];
+}
+
 @end
