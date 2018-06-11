@@ -211,6 +211,12 @@ static dispatch_once_t onceToken;
     };
 }
 
+
+/**
+ <#Description#>
+
+ @param select <#select description#>
+ */
 - (void)postNotification:(BOOL)select {
     [[NSNotificationCenter defaultCenter]postNotificationName:SLPlayerBottomCollectionNotification object:@(select)];
     [PageMgr setRootScrollEnabled:!select];
