@@ -213,7 +213,7 @@ static dispatch_once_t onceToken;
 
 
 /**
- cx
+ post notification
 
  @param select <#select description#>
  */
