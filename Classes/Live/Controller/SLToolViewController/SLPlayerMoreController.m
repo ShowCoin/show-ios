@@ -179,7 +179,7 @@ static dispatch_once_t onceToken;
 #pragma mark - Privte
 
 /**
- tool click 
+ tool click method
 
  @param type <#type description#>
  */
