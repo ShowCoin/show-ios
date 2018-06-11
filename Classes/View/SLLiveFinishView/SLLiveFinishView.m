@@ -131,6 +131,13 @@
          total:(NSString*)total
 {
     
+    NSString * string = [NSString stringWithFormat:@"第%@/%@",rank,total];
+    if (IsStrEmpty(string)) {
+        return;
+    }
+    
+    
+    
     
 }
 
