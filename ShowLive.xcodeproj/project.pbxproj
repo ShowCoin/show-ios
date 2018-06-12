@@ -14,6 +14,7 @@
 		43143926209497E80059D373 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 43143921209497E80059D373 /* .gitignore */; };
 		43143927209497E80059D373 /* UNLICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 43143922209497E80059D373 /* UNLICENSE */; };
 		43143928209497E80059D373 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 43143923209497E80059D373 /* Cartfile */; };
+		4325535420CFE87700FC0258 /* UIWebViewDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4325535320CFE87700FC0258 /* UIWebViewDemoViewController.m */; };
 		434DDB4E20C9324F00191FC1 /* CAAnimation+JKEasingEquations.m in Sources */ = {isa = PBXBuildFile; fileRef = 434DDB4C20C9324F00191FC1 /* CAAnimation+JKEasingEquations.m */; };
 		434DDB5120C9326800191FC1 /* CALayer+JKBorderColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 434DDB5020C9326800191FC1 /* CALayer+JKBorderColor.m */; };
 		434DDB5420C932AB00191FC1 /* CALayerDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 434DDB5320C932AA00191FC1 /* CALayerDemoViewController.m */; };
@@ -78,6 +79,8 @@
 		43143921209497E80059D373 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		43143922209497E80059D373 /* UNLICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UNLICENSE; sourceTree = "<group>"; };
 		43143923209497E80059D373 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		4325535220CFE87700FC0258 /* UIWebViewDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIWebViewDemoViewController.h; sourceTree = "<group>"; };
+		4325535320CFE87700FC0258 /* UIWebViewDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIWebViewDemoViewController.m; sourceTree = "<group>"; };
 		434DDB4C20C9324F00191FC1 /* CAAnimation+JKEasingEquations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAAnimation+JKEasingEquations.m"; sourceTree = "<group>"; };
 		434DDB4D20C9324F00191FC1 /* CAAnimation+JKEasingEquations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAAnimation+JKEasingEquations.h"; sourceTree = "<group>"; };
 		434DDB4F20C9326800191FC1 /* CALayer+JKBorderColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+JKBorderColor.h"; sourceTree = "<group>"; };
@@ -284,6 +287,8 @@
 				434DDB6220C9337900191FC1 /* UIWindow+JKHierarchy.m */,
 				434DDB5E20C9335A00191FC1 /* WebView+Debug.h */,
 				434DDB5F20C9335A00191FC1 /* WebView+Debug.m */,
+				4325535220CFE87700FC0258 /* UIWebViewDemoViewController.h */,
+				4325535320CFE87700FC0258 /* UIWebViewDemoViewController.m */,
 				434DDB5820C932FC00191FC1 /* CAShapeLayer+JKUIBezierPath.h */,
 				434DDB5920C932FC00191FC1 /* CAShapeLayer+JKUIBezierPath.m */,
 				434DDB5C20C9332700191FC1 /* CATransaction+JKAnimateWithDuration.h */,
@@ -362,7 +367,6 @@
 		724D4BBD20C914D10007E4E8 /* HomeView */ = {
 			isa = PBXGroup;
 			children = (
-				724D4BBF20C914F00007E4E8 /* VC */,
 				724D4BBE20C914E70007E4E8 /* View */,
 			);
 			path = HomeView;
@@ -377,13 +381,6 @@
 				724D4BC420C915D80007E4E8 /* HotReusableView.m */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		724D4BBF20C914F00007E4E8 /* VC */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = VC;
 			sourceTree = "<group>";
 		};
 		725B98BA20AC3CD400747F7A /* UserCenter */ = {
@@ -928,6 +925,7 @@
 				435E3C8F20C02BB2002B7A7F /* NSDecimalNumber+JKExtensions.m in Sources */,
 				723816C520C6B6E300C3885E /* SLLinkLabel.m in Sources */,
 				43968A6A20AC398C00149DCC /* NSObject+Safe.m in Sources */,
+				4325535420CFE87700FC0258 /* UIWebViewDemoViewController.m in Sources */,
 				434DDB6320C9337A00191FC1 /* UIWindow+JKHierarchy.m in Sources */,
 				722957B120C80779000D0719 /* SLUserViewHeader.m in Sources */,
 				435E3C9120C02BB2002B7A7F /* NSNumber+JKCGFloat.m in Sources */,
