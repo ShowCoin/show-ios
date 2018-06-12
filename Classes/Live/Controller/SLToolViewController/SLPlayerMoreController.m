@@ -135,16 +135,12 @@ static dispatch_once_t onceToken;
     CGFloat h = kMessageMaxH - self.window.mj_h;
     
     [UIView animateWithDuration:0.25 delay:0 options:0 animations:^{
+        
         if (more) {
             self.window.mj_y -= h;
             self.window.mj_h += h;
             self.backView.mj_y -= h;
             self.backView.mj_h += h;
-        } else {
-            self.window.mj_y += h;
-            self.window.mj_h -= h;
-            self.backView.mj_y += h;
-            self.backView.mj_h -= h;
         }
     } completion:nil];
 }
@@ -154,12 +150,12 @@ static dispatch_once_t onceToken;
 }
 
 - (CGFloat)windowH {
+    if (count <= 3) {
+        return kMTViewH + count * kMCellH;
+    }
     NSInteger count = [self.chatView.dataSource.firstObject count];
     if (count == 0) {
         return kMessageViewH;
-    }
-    if (count <= 3) {
-        return kMTViewH + count * kMCellH;
     }
     return kMessageMaxH;
 }
@@ -168,17 +164,6 @@ static dispatch_once_t onceToken;
     return self.toolY - 8 - self.window.mj_h;
 }
 
-- (CGFloat)toolY {
-    return KScreenHeight - kSLToolViewH  - kMargin10 - (__IphoneX__ ? 32 : 0);
-}
-
-
-/**
- touchesBegan
-
- @param touches <#touches description#>
- @param event <#event description#>
- */
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [SLPlayerMoreController dismiss];
 }
@@ -191,7 +176,6 @@ static dispatch_once_t onceToken;
  @param type SLLiveToolType
  */
 - (void)toolAction:(SLLiveToolType)type {
-    [SLPlayerMoreController dismiss];
     
     if (   type == SLLiveToolTypeClear
         && [self.delegate respondsToSelector:@selector(sl_playerToolClearScreen:)]) {
@@ -201,26 +185,17 @@ static dispatch_once_t onceToken;
         return;
     }
     
+    [SLPauseView.shared show:YES];
+    SLPlayerMoreController.shared.pause = YES;
+    
     if (   type == SLLiveToolTypeScreenShot
         && [self.delegate respondsToSelector:@selector(sl_playerToolScreenShoot)]) {
         [self.delegate sl_playerToolScreenShoot];
         return;
     }
+    [SLPlayerMoreController dismiss];
     
-    if (type != SLLiveToolTypePause) return;
-    if ([self.delegate respondsToSelector:(@selector(sl_playerToolPause))]) {
-        [self.delegate sl_playerToolPause];
-    }
-    [SLPauseView.shared show:YES];
-    SLPlayerMoreController.shared.pause = YES;
-    @weakify(self)
-    SLPauseView.shared.hiddenBlock = ^{
-        @strongify(self)
-        if ([self.delegate respondsToSelector:@selector(sl_playerToolResume)]) {
-            [self.delegate sl_playerToolResume];
-        }
-        SLPlayerMoreController.shared.pause = NO;
-    };
+    
 }
 
 
