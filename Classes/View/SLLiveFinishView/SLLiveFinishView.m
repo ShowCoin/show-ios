@@ -274,12 +274,12 @@
 
 -(UIVisualEffectView*)effectView
 {
-    if (!_effectView) {
-        UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
-        _effectView = [[UIVisualEffectView alloc] initWithEffect:effect];
-        _effectView.frame = self.bounds;
-        
-    }
+//    if (!_effectView) {
+//        UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+//        _effectView = [[UIVisualEffectView alloc] initWithEffect:effect];
+//        _effectView.frame = self.bounds;
+//        
+//    }
     return _effectView;
 }
 
