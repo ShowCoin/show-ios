@@ -154,12 +154,12 @@ static dispatch_once_t onceToken;
 }
 
 - (CGFloat)windowH {
+    if (count <= 3) {
+        return kMTViewH + count * kMCellH;
+    }
     NSInteger count = [self.chatView.dataSource.firstObject count];
     if (count == 0) {
         return kMessageViewH;
-    }
-    if (count <= 3) {
-        return kMTViewH + count * kMCellH;
     }
     return kMessageMaxH;
 }
