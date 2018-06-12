@@ -263,4 +263,13 @@
     }];
 }
 
+-(UIImageView*)bgImageView
+{
+    if (!_bgImageView) {
+        _bgImageView = [[UIImageView alloc]initWithFrame:self.bounds];
+        
+    }
+    return _bgImageView;
+}
+
 @end
