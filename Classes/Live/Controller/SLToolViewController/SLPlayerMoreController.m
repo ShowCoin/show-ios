@@ -206,14 +206,6 @@ static dispatch_once_t onceToken;
     }
     [SLPauseView.shared show:YES];
     SLPlayerMoreController.shared.pause = YES;
-    @weakify(self)
-    SLPauseView.shared.hiddenBlock = ^{
-        @strongify(self)
-        if ([self.delegate respondsToSelector:@selector(sl_playerToolResume)]) {
-            [self.delegate sl_playerToolResume];
-        }
-        SLPlayerMoreController.shared.pause = NO;
-    };
 }
 
 
