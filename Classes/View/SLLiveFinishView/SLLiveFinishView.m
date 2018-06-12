@@ -175,6 +175,9 @@
     [self.bgImageView sd_setImageWithURL:[NSURL URLWithString:[AccountModel shared].large_avatar]];
     self.nickLabel.text = [NSString stringWithFormat:@"%@",[AccountModel shared].nickname];
 
+    [self.nickLabel sizeToFit];
+    self.nickLabel.mj_x =  (KScreenWidth/2-self.nickLabel.width/2);
+    [self.avatarView setRoundStyle:YES imageUrl:[AccountModel shared].avatar imageHeight:40 vip:NO attestation:NO];
 }
 
 @end
