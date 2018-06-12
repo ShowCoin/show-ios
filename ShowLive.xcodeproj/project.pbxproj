@@ -15,6 +15,7 @@
 		43143927209497E80059D373 /* UNLICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 43143922209497E80059D373 /* UNLICENSE */; };
 		43143928209497E80059D373 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 43143923209497E80059D373 /* Cartfile */; };
 		4325535420CFE87700FC0258 /* UIWebViewDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4325535320CFE87700FC0258 /* UIWebViewDemoViewController.m */; };
+		4325535720CFE88D00FC0258 /* UIWebView+JKWebStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4325535620CFE88D00FC0258 /* UIWebView+JKWebStorage.m */; };
 		434DDB4E20C9324F00191FC1 /* CAAnimation+JKEasingEquations.m in Sources */ = {isa = PBXBuildFile; fileRef = 434DDB4C20C9324F00191FC1 /* CAAnimation+JKEasingEquations.m */; };
 		434DDB5120C9326800191FC1 /* CALayer+JKBorderColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 434DDB5020C9326800191FC1 /* CALayer+JKBorderColor.m */; };
 		434DDB5420C932AB00191FC1 /* CALayerDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 434DDB5320C932AA00191FC1 /* CALayerDemoViewController.m */; };
@@ -81,6 +82,8 @@
 		43143923209497E80059D373 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		4325535220CFE87700FC0258 /* UIWebViewDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIWebViewDemoViewController.h; sourceTree = "<group>"; };
 		4325535320CFE87700FC0258 /* UIWebViewDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIWebViewDemoViewController.m; sourceTree = "<group>"; };
+		4325535520CFE88C00FC0258 /* UIWebView+JKWebStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+JKWebStorage.h"; sourceTree = "<group>"; };
+		4325535620CFE88D00FC0258 /* UIWebView+JKWebStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+JKWebStorage.m"; sourceTree = "<group>"; };
 		434DDB4C20C9324F00191FC1 /* CAAnimation+JKEasingEquations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAAnimation+JKEasingEquations.m"; sourceTree = "<group>"; };
 		434DDB4D20C9324F00191FC1 /* CAAnimation+JKEasingEquations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAAnimation+JKEasingEquations.h"; sourceTree = "<group>"; };
 		434DDB4F20C9326800191FC1 /* CALayer+JKBorderColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+JKBorderColor.h"; sourceTree = "<group>"; };
@@ -283,6 +286,8 @@
 		434DDB4B20C92B4E00191FC1 /* JKCategories */ = {
 			isa = PBXGroup;
 			children = (
+				4325535520CFE88C00FC0258 /* UIWebView+JKWebStorage.h */,
+				4325535620CFE88D00FC0258 /* UIWebView+JKWebStorage.m */,
 				434DDB6120C9337900191FC1 /* UIWindow+JKHierarchy.h */,
 				434DDB6220C9337900191FC1 /* UIWindow+JKHierarchy.m */,
 				434DDB5E20C9335A00191FC1 /* WebView+Debug.h */,
@@ -933,6 +938,7 @@
 				434DDB5A20C932FC00191FC1 /* CAShapeLayer+JKUIBezierPath.m in Sources */,
 				72C7B4F920C3EDE600065BC2 /* SLADView.m in Sources */,
 				434DDB4E20C9324F00191FC1 /* CAAnimation+JKEasingEquations.m in Sources */,
+				4325535720CFE88D00FC0258 /* UIWebView+JKWebStorage.m in Sources */,
 				434DDB6020C9335B00191FC1 /* WebView+Debug.m in Sources */,
 				435E3C9320C02BB2002B7A7F /* NSNumber+JKRomanNumerals.m in Sources */,
 				9391AA8320BF078A00D520F1 /* SLTimerLabel.m in Sources */,
