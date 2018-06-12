@@ -184,7 +184,6 @@ static dispatch_once_t onceToken;
  @param type SLLiveToolType
  */
 - (void)toolAction:(SLLiveToolType)type {
-    [SLPlayerMoreController dismiss];
     
     if (   type == SLLiveToolTypeClear
         && [self.delegate respondsToSelector:@selector(sl_playerToolClearScreen:)]) {
@@ -193,6 +192,7 @@ static dispatch_once_t onceToken;
         [self postNotification:self.toolView.clearSelect];
         return;
     }
+    
     if (type != SLLiveToolTypePause) return;
     if ([self.delegate respondsToSelector:(@selector(sl_playerToolPause))]) {
         [self.delegate sl_playerToolPause];
@@ -205,6 +205,8 @@ static dispatch_once_t onceToken;
         [self.delegate sl_playerToolScreenShoot];
         return;
     }
+    [SLPlayerMoreController dismiss];
+    
     
 }
 
