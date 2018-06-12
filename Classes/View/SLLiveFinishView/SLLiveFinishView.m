@@ -161,7 +161,7 @@
 -(void)setLiveListModel:(SLLiveListModel*)model
 {
 //    [self.bgImageView sd_setImageWithURL:[NSURL URLWithString:model.master.large_avatar]];
-//    
+//
 //    self.nickLabel.text = [NSString stringWithFormat:@"%@",model.master.nickname];
 //    [self.nickLabel sizeToFit];
 //    self.nickLabel.mj_x =  (KScreenWidth/2-self.nickLabel.width/2);
@@ -203,6 +203,17 @@
         default:
             break;
     }
+}
+
+-(void)updateValue:(SLLiveStopModel*)model
+{
+    self.watchesItem.value =[NSString stringWithFormat:@"%ld",model.viewed];
+    self.receiveItem.value = [NSString stringWithFormat:@"%ld",(long)model.receive];
+    self.cnyitem.value = [NSString stringWithFormat:@"%.2f",model.cny];
+    
+    
+    self.titleLabel.text = [NSString stringWithFormat:@"%@",model.gradeTitle];
+    [self setPara:[NSString stringWithFormat:@"%@",model.gradeDuan]];
 }
 
 @end
