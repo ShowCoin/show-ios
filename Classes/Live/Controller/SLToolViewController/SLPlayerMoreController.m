@@ -193,6 +193,12 @@ static dispatch_once_t onceToken;
         [self postNotification:self.toolView.clearSelect];
         return;
     }
+    if (type != SLLiveToolTypePause) return;
+    if ([self.delegate respondsToSelector:(@selector(sl_playerToolPause))]) {
+        [self.delegate sl_playerToolPause];
+    }
+    [SLPauseView.shared show:YES];
+    SLPlayerMoreController.shared.pause = YES;
     
     if (   type == SLLiveToolTypeScreenShot
         && [self.delegate respondsToSelector:@selector(sl_playerToolScreenShoot)]) {
@@ -200,12 +206,6 @@ static dispatch_once_t onceToken;
         return;
     }
     
-    if (type != SLLiveToolTypePause) return;
-    if ([self.delegate respondsToSelector:(@selector(sl_playerToolPause))]) {
-        [self.delegate sl_playerToolPause];
-    }
-    [SLPauseView.shared show:YES];
-    SLPlayerMoreController.shared.pause = YES;
 }
 
 
