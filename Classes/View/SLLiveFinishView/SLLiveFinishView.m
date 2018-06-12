@@ -242,5 +242,25 @@
     [self.viewController presentViewController:alert animated:YES completion:nil];
 }
 
+- (void)deleteLiveVideo {
+    self.deleteButton.userInteractionEnabled = NO;
+    NSLog(@"[gx] 删除接口liveid %@",self.liveid);
+    if (self.action) {
+        [self.action cancel];
+        self.action = nil;
+    }
+    self.action = [SLLiveDelete action];
+    self.action.liveId = self.liveid;
+    self.action.modelClass = SLLiveStopModel.self;
+    @weakify(self);
+    [self sl_startRequestAction:self.action Sucess:^(id  result) {
+        @strongify(self);
+        [self.deleteButton setTitle:@"已删除" forState:UIControlStateNormal];
+        [self.backButton sendActionsForControlEvents:UIControlEventTouchUpInside];
+    } FaildBlock:^(NSError *error) {
+        self.deleteButton.userInteractionEnabled = YES;
+        [HDHud showMessageInView:self title:@"删除失败"];
+    }];
+}
 
 @end
