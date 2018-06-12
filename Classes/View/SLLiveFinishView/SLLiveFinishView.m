@@ -178,6 +178,31 @@
     [self.nickLabel sizeToFit];
     self.nickLabel.mj_x =  (KScreenWidth/2-self.nickLabel.width/2);
     [self.avatarView setRoundStyle:YES imageUrl:[AccountModel shared].avatar imageHeight:40 vip:NO attestation:NO];
+    
+    switch (reason) {
+        case SLLiveFinishTypeNormal:
+        {
+            self.titleLabel.text = @"直播结束";
+        }
+            break;
+        case SLLiveFinishTypeConnectFail:
+        {
+            self.titleLabel.text = @"断开直播";
+        }
+            break;
+        case SLLiveFinishTypeOperating:
+        {
+            self.titleLabel.text = @"关闭直播";
+        }
+            break;
+        case SLLiveFinishTypeLiveOpenFail:
+        {
+            self.titleLabel.text = @"直播失败";
+        }
+            break;
+        default:
+            break;
+    }
 }
 
 @end
