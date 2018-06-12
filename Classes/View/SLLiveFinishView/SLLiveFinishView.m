@@ -216,4 +216,18 @@
     [self setPara:[NSString stringWithFormat:@"%@",model.gradeDuan]];
 }
 
+-(void)requestData:(SLLiveStartModel*)model
+{
+    SLLiveStopAction * action = [SLLiveStopAction action];
+    action.liveId = model.liveId;
+    action.modelClass = SLLiveStopModel.self;
+    @weakify(self);
+    [self sl_startRequestAction:action Sucess:^(SLLiveStopModel * model) {
+        @strongify(self);
+        [self updateValue:model];
+    } FaildBlock:^(NSError *error) {
+        
+    }];
+}
+
 @end
