@@ -272,4 +272,15 @@
     return _bgImageView;
 }
 
+-(UIVisualEffectView*)effectView
+{
+    if (!_effectView) {
+        UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+        _effectView = [[UIVisualEffectView alloc] initWithEffect:effect];
+        _effectView.frame = self.bounds;
+        
+    }
+    return _effectView;
+}
+
 @end
