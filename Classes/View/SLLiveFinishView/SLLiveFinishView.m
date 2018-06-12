@@ -160,13 +160,13 @@
 
 -(void)setLiveListModel:(SLLiveListModel*)model
 {
-    [self.bgImageView sd_setImageWithURL:[NSURL URLWithString:model.master.large_avatar]];
-    
-    self.nickLabel.text = [NSString stringWithFormat:@"%@",model.master.nickname];
-    [self.nickLabel sizeToFit];
-    self.nickLabel.mj_x =  (KScreenWidth/2-self.nickLabel.width/2);
-    [self.avatarView setRoundStyle:YES imageUrl:model.master.avatar imageHeight:40 vip:NO attestation:NO];
-    self.titleLabel.text = @"直播结束";
+//    [self.bgImageView sd_setImageWithURL:[NSURL URLWithString:model.master.large_avatar]];
+//    
+//    self.nickLabel.text = [NSString stringWithFormat:@"%@",model.master.nickname];
+//    [self.nickLabel sizeToFit];
+//    self.nickLabel.mj_x =  (KScreenWidth/2-self.nickLabel.width/2);
+//    [self.avatarView setRoundStyle:YES imageUrl:model.master.avatar imageHeight:40 vip:NO attestation:NO];
+//    self.titleLabel.text = @"直播结束";
 }
 
 -(void)initData:(SLLiveFinishType)reason
