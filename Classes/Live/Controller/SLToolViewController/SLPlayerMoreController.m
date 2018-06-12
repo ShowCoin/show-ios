@@ -168,10 +168,6 @@ static dispatch_once_t onceToken;
     return self.toolY - 8 - self.window.mj_h;
 }
 
-- (CGFloat)toolY {
-    return KScreenHeight - kSLToolViewH  - kMargin10 - (__IphoneX__ ? 32 : 0);
-}
-
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [SLPlayerMoreController dismiss];
 }
