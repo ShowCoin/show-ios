@@ -230,4 +230,17 @@
     }];
 }
 
+-(void)deleteLive:(UIButton *)sender
+{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"确定删除本次回放？" message:nil preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+    UIAlertAction *sure = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self deleteLiveVideo];
+    }];
+    [alert addAction:cancel];
+    [alert addAction:sure];
+    [self.viewController presentViewController:alert animated:YES completion:nil];
+}
+
+
 @end
