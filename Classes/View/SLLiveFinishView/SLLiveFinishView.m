@@ -131,7 +131,50 @@
          total:(NSString*)total
 {
     
+    NSString * string = [NSString stringWithFormat:@"第%@/%@",rank,total];
+    if (IsStrEmpty(string)) {
+        return;
+    }
     
+     NSMutableAttributedString * mutableAttriStr = [[NSMutableAttributedString alloc] initWithString:string];
+    
+    NSDictionary * attris = @{NSForegroundColorAttributeName:[UIColor yellowColor],NSBackgroundColorAttributeName:[UIColor clearColor],NSFontAttributeName: [UIFont boldSystemFontOfSize:30*WScale]};
+    [mutableAttriStr setAttributes:attris range:NSMakeRange(0,1)];
+    
+    NSDictionary * attris1 = @{NSForegroundColorAttributeName:[UIColor yellowColor],NSBackgroundColorAttributeName:[UIColor clearColor],NSFontAttributeName: Font_Trebuchet(40*WScale)};
+    [mutableAttriStr setAttributes:attris1 range:NSMakeRange(1,rank.length)];
+    
+    NSDictionary * attris2 = @{NSForegroundColorAttributeName:[UIColor whiteColor],NSBackgroundColorAttributeName:[UIColor clearColor],NSFontAttributeName:[UIFont boldSystemFontOfSize:30*WScale]};
+    [mutableAttriStr setAttributes:attris2 range:NSMakeRange(rank.length+1,1)];
+    self.rankLabel.attributedText = mutableAttriStr;
+}
+
+-(void)setFinishModel:(SLFinishModel*)model
+{
+    self.cnyitem.value = [NSString stringWithFormat:@"%.2f",model.cny];
+    self.watchesItem.value =[NSString stringWithFormat:@"%ld",model.viewed];
+    self.receiveItem.value = [NSString stringWithFormat:@"%ld",(long)model.receive];
+    self.titleLabel.text = [NSString stringWithFormat:@"%@",model.gradeTitle];
+    [self setPara:[NSString stringWithFormat:@"%@",model.gradeDuan]];
+}
+
+-(void)setLiveListModel:(SLLiveListModel*)model
+{
+    [self.bgImageView sd_setImageWithURL:[NSURL URLWithString:model.master.large_avatar]];
+    
+    self.nickLabel.text = [NSString stringWithFormat:@"%@",model.master.nickname];
+    [self.nickLabel sizeToFit];
+    self.nickLabel.mj_x =  (KScreenWidth/2-self.nickLabel.width/2);
+    [self.avatarView setRoundStyle:YES imageUrl:model.master.avatar imageHeight:40 vip:NO attestation:NO];
+    self.titleLabel.text = @"直播结束";
+}
+
+-(void)initData:(SLLiveFinishType)reason
+{
+    
+    [self.bgImageView sd_setImageWithURL:[NSURL URLWithString:[AccountModel shared].large_avatar]];
+    self.nickLabel.text = [NSString stringWithFormat:@"%@",[AccountModel shared].nickname];
+
 }
 
 @end

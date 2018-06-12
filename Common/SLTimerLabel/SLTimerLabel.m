@@ -37,6 +37,7 @@
     return [self initWithLabel:nil andTimerType:theType];
 }
 
+//根据事件类型初始化label
 - (id)initWithLabel:(UILabel *)theLabel andTimerType:(SLTimerLabelType)theType
 {
     self = [super init];
@@ -49,7 +50,7 @@
     return self;
 }
 
-
+//初始化label
 - (id)initWithLabel:(UILabel*)theLabel{
     return [self initWithLabel:theLabel andTimerType:kDefaultTimerType];
 }
