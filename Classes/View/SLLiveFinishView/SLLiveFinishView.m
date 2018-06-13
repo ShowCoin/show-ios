@@ -323,4 +323,16 @@
     return _line1;
 }
 
+-(SLLiveFinishItem*)cnyitem
+{
+    if (!_cnyitem) {
+        _cnyitem = [[SLLiveFinishItem alloc] initWithFrame:CGRectMake(KScreenWidth/4, CGRectGetMaxY(self.line1.frame)+85,KScreenWidth/2,45)];
+        _cnyitem.title = @"CNY";
+        _cnyitem.valueColor =[UIColor whiteColor];
+        [_cnyitem setTitleFont:[UIFont systemFontOfSize:10]];
+        [_cnyitem setValueFont:[UIFont systemFontOfSize:25]];
+    }
+    return _cnyitem;
+}
+
 @end
