@@ -291,5 +291,17 @@
     return _titleLabel;
 }
 
+-(SLShadowLabel*)nickLabel
+{
+    if (!_nickLabel) {
+        CGFloat width= KScreenWidth-100, height = 25;
+        CGFloat x =50, y = CGRectGetMaxY(self.avatarView.frame) + 10;
+        _nickLabel = [[SLShadowLabel alloc] initWithFrame:CGRectMake(x, y, width, height)];
+        _nickLabel.textColor = [UIColor whiteColor];
+        _nickLabel.font       = [UIFont boldSystemFontOfSize:16];
+        _nickLabel.textAlignment = NSTextAlignmentCenter;
+    }
+    return _nickLabel;
+}
 
 @end
