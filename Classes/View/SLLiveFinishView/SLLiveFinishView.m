@@ -347,4 +347,16 @@
     return _watchesItem;
 }
 
+-(SLLiveFinishItem*)receiveItem
+{
+    if (!_receiveItem) {
+        _receiveItem =[[SLLiveFinishItem alloc] initWithFrame:CGRectMake(32,CGRectGetMaxY(self.line1.frame)+10,KScreenWidth-64,70)];
+        [_receiveItem setTitleFont:[UIFont systemFontOfSize:14]];
+        [_receiveItem setValueFont:[UIFont systemFontOfSize:45]];
+        _receiveItem.title = @"本场直播秀币收入";
+        _receiveItem.valueColor = [UIColor whiteColor];
+    }
+    return _receiveItem;
+}
+
 @end
