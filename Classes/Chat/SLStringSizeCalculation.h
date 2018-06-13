@@ -7,9 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+
 @class YYTextLayout;
 
 @interface SLStringSizeCalculation : NSObject
+
 /// 计算attributeString size
 + (CGSize)sizeOfLabelWithAttributedString:(NSAttributedString *)attributedString baseOnSize:(CGSize)baseOnSize;
 /// 计算label size

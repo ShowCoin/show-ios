@@ -9,6 +9,15 @@
 #import <Foundation/Foundation.h>
 
 @interface SLPureColorImageGenerate : NSObject
+
+/**
+ return a custom radius UIImage
+
+ @param color background color
+ @param size image size
+ @param radius image radius
+ @return UIImage
+ */
 + (UIImage *)getImageWithColor:(UIColor *)color andSize:(CGSize)size corner:(CGFloat)radius;
 
 @end
