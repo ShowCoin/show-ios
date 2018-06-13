@@ -10,9 +10,11 @@
 #import "SLToplistSubView.h"
 
 @interface SLTopListViewController ()<UIScrollViewDelegate>
-@property (nonatomic,strong)UIScrollView * bkscrollerView;
-@property (nonatomic,strong)SLToplistSubView * contributionView;//贡献榜
-@property (nonatomic,strong)SLToplistSubView * encourageView;//激励榜
+
+@property (nonatomic, strong) UIScrollView * bkscrollerView;
+@property (nonatomic, strong) SLToplistSubView * contributionView;//贡献榜
+@property (nonatomic, strong) SLToplistSubView * encourageView;//激励榜
+
 @end
 
 @implementation SLTopListViewController
@@ -21,11 +23,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self.navigationBarView setNavigationColor:NavigationColorBlack];
-    
-    
-    
 }
--(void)setUid:(NSString *)uid
+
+- (void)setUid:(NSString *)uid
 {
     _uid = uid;
     UIButton * contributionBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -94,7 +94,7 @@
     return _bkscrollerView;
 }
 
--(SLToplistSubView *)contributionView
+- (SLToplistSubView *)contributionView
 {
     if (!_contributionView) {
         _contributionView = [SLToplistSubView authViewWithFrame:CGRectMake(kMainScreenWidth, 0, kMainScreenWidth, kMainScreenHeight - KNaviBarHeight) andUid:self.uid];
@@ -102,15 +102,16 @@
     }
         return _contributionView;
 }
--(SLToplistSubView *)encourageView
+
+- (SLToplistSubView *)encourageView
 {
     if (!_encourageView) {
         _encourageView = [SLToplistSubView authViewWithFrame:CGRectMake(0, 0, kMainScreenWidth, kMainScreenHeight - KNaviBarHeight) andUid:self.uid];
         _encourageView.viewType = TopViewType_Encourage;
-
     }
     return _encourageView;
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
