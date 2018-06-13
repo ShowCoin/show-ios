@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+
 typedef NS_ENUM(NSInteger, SLRCInputMessageInputStateType) {
     SLRCInputMessageInputStateTypeNone,//没有，即刻 停止
     SLRCInputMessageInputStateTypeVoice,
@@ -18,6 +19,7 @@ typedef void (^MessageSendSuccessBlock)(long messageId);
 typedef void (^MessageSendErrorBlock)(RCErrorCode nErrorCode, long messageId);
 
 @interface SLChatBusiness : NSObject
+
 @property (copy, nonatomic) NSString *targetUid;
 
 /**
@@ -65,7 +67,6 @@ typedef void (^MessageSendErrorBlock)(RCErrorCode nErrorCode, long messageId);
 - (BOOL)deleteMessageWithId:(long)messageId;
 - (void)recallRCMessage:(RCMessage *)rcMessage success:(void (^)(long messageId))successBlock error:(void(^)(RCErrorCode errorcode))errorBlock;
 
-
 // 草稿箱
 - (NSString *)getTextDraft;
 - (void)saveTextToDraft:(NSString *)text;
@@ -73,4 +74,5 @@ typedef void (^MessageSendErrorBlock)(RCErrorCode nErrorCode, long messageId);
 // 未读状态
 - (BOOL)clearConversationMessageUnreadState;
 - (NSInteger)getUnreadMessageCount;
+
 @end
