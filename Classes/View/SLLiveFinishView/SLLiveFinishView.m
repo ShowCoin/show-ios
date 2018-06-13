@@ -265,10 +265,10 @@
 
 -(UIImageView*)bgImageView
 {
-    if (!_bgImageView) {
-        _bgImageView = [[UIImageView alloc]initWithFrame:self.bounds];
-        
-    }
+//    if (!_bgImageView) {
+//        _bgImageView = [[UIImageView alloc]initWithFrame:self.bounds];
+//        
+//    }
     return _bgImageView;
 }
 
@@ -278,7 +278,7 @@
 //        UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
 //        _effectView = [[UIVisualEffectView alloc] initWithEffect:effect];
 //        _effectView.frame = self.bounds;
-//        
+//
 //    }
     return _effectView;
 }
