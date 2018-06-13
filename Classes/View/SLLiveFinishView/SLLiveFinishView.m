@@ -160,13 +160,13 @@
 
 -(void)setLiveListModel:(SLLiveListModel*)model
 {
-    [self.bgImageView sd_setImageWithURL:[NSURL URLWithString:model.master.large_avatar]];
-    
-    self.nickLabel.text = [NSString stringWithFormat:@"%@",model.master.nickname];
-    [self.nickLabel sizeToFit];
-    self.nickLabel.mj_x =  (KScreenWidth/2-self.nickLabel.width/2);
-    [self.avatarView setRoundStyle:YES imageUrl:model.master.avatar imageHeight:40 vip:NO attestation:NO];
-    self.titleLabel.text = @"直播结束";
+//    [self.bgImageView sd_setImageWithURL:[NSURL URLWithString:model.master.large_avatar]];
+//
+//    self.nickLabel.text = [NSString stringWithFormat:@"%@",model.master.nickname];
+//    [self.nickLabel sizeToFit];
+//    self.nickLabel.mj_x =  (KScreenWidth/2-self.nickLabel.width/2);
+//    [self.avatarView setRoundStyle:YES imageUrl:model.master.avatar imageHeight:40 vip:NO attestation:NO];
+//    self.titleLabel.text = @"直播结束";
 }
 
 -(void)initData:(SLLiveFinishType)reason
@@ -175,6 +175,112 @@
     [self.bgImageView sd_setImageWithURL:[NSURL URLWithString:[AccountModel shared].large_avatar]];
     self.nickLabel.text = [NSString stringWithFormat:@"%@",[AccountModel shared].nickname];
 
+    [self.nickLabel sizeToFit];
+    self.nickLabel.mj_x =  (KScreenWidth/2-self.nickLabel.width/2);
+    [self.avatarView setRoundStyle:YES imageUrl:[AccountModel shared].avatar imageHeight:40 vip:NO attestation:NO];
+    
+    switch (reason) {
+        case SLLiveFinishTypeNormal:
+        {
+            self.titleLabel.text = @"直播结束";
+        }
+            break;
+        case SLLiveFinishTypeConnectFail:
+        {
+            self.titleLabel.text = @"断开直播";
+        }
+            break;
+        case SLLiveFinishTypeOperating:
+        {
+            self.titleLabel.text = @"关闭直播";
+        }
+            break;
+        case SLLiveFinishTypeLiveOpenFail:
+        {
+            self.titleLabel.text = @"直播失败";
+        }
+            break;
+        default:
+            break;
+    }
+}
+
+-(void)updateValue:(SLLiveStopModel*)model
+{
+    self.watchesItem.value =[NSString stringWithFormat:@"%ld",model.viewed];
+    self.receiveItem.value = [NSString stringWithFormat:@"%ld",(long)model.receive];
+    self.cnyitem.value = [NSString stringWithFormat:@"%.2f",model.cny];
+    
+    
+    self.titleLabel.text = [NSString stringWithFormat:@"%@",model.gradeTitle];
+    [self setPara:[NSString stringWithFormat:@"%@",model.gradeDuan]];
+}
+
+-(void)requestData:(SLLiveStartModel*)model
+{
+    SLLiveStopAction * action = [SLLiveStopAction action];
+    action.liveId = model.liveId;
+    action.modelClass = SLLiveStopModel.self;
+    @weakify(self);
+    [self sl_startRequestAction:action Sucess:^(SLLiveStopModel * model) {
+        @strongify(self);
+        [self updateValue:model];
+    } FaildBlock:^(NSError *error) {
+        
+    }];
+}
+
+-(void)deleteLive:(UIButton *)sender
+{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"确定删除本次回放？" message:nil preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+    UIAlertAction *sure = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self deleteLiveVideo];
+    }];
+    [alert addAction:cancel];
+    [alert addAction:sure];
+    [self.viewController presentViewController:alert animated:YES completion:nil];
+}
+
+- (void)deleteLiveVideo {
+    self.deleteButton.userInteractionEnabled = NO;
+    NSLog(@"[gx] 删除接口liveid %@",self.liveid);
+    if (self.action) {
+        [self.action cancel];
+        self.action = nil;
+    }
+    self.action = [SLLiveDelete action];
+    self.action.liveId = self.liveid;
+    self.action.modelClass = SLLiveStopModel.self;
+    @weakify(self);
+    [self sl_startRequestAction:self.action Sucess:^(id  result) {
+        @strongify(self);
+        [self.deleteButton setTitle:@"已删除" forState:UIControlStateNormal];
+        [self.backButton sendActionsForControlEvents:UIControlEventTouchUpInside];
+    } FaildBlock:^(NSError *error) {
+        self.deleteButton.userInteractionEnabled = YES;
+        [HDHud showMessageInView:self title:@"删除失败"];
+    }];
+}
+
+-(UIImageView*)bgImageView
+{
+    if (!_bgImageView) {
+        _bgImageView = [[UIImageView alloc]initWithFrame:self.bounds];
+        
+    }
+    return _bgImageView;
+}
+
+-(UIVisualEffectView*)effectView
+{
+//    if (!_effectView) {
+//        UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+//        _effectView = [[UIVisualEffectView alloc] initWithEffect:effect];
+//        _effectView.frame = self.bounds;
+//        
+//    }
+    return _effectView;
 }
 
 @end
