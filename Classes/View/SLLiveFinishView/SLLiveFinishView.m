@@ -253,21 +253,21 @@
     self.action.liveId = self.liveid;
     self.action.modelClass = SLLiveStopModel.self;
     @weakify(self);
-    [self sl_startRequestAction:self.action Sucess:^(id  result) {
-        @strongify(self);
-        [self.deleteButton setTitle:@"已删除" forState:UIControlStateNormal];
-        [self.backButton sendActionsForControlEvents:UIControlEventTouchUpInside];
-    } FaildBlock:^(NSError *error) {
-        self.deleteButton.userInteractionEnabled = YES;
-        [HDHud showMessageInView:self title:@"删除失败"];
-    }];
+//    [self sl_startRequestAction:self.action Sucess:^(id  result) {
+//        @strongify(self);
+//        [self.deleteButton setTitle:@"已删除" forState:UIControlStateNormal];
+//        [self.backButton sendActionsForControlEvents:UIControlEventTouchUpInside];
+//    } FaildBlock:^(NSError *error) {
+//        self.deleteButton.userInteractionEnabled = YES;
+//        [HDHud showMessageInView:self title:@"删除失败"];
+//    }];
 }
 
 -(UIImageView*)bgImageView
 {
 //    if (!_bgImageView) {
 //        _bgImageView = [[UIImageView alloc]initWithFrame:self.bounds];
-//        
+//
 //    }
     return _bgImageView;
 }
