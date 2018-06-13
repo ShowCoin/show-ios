@@ -312,4 +312,15 @@
     return _avatarView;
 }
 
+-(UIView*)line1
+{
+    if (!_line1) {
+        
+        CGFloat y = (KScreenHeight>667)?330:300;
+        _line1 = [[UIView alloc]initWithFrame:CGRectMake(32, y, KScreenWidth-64, 1)];
+        _line1.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.5];
+    }
+    return _line1;
+}
+
 @end
