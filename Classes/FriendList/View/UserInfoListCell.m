@@ -14,7 +14,8 @@
     [super awakeFromNib];
     // Initialization code
 }
--(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
+
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         [self.contentView addSubview:self.name];
         [self.contentView addSubview:self.text];
@@ -24,7 +25,8 @@
     }
     return self ;
 }
--(UILabel *)name
+
+- (UILabel *)name
 {
     if (!_name) {
         _name = [[UILabel alloc]initWithFrame:CGRectMake(15, 25, 80, 15)];
@@ -35,7 +37,7 @@
     return _name;
 }
 
--(UILabel *)text
+- (UILabel *)text
 {
     if (!_text) {
         _text = [[UILabel alloc]initWithFrame:CGRectMake(15, 25, 270, 15)];
@@ -47,7 +49,7 @@
     return _text;
 }
 
--(UIImageView *)arrow
+- (UIImageView *)arrow
 {
     if (!_arrow) {
         _arrow = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"userhome_arrow_right"]];
@@ -56,7 +58,8 @@
     }
     return _arrow;
 }
--(SLHeadPortrait *)avatar
+
+- (SLHeadPortrait *)avatar
 {
     if (!_avatar) {
         _avatar = [[SLHeadPortrait alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
@@ -66,7 +69,8 @@
     }
     return _avatar;
 }
--(void)setCelltype:(CellType)celltype{
+
+- (void)setCelltype:(CellType)celltype{
     if (celltype == firstcellType) {
         self.name.centerY = self.text.centerY = self.arrow.centerY = self.avatar.centerY = 30;
         self.text.hidden = YES;
@@ -78,6 +82,7 @@
     }
     
 }
+
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 
