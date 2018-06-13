@@ -274,13 +274,22 @@
 
 -(UIVisualEffectView*)effectView
 {
-//    if (!_effectView) {
-//        UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
-//        _effectView = [[UIVisualEffectView alloc] initWithEffect:effect];
-//        _effectView.frame = self.bounds;
-//
-//    }
     return _effectView;
 }
+
+-(SLShadowLabel*)titleLabel
+{
+    if (!_titleLabel) {
+        CGFloat width =KScreenWidth-100, height = 25;
+        CGFloat x = 50, y = KNaviBarHeight;
+        _titleLabel = [[SLShadowLabel alloc] initWithFrame:CGRectMake(x, y, width, height)];
+        _titleLabel.textColor = [UIColor whiteColor];
+        _titleLabel.font       = [UIFont boldSystemFontOfSize:22];
+        _titleLabel.textAlignment = NSTextAlignmentCenter;
+        
+    }
+    return _titleLabel;
+}
+
 
 @end
