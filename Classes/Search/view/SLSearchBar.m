@@ -10,11 +10,14 @@
 #import "SLSearchTextField.h"
 
 NS_ASSUME_NONNULL_BEGIN
+
 static const CGFloat SLSearchBarHeight = 44;
 static const CGFloat SLTextFieldHeight = 28;
+
 #define SLSearchBarMargin 15*Proportion375
 
 @interface SLSearchBar ()<UITextFieldDelegate>
+
 /** 1.输入框 */
 @property (nonatomic, strong) SLSearchTextField *textField;
 /** 2.取消按钮 */
@@ -25,8 +28,11 @@ static const CGFloat SLTextFieldHeight = 28;
 @property (nonatomic, strong) UIButton *buttonCenter;
 
 @end
+
 NS_ASSUME_NONNULL_END
+
 @implementation SLSearchBar
+
 #pragma mark - --- 1. init 视图初始化 ---
 - (instancetype)init
 {
@@ -51,7 +57,8 @@ NS_ASSUME_NONNULL_END
     }
     return self;
 }
--(id)initWithFrame:(CGRect)frame searchHeight:(NSInteger)searchHeight backColor:(UIColor *)backColor hiddenCancelbutton:(NSInteger)hiddenCancelbutton
+
+- (id)initWithFrame:(CGRect)frame searchHeight:(NSInteger)searchHeight backColor:(UIColor *)backColor hiddenCancelbutton:(NSInteger)hiddenCancelbutton
 {
     if (self = [super initWithFrame:frame]) {
         _hiddenCancelbutton = hiddenCancelbutton;
@@ -88,6 +95,7 @@ NS_ASSUME_NONNULL_END
     [self.textField setTintColor:kthemeBlackColor];
     [_buttonCenter setTitleColor:_searchHeight>0?RGBACOLOR(255, 255, 255, .40):kThemeWhiteColor forState:UIControlStateNormal];
 }
+
 #pragma mark - --- 2. delegate 视图委托 ---
 #pragma mark - UITextField delegate
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
@@ -118,6 +126,7 @@ NS_ASSUME_NONNULL_END
     }
     return YES;
 }
+
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
     if (self.delegate && [self.delegate respondsToSelector:@selector(searchBarTextDidBeginEditing:)])
@@ -125,6 +134,7 @@ NS_ASSUME_NONNULL_END
         [self.delegate searchBarTextDidBeginEditing:self];
     }
 }
+
 - (BOOL)textFieldShouldEndEditing:(UITextField *)textField
 {
     if (self.delegate && [self.delegate respondsToSelector:@selector(searchBarShouldEndEditing:)])
@@ -133,6 +143,7 @@ NS_ASSUME_NONNULL_END
     }
     return YES;
 }
+
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
     if (textField.text.length>0) {
@@ -165,6 +176,7 @@ NS_ASSUME_NONNULL_END
     }
     
 }
+
 -(void)textFieldDidChange:(UITextField *)textField
 {
     
@@ -179,6 +191,7 @@ NS_ASSUME_NONNULL_END
         [self.delegate searchBar:self textDidChange:textField.text];
     }
 }
+
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
     if (self.delegate && [self.delegate respondsToSelector:@selector(searchBar:shouldChangeTextInRange:replacementText:)])
@@ -187,6 +200,7 @@ NS_ASSUME_NONNULL_END
     }
     return YES;
 }
+
 - (BOOL)textFieldShouldClear:(UITextField *)textField
 {
     if (self.delegate && [self.delegate respondsToSelector:@selector(searchBar:textDidChange:)])
@@ -205,6 +219,7 @@ NS_ASSUME_NONNULL_END
     }
     return YES;
 }
+
 #pragma mark - --- 3. event response 事件相应 ---
 -(void)cancelButtonTouched
 {
@@ -230,6 +245,7 @@ NS_ASSUME_NONNULL_END
         [self.delegate searchBarCancelButtonClicked:self];
     }
 }
+
 #pragma mark - --- 4. private methods 私有方法 ---
 - (BOOL)becomeFirstResponder
 {
@@ -241,6 +257,7 @@ NS_ASSUME_NONNULL_END
     [super resignFirstResponder];
     return [self.textField resignFirstResponder];
 }
+
 #pragma mark - --- 5. setters 属性 ---
 - (void)setPlaceholder:(NSString *)placeholder
 {
