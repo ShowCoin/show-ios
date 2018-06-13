@@ -245,7 +245,7 @@
     return self;
 }
 
--(void)setIsMe:(BOOL)isMe
+- (void)setIsMe:(BOOL)isMe
 {
     _isMe = isMe;
     if (!isMe) {
@@ -283,6 +283,7 @@
         self.leftBtn.hidden = YES;
     }
 }
+
 //刷新ui
 - (void)userinfoChange:(NSNotification *)notif
 {
@@ -292,7 +293,8 @@
     _sexImg .image=[AccountUserInfoModel.gender  isEqualToString:@"1"]?[UIImage imageNamed:@"userhome_sex_man"]:[UIImage imageNamed:@"userhome_sex_women"];
 
 }
--(UILabel *)navLab
+
+- (UILabel *)navLab
 {
     if (!_navLab) {
         _navLab = [UILabel labelWithText:@"" textColor:kthemeBlackColor font:Font_Regular(16) backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentCenter];
@@ -300,7 +302,7 @@
     return _navLab;
 }
 
--(UIButton *)leftBtn
+- (UIButton *)leftBtn
 {
     if (!_leftBtn) {
         _leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -315,7 +317,8 @@
     }
     return _leftBtn;
 }
--(UIButton *)listBtn
+
+- (UIButton *)listBtn
 {
     if (!_listBtn) {
         _listBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -333,7 +336,8 @@
     }
     return _listBtn;
 }
--(UIButton *)giftStoreBtn
+
+- (UIButton *)giftStoreBtn
 {
     if (!_giftStoreBtn) {
         _giftStoreBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -351,6 +355,7 @@
     }
     return _giftStoreBtn;
 }
+
 - (SLHeadPortrait *)headPortrait
 {
     if (!_headPortrait) {
@@ -360,7 +365,8 @@
     }
     return _headPortrait;
 }
--(UIButton *)settingBtn
+
+- (UIButton *)settingBtn
 {
     if (!_settingBtn) {
         _settingBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -377,7 +383,7 @@
     return _settingBtn;
 }
 
--(UILabel *)nickLab
+- (UILabel *)nickLab
 {
     if (!_nickLab) {
         _nickLab = [UILabel labelWithText:AccountUserInfoModel.nickname textColor:kThemeWhiteColor font:Font_Semibold(24*Proportion375) backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentCenter];
@@ -389,7 +395,8 @@
     }
     return _nickLab;
 }
--(SLLevelMarkView *)masterLevel
+
+- (SLLevelMarkView *)masterLevel
 {
     if (!_masterLevel) {
         _masterLevel = [[SLLevelMarkView alloc]initWithFrame:CGRectMake(0, 0, 30*WScale, 15*WScale) withType:LevelType_Host];
@@ -398,7 +405,8 @@
     }
     return _masterLevel;
 }
--(SLLevelMarkView *)showLevel
+
+- (SLLevelMarkView *)showLevel
 {
     if (!_showLevel) {
         _showLevel = [[SLLevelMarkView alloc]initWithFrame:CGRectMake(0, 0, 30*WScale, 15*WScale) withType:LevelType_ShowCoin];
@@ -408,7 +416,8 @@
     }
     return _showLevel;
 }
--(UIView *)sexbg
+
+- (UIView *)sexbg
 {
     if (!_sexbg) {
         _sexbg = [[UIView alloc] init];
@@ -422,7 +431,8 @@
     }
     return _sexbg;
 }
--(UIImageView *)sexImg
+
+- (UIImageView *)sexImg
 {
     if (!_sexImg) {
         _sexImg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"userhome_sex_man"]];
@@ -430,7 +440,8 @@
     }
     return _sexImg;
 }
--(UILabel *)sexlab
+
+- (UILabel *)sexlab
 {
     if (!_sexlab) {
         _sexlab = [UILabel labelWithText:@"22岁" textColor:kThemeWhiteColor font:Font_Medium(10*Proportion375) backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentCenter];
@@ -439,7 +450,7 @@
     return _sexlab;
 }
 
--(UILabel*)idLab
+- (UILabel*)idLab
 {
     if (!_idLab) {
         _idLab = [UILabel labelWithText:[NSString stringWithFormat:@"%@",AccountUserInfoModel.popularNo] textColor:kThemeWhiteColor font:Font_Regular(16*Proportion375) backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentLeft];
@@ -464,7 +475,7 @@
 //    return _idPreLab;
 //}
 
--(UILabel*)cityLab
+- (UILabel*)cityLab
 {
     if (!_cityLab) {
         _cityLab = [UILabel labelWithText:AccountUserInfoModel.city textColor:kThemeWhiteColor font:Font_Semibold(10*Proportion375) backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentCenter];
@@ -474,7 +485,8 @@
     }
     return _cityLab;
 }
--(UILabel*)constellationLab
+
+- (UILabel*)constellationLab
 {
     if (!_constellationLab) {
         _constellationLab = [UILabel labelWithText:AccountUserInfoModel.constellation textColor:kThemeWhiteColor font:Font_Semibold(10*Proportion375) backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentCenter];
@@ -485,7 +497,8 @@
     }
     return _constellationLab;
 }
--(UILabel *)wordsLab
+
+- (UILabel *)wordsLab
 {
     if (!_wordsLab) {
         _wordsLab = [UILabel labelWithText:@"" textColor:kThemeWhiteColor font:Font_Medium(14*Proportion375) backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentCenter];
@@ -494,7 +507,8 @@
     }
     return _wordsLab;
 }
--(UIImageView *)headImgView
+
+- (UIImageView *)headImgView
 {
     if (!_headImgView) {
         _headImgView = [[UIImageView alloc] init];
@@ -505,7 +519,8 @@
     }
     return _headImgView;
 }
--(UIView *)effColorView
+
+- (UIView *)effColorView
 {
     if (!_effColorView) {
         _effColorView  = [[UIView alloc] init];
@@ -513,7 +528,8 @@
     }
     return _effColorView;
 }
--(UIVisualEffectView *)effectview
+
+- (UIVisualEffectView *)effectview
 {
     if (!_effectview) {
         
@@ -525,7 +541,7 @@
     return _effectview;
 }
 
--(UIView *)bottomWhiteView
+- (UIView *)bottomWhiteView
 {
     if (!_bottomWhiteView) {
         _bottomWhiteView = [[UIView alloc] init];
@@ -534,7 +550,8 @@
     }
     return _bottomWhiteView;
 }
--(UIButton *)fansBtn
+
+- (UIButton *)fansBtn
 {
     if (!_fansBtn) {
         _fansBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -569,7 +586,7 @@
     return _fansBtn;
 }
 
--(UIButton *)concerBtn
+- (UIButton *)concerBtn
 {
     if (!_concerBtn) {
         _concerBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -609,7 +626,8 @@
     }
     return _concerBtn;
 }
--(UIButton *)walletBtn
+
+- (UIButton *)walletBtn
 {
     if (!_walletBtn) {
         _walletBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -647,7 +665,8 @@
     }
     return _walletBtn;
 }
--(UIButton *)toConcerBtn
+
+- (UIButton *)toConcerBtn
 {
     if (!_toConcerBtn) {
         _toConcerBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -665,7 +684,8 @@
     }
     return _toConcerBtn;
 }
--(UIButton *)tosendMessageBtn
+
+- (UIButton *)tosendMessageBtn
 {
     if (!_tosendMessageBtn) {
         _tosendMessageBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -687,7 +707,8 @@
     }
     return _tosendMessageBtn;
 }
--(UIButton *)shareBtn
+
+- (UIButton *)shareBtn
 {
     if (!_shareBtn) {
         _shareBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -710,7 +731,8 @@
     }
     return _shareBtn;
 }
--(UIButton *)worksBtn
+
+- (UIButton *)worksBtn
 {
     if (!_worksBtn) {
         _worksBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -732,7 +754,8 @@
     }
     return _worksBtn;
 }
--(UIButton *)likesBtn
+
+- (UIButton *)likesBtn
 {
     if (!_likesBtn) {
         _likesBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -747,7 +770,8 @@
     }
     return _likesBtn;
 }
--(UIView *)bottomAnimationLine
+
+- (UIView *)bottomAnimationLine
 {
     if (!_bottomAnimationLine) {
         _bottomAnimationLine = [[UIView alloc] init];
@@ -755,9 +779,10 @@
     }
     return _bottomAnimationLine;
 }
+
 #pragma mark---------method-----------
 
--(void)setLabelSpace:(UILabel*)label withValue:(NSString*)str withFont:(UIFont*)font {
+- (void)setLabelSpace:(UILabel*)label withValue:(NSString*)str withFont:(UIFont*)font {
     if (!str.length) {
         return;
     }
@@ -780,7 +805,7 @@
 }
 
 #pragma mark- datas
--(void)setUserModel:(ShowUserModel *)userModel
+- (void)setUserModel:(ShowUserModel *)userModel
 {
     _userModel = userModel;
     @weakify(self);
@@ -822,7 +847,7 @@
 
 }
 
--(void)setAttributeBtnTextWithButton:(UIButton *)sender andStr:(NSString *)str
+- (void)setAttributeBtnTextWithButton:(UIButton *)sender andStr:(NSString *)str
 {
     NSMutableAttributedString * firstPart = [[NSMutableAttributedString alloc] initWithString:@"0"];
     if (sender == self.fansBtn) {
@@ -891,7 +916,7 @@
     }
 }
 
--(void)concerAction{
+- (void)concerAction{
     SLFollowUserAction *action  = [SLFollowUserAction action];
     
     action.to_uid = self.userModel.uid;
@@ -928,6 +953,7 @@
 
     }];
 }
+
 - (void)headPortraitClickAuthor
 {
     if (_isMe) {
@@ -948,4 +974,5 @@
         [PageMgr pushToUserCenterControllerWithUserModel:self.userModel viewcontroller:self.Controller?:(BaseViewController *)self.viewController];
     }
 }
+
 @end

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+
 typedef NS_ENUM(NSInteger, SLMessageBlankViewType) {
     SLMessageBlankViewTypeMessageListTouristMode,
     SLMessageBlankViewTypeMessageListSearchNotFound,
@@ -16,6 +17,7 @@ typedef NS_ENUM(NSInteger, SLMessageBlankViewType) {
 };
 
 @interface SLBlankView : UIView
+
 //设置类型
 - (void)setType:(SLMessageBlankViewType)type;
 //点击登录事件

@@ -7,22 +7,25 @@
 //
 
 #import "SLFriendListCell.h"
+
 static CGFloat lableMargin = 14;
 
 @interface SLFriendListCell()<HeadPortraitDelegate>
 
 @property (nonatomic, assign) BOOL isFollow;
-@property(nonatomic,strong)UIImageView * vipImageView;
-@property(nonatomic,strong)UILabel     * nickNameLabel;
-@property(nonatomic,strong)UILabel     * lblID;
-@property(nonatomic,strong)UIButton    * btnOperation;
-@property(nonatomic,strong)UIImageView * sexImageView;
-@property(nonatomic,strong)UILabel * ageLabel;
-@property(nonatomic,strong)NSArray *  randomArr;
-@property(nonatomic,strong)SLHeadPortrait     * headPortrait;
+@property (nonatomic, strong) UIImageView * vipImageView;
+@property (nonatomic, strong) UILabel     * nickNameLabel;
+@property (nonatomic, strong) UILabel     * lblID;
+@property (nonatomic, strong) UIButton    * btnOperation;
+@property (nonatomic, strong) UIImageView * sexImageView;
+@property (nonatomic, strong) UILabel * ageLabel;
+@property (nonatomic, strong) NSArray *  randomArr;
+@property (nonatomic, strong) SLHeadPortrait     * headPortrait;
 @property (assign, nonatomic) BOOL isSeparatorLineFull;
 @property (strong, nonatomic) UIView *line;
+
 @end
+
 @implementation SLFriendListCell
 
 - (void)awakeFromNib {
@@ -35,11 +38,12 @@ static CGFloat lableMargin = 14;
     
     // Configure the view for the selected state
 }
-+(id)cellWithTableView:(UITableView*)tableView{
+
++ (id)cellWithTableView:(UITableView*)tableView{
     return [SLFriendListCell cellWithTableView:tableView separatorLineFull:YES];
 }
 //类型，是否线到头
-+(id)cellWithTableView:(UITableView*)tableView separatorLineFull:(BOOL)separatorLineFull{
++ (id)cellWithTableView:(UITableView*)tableView separatorLineFull:(BOOL)separatorLineFull{
     static NSString *CellIdentifier = @"FriendListCell";
     SLFriendListCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil)
@@ -66,7 +70,7 @@ static CGFloat lableMargin = 14;
     
     return self;
 }
--(void)setupControls{
+- (void)setupControls{
     // 66
     _headPortrait=[[SLHeadPortrait alloc]initWithFrame:CGRectMake(15, 13, 40, 40)];
     _headPortrait.delegate=self;
@@ -104,7 +108,8 @@ static CGFloat lableMargin = 14;
     [self addSubview:line];
     self.line = line;
 }
--(void)layoutSubviews{
+
+- (void)layoutSubviews{
     [super layoutSubviews];
     _lblID.frame=CGRectMake(_headPortrait.right + 10, self.height - lableMargin - 15 ,225*Proportion375,15);
     if (self.isSeparatorLineFull) {
@@ -118,7 +123,8 @@ static CGFloat lableMargin = 14;
         self.line.hidden =YES;
     }
 }
--(void)setIsAt:(BOOL)isAt
+
+- (void)setIsAt:(BOOL)isAt
 {
     _isAt = isAt;
     if (_isAt) {
@@ -131,7 +137,8 @@ static CGFloat lableMargin = 14;
         self.line.frame = CGRectMake(0, 65.5, kMainScreenWidth, 0.5);
     }
 }
--(void)setUserListModel:(SLFansModel *)userListModel
+
+- (void)setUserListModel:(SLFansModel *)userListModel
 {
     _userListModel = userListModel;
     UIColor *nickNameColor = kBlackThemetextColor;
@@ -166,7 +173,7 @@ static CGFloat lableMargin = 14;
     _lblID.text = userListModel.descriptions?[NSString stringWithFormat:@"%@",userListModel.descriptions]:@"这个人很懒,没留下任何东西";
 }
 
--(void)operationClick:(UIButton*)sender{
+- (void)operationClick:(UIButton*)sender{
     NSString * follow_state = self.userListModel.isFollowed;
     if ([follow_state integerValue]>0) {
         if (_functionDelegate && [_functionDelegate respondsToSelector:@selector(onClickChat:)]) {
@@ -198,7 +205,7 @@ static CGFloat lableMargin = 14;
 }
 
 #pragma mark HeadPortraitDelegate
--(void)headPortraitClickAuthor{
+- (void)headPortraitClickAuthor{
     if (_functionDelegate && [_functionDelegate respondsToSelector:@selector(onClickUser:)]) {
         [_functionDelegate onClickUser:self.userListModel];
     }
