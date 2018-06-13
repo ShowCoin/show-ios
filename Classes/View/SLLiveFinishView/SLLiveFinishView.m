@@ -304,4 +304,12 @@
     return _nickLabel;
 }
 
+-(SLHeadPortrait*)avatarView
+{
+    if (!_avatarView) {
+        _avatarView = [[SLHeadPortrait alloc]initWithFrame:CGRectMake(KScreenWidth/2-40,CGRectGetMaxY(self.titleLabel.frame) + 20, 80, 80)];
+    }
+    return _avatarView;
+}
+
 @end
