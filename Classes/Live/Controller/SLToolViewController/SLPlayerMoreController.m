@@ -171,8 +171,6 @@ static dispatch_once_t onceToken;
 #pragma mark - Privte
 
 /**
- tool click method
-
  @param type SLLiveToolType
  */
 - (void)toolAction:(SLLiveToolType)type {
@@ -184,7 +182,6 @@ static dispatch_once_t onceToken;
         [self postNotification:self.toolView.clearSelect];
         return;
     }
-    
 }
 
 
