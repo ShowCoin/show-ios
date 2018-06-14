@@ -62,6 +62,8 @@ static dispatch_once_t onceToken;
     [self addNotification];
 }
 
+#pragma mark - Method
+
 - (void)addNotification {
     [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(logoutAction) name:kNotificationLogout object:nil];
     [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(sl_didReceiveMessage) name:kNotify_Received_RongCloud_ConvMsg object:nil];
@@ -101,9 +103,6 @@ static dispatch_once_t onceToken;
     self.chatView.formType = SLLiveContollerTypePlayer;
     self.chatView.Controller = self.Controller;
     
-    
-    
-    
     UIWindow *window = [[UIWindow alloc] init];
     window.backgroundColor = [UIColor clearColor];
     window.frame = CGRectMake(kMargin10, KScreenHeight, w, kMessageViewH);
@@ -135,7 +134,6 @@ static dispatch_once_t onceToken;
     CGFloat h = kMessageMaxH - self.window.mj_h;
     
     [UIView animateWithDuration:0.25 delay:0 options:0 animations:^{
-        
         if (more) {
             self.window.mj_y -= h;
             self.window.mj_h += h;
