@@ -337,14 +337,6 @@
 
 -(SLLiveFinishItem*)watchesItem
 {
-    if (!_watchesItem) {
-        _watchesItem =[[SLLiveFinishItem alloc] initWithFrame:CGRectMake(KScreenWidth/2-KScreenWidth/6,CGRectGetMaxY(self.line2.frame)+15,KScreenWidth/3, 45)];
-        [_watchesItem setTitleFont:[UIFont systemFontOfSize:11]];
-        [_watchesItem setValueFont:[UIFont systemFontOfSize:23]];
-        _watchesItem.title = @"总计人次";
-        _watchesItem.valueColor = [UIColor whiteColor];
-    }
-    return _watchesItem;
 }
 
 -(SLLiveFinishItem*)receiveItem
