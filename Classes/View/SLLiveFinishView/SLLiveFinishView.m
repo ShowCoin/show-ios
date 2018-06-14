@@ -334,11 +334,6 @@
     }
     return _cnyitem;
 }
-
--(SLLiveFinishItem*)watchesItem
-{
-}
-
 -(SLLiveFinishItem*)receiveItem
 {
     if (!_receiveItem) {
