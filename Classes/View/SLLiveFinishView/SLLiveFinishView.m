@@ -253,34 +253,110 @@
     self.action.liveId = self.liveid;
     self.action.modelClass = SLLiveStopModel.self;
     @weakify(self);
-    [self sl_startRequestAction:self.action Sucess:^(id  result) {
-        @strongify(self);
-        [self.deleteButton setTitle:@"已删除" forState:UIControlStateNormal];
-        [self.backButton sendActionsForControlEvents:UIControlEventTouchUpInside];
-    } FaildBlock:^(NSError *error) {
-        self.deleteButton.userInteractionEnabled = YES;
-        [HDHud showMessageInView:self title:@"删除失败"];
-    }];
+//    [self sl_startRequestAction:self.action Sucess:^(id  result) {
+//        @strongify(self);
+//        [self.deleteButton setTitle:@"已删除" forState:UIControlStateNormal];
+//        [self.backButton sendActionsForControlEvents:UIControlEventTouchUpInside];
+//    } FaildBlock:^(NSError *error) {
+//        self.deleteButton.userInteractionEnabled = YES;
+//        [HDHud showMessageInView:self title:@"删除失败"];
+//    }];
 }
 
 -(UIImageView*)bgImageView
 {
-    if (!_bgImageView) {
-        _bgImageView = [[UIImageView alloc]initWithFrame:self.bounds];
-        
-    }
+//    if (!_bgImageView) {
+//        _bgImageView = [[UIImageView alloc]initWithFrame:self.bounds];
+//
+//    }
     return _bgImageView;
 }
 
 -(UIVisualEffectView*)effectView
 {
-//    if (!_effectView) {
-//        UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
-//        _effectView = [[UIVisualEffectView alloc] initWithEffect:effect];
-//        _effectView.frame = self.bounds;
-//        
-//    }
     return _effectView;
+}
+
+-(SLShadowLabel*)titleLabel
+{
+    if (!_titleLabel) {
+        CGFloat width =KScreenWidth-100, height = 25;
+        CGFloat x = 50, y = KNaviBarHeight;
+        _titleLabel = [[SLShadowLabel alloc] initWithFrame:CGRectMake(x, y, width, height)];
+        _titleLabel.textColor = [UIColor whiteColor];
+        _titleLabel.font       = [UIFont boldSystemFontOfSize:22];
+        _titleLabel.textAlignment = NSTextAlignmentCenter;
+        
+    }
+    return _titleLabel;
+}
+
+-(SLShadowLabel*)nickLabel
+{
+    if (!_nickLabel) {
+        CGFloat width= KScreenWidth-100, height = 25;
+        CGFloat x =50, y = CGRectGetMaxY(self.avatarView.frame) + 10;
+        _nickLabel = [[SLShadowLabel alloc] initWithFrame:CGRectMake(x, y, width, height)];
+        _nickLabel.textColor = [UIColor whiteColor];
+        _nickLabel.font       = [UIFont boldSystemFontOfSize:16];
+        _nickLabel.textAlignment = NSTextAlignmentCenter;
+    }
+    return _nickLabel;
+}
+
+-(SLHeadPortrait*)avatarView
+{
+    if (!_avatarView) {
+        _avatarView = [[SLHeadPortrait alloc]initWithFrame:CGRectMake(KScreenWidth/2-40,CGRectGetMaxY(self.titleLabel.frame) + 20, 80, 80)];
+    }
+    return _avatarView;
+}
+
+-(UIView*)line1
+{
+    if (!_line1) {
+        
+        CGFloat y = (KScreenHeight>667)?330:300;
+        _line1 = [[UIView alloc]initWithFrame:CGRectMake(32, y, KScreenWidth-64, 1)];
+        _line1.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.5];
+    }
+    return _line1;
+}
+
+-(SLLiveFinishItem*)cnyitem
+{
+    if (!_cnyitem) {
+        _cnyitem = [[SLLiveFinishItem alloc] initWithFrame:CGRectMake(KScreenWidth/4, CGRectGetMaxY(self.line1.frame)+85,KScreenWidth/2,45)];
+        _cnyitem.title = @"CNY";
+        _cnyitem.valueColor =[UIColor whiteColor];
+        [_cnyitem setTitleFont:[UIFont systemFontOfSize:10]];
+        [_cnyitem setValueFont:[UIFont systemFontOfSize:25]];
+    }
+    return _cnyitem;
+}
+
+-(SLLiveFinishItem*)watchesItem
+{
+    if (!_watchesItem) {
+        _watchesItem =[[SLLiveFinishItem alloc] initWithFrame:CGRectMake(KScreenWidth/2-KScreenWidth/6,CGRectGetMaxY(self.line2.frame)+15,KScreenWidth/3, 45)];
+        [_watchesItem setTitleFont:[UIFont systemFontOfSize:11]];
+        [_watchesItem setValueFont:[UIFont systemFontOfSize:23]];
+        _watchesItem.title = @"总计人次";
+        _watchesItem.valueColor = [UIColor whiteColor];
+    }
+    return _watchesItem;
+}
+
+-(SLLiveFinishItem*)receiveItem
+{
+    if (!_receiveItem) {
+        _receiveItem =[[SLLiveFinishItem alloc] initWithFrame:CGRectMake(32,CGRectGetMaxY(self.line1.frame)+10,KScreenWidth-64,70)];
+        [_receiveItem setTitleFont:[UIFont systemFontOfSize:14]];
+        [_receiveItem setValueFont:[UIFont systemFontOfSize:45]];
+        _receiveItem.title = @"本场直播秀币收入";
+        _receiveItem.valueColor = [UIColor whiteColor];
+    }
+    return _receiveItem;
 }
 
 @end
