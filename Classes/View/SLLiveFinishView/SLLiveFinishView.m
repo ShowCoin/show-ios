@@ -356,5 +356,15 @@
     return _line2;
 }
 
+-(UIButton*)backButton
+{
+    if (!_backButton) {
+        _backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _backButton.frame = CGRectMake(10,KNaviBarSafeBottomMargin+20,44, 44);
+        [_backButton setImage:[UIImage imageNamed:@"live_finish_back"] forState:UIControlStateNormal];
+    }
+    return _backButton;
+}
+
 
 @end
