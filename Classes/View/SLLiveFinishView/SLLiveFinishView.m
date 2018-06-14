@@ -334,6 +334,7 @@
     }
     return _cnyitem;
 }
+
 -(SLLiveFinishItem*)receiveItem
 {
     if (!_receiveItem) {
@@ -345,5 +346,15 @@
     }
     return _receiveItem;
 }
+
+-(UIView*)line2
+{
+    if (!_line2) {
+        _line2 = [[UIView alloc]initWithFrame:CGRectMake(32,CGRectGetMaxY(self.line1.frame)+140, KScreenWidth-64, 1)];
+        _line2.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.5];
+    }
+    return _line2;
+}
+
 
 @end
