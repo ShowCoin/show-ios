@@ -417,8 +417,10 @@
     }
     _linView.backgroundColor = color ;
 }
+
 - (void)layoutSubviews
 {
     [super layoutSubviews];
 }
+
 @end
