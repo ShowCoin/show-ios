@@ -149,6 +149,10 @@ static dispatch_once_t onceToken;
     return self.windowY - kMargin10;
 }
 
+- (CGFloat)windowY {
+    return self.toolY - 8 - self.window.mj_h;
+}
+
 - (CGFloat)windowH {
     if (count <= 3) {
         return kMTViewH + count * kMCellH;
@@ -158,10 +162,6 @@ static dispatch_once_t onceToken;
         return kMessageViewH;
     }
     return kMessageMaxH;
-}
-
-- (CGFloat)windowY {
-    return self.toolY - 8 - self.window.mj_h;
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
