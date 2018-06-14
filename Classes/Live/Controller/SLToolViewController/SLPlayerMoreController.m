@@ -185,17 +185,6 @@ static dispatch_once_t onceToken;
         return;
     }
     
-    [SLPauseView.shared show:YES];
-    SLPlayerMoreController.shared.pause = YES;
-    
-    if (   type == SLLiveToolTypeScreenShot
-        && [self.delegate respondsToSelector:@selector(sl_playerToolScreenShoot)]) {
-        [self.delegate sl_playerToolScreenShoot];
-        return;
-    }
-    [SLPlayerMoreController dismiss];
-    
-    
 }
 
 
