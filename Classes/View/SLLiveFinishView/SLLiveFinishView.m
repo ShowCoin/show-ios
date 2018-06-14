@@ -366,5 +366,22 @@
     return _backButton;
 }
 
+-(UIButton*)closeShareButton
+{
+    if (!_closeShareButton) {
+        
+        _closeShareButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _closeShareButton.frame = CGRectMake(kMainScreenWidth-75,KNaviBarSafeBottomMargin+40,44, 44);
+        [_closeShareButton setImage:[UIImage imageNamed:@"live_shareClose_button"] forState:UIControlStateNormal];
+        _closeShareButton.hidden =YES;
+        @weakify(self);
+        [[_closeShareButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+            @strongify(self);
+            [self removeShareview];
+        }];
+    }
+    return _closeShareButton;
+}
+
 
 @end
