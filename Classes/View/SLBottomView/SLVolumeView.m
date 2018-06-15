@@ -84,5 +84,22 @@
     
 }
 
+- (void)setProgressMaxValue:(float)maxValue
+               CurrentValue:(float)currentValue
+{
+    
+    
+    float progress;
+    
+    if (maxValue==0) {
+        progress = 0.0;
+    }else
+    {
+        progress = currentValue/maxValue;
+    }
+    
+    self.fillView.frame = CGRectMake(0,0,self.width * progress,self.height);
+}
+
 
 @end
