@@ -101,5 +101,16 @@
     self.fillView.frame = CGRectMake(0,0,self.width * progress,self.height);
 }
 
+-(UIView*)fillView
+{
+    if(!_fillView)
+    {
+        _fillView = [[UIView alloc]initWithFrame:CGRectZero];
+        _fillView.backgroundColor = [UIColor whiteColor];
+        _fillView.hidden = YES;
+    }
+    return _fillView;
+}
+
 
 @end
