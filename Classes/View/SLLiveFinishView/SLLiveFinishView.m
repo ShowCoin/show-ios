@@ -431,7 +431,16 @@
 }
 
 -(UIButton *)phoneBotton {
-
+    if (!_phoneBotton) {
+        _phoneBotton=[UIButton buttonWithType:UIButtonTypeCustom];
+        _phoneBotton.frame=CGRectMake(50, _shareView.bottom-90*Proportion375, 60*WScale, 90*Proportion375);
+        [_phoneBotton setImage:[UIImage imageNamed:@"live_shareSave_button"] forState:UIControlStateNormal];
+        [_phoneBotton setTitle:@"保存至手机" forState:UIControlStateNormal];
+        _phoneBotton.titleLabel.font =[UIFont systemFontOfSize:11];
+        [_phoneBotton setTitleColor:WhiteColor forState:UIControlStateNormal];
+        [_phoneBotton layoutButtonWithEdgeInsetsStyle:MKButtonEdgeInsetsStyleTop imageTitleSpace:4];
+        _phoneBotton.hidden = YES;"
+    }"
 }
 '
 @end
