@@ -67,5 +67,22 @@
     
 }
 
+- (void)animateHide
+{
+    if (!self.isShowing) {
+        return;
+    }
+    @weakify(self)
+    [UIView animateWithDuration:3 animations:^{
+        @strongify(self)
+        self.fillView.alpha = 0.0;
+    } completion:^(BOOL finished) {
+        @strongify(self)
+        self.isShowing = NO;
+    }];
+    
+    
+}
+
 
 @end
