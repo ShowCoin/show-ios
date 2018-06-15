@@ -408,7 +408,25 @@
 {
     if (!_wechatBotton)
     {
+        _wechatBotton=[UIButton buttonWithType:UIButtonTypeCustom];
+        _wechatBotton.frame=CGRectMake(_phoneBotton.right+ 110, _shareView.bottom-90*Proportion375, 60*WScale, 90*Proportion375);
+        [_wechatBotton setImage:[UIImage imageNamed:@"wechatShare"] forState:UIControlStateNormal];
+        [_wechatBotton setTitle:@"微信" forState:UIControlStateNormal];
+        [_wechatBotton setTitleColor:WhiteColor forState:UIControlStateNormal];
+        _wechatBotton.titleLabel.font =[UIFont systemFontOfSize:12];
+        [_wechatBotton layoutButtonWithEdgeInsetsStyle:MKButtonEdgeInsetsStyleTop imageTitleSpace:4];
+        _wechatBotton.hidden = YES;
         
+        @weakify(self);
+        [[_wechatBotton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+            @strongify(self);
+            [HDHud _showMessageInView:self title:@"敬请期待"];
+            //            [SLShareUtils shareImage:self.shareView.image title:@"" desc:@"" contentUrl:@"" shareUserName:@"" platform:UMSocialPlatformType_WechatSession currentController:nil completion:^(id result, NSError *error) {
+            //                if (!error) {
+            //
+            //                }
+            //            }];
+        }];
     }
 }
 
