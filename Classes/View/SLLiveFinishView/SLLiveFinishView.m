@@ -335,18 +335,6 @@
     return _cnyitem;
 }
 
--(SLLiveFinishItem*)watchesItem
-{
-    if (!_watchesItem) {
-        _watchesItem =[[SLLiveFinishItem alloc] initWithFrame:CGRectMake(KScreenWidth/2-KScreenWidth/6,CGRectGetMaxY(self.line2.frame)+15,KScreenWidth/3, 45)];
-        [_watchesItem setTitleFont:[UIFont systemFontOfSize:11]];
-        [_watchesItem setValueFont:[UIFont systemFontOfSize:23]];
-        _watchesItem.title = @"总计人次";
-        _watchesItem.valueColor = [UIColor whiteColor];
-    }
-    return _watchesItem;
-}
-
 -(SLLiveFinishItem*)receiveItem
 {
     if (!_receiveItem) {
@@ -358,5 +346,63 @@
     }
     return _receiveItem;
 }
+
+-(UIView*)line2
+{
+    if (!_line2) {
+        _line2 = [[UIView alloc]initWithFrame:CGRectMake(32,CGRectGetMaxY(self.line1.frame)+140, KScreenWidth-64, 1)];
+        _line2.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.5];
+    }
+    return _line2;
+}
+
+-(UIButton*)backButton
+{
+    if (!_backButton) {
+        _backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_backButton setImage:[UIImage imageNamed:@"live_finish_back"] forState:UIControlStateNormal];
+    }
+    return _backButton;
+}
+
+-(UIButton*)closeShareButton
+{
+    if (!_closeShareButton) {
+        
+        _closeShareButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _closeShareButton.frame = CGRectMake(kMainScreenWidth-75,KNaviBarSafeBottomMargin+40,44, 44);
+        [_closeShareButton setImage:[UIImage imageNamed:@"live_shareClose_button"] forState:UIControlStateNormal];
+        _closeShareButton.hidden =YES;
+        @weakify(self);
+        [[_closeShareButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+            @strongify(self);
+            [self removeShareview];
+        }];
+    }
+    return _closeShareButton;
+}
+
+-(UIButton *)friendBotton
+{
+    if (!_friendBotton)
+    {
+        _friendBotton=[UIButton buttonWithType:UIButtonTypeCustom];
+        _friendBotton.frame=CGRectMake(_wechatBotton.right+5, _shareView.bottom-90*Proportion375, 60*WScale, 90*Proportion375);
+        [_friendBotton setImage:[UIImage imageNamed:@"friendShare"] forState:UIControlStateNormal];
+        [_friendBotton setTitle:@"朋友圈" forState:UIControlStateNormal];
+        _friendBotton.titleLabel.font =[UIFont systemFontOfSize:12];
+        [_friendBotton setTitleColor:WhiteColor forState:UIControlStateNormal];
+        [_friendBotton layoutButtonWithEdgeInsetsStyle:MKButtonEdgeInsetsStyleTop imageTitleSpace:4];
+        _friendBotton.hidden = YES;
+        @weakify(self);
+        [[_friendBotton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+            @strongify(self);
+            [HDHud _showMessageInView:self title:@"敬请期待"];
+            
+        }];
+    }
+    return _friendBotton;
+}
+
 
 @end
