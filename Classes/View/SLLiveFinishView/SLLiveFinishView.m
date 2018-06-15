@@ -404,5 +404,10 @@
     return _friendBotton;
 }
 
+-(UIButton *)wechatBotton
+{
+    
+}
+
 
 @end
