@@ -44,5 +44,10 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
+-(void)addNotifi
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(volumeChanged:) name:@"AVSystemController_SystemVolumeDidChangeNotification" object:nil];
+    
+}
 
 @end
