@@ -50,4 +50,22 @@
     
 }
 
+-(void)volumeChanged:(NSNotification *)notification{
+    
+    _notiCount++;
+    
+    if (_notiCount<3) {
+        return;
+    }
+    
+    self.fillView.hidden = NO;
+    self.fillView.alpha = 1;
+    self.isShowing = YES;
+    [self animateHide];
+    float volume = [[[notification userInfo] objectForKey:@"AVSystemController_AudioVolumeNotificationParameter"] floatValue];
+    [self setProgressMaxValue:1.0 CurrentValue:volume];
+    
+}
+
+
 @end
