@@ -441,7 +441,8 @@
         [_phoneBotton setTitleColor:WhiteColor forState:UIControlStateNormal];
         [_phoneBotton layoutButtonWithEdgeInsetsStyle:MKButtonEdgeInsetsStyleTop imageTitleSpace:4];
         _phoneBotton.hidden = YES;"
-    }"
+    }
+    return _phoneBotton;
 }
 '
 @end
