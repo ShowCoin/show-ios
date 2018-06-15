@@ -428,6 +428,7 @@
             //            }];
         }];
     }
+    return _wechatBotton;
 }
 
 -(UIButton *)phoneBotton {
