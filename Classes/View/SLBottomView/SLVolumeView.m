@@ -37,5 +37,12 @@
 }
 
 
+-(void)dealloc
+{
+    //    self.fillView.hidden = YES;
+    //    [self.fillView removeFromSuperview];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 
 @end
