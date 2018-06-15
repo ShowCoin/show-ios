@@ -406,7 +406,10 @@
 
 -(UIButton *)wechatBotton
 {
-    
+    if (!_wechatBotton)
+    {
+        
+    }
 }
 
 
