@@ -59,5 +59,18 @@ static CGFloat kLRMargin    = 15;
     return self;
 }
 
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    CGFloat w = self.frame.size.width;
+    CGFloat h = self.frame.size.height;
+    self.loopView.frame = CGRectMake(0, 0, w, kSLLoopViewHeight);
+    self.volumeView.frame = CGRectMake(0, 0, w, 1);
+    CGFloat collectY = h - KTabBarHeight;
+    CGFloat collectH = 49;
+    self.collectionView.frame = CGRectMake(0, collectY, w, collectH);
+    self.centerBtn.bounds = CGRectMake(0, 0, 75.5, 44.5);
+    self.centerBtn.center = CGPointMake(w / 2, collectH / 2);
+}
+
 @end
 
