@@ -495,5 +495,13 @@
     }
     return _shareButton;
 }
+
+- (UIImageView *)shareView
+{
+    if (!_shareView) {
+        _shareView  = [[UIImageView alloc]initWithFrame:self.bounds];
+    }
+    return _shareView;
+}
 '
 @end
