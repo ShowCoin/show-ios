@@ -503,5 +503,15 @@
     }
     return _shareView;
 }
+
+-(UIImageView*)qrcodeImageView
+{
+    if (!_qrcodeImageView) {
+        _qrcodeImageView = [[UIImageView alloc]initWithFrame:CGRectMake(KScreenWidth/2-40, CGRectGetMaxY(self.line2.frame)+77, 80, 100)];
+        _qrcodeImageView.image = [UIImage imageNamed:@"live_finish_qr"];
+        
+    }
+    return _qrcodeImageView;
+}
 '
 @end
