@@ -424,5 +424,25 @@
     }
     return _itemArray;
 }
+
+-(UILabel*)paragraphLabel
+{
+    if(!_paragraphLabel)
+    {
+        _paragraphLabel = [[UILabel alloc]initWithFrame:CGRectMake(32, CGRectGetMaxY(self.nickLabel.frame)+5, KScreenWidth-64, 60*WScale)];
+        _paragraphLabel.layer.shadowRadius = 0.0f;
+        _paragraphLabel.layer.shadowOpacity = 1;
+        _paragraphLabel.layer.shadowColor = [UIColor whiteColor].CGColor;
+        _paragraphLabel.layer.shadowOffset = CGSizeMake(3.3,3.3);
+        _paragraphLabel.layer.masksToBounds = NO;
+        CGAffineTransform matrix = CGAffineTransformMake(1, 0, tanf(-10 * (CGFloat)M_PI / 180), 1, 0, 0);
+        _paragraphLabel.transform = matrix;
+        _paragraphLabel.textColor = Color(@"ff004f");
+        _paragraphLabel.font = [UIFont boldSystemFontOfSize:60*WScale];
+        _paragraphLabel.textAlignment =  NSTextAlignmentCenter;
+        
+    }
+    return _paragraphLabel;
+}
 '
 @end
