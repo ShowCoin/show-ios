@@ -50,6 +50,12 @@
     
 }
 
+
+/**
+ <#Description#>
+
+ @param notification <#notification description#>
+ */
 -(void)volumeChanged:(NSNotification *)notification{
     
     _notiCount++;
