@@ -388,18 +388,6 @@
     {
         _friendBotton=[UIButton buttonWithType:UIButtonTypeCustom];
         _friendBotton.frame=CGRectMake(_wechatBotton.right+5, _shareView.bottom-90*Proportion375, 60*WScale, 90*Proportion375);
-        [_friendBotton setImage:[UIImage imageNamed:@"friendShare"] forState:UIControlStateNormal];
-        [_friendBotton setTitle:@"朋友圈" forState:UIControlStateNormal];
-        _friendBotton.titleLabel.font =[UIFont systemFontOfSize:12];
-        [_friendBotton setTitleColor:WhiteColor forState:UIControlStateNormal];
-        [_friendBotton layoutButtonWithEdgeInsetsStyle:MKButtonEdgeInsetsStyleTop imageTitleSpace:4];
-        _friendBotton.hidden = YES;
-        @weakify(self);
-        [[_friendBotton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
-            @strongify(self);
-            [HDHud _showMessageInView:self title:@"敬请期待"];
-            
-        }];
     }
     return _friendBotton;
 }
@@ -410,23 +398,6 @@
     {
         _wechatBotton=[UIButton buttonWithType:UIButtonTypeCustom];
         _wechatBotton.frame=CGRectMake(_phoneBotton.right+ 110, _shareView.bottom-90*Proportion375, 60*WScale, 90*Proportion375);
-        [_wechatBotton setImage:[UIImage imageNamed:@"wechatShare"] forState:UIControlStateNormal];
-        [_wechatBotton setTitle:@"微信" forState:UIControlStateNormal];
-        [_wechatBotton setTitleColor:WhiteColor forState:UIControlStateNormal];
-        _wechatBotton.titleLabel.font =[UIFont systemFontOfSize:12];
-        [_wechatBotton layoutButtonWithEdgeInsetsStyle:MKButtonEdgeInsetsStyleTop imageTitleSpace:4];
-        _wechatBotton.hidden = YES;
-        
-        @weakify(self);
-        [[_wechatBotton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
-            @strongify(self);
-            [HDHud _showMessageInView:self title:@"敬请期待"];
-            //            [SLShareUtils shareImage:self.shareView.image title:@"" desc:@"" contentUrl:@"" shareUserName:@"" platform:UMSocialPlatformType_WechatSession currentController:nil completion:^(id result, NSError *error) {
-            //                if (!error) {
-            //
-            //                }
-            //            }];
-        }];
     }
     return _wechatBotton;
 }
@@ -443,6 +414,104 @@
         _phoneBotton.hidden = YES;"
     }
     return _phoneBotton;
+}
+
+-(NSMutableArray*)itemArray
+{
+    if(!_itemArray)
+    {
+        _itemArray = [NSMutableArray array];
+    }
+    return _itemArray;
+}
+
+-(UILabel*)paragraphLabel
+{
+    if(!_paragraphLabel)
+    {
+        _paragraphLabel = [[UILabel alloc]initWithFrame:CGRectMake(32, CGRectGetMaxY(self.nickLabel.frame)+5, KScreenWidth-64, 60*WScale)];
+        _paragraphLabel.layer.shadowRadius = 0.0f;
+        _paragraphLabel.layer.shadowOpacity = 1;
+        _paragraphLabel.layer.shadowColor = [UIColor whiteColor].CGColor;
+        _paragraphLabel.layer.shadowOffset = CGSizeMake(3.3,3.3);
+        _paragraphLabel.layer.masksToBounds = NO;
+        CGAffineTransform matrix = CGAffineTransformMake(1, 0, tanf(-10 * (CGFloat)M_PI / 180), 1, 0, 0);
+        _paragraphLabel.transform = matrix;
+        _paragraphLabel.textColor = Color(@"ff004f");
+        _paragraphLabel.font = [UIFont boldSystemFontOfSize:60*WScale];
+        _paragraphLabel.textAlignment =  NSTextAlignmentCenter;
+        
+    }
+    return _paragraphLabel;
+}
+
+-(UILabel*)rankLabel
+{
+    if (!_rankLabel) {
+        _rankLabel =  [[UILabel alloc]initWithFrame:CGRectMake(32, CGRectGetMaxY(self.paragraphLabel.frame), KScreenWidth-64, 40*WScale)];
+        _rankLabel.textColor = [UIColor whiteColor];
+        _rankLabel.font = Font_Trebuchet(20*WScale);
+        _rankLabel.textAlignment =  NSTextAlignmentCenter;
+    }
+    return _rankLabel;
+}
+
+-(UIButton*)deleteButton
+{
+    if (!_deleteButton) {
+        _deleteButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        
+        CGFloat spacing  = KScreenHeight/2 - CGRectGetMaxY(self.qrcodeImageView.frame)/2;
+        CGFloat y   = CGRectGetMaxY(self.qrcodeImageView.frame)+spacing -22.5;
+        
+        _deleteButton.frame = CGRectMake(32,y,112, 45);
+        [_deleteButton setTitle:@"删除回放" forState:UIControlStateNormal];
+        [_deleteButton setBackgroundColor:Color(@"333333") forState:UIControlStateNormal];
+        _deleteButton.titleLabel.font = [UIFont systemFontOfSize:15];
+        [_deleteButton setTitleColor:Color(@"F1F1F1") forState:UIControlStateNormal];
+        _deleteButton.layer.cornerRadius = 22.6;
+        _deleteButton.layer.masksToBounds = YES;
+        [_deleteButton addTarget:self action:@selector(deleteLive:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _deleteButton;
+}
+
+-(UIButton*)shareButton
+{
+    if (!_shareButton) {
+        _shareButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _shareButton.frame = CGRectMake(CGRectGetMaxX(self.deleteButton.frame)+15,CGRectGetMinY(self.deleteButton.frame),KScreenWidth-64-112-15,45);
+        [_shareButton setTitle:@"分享成就" forState:UIControlStateNormal];
+        [_shareButton setBackgroundColor:Color(@"F1F1F1") forState:UIControlStateNormal];
+        _shareButton.titleLabel.font = [UIFont systemFontOfSize:15];
+        [_shareButton setTitleColor:Color(@"333333") forState:UIControlStateNormal];
+        _shareButton.layer.cornerRadius = 22.6;
+        _shareButton.layer.masksToBounds = YES;
+        @weakify(self);
+        [[_shareButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+            @strongify(self);
+            [self showScreenshot];
+        }];
+    }
+    return _shareButton;
+}
+
+- (UIImageView *)shareView
+{
+    if (!_shareView) {
+        _shareView  = [[UIImageView alloc]initWithFrame:self.bounds];
+    }
+    return _shareView;
+}
+
+-(UIImageView*)qrcodeImageView
+{
+    if (!_qrcodeImageView) {
+        _qrcodeImageView = [[UIImageView alloc]initWithFrame:CGRectMake(KScreenWidth/2-40, CGRectGetMaxY(self.line2.frame)+77, 80, 100)];
+        _qrcodeImageView.image = [UIImage imageNamed:@"live_finish_qr"];
+        
+    }
+    return _qrcodeImageView;
 }
 '
 @end
