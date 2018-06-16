@@ -71,6 +71,21 @@
 
 /** 获取NSBundele中的资源图片 */
 + (UIImage *)imageAtApplicationDirectoryWithName:(NSString *)fileName;
+#pragma mark 文件系统的操作方法
+/** 创建文件夹 */
++ (BOOL)createFolder:(NSString*)folderPath isDirectory:(BOOL)isDirectory;
+
+/** 得到用户document中的一个路径 */
++ (NSString*)getPathInUserDocument:(NSString *)fileName;
+
+/** 将文件大小格式化，按照KB\M\G的方式展示*/
++ (NSString *)formatFileSize:(long long)fileSize;
+
+/** 文件创建日期 */
++ (NSDate *)dateOfFileCreateWithFolderName:(NSString *)folderName cacheName:(NSString *)cacheName;
+
+/** 统计某个文件的磁盘空间大小 */
++ (int)sizeOfFile:(NSString *)path;
 
 
 @end
