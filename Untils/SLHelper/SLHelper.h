@@ -87,5 +87,24 @@
 /** 统计某个文件的磁盘空间大小 */
 + (int)sizeOfFile:(NSString *)path;
 
+/** 统计某个文件夹的磁盘空间大小 */
++ (long long)sizeOfFolder:(NSString*)folderPath;
+
+/** 移除某个文件夹下的所有文件 */
++ (void)removeContentsOfFolder:(NSString *)folderPath;
+
+/** 移除某个文件夹下的所有文件(非变例)并重新创建被删除的文件夹 */
++ (void) deleteContentsOfFolder:(NSString *)folderPath;
+
+
+#pragma mark 计算字符串尺寸方法
+/**
+ *@brief 根据字符串获取label的高度
+ *@param labelString label的text
+ *@param fontSize label的字体大小，以systemFont为标准
+ *@param width 最大宽度
+ *@param height 最大高度
+ */
++ (CGFloat)heightForLabelWithString:(NSString *)labelString withFontSize:(CGFloat)fontSize withWidth:(CGFloat)width withHeight:(CGFloat)height;
 
 @end
