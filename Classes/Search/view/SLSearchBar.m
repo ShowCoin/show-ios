@@ -68,10 +68,6 @@ NS_ASSUME_NONNULL_END
     }
     return self;
 }
-//- (void)awakeFromNib
-//{
-//    [self setupUI];
-//}
 
 - (void)setupUI{
     _placeholder = @"";
@@ -164,7 +160,6 @@ NS_ASSUME_NONNULL_END
                 self.textField.frame = CGRectMake(self.leadingOrTailMargin, 8, self.frame.size.width-self.leadingOrTailMargin*2, SLTextFieldHeight);
             }
             self.buttonCenter.center = self.textField.center;
-            //            self.buttonCenter.left= CGRectGetMinX(self.textField.frame)+15;
         } completion:^(BOOL finished) {
             
         }];
@@ -212,7 +207,6 @@ NS_ASSUME_NONNULL_END
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-//    [textField resignFirstResponder];
     if (self.delegate && [self.delegate respondsToSelector:@selector(searchBarSearchButtonClicked:)])
     {
         [self.delegate searchBarSearchButtonClicked:self];
@@ -356,7 +350,6 @@ NS_ASSUME_NONNULL_END
         [textField.layer setCornerRadius:4];
         [textField setLeftViewMode:UITextFieldViewModeAlways];
         textField.leftView = self.imageIcon;
-//        textField.backgroundColor=write_L3_COLOR;
         textField.textColor=kThemeWhiteColor;
         textField.tintColor=kThemeWhiteColor;
 
