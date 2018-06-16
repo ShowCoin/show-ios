@@ -168,9 +168,6 @@ static BOOL isHot = NO;
         @weakify(self);
         [[_leftBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
             @strongify(self);
-//            if (self.delegate && [self.delegate respondsToSelector:@selector(leftBtnClick:)]) {
-//                [self.delegate leftBtnClick:nil];
-//            }
             [HDHud showMessageInView:self.viewController.view title:@"敬请期待"];
         }];
     }
