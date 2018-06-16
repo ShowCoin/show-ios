@@ -475,5 +475,25 @@
     }
     return _deleteButton;
 }
+
+-(UIButton*)shareButton
+{
+    if (!_shareButton) {
+        _shareButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _shareButton.frame = CGRectMake(CGRectGetMaxX(self.deleteButton.frame)+15,CGRectGetMinY(self.deleteButton.frame),KScreenWidth-64-112-15,45);
+        [_shareButton setTitle:@"分享成就" forState:UIControlStateNormal];
+        [_shareButton setBackgroundColor:Color(@"F1F1F1") forState:UIControlStateNormal];
+        _shareButton.titleLabel.font = [UIFont systemFontOfSize:15];
+        [_shareButton setTitleColor:Color(@"333333") forState:UIControlStateNormal];
+        _shareButton.layer.cornerRadius = 22.6;
+        _shareButton.layer.masksToBounds = YES;
+        @weakify(self);
+        [[_shareButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+            @strongify(self);
+            [self showScreenshot];
+        }];
+    }
+    return _shareButton;
+}
 '
 @end
