@@ -13,6 +13,6 @@
 
 @property (nonatomic,strong)NSString * cursor;
 @property (nonatomic,strong)NSString * count;
-@property (nonatomic,strong)NSString * coin_type;//@"SHOW",@"ETH"
+@property (nonatomic,strong)NSString * coin_type;
 
 @end
