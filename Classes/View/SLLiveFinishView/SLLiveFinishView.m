@@ -421,11 +421,6 @@
         [[_wechatBotton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
             @strongify(self);
             [HDHud _showMessageInView:self title:@"敬请期待"];
-            //            [SLShareUtils shareImage:self.shareView.image title:@"" desc:@"" contentUrl:@"" shareUserName:@"" platform:UMSocialPlatformType_WechatSession currentController:nil completion:^(id result, NSError *error) {
-            //                if (!error) {
-            //
-            //                }
-            //            }];
         }];
     }
     return _wechatBotton;
