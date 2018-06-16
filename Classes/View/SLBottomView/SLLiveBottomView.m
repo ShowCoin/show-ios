@@ -45,6 +45,19 @@ static CGFloat kLRMargin    = 15;
     [self removeNotification];
 }
 
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self)
+    {
+        [self addSubview:self.loopView];
+        [self addSubview:self.collectionView];
+        [self.collectionView addSubview:self.volumeView];
+        [self.collectionView addSubview:self.centerBtn];
+        [self addNotification];
+    }
+    return self;
+}
 
 @end
 
