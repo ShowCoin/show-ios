@@ -69,9 +69,6 @@
 
 - (void)animateHide
 {
-    if (!self.isShowing) {
-        return;
-    }
     @weakify(self)
     [UIView animateWithDuration:3 animations:^{
         @strongify(self)
@@ -80,8 +77,6 @@
         @strongify(self)
         self.isShowing = NO;
     }];
-    
-    
 }
 
 
