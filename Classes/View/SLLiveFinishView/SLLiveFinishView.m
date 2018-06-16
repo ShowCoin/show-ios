@@ -455,5 +455,25 @@
     }
     return _rankLabel;
 }
+
+-(UIButton*)deleteButton
+{
+    if (!_deleteButton) {
+        _deleteButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        
+        CGFloat spacing  = KScreenHeight/2 - CGRectGetMaxY(self.qrcodeImageView.frame)/2;
+        CGFloat y   = CGRectGetMaxY(self.qrcodeImageView.frame)+spacing -22.5;
+        
+        _deleteButton.frame = CGRectMake(32,y,112, 45);
+        [_deleteButton setTitle:@"删除回放" forState:UIControlStateNormal];
+        [_deleteButton setBackgroundColor:Color(@"333333") forState:UIControlStateNormal];
+        _deleteButton.titleLabel.font = [UIFont systemFontOfSize:15];
+        [_deleteButton setTitleColor:Color(@"F1F1F1") forState:UIControlStateNormal];
+        _deleteButton.layer.cornerRadius = 22.6;
+        _deleteButton.layer.masksToBounds = YES;
+        [_deleteButton addTarget:self action:@selector(deleteLive:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _deleteButton;
+}
 '
 @end
