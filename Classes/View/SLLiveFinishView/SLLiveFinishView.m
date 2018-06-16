@@ -388,18 +388,6 @@
     {
         _friendBotton=[UIButton buttonWithType:UIButtonTypeCustom];
         _friendBotton.frame=CGRectMake(_wechatBotton.right+5, _shareView.bottom-90*Proportion375, 60*WScale, 90*Proportion375);
-        [_friendBotton setImage:[UIImage imageNamed:@"friendShare"] forState:UIControlStateNormal];
-        [_friendBotton setTitle:@"朋友圈" forState:UIControlStateNormal];
-        _friendBotton.titleLabel.font =[UIFont systemFontOfSize:12];
-        [_friendBotton setTitleColor:WhiteColor forState:UIControlStateNormal];
-        [_friendBotton layoutButtonWithEdgeInsetsStyle:MKButtonEdgeInsetsStyleTop imageTitleSpace:4];
-        _friendBotton.hidden = YES;
-        @weakify(self);
-        [[_friendBotton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
-            @strongify(self);
-            [HDHud _showMessageInView:self title:@"敬请期待"];
-            
-        }];
     }
     return _friendBotton;
 }
