@@ -444,5 +444,16 @@
     }
     return _paragraphLabel;
 }
+
+-(UILabel*)rankLabel
+{
+    if (!_rankLabel) {
+        _rankLabel =  [[UILabel alloc]initWithFrame:CGRectMake(32, CGRectGetMaxY(self.paragraphLabel.frame), KScreenWidth-64, 40*WScale)];
+        _rankLabel.textColor = [UIColor whiteColor];
+        _rankLabel.font = Font_Trebuchet(20*WScale);
+        _rankLabel.textAlignment =  NSTextAlignmentCenter;
+    }
+    return _rankLabel;
+}
 '
 @end
