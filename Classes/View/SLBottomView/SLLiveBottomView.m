@@ -38,6 +38,13 @@ static CGFloat kLRMargin    = 15;
     NSString *_nickName;
 }
 
+-(void)dealloc
+{
+    NSLog(@"[gxx] bottom view dealloc");
+    [self.loopView endAnimation];
+    [self removeNotification];
+}
+
 
 @end
 
