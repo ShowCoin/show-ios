@@ -415,5 +415,14 @@
     }
     return _phoneBotton;
 }
+
+-(NSMutableArray*)itemArray
+{
+    if(!_itemArray)
+    {
+        _itemArray = [NSMutableArray array];
+    }
+    return _itemArray;
+}
 '
 @end
