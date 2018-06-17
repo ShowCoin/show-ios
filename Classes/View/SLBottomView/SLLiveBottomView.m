@@ -11,12 +11,6 @@
 #import "SLBottomLikeCollectionViewCell.h"
 #import "SLVolumeView.h"
 
-static CGFloat kCellWidth60 = 60;
-static CGFloat kCellWidth30 = 30;
-static CGFloat kCellWidth42 = 42;
-static CGFloat kCellMargin  = 8;
-static CGFloat kLRMargin    = 15;
-
 @interface SLLiveBottomView () <UICollectionViewDataSource,UICollectionViewDelegate>
 
 @property (nonatomic, strong) NSArray * cellArray;
