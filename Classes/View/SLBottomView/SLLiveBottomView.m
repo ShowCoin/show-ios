@@ -10,7 +10,6 @@
 #import "SLLiveBottomCollectionViewCell.h"
 #import "SLBottomLikeCollectionViewCell.h"
 #import "SLVolumeView.h"
-#import "SLMusicView.h"
 
 static CGFloat kCellWidth60 = 60;
 static CGFloat kCellWidth30 = 30;
