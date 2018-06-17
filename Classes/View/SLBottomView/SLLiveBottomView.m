@@ -12,7 +12,6 @@
 #import "SLVolumeView.h"
 #import "SLMusicView.h"
 #import "SLShadowLabel.h"
-#import "CBAutoScrollLabel.h"
 
 static CGFloat kCellWidth60 = 60;
 static CGFloat kCellWidth30 = 30;
