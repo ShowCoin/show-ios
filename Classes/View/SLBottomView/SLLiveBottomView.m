@@ -16,9 +16,7 @@
 
 @end
 
-@implementation SLLiveBottomView {
-    NSString *_nickName;
-}
+@implementation SLLiveBottomView
 
 -(void)dealloc
 {
