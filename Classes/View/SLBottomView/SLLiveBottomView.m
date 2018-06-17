@@ -13,11 +13,6 @@
 
 @interface SLLiveBottomView () <UICollectionViewDataSource,UICollectionViewDelegate>
 
-@property (nonatomic, strong) NSArray * cellArray;
-@property (nonatomic, strong) UIView * volumeView;
-@property (nonatomic, copy)   NSString * shareCount;
-@property (nonatomic, strong) SLLoopView *loopView;
-@property (nonatomic, strong) UIButton *centerBtn;
 
 @end
 
