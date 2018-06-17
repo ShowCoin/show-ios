@@ -15,7 +15,6 @@
 #import "CBAutoScrollLabel.h"
 #import "SLLoopView.h"
 #import "HomeHeader.h"
-#import "SLBottomAimationView.h"
 
 static CGFloat kCellWidth60 = 60;
 static CGFloat kCellWidth30 = 30;
