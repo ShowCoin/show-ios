@@ -14,7 +14,6 @@
 #import "SLShadowLabel.h"
 #import "CBAutoScrollLabel.h"
 #import "SLLoopView.h"
-#import "HomeHeader.h"
 
 static CGFloat kCellWidth60 = 60;
 static CGFloat kCellWidth30 = 30;
