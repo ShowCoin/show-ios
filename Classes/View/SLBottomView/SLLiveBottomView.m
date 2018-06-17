@@ -11,7 +11,6 @@
 #import "SLBottomLikeCollectionViewCell.h"
 #import "SLVolumeView.h"
 #import "SLMusicView.h"
-#import "SLShadowLabel.h"
 
 static CGFloat kCellWidth60 = 60;
 static CGFloat kCellWidth30 = 30;
