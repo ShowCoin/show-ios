@@ -16,7 +16,6 @@
 #import "SLLoopView.h"
 #import "HomeHeader.h"
 #import "SLBottomAimationView.h"
-#import "ShowHomeBaseController.h"
 
 static CGFloat kCellWidth60 = 60;
 static CGFloat kCellWidth30 = 30;
