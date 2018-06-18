@@ -106,5 +106,21 @@
  *@param height 最大高度
  */
 + (CGFloat)heightForLabelWithString:(NSString *)labelString withFontSize:(CGFloat)fontSize withWidth:(CGFloat)width withHeight:(CGFloat)height;
+/**
+ *@brief 根据字符串获取label的宽度
+ *@param labelString label的text
+ *@param fontSize label的字体大小，以systemFont为标准
+ *@param width 最大宽度
+ *@param height 最大高度
+ */
++ (CGFloat)widthForLabelWithString:(NSString *)labelString withFontSize:(CGFloat)fontsize withWidth:(CGFloat)width withHeight:(CGFloat)height;
 
+/**
+ *@brief 根据字符串获取label的尺寸
+ *@param labelString label的text
+ *@param font label的字体
+ *@param size 限制的最大尺寸
+ */
++ (CGSize)sizeForLabelWithString:(NSString *)string withFont:(UIFont *)font constrainedToSize:(CGSize)size;
++(NSString *)saveImageDocuments:(UIImage *)image;
 @end
