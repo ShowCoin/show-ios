@@ -159,3 +159,95 @@ static BOOL showPlayerMessage = YES ;
     return self;
 }
 
+- (void)dealloc {
+    [NSNotificationCenter.defaultCenter removeObserver:self];
+}
+
+-(YYAnimatedImageView *)coverImage
+{
+    if (!_coverImage) {
+        _coverImage = [[YYAnimatedImageView alloc]initWithFrame:CGRectMake(0, 0,kMainScreenWidth ,kMainScreenHeight)];
+        _coverImage.contentMode = UIViewContentModeScaleAspectFill;
+        [_coverImage setImage:[UIImage imageNamed:@"home_start_img"]];
+        _coverImage.backgroundColor = [UIColor clearColor];
+        _coverImage.clipsToBounds = YES;
+    }
+    return _coverImage;
+}
+
+-(SLHeadPortrait *)headPortrait
+{
+    if (!_headPortrait) {
+        _headPortrait = [[SLHeadPortrait alloc] initWithFrame:CGRectMake(kMainScreenWidth - 60*Proportion375 + 4, KScreenHeight-KTabbarSafeBottomMargin-443, 50, 50)];
+        _headPortrait.delegate = self;
+    }
+    return _headPortrait;
+}
+-(UIButton *)addBtn
+{
+    if (!_addBtn) {
+        _addBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_addBtn setImage:[UIImage imageNamed:@"sl_live_foucus"] forState:UIControlStateNormal];
+        [_addBtn setImage:[UIImage imageNamed:@"sl_live_foucus"] forState:UIControlStateHighlighted];
+//        _addBtn.userInteractionEnabled = NO;
+        _addBtn.hidden = YES;
+        @weakify(self);
+        [[_addBtn rac_signalForControlEvents:UIControlEventTouchUpInside]subscribeNext:^(id x) {
+            @strongify(self);
+            [self concerAction];
+        }];
+    }
+    return _addBtn;
+}
+-(void)followAnimation
+{
+    UIImageView * imageView = [[UIImageView alloc]initWithFrame:CGRectMake(15,40,20, 20)];
+    imageView.image = [UIImage imageNamed:@"sl_live_follow"];
+    imageView.transform = CGAffineTransformMakeRotation(M_PI);
+    [self.headPortrait addSubview:imageView];
+    [self sendSubviewToBack:imageView];
+    @weakify(self)
+
+    [UIView animateWithDuration:0.5 animations:^{
+        @strongify(self)
+
+        self.addBtn.transform = CGAffineTransformMakeRotation(M_PI);
+        self.addBtn.alpha = 0.0;
+        
+    } completion:^(BOOL finished) {
+        @strongify(self)
+
+        self.addBtn.hidden = YES;
+        
+    }];
+    
+    imageView.layer.transform = CATransform3DMakeScale(1, 1, 1);
+    [UIView animateWithDuration:1.0 animations:^{
+        imageView.transform = CGAffineTransformMakeRotation(M_PI*2);
+        imageView.layer.transform = CATransform3DMakeScale(1.1, 1.1, 1);
+        
+    } completion:^(BOOL finished) {
+        @strongify(self)
+        @weakify(self)
+        dispatch_time_t delayTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3/*延迟执行时间*/ * NSEC_PER_SEC));
+        dispatch_after(delayTime, dispatch_get_main_queue(), ^{
+            @strongify(self)
+            [self hideImage:imageView];
+        });
+        
+    }];
+}
+-(void)hideImage:(UIImageView*)imageView
+{
+    imageView.layer.transform = CATransform3DMakeScale(1, 1, 1);
+    [UIView animateWithDuration:0.4 animations:^{
+        imageView.layer.transform = CATransform3DMakeScale(0.001, 0.001, 1);
+    } completion:^(BOOL finished) {
+        
+        [imageView removeFromSuperview];
+    }];
+}
+
+
+@end
+
