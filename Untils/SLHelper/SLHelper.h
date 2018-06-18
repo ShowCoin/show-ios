@@ -173,4 +173,9 @@
 #pragma mark 归档，解归档
 + (NSData *)archiverObject:(NSObject *)object forKey:(NSString *)key;
 + (NSObject *)unarchiverObject:(NSData *)archivedData withKey:(NSString *)key;
+
+#pragma mark 从NSUserDefaults取值或存值
++ (id)valueForKey:(NSString *)key;
++ (void)setValue:(id)value forKey:(NSString *)key;
+
 @end
