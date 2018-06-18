@@ -178,4 +178,43 @@
 + (id)valueForKey:(NSString *)key;
 + (void)setValue:(id)value forKey:(NSString *)key;
 
+#pragma mark 字符串格式化或单位换算
+/**
+ *@brief 对数字字符串进行友好的格式化，每四个空一格
+ */
++ (NSString *)friendFormatString:(NSString *)sourceStr;
+/**
+ *@brief 去掉小数点后面多余的0并且只保留两位小数
+ */
++(NSString *)trimright0:(double )param;
+/**
+ *@brief 换算距离，大于99km，返回>99km
+ *@note 单位为m或km
+ */
++ (NSString *)transformMetreToKilometre:(NSString *)meter;//>99km
+/**
+ *@brief 换算距离，大于99千，返回>99千
+ *@note 单位为千
+ */
++ (NSString *)transformMetreToKilometreAccurate:(NSString *)meter;
+/**
+ *@brief 计算开始时间与结束时间中间相隔xx天
+ *@param startTime 开始时间
+ *@param endTime 结束时间
+ */
++(NSString *)getLeftTimeWithStartTime:(double)startTime endTime:(double)endTime;
+/**
+ *@brief 数字统一规范
+ *0-9999显示全数字1234
+ *>9999，保留一位小数99.9万
+ *>100万，不保留小数333万
+ */
++ (NSString *)transformNumbers:(NSInteger)number;
+/**
+ *@brief 金币统一规范
+ *显示全数字1,234,123,231
+ */
++ (NSString *)transformMoney:(NSString *)string;
+
+
 @end
