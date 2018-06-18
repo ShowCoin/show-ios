@@ -32,7 +32,13 @@
     UIEdgeInsets imageEdgeInsets = UIEdgeInsetsZero;
     UIEdgeInsets labelEdgeInsets = UIEdgeInsetsZero;
     
-  
+    // 3. 根据style和space得到imageEdgeInsets和labelEdgeInsets的值
+    switch (style) {
+     
+    }
+    // 4. 赋值
+    self.titleEdgeInsets = labelEdgeInsets;
+    self.imageEdgeInsets = imageEdgeInsets;
 }
 
 @end
