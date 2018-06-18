@@ -256,5 +256,15 @@
  */
 + (id)parserJsonData:(id)jsonData;
 
+//IOS 异或加密
++(NSString *)obfuscate:(NSString *)string withKey:(NSString *)key;
+
+//日期 去除时分秒
++ (NSString *)DescriptionWithDate:(NSDate *)date;
+//遍历文件夹获得文件夹大小，返回多少M
+- (float ) folderSizeAtPath:(NSString*) folderPath;
+//单个文件的大小
+- (long long) fileSizeAtPath:(NSString*) filePath;
++ (NSString *) compareCurrentTime:(NSString *)str;
 
 @end
