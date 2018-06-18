@@ -106,5 +106,76 @@
  *@param height 最大高度
  */
 + (CGFloat)heightForLabelWithString:(NSString *)labelString withFontSize:(CGFloat)fontSize withWidth:(CGFloat)width withHeight:(CGFloat)height;
+/**
+ *@brief 根据字符串获取label的宽度
+ *@param labelString label的text
+ *@param fontSize label的字体大小，以systemFont为标准
+ *@param width 最大宽度
+ *@param height 最大高度
+ */
++ (CGFloat)widthForLabelWithString:(NSString *)labelString withFontSize:(CGFloat)fontsize withWidth:(CGFloat)width withHeight:(CGFloat)height;
+
+/**
+ *@brief 根据字符串获取label的尺寸
+ *@param labelString label的text
+ *@param font label的字体
+ *@param size 限制的最大尺寸
+ */
++ (CGSize)sizeForLabelWithString:(NSString *)string withFont:(UIFont *)font constrainedToSize:(CGSize)size;
+
+/**
+ *@brief 保存图片到相册
+ */
++(NSString *)saveImageDocuments:(UIImage *)image;
+
+#pragma mark 时间格式转换
+/**
+ *@brief 获取当前时间戳，并转化为字符串
+ **/
++(NSString *)getTimeStamp;
+/**
+ *@brief 将时间格式字符串按照format格式转化为需要的时间格式字符串
+ */
++ (NSString *)formatDateWithString:(NSString *)dateString format:(NSString *)format;
+/**
+ *@brief 将date按照format格式转化为字符串
+ */
++ (NSString *)formatDateWithDate:(NSDate *)date format:(NSString *)format;
+/**
+ *@brief 将时间戳按照format格式化为字符串
+ *@param timeInterval 1970开始的时间戳
+ */
++ (NSString *)formatTimeInterval:(NSTimeInterval)timeInterval format:(NSString *)format;
+/**
+ *@brief 将时间格式字符串转化为date
+ */
++ (NSDate *)dateValueWithString:(NSString *)dateStr ByFormatter:(NSString *)formatter;
+/**
+ *@brief 给出date，返回这个时间点是星期几
+ */
++ (NSString *)weekdayStringValue:(NSDate*)date;
+
+/**
+ *@brief 将时间戳转换成时分秒
+ */
++(NSString *)getTimeIntervalWithTime:(NSTimeInterval)timeInterval;
+/**
+ *  时间补0
+ *
+ *  @param str str description
+ *
+ *  @return return value description
+ */
++ (NSString *)fillZeroWithString:(NSString *)str;
+
++(NSString *)getTwoCharTimeIntervalWithTime:(NSInteger)timeInterval formatStr:(NSString *)formatStr;
+
+#pragma mark 归档，解归档
++ (NSData *)archiverObject:(NSObject *)object forKey:(NSString *)key;
++ (NSObject *)unarchiverObject:(NSData *)archivedData withKey:(NSString *)key;
+
+#pragma mark 从NSUserDefaults取值或存值
++ (id)valueForKey:(NSString *)key;
++ (void)setValue:(id)value forKey:(NSString *)key;
 
 @end
