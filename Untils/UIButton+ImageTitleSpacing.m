@@ -10,5 +10,10 @@
 
 @implementation UIButton (ImageTitleSpacing)
 
+- (void)layoutButtonWithEdgeInsetsStyle:(SLButtonEdgeInsetsStyle)style
+                        imageTitleSpace:(CGFloat)space
+{
+  
+}
 
 @end
