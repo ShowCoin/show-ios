@@ -266,5 +266,16 @@
 //单个文件的大小
 - (long long) fileSizeAtPath:(NSString*) filePath;
 + (NSString *) compareCurrentTime:(NSString *)str;
+/**
+ 解密作品url
+ 
+ @param workUrl 待解密的作品url
+ @return 解密后的作品url
+ */
++(NSString *)decodeWorkUrl:(NSString *)workUrl;
+
++(NSString*) decryptUseDES:(NSString*)cipherText key:(NSString*)key;
++ (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString ;
++(NSString *)convertToJsonData:(NSDictionary *)dict;
 
 @end
