@@ -277,5 +277,26 @@
 +(NSString*) decryptUseDES:(NSString*)cipherText key:(NSString*)key;
 + (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString ;
 +(NSString *)convertToJsonData:(NSDictionary *)dict;
+**
+聊天会话页标题显示
 
+@param timeInterval 时间戳
+@return string
+*/
++ (NSString *)chatNavDisplayTitleStringWithInterval:(NSTimeInterval)timeInterval;
+
+
+/**
+ 聊天-消息列表cell时间显示转换
+ 
+ @param timeInterval 时间戳
+ @return string
+ */
++ (NSString *)chatMessageListTimeStringWithInterval:(NSTimeInterval)timeInterval;
+
+/// 获取纠正后的系统时间和targetTime时间戳之差
++ (NSTimeInterval)secondsOfSystemTimeSince:(NSTimeInterval)targetTime;
+//打乱数组顺序
++(NSMutableArray*)getRandomArrFrome:(NSArray*)arr;
++(NSData *)greatePublic:(NSData *)privateKey;
 @end
