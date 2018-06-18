@@ -248,6 +248,164 @@ static BOOL showPlayerMessage = YES ;
     }];
 }
 
+-(SLCoinView*)coinView
+{
+    if (!_coinView) {
+        
+        _coinView = [[SLCoinView alloc] initWithFrame:CGRectMake(0,CGRectGetMaxY(self.headPortrait.frame)+7,60, 40)];
+        UITapGestureRecognizer * tapGesture=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(gotoWallet)];
+        [_coinView addGestureRecognizer:tapGesture];
+    }
+    return _coinView;
+}
+
+-(UIButton *)thumbBtn
+{
+    if (!_thumbBtn) {
+        _thumbBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_thumbBtn setBackgroundImage:[UIImage imageNamed:@"home_thumb_img"] forState:UIControlStateNormal];
+        [_thumbBtn setBackgroundImage:[UIImage imageNamed:@"home_thumb_img"] forState:UIControlStateHighlighted];
+//        [_thumbBtn setTitle:@"1999.1w" forState:UIControlStateNormal];
+//        [_thumbBtn setTitleColor:kThemeWhiteColor forState:UIControlStateNormal];
+//        _thumbBtn.titleLabel.font  = Font_Trebuchet(12*Proportion375);
+//        _thumbBtn.titleEdgeInsets = UIEdgeInsetsMake(40*Proportion375, -38*Proportion375 ,0,0);
+//        _thumbBtn.imageEdgeInsets = UIEdgeInsetsMake(0,7*Proportion375, 11*Proportion375, 0);
+        _thumbLab = [UILabel labelWithText:@"777" textColor:kThemeWhiteColor font:Font_Regular(12*Proportion375) backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentCenter];
+        _thumbLab.frame = CGRectMake(0, 40 + 4, 40, 13*Proportion375);
+        [_thumbBtn addSubview:_thumbLab];
+        _thumbLab.layer.shadowRadius = 0.0f;
+        _thumbLab.layer.shadowOpacity = 0.3;
+        _thumbLab.layer.shadowColor = [UIColor blackColor].CGColor;
+        _thumbLab.layer.shadowOffset = CGSizeMake(1,1);
+        _thumbLab.layer.masksToBounds = NO;
+        @weakify(self);
+        [[_thumbBtn rac_signalForControlEvents:UIControlEventTouchUpInside]subscribeNext:^(id x) {
+            @strongify(self);
+            [HDHud showMessageInView:self.viewController.view title:@"敬请期待"];
+
+        }];
+    }
+    return _thumbBtn;
+}
+-(UIButton *)commentBtn
+{
+    if (!_commentBtn) {
+        _commentBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_commentBtn setBackgroundImage:[UIImage imageNamed:@"home_comment_img"] forState:UIControlStateNormal];
+        [_commentBtn setBackgroundImage:[UIImage imageNamed:@"home_comment_img"] forState:UIControlStateHighlighted];
+        _commentLab = [UILabel labelWithText:@"88k" textColor:kThemeWhiteColor font:Font_Regular(12*Proportion375) backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentCenter];
+        _commentLab.frame = CGRectMake(0, 40 + 4, 40, 13*Proportion375);
+        [_commentBtn addSubview:_commentLab];
+        _commentLab.layer.shadowRadius = 0.0f;
+        _commentLab.layer.shadowOpacity = 0.3;
+        _commentLab.layer.shadowColor = [UIColor blackColor].CGColor;
+        _commentLab.layer.shadowOffset = CGSizeMake(1,1);
+        _commentLab.layer.masksToBounds = NO;
+
+        @weakify(self)
+        [[_commentBtn rac_signalForControlEvents:UIControlEventTouchUpInside]subscribeNext:^(id x) {
+            @strongify(self)
+            [PageMgr pushToChatViewControllerWithTargetUserId:self.dataModel.master.uid];
+        }];
+        
+    }
+    return _commentBtn;
+}
+-(UIButton *)shareBtn
+{
+    if (!_shareBtn) {
+        _shareBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_shareBtn setBackgroundImage:[UIImage imageNamed:@"home_share_img"] forState:UIControlStateNormal];
+        [_shareBtn setBackgroundImage:[UIImage imageNamed:@"home_share_img"] forState:UIControlStateHighlighted];
+        _shareLab = [UILabel labelWithText:@"999" textColor:kThemeWhiteColor font:Font_Regular(12*Proportion375) backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentCenter];
+        _shareLab.frame = CGRectMake(0, 40 + 4, 40, 13*Proportion375);
+        [_shareBtn addSubview:_shareLab];
+        _shareLab.layer.shadowRadius = 0.0f;
+        _shareLab.layer.shadowOpacity = 0.3;
+        _shareLab.layer.shadowColor = [UIColor blackColor].CGColor;
+        _shareLab.layer.shadowOffset = CGSizeMake(1,1);
+        _shareLab.layer.masksToBounds = NO;
+        @weakify(self);
+        [[_shareBtn rac_signalForControlEvents:UIControlEventTouchUpInside]subscribeNext:^(id x) {
+            @strongify(self);
+            [HDHud showMessageInView:self.viewController.view title:@"敬请期待"];
+        }];
+    }
+    return _shareBtn;
+}
+-(UILabel *)peopleText
+{
+    if (!_peopleText) {
+        _peopleText = [UILabel labelWithText:@"人" textColor:kThemeWhiteColor font:Font_Regular(10*Proportion375) backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentRight];
+        _peopleText.layer.shadowRadius = 0.0f;
+        _peopleText.layer.shadowOpacity = 0.3;
+        _peopleText.layer.shadowColor = [UIColor blackColor].CGColor;
+        _peopleText.layer.shadowOffset = CGSizeMake(1,1);
+        _peopleText.layer.masksToBounds = NO;
+
+    }
+    return _peopleText;
+}
+-(UILabel *)peopleNum
+{
+    if (!_peopleNum) {
+        _peopleNum = [UILabel labelWithText:@"666" textColor:kThemeWhiteColor font:Font_Regular(22*Proportion375) backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentRight];
+        _peopleNum.layer.shadowRadius = 0.0f;
+        _peopleNum.layer.shadowOpacity = 0.3;
+        _peopleNum.layer.shadowColor = [UIColor blackColor].CGColor;
+        _peopleNum.layer.shadowOffset = CGSizeMake(1,1);
+        _peopleNum.layer.masksToBounds = NO;
+
+    }
+    return _peopleNum;
+}
+-(SLShadowLabel *)nickName
+{
+    if (!_nickName) {
+        _nickName = [SLShadowLabel labelWithText:@"YiBaiWan" textColor:kThemeWhiteColor font:Font_Medium(14) backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentLeft];
+        _nickName.layer.shadowRadius = 0.0f;
+        _nickName.layer.shadowOpacity = 0.3;
+        _nickName.layer.shadowColor = [UIColor blackColor].CGColor;
+        _nickName.layer.shadowOffset = CGSizeMake(1,1);
+        _nickName.layer.masksToBounds = NO;
+    }
+    return _nickName;
+}
+-(UILabel *)liveTitle
+{
+    if (!_liveTitle) {
+        _liveTitle = [UILabel labelWithText:@"大佬开播！大佬开播！大佬开播！大佬开播！大佬开播！大佬开播！大佬开播！" textColor:kThemeWhiteColor font:Font_Medium(16*Proportion375) backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentLeft];
+        _liveTitle.numberOfLines = 0;
+        _liveTitle.layer.shadowRadius = 0.0f;
+        _liveTitle.layer.shadowOpacity = 0.3;
+        _liveTitle.layer.shadowColor = [UIColor blackColor].CGColor;
+        _liveTitle.layer.shadowOffset = CGSizeMake(1,1);
+        _liveTitle.layer.masksToBounds = NO;
+        
+    }
+    return _liveTitle;
+}
+-(SLShadowLabel *)testLab
+{
+    if (!_testLab) {
+        _testLab = [SLShadowLabel labelWithText:@"配音预留" textColor:kThemeWhiteColor font:Font_Regular(12) backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentLeft];
+        _testLab.layer.shadowRadius = 0.0f;
+        _testLab.layer.shadowOpacity = 0.3;
+        _testLab.layer.shadowColor = [UIColor blackColor].CGColor;
+        _testLab.layer.shadowOffset = CGSizeMake(1,1);
+        _testLab.layer.masksToBounds = NO;
+        _testLab.hidden = YES;
+
+    }
+    return _testLab;
+}
+-(void)headPortraitClickAuthor{
+    [PageMgr pushToUserCenterControllerWithUserModel:_dataModel.master viewcontroller:(BaseViewController *)self.viewController];
+}
+-(void)gotoWallet
+{
+    [PageMgr pushtoTopListVCwithUid:_dataModel.master.uid viewcontroller:(BaseViewController *)self.viewController];
+}
 
 @end
 
