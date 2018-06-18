@@ -215,6 +215,46 @@
  *显示全数字1,234,123,231
  */
 + (NSString *)transformMoney:(NSString *)string;
+#pragma mark 系统和设备信息
+/**
+ *@brief 获取iOS系统的版本
+ */
++ (NSString *)iOSVersion;
+
+/**
+ *    @brief 获取当前设备ios版本号
+ *  @return 返回值是float型
+ */
++(float) getCurrentDeviceVersion;
+/**
+ *    @brief  获取用户的ADFA
+ *
+ */
++ (NSString *) getAdvertisingIdentifier;
+
+/**
+ *    @brief 获取当前设备类型如ipod，iphone，ipad
+ *
+ */
++ (NSString *)deviceType;
+
+/**
+ *    @brief    获取请求$val 是所有参数值的字符串连接,以键值逆向排序
+ *
+ *    @param     dict     请求参数
+ *
+ *    @return     val
+ */
++(NSString *)getValPara:(NSMutableDictionary *)dict;
+
+/**
+ *    @brief    将json数据转换成id
+ *
+ *    @param data 数据
+ *
+ *    @return     id类型的数据
+ */
++ (id)parserJsonData:(id)jsonData;
 
 
 @end
