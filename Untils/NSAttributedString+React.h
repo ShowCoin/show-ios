@@ -17,4 +17,7 @@
 
 -(CGFloat)getWidthWithFont:(UIFont *)font height:(CGFloat)height;
 
+
+
+-(CGFloat)getHeightWithFont:(UIFont *)font width:(CGFloat)width;
 @end
