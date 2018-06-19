@@ -52,5 +52,39 @@
     }
     return self;
 }
+-(YYAnimatedImageView *)coverImage
+{
+    if (!_coverImage) {
+        _coverImage = [[YYAnimatedImageView alloc]initWithFrame:CGRectMake(0, 0,cellWith ,cellWith/10*16)];
+        _coverImage.contentMode = UIViewContentModeScaleAspectFill;
+        [_coverImage setImage:[UIImage imageNamed:@"home_start_img"]];
+        _coverImage.clipsToBounds = YES;
+//        _coverImage.hidden = YES;
+    }
+    return _coverImage;
+}
+
+
+-(SLHeadPortrait *)headPortrait
+{
+    if (!_headPortrait) {
+        _headPortrait = [[SLHeadPortrait alloc] initWithFrame:CGRectMake(8*Proportion375, 20*Proportion375, 15*Proportion375, 15*Proportion375)];
+        _headPortrait.bottom = cellHeight - 8*Proportion375;
+        _headPortrait.delegate = self;
+        
+        
+    }
+    return _headPortrait;
+}
+
+-(UILabel *)nickName
+{
+    if (!_nickName) {
+        _nickName = [UILabel labelWithText:@"YiBaiWan" textColor:kThemeWhiteColor font:Font_Regular(11*Proportion375) backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentLeft];
+        
+    }
+    return _nickName;
+}
+
 
 @end
