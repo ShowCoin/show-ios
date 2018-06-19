@@ -33,7 +33,21 @@
     return timeString;
 }
 
-
++ (UIImage *)imageAtApplicationDirectoryWithName:(NSString *)fileName {
+    if(fileName) {
+        NSString *path = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:[fileName stringByDeletingPathExtension]];
+        path = [NSString stringWithFormat:@"%@@2x.%@",path,[fileName pathExtension]];
+        if(![[NSFileManager defaultManager] fileExistsAtPath:path]) {
+            path = nil;
+        }
+        
+        if(!path) {
+            path = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:fileName];
+        }
+        return [UIImage imageWithContentsOfFile:path];
+    }
+    return nil;
+}
 
 //+ (NSTimeInterval)secondsOfSystemTimeSince:(NSTimeInterval)targetTime
 //{
