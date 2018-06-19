@@ -86,5 +86,32 @@
     return _nickName;
 }
 
+-(UILabel *)peopleText
+{
+    if (!_peopleText) {
+        _peopleText = [UILabel labelWithText:@"人观看" textColor:kThemeWhiteColor font:Font_Regular(10*Proportion375) backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentRight];
+        _peopleText.frame = CGRectMake(0, 0, 100, 10*Proportion375);
+    }
+    return _peopleText;
+}
+-(UILabel *)peopleNum
+{
+    if (!_peopleNum) {
+        _peopleNum = [UILabel labelWithText:@"666" textColor:kThemeWhiteColor font:Font_Regular(15*Proportion375) backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentRight];
+
+    }
+    return _peopleNum;
+}
+
+-(UILabel *)liveTitle
+{
+    if (!_liveTitle) {
+        _liveTitle = [UILabel labelWithText:@"" textColor:kThemeWhiteColor font:Font_Regular(13*Proportion375) backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentLeft];
+        _liveTitle.numberOfLines = 0;
+    }
+    return _liveTitle;
+}
+
+
 
 @end
