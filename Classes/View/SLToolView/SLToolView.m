@@ -96,6 +96,13 @@ CGFloat const kSLToolViewH  = 140;
 
 @implementation SLTitleView
 
+
+/**
+ <#Description#>
+
+ @param frame <#frame description#>
+ @return <#return value description#>
+ */
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
