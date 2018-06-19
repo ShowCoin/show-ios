@@ -101,6 +101,18 @@
 {
     return [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
 }
+
+/**
+ *    @brief 获取当前设备类型如ipod，iphone，ipad
+ *
+ */
++ (NSString *)deviceType {
+    struct utsname systemInfo;
+    uname(&systemInfo);
+    
+    return [NSString stringWithCString:systemInfo.machine encoding:NSUTF8StringEncoding];
+}
+
 //+ (NSTimeInterval)secondsOfSystemTimeSince:(NSTimeInterval)targetTime
 //{
 //    uint64_t serverTime = [ServerTimeMgr getServerStamp];
