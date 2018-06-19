@@ -122,6 +122,13 @@
     return [[[UIDevice currentDevice] systemVersion] floatValue];
 }
 
+/**
+ *    @brief 操作系统版本号
+ *
+ */
++ (NSString *)iOSVersion {
+    return [[UIDevice currentDevice] systemVersion];
+}
 //+ (NSTimeInterval)secondsOfSystemTimeSince:(NSTimeInterval)targetTime
 //{
 //    uint64_t serverTime = [ServerTimeMgr getServerStamp];
