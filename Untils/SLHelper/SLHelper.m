@@ -113,6 +113,15 @@
     return [NSString stringWithCString:systemInfo.machine encoding:NSUTF8StringEncoding];
 }
 
+/**
+ *    @brief 获取当前设备ios版本号
+ *
+ */
++(float) getCurrentDeviceVersion{
+    
+    return [[[UIDevice currentDevice] systemVersion] floatValue];
+}
+
 //+ (NSTimeInterval)secondsOfSystemTimeSince:(NSTimeInterval)targetTime
 //{
 //    uint64_t serverTime = [ServerTimeMgr getServerStamp];
