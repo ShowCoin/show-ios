@@ -40,5 +40,35 @@
     return _coverImage;
 }
 
+-(SLHeadPortrait *)headPortrait
+{
+    if (!_headPortrait) {
+        _headPortrait = [[SLHeadPortrait alloc] initWithFrame:CGRectMake(5*Proportion375, 20*Proportion375, 15*Proportion375, 15*Proportion375)];
+        _headPortrait.delegate = self;
+        
+    }
+    return _headPortrait;
+}
 
+-(UILabel *)nickName
+{
+    if (!_nickName) {
+        _nickName = [UILabel labelWithText:@"YiBaiWan" textColor:kThemeWhiteColor font:Font_Regular(10*Proportion375) backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentLeft];
+        
+    }
+    return _nickName;
+}
+
+-(void)setDataModel:(SLLiveListModel *)dataModel
+{
+    if (!dataModel) {
+        return;
+    }
+    _dataModel = dataModel;
+    
+    _headPortrait.bottom = cellHeight - 5*Proportion375;
+    [self.nickName setText:_dataModel.master.nickname];
+    [self.headPortrait setRoundStyle:YES imageUrl:_dataModel.master.avatar imageHeight:15*Proportion375 vip:NO attestation:NO];
+    [self.coverImage yy_setImageWithURL:[NSURL URLWithString:_dataModel.cover] placeholder:[UIImage imageNamed:@"home_start_img"]];
+}
 @end
