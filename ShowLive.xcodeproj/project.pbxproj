@@ -55,6 +55,7 @@
 		72FE9B6920621F59008DD3D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FE9B6820621F59008DD3D5 /* main.m */; };
 		72FE9B7320621F59008DD3D5 /* ShowLiveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FE9B7220621F59008DD3D5 /* ShowLiveTests.m */; };
 		72FE9B7E20621F59008DD3D5 /* ShowLiveUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FE9B7D20621F59008DD3D5 /* ShowLiveUITests.m */; };
+		93398ECF20D93370004376FB /* SLHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 93398ECE20D93370004376FB /* SLHelper.m */; };
 		93615AEB20C1453A000D5658 /* SLBaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93615AEA20C1453A000D5658 /* SLBaseWebViewController.m */; };
 		93615AF320C14BB2000D5658 /* SLSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 93615AF220C14BB2000D5658 /* SLSearchBar.m */; };
 		9391AA8320BF078A00D520F1 /* SLTimerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9391AA8220BF078A00D520F1 /* SLTimerLabel.m */; };
@@ -220,6 +221,7 @@
 		9319236D20B897C6001C6144 /* SLVMFriendList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLVMFriendList.h; sourceTree = "<group>"; };
 		931DAAC520B571C5003A0B38 /* SLGiftAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLGiftAction.h; sourceTree = "<group>"; };
 		931DAAC820B5A7A6003A0B38 /* SLConvListSystemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLConvListSystemTableViewCell.h; sourceTree = "<group>"; };
+		93398ECE20D93370004376FB /* SLHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLHelper.m; sourceTree = "<group>"; };
 		934E1B9720AC39D900A0B080 /* SLChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLChatViewController.h; sourceTree = "<group>"; };
 		934E1B9820AC3A1E00A0B080 /* SLChatViewController+BlankView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SLChatViewController+BlankView.h"; sourceTree = "<group>"; };
 		93615AE820C142D7000D5658 /* SLBaseWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLBaseWebViewController.h; sourceTree = "<group>"; };
@@ -588,6 +590,7 @@
 			isa = PBXGroup;
 			children = (
 				9314D1E520C53AE900BB2429 /* SLHelper.h */,
+				93398ECE20D93370004376FB /* SLHelper.m */,
 			);
 			path = SLHelper;
 			sourceTree = "<group>";
@@ -1016,6 +1019,7 @@
 				4325535A20CFE8B100FC0258 /* UIWebVIew+JKSwipeGesture.m in Sources */,
 				9391AA9720C03A4300D520F1 /* SLWebViewJSFuncNameConst.m in Sources */,
 				4325536F20D8B56400FC0258 /* MKMapView+JKMoveLogo.m in Sources */,
+				93398ECF20D93370004376FB /* SLHelper.m in Sources */,
 				434DDB5420C932AB00191FC1 /* CALayerDemoViewController.m in Sources */,
 				4325536320D8B4CD00FC0258 /* CATransactionDemoViewController.m in Sources */,
 				723816B420C689AB00C3885E /* SLLevelMarkView.m in Sources */,
