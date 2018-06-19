@@ -28,14 +28,15 @@ static BOOL isHot = NO;
     HomeHeader * view = [[HomeHeader alloc]initWithFrame:frame];
     return view;
 }
--(instancetype)initWithFrame:(CGRect)frame{
+
+- (instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
         [self setupViews];
     }
     return self;
 }
 
--(void)dealloc
+- (void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
@@ -84,7 +85,7 @@ static BOOL isHot = NO;
     return _rightBtn;
 }
 
--(UIImageView *)grayBg
+- (UIImageView *)grayBg
 {
     if (!_grayBg) {
         _grayBg = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, kMainScreenWidth, KNaviBarHeight)];
@@ -93,7 +94,7 @@ static BOOL isHot = NO;
     return _grayBg;
 }
 
--(UIButton *)navBtnA
+- (UIButton *)navBtnA
 {
     if (!_navBtnA) {
         _navBtnA=[UIButton buttonWithType:UIButtonTypeCustom];
@@ -113,7 +114,7 @@ static BOOL isHot = NO;
     return _navBtnA;
 }
 
--(UIButton *)navBtnB
+- (UIButton *)navBtnB
 {
     if (!_navBtnB) {
         _navBtnB=[UIButton buttonWithType:UIButtonTypeCustom];
@@ -134,7 +135,7 @@ static BOOL isHot = NO;
     return _navBtnB;
 }
 
--(UIButton *)navBtnC
+- (UIButton *)navBtnC
 {
     if (!_navBtnC) {
         _navBtnC=[UIButton buttonWithType:UIButtonTypeCustom];
@@ -155,7 +156,7 @@ static BOOL isHot = NO;
     return _navBtnC;
 }
 
--(UIButton *)leftBtn
+- (UIButton *)leftBtn
 {
     if (!_leftBtn) {
         _leftBtn=[UIButton buttonWithType:UIButtonTypeCustom];
@@ -167,16 +168,13 @@ static BOOL isHot = NO;
         @weakify(self);
         [[_leftBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
             @strongify(self);
-//            if (self.delegate && [self.delegate respondsToSelector:@selector(leftBtnClick:)]) {
-//                [self.delegate leftBtnClick:nil];
-//            }
             [HDHud showMessageInView:self.viewController.view title:@"敬请期待"];
         }];
     }
     return _leftBtn;
 }
 
--(UIView *)lineView
+- (UIView *)lineView
 {
     if (!_lineView) {
         _lineView = [[UIView alloc] initWithFrame:CGRectMake(0, KNaviBarHeight-2*Proportion375, 35*Proportion375, 2*Proportion375)];
@@ -187,7 +185,7 @@ static BOOL isHot = NO;
     return _lineView;
 }
 
--(void)changePageIndex:(NSInteger)index
+- (void)changePageIndex:(NSInteger)index
 {
     isHot = (index == 1);
     [[NSNotificationCenter defaultCenter]postNotificationName:SLHomeHideTabbarReleaseTimerNotification object:@(index ==1)];

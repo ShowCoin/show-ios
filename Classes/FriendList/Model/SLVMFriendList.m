@@ -14,17 +14,20 @@
 #import "SLAttentionListAction.h"
 #import "SLFriendListCell.h"
 
-static NSString* kLocalData4FriendList=@"kFriendListLocalData:%@";
+static NSString * kLocalData4FriendList = @"kFriendListLocalData:%@";
+
 @interface SLVMFriendList()<UITableViewDataSource>
 {
     NSMutableArray* searchedAry;
     NSLock* _lock;
 }
 @property (nonatomic, strong) SLAttentionListAction *friendListAction;
+
 @end
 
 @implementation SLVMFriendList
--(instancetype)init{
+
+- (instancetype)init{
     if (self=[super init]) {
         self.dataDict=[NSMutableDictionary dictionaryWithCapacity:1];
         self.listAry=[NSMutableArray arrayWithCapacity:1];
@@ -38,10 +41,12 @@ static NSString* kLocalData4FriendList=@"kFriendListLocalData:%@";
     }
     return self;
 }
--(void)dealloc{
+
+- (void)dealloc{
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
--(void)onObserverNotify:(NSNotification*)notification{
+
+- (void)onObserverNotify:(NSNotification*)notification{
     if ([notification.name isEqualToString:kNotificationFriendRemark]) {
         ShowUserModel* notifyUser=(ShowUserModel*)notification.object;
         BOOL isNeedRefresh=NO;
@@ -139,7 +144,8 @@ static NSString* kLocalData4FriendList=@"kFriendListLocalData:%@";
         [_tableView reloadData];
     }
 }
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     if (ValidStr(_searchKey)) {
         return 1;
     }else{
@@ -147,7 +153,7 @@ static NSString* kLocalData4FriendList=@"kFriendListLocalData:%@";
     }
 }
 
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (ValidStr(_searchKey)) {
         return [searchedAry count];
     }else{
@@ -167,7 +173,7 @@ static NSString* kLocalData4FriendList=@"kFriendListLocalData:%@";
     }
 }
 
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     SLFriendListCell* cell=[SLFriendListCell cellWithTableView:tableView];
     SLFansModel *curData=nil;
     if (ValidStr(_searchKey)) {
@@ -194,7 +200,8 @@ static NSString* kLocalData4FriendList=@"kFriendListLocalData:%@";
     cell.isAt =_isAt;
     return cell;
 }
--(void)updateData{
+
+- (void)updateData{
     NSMutableDictionary *dataDic=[[NSMutableDictionary alloc]init];
     
     NSString * pinyin=@"#";
@@ -228,7 +235,7 @@ static NSString* kLocalData4FriendList=@"kFriendListLocalData:%@";
 }
 
 
--(void)loadFromLocal{
+- (void)loadFromLocal{
     NSDictionary* dict=[SLHelper dictionaryWithJSON:[UserDefaultsUtils valueWithKey:[NSString stringWithFormat:kLocalData4FriendList,AccountUserInfoModel.uid]]];
     if (ValidDict(dict)) {
         [self handleData:dict];
@@ -238,7 +245,7 @@ static NSString* kLocalData4FriendList=@"kFriendListLocalData:%@";
         }
     }
 }
--(void)loadData:(SuccessBlock)succ withFail:(FailBlock)fail withCursor:(NSUInteger)cursor withUid:(NSUInteger)uid{
+- (void)loadData:(SuccessBlock)succ withFail:(FailBlock)fail withCursor:(NSUInteger)cursor withUid:(NSUInteger)uid{
     @weakify_old(self)
     _friendListAction = [SLAttentionListAction action];
     _friendListAction.cursor = [NSString stringWithFormat:@"%ld", (long)_cursor];
@@ -265,11 +272,14 @@ static NSString* kLocalData4FriendList=@"kFriendListLocalData:%@";
     };
     [_friendListAction start];
 }
--(void)refreshData:(SuccessBlock)succ withFail:(FailBlock)fail{
+
+- (void)refreshData:(SuccessBlock)succ withFail:(FailBlock)fail{
     self.cursor=0;
     [self loadData:succ withFail:fail withCursor:self.cursor withUid:self.uid];
 }
--(void)loadMoreData:(SuccessBlock)succ withFail:(FailBlock)fail{
+
+- (void)loadMoreData:(SuccessBlock)succ withFail:(FailBlock)fail{
     [self loadData:succ withFail:fail withCursor:self.cursor withUid:self.uid];
 }
+
 @end
