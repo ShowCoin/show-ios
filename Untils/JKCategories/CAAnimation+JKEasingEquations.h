@@ -11,6 +11,7 @@
 
 #import <QuartzCore/QuartzCore.h>
 
+//动画类型相关
 typedef NS_ENUM(NSInteger, CAAnimationEasingFunction) {
     CAAnimationEasingFunctionLinear,
     
