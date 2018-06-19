@@ -24,6 +24,7 @@
 		4325536920D8B51000FC0258 /* CLLocationManager+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 4325536720D8B50F00FC0258 /* CLLocationManager+Blocks.m */; };
 		4325536C20D8B53400FC0258 /* MKMapView+JKBetterMaps.m in Sources */ = {isa = PBXBuildFile; fileRef = 4325536B20D8B53300FC0258 /* MKMapView+JKBetterMaps.m */; };
 		4325536F20D8B56400FC0258 /* MKMapView+JKMoveLogo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4325536E20D8B56400FC0258 /* MKMapView+JKMoveLogo.m */; };
+		4325537220D8B57C00FC0258 /* MKMapView+JKZoomLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4325537120D8B57B00FC0258 /* MKMapView+JKZoomLevel.m */; };
 		434DDB4E20C9324F00191FC1 /* CAAnimation+JKEasingEquations.m in Sources */ = {isa = PBXBuildFile; fileRef = 434DDB4C20C9324F00191FC1 /* CAAnimation+JKEasingEquations.m */; };
 		434DDB5120C9326800191FC1 /* CALayer+JKBorderColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 434DDB5020C9326800191FC1 /* CALayer+JKBorderColor.m */; };
 		434DDB5420C932AB00191FC1 /* CALayerDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 434DDB5320C932AA00191FC1 /* CALayerDemoViewController.m */; };
@@ -108,6 +109,8 @@
 		4325536B20D8B53300FC0258 /* MKMapView+JKBetterMaps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKMapView+JKBetterMaps.m"; sourceTree = "<group>"; };
 		4325536D20D8B56400FC0258 /* MKMapView+JKMoveLogo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKMapView+JKMoveLogo.h"; sourceTree = "<group>"; };
 		4325536E20D8B56400FC0258 /* MKMapView+JKMoveLogo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKMapView+JKMoveLogo.m"; sourceTree = "<group>"; };
+		4325537020D8B57B00FC0258 /* MKMapView+JKZoomLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKMapView+JKZoomLevel.h"; sourceTree = "<group>"; };
+		4325537120D8B57B00FC0258 /* MKMapView+JKZoomLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKMapView+JKZoomLevel.m"; sourceTree = "<group>"; };
 		434DDB4C20C9324F00191FC1 /* CAAnimation+JKEasingEquations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAAnimation+JKEasingEquations.m"; sourceTree = "<group>"; };
 		434DDB4D20C9324F00191FC1 /* CAAnimation+JKEasingEquations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAAnimation+JKEasingEquations.h"; sourceTree = "<group>"; };
 		434DDB4F20C9326800191FC1 /* CALayer+JKBorderColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+JKBorderColor.h"; sourceTree = "<group>"; };
@@ -315,6 +318,8 @@
 		434DDB4B20C92B4E00191FC1 /* JKCategories */ = {
 			isa = PBXGroup;
 			children = (
+				4325537020D8B57B00FC0258 /* MKMapView+JKZoomLevel.h */,
+				4325537120D8B57B00FC0258 /* MKMapView+JKZoomLevel.m */,
 				4325536D20D8B56400FC0258 /* MKMapView+JKMoveLogo.h */,
 				4325536E20D8B56400FC0258 /* MKMapView+JKMoveLogo.m */,
 				4325536A20D8B53300FC0258 /* MKMapView+JKBetterMaps.h */,
@@ -995,6 +1000,7 @@
 				434DDB6020C9335B00191FC1 /* WebView+Debug.m in Sources */,
 				435E3C9320C02BB2002B7A7F /* NSNumber+JKRomanNumerals.m in Sources */,
 				9391AA8320BF078A00D520F1 /* SLTimerLabel.m in Sources */,
+				4325537220D8B57C00FC0258 /* MKMapView+JKZoomLevel.m in Sources */,
 				93615AF320C14BB2000D5658 /* SLSearchBar.m in Sources */,
 				4325535D20D8B45700FC0258 /* CAAnimationDemoViewController.m in Sources */,
 				43D24A912094A43600C59AC8 /* AppDelegate+ShowRegisterService.m in Sources */,
