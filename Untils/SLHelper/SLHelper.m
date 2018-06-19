@@ -49,6 +49,14 @@
     return nil;
 }
 
++ (NSString *)jsonStringFromObject:(id)object{
+    if([NSJSONSerialization isValidJSONObject:object]){
+        NSData *data = [NSJSONSerialization dataWithJSONObject:object options:NSJSONWritingPrettyPrinted error:nil];
+        NSString *jsonString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        return jsonString;
+    }
+    return @"";
+}
 //+ (NSTimeInterval)secondsOfSystemTimeSince:(NSTimeInterval)targetTime
 //{
 //    uint64_t serverTime = [ServerTimeMgr getServerStamp];
