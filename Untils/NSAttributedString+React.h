@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface NSAttributedString (React)
+-(CGFloat)getWidthWithAttributeString:(NSMutableAttributedString*)attributeString labelheight:(CGFloat)height;
 
 @end
