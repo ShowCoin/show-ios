@@ -15,5 +15,13 @@
     
     return ceilf(tmpRect.size.width);
 }
+-(CGFloat)getHeightWithAttributeString:(NSMutableAttributedString *)attributeString labelwidth:(CGFloat)width
+{
+    CGRect tmpRect = [self boundingRectWithSize:CGSizeMake(width, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading|NSStringDrawingTruncatesLastVisibleLine context:nil];
+    
+    return ceilf(tmpRect.size.height);
+}
+
+
 
 @end
