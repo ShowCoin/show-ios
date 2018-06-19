@@ -84,6 +84,23 @@
     }
     return dic;
 }
+
++ (id)valueForKey:(NSString *)key object:(NSDictionary *)object{
+    if([object isKindOfClass:[NSDictionary class]]){
+        return [object objectForKey:key];
+    }
+    return nil;
+}
+
+/**
+ *    @brief  获取用户的ADFA
+ *
+ */
++ (NSString *) getAdvertisingIdentifier
+
+{
+    return [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
+}
 //+ (NSTimeInterval)secondsOfSystemTimeSince:(NSTimeInterval)targetTime
 //{
 //    uint64_t serverTime = [ServerTimeMgr getServerStamp];
