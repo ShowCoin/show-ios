@@ -57,6 +57,33 @@
     }
     return @"";
 }
+
++ (NSDictionary *)dictionaryWithJSON:(id)json
+{
+    if (!json || json == (id)kCFNull) return nil;
+    NSDictionary *dic = nil;
+    NSData *jsonData = nil;
+    if ([json isKindOfClass:[NSDictionary class]]) {
+        dic = json;
+    } else if ([json isKindOfClass:[NSString class]]) {
+        jsonData = [(NSString *)json dataUsingEncoding : NSUTF8StringEncoding];
+    } else if ([json isKindOfClass:[NSData class]]) {
+        jsonData = json;
+    }
+    if (jsonData) {
+        NSError* error;
+        dic = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&error];
+        if (error) {
+            if ([json isKindOfClass:[NSString class]]) {
+                dic = [(NSString *)json mj_JSONObject];
+            } else if ([json isKindOfClass:[NSData class]]) {
+                dic = [(NSData*)json mj_JSONObject];
+            }
+        }
+        if (![dic isKindOfClass:[NSDictionary class]]) dic = nil;
+    }
+    return dic;
+}
 //+ (NSTimeInterval)secondsOfSystemTimeSince:(NSTimeInterval)targetTime
 //{
 //    uint64_t serverTime = [ServerTimeMgr getServerStamp];
