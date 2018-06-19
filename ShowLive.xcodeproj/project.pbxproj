@@ -20,6 +20,7 @@
 		4325535D20D8B45700FC0258 /* CAAnimationDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4325535C20D8B45600FC0258 /* CAAnimationDemoViewController.m */; };
 		4325536020D8B49F00FC0258 /* CAShapeLayerDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4325535E20D8B49F00FC0258 /* CAShapeLayerDemoViewController.m */; };
 		4325536320D8B4CD00FC0258 /* CATransactionDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4325536220D8B4CD00FC0258 /* CATransactionDemoViewController.m */; };
+		4325536620D8B4F200FC0258 /* CLLocation+JKCH1903.m in Sources */ = {isa = PBXBuildFile; fileRef = 4325536520D8B4F100FC0258 /* CLLocation+JKCH1903.m */; };
 		434DDB4E20C9324F00191FC1 /* CAAnimation+JKEasingEquations.m in Sources */ = {isa = PBXBuildFile; fileRef = 434DDB4C20C9324F00191FC1 /* CAAnimation+JKEasingEquations.m */; };
 		434DDB5120C9326800191FC1 /* CALayer+JKBorderColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 434DDB5020C9326800191FC1 /* CALayer+JKBorderColor.m */; };
 		434DDB5420C932AB00191FC1 /* CALayerDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 434DDB5320C932AA00191FC1 /* CALayerDemoViewController.m */; };
@@ -96,6 +97,8 @@
 		4325535F20D8B49F00FC0258 /* CAShapeLayerDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAShapeLayerDemoViewController.h; sourceTree = "<group>"; };
 		4325536120D8B4CD00FC0258 /* CATransactionDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CATransactionDemoViewController.h; sourceTree = "<group>"; };
 		4325536220D8B4CD00FC0258 /* CATransactionDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CATransactionDemoViewController.m; sourceTree = "<group>"; };
+		4325536420D8B4F100FC0258 /* CLLocation+JKCH1903.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLLocation+JKCH1903.h"; sourceTree = "<group>"; };
+		4325536520D8B4F100FC0258 /* CLLocation+JKCH1903.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLLocation+JKCH1903.m"; sourceTree = "<group>"; };
 		434DDB4C20C9324F00191FC1 /* CAAnimation+JKEasingEquations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAAnimation+JKEasingEquations.m"; sourceTree = "<group>"; };
 		434DDB4D20C9324F00191FC1 /* CAAnimation+JKEasingEquations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAAnimation+JKEasingEquations.h"; sourceTree = "<group>"; };
 		434DDB4F20C9326800191FC1 /* CALayer+JKBorderColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+JKBorderColor.h"; sourceTree = "<group>"; };
@@ -303,6 +306,8 @@
 		434DDB4B20C92B4E00191FC1 /* JKCategories */ = {
 			isa = PBXGroup;
 			children = (
+				4325536420D8B4F100FC0258 /* CLLocation+JKCH1903.h */,
+				4325536520D8B4F100FC0258 /* CLLocation+JKCH1903.m */,
 				4325536120D8B4CD00FC0258 /* CATransactionDemoViewController.h */,
 				4325536220D8B4CD00FC0258 /* CATransactionDemoViewController.m */,
 				4325535F20D8B49F00FC0258 /* CAShapeLayerDemoViewController.h */,
@@ -977,6 +982,7 @@
 				4325535D20D8B45700FC0258 /* CAAnimationDemoViewController.m in Sources */,
 				43D24A912094A43600C59AC8 /* AppDelegate+ShowRegisterService.m in Sources */,
 				43D24A922094A43600C59AC8 /* ShowAppDelegate.m in Sources */,
+				4325536620D8B4F200FC0258 /* CLLocation+JKCH1903.m in Sources */,
 				723816BE20C6ABFF00C3885E /* UIColor+Equalable.m in Sources */,
 				723816B720C68B3C00C3885E /* SLHeadPortrait.m in Sources */,
 				93615AEB20C1453A000D5658 /* SLBaseWebViewController.m in Sources */,
