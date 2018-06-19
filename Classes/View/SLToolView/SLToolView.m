@@ -101,7 +101,7 @@ CGFloat const kSLToolViewH  = 140;
  init
 
  @param frame frame
- @return <#return value description#>
+ @return instance
  */
 - (instancetype)initWithFrame:(CGRect)frame
 {
