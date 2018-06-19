@@ -14,4 +14,7 @@
 
 -(CGFloat)getHeightWithAttributeString:(NSMutableAttributedString*)attributeString labelwidth:(CGFloat)width;
 
+
+-(CGFloat)getWidthWithFont:(UIFont *)font height:(CGFloat)height;
+
 @end
