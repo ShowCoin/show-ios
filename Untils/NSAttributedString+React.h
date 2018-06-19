@@ -11,4 +11,7 @@
 @interface NSAttributedString (React)
 -(CGFloat)getWidthWithAttributeString:(NSMutableAttributedString*)attributeString labelheight:(CGFloat)height;
 
+
+-(CGFloat)getHeightWithAttributeString:(NSMutableAttributedString*)attributeString labelwidth:(CGFloat)width;
+
 @end
