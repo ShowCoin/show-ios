@@ -9,5 +9,11 @@
 #import "NSAttributedString+React.h"
 
 @implementation NSAttributedString (React)
+-(CGFloat)getWidthWithAttributeString:(NSMutableAttributedString *)attributeString labelheight:(CGFloat)height
+{
+    CGRect tmpRect = [self boundingRectWithSize:CGSizeMake(MAXFLOAT, height) options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading|NSStringDrawingTruncatesLastVisibleLine context:nil];
+    
+    return ceilf(tmpRect.size.width);
+}
 
 @end
