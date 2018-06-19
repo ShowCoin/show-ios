@@ -98,7 +98,7 @@ CGFloat const kSLToolViewH  = 140;
 
 
 /**
- <#Description#>
+ init
 
  @param frame <#frame description#>
  @return <#return value description#>
