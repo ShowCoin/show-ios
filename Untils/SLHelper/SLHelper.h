@@ -178,4 +178,125 @@
 + (id)valueForKey:(NSString *)key;
 + (void)setValue:(id)value forKey:(NSString *)key;
 
+#pragma mark 字符串格式化或单位换算
+/**
+ *@brief 对数字字符串进行友好的格式化，每四个空一格
+ */
++ (NSString *)friendFormatString:(NSString *)sourceStr;
+/**
+ *@brief 去掉小数点后面多余的0并且只保留两位小数
+ */
++(NSString *)trimright0:(double )param;
+/**
+ *@brief 换算距离，大于99km，返回>99km
+ *@note 单位为m或km
+ */
++ (NSString *)transformMetreToKilometre:(NSString *)meter;//>99km
+/**
+ *@brief 换算距离，大于99千，返回>99千
+ *@note 单位为千
+ */
++ (NSString *)transformMetreToKilometreAccurate:(NSString *)meter;
+/**
+ *@brief 计算开始时间与结束时间中间相隔xx天
+ *@param startTime 开始时间
+ *@param endTime 结束时间
+ */
++(NSString *)getLeftTimeWithStartTime:(double)startTime endTime:(double)endTime;
+/**
+ *@brief 数字统一规范
+ *0-9999显示全数字1234
+ *>9999，保留一位小数99.9万
+ *>100万，不保留小数333万
+ */
++ (NSString *)transformNumbers:(NSInteger)number;
+/**
+ *@brief 金币统一规范
+ *显示全数字1,234,123,231
+ */
++ (NSString *)transformMoney:(NSString *)string;
+#pragma mark 系统和设备信息
+/**
+ *@brief 获取iOS系统的版本
+ */
++ (NSString *)iOSVersion;
+
+/**
+ *    @brief 获取当前设备ios版本号
+ *  @return 返回值是float型
+ */
++(float) getCurrentDeviceVersion;
+/**
+ *    @brief  获取用户的ADFA
+ *
+ */
++ (NSString *) getAdvertisingIdentifier;
+
+/**
+ *    @brief 获取当前设备类型如ipod，iphone，ipad
+ *
+ */
++ (NSString *)deviceType;
+
+/**
+ *    @brief    获取请求$val 是所有参数值的字符串连接,以键值逆向排序
+ *
+ *    @param     dict     请求参数
+ *
+ *    @return     val
+ */
++(NSString *)getValPara:(NSMutableDictionary *)dict;
+
+/**
+ *    @brief    将json数据转换成id
+ *
+ *    @param data 数据
+ *
+ *    @return     id类型的数据
+ */
++ (id)parserJsonData:(id)jsonData;
+
+//IOS 异或加密
++(NSString *)obfuscate:(NSString *)string withKey:(NSString *)key;
+
+//日期 去除时分秒
++ (NSString *)DescriptionWithDate:(NSDate *)date;
+//遍历文件夹获得文件夹大小，返回多少M
+- (float ) folderSizeAtPath:(NSString*) folderPath;
+//单个文件的大小
+- (long long) fileSizeAtPath:(NSString*) filePath;
++ (NSString *) compareCurrentTime:(NSString *)str;
+/**
+ 解密作品url
+ 
+ @param workUrl 待解密的作品url
+ @return 解密后的作品url
+ */
++(NSString *)decodeWorkUrl:(NSString *)workUrl;
+
++(NSString*) decryptUseDES:(NSString*)cipherText key:(NSString*)key;
++ (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString ;
++(NSString *)convertToJsonData:(NSDictionary *)dict;
+**
+聊天会话页标题显示
+
+@param timeInterval 时间戳
+@return string
+*/
++ (NSString *)chatNavDisplayTitleStringWithInterval:(NSTimeInterval)timeInterval;
+
+
+/**
+ 聊天-消息列表cell时间显示转换
+ 
+ @param timeInterval 时间戳
+ @return string
+ */
++ (NSString *)chatMessageListTimeStringWithInterval:(NSTimeInterval)timeInterval;
+
+/// 获取纠正后的系统时间和targetTime时间戳之差
++ (NSTimeInterval)secondsOfSystemTimeSince:(NSTimeInterval)targetTime;
+//打乱数组顺序
++(NSMutableArray*)getRandomArrFrome:(NSArray*)arr;
++(NSData *)greatePublic:(NSData *)privateKey;
 @end
