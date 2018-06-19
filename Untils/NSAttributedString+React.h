@@ -1,0 +1,13 @@
+//
+//  NSAttributedString+React.h
+//  show gx
+//
+//  Created by show gx on 17/3/20.
+//  Copyright © 2017年 show gx. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+@interface NSAttributedString (React)
+
+@end
