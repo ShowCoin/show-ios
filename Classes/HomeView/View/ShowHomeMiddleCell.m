@@ -112,6 +112,36 @@
     return _liveTitle;
 }
 
+-(void)setDataModel:(SLLiveListModel *)dataModel
+{
+    if (!dataModel) {
+        return;
+    }
+    _dataModel = dataModel;
+    [self setConteViewScrollerAlpha:1.0f];
+    if (dataModel.cellType == SLLiveListCellType_Usercenter) {
+        [self.coverImage yy_setImageWithURL:[NSURL URLWithString:dataModel.cover] placeholder:[UIImage imageNamed:@"home_start_img"]];
+        [self.headPortrait setHidden:YES];
+        [self.nickName setHidden:YES];
+        [self.liveTitle setHidden:YES];
+        [self.peopleNum setText:dataModel.receive];
+        [self.peopleText setText:@"秀币"];
 
+    }else{
+        [self.coverImage yy_setImageWithURL:[NSURL URLWithString:dataModel.cover] placeholder:[UIImage imageNamed:@"home_start_img"]];
+        [self.headPortrait setRoundStyle:YES imageUrl:dataModel.master.avatar imageHeight:15*Proportion375 vip:NO attestation:NO];
+        [self.nickName setText:dataModel.master.nickname];
+        [self.liveTitle setText:dataModel.title];
+        [self.peopleNum setText:dataModel.online_users];
+    }
+}
+
+- (void)setConteViewScrollerAlpha:(CGFloat)alpha{
+    self.headPortrait.alpha = alpha ;
+    self.nickName.alpha = alpha ;
+    self.liveTitle.alpha = alpha ;
+    self.peopleText.alpha = alpha ;
+    self.peopleNum.alpha = alpha ;
+}
 
 @end
