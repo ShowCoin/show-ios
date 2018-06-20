@@ -19,9 +19,11 @@
 @optional
 // pause action
 - (void)sl_playerToolPause;
+// resume action
 - (void)sl_playerToolResume;
 // YES: clear NO: resume
 - (void)sl_playerToolClearScreen:(BOOL)isClear;
+// screen shoot action
 - (void)sl_playerToolScreenShoot;
 
 @end
