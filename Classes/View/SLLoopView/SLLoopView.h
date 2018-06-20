@@ -22,7 +22,7 @@ UIKIT_EXTERN CGFloat const kSLLoopViewHeight;
 
 // can set view's text/image
 - (void)setTitle:(NSString *)title subTitle:(NSString *)subTitle;
-
+// beginAnimation
 - (void)beginAnimation;
 - (void)endAnimation;
 
