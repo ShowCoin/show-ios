@@ -53,6 +53,7 @@
 
 /// Return YES if Authorized 返回YES如果得到了授权
 + (BOOL)authorizationStatusAuthorized;
+// authorization Status
 + (NSInteger)authorizationStatus;
 
 @end
