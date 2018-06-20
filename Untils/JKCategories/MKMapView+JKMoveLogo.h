@@ -12,9 +12,11 @@
 #import <MapKit/MapKit.h>
 
 @interface MKMapView (JKMoveLogo)
-
+//移动logo的位置
 - (void)jk_moveLogoByOffset:(CGPoint)offset;
+//移动logo位置到置顶地点
 - (void)jk_moveLogoToPoint:(CGPoint)point;
+//获取logo
 - (UIView*)jk_logo;
 
 @end

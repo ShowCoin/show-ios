@@ -11,5 +11,8 @@
 #import <MapKit/MapKit.h>
 
 @interface MKMapView (JKBetterMaps)
+
+//zomm坐标
 - (void)jk_zoomToFitAnnotationsAnimated:(BOOL)animated;
+
 @end
