@@ -30,6 +30,7 @@
 
 @interface SLPlayerMoreController : UIViewController
 
+// pause state
 @property (nonatomic, assign, readonly) BOOL pause;
 @property (nonatomic, assign) BOOL clear; // YES: isClear NO: isResume
 
