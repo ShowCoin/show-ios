@@ -24,6 +24,7 @@ UIKIT_EXTERN CGFloat const kSLLoopViewHeight;
 - (void)setTitle:(NSString *)title subTitle:(NSString *)subTitle;
 // beginAnimation
 - (void)beginAnimation;
+// endAnimation
 - (void)endAnimation;
 
 //+ (instancetype)shared;
