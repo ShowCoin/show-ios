@@ -17,7 +17,7 @@
 @protocol SLPlayerMoreDelegate <NSObject>
 
 @optional
-
+// pause action
 - (void)sl_playerToolPause;
 - (void)sl_playerToolResume;
 // YES: clear NO: resume
