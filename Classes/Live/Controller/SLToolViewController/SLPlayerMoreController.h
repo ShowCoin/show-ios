@@ -40,7 +40,9 @@
 
 + (instancetype)shared;
 // when change viewcontroller need resetTool
+// note method
 // + (void)resetTool;
+// dismiss antion
 + (void)dismiss;
 
 @end
