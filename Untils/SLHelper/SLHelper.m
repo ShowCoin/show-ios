@@ -225,6 +225,25 @@
     return fullPath;
 }
 
++ (NSString *)formatFileSize:(long long)fileSize {
+    float size = fileSize;
+    //    if (fileSize < 1023) {
+    //        return([NSString stringWithFormat:@"%i bytes",fileSize]);
+    //    }
+    
+    size = size / 1024.0f;
+    if (size < 1023) {
+        return([NSString stringWithFormat:@"%1.2f KB",size]);
+    }
+    
+    size = size / 1024.0f;
+    if (size < 1023) {
+        return([NSString stringWithFormat:@"%1.2f MB",size]);
+    }
+    
+    size = size / 1024.0f;
+    return [NSString stringWithFormat:@"%1.2f GB",size];
+}
 //+ (NSTimeInterval)secondsOfSystemTimeSince:(NSTimeInterval)targetTime
 //{
 //    uint64_t serverTime = [ServerTimeMgr getServerStamp];
