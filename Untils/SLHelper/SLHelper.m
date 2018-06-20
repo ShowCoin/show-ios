@@ -209,6 +209,22 @@
     return YES;
 }
 
++ (NSString*)getPathInUserDocument:(NSString*) aPath{
+    NSString *fullPath = nil;
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    
+    if ([paths count] > 0)
+    {
+        fullPath = (NSString *)[paths objectAtIndex:0];
+        if(aPath != nil && [aPath compare:@""] != NSOrderedSame)
+        {
+            fullPath = [fullPath stringByAppendingPathComponent:aPath];
+        }
+    }
+    
+    return fullPath;
+}
+
 //+ (NSTimeInterval)secondsOfSystemTimeSince:(NSTimeInterval)targetTime
 //{
 //    uint64_t serverTime = [ServerTimeMgr getServerStamp];
