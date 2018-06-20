@@ -139,6 +139,19 @@
     return isMatch;
     
 }
+// 正则判断手机号码地址格式
++ (BOOL)isMobileNumber:(NSString *)mobileNum {
+    
+    //NSString *str = @"^13\\d{9}|14[57]\\d{8}|15[012356789]\\d{8}|18\\d{9}$";
+    //增加170字段判断
+    NSString *str = @"^13\\d{9}|14[57]\\d{8}|15[012356789]\\d{8}|18\\d{9}|17\\d{9}$";
+    NSPredicate *regextestmobile = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", str];
+    if (([regextestmobile evaluateWithObject:mobileNum] == YES)) {
+        return YES;
+    } else {
+        return NO;
+    }
+}
 
 //+ (NSTimeInterval)secondsOfSystemTimeSince:(NSTimeInterval)targetTime
 //{
