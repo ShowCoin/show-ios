@@ -184,6 +184,31 @@
     return [identityCardPredicate evaluateWithObject:identityCard];
 }
 
++ (BOOL)createFolder:(NSString*)folderPath isDirectory:(BOOL)isDirectory {
+    NSString *path = nil;
+    if(isDirectory) {
+        path = folderPath;
+    } else {
+        path = [folderPath stringByDeletingLastPathComponent];
+    }
+    
+    if(folderPath && [[NSFileManager defaultManager] fileExistsAtPath:path] == NO) {
+        NSError *error = nil;
+        BOOL ret;
+        
+        ret = [[NSFileManager defaultManager] createDirectoryAtPath:path
+                                        withIntermediateDirectories:YES
+                                                         attributes:nil
+                                                              error:&error];
+        if(!ret && error) {
+            NSLog(@"create folder failed at path '%@',error:%@,%@",folderPath,[error localizedDescription],[error localizedFailureReason]);
+            return NO;
+        }
+    }
+    
+    return YES;
+}
+
 //+ (NSTimeInterval)secondsOfSystemTimeSince:(NSTimeInterval)targetTime
 //{
 //    uint64_t serverTime = [ServerTimeMgr getServerStamp];
