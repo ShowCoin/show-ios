@@ -36,6 +36,7 @@ UIKIT_EXTERN CGFloat const kSLLoopViewHeight;
 
 @interface SLLoopContentView : UIView
 
+// SLRotationImageView
 @property (nonatomic, weak, readonly) SLRotationImageView *imageView;
 @property (nonatomic, weak, readonly) UILabel *textLabel;
 
