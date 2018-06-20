@@ -10,5 +10,9 @@
 
 @interface NSObject (NSInteger)
 
+//保留一位小数（进1）
++(NSString *)getStringForNum:(NSInteger)num;
+
+
   
 @end
