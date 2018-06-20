@@ -153,6 +153,24 @@
     }
 }
 
+/**
+ @brief 通过正则表达式判断是合法昵称
+ */
++ (BOOL)isAvailableName:(NSString *)name{
+    //    NSString *str = @"^(?!_)[\\w_\\u4e00-\\u9fa5\\ud83c\\udc00-\\ud83c\\udfff\\ud83d\\udc00-\\ud83d\\udfff\\u2600-\\u27ff]{2,8}$";
+    //    NSPredicate *regextestmobile = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", str];
+    //    if (([regextestmobile evaluateWithObject:name] == YES)) {
+    //        return YES;
+    //    } else {
+    //        return NO;
+    //    }
+    if (name.length>8) {
+        return NO;
+    }else{
+        return YES;
+    }
+}
+
 //+ (NSTimeInterval)secondsOfSystemTimeSince:(NSTimeInterval)targetTime
 //{
 //    uint64_t serverTime = [ServerTimeMgr getServerStamp];
