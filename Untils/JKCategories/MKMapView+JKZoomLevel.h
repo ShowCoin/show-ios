@@ -11,7 +11,7 @@
 #import <MapKit/MapKit.h>
 
 @interface MKMapView (JKZoomLevel)
-
+//设定中心，level,动画
 - (void)jk_setCenterCoordinate:(CLLocationCoordinate2D)centerCoordinate
                   zoomLevel:(NSUInteger)zoomLevel
                    animated:(BOOL)animated;
