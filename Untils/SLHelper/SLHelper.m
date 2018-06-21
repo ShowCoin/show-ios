@@ -282,6 +282,18 @@
     
     return totalFileSize;
 }
++ (void)removeContentsOfFolder:(NSString *)folderPath {
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSArray *contents = [fileManager subpathsAtPath:folderPath];
+    NSEnumerator *enumerator = [contents objectEnumerator];
+    
+    NSString *file;
+    while (file = [enumerator nextObject]) {
+        NSString *path = [folderPath stringByAppendingPathComponent:file];
+        [fileManager removeItemAtPath:path error:nil];
+    }
+}
+
 
 
 
