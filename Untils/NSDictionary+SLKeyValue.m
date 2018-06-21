@@ -15,5 +15,8 @@
     
 }
 
-- (NSString *)sl_safeStringForVale:(id)value;
+- (NSString *)sl_safeStringForVale:(id)value
+{
+    
+}
 @end
