@@ -11,5 +11,9 @@
 @implementation NSDictionary (SLKeyValue)
 
 - (NSString *)sl_safeStringForKey:(id)key
+{
+    
+}
 
+- (NSString *)sl_safeStringForVale:(id)value;
 @end
