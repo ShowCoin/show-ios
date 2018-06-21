@@ -25,5 +25,5 @@
 @property (nonatomic, copy) void (^shareSuccessBlock)(void);
 
 -(void)setShareType:(SLShareType)sType andInfo:(NSString*)info andUID:(NSString *)uid;
-
++ (instancetype)shared;
 @end
