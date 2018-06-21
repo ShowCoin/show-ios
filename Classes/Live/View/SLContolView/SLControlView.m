@@ -81,18 +81,18 @@
     }
 }
 
-- (void)setHidden:(BOOL)hidden {
-    if (_isFirst) {
-        [super setHidden:hidden];
-        _isFirst = NO;
-        return;
-    }
-    [super setHidden:NO];
-    for (UIView *v in self.subviews) {
-        if ([v respondsToSelector:@selector(sl_viewAnimationShow:)]) {
-            [v performSelector:@selector(sl_viewAnimationShow:) withObject:[NSNumber numberWithBool:hidden]];
-        }
-    }
-}
+//- (void)setHidden:(BOOL)hidden {
+//    if (_isFirst) {
+//        [super setHidden:hidden];
+//        _isFirst = NO;
+//        return;
+//    }
+//    [super setHidden:NO];
+//    for (UIView *v in self.subviews) {
+//        if ([v respondsToSelector:@selector(sl_viewAnimationShow:)]) {
+//            [v performSelector:@selector(sl_viewAnimationShow:) withObject:[NSNumber numberWithBool:hidden]];
+//        }
+//    }
+//}
 
 @end
