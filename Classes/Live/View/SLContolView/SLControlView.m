@@ -72,5 +72,13 @@
     [self showAnimate:[noti.object boolValue]];
 }
 
+- (void)showAnimate:(BOOL)show {
+    self.hidden = NO;
+    for (UIView *v in self.subviews) {
+        if ([v respondsToSelector:@selector(sl_viewAnimationShow:)]) {
+            [v performSelector:@selector(sl_viewAnimationShow:) withObject:[NSNumber numberWithBool:show]];
+        }
+    }
+}
 
 @end
