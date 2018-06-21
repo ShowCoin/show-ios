@@ -126,5 +126,104 @@
     return 65;
 }
 
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    SLSafeCenterCell * Cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    Cell = [[SLSafeCenterCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+    Cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    if (!Cell) {
+        Cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }
+    switch (indexPath.section) {
+        case 0:
+        {
+            switch (indexPath.row) {
+                case 0:
+                    Cell.title.text = @"手势密码";
+                    [Cell addSubview:self.GestureSwitch];
+                    Cell.arrow.hidden = YES;
+                    break;
+                case 1:
+                    Cell.title.text = @"   需要手势密码";
+                    Cell.arrow.hidden = NO;
+                    Cell.textLab.text = @"2分钟";
+                    Cell.textLab.right = kMainScreenWidth - 32*Proportion375;
+                    break;
+                case 2:
+                    Cell.title.text = @"   修改手势密码";
+                    Cell.arrow.hidden = NO;
+
+                    break;
+                case 3:
+                    Cell.title.text = @"   指纹解锁";
+                    [Cell addSubview:self.handSwitch];
+                    Cell.arrow.hidden = YES;
+                    break;
+                default:
+                    break;
+            }
+        }
+            break;
+        case 1:
+        {
+            switch (indexPath.row) {
+                case 0:
+                    Cell.title.text = @"绑定手机";
+                    Cell.arrow.hidden = YES;
+                    Cell.textLab.text = @"未绑定";
+                    Cell.textLab.textColor =HexRGBAlpha(0x066bfc, 1);
+                    break;
+                case 1:
+                    Cell.title.text = @"绑定邮箱";
+                    Cell.arrow.hidden = YES;
+                    Cell.textLab.text = @"已绑定";
+                    Cell.textLab.textColor =kGrayWith999999;
+                    break;
+                case 2:
+                    Cell.title.text = @"资金密码";
+                    Cell.arrow.hidden = NO;
+                    break;
+                default:
+                    break;
+            }
+        }
+            break;
+        case 2:
+        {
+            Cell.title.text = @"在线有效期";
+            Cell.arrow.hidden = NO;
+            Cell.textLab.text = @"1天";
+            Cell.textLab.right = kMainScreenWidth - 32*Proportion375;
+
+        }
+            break;
+        case 3:
+        {
+            Cell.title.text = @"下单二次确认";
+            [Cell addSubview:self.reSureSwitch];
+            Cell.arrow.hidden = YES;
+
+        }
+            break;
+        default:
+            break;
+    }
+    return Cell;
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
 
 @end
