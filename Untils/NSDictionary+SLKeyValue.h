@@ -10,6 +10,6 @@
 
 @interface NSDictionary (SLKeyValue)
 
-
+- (NSString *)sl_safeStringForKey:(id)key;
 
 @end
