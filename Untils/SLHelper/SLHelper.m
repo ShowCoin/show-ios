@@ -244,11 +244,16 @@
     size = size / 1024.0f;
     return [NSString stringWithFormat:@"%1.2f GB",size];
 }
-//+ (NSTimeInterval)secondsOfSystemTimeSince:(NSTimeInterval)targetTime
-//{
-//    uint64_t serverTime = [ServerTimeMgr getServerStamp];
-//    NSTimeInterval timeSpace = targetTime - serverTime / 1000;
-//    return timeSpace;
-//}
++ (int)sizeOfFile:(NSString *)path {
+    NSError *error;
+    NSDictionary *attributes = [[NSFileManager defaultManager] attributesOfItemAtPath:path error:&error];
+    
+    if(!error) {
+        return (int)[attributes fileSize];
+    }
+    
+    return 0;
+}
+
 
 @end
