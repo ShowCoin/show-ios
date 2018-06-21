@@ -268,6 +268,21 @@
     return nil;
 }
 
++ (long long)sizeOfFolder:(NSString*)folderPath {
+    NSError *error;
+    NSArray *contents = [[NSFileManager defaultManager] subpathsAtPath:folderPath];
+    NSEnumerator *enumerator = [contents objectEnumerator];
+    long long totalFileSize = 0;
+    
+    NSString *path = nil;
+    while (path = [enumerator nextObject]) {
+        NSDictionary *attributes = [[NSFileManager defaultManager] attributesOfItemAtPath:[folderPath stringByAppendingPathComponent:path] error:&error];
+        totalFileSize += [attributes fileSize];
+    }
+    
+    return totalFileSize;
+}
+
 
 
 @end
