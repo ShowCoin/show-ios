@@ -304,7 +304,24 @@
         [fileManager createDirectoryAtPath:folderPath withIntermediateDirectories:YES attributes:nil error:nil];
     }
 }
-
++ (NSInteger)getUrlSchemesIndex:(NSString*)URLString  {
+    NSInteger index = -1;
+    NSArray *schemesArray;
+    schemesArray = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleURLTypes"];
+    if ([schemesArray count] > 0) {
+        NSDictionary *dic = [schemesArray objectAtIndex:0];
+        schemesArray = [dic objectForKey:@"CFBundleURLSchemes"];
+        int i = 0;
+        for (NSString *schemesName in schemesArray) {
+            if([URLString rangeOfString:schemesName].location != NSNotFound){
+                return index = i;
+            }
+            i ++;
+        }
+    }
+    
+    return index;
+}
 
 
 
