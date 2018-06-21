@@ -22,8 +22,9 @@ UIKIT_EXTERN CGFloat const kSLLoopViewHeight;
 
 // can set view's text/image
 - (void)setTitle:(NSString *)title subTitle:(NSString *)subTitle;
-
+// beginAnimation
 - (void)beginAnimation;
+// endAnimation
 - (void)endAnimation;
 
 //+ (instancetype)shared;
@@ -35,7 +36,9 @@ UIKIT_EXTERN CGFloat const kSLLoopViewHeight;
 
 @interface SLLoopContentView : UIView
 
+// SLRotationImageView
 @property (nonatomic, weak, readonly) SLRotationImageView *imageView;
+// textLabel
 @property (nonatomic, weak, readonly) UILabel *textLabel;
 
 @end

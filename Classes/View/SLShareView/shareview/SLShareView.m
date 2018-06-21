@@ -17,9 +17,20 @@
 @property(nonatomic,strong)NSArray * dataArray;
 @property(nonatomic,strong)UIButton * closeButton;
 
-
 @end
+
 @implementation SLShareView
+
++ (instancetype)shared {
+    static SLShareView *_shareView = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _shareView = [[self alloc] initWithSuperView:UIApplication.sharedApplication.keyWindow.rootViewController.view
+                                     animationTravel:0.3
+                                          viewHeight:196+KTabbarSafeBottomMargin];
+    });
+    return _shareView;
+}
 
 - (void)dealloc
 {

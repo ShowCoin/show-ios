@@ -129,6 +129,121 @@
 + (NSString *)iOSVersion {
     return [[UIDevice currentDevice] systemVersion];
 }
+
+#pragma 正则匹配用户密码6-16位数字和字母组合
++ (BOOL)checkPassword:(NSString *) password
+{
+    NSString *pattern = @"^[0-9a-zA-Z_#]{6,16}$";
+    NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", pattern];
+    BOOL isMatch = [pred evaluateWithObject:password];
+    return isMatch;
+    
+}
+// 正则判断手机号码地址格式
++ (BOOL)isMobileNumber:(NSString *)mobileNum {
+    
+    //NSString *str = @"^13\\d{9}|14[57]\\d{8}|15[012356789]\\d{8}|18\\d{9}$";
+    //增加170字段判断
+    NSString *str = @"^13\\d{9}|14[57]\\d{8}|15[012356789]\\d{8}|18\\d{9}|17\\d{9}$";
+    NSPredicate *regextestmobile = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", str];
+    if (([regextestmobile evaluateWithObject:mobileNum] == YES)) {
+        return YES;
+    } else {
+        return NO;
+    }
+}
+
+/**
+ @brief 通过正则表达式判断是合法昵称
+ */
++ (BOOL)isAvailableName:(NSString *)name{
+    //    NSString *str = @"^(?!_)[\\w_\\u4e00-\\u9fa5\\ud83c\\udc00-\\ud83c\\udfff\\ud83d\\udc00-\\ud83d\\udfff\\u2600-\\u27ff]{2,8}$";
+    //    NSPredicate *regextestmobile = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", str];
+    //    if (([regextestmobile evaluateWithObject:name] == YES)) {
+    //        return YES;
+    //    } else {
+    //        return NO;
+    //    }
+    if (name.length>8) {
+        return NO;
+    }else{
+        return YES;
+    }
+}
+
+//身份证号
++ (BOOL) validateIdentityCard: (NSString *)identityCard
+{
+    BOOL flag;
+    if (identityCard.length <= 0) {
+        flag = NO;
+        return flag;
+    }
+    NSString *regex2 = @"^(\\d{14}|\\d{17})(\\d|[xX])$";
+    NSPredicate *identityCardPredicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",regex2];
+    return [identityCardPredicate evaluateWithObject:identityCard];
+}
+
++ (BOOL)createFolder:(NSString*)folderPath isDirectory:(BOOL)isDirectory {
+    NSString *path = nil;
+    if(isDirectory) {
+        path = folderPath;
+    } else {
+        path = [folderPath stringByDeletingLastPathComponent];
+    }
+    
+    if(folderPath && [[NSFileManager defaultManager] fileExistsAtPath:path] == NO) {
+        NSError *error = nil;
+        BOOL ret;
+        
+        ret = [[NSFileManager defaultManager] createDirectoryAtPath:path
+                                        withIntermediateDirectories:YES
+                                                         attributes:nil
+                                                              error:&error];
+        if(!ret && error) {
+            NSLog(@"create folder failed at path '%@',error:%@,%@",folderPath,[error localizedDescription],[error localizedFailureReason]);
+            return NO;
+        }
+    }
+    
+    return YES;
+}
+
++ (NSString*)getPathInUserDocument:(NSString*) aPath{
+    NSString *fullPath = nil;
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    
+    if ([paths count] > 0)
+    {
+        fullPath = (NSString *)[paths objectAtIndex:0];
+        if(aPath != nil && [aPath compare:@""] != NSOrderedSame)
+        {
+            fullPath = [fullPath stringByAppendingPathComponent:aPath];
+        }
+    }
+    
+    return fullPath;
+}
+
++ (NSString *)formatFileSize:(long long)fileSize {
+    float size = fileSize;
+    //    if (fileSize < 1023) {
+    //        return([NSString stringWithFormat:@"%i bytes",fileSize]);
+    //    }
+    
+    size = size / 1024.0f;
+    if (size < 1023) {
+        return([NSString stringWithFormat:@"%1.2f KB",size]);
+    }
+    
+    size = size / 1024.0f;
+    if (size < 1023) {
+        return([NSString stringWithFormat:@"%1.2f MB",size]);
+    }
+    
+    size = size / 1024.0f;
+    return [NSString stringWithFormat:@"%1.2f GB",size];
+}
 //+ (NSTimeInterval)secondsOfSystemTimeSince:(NSTimeInterval)targetTime
 //{
 //    uint64_t serverTime = [ServerTimeMgr getServerStamp];

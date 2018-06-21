@@ -17,16 +17,20 @@
 @protocol SLPlayerMoreDelegate <NSObject>
 
 @optional
+// pause action
 - (void)sl_playerToolPause;
+// resume action
 - (void)sl_playerToolResume;
 // YES: clear NO: resume
 - (void)sl_playerToolClearScreen:(BOOL)isClear;
+// screen shoot action
 - (void)sl_playerToolScreenShoot;
 
 @end
 
 @interface SLPlayerMoreController : UIViewController
 
+// pause state
 @property (nonatomic, assign, readonly) BOOL pause;
 @property (nonatomic, assign) BOOL clear; // YES: isClear NO: isResume
 
@@ -36,7 +40,9 @@
 
 + (instancetype)shared;
 // when change viewcontroller need resetTool
+// note method
 // + (void)resetTool;
+// dismiss antion
 + (void)dismiss;
 
 @end
@@ -49,6 +55,7 @@
 
 /// Return YES if Authorized 返回YES如果得到了授权
 + (BOOL)authorizationStatusAuthorized;
+// authorization Status
 + (NSInteger)authorizationStatus;
 
 @end
