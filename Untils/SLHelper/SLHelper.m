@@ -293,6 +293,17 @@
         [fileManager removeItemAtPath:path error:nil];
     }
 }
++ (void) deleteContentsOfFolder:(NSString *)folderPath {
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    [fileManager removeItemAtPath:folderPath error:nil];
+    
+    
+    BOOL isDir = NO;
+    BOOL existed = [fileManager fileExistsAtPath:folderPath isDirectory:&isDir];
+    if ( !(isDir == YES && existed == YES) ) {
+        [fileManager createDirectoryAtPath:folderPath withIntermediateDirectories:YES attributes:nil error:nil];
+    }
+}
 
 
 
