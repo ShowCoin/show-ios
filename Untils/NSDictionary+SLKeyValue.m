@@ -12,7 +12,7 @@
 
 - (NSString *)sl_safeStringForKey:(id)key
 {
-    
+    NSLog(@"key");
 }
 
 - (NSString *)sl_safeStringForVale:(id)value
