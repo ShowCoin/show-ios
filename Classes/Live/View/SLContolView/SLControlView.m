@@ -67,5 +67,10 @@
     [NSNotificationCenter.defaultCenter removeObserver:self];
 }
 
+- (void)sl_tabbarHidden:(NSNotification *)noti {
+    NSLog(@"[187] -- sl_tabbarHidden %@", [noti.object boolValue] ? @"YES" : @"NO");
+    [self showAnimate:[noti.object boolValue]];
+}
+
 
 @end
