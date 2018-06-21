@@ -22,4 +22,5 @@
 - (NSLayoutConstraint *)jk_centerXConstraint;
 - (NSLayoutConstraint *)jk_centerYConstraint;
 - (NSLayoutConstraint *)jk_baseLineConstraint;
+
 @end
