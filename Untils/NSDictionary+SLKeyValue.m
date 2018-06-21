@@ -6,9 +6,9 @@
 //  Copyright © Show All rights reserved.
 //
 
-#import "NSDictionary+DLKeyValue.h"
+#import "NSDictionary+SLKeyValue.h"
 
-@implementation NSDictionary (DLKeyValue)
+@implementation NSDictionary (SLKeyValue)
 
 
 @end
