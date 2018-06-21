@@ -16,6 +16,7 @@
 		43143928209497E80059D373 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 43143923209497E80059D373 /* Cartfile */; };
 		431BBB5C20DBCA5F006A3D50 /* UIView+JKRecursion.m in Sources */ = {isa = PBXBuildFile; fileRef = 431BBB5B20DBCA5F006A3D50 /* UIView+JKRecursion.m */; };
 		431BBB5F20DBCA96006A3D50 /* UIView+JKDraggable.m in Sources */ = {isa = PBXBuildFile; fileRef = 431BBB5E20DBCA96006A3D50 /* UIView+JKDraggable.m */; };
+		431BBB6220DBCABD006A3D50 /* UIView+JKCustomBorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 431BBB6020DBCABD006A3D50 /* UIView+JKCustomBorder.m */; };
 		4325535420CFE87700FC0258 /* UIWebViewDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4325535320CFE87700FC0258 /* UIWebViewDemoViewController.m */; };
 		4325535720CFE88D00FC0258 /* UIWebView+JKWebStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4325535620CFE88D00FC0258 /* UIWebView+JKWebStorage.m */; };
 		4325535A20CFE8B100FC0258 /* UIWebVIew+JKSwipeGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 4325535820CFE8B100FC0258 /* UIWebVIew+JKSwipeGesture.m */; };
@@ -103,6 +104,8 @@
 		431BBB5B20DBCA5F006A3D50 /* UIView+JKRecursion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JKRecursion.m"; sourceTree = "<group>"; };
 		431BBB5D20DBCA95006A3D50 /* UIView+JKDraggable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JKDraggable.h"; sourceTree = "<group>"; };
 		431BBB5E20DBCA96006A3D50 /* UIView+JKDraggable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JKDraggable.m"; sourceTree = "<group>"; };
+		431BBB6020DBCABD006A3D50 /* UIView+JKCustomBorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JKCustomBorder.m"; sourceTree = "<group>"; };
+		431BBB6120DBCABD006A3D50 /* UIView+JKCustomBorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JKCustomBorder.h"; sourceTree = "<group>"; };
 		4325535220CFE87700FC0258 /* UIWebViewDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIWebViewDemoViewController.h; sourceTree = "<group>"; };
 		4325535320CFE87700FC0258 /* UIWebViewDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIWebViewDemoViewController.m; sourceTree = "<group>"; };
 		4325535520CFE88C00FC0258 /* UIWebView+JKWebStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+JKWebStorage.h"; sourceTree = "<group>"; };
@@ -398,6 +401,8 @@
 				434DDB5220C932AA00191FC1 /* CALayerDemoViewController.h */,
 				434DDB5320C932AA00191FC1 /* CALayerDemoViewController.m */,
 				434DDB4F20C9326800191FC1 /* CALayer+JKBorderColor.h */,
+				431BBB6120DBCABD006A3D50 /* UIView+JKCustomBorder.h */,
+				431BBB6020DBCABD006A3D50 /* UIView+JKCustomBorder.m */,
 				431BBB5D20DBCA95006A3D50 /* UIView+JKDraggable.h */,
 				431BBB5E20DBCA96006A3D50 /* UIView+JKDraggable.m */,
 				431BBB5A20DBCA5E006A3D50 /* UIView+JKRecursion.h */,
@@ -1038,6 +1043,7 @@
 				435E3C8F20C02BB2002B7A7F /* NSDecimalNumber+JKExtensions.m in Sources */,
 				723816C520C6B6E300C3885E /* SLLinkLabel.m in Sources */,
 				43968A6A20AC398C00149DCC /* NSObject+Safe.m in Sources */,
+				431BBB6220DBCABD006A3D50 /* UIView+JKCustomBorder.m in Sources */,
 				4325536920D8B51000FC0258 /* CLLocationManager+Blocks.m in Sources */,
 				4325535420CFE87700FC0258 /* UIWebViewDemoViewController.m in Sources */,
 				434DDB6320C9337A00191FC1 /* UIWindow+JKHierarchy.m in Sources */,
