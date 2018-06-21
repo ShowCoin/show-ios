@@ -254,6 +254,20 @@
     
     return 0;
 }
++ (NSDate*)dateOfFileCreateWithFolderName:(NSString *)folderName cacheName:(NSString *)cacheName
+{
+    NSString *folder = [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:folderName];
+    NSString *filePath = [folder stringByAppendingPathComponent:cacheName];
+    NSError *error;
+    NSDictionary *attributes = [[NSFileManager defaultManager] attributesOfItemAtPath:filePath error:&error];
+    
+    if(!error) {
+        return [attributes objectForKey:NSFileCreationDate];
+    }
+    
+    return nil;
+}
+
 
 
 @end
