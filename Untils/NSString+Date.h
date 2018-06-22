@@ -44,6 +44,7 @@
 //时间转换时间戳
 +(NSString*)exchageTimeInterval:(NSString*)timeString;
 
-
+//获取pk当天日期
++(NSString*)getPKString;
 
 @end
