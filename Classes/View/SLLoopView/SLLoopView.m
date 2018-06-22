@@ -249,8 +249,4 @@ static BOOL isFirst = YES;
     self.imageView.frame = CGRectMake(w - 10 - imageWH, margin, imageWH, imageWH);
 }
 
-- (void)didMoveToSuperview {
-    [self.imageView addRotationAnimated];
-}
-
 @end
