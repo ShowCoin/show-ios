@@ -9,11 +9,10 @@
 // loop view animater with ContentView and RotationImageView
 
 #import <UIKit/UIKit.h>
+#import "SLMusicView.h"
 
 UIKIT_EXTERN CGFloat const kLoopTopMargin;
 UIKIT_EXTERN CGFloat const kSLLoopViewHeight;
-
-@class SLLoopContentView;
 
 @interface SLLoopView : UIView
 
