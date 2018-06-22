@@ -14,5 +14,6 @@
 +(NSString *)dateWithIntervale:(long long)interval formateStyle:(NSString*)style;
 -(long long)dateStringWithFormateStyle:(NSString*)style;
 
++ (NSString *)dateTimeDifferenceWithStartTime:(NSString *)startTime endTime:(NSString *)endTime;
 
 @end
