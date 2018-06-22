@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <objc/runtime.h>
 @interface UITextView (JKPlaceHolder) <UITextViewDelegate>
+
+//类似于textfeild 的placeholder
 @property (nonatomic, strong) UITextView *jk_placeHolderTextView;
 - (void)jk_addPlaceHolder:(NSString *)placeHolder;
 @end
