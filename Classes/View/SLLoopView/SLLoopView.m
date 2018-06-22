@@ -168,12 +168,6 @@ typedef void(^LoopBlock)(CAAnimation *anim, BOOL flag);
     }
 }
 
-- (void)didMoveToSuperview {
-    // when move to superview do animated
-    [self.imageView.imageView addRotationAnimated];
-    //    [self performSelector:@selector(startAnimation:) withObject:nil afterDelay:3];
-}
-
 #pragma mark - Public
 
 - (void)setTitle:(NSString *)title subTitle:(NSString *)subTitle {
