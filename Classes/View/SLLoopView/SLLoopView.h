@@ -25,6 +25,7 @@ UIKIT_EXTERN CGFloat const kSLLoopViewHeight;
 - (void)beginAnimation;
 // endAnimation
 - (void)endAnimation;
+- (void)showTitleMusicView;
 
 //+ (instancetype)shared;
 
