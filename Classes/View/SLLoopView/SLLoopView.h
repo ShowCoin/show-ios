@@ -16,6 +16,8 @@ UIKIT_EXTERN CGFloat const kSLLoopViewHeight;
 
 @interface SLLoopView : UIView
 
+@property (nonatomic, assign, readonly) BOOL isAnimating;
+
 // can set view's text/image
 - (void)setTitle:(NSString *)title subTitle:(NSString *)subTitle;
 // beginAnimation
