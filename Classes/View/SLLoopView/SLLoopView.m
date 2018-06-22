@@ -194,10 +194,12 @@ static BOOL isFirst = YES;
     [self.layer removeAllAnimations];
 }
 
+- (void)showTitleMusicView {
+    self.titleView.imageView.hidden = NO;
+}
+
 
 @end
-
-
 
 /**
  <#Description#>
