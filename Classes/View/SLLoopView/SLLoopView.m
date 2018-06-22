@@ -52,7 +52,6 @@ typedef void(^LoopBlock)(CAAnimation *anim, BOOL flag);
     dispatch_once(&onceToken, ^{
         instance = [[SLLoopView alloc] init];
         instance.frame = CGRectMake(0, 0, KScreenWidth * 2, kSLLoopViewHeight);
-        //[instance addTimer];
     });
     return instance;
 }
