@@ -12,6 +12,7 @@
 
 
 +(NSString *)dateWithIntervale:(long long)interval formateStyle:(NSString*)style;
+-(long long)dateStringWithFormateStyle:(NSString*)style;
 
 
 @end
