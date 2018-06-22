@@ -9,16 +9,14 @@
 // loop view animater with ContentView and RotationImageView
 
 #import <UIKit/UIKit.h>
+#import "SLMusicView.h"
 
 UIKIT_EXTERN CGFloat const kLoopTopMargin;
 UIKIT_EXTERN CGFloat const kSLLoopViewHeight;
 
-@class SLLoopContentView;
-
 @interface SLLoopView : UIView
 
-@property (nonatomic, strong, readonly) SLLoopContentView *titleView;
-@property (nonatomic, strong, readonly) SLLoopContentView *imageView;
+@property (nonatomic, assign, readonly) BOOL isAnimating;
 
 // can set view's text/image
 - (void)setTitle:(NSString *)title subTitle:(NSString *)subTitle;
@@ -26,6 +24,8 @@ UIKIT_EXTERN CGFloat const kSLLoopViewHeight;
 - (void)beginAnimation;
 // endAnimation
 - (void)endAnimation;
+// show title rotation view
+- (void)showTitleMusicView;
 
 //+ (instancetype)shared;
 
@@ -40,13 +40,5 @@ UIKIT_EXTERN CGFloat const kSLLoopViewHeight;
 @property (nonatomic, weak, readonly) SLRotationImageView *imageView;
 // textLabel
 @property (nonatomic, weak, readonly) UILabel *textLabel;
-
-@end
-
-
-
-@interface SLRotationImageView : UIImageView
-
-- (void)addRotationAnimated;
 
 @end
