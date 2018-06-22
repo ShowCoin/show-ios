@@ -11,6 +11,7 @@
 @interface NSString (Date)
 
 
++(NSString *)dateWithIntervale:(long long)interval formateStyle:(NSString*)style;
 
 
 @end
