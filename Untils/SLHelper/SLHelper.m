@@ -244,11 +244,85 @@
     size = size / 1024.0f;
     return [NSString stringWithFormat:@"%1.2f GB",size];
 }
-//+ (NSTimeInterval)secondsOfSystemTimeSince:(NSTimeInterval)targetTime
-//{
-//    uint64_t serverTime = [ServerTimeMgr getServerStamp];
-//    NSTimeInterval timeSpace = targetTime - serverTime / 1000;
-//    return timeSpace;
-//}
++ (int)sizeOfFile:(NSString *)path {
+    NSError *error;
+    NSDictionary *attributes = [[NSFileManager defaultManager] attributesOfItemAtPath:path error:&error];
+    
+    if(!error) {
+        return (int)[attributes fileSize];
+    }
+    
+    return 0;
+}
++ (NSDate*)dateOfFileCreateWithFolderName:(NSString *)folderName cacheName:(NSString *)cacheName
+{
+    NSString *folder = [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:folderName];
+    NSString *filePath = [folder stringByAppendingPathComponent:cacheName];
+    NSError *error;
+    NSDictionary *attributes = [[NSFileManager defaultManager] attributesOfItemAtPath:filePath error:&error];
+    
+    if(!error) {
+        return [attributes objectForKey:NSFileCreationDate];
+    }
+    
+    return nil;
+}
+
++ (long long)sizeOfFolder:(NSString*)folderPath {
+    NSError *error;
+    NSArray *contents = [[NSFileManager defaultManager] subpathsAtPath:folderPath];
+    NSEnumerator *enumerator = [contents objectEnumerator];
+    long long totalFileSize = 0;
+    
+    NSString *path = nil;
+    while (path = [enumerator nextObject]) {
+        NSDictionary *attributes = [[NSFileManager defaultManager] attributesOfItemAtPath:[folderPath stringByAppendingPathComponent:path] error:&error];
+        totalFileSize += [attributes fileSize];
+    }
+    
+    return totalFileSize;
+}
++ (void)removeContentsOfFolder:(NSString *)folderPath {
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSArray *contents = [fileManager subpathsAtPath:folderPath];
+    NSEnumerator *enumerator = [contents objectEnumerator];
+    
+    NSString *file;
+    while (file = [enumerator nextObject]) {
+        NSString *path = [folderPath stringByAppendingPathComponent:file];
+        [fileManager removeItemAtPath:path error:nil];
+    }
+}
++ (void) deleteContentsOfFolder:(NSString *)folderPath {
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    [fileManager removeItemAtPath:folderPath error:nil];
+    
+    
+    BOOL isDir = NO;
+    BOOL existed = [fileManager fileExistsAtPath:folderPath isDirectory:&isDir];
+    if ( !(isDir == YES && existed == YES) ) {
+        [fileManager createDirectoryAtPath:folderPath withIntermediateDirectories:YES attributes:nil error:nil];
+    }
+}
++ (NSInteger)getUrlSchemesIndex:(NSString*)URLString  {
+    NSInteger index = -1;
+    NSArray *schemesArray;
+    schemesArray = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleURLTypes"];
+    if ([schemesArray count] > 0) {
+        NSDictionary *dic = [schemesArray objectAtIndex:0];
+        schemesArray = [dic objectForKey:@"CFBundleURLSchemes"];
+        int i = 0;
+        for (NSString *schemesName in schemesArray) {
+            if([URLString rangeOfString:schemesName].location != NSNotFound){
+                return index = i;
+            }
+            i ++;
+        }
+    }
+    
+    return index;
+}
+
+
 
 @end
