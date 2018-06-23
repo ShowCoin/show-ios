@@ -22,10 +22,15 @@
 
 - (NSLayoutConstraint *)jk_leadingConstraint;
 - (NSLayoutConstraint *)jk_trailingConstraint;
+//宽度的约束
 - (NSLayoutConstraint *)jk_widthConstraint;
+//高度的约束
 - (NSLayoutConstraint *)jk_heightConstraint;
+//中间X的约束
 - (NSLayoutConstraint *)jk_centerXConstraint;
+//中间Y的约束
 - (NSLayoutConstraint *)jk_centerYConstraint;
+//基准line的约束
 - (NSLayoutConstraint *)jk_baseLineConstraint;
 
 @end
