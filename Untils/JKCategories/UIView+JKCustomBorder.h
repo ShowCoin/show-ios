@@ -38,9 +38,12 @@ typedef NS_OPTIONS(NSUInteger, JKExcludePoint) {
 //移除右边的边框
 - (void)jk_removeRightBorder;
 
-
+//添加顶部边框，颜色，宽度，点
 - (void)jk_addTopBorderWithColor:(UIColor *)color width:(CGFloat) borderWidth excludePoint:(CGFloat)point edgeType:(JKExcludePoint)edge;
+//添加左部边框，颜色，宽度，点
 - (void)jk_addLeftBorderWithColor: (UIColor *) color width:(CGFloat) borderWidth excludePoint:(CGFloat)point edgeType:(JKExcludePoint)edge;
+//添加底部边框，颜色，宽度，点
 - (void)jk_addBottomBorderWithColor:(UIColor *)color width:(CGFloat) borderWidth excludePoint:(CGFloat)point edgeType:(JKExcludePoint)edge;
+//添加右部边框，颜色，宽度，点
 - (void)jk_addRightBorderWithColor:(UIColor *)color width:(CGFloat) borderWidth excludePoint:(CGFloat)point edgeType:(JKExcludePoint)edge;
 @end
