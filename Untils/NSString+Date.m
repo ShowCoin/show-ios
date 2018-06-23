@@ -19,5 +19,14 @@
     return str;
 }
 
+-(long long)dateStringWithFormateStyle:(NSString *)style{
+    NSDateFormatter * formate=[[NSDateFormatter alloc]init];
+    [formate setDateFormat:style];
+    NSDate * date=[formate dateFromString:self];
+    NSTimeInterval interval=[date timeIntervalSince1970];
+    
+    return interval*1000;
+}
+
 
 @end
