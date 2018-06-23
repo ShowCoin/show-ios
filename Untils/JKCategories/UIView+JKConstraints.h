@@ -11,10 +11,15 @@
 @interface UIView (JKConstraints)
 - (NSLayoutConstraint *)jk_constraintForAttribute:(NSLayoutAttribute)attribute;
 
+//左边的约束
 - (NSLayoutConstraint *)jk_leftConstraint;
+//右边的约束
 - (NSLayoutConstraint *)jk_rightConstraint;
+//顶上的约束
 - (NSLayoutConstraint *)jk_topConstraint;
+//底部的约束
 - (NSLayoutConstraint *)jk_bottomConstraint;
+
 - (NSLayoutConstraint *)jk_leadingConstraint;
 - (NSLayoutConstraint *)jk_trailingConstraint;
 - (NSLayoutConstraint *)jk_widthConstraint;
