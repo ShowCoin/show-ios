@@ -18,7 +18,6 @@
 
 @interface SLLiveFinishView ()
 
-@property(nonatomic,strong) UIView * line1, *line2;
 @property(nonatomic,strong) SLLiveFinishItem * cnyitem;
 @property(nonatomic,strong) SLLiveFinishItem * watchesItem;
 @property(nonatomic,strong) SLLiveFinishItem * receiveItem;
