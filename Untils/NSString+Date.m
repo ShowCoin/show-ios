@@ -187,6 +187,53 @@
     
     return DateTime;
 }
+
++(NSString*)getPKString
+{
+    NSDate *now = [NSDate date];
+    
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:
+                            NSCalendarIdentifierGregorian];
+    NSUInteger unitFlags = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit;
+    NSDateComponents *dateComponent = [calendar components:unitFlags fromDate:now];
+    
+    int year =(int) [dateComponent year];
+    int month = (int) [dateComponent month];
+    int day = (int) [dateComponent day];
+    
+    //字符串的转化并且拼接
+    NSString *yearstr=[NSString stringWithFormat:@"%ld-",(long)year];
+    NSString *monthstr=[NSString stringWithFormat:@"%@-",[self exchangeWithInt:month]];
+    NSString *daystr=[NSString stringWithFormat:@"%@ ",[self exchangeWithInt:day]];
+    
+    //字符串开始拼接
+    NSString *allstr=[yearstr stringByAppendingString:monthstr];
+    NSString *allstr1=[allstr stringByAppendingString:daystr];
+    
+    
+    return allstr1;
+}
+
+
+- (NSString *)timeWithTimeIntervalString:(NSString *)timeString
+{
+    // 格式化时间
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateStyle:NSDateFormatterMediumStyle];
+    [formatter setTimeStyle:NSDateFormatterShortStyle];
+    [formatter setDateFormat:@"YYYY-MM-dd HH:mm:ss"];
+    NSTimeZone* timeZone = [NSTimeZone timeZoneWithName:@"Asia/Shanghai"];
+    [formatter setTimeZone:timeZone];
+    //日历类型，公历
+    NSCalendar * gregorian_cal = [[NSCalendar alloc] initWithCalendarIdentifier:
+                                  NSCalendarIdentifierGregorian];
+    formatter.calendar = gregorian_cal;
+    
+    // 毫秒值转化为秒
+    NSDate* date = [NSDate dateWithTimeIntervalSince1970:[timeString doubleValue]];
+    NSString* dateString = [formatter stringFromDate:date];
+    
+    return dateString;
 }
 
 @end
