@@ -18,7 +18,6 @@
 
 @interface SLLiveFinishView ()
 
-@property(nonatomic,strong) SLHeadPortrait *avatarView;
 @property(nonatomic,strong) SLShadowLabel     *nickLabel;
 @property(nonatomic,strong) NSMutableArray *itemArray;
 @property(nonatomic,strong) UIView * line1, *line2;
