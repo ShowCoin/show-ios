@@ -29,9 +29,13 @@ typedef NS_OPTIONS(NSUInteger, JKExcludePoint) {
 //添加右边的边框
 - (void)jk_addRightBorderWithColor:(UIColor *)color width:(CGFloat) borderWidth;
 
+//移除顶部边框
 - (void)jk_removeTopBorder;
+//移除左边的边框
 - (void)jk_removeLeftBorder;
+//移除底部边框
 - (void)jk_removeBottomBorder;
+//移除右边的边框
 - (void)jk_removeRightBorder;
 
 
