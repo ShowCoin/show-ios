@@ -20,9 +20,13 @@ typedef NS_OPTIONS(NSUInteger, JKExcludePoint) {
 
 @interface UIView (JKCustomBorder)
 
+//添加顶部边框
 - (void)jk_addTopBorderWithColor:(UIColor *)color width:(CGFloat) borderWidth;
+//添加左边边框
 - (void)jk_addLeftBorderWithColor: (UIColor *) color width:(CGFloat) borderWidth;
+//添加底部边框
 - (void)jk_addBottomBorderWithColor:(UIColor *)color width:(CGFloat) borderWidth;
+//添加右边的边框
 - (void)jk_addRightBorderWithColor:(UIColor *)color width:(CGFloat) borderWidth;
 
 - (void)jk_removeTopBorder;

@@ -22,4 +22,6 @@ typedef void (^JKGestureActionBlock)(UIGestureRecognizer *gestureRecoginzer);
  *  @param block 代码块
  */
 - (void)jk_addLongPressActionWithBlock:(JKGestureActionBlock)block;
+
+
 @end
