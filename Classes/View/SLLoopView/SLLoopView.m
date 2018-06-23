@@ -52,7 +52,6 @@ typedef void(^LoopBlock)(CAAnimation *anim, BOOL flag);
     dispatch_once(&onceToken, ^{
         instance = [[SLLoopView alloc] init];
         instance.frame = CGRectMake(0, 0, KScreenWidth * 2, kSLLoopViewHeight);
-        //[instance addTimer];
     });
     return instance;
 }
@@ -168,12 +167,6 @@ typedef void(^LoopBlock)(CAAnimation *anim, BOOL flag);
     }
 }
 
-- (void)didMoveToSuperview {
-    // when move to superview do animated
-    [self.imageView.imageView addRotationAnimated];
-    //    [self performSelector:@selector(startAnimation:) withObject:nil afterDelay:3];
-}
-
 #pragma mark - Public
 
 - (void)setTitle:(NSString *)title subTitle:(NSString *)subTitle {
@@ -194,10 +187,12 @@ static BOOL isFirst = YES;
     [self.layer removeAllAnimations];
 }
 
+- (void)showTitleMusicView {
+    self.titleView.imageView.hidden = NO;
+}
+
 
 @end
-
-
 
 /**
  <#Description#>
@@ -247,30 +242,6 @@ static BOOL isFirst = YES;
     CGFloat margin = 5;
     CGFloat imageWH = h - margin * 2;
     self.imageView.frame = CGRectMake(w - 10 - imageWH, margin, imageWH, imageWH);
-}
-
-- (void)didMoveToSuperview {
-    [self.imageView addRotationAnimated];
-}
-
-@end
-
-@implementation SLRotationImageView
-
-/**
- do animaotr imageView layer
- */
-- (void)addRotationAnimated {
-    [self.layer removeAllAnimations];
-    CABasicAnimation *ani = [CABasicAnimation animation];
-    ani.keyPath = @"transform.rotation.z";
-    ani.fromValue = @0;
-    ani.toValue = @(M_PI *2);
-    ani.duration = 10;
-    ani.repeatCount = HUGE_VALF;
-    ani.fillMode = kCAFillModeForwards;
-    ani.removedOnCompletion = NO;
-    [self.layer addAnimation:ani forKey:@"imageViewAni"];
 }
 
 @end
