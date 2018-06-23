@@ -18,7 +18,6 @@
 
 @interface SLLiveFinishView ()
 
-@property(nonatomic,strong) UIImageView *bgImageView;
 @property(nonatomic,strong) UIVisualEffectView *effectView;
 @property(nonatomic,strong) SLShadowLabel     *titleLabel;
 @property(nonatomic,strong) SLHeadPortrait *avatarView;
