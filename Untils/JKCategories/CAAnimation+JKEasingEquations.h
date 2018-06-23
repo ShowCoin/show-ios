@@ -62,23 +62,27 @@ typedef NS_ENUM(NSInteger, CAAnimationEasingFunction) {
                                                   from:(CATransform3D)startValue
                                                     to:(CATransform3D)endValue
                                         easingFunction:(CAAnimationEasingFunction)easingFunction;
+
 //添加layer的动画
 + (void)jk_addAnimationToLayer:(CALayer *)layer
                    duration:(CGFloat)duration
                   transform:(CATransform3D)transform
              easingFunction:(CAAnimationEasingFunction)easingFunction;
+
 //添加消失的动画
 + (CAKeyframeAnimation*)jk_animationWithKeyPath:(NSString *)keyPath
                                     duration:(CGFloat)duration
                                         from:(CGFloat)startValue
                                           to:(CGFloat)endValue
                               easingFunction:(CAAnimationEasingFunction)easingFunction;
+
 //添加layer层的动画，keypath
 + (void)jk_addAnimationToLayer:(CALayer *)layer
                 withKeyPath:(NSString *)keyPath
                    duration:(CGFloat)duration
                          to:(CGFloat)endValue
              easingFunction:(CAAnimationEasingFunction)easingFunction;
+
 
 + (void)jk_addAnimationToLayer:(CALayer *)layer
                 withKeyPath:(NSString *)keyPath
