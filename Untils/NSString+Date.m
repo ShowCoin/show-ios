@@ -86,5 +86,73 @@
     return str;
 }
 
++ (NSString *)minutesWithStartTime:(NSString *)startTime endTime:(NSString *)endTime
+{
+    NSDateFormatter *date = [[NSDateFormatter alloc]init];
+    [date setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    
+    //默认时区
+    date.timeZone = [NSTimeZone timeZoneWithName:@"Asia/Shanghai"];
+    //日历类型，公历
+    NSCalendar * gregorian_cal = [[NSCalendar alloc] initWithCalendarIdentifier:
+                                  NSCalendarIdentifierGregorian];
+    date.calendar = gregorian_cal;
+    
+    
+    NSDate *startD;
+    NSDate *endD;
+    
+    if (IsStrEmpty(startTime)) {
+        startD = [NSDate date];
+    }else
+    {
+        startD =[date dateFromString:startTime];
+    }
+    
+    if (IsStrEmpty(endTime)||[endTime isEqualToString:@"0000-00-00 00:00:00"]) {
+        endD = [NSDate date];
+    }else
+    {
+        endD = [date dateFromString:endTime];
+    }
+    
+    
+    NSTimeInterval late1=[startD timeIntervalSince1970]*1;
+    NSTimeInterval late2=[endD timeIntervalSince1970]*1;
+    NSTimeInterval value=late2-late1;
+    
+    if(value<0)
+    {
+        value = 0;
+    }
+    
+    int minute = (int)value/60%60;
+    int house = (int)value/3600;
+    int allminute;
+    NSString *str;
+    if (house != 0) {
+        
+        allminute = house*60+minute;
+        
+        str = [NSString stringWithFormat:@"%d",allminute];
+    }else if ( house== 0 && minute!=0) {
+        str = [NSString stringWithFormat:@"%d",minute];
+    }else
+    {
+        str = @"1";
+    }
+    
+    return str;
+    
+}
+
++ (NSString *)strintFromeDate:(NSDate *)date formate:(NSString *)formate
+{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:formate];
+    
+    return [dateFormatter stringFromDate:date];
+}
+
 
 @end
