@@ -18,7 +18,6 @@
 
 @interface SLLiveFinishView ()
 
-@property(nonatomic,strong) SLLiveFinishItem * receiveItem;
 @property(nonatomic,strong) UILabel * paragraphLabel;
 @property(nonatomic,strong) UILabel * rankLabel;
 
