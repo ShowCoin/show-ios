@@ -9,7 +9,6 @@
 #import "NSString+Date.h"
 
 @implementation NSString (Date)
-
 +(NSString*)dateWithIntervale:(long long)interval formateStyle:(NSString *)style
 {
     NSDate * date=[NSDate dateWithTimeIntervalSince1970:interval/1000];
