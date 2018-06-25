@@ -23,7 +23,12 @@
     
     NSMutableString *string = [[NSMutableString alloc] initWithString:descString];
     
-  
+    for (NSUInteger i = 0; i < keyArray.count; i++) {
+        NSRange range = [string rangeOfString:keyArray[i]];
+        [string replaceCharactersInRange:range withString:valueArray[i]];
+    }
+    
+   
 }
 
 
