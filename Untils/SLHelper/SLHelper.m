@@ -463,4 +463,15 @@
     }
     return str;
 }
+
++(NSString *)getLeftTimeWithStartTime:(double)startTime endTime:(double)endTime {
+    double timeInterval = endTime - startTime;
+    NSInteger secondsInDay = 24*60*60;
+    NSInteger day = (NSInteger)timeInterval/secondsInDay;
+    //NSInteger hour = (timeInterval - day*secondsInDay)/(60*60);
+    //  NSInteger mini = (timeInterval - day*secondsInDay - hour*60*60)/60;
+    //    NSInteger second = timeInterval - day*secondsInDay - hour*60*60 - mini*60;
+    return [NSString stringWithFormat:@"%zd天",day];
+}
+
 @end
