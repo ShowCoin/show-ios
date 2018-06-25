@@ -323,6 +323,172 @@
     return index;
 }
 
+#pragma mark phone number
+/**
+ *    @brief    判断是不是电话号码
+ *
+ *    @return     bool
+ */
++(BOOL) isPhoneNumber:(NSString*) number
+{
+    NSString *str = @"^((0\\d{2,3}-\\d{7,8})|(1[3458]\\d{9}))$";
+    NSPredicate *regextestmobile = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", str];
+    if (([regextestmobile evaluateWithObject:number] == YES)) {
+        return YES;
+    } else {
+        return NO;
+    }
+}
 
++(BOOL) isPostalcode:(NSString*) code{
+    
+    NSString *str = @"^[0-9]\\d{5}$";
+    NSPredicate *regextestPostalcode = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", str];
+    if (([regextestPostalcode evaluateWithObject:code] == YES)) {
+        return YES;
+    } else {
+        return NO;
+    }
+}
 
+/** 是否为数字字符串 */
++ (BOOL)isPositiveNumber:(NSString *)numStr{
+    NSString *regexStr = @"\\d+|\\d+\\.\\d+|\\.\\d+|\\d+.";
+    NSPredicate *regextestPostalcode = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regexStr];
+    if (([regextestPostalcode evaluateWithObject:numStr] == YES)) {
+        return YES;
+    } else {
+        return NO;
+    }
+}
+
++ (BOOL) isBlankString:(NSString *)string {
+    if (![string isKindOfClass:[NSString class]]) {
+        return YES;
+    }
+    if (string == nil || string == NULL) {
+        return YES;
+    }
+    if ([string isKindOfClass:[NSNull class]]) {
+        return YES;
+    }
+    if ([[string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length]==0) {
+        return YES;
+    }
+    return NO;
+}
+
+#pragma mark alert
++ (CGFloat)widthForLabelWithString:(NSString *)labelString withFontSize:(CGFloat)fontsize withWidth:(CGFloat)width withHeight:(CGFloat)height
+{
+    if(labelString.length == 0){
+        return 0.0;
+    }
+    
+    if ([UIDevice currentDevice].systemVersion.doubleValue <= 7.0) {
+        CGSize maximumLabelSize = CGSizeMake(width,height);
+        CGSize expectedLabelSize = [labelString sizeWithFont:[UIFont systemFontOfSize:fontsize]
+                                           constrainedToSize:maximumLabelSize
+                                               lineBreakMode:0];
+        
+        return (expectedLabelSize.width);
+    } else {
+        CGSize size = CGSizeMake(width, height);
+        NSDictionary * tdic = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont systemFontOfSize:fontsize],NSFontAttributeName,nil];
+        CGSize actualsize = [labelString boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin attributes:tdic context:nil].size;
+        
+        //得到的宽度为0，返回最大宽度
+        if(actualsize.width == 0){
+            return width;
+        }
+        
+        return actualsize.width;
+    }
+}
+
++ (CGFloat)heightForLabelWithString:(NSString *)labelString withFontSize:(CGFloat)fontsize withWidth:(CGFloat)width withHeight:(CGFloat)height {
+    
+    if ([UIDevice currentDevice].systemVersion.doubleValue <= 7.0) {
+        CGSize maximumLabelSize = CGSizeMake(width, height);
+        CGSize expectedLabelSize = [labelString sizeWithFont:[UIFont systemFontOfSize:fontsize]
+                                           constrainedToSize:maximumLabelSize
+                                               lineBreakMode:0];
+        
+        return (int)(expectedLabelSize.height);
+    } else {
+        CGSize size = CGSizeMake(width, height);
+        NSDictionary * tdic = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont systemFontOfSize:fontsize],NSFontAttributeName,nil];
+        CGSize actualsize = [labelString boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin attributes:tdic context:nil].size;
+        return actualsize.height;
+    }
+}
++ (CGSize)sizeForLabelWithString:(NSString *)string withFont:(UIFont *)font constrainedToSize:(CGSize)size{
+    if ([UIDevice currentDevice].systemVersion.doubleValue <= 7.0) {
+        CGSize expectedLabelSize = [string sizeWithFont:font
+                                      constrainedToSize:size
+                                          lineBreakMode:0];
+        
+        return expectedLabelSize;
+    } else {
+        NSDictionary * tdic = [NSDictionary dictionaryWithObjectsAndKeys:font,NSFontAttributeName,nil];
+        CGSize actualsize = [string boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin attributes:tdic context:nil].size;
+        actualsize.width = (NSInteger)(actualsize.width + 1.0);
+        actualsize.height = (NSInteger)(actualsize.height + 1.0);
+        return actualsize;
+    }
+}
+
++ (NSMutableAttributedString *)appendString:(NSString *)string withColor:(UIColor *)color font:(UIFont *)font lenght:(int)lenght
+{
+    NSMutableAttributedString *attString = [[NSMutableAttributedString alloc] initWithString:string];
+    
+    NSRange range = NSMakeRange(string.length-lenght, lenght);
+    [attString addAttribute:NSFontAttributeName value:font range:range];
+    [attString addAttribute:NSForegroundColorAttributeName value:color range:range];
+    return attString;
+    
+}
+
+/**
+ @pram postion(key:位置  value:长度)
+ */
++(NSMutableAttributedString *)setNSStringCorlor:(NSString *)_content positon:(NSDictionary*)positionDict withColor:(UIColor*)color
+{
+    //    NSString *endLength = [NSString stringWithFormat:@"%d",endNum];
+    NSMutableAttributedString *str = [[NSMutableAttributedString alloc] initWithString:_content];
+    for (int i=0;i<positionDict.allKeys.count;i++) {
+        NSString* key = positionDict.allKeys[i];
+        NSString* val = positionDict[key];
+        [str addAttribute:NSForegroundColorAttributeName value:color range:NSMakeRange([key intValue],[val intValue])];
+    }
+    return str;
+}
+
++(NSString *)getLeftTimeWithStartTime:(double)startTime endTime:(double)endTime {
+    double timeInterval = endTime - startTime;
+    NSInteger secondsInDay = 24*60*60;
+    NSInteger day = (NSInteger)timeInterval/secondsInDay;
+    //NSInteger hour = (timeInterval - day*secondsInDay)/(60*60);
+    //  NSInteger mini = (timeInterval - day*secondsInDay - hour*60*60)/60;
+    //    NSInteger second = timeInterval - day*secondsInDay - hour*60*60 - mini*60;
+    return [NSString stringWithFormat:@"%zd天",day];
+}
+
++ (NSString *)transformMetreToKilometre:(NSString *)meter {
+    
+    if ([meter isEqualToString:@""] || !meter) {
+        return @"";
+    }
+    
+    NSInteger tmpDistance = [[NSString stringWithFormat:@"%1.0f", [meter doubleValue]] intValue];
+    if (0 <= tmpDistance && tmpDistance < 1000) {
+        return [NSString stringWithFormat:@"%zdm",tmpDistance];
+    } else if (tmpDistance <= 99000) {
+        return [NSString stringWithFormat:@"%zd.%zdkm",tmpDistance/1000,(tmpDistance%1000)/100];
+    }
+    else{
+        return @">99km";
+    }
+    return nil;
+}
 @end
