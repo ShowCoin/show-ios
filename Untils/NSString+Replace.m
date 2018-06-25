@@ -10,4 +10,17 @@
 
 @implementation NSString (Replace)
 
+/** 多个字符串替换 */
++(NSString *)replaceString:(NSString *)descString
+                  keyArray:(NSArray <NSString *> *)keyArray
+                valueArray:(NSArray <NSString *> *)valueArray {
+    
+    if (descString.length == 0 || descString == nil) return nil;
+    if (keyArray.count == 0 || keyArray == nil) return nil;
+    if (valueArray.count == 0 || valueArray == nil) return nil;
+    if (valueArray.count != keyArray.count) return nil;
+    
+}
+
+
 @end
