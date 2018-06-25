@@ -46,12 +46,12 @@
     frame.origin.y = bottom - self.frame.size.height;
     self.frame = frame;
 }
-
+//左
 - (CGFloat)jk_left
 {
     return self.frame.origin.x;
 }
-
+//设置左
 - (void)setJk_left:(CGFloat)x
 {
     CGRect frame = self.frame;
