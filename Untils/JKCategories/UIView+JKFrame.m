@@ -34,12 +34,12 @@
     frame.origin.x = right - self.frame.size.width;
     self.frame = frame;
 }
-
+//底
 - (CGFloat)jk_bottom
 {
     return self.frame.origin.y + self.frame.size.height;
 }
-
+//设置底
 - (void)setJk_bottom:(CGFloat)bottom
 {
     CGRect frame = self.frame;
