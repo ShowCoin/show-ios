@@ -422,5 +422,19 @@
         return actualsize.height;
     }
 }
-
++ (CGSize)sizeForLabelWithString:(NSString *)string withFont:(UIFont *)font constrainedToSize:(CGSize)size{
+    if ([UIDevice currentDevice].systemVersion.doubleValue <= 7.0) {
+        CGSize expectedLabelSize = [string sizeWithFont:font
+                                      constrainedToSize:size
+                                          lineBreakMode:0];
+        
+        return expectedLabelSize;
+    } else {
+        NSDictionary * tdic = [NSDictionary dictionaryWithObjectsAndKeys:font,NSFontAttributeName,nil];
+        CGSize actualsize = [string boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin attributes:tdic context:nil].size;
+        actualsize.width = (NSInteger)(actualsize.width + 1.0);
+        actualsize.height = (NSInteger)(actualsize.height + 1.0);
+        return actualsize;
+    }
+}
 @end
