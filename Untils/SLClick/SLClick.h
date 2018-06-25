@@ -10,4 +10,6 @@
 
 @interface SLClick : NSObject
 
++ (void)sl_event:(SLClickType)e;
+
 @end
