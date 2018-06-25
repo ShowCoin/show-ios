@@ -351,4 +351,14 @@
     }
 }
 
+/** 是否为数字字符串 */
++ (BOOL)isPositiveNumber:(NSString *)numStr{
+    NSString *regexStr = @"\\d+|\\d+\\.\\d+|\\.\\d+|\\d+.";
+    NSPredicate *regextestPostalcode = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regexStr];
+    if (([regextestPostalcode evaluateWithObject:numStr] == YES)) {
+        return YES;
+    } else {
+        return NO;
+    }
+}
 @end
