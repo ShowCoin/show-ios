@@ -437,4 +437,15 @@
         return actualsize;
     }
 }
+
++ (NSMutableAttributedString *)appendString:(NSString *)string withColor:(UIColor *)color font:(UIFont *)font lenght:(int)lenght
+{
+    NSMutableAttributedString *attString = [[NSMutableAttributedString alloc] initWithString:string];
+    
+    NSRange range = NSMakeRange(string.length-lenght, lenght);
+    [attString addAttribute:NSFontAttributeName value:font range:range];
+    [attString addAttribute:NSForegroundColorAttributeName value:color range:range];
+    return attString;
+    
+}
 @end
