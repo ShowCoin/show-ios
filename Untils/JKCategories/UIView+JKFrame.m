@@ -94,11 +94,11 @@
     frame.origin = origin;
     self.frame = frame;
 }
-
+//size
 - (CGSize)jk_size {
     return self.frame.size;
 }
-
+//设置size
 - (void)setJk_size:(CGSize)size {
     CGRect frame = self.frame;
     frame.size = size;
