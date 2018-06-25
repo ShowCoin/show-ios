@@ -10,6 +10,8 @@
 #import "SLLaunchAction.h"
 #import <UMAnalytics/MobClick.h>
 
+static NSString * const kLaunchRecordTimeKey = @"kLaunchRecordTimeKey";
+
 @implementation SLClick
 
 
