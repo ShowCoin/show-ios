@@ -8,6 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+typedef NS_ENUM(NSUInteger, SLClickType) {
+    SLClickTypeLike,
+    SLClickTypePlay,
+};
+
 @interface SLClick : NSObject
 
 + (void)sl_event:(SLClickType)e;
