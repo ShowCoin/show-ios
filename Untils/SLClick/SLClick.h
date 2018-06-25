@@ -15,5 +15,7 @@
 + (void)sl_beginLogPageView:(id)cls;
 + (void)sl_endLogPageView:(id)cls;
 
++ (void)sl_launchRecord;
++ (void)sl_exitRecord;
 
 @end
