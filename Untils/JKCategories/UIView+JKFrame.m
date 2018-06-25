@@ -10,11 +10,12 @@
 @implementation UIView (JKFrame)
 #pragma mark - Shortcuts for the coords
 
+//顶
 - (CGFloat)jk_top
 {
     return self.frame.origin.y;
 }
-
+//设置顶
 - (void)setJk_top:(CGFloat)y
 {
     CGRect frame = self.frame;
