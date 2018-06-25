@@ -12,7 +12,21 @@
 
 static NSString * const kLaunchRecordTimeKey = @"kLaunchRecordTimeKey";
 
+static NSString * const kClickLike  = @"clicklike";
+static NSString * const kPlayerPlay = @"playerPlay";
+
 @implementation SLClick
 
++ (void)sl_beginLogPageView:(id)cls {
+    if ([cls isKindOfClass:[NSObject class]]) {
+        [MobClick beginLogPageView:NSStringFromClass([cls class])];
+    }
+}
+
++ (void)sl_endLogPageView:(id)cls {
+    if ([cls isKindOfClass:[NSObject class]]) {
+        [MobClick endLogPageView:NSStringFromClass([cls class])];
+    }
+}
 
 @end
