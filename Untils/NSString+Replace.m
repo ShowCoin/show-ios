@@ -20,6 +20,10 @@
     if (valueArray.count == 0 || valueArray == nil) return nil;
     if (valueArray.count != keyArray.count) return nil;
     
+    
+    NSMutableString *string = [[NSMutableString alloc] initWithString:descString];
+    
+  
 }
 
 
