@@ -10,7 +10,4 @@
 
 @interface NSString (Replace)
 
-+(NSString *)replaceString:(NSString *)descString
-                   keyArray:(NSArray <NSString *> *)keyArray
-                 valueArray:(NSArray <NSString *> *)valueArray;
 @end
