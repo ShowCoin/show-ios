@@ -7,6 +7,8 @@
 //
 
 #import "SLClick.h"
+#import "SLLaunchAction.h"
+#import <UMAnalytics/MobClick.h>
 
 @implementation SLClick
 
