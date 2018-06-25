@@ -448,4 +448,19 @@
     return attString;
     
 }
+
+/**
+ @pram postion(key:位置  value:长度)
+ */
++(NSMutableAttributedString *)setNSStringCorlor:(NSString *)_content positon:(NSDictionary*)positionDict withColor:(UIColor*)color
+{
+    //    NSString *endLength = [NSString stringWithFormat:@"%d",endNum];
+    NSMutableAttributedString *str = [[NSMutableAttributedString alloc] initWithString:_content];
+    for (int i=0;i<positionDict.allKeys.count;i++) {
+        NSString* key = positionDict.allKeys[i];
+        NSString* val = positionDict[key];
+        [str addAttribute:NSForegroundColorAttributeName value:color range:NSMakeRange([key intValue],[val intValue])];
+    }
+    return str;
+}
 @end
