@@ -1,9 +1,9 @@
 //
 //  NSString+Replace.m
-//  Dreamer-ios-client
+//  show live
 //
-//  Created by 巩鑫 on 2017/6/15.
-//  Copyright © 2017年 Beijing Dreamer. All rights reserved.
+//  Created by show gx on 2017/6/15.
+//  Copyright © 2017年 Showgx. All rights reserved.
 //
 
 #import "NSString+Replace.h"
