@@ -70,12 +70,12 @@
     frame.size.width = width;
     self.frame = frame;
 }
-
+//高
 - (CGFloat)jk_height
 {
     return self.frame.size.height;
 }
-
+//设置高
 - (void)setJk_height:(CGFloat)height
 {
     CGRect frame = self.frame;
