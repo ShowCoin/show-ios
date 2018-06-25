@@ -58,12 +58,12 @@
     frame.origin.x = x;
     self.frame = frame;
 }
-
+//宽
 - (CGFloat)jk_width
 {
     return self.frame.size.width;
 }
-
+//设置宽
 - (void)setJk_width:(CGFloat)width
 {
     CGRect frame = self.frame;
