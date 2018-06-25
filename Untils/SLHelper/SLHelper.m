@@ -377,4 +377,32 @@
     }
     return NO;
 }
+
+#pragma mark alert
++ (CGFloat)widthForLabelWithString:(NSString *)labelString withFontSize:(CGFloat)fontsize withWidth:(CGFloat)width withHeight:(CGFloat)height
+{
+    if(labelString.length == 0){
+        return 0.0;
+    }
+    
+    if ([UIDevice currentDevice].systemVersion.doubleValue <= 7.0) {
+        CGSize maximumLabelSize = CGSizeMake(width,height);
+        CGSize expectedLabelSize = [labelString sizeWithFont:[UIFont systemFontOfSize:fontsize]
+                                           constrainedToSize:maximumLabelSize
+                                               lineBreakMode:0];
+        
+        return (expectedLabelSize.width);
+    } else {
+        CGSize size = CGSizeMake(width, height);
+        NSDictionary * tdic = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont systemFontOfSize:fontsize],NSFontAttributeName,nil];
+        CGSize actualsize = [labelString boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin attributes:tdic context:nil].size;
+        
+        //得到的宽度为0，返回最大宽度
+        if(actualsize.width == 0){
+            return width;
+        }
+        
+        return actualsize.width;
+    }
+}
 @end
