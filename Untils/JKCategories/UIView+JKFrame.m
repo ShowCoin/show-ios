@@ -84,11 +84,11 @@
 }
 
 #pragma mark - Shortcuts for frame properties
-//origin的设置
+//origin
 - (CGPoint)jk_origin {
     return self.frame.origin;
 }
-
+//设置origin
 - (void)setJk_origin:(CGPoint)origin {
     CGRect frame = self.frame;
     frame.origin = origin;
