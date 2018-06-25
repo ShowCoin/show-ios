@@ -22,12 +22,12 @@
     frame.origin.y = y;
     self.frame = frame;
 }
-
+//右
 - (CGFloat)jk_right
 {
     return self.frame.origin.x + self.frame.size.width;
 }
-
+//设置右
 - (void)setJk_right:(CGFloat)right
 {
     CGRect frame = self.frame;
