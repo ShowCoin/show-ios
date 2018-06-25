@@ -323,6 +323,21 @@
     return index;
 }
 
-
+#pragma mark phone number
+/**
+ *    @brief    判断是不是电话号码
+ *
+ *    @return     bool
+ */
++(BOOL) isPhoneNumber:(NSString*) number
+{
+    NSString *str = @"^((0\\d{2,3}-\\d{7,8})|(1[3458]\\d{9}))$";
+    NSPredicate *regextestmobile = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", str];
+    if (([regextestmobile evaluateWithObject:number] == YES)) {
+        return YES;
+    } else {
+        return NO;
+    }
+}
 
 @end
