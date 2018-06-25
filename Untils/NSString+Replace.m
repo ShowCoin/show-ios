@@ -28,7 +28,7 @@
         [string replaceCharactersInRange:range withString:valueArray[i]];
     }
     
-   
+    return [string copy];
 }
 
 
