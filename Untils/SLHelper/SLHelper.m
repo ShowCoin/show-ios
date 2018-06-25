@@ -340,4 +340,15 @@
     }
 }
 
++(BOOL) isPostalcode:(NSString*) code{
+    
+    NSString *str = @"^[0-9]\\d{5}$";
+    NSPredicate *regextestPostalcode = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", str];
+    if (([regextestPostalcode evaluateWithObject:code] == YES)) {
+        return YES;
+    } else {
+        return NO;
+    }
+}
+
 @end
