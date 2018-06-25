@@ -12,4 +12,8 @@
 
 + (void)sl_event:(SLClickType)e;
 
++ (void)sl_beginLogPageView:(id)cls;
++ (void)sl_endLogPageView:(id)cls;
+
+
 @end
