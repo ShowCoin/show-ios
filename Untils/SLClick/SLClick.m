@@ -17,6 +17,21 @@ static NSString * const kPlayerPlay = @"playerPlay";
 
 @implementation SLClick
 
++ (void)sl_event:(SLClickType)e {
+    switch (e) {
+        case SLClickTypeLike:
+            [MobClick event:kClickLike];
+            break;
+            
+        case SLClickTypePlay:
+            [MobClick event:kPlayerPlay];
+            break;
+            
+        default:
+            break;
+    }
+}
+
 + (void)sl_beginLogPageView:(id)cls {
     if ([cls isKindOfClass:[NSObject class]]) {
         [MobClick beginLogPageView:NSStringFromClass([cls class])];
