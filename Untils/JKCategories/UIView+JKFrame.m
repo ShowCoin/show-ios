@@ -84,7 +84,7 @@
 }
 
 #pragma mark - Shortcuts for frame properties
-
+//origin的设置
 - (CGPoint)jk_origin {
     return self.frame.origin;
 }
