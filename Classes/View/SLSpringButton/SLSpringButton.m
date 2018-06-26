@@ -31,6 +31,11 @@
     self.selected = NO;
 }
 
+/**
+ <#Description#>
+
+ @param highlighted <#highlighted description#>
+ */
 - (void)setHighlighted:(BOOL)highlighted {}
 
 
