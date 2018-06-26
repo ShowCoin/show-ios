@@ -31,5 +31,7 @@
     self.selected = NO;
 }
 
+- (void)setHighlighted:(BOOL)highlighted {}
+
 
 @end
