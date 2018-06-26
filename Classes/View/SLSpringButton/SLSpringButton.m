@@ -35,6 +35,7 @@
 
 - (void)setSelected:(BOOL)selected {
     [super setSelected:selected];
+    self.userInteractionEnabled = NO;
     
 }
 
