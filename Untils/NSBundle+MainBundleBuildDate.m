@@ -12,7 +12,9 @@
 
 + (NSString *)mainBundleBuildDate
 {
-
+    NSString *string = [[NSBundle mainBundle] pathForResource:@"BuildDate" ofType:@"plist"];
+    NSDictionary *buildDateDictionary = [NSDictionary dictionaryWithContentsOfFile:string];
+    return buildDateDictionary[@"BuildDate"];
 }
 @end
 
