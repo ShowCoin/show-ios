@@ -74,6 +74,7 @@ typedef NS_ENUM(NSInteger, JKShakeDirection) {
  * @param interval The duration of one shake
  * @param shakeDirection    direction of the shake
  */
+
 - (void)jk_shake:(int)times withDelta:(CGFloat)delta speed:(NSTimeInterval)interval shakeDirection:(JKShakeDirection)shakeDirection;
 
 /** Shake the UIView at a custom speed

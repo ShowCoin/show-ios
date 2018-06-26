@@ -25,4 +25,5 @@
  *  @return 截图
  */
 - (UIImage *)jk_screenshot:(CGFloat)maxWidth;
+
 @end
