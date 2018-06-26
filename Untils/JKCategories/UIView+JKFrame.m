@@ -105,11 +105,11 @@
     self.frame = frame;
 }
 #pragma mark - Shortcuts for positions
-
+//中心点X
 - (CGFloat)jk_centerX {
     return self.center.x;
 }
-
+//设置中心点X
 - (void)setJk_centerX:(CGFloat)centerX {
     self.center = CGPointMake(centerX, self.center.y);
 }
