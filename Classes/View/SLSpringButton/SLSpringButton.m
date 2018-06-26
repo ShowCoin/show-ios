@@ -33,5 +33,9 @@
 
 - (void)setHighlighted:(BOOL)highlighted {}
 
+- (void)setSelected:(BOOL)selected {
+    [super setSelected:selected];
+    
+}
 
 @end
