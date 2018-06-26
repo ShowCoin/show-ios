@@ -33,6 +33,12 @@
 
 - (void)setHighlighted:(BOOL)highlighted {}
 
+
+/**
+ <#Description#>
+
+ @param selected <#selected description#>
+ */
 - (void)setSelected:(BOOL)selected {
     [super setSelected:selected];
     self.userInteractionEnabled = NO;
