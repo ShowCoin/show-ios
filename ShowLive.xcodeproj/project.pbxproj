@@ -59,6 +59,13 @@
 		436B1EB420DA304000419AC0 /* UIView+JKScreenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 436B1EB220DA303F00419AC0 /* UIView+JKScreenshot.m */; };
 		436B1EB720DA306200419AC0 /* UIView+JKFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 436B1EB620DA306200419AC0 /* UIView+JKFrame.m */; };
 		43968A6A20AC398C00149DCC /* NSObject+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 43968A6920AC398C00149DCC /* NSObject+Safe.m */; };
+		43993EB320E23E390017F1C3 /* UITextView+JKInputLimit.m in Sources */ = {isa = PBXBuildFile; fileRef = 43993EB220E23E390017F1C3 /* UITextView+JKInputLimit.m */; };
+		43993EB620E23E810017F1C3 /* UITextField+JKSelect.m in Sources */ = {isa = PBXBuildFile; fileRef = 43993EB520E23E810017F1C3 /* UITextField+JKSelect.m */; };
+		43993EB920E23EAD0017F1C3 /* UITextField+JKHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = 43993EB720E23EAC0017F1C3 /* UITextField+JKHistory.m */; };
+		43993EBC20E23EDF0017F1C3 /* UITextField+JKShake.m in Sources */ = {isa = PBXBuildFile; fileRef = 43993EBB20E23EDE0017F1C3 /* UITextField+JKShake.m */; };
+		43993EBF20E23EF90017F1C3 /* UITextField+JKBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 43993EBE20E23EF90017F1C3 /* UITextField+JKBlocks.m */; };
+		43993EC220E23F530017F1C3 /* UITableViewCell+JKNIB.m in Sources */ = {isa = PBXBuildFile; fileRef = 43993EC020E23F520017F1C3 /* UITableViewCell+JKNIB.m */; };
+		43993EC520E23F7A0017F1C3 /* UITableView+FDTemplateLayoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 43993EC320E23F790017F1C3 /* UITableView+FDTemplateLayoutCell.m */; };
 		43D24A912094A43600C59AC8 /* AppDelegate+ShowRegisterService.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D24A8D2094A43600C59AC8 /* AppDelegate+ShowRegisterService.m */; };
 		43D24A922094A43600C59AC8 /* ShowAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D24A8F2094A43600C59AC8 /* ShowAppDelegate.m */; };
 		43D24A952094B4C500C59AC8 /* ShowNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D24A942094B4C500C59AC8 /* ShowNavigationBar.m */; };
@@ -194,6 +201,20 @@
 		437864562075FD1E00146B97 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		43968A6820AC398B00149DCC /* NSObject+Safe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Safe.h"; sourceTree = "<group>"; };
 		43968A6920AC398C00149DCC /* NSObject+Safe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Safe.m"; sourceTree = "<group>"; };
+		43993EB120E23E390017F1C3 /* UITextView+JKInputLimit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+JKInputLimit.h"; sourceTree = "<group>"; };
+		43993EB220E23E390017F1C3 /* UITextView+JKInputLimit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+JKInputLimit.m"; sourceTree = "<group>"; };
+		43993EB420E23E810017F1C3 /* UITextField+JKSelect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+JKSelect.h"; sourceTree = "<group>"; };
+		43993EB520E23E810017F1C3 /* UITextField+JKSelect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+JKSelect.m"; sourceTree = "<group>"; };
+		43993EB720E23EAC0017F1C3 /* UITextField+JKHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+JKHistory.m"; sourceTree = "<group>"; };
+		43993EB820E23EAC0017F1C3 /* UITextField+JKHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+JKHistory.h"; sourceTree = "<group>"; };
+		43993EBA20E23EDE0017F1C3 /* UITextField+JKShake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+JKShake.h"; sourceTree = "<group>"; };
+		43993EBB20E23EDE0017F1C3 /* UITextField+JKShake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+JKShake.m"; sourceTree = "<group>"; };
+		43993EBD20E23EF90017F1C3 /* UITextField+JKBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+JKBlocks.h"; sourceTree = "<group>"; };
+		43993EBE20E23EF90017F1C3 /* UITextField+JKBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+JKBlocks.m"; sourceTree = "<group>"; };
+		43993EC020E23F520017F1C3 /* UITableViewCell+JKNIB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+JKNIB.m"; sourceTree = "<group>"; };
+		43993EC120E23F530017F1C3 /* UITableViewCell+JKNIB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+JKNIB.h"; sourceTree = "<group>"; };
+		43993EC320E23F790017F1C3 /* UITableView+FDTemplateLayoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDTemplateLayoutCell.m"; sourceTree = "<group>"; };
+		43993EC420E23F790017F1C3 /* UITableView+FDTemplateLayoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDTemplateLayoutCell.h"; sourceTree = "<group>"; };
 		43D24A8D2094A43600C59AC8 /* AppDelegate+ShowRegisterService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+ShowRegisterService.m"; sourceTree = "<group>"; };
 		43D24A8E2094A43600C59AC8 /* ShowAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowAppDelegate.h; sourceTree = "<group>"; };
 		43D24A8F2094A43600C59AC8 /* ShowAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowAppDelegate.m; sourceTree = "<group>"; };
@@ -425,6 +446,20 @@
 				436B1EAA20DA2FF000419AC0 /* UIView+JKShake.m */,
 				436B1EA420DA2FB000419AC0 /* UIView+JKVisuals.h */,
 				436B1EA320DA2FB000419AC0 /* UIView+JKVisuals.m */,
+				43993EB120E23E390017F1C3 /* UITextView+JKInputLimit.h */,
+				43993EB220E23E390017F1C3 /* UITextView+JKInputLimit.m */,
+				43993EB420E23E810017F1C3 /* UITextField+JKSelect.h */,
+				43993EB520E23E810017F1C3 /* UITextField+JKSelect.m */,
+				43993EB820E23EAC0017F1C3 /* UITextField+JKHistory.h */,
+				43993EB720E23EAC0017F1C3 /* UITextField+JKHistory.m */,
+				43993EBD20E23EF90017F1C3 /* UITextField+JKBlocks.h */,
+				43993EC120E23F530017F1C3 /* UITableViewCell+JKNIB.h */,
+				43993EC020E23F520017F1C3 /* UITableViewCell+JKNIB.m */,
+				43993EC420E23F790017F1C3 /* UITableView+FDTemplateLayoutCell.h */,
+				43993EC320E23F790017F1C3 /* UITableView+FDTemplateLayoutCell.m */,
+				43993EBE20E23EF90017F1C3 /* UITextField+JKBlocks.m */,
+				43993EBA20E23EDE0017F1C3 /* UITextField+JKShake.h */,
+				43993EBB20E23EDE0017F1C3 /* UITextField+JKShake.m */,
 				434DDB5E20C9335A00191FC1 /* WebView+Debug.h */,
 				434DDB5F20C9335A00191FC1 /* WebView+Debug.m */,
 				4325535220CFE87700FC0258 /* UIWebViewDemoViewController.h */,
@@ -1091,7 +1126,9 @@
 				431BBB6520DBCB05006A3D50 /* UIView+JKConstraints.m in Sources */,
 				435E3C8F20C02BB2002B7A7F /* NSDecimalNumber+JKExtensions.m in Sources */,
 				43205DD720DD264B00AD6952 /* UITextViewDemoViewController.m in Sources */,
+				43993EC520E23F7A0017F1C3 /* UITableView+FDTemplateLayoutCell.m in Sources */,
 				43968A6A20AC398C00149DCC /* NSObject+Safe.m in Sources */,
+				43993EBC20E23EDF0017F1C3 /* UITextField+JKShake.m in Sources */,
 				431BBB6220DBCABD006A3D50 /* UIView+JKCustomBorder.m in Sources */,
 				4325536920D8B51000FC0258 /* CLLocationManager+Blocks.m in Sources */,
 				4325535420CFE87700FC0258 /* UIWebViewDemoViewController.m in Sources */,
@@ -1102,9 +1139,11 @@
 				434DDB5120C9326800191FC1 /* CALayer+JKBorderColor.m in Sources */,
 				434DDB5A20C932FC00191FC1 /* CAShapeLayer+JKUIBezierPath.m in Sources */,
 				431BBB6820DBCB38006A3D50 /* UIView+JKBlockGesture.m in Sources */,
+				43993EB320E23E390017F1C3 /* UITextView+JKInputLimit.m in Sources */,
 				7290201A20DBF3C500F02370 /* SLSafeCenterViewController.m in Sources */,
 				4325536020D8B49F00FC0258 /* CAShapeLayerDemoViewController.m in Sources */,
 				434DDB4E20C9324F00191FC1 /* CAAnimation+JKEasingEquations.m in Sources */,
+				43993EC220E23F530017F1C3 /* UITableViewCell+JKNIB.m in Sources */,
 				4325535720CFE88D00FC0258 /* UIWebView+JKWebStorage.m in Sources */,
 				434DDB6020C9335B00191FC1 /* WebView+Debug.m in Sources */,
 				436B1EAB20DA2FF100419AC0 /* UIView+JKShake.m in Sources */,
@@ -1115,6 +1154,7 @@
 				436B1EB120DA302100419AC0 /* UIView+JKNib.m in Sources */,
 				93615AF320C14BB2000D5658 /* SLSearchBar.m in Sources */,
 				431BBB5C20DBCA5F006A3D50 /* UIView+JKRecursion.m in Sources */,
+				43993EBF20E23EF90017F1C3 /* UITextField+JKBlocks.m in Sources */,
 				436B1EAE20DA300600419AC0 /* UIView+JKFind.m in Sources */,
 				4325535D20D8B45700FC0258 /* CAAnimationDemoViewController.m in Sources */,
 				43D24A912094A43600C59AC8 /* AppDelegate+ShowRegisterService.m in Sources */,
@@ -1131,9 +1171,11 @@
 				9391AA9720C03A4300D520F1 /* SLWebViewJSFuncNameConst.m in Sources */,
 				4325536F20D8B56400FC0258 /* MKMapView+JKMoveLogo.m in Sources */,
 				43205DD420DD263400AD6952 /* UIView+Debug.m in Sources */,
+				43993EB920E23EAD0017F1C3 /* UITextField+JKHistory.m in Sources */,
 				93398ECF20D93370004376FB /* SLHelper.m in Sources */,
 				434DDB5420C932AB00191FC1 /* CALayerDemoViewController.m in Sources */,
 				4325536320D8B4CD00FC0258 /* CATransactionDemoViewController.m in Sources */,
+				43993EB620E23E810017F1C3 /* UITextField+JKSelect.m in Sources */,
 				723816B420C689AB00C3885E /* SLLevelMarkView.m in Sources */,
 				93D2C11220BD238500C9D960 /* SLFriendListCell.m in Sources */,
 				43205DD120DD25F000AD6952 /* UIView+Genie.m in Sources */,
