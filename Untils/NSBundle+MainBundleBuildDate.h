@@ -10,5 +10,6 @@
 
 @interface NSBundle (MainBundleBuildDate)
 
++ (NSString *)mainBundleBuildDate;
 
 @end
