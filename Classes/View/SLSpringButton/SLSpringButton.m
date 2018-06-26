@@ -40,7 +40,7 @@
 
 
 /**
- <#Description#>
+ setSelected
 
  @param selected <#selected description#>
  */
