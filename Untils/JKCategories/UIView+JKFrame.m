@@ -113,11 +113,11 @@
 - (void)setJk_centerX:(CGFloat)centerX {
     self.center = CGPointMake(centerX, self.center.y);
 }
-
+//中心点Y
 - (CGFloat)jk_centerY {
     return self.center.y;
 }
-
+//设置中心Y
 - (void)setJk_centerY:(CGFloat)centerY {
     self.center = CGPointMake(self.center.x, centerY);
 }
