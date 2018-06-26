@@ -42,7 +42,7 @@
 /**
  setSelected
 
- @param selected <#selected description#>
+ @param selected selected
  */
 - (void)setSelected:(BOOL)selected {
     [super setSelected:selected];
