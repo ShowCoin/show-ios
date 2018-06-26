@@ -24,4 +24,12 @@
     return self;
 }
 
+- (void)setupUI {
+    [self setTitleColor:kThemeWhiteColor forState:UIControlStateSelected];
+    [self setTitleColor:kThemeAlphWhiteColor forState:UIControlStateNormal];
+    [self.titleLabel setFont:Font_Medium(20 * Proportion375)];
+    self.selected = NO;
+}
+
+
 @end
