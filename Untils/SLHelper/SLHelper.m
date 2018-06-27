@@ -541,6 +541,13 @@
     [dateFormatter setTimeZone:timeZone];
     return dateFormatter;
 }
++ (NSString *)formatDateWithDate:(NSDate *)date format:(NSString *)format {
+    NSDateFormatter *dateFormatter = [self dateFormatter];
+    [dateFormatter setDateFormat:format];
+    NSString *result = [dateFormatter stringFromDate:date];
+    
+    return result;
+}
 
 
 
