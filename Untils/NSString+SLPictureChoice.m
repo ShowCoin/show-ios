@@ -8,7 +8,7 @@
 
 #import "NSString+DLPictureChoice.h"
 
-@implementation NSString (DLPictureChoice)
+@implementation NSString (SLPictureChoice)
 
 
 @end
