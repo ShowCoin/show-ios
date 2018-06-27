@@ -510,4 +510,18 @@
     return nil;
 }
 
++ (NSString *)transformNumbers:(NSInteger)number {
+    if (number <= 0) {
+        return @"0";
+    }else if (number <= 9999) {
+        return [NSString stringWithFormat:@"%ld", (long)number];
+    } else if (number > 9999 && number <= 999999) {
+        return [NSString stringWithFormat:@"%.1f万", number*0.0001];
+    } else{
+        return [NSString stringWithFormat:@"%.0f万", number*0.0001];
+    }
+    return nil;
+}
+
+
 @end
