@@ -548,6 +548,13 @@
     
     return result;
 }
++ (NSString *)formatDateWithString:(NSString *)dateString format:(NSString *)format {
+    NSDateFormatter *dateFormatter = [self dateFormatter];
+    dateFormatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+    NSDate *d = [dateFormatter dateFromString:dateString];
+    
+    return [SLHelper formatDateWithDate:d format:format];
+}
 
 
 
