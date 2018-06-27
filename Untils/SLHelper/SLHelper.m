@@ -491,4 +491,23 @@
     }
     return nil;
 }
+
++ (NSString *)transformMetreToKilometreAccurate:(NSString *)meter
+{
+    if ([meter isEqualToString:@""] || !meter) {
+        return @"";
+    }
+    
+    NSInteger tmpDistance = [[NSString stringWithFormat:@"%1.0f", [meter doubleValue]] intValue];
+    if (0 <= tmpDistance && tmpDistance < 1000) {
+        return [NSString stringWithFormat:@"%zd",tmpDistance];
+    } else if (tmpDistance <= 99000) {
+        return [NSString stringWithFormat:@"%zd.%zd千",tmpDistance/1000,(tmpDistance%1000)/100];
+    }
+    else{
+        return @">99千";
+    }
+    return nil;
+}
+
 @end
