@@ -17,5 +17,6 @@
  
  @return 拼接好的字符串
  */
+- (NSString *)stringWithSizeString:(NSString *)str;
 
 @end
