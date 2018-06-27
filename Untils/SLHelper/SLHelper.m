@@ -532,6 +532,15 @@
     }
     return @"";
 }
+#pragma mark -new
++ (NSDateFormatter *)dateFormatter{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    
+    //常用格式 @"yyyy-MM-dd HH:mm:ss"
+    NSTimeZone* timeZone = [NSTimeZone timeZoneWithName:@"Asia/beijing"];
+    [dateFormatter setTimeZone:timeZone];
+    return dateFormatter;
+}
 
 
 
