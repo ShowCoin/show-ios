@@ -522,6 +522,17 @@
     }
     return nil;
 }
++ (NSString *)transformMoney:(NSString *)string {
+    if(!string || [string floatValue] == 0){
+        return @"0.00";
+    }else{
+        NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
+        [numberFormatter setPositiveFormat:@",###;"];
+        return [numberFormatter stringFromNumber:[NSNumber numberWithDouble:[string doubleValue]]];
+    }
+    return @"";
+}
+
 
 
 @end
