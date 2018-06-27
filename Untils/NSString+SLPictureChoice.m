@@ -10,5 +10,12 @@
 
 @implementation NSString (SLPictureChoice)
 
+- (NSString *)stringWithSizeString:(NSString *)str
+{
+    if (IsStrEmpty(str)) return self;
+    
+
+    
+}
 
 @end
