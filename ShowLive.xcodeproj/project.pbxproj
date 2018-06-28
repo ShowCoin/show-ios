@@ -45,6 +45,7 @@
 		43291F4720E51FEE000C3C15 /* UITableViewCell+JKDelaysContentTouches.m in Sources */ = {isa = PBXBuildFile; fileRef = 43291F4520E51FED000C3C15 /* UITableViewCell+JKDelaysContentTouches.m */; };
 		43291F4A20E5203A000C3C15 /* UITableView+JKiOS7Style.m in Sources */ = {isa = PBXBuildFile; fileRef = 43291F4920E5203A000C3C15 /* UITableView+JKiOS7Style.m */; };
 		43291F4D20E520CB000C3C15 /* UITableView+FDTemplateLayoutCellDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = 43291F4C20E520CA000C3C15 /* UITableView+FDTemplateLayoutCellDebug.m */; };
+		43291F5020E520E0000C3C15 /* UITableView+FDKeyedHeightCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 43291F4E20E520E0000C3C15 /* UITableView+FDKeyedHeightCache.m */; };
 		434DDB4E20C9324F00191FC1 /* CAAnimation+JKEasingEquations.m in Sources */ = {isa = PBXBuildFile; fileRef = 434DDB4C20C9324F00191FC1 /* CAAnimation+JKEasingEquations.m */; };
 		434DDB5120C9326800191FC1 /* CALayer+JKBorderColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 434DDB5020C9326800191FC1 /* CALayer+JKBorderColor.m */; };
 		434DDB5420C932AB00191FC1 /* CALayerDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 434DDB5320C932AA00191FC1 /* CALayerDemoViewController.m */; };
@@ -183,6 +184,8 @@
 		43291F4920E5203A000C3C15 /* UITableView+JKiOS7Style.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+JKiOS7Style.m"; sourceTree = "<group>"; };
 		43291F4B20E520CA000C3C15 /* UITableView+FDTemplateLayoutCellDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDTemplateLayoutCellDebug.h"; sourceTree = "<group>"; };
 		43291F4C20E520CA000C3C15 /* UITableView+FDTemplateLayoutCellDebug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDTemplateLayoutCellDebug.m"; sourceTree = "<group>"; };
+		43291F4E20E520E0000C3C15 /* UITableView+FDKeyedHeightCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDKeyedHeightCache.m"; sourceTree = "<group>"; };
+		43291F4F20E520E0000C3C15 /* UITableView+FDKeyedHeightCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDKeyedHeightCache.h"; sourceTree = "<group>"; };
 		434DDB4C20C9324F00191FC1 /* CAAnimation+JKEasingEquations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAAnimation+JKEasingEquations.m"; sourceTree = "<group>"; };
 		434DDB4D20C9324F00191FC1 /* CAAnimation+JKEasingEquations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAAnimation+JKEasingEquations.h"; sourceTree = "<group>"; };
 		434DDB4F20C9326800191FC1 /* CALayer+JKBorderColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+JKBorderColor.h"; sourceTree = "<group>"; };
@@ -418,6 +421,8 @@
 		434DDB4B20C92B4E00191FC1 /* JKCategories */ = {
 			isa = PBXGroup;
 			children = (
+				43291F4F20E520E0000C3C15 /* UITableView+FDKeyedHeightCache.h */,
+				43291F4E20E520E0000C3C15 /* UITableView+FDKeyedHeightCache.m */,
 				43291F4B20E520CA000C3C15 /* UITableView+FDTemplateLayoutCellDebug.h */,
 				43291F4C20E520CA000C3C15 /* UITableView+FDTemplateLayoutCellDebug.m */,
 				43291F4820E52039000C3C15 /* UITableView+JKiOS7Style.h */,
@@ -1208,6 +1213,7 @@
 				93398ECF20D93370004376FB /* SLHelper.m in Sources */,
 				43291F4D20E520CB000C3C15 /* UITableView+FDTemplateLayoutCellDebug.m in Sources */,
 				434DDB5420C932AB00191FC1 /* CALayerDemoViewController.m in Sources */,
+				43291F5020E520E0000C3C15 /* UITableView+FDKeyedHeightCache.m in Sources */,
 				4325536320D8B4CD00FC0258 /* CATransactionDemoViewController.m in Sources */,
 				43993EB620E23E810017F1C3 /* UITextField+JKSelect.m in Sources */,
 				723816B420C689AB00C3885E /* SLLevelMarkView.m in Sources */,
