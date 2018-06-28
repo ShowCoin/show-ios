@@ -20,6 +20,9 @@
 /*判断输入帐号是否为邮箱*/
 -(BOOL)isValidEmail;
 
+/*判断密码只能是6-16位数字和字母*/
+-(BOOL)isValidPassword;
+
 
 
 @end
