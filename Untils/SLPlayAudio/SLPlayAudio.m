@@ -33,14 +33,14 @@
     [self.player play];
 }
 
-//- (void)play {
-//    NSURL *url = [NSBundle.mainBundle URLForResource:@"coins_received" withExtension:@"wav"];
-//    NSError *error;
-//    AVAudioPlayer *player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
-//    if (error) {
-//        NSLog(@"error >> %@", error.localizedDescription);
-//    }
-//    [player play];
-//}
+- (void)play {
+    NSURL *url = [NSBundle.mainBundle URLForResource:@"coins_received" withExtension:@"wav"];
+    NSError *error;
+    AVAudioPlayer *player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+    if (error) {
+        NSLog(@"error >> %@", error.localizedDescription);
+    }
+    [player play];
+}
 
 @end
