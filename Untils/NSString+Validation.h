@@ -23,6 +23,12 @@
 /*判断密码只能是6-16位数字和字母*/
 -(BOOL)isValidPassword;
 
+/*判断是否有效的整数*/
+-(BOOL)isValidInteger;
+
+/*判断是否有效的整数*/
+-(BOOL)isValidPositiveInteger;
+
 
 
 @end
