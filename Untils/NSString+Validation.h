@@ -29,6 +29,9 @@
 /*判断是否有效的整数*/
 -(BOOL)isValidPositiveInteger;
 
+/*判断是否有效的浮点数*/
+- (BOOL)isValidFloat;
+
 
 
 @end
