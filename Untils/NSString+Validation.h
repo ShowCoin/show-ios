@@ -45,6 +45,7 @@
 
 - (BOOL)isChinese;//判断是否是纯汉字
 
+- (BOOL)includeChinese;//判断是否含有汉字
 
 
 @end
