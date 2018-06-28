@@ -11,11 +11,11 @@
 #pragma mark - Local Storage
 
 - (void)jk_setLocalStorageString:(NSString *)string forKey:(NSString *)key;
-
+//localStorange 存储key
 - (NSString *)jk_localStorageStringForKey:(NSString *)key;
-
+//删除localStorange key
 - (void)jk_removeLocalStorageStringForKey:(NSString *)key;
-
+//清除localStorage
 - (void)jk_clearLocalStorage;
 
 #pragma mark - Session Storage
