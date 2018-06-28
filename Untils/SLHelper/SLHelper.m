@@ -555,6 +555,10 @@
     
     return [SLHelper formatDateWithDate:d format:format];
 }
++ (NSString *)formatTimeInterval:(NSTimeInterval)timeInterval format:(NSString *)format{
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:timeInterval];
+    return [self formatDateWithDate:date format:format];
+}
 
 
 
