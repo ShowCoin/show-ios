@@ -565,6 +565,40 @@
     dateFormatter.dateFormat = formatter;
     return [dateFormatter dateFromString:dateStr];
 }
++ (NSString *)weekdayStringValue:(NSDate*)date {
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSInteger unitFlags = NSWeekCalendarUnit|NSWeekdayCalendarUnit;
+    NSDateComponents *comps = [calendar components:unitFlags fromDate:date];
+    int weekday=(int)[comps weekday];
+    switch (weekday)
+    {
+        case 1:
+            return @"星期天";
+            break;
+        case 2:
+            return @"星期一";
+            break;
+        case 3:
+            return @"星期二";
+            break;
+        case 4:
+            return @"星期三";
+            break;
+        case 5:
+            return @"星期四";
+            break;
+        case 6:
+            return @"星期五";
+            break;
+        case 7:
+            return @"星期六";
+            break;
+            
+        default:
+            break;
+    }
+    return nil;
+}
 
 
 
