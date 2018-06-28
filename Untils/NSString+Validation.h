@@ -37,6 +37,14 @@
 /*判断是否为空字符串*/
 - (BOOL)isEmpty;
 
+/*去除电话号码中的特殊字符*/
+- (NSString*)extractNumber;
+
+/*隐藏身份证中间的几个数字*/
+- (NSString *)ittemDisposeIdcardNumber:(NSString *)idcardNumber;
+
+- (BOOL)isChinese;//判断是否是纯汉字
+
 
 
 @end
