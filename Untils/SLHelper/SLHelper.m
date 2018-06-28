@@ -600,6 +600,17 @@
     return nil;
 }
 
++(NSString *)getTimeIntervalWithTime:(NSTimeInterval)timeInterval{
+    
+    NSInteger intTime = timeInterval;
+    NSInteger seconds = intTime % 60;
+    NSInteger minutes = (intTime / 60) % 60;
+    NSInteger hours = (intTime / 3600);
+    NSString *timeStr = [NSString stringWithFormat:@"%2zd小时%2zd分%2zd秒", hours, minutes, seconds];
+    return timeStr;
+}
+
+
 
 
 
