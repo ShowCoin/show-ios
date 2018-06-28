@@ -560,6 +560,13 @@
     return [self formatDateWithDate:date format:format];
 }
 
++ (NSDate *)dateValueWithString:(NSString *)dateStr ByFormatter:(NSString *)formatter {
+    NSDateFormatter *dateFormatter = [self dateFormatter];
+    dateFormatter.dateFormat = formatter;
+    return [dateFormatter dateFromString:dateStr];
+}
+
+
 
 
 @end
