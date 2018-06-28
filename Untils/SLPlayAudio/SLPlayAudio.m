@@ -26,6 +26,12 @@
     return _instance;
 }
 
+
+/**
+ <#Description#>
+
+ @param op <#op description#>
+ */
 - (void)play:(SLAudioOption)op {
     NSURL *url = [NSBundle.mainBundle URLForResource:@"coins_received" withExtension:@"wav"];
     AVPlayerItem *item = [[AVPlayerItem alloc] initWithURL:url];
