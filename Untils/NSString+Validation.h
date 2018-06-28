@@ -14,6 +14,9 @@
 /*判断输入的是否是昵称*/
 -(BOOL)isValidNickName;
 
+/*判断输入的是否是手机号码*/
+-(BOOL)isValidPhone;
+
 
 
 @end
