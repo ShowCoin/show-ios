@@ -609,7 +609,13 @@
     NSString *timeStr = [NSString stringWithFormat:@"%2zd小时%2zd分%2zd秒", hours, minutes, seconds];
     return timeStr;
 }
-
+/**
+ *  时间补0
+ *
+ *  @param str str description
+ *
+ *  @return return value description
+ */
 
 + (NSString *)fillZeroWithString:(NSString *)str
 {
