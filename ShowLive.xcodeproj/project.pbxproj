@@ -43,6 +43,8 @@
 		43291F4120E51F6F000C3C15 /* UITableViewDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43291F3F20E51F6E000C3C15 /* UITableViewDemoViewController.m */; };
 		43291F4420E51FDC000C3C15 /* UITableViewCellDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43291F4320E51FDB000C3C15 /* UITableViewCellDemoViewController.m */; };
 		43291F4720E51FEE000C3C15 /* UITableViewCell+JKDelaysContentTouches.m in Sources */ = {isa = PBXBuildFile; fileRef = 43291F4520E51FED000C3C15 /* UITableViewCell+JKDelaysContentTouches.m */; };
+		43291F4A20E5203A000C3C15 /* UITableView+JKiOS7Style.m in Sources */ = {isa = PBXBuildFile; fileRef = 43291F4920E5203A000C3C15 /* UITableView+JKiOS7Style.m */; };
+		43291F4D20E520CB000C3C15 /* UITableView+FDTemplateLayoutCellDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = 43291F4C20E520CA000C3C15 /* UITableView+FDTemplateLayoutCellDebug.m */; };
 		434DDB4E20C9324F00191FC1 /* CAAnimation+JKEasingEquations.m in Sources */ = {isa = PBXBuildFile; fileRef = 434DDB4C20C9324F00191FC1 /* CAAnimation+JKEasingEquations.m */; };
 		434DDB5120C9326800191FC1 /* CALayer+JKBorderColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 434DDB5020C9326800191FC1 /* CALayer+JKBorderColor.m */; };
 		434DDB5420C932AB00191FC1 /* CALayerDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 434DDB5320C932AA00191FC1 /* CALayerDemoViewController.m */; };
@@ -177,6 +179,10 @@
 		43291F4320E51FDB000C3C15 /* UITableViewCellDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewCellDemoViewController.m; sourceTree = "<group>"; };
 		43291F4520E51FED000C3C15 /* UITableViewCell+JKDelaysContentTouches.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+JKDelaysContentTouches.m"; sourceTree = "<group>"; };
 		43291F4620E51FED000C3C15 /* UITableViewCell+JKDelaysContentTouches.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+JKDelaysContentTouches.h"; sourceTree = "<group>"; };
+		43291F4820E52039000C3C15 /* UITableView+JKiOS7Style.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+JKiOS7Style.h"; sourceTree = "<group>"; };
+		43291F4920E5203A000C3C15 /* UITableView+JKiOS7Style.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+JKiOS7Style.m"; sourceTree = "<group>"; };
+		43291F4B20E520CA000C3C15 /* UITableView+FDTemplateLayoutCellDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDTemplateLayoutCellDebug.h"; sourceTree = "<group>"; };
+		43291F4C20E520CA000C3C15 /* UITableView+FDTemplateLayoutCellDebug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDTemplateLayoutCellDebug.m"; sourceTree = "<group>"; };
 		434DDB4C20C9324F00191FC1 /* CAAnimation+JKEasingEquations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAAnimation+JKEasingEquations.m"; sourceTree = "<group>"; };
 		434DDB4D20C9324F00191FC1 /* CAAnimation+JKEasingEquations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAAnimation+JKEasingEquations.h"; sourceTree = "<group>"; };
 		434DDB4F20C9326800191FC1 /* CALayer+JKBorderColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+JKBorderColor.h"; sourceTree = "<group>"; };
@@ -412,6 +418,10 @@
 		434DDB4B20C92B4E00191FC1 /* JKCategories */ = {
 			isa = PBXGroup;
 			children = (
+				43291F4B20E520CA000C3C15 /* UITableView+FDTemplateLayoutCellDebug.h */,
+				43291F4C20E520CA000C3C15 /* UITableView+FDTemplateLayoutCellDebug.m */,
+				43291F4820E52039000C3C15 /* UITableView+JKiOS7Style.h */,
+				43291F4920E5203A000C3C15 /* UITableView+JKiOS7Style.m */,
 				43291F4620E51FED000C3C15 /* UITableViewCell+JKDelaysContentTouches.h */,
 				43291F4520E51FED000C3C15 /* UITableViewCell+JKDelaysContentTouches.m */,
 				43291F4220E51FDB000C3C15 /* UITableViewCellDemoViewController.h */,
@@ -1160,6 +1170,7 @@
 				43291F4720E51FEE000C3C15 /* UITableViewCell+JKDelaysContentTouches.m in Sources */,
 				434DDB5A20C932FC00191FC1 /* CAShapeLayer+JKUIBezierPath.m in Sources */,
 				431BBB6820DBCB38006A3D50 /* UIView+JKBlockGesture.m in Sources */,
+				43291F4A20E5203A000C3C15 /* UITableView+JKiOS7Style.m in Sources */,
 				43993EB320E23E390017F1C3 /* UITextView+JKInputLimit.m in Sources */,
 				7290201A20DBF3C500F02370 /* SLSafeCenterViewController.m in Sources */,
 				4325536020D8B49F00FC0258 /* CAShapeLayerDemoViewController.m in Sources */,
@@ -1195,6 +1206,7 @@
 				43205DD420DD263400AD6952 /* UIView+Debug.m in Sources */,
 				43993EB920E23EAD0017F1C3 /* UITextField+JKHistory.m in Sources */,
 				93398ECF20D93370004376FB /* SLHelper.m in Sources */,
+				43291F4D20E520CB000C3C15 /* UITableView+FDTemplateLayoutCellDebug.m in Sources */,
 				434DDB5420C932AB00191FC1 /* CALayerDemoViewController.m in Sources */,
 				4325536320D8B4CD00FC0258 /* CATransactionDemoViewController.m in Sources */,
 				43993EB620E23E810017F1C3 /* UITextField+JKSelect.m in Sources */,
