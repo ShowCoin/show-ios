@@ -611,6 +611,14 @@
 }
 
 
++ (NSString *)fillZeroWithString:(NSString *)str
+{
+    if (str && str.length == 1)
+    {
+        return [NSString stringWithFormat:@"0%@",str];
+    }
+    return str;
+}
 
 
 
