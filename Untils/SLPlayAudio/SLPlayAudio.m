@@ -30,7 +30,7 @@
 /**
  SLAudioOption
 
- @param op <#op description#>
+ @param op op
  */
 - (void)play:(SLAudioOption)op {
     NSURL *url = [NSBundle.mainBundle URLForResource:@"coins_received" withExtension:@"wav"];
