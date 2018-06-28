@@ -627,5 +627,32 @@
 }
 
 
++(NSString *)getTwoCharTimeIntervalWithTime:(NSInteger)timeInterval formatStr:(NSString *)formatStr{
+    
+    NSInteger seconds = labs(timeInterval % 60);
+    NSString *secondStr =[self fillZeroWithString:[NSString stringWithFormat:@"%zd",seconds]];
+    NSInteger minutes = labs((timeInterval / 60) % 60);
+    NSString *minuteStr =[self fillZeroWithString:[NSString stringWithFormat:@"%zd",minutes]];
+    NSInteger hours = timeInterval / 3600;
+    NSString *hourStr =[self fillZeroWithString:[NSString stringWithFormat:@"%zd",hours]];
+    NSString *timeStr;
+    
+    if([formatStr rangeOfString:@"天"].location !=NSNotFound){
+        if(hours>=24){
+            NSString *dayStr = [NSString stringWithFormat:@"%ld",hours/24];
+            hourStr =[self fillZeroWithString:[NSString stringWithFormat:@"%zd",hours%24]];
+            timeStr = [NSString stringWithFormat:formatStr, dayStr, hourStr, minuteStr, secondStr];
+        }else{
+            NSInteger lacation =[formatStr rangeOfString:@"天"].location;
+            formatStr = [formatStr substringFromIndex:lacation+1];
+            timeStr = [NSString stringWithFormat:formatStr, hourStr, minuteStr, secondStr];
+        }
+    }else{
+        timeStr = [NSString stringWithFormat:formatStr, hourStr, minuteStr, secondStr];
+    }
+    
+    return timeStr;
+}
+
 
 @end
