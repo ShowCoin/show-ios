@@ -11,5 +11,9 @@
 @interface NSString (Validation)
 
 
+/*判断输入的是否是昵称*/
+-(BOOL)isValidNickName;
+
+
 
 @end
