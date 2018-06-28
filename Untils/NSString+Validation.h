@@ -31,6 +31,11 @@
 
 /*判断是否有效的浮点数*/
 - (BOOL)isValidFloat;
+/*判断是否有效的正浮点数*/
+- (BOOL)isValidPositiveFloat;
+
+/*判断是否为空字符串*/
+- (BOOL)isEmpty;
 
 
 
