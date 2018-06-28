@@ -17,6 +17,9 @@
 /*判断输入的是否是手机号码*/
 -(BOOL)isValidPhone;
 
+/*判断输入帐号是否为邮箱*/
+-(BOOL)isValidEmail;
+
 
 
 @end
