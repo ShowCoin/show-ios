@@ -28,7 +28,7 @@
 
 
 /**
- <#Description#>
+ SLAudioOption
 
  @param op <#op description#>
  */
