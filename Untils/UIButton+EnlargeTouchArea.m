@@ -10,5 +10,9 @@
 #import <objc/runtime.h>
 @implementation UIButton (EnlargeTouchArea)
 
+static char topNameKey;
+static char rightNameKey;
+static char bottomNameKey;
+static char leftNameKey;
 
 @end
