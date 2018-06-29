@@ -1,9 +1,9 @@
 //
 //  UIButton+EnlargeTouchArea.h
-//  Dreamer-ios-client
+//  showgx
 //
-//  Created by 巩鑫 on 2017/4/28.
-//  Copyright © 2017年 Beijing Dreamer. All rights reserved.
+//  Created by showgx on 2017/4/28.
+//  Copyright © 2017年 Beijing show. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
