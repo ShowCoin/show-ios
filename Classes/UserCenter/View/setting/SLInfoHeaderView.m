@@ -73,7 +73,68 @@
     return _BgImgView;
 }
 
+-(UIVisualEffectView *)effectview
+{
+    if (!_effectview) {
+        
+        UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+        
+        _effectview = [[UIVisualEffectView alloc] initWithEffect:blur];
+        _effectview.alpha = 0.97;
+    }
+    return _effectview;
+}
+-(UIView *)effColorView
+{
+    if (!_effColorView) {
+        _effColorView  = [[UIView alloc] init];
+        _effColorView.backgroundColor = kBlackThemeColor;
+    }
+    return _effColorView;
+}
+-(UIView *)whiteView
+{
+    if (!_whiteView) {
+        _whiteView = [[UIView alloc] init];
+        _whiteView.backgroundColor = kBlackThemeBGColor;
+    }
+    return _whiteView;
+}
 
+-(UIImageView *)avaImg
+{
+    if (!_avaImg) {
+        _avaImg = [[UIImageView alloc]init];
+        _avaImg.backgroundColor = [UIColor clearColor];
+        _avaImg.contentMode = UIViewContentModeScaleAspectFill;
+        _avaImg.clipsToBounds = YES;
+        [_avaImg.layer setCornerRadius:45*Proportion375];
+    }
+    return _avaImg;
+}
+
+-(UIButton *)cameraBtn
+{
+    if (!_cameraBtn) {
+        _cameraBtn  = [UIButton buttonWithType:UIButtonTypeCustom];
+        _cameraBtn.backgroundColor = HexRGBAlpha(0x000000, 0.4);
+        [_cameraBtn.layer setCornerRadius:45*Proportion375];
+        [_cameraBtn setImage:[UIImage imageNamed:@"userhome_avatar_change"] forState:UIControlStateNormal];
+        _cameraBtn.layer.borderColor = kBlackThemeBGColor.CGColor;
+        _cameraBtn.layer.borderWidth = 6;
+        [[_cameraBtn rac_signalForControlEvents:UIControlEventTouchUpInside]subscribeNext:^(id x) {
+            [PageMgr pushtoChangeheadportraitController];
+        }];
+    }
+    return _cameraBtn;
+}
+-(UILabel *)tipLab
+{
+    if (!_tipLab) {
+        _tipLab = [UILabel labelWithText:@"点击更换头像" textColor:kGrayWith999999 font:Font_Regular(10*Proportion375) backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentCenter];
+    }
+    return _tipLab;
+}
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
