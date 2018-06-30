@@ -136,7 +136,7 @@ static dispatch_once_t onceToken;
 /**
  cx_windowMore
 
- @param more <#more description#>
+ @param more more
  */
 - (void)cx_windowMore:(BOOL)more {
     if (self.window.mj_h == kMessageMaxH) return;
