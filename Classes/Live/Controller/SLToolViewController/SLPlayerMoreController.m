@@ -157,7 +157,7 @@ static dispatch_once_t onceToken;
 }
 
 /**
- <#Description#>
+ showWindow
 
  @param show <#show description#>
  */
