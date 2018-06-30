@@ -133,6 +133,11 @@ static dispatch_once_t onceToken;
 
 #pragma mark - Animator
 
+/**
+ <#Description#>
+
+ @param more <#more description#>
+ */
 - (void)cx_windowMore:(BOOL)more {
     if (self.window.mj_h == kMessageMaxH) return;
     CGFloat h = kMessageMaxH - self.window.mj_h;
