@@ -159,7 +159,7 @@ static dispatch_once_t onceToken;
 /**
  showWindow
 
- @param show <#show description#>
+ @param show show
  */
 - (void)showWindow:(BOOL)show {
     self.window.hidden = NO;
