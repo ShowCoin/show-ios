@@ -23,6 +23,15 @@
     }else{
         return nil;
     }
+    NSRange rangR = NSMakeRange(0, 2);
+    NSString *colorR = [tempS substringWithRange:rangR];
+    
+    NSRange rangG = NSMakeRange(2, 2);
+    NSString *colorG = [tempS substringWithRange:rangG];
+    
+    NSRange rangB = NSMakeRange(4, 2);
+    NSString *colorB = [tempS substringWithRange:rangB];
+    
 
 }
 
