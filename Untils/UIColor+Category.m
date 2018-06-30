@@ -13,6 +13,16 @@
 + (UIColor *)customColorWithString:(NSString *)string
 {
     //十六进制色值，过滤输入带不带#
+    //#121212,121212
+    NSString * tempS = nil;
+    
+    if (string.length == 7) {//#121212,
+        tempS = [string substringFromIndex:1];
+    }else if(string.length == 6){//121212
+        tempS = string;
+    }else{
+        return nil;
+    }
 
 }
 
