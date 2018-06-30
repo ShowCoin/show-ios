@@ -188,6 +188,11 @@ static dispatch_once_t onceToken;
     }];
 }
 
+/**
+ <#Description#>
+
+ @return <#return value description#>
+ */
 - (CGFloat)backY {
     return self.windowY - kMargin10;
 }
