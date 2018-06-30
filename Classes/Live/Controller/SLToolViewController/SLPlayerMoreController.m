@@ -156,6 +156,11 @@ static dispatch_once_t onceToken;
     } completion:nil];
 }
 
+/**
+ <#Description#>
+
+ @param show <#show description#>
+ */
 - (void)showWindow:(BOOL)show {
     self.window.hidden = NO;
     [self.chatView loadConversationList];
