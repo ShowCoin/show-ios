@@ -83,6 +83,8 @@
 		723816B720C68B3C00C3885E /* SLHeadPortrait.m in Sources */ = {isa = PBXBuildFile; fileRef = 723816B620C68B3C00C3885E /* SLHeadPortrait.m */; };
 		723816BE20C6ABFF00C3885E /* UIColor+Equalable.m in Sources */ = {isa = PBXBuildFile; fileRef = 723816B920C6ABFE00C3885E /* UIColor+Equalable.m */; };
 		724D4BC220C9155A0007E4E8 /* HomeHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 724D4BC120C9155A0007E4E8 /* HomeHeader.m */; };
+		724FF37A20E6678D00DD40EB /* SLInfoHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 724FF37920E6678D00DD40EB /* SLInfoHeaderView.m */; };
+		724FF37D20E6680500DD40EB /* SLUserInfoListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 724FF37C20E6680500DD40EB /* SLUserInfoListCell.m */; };
 		7290201A20DBF3C500F02370 /* SLSafeCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7290201920DBF3C400F02370 /* SLSafeCenterViewController.m */; };
 		72FE9B6620621F59008DD3D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72FE9B6420621F59008DD3D5 /* LaunchScreen.storyboard */; };
 		72FE9B6920621F59008DD3D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FE9B6820621F59008DD3D5 /* main.m */; };
@@ -277,6 +279,11 @@
 		724D4BC120C9155A0007E4E8 /* HomeHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeHeader.m; sourceTree = "<group>"; };
 		724D4BC320C915BF0007E4E8 /* HotReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotReusableView.h; sourceTree = "<group>"; };
 		724DBA3820C0377F00EF6406 /* SLUserViewHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLUserViewHeader.h; sourceTree = "<group>"; };
+		724FF37520E666EB00DD40EB /* ShowForUsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowForUsView.h; sourceTree = "<group>"; };
+		724FF37820E6676600DD40EB /* SLInfoHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLInfoHeaderView.h; sourceTree = "<group>"; };
+		724FF37920E6678D00DD40EB /* SLInfoHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLInfoHeaderView.m; sourceTree = "<group>"; };
+		724FF37B20E667E200DD40EB /* SLUserInfoListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLUserInfoListCell.h; sourceTree = "<group>"; };
+		724FF37C20E6680500DD40EB /* SLUserInfoListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLUserInfoListCell.m; sourceTree = "<group>"; };
 		7290201820DBF3A600F02370 /* SLSafeCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLSafeCenterViewController.h; sourceTree = "<group>"; };
 		7290201920DBF3C400F02370 /* SLSafeCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLSafeCenterViewController.m; sourceTree = "<group>"; };
 		72C6166920A0C67500103C44 /* SLUrgeListAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLUrgeListAction.h; sourceTree = "<group>"; };
@@ -615,6 +622,18 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		724FF37420E666C200DD40EB /* setting */ = {
+			isa = PBXGroup;
+			children = (
+				724FF37520E666EB00DD40EB /* ShowForUsView.h */,
+				724FF37820E6676600DD40EB /* SLInfoHeaderView.h */,
+				724FF37920E6678D00DD40EB /* SLInfoHeaderView.m */,
+				724FF37B20E667E200DD40EB /* SLUserInfoListCell.h */,
+				724FF37C20E6680500DD40EB /* SLUserInfoListCell.m */,
+			);
+			path = setting;
+			sourceTree = "<group>";
+		};
 		725B98BA20AC3CD400747F7A /* UserCenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -627,6 +646,7 @@
 		7297A17920BED7D00012DBEB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				724FF37420E666C200DD40EB /* setting */,
 				724DBA3820C0377F00EF6406 /* SLUserViewHeader.h */,
 				722957B020C80778000D0719 /* SLUserViewHeader.m */,
 			);
@@ -1209,6 +1229,7 @@
 				436B1EB420DA304000419AC0 /* UIView+JKScreenshot.m in Sources */,
 				43205DDD20DD267E00AD6952 /* UITextView+JKSelect.m in Sources */,
 				723816BE20C6ABFF00C3885E /* UIColor+Equalable.m in Sources */,
+				724FF37D20E6680500DD40EB /* SLUserInfoListCell.m in Sources */,
 				723816B720C68B3C00C3885E /* SLHeadPortrait.m in Sources */,
 				93615AEB20C1453A000D5658 /* SLBaseWebViewController.m in Sources */,
 				4325535A20CFE8B100FC0258 /* UIWebVIew+JKSwipeGesture.m in Sources */,
@@ -1231,6 +1252,7 @@
 				434DDB5720C932DB00191FC1 /* CAMediaTimingFunction+JKAdditionalEquations.m in Sources */,
 				431BBB5F20DBCA96006A3D50 /* UIView+JKDraggable.m in Sources */,
 				724D4BC220C9155A0007E4E8 /* HomeHeader.m in Sources */,
+				724FF37A20E6678D00DD40EB /* SLInfoHeaderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
