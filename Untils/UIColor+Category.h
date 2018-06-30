@@ -10,5 +10,7 @@
 
 @interface UIColor (Category)
 
+//颜色转换
++ (UIColor *)customColorWithString:(NSString *)string;
 
 @end
