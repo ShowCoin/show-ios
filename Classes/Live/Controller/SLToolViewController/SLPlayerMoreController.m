@@ -191,7 +191,7 @@ static dispatch_once_t onceToken;
 /**
  backY
 
- @return <#return value description#>
+ @return CGFloat
  */
 - (CGFloat)backY {
     return self.windowY - kMargin10;
