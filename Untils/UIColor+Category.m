@@ -10,6 +10,10 @@
 
 @implementation UIColor (Category)
 
++ (UIColor *)customColorWithString:(NSString *)string
+{
+    //十六进制色值，过滤输入带不带#
 
+}
 
 @end
