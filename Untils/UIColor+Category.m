@@ -32,7 +32,14 @@
     NSRange rangB = NSMakeRange(4, 2);
     NSString *colorB = [tempS substringWithRange:rangB];
     
-
+    
+    NSScanner * Rscanner = [NSScanner scannerWithString:colorR];
+    NSScanner * Gscanner = [NSScanner scannerWithString:colorG];
+    NSScanner * Bscanner = [NSScanner scannerWithString:colorB];
+    
+    unsigned int R ,G, B;
+    
+   
 }
 
 @end
