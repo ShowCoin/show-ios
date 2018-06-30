@@ -134,7 +134,7 @@ static dispatch_once_t onceToken;
 #pragma mark - Animator
 
 /**
- <#Description#>
+ cx_windowMore
 
  @param more <#more description#>
  */
