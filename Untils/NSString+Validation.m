@@ -116,5 +116,15 @@
     return [predicate evaluateWithObject:self];
 }
 
-
+- (BOOL)includeChinese
+{
+    for(int i=0; i< [self length];i++)
+    {
+        int a =[self characterAtIndex:i];
+        if( a >0x4e00&& a <0x9fff){
+            return YES;
+        }
+    }
+    return NO;
+}
 @end
