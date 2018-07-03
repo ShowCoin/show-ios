@@ -334,6 +334,61 @@
     }
 }
 
+#pragma mark - delegates
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    if (section == 0) {
+        
+        SLInfoHeaderView * header = [[SLInfoHeaderView alloc] initWithFrame:CGRectMake(0, 0, kMainScreenWidth, 230*Proportion375)];
+        [header.avaImg yy_setImageWithURL:[NSURL URLWithString:AccountUserInfoModel.avatar] placeholder:[UIImage imageNamed:@""]];
+        [header.BgImgView yy_setImageWithURL:[NSURL URLWithString:AccountUserInfoModel.large_avatar] placeholder:[UIImage imageNamed:@""]];
+        return header;
+    }else{
+        UIView * view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kMainScreenWidth, 12*Proportion375)];
+        UIView * line =[[UIView alloc] initWithFrame:CGRectMake(0, 11*Proportion375, kMainScreenWidth, 1)];
+        line.backgroundColor = kBlackThemeColor;
+        [view addSubview:line];
+        return view;
+    }
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    if (section == 0) {
+        return 230*Proportion375;
+    }
+    return 12*Proportion375;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    if (section == 0) {
+        return 0.01 ;
+    }
+    return 30;
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    if (section == 0) {
+        return nil;
+    }
+    UIView * view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kMainScreenWidth, 30)];
+    return view;
+}
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    if (section == 0) {
+        return 7;
+    }
+    return 1;
+}
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 2;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 52;
+ }
 /*
 #pragma mark - Navigation
 
