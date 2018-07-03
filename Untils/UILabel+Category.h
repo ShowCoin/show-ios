@@ -1,9 +1,9 @@
 //
 //  UILabel+Category.h
-//  kangxiaobai
+//  show
 //
-//  Created by 武春鹏 on 15/9/6.
-//  Copyright (c) 2015年 kangxiaobai. All rights reserved.
+//  Created by show on 15/9/6.
+//  Copyright (c) show. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
