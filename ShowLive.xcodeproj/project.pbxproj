@@ -85,6 +85,7 @@
 		43D87B2C20EB6DCE00E991D6 /* UIScrollView+APParallaxHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D87B2B20EB6DCE00E991D6 /* UIScrollView+APParallaxHeader.m */; };
 		43D87B2F20EB6DEA00E991D6 /* UIScreenDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D87B2E20EB6DE900E991D6 /* UIScreenDemoViewController.m */; };
 		43D87B3220EB6E0500E991D6 /* UIScreen+JKFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D87B3120EB6E0400E991D6 /* UIScreen+JKFrame.m */; };
+		43D87B3520EB6E7000E991D6 /* UIResponderDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D87B3320EB6E6F00E991D6 /* UIResponderDemoViewController.m */; };
 		7202FE1320EB5FE1008DF215 /* SLUserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7202FE1220EB5FE1008DF215 /* SLUserInfoViewController.m */; };
 		720F860920B2F59500AD0C54 /* SLGetRyTokenAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 720F860120B2F59500AD0C54 /* SLGetRyTokenAction.m */; };
 		722957B120C80779000D0719 /* SLUserViewHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 722957B020C80778000D0719 /* SLUserViewHeader.m */; };
@@ -272,6 +273,8 @@
 		43D87B2E20EB6DE900E991D6 /* UIScreenDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIScreenDemoViewController.m; sourceTree = "<group>"; };
 		43D87B3020EB6E0400E991D6 /* UIScreen+JKFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+JKFrame.h"; sourceTree = "<group>"; };
 		43D87B3120EB6E0400E991D6 /* UIScreen+JKFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+JKFrame.m"; sourceTree = "<group>"; };
+		43D87B3320EB6E6F00E991D6 /* UIResponderDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIResponderDemoViewController.m; sourceTree = "<group>"; };
+		43D87B3420EB6E7000E991D6 /* UIResponderDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIResponderDemoViewController.h; sourceTree = "<group>"; };
 		7202FE1220EB5FE1008DF215 /* SLUserInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLUserInfoViewController.m; sourceTree = "<group>"; };
 		720C304820A35ACC00207500 /* SLGetWithdrawAddressAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLGetWithdrawAddressAction.h; sourceTree = "<group>"; };
 		720F85F720B2F59400AD0C54 /* SLChatStatisticsAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLChatStatisticsAction.h; sourceTree = "<group>"; };
@@ -457,6 +460,8 @@
 		434DDB4B20C92B4E00191FC1 /* JKCategories */ = {
 			isa = PBXGroup;
 			children = (
+				43D87B3420EB6E7000E991D6 /* UIResponderDemoViewController.h */,
+				43D87B3320EB6E6F00E991D6 /* UIResponderDemoViewController.m */,
 				43D87B3020EB6E0400E991D6 /* UIScreen+JKFrame.h */,
 				43D87B3120EB6E0400E991D6 /* UIScreen+JKFrame.m */,
 				43D87B2D20EB6DE900E991D6 /* UIScreenDemoViewController.h */,
@@ -1224,6 +1229,7 @@
 				43D24A952094B4C500C59AC8 /* ShowNavigationBar.m in Sources */,
 				435E3C9220C02BB2002B7A7F /* NSDecimalNumber+JKCalculatingByString.m in Sources */,
 				4325536C20D8B53400FC0258 /* MKMapView+JKBetterMaps.m in Sources */,
+				43D87B3520EB6E7000E991D6 /* UIResponderDemoViewController.m in Sources */,
 				72FE9B6920621F59008DD3D5 /* main.m in Sources */,
 				435E3C9020C02BB2002B7A7F /* NSNumber+JKRound.m in Sources */,
 				434DDB5D20C9332700191FC1 /* CATransaction+JKAnimateWithDuration.m in Sources */,
