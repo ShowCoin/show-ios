@@ -659,6 +659,73 @@
 
 }
 
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    switch (actionSheet.tag) {
+        case 9001:{
+            switch (buttonIndex) {
+                case 0:
+                    self.gender = @"1";
+                    break;
+                case 1:
+                    self.gender = @"2";
+                    break;
+                default:
+                    break;
+            }
+            NSIndexPath *indexPath=[NSIndexPath indexPathForRow:2 inSection:0];
+            [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:indexPath,nil] withRowAnimation:UITableViewRowAnimationNone];
+        }
+            break;
+        case 9002:
+            break;
+
+        default:
+            break;
+    }
+}
+#pragma mark picker view delegate
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+    if (pickerView.tag == 1000) {
+        return 1;
+    }else{
+        return 2;
+    }
+}
+
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
+{
+    if (pickerView.tag == 1000) {
+        
+        return percentArr.count;
+    }else{
+        if (component == 0) {
+            return characterArray.count;
+        }else{
+            return [NSArray arrayWithArray:[citysArray objectAtIndex:_characterIndex]].count;
+        }
+    }
+    return 0;
+}
+
+//- (NSString *)pickerView:(UIPickerView *)pickerView
+//             titleForRow:(NSInteger)row
+//            forComponent:(NSInteger)component
+//{
+//    NSString *titleStr;
+//    if (row < 60) {
+//
+//        titleStr =  [NSString stringWithFormat:@"%@ cm",[_constellationArray objectAtIndex:row]];
+//    }else{
+//        titleStr =  [_constellationArray objectAtIndex:row];
+//
+//    }
+//
+//    return titleStr;
+//}
+
 /*
 #pragma mark - Navigation
 
