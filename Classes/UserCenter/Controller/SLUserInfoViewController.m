@@ -867,6 +867,29 @@
 
 }
 
+
+-(void)fingerTapped:(UITapGestureRecognizer *)gestureRecognizer
+
+{
+    
+    [self.view endEditing:YES];
+    
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+#pragma mark---------scrollView-----------
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    if (scrollView.contentOffset.y <= 0) {
+        scrollView.contentOffset = CGPointMake(0, 0);
+    }
+    [self.nameTextField resignFirstResponder];
+    [self.IDTextField resignFirstResponder];
+
+}
 /*
 #pragma mark - Navigation
 
