@@ -17,6 +17,10 @@
 + (CGFloat)getLabelHeightWithText:(NSString *)text wordSize:(CGFloat)wordSize width:(CGFloat)width;
 
 
+//创建label
++(UILabel*)setLabelFrame:(CGRect)frame Text:(NSString*)text TextColor:(UIColor*)color font:(UIFont*)font textAlignment:(NSTextAlignment)textAlignment;
+
+
 
 
 @end
