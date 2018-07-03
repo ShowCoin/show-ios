@@ -32,4 +32,13 @@
 
 
 
+/**
+ 获取Lbael的大小（此方法使用前需设置好label的font,text,返回大小以单行计算）
+ 
+ @return Label大小
+ */
+-(CGSize)getLabelSize;
+
+
+
 @end
