@@ -21,6 +21,15 @@
 +(UILabel*)setLabelFrame:(CGRect)frame Text:(NSString*)text TextColor:(UIColor*)color font:(UIFont*)font textAlignment:(NSTextAlignment)textAlignment;
 
 
+/**
+ *  生成文本的尺寸
+ *
+ *  @param height 文本的高度
+ *
+ *  @return 文本尺寸
+ */
+- (CGSize)boundingRectWithHeight:(CGFloat)height;
+
 
 
 @end
