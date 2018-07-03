@@ -39,6 +39,8 @@
  */
 -(CGSize)getLabelSize;
 
+-(CGSize)getLabelAttributedSize;
+
 
 
 @end
