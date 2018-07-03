@@ -41,6 +41,12 @@
 
 -(CGSize)getLabelAttributedSize;
 
+/**
+ 设置行间距
+ @param text 文本
+ @param lineSpacing 间距
+ */
 
+- (void)setText:(NSString*)text lineSpacing:(CGFloat)lineSpacing;
 
 @end
