@@ -13,6 +13,10 @@
 //获取label的宽度
 + (CGFloat)getLabelWidthWithText:(NSString *)text wordSize:(CGFloat)wordSize height:(CGFloat)height;
 
+//获取label的高度
++ (CGFloat)getLabelHeightWithText:(NSString *)text wordSize:(CGFloat)wordSize width:(CGFloat)width;
+
+
 
 
 @end
