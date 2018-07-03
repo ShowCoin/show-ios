@@ -122,15 +122,95 @@
     return _tableView;
 }
 
+- (UITextField*)nameTextField
+{
+    if (!_nameTextField) {
+        _nameTextField = [[UITextField alloc]initWithFrame:CGRectMake(90*Proportion375,25, 250*Proportion375,52)];
+        //        _inputTextField.type = 1;
+        _nameTextField.centerY = 26*Proportion375;
+        //        _textField.placeholder = [NSString stringWithFormat:@"请输入%@",self.];
+        _nameTextField.backgroundColor = [UIColor clearColor];
+        _nameTextField.font = Font_Regular(15);
+        _nameTextField.clearButtonMode = UITextFieldViewModeNever;
+        _nameTextField.contentVerticalAlignment =UIControlContentHorizontalAlignmentCenter;
+        _nameTextField.autocorrectionType = UITextAutocorrectionTypeNo;
+        _nameTextField.keyboardType = UIKeyboardTypeDefault;
+        _nameTextField.returnKeyType = UIReturnKeyDone;
+        _nameTextField.delegate = self;
+        _nameTextField.autocapitalizationType = UITextAutocapitalizationTypeNone;
+        _nameTextField.textColor = kBlackThemetextColor;
+        _nameTextField.tintColor = kBlackThemetextColor;
+        [_nameTextField addTarget:self action:@selector(textDidChanged:) forControlEvents:UIControlEventEditingChanged];
+//        UIButton *clean = [_nameTextField valueForKey:@"_clearButton"]; //key是固定的
+//        [clean setImage:[UIImage imageNamed:@"name_cleanbtn"] forState:UIControlStateNormal];
+//        [clean setImage:[UIImage imageNamed:@"name_cleanbtn"] forState:UIControlStateHighlighted];
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    }
+    return _nameTextField;
+    
 }
-*/
+- (UITextField*)IDTextField
+{
+    if (!_IDTextField) {
+        _IDTextField = [[UITextField alloc]initWithFrame:CGRectMake(90*Proportion375,25, 250*Proportion375,15*Proportion375)];
+        _IDTextField.centerY = 26*Proportion375;
+        _IDTextField.backgroundColor = [UIColor clearColor];
+        _IDTextField.font = Font_Regular(15*Proportion375);
+        _IDTextField.clearButtonMode = UITextFieldViewModeNever;
+        _IDTextField.autocorrectionType = UITextAutocorrectionTypeNo;
+        _IDTextField.keyboardType = UIKeyboardTypeDefault;
+        _IDTextField.returnKeyType = UIReturnKeyDone;
+        _IDTextField.delegate = self;
+        _IDTextField.autocapitalizationType = UITextAutocapitalizationTypeNone;
+        _IDTextField.textColor = kBlackThemetextColor;
+        _IDTextField.tintColor = kBlackThemetextColor;
+        [_IDTextField addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
+        _IDTextField.userInteractionEnabled = NO;
+        _IDTextField.enabled = NO;
+    }
+    return _IDTextField;
+    
+}
+
+-(UIActionSheet*)userSexActionSheet
+{
+    if (!_userSexActionSheet) {
+        _userSexActionSheet =[[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"男",@"女", nil];
+        _userSexActionSheet.delegate = self;
+        _userSexActionSheet.actionSheetStyle = UIActionSheetStyleBlackOpaque;
+        _userSexActionSheet.tag = 9001;
+        
+    }
+    return _userSexActionSheet;
+}
+-(void)initPickerWithType:(NSInteger)type
+{
+    if (!_PercentpickerView) {
+        _PercentpickerView = [[UIPickerView alloc] init];
+        _PercentpickerView.frame = CGRectMake(0,kMainScreenHeight, kMainScreenWidth, 185);
+        _PercentpickerView.dataSource = self;
+        _PercentpickerView.delegate = self;
+        _PercentpickerView.showsSelectionIndicator = YES;
+        _PercentpickerView.backgroundColor= kThemeWhiteColor;
+    }
+    if (type == 1) {
+        _PercentpickerView.tag = 1000;
+
+    }else{
+        _PercentpickerView.tag = 2000;
+
+    }
+    self.bg = [[UIButton alloc] initWithFrame:self.view.frame];
+    [self.bg addTarget:self action:@selector(dissappaerAction) forControlEvents:UIControlEventTouchUpInside];
+    self.bg.backgroundColor = [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0.5];
+    [self.bg addSubview:_PercentpickerView];
+    self.bg.alpha = 0;
+    [self.view addSubview:self.bg];
+    [UIView animateWithDuration:0.25 animations:^{
+        self.bg.alpha = 1;
+        self.PercentpickerView.top = kMainScreenHeight - 185;
+    }];
+    
+}
 
 @end
