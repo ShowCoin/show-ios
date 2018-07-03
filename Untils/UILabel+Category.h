@@ -10,6 +10,9 @@
 
 @interface UILabel (Category)
 
+//获取label的宽度
++ (CGFloat)getLabelWidthWithText:(NSString *)text wordSize:(CGFloat)wordSize height:(CGFloat)height;
+
 
 
 @end
