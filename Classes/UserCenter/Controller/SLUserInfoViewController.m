@@ -284,6 +284,57 @@
     }];
 }
 
+- (void)dissappaerAction{
+    [self sureView];
+}
+-(void)sureView
+{
+    [self closeView];
+}
+-(void)birthDaySure
+{
+    NSDate *select = self.datePicker.date;
+    NSDateFormatter *dateFormmater = [[NSDateFormatter alloc]init];
+    [dateFormmater setDateFormat:@"yyyy-MM-dd"];
+    self.birthday = [dateFormmater stringFromDate:select];
+    NSIndexPath *indexPath=[NSIndexPath indexPathForRow:3 inSection:0];
+    [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:indexPath,nil] withRowAnimation:UITableViewRowAnimationNone];
+    [self closeView];
+
+}
+-(void)closeView{
+    if (self.bg) {
+        [UIView animateWithDuration:0.25 animations:^{
+            if (self.bgView) {
+                self.bgView.top = kMainScreenHeight;
+            }
+            if (self.PercentpickerView) {
+                self.PercentpickerView.top = kMainScreenHeight;
+            }
+        } completion:^(BOOL finished) {
+        
+            [UIView animateWithDuration:0.25 animations:^{
+                self.bg.alpha = 0;
+            } completion:^(BOOL finished) {
+                
+                if (self.datePicker) {
+                    [self.datePicker removeFromSuperview];
+                    self.datePicker = nil;
+                }
+                if (self.PercentpickerView) {
+                    [self.PercentpickerView removeFromSuperview];
+                    self.PercentpickerView = nil;
+                }
+                
+                [self.bg removeFromSuperview];
+                self.bg = nil;
+            }];
+        }];
+
+    }
+}
+
+/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
