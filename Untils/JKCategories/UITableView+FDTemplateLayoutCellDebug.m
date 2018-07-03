@@ -25,10 +25,11 @@
 
 @implementation UITableView (FDTemplateLayoutCellDebug)
 
+//deg开启
 - (BOOL)fd_debugLogEnabled {
     return [objc_getAssociatedObject(self, _cmd) boolValue];
 }
-
+//log开启
 - (void)setFd_debugLogEnabled:(BOOL)debugLogEnabled {
     objc_setAssociatedObject(self, @selector(fd_debugLogEnabled), @(debugLogEnabled), OBJC_ASSOCIATION_RETAIN);
 }

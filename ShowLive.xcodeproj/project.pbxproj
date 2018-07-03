@@ -77,6 +77,7 @@
 		43D24A912094A43600C59AC8 /* AppDelegate+ShowRegisterService.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D24A8D2094A43600C59AC8 /* AppDelegate+ShowRegisterService.m */; };
 		43D24A922094A43600C59AC8 /* ShowAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D24A8F2094A43600C59AC8 /* ShowAppDelegate.m */; };
 		43D24A952094B4C500C59AC8 /* ShowNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D24A942094B4C500C59AC8 /* ShowNavigationBar.m */; };
+		43D87B1D20EB6CE600E991D6 /* UISplitViewController+JKQuickAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D87B1C20EB6CE600E991D6 /* UISplitViewController+JKQuickAccess.m */; };
 		720F860920B2F59500AD0C54 /* SLGetRyTokenAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 720F860120B2F59500AD0C54 /* SLGetRyTokenAction.m */; };
 		722957B120C80779000D0719 /* SLUserViewHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 722957B020C80778000D0719 /* SLUserViewHeader.m */; };
 		723816B420C689AB00C3885E /* SLLevelMarkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 723816B320C689AB00C3885E /* SLLevelMarkView.m */; };
@@ -245,6 +246,8 @@
 		43D24A902094A43600C59AC8 /* AppDelegate+ShowRegisterService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+ShowRegisterService.h"; sourceTree = "<group>"; };
 		43D24A932094B4C500C59AC8 /* ShowNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowNavigationBar.h; sourceTree = "<group>"; };
 		43D24A942094B4C500C59AC8 /* ShowNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowNavigationBar.m; sourceTree = "<group>"; };
+		43D87B1B20EB6CE600E991D6 /* UISplitViewController+JKQuickAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISplitViewController+JKQuickAccess.h"; sourceTree = "<group>"; };
+		43D87B1C20EB6CE600E991D6 /* UISplitViewController+JKQuickAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISplitViewController+JKQuickAccess.m"; sourceTree = "<group>"; };
 		720C304820A35ACC00207500 /* SLGetWithdrawAddressAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLGetWithdrawAddressAction.h; sourceTree = "<group>"; };
 		720F85F720B2F59400AD0C54 /* SLChatStatisticsAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLChatStatisticsAction.h; sourceTree = "<group>"; };
 		720F85F820B2F59400AD0C54 /* SLConfigAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLConfigAction.h; sourceTree = "<group>"; };
@@ -424,6 +427,8 @@
 		434DDB4B20C92B4E00191FC1 /* JKCategories */ = {
 			isa = PBXGroup;
 			children = (
+				43D87B1B20EB6CE600E991D6 /* UISplitViewController+JKQuickAccess.h */,
+				43D87B1C20EB6CE600E991D6 /* UISplitViewController+JKQuickAccess.m */,
 				43291F5120E520FD000C3C15 /* UISearchBarDemoViewController.h */,
 				43291F5220E520FD000C3C15 /* UISearchBarDemoViewController.m */,
 				43291F4F20E520E0000C3C15 /* UITableView+FDKeyedHeightCache.h */,
@@ -1194,6 +1199,7 @@
 				436B1EB720DA306200419AC0 /* UIView+JKFrame.m in Sources */,
 				9391AA8320BF078A00D520F1 /* SLTimerLabel.m in Sources */,
 				4325537220D8B57C00FC0258 /* MKMapView+JKZoomLevel.m in Sources */,
+				43D87B1D20EB6CE600E991D6 /* UISplitViewController+JKQuickAccess.m in Sources */,
 				436B1EB120DA302100419AC0 /* UIView+JKNib.m in Sources */,
 				93615AF320C14BB2000D5658 /* SLSearchBar.m in Sources */,
 				431BBB5C20DBCA5F006A3D50 /* UIView+JKRecursion.m in Sources */,
