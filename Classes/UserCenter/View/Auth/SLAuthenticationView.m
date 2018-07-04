@@ -238,3 +238,14 @@ static CGFloat const kMargin = 15;
 }
 
 @end
+
+@interface SLCountryModalView () <UIPickerViewDelegate, UIPickerViewDataSource>
+
+@property (nonatomic, weak) UIButton *close;
+@property (nonatomic, weak) UIPickerView *picker;
+@property (nonatomic, strong) NSArray *countries;
+
+@end
+
+
+
