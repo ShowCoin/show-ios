@@ -27,6 +27,20 @@
     return tmpRect.size.height;
 }
 
++(UILabel*)setLabelFrame:(CGRect)frame Text:(NSString *)text TextColor:(UIColor *)color font:(UIFont *)font textAlignment:(NSTextAlignment)textAlignment
+{
+    UILabel * label=[[UILabel alloc]initWithFrame:frame];
+    label.text=text;
+    label.textColor=color;
+    label.font=font;
+    label.textAlignment=textAlignment;
+    
+    
+    return label;
+    
+}
+
+
 
 
 
