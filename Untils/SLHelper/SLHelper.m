@@ -793,5 +793,8 @@
     }
     return val;
 }
-
+#pragma mark-
++ (id)valueForKey:(NSString *)key {
+    return [[NSUserDefaults standardUserDefaults] valueForKey:key];
+}
 @end
