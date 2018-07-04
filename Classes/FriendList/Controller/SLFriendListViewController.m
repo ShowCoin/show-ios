@@ -322,5 +322,73 @@
     }
 }
 
+#pragma mark SLFriendCellDelegate
+- (void)onClickUser:(SLFansModel*)data{
+    [PageMgr pushToUserCenterControllerWithUid:data.uid];
+}
+
+- (void)onClickChat:(SLFansModel*)data{
+
+    
+    ShowUserModel* user=[ShowUserModel new];
+    user.uid=data.uid;
+    user.nickname=data.nickname;
+    user.avatar=data.avatar;
+    user.gender=data.gender;
+    user.age=data.age;
+    user.remarkName=data.localRemarkName;
+    
+    [PageMgr pushToChatViewControllerWithTargetUser:user];
+}
+
+- (void)onClickFollow:(SuccessBlock)block withData:(SLFansModel*)data{
+    _followUserAction = [SLFollowUserAction action];
+    _followUserAction.to_uid =data.uid;
+    _followUserAction.type = FollowTypeAdd;
+    _followUserAction.finishedBlock = ^(id result) {
+        if (block) {
+            block(YES);
+        }
+    };
+    _followUserAction.failedBlock = ^(NSError *error) {
+        if (block) {
+            block(NO);
+        }
+        [ShowWaringView waringView:error.userInfo[@"msg"] style:WaringStyleRed];
+    };
+    _followUserAction.cancelledBlock = ^{
+        if (block) {
+            block(NO);
+        }
+    };
+    [_followUserAction start];
+}
+
+#pragma mark SLSearchBarDelegate
+- (void)searchBarSearchButtonClicked:(SLSearchBar *)searchBar {
+    [self searchBarCancelButtonClicked:searchBar];
+}
+
+- (void)searchBar:(SLSearchBar *)searchBar textDidChange:(NSString *)searchText {
+    if ([searchText length]>0) {
+        _bSearchTableView=YES;
+        _vmFrieldList.searchKey=searchText;
+        self.lblFriendTotals.hidden = YES;
+    }
+    else
+    {
+        _bSearchTableView=NO;
+        _vmFrieldList.searchKey=searchText;
+        self.lblFriendTotals.hidden = NO;
+    }
+}
+
+- (void)searchBarCancelButtonClicked:(SLSearchBar *)searchBar {
+    [searchBar setText:@""];
+    [searchBar resignFirstResponder];
+    _bSearchTableView=NO;
+    _vmFrieldList.searchKey=@"";
+}
+
 
 @end
