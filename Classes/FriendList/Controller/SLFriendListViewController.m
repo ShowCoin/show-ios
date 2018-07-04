@@ -221,5 +221,106 @@
     }
 }
 
+- (void)loadData {
+    [_vmFrieldList loadFromLocal];
+    
+    [self searchBarCancelButtonClicked:self.searchBar];
+    if (self.isLoading) {
+        return ;
+    }
+    self.isLoading=YES;
+    [self.tableView.mj_footer resetNoMoreData];
+    @weakify(self)
+    [self.vmFrieldList refreshData:^(BOOL ikMastPage) {
+        @strongify(self)
+        self.isLoading = NO;
+        
+        [self.tableView.mj_header endRefreshing];
+        [self.tableView.mj_footer endRefreshing];
+        self.friendTotal = [NSString stringWithFormat:@"%lu个SHOW好友",[self.vmFrieldList.listAry count]];
+        if ([self.vmFrieldList.listAry count]==0) {
+            [self.tableView.tableFooterView setHidden:YES];
+//            [self showNoDataViewInView:self.tableView noDataString:@"你没有SHOW好友哦" withOrigin:CGPointMake(0, 98*Proportion375)];
+        }else{
+            [self.tableView.tableFooterView setHidden:NO];
+            [self.tableView.mj_footer endRefreshing];
+        }
+        if (ikMastPage) {
+            self.tableView.mj_footer.hidden = YES;
+        } else {
+            self.tableView.mj_footer.hidden = NO;
+        }
+        [self.tableView reloadData];
+        self.tableView.tableFooterView = [self footView];
+        
+    } withFail:^(NSString *failDesc) {
+        @strongify(self)
+        self.isLoading = NO;
+        [self.tableView.mj_header endRefreshing];
+        self.tableView.tableFooterView = [self footView];
+    }];
+}
+
+- (void)btnApplicationClick:(id)sender{
+    
+}
+
+- (void)btnAddressClick:(id)sender{
+    
+}
+
+#pragma tableview
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    if (_bSearchTableView) {
+        return nil;
+    } else {
+        UIView* headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kMainScreenWidth, 30)];
+        [headView setBackgroundColor:kBlackThemeBGColor];
+        NSString* key=nil;
+        if ([[_vmFrieldList.dataDict allKeys] count]>section) {
+            key = [_vmFrieldList.sortArray objectAtIndex:section];
+        } else {
+            key = @"#";
+        }
+        NSString* title=@"我的联系人";
+        CGSize size=[title sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]}];
+        UILabel *lblTitle = [[UILabel alloc] initWithFrame:CGRectMake(15, 0, size.width, 30)];
+        lblTitle.font = [UIFont systemFontOfSize:14];
+        lblTitle.backgroundColor = kBlackThemeBGColor;
+        lblTitle.textAlignment = NSTextAlignmentLeft;
+        lblTitle.textColor = kGrayWith999999;
+        lblTitle.text = title;
+        //        if (section < [_sortArray count]) {
+        //            lblTitle.text = title;
+        //        
+        [headView addSubview:lblTitle];
+        return headView;
+    }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    if (_bSearchTableView) {
+        return 0;
+    }else{
+        return 30;
+    }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 66;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (_bSearchTableView) {
+        
+        _bSearchTableView = NO;
+        [_tableView reloadData];
+    }
+}
+
 
 @end
