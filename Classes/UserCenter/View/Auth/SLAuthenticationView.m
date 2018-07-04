@@ -118,6 +118,57 @@ static CGFloat const kMargin = 15;
     }
 }
 
+- (void)setType:(SLIdCardType)type {
+    _type = type;
+    NSString *pString = nil;
+    if (type == SLIdCardTypePros) {
+        self.textLabel.text = @"证件正面";
+        self.detialLabel.text = @"为方便审核，请上传清晰的图片";
+        self.placeholder = @"auth_pros_add";
+        pString = @"auth_pros_normal";
+    } else if (type == SLIdCardTypeCons) {
+        self.textLabel.text = @"证件反面";
+        self.detialLabel.text = @"为方便审核，请上传清晰的图片";
+        self.placeholder = @"auth_cons_add";
+        pString = @"auth_cons_normal";
+    } else if (type == SLIdCardTypeHand) {
+        self.textLabel.text = @"手持证件照片";
+        self.detialLabel.text = @"1.手持证件照通过标准： 2.人物头像清晰； 3.身份证件信息清晰；4.证件照旁展示一张写有：“SHOW COIN+申请日期”的纸张信息；5.完整的展示您的手臂持证。";
+        self.placeholder = @"auth_hand_add";
+        pString = @"auth_hand_normal";
+    }
+    self.imageView.image = [UIImage imageNamed:self.placeholder];
+    self.placeholderView.image = [UIImage imageNamed:pString];
+    [self layoutSubviews];
+}
+
+- (void)showAuthImageType:(SLAuthImageType)type {
+    SLAuthImageView *imageV = (SLAuthImageView *)self.imageView;
+    imageV.type = type;
+}
+
+- (void)setErrorMsg:(NSString *)errorMsg {
+    _errorMsg = errorMsg;
+    
+    self.errorLabel.text = errorMsg;
+    self.errorLabel.hidden = errorMsg.length > 0 ? NO : YES;
+    [self layoutSubviews];
+}
+
+- (CGFloat)viewH {
+    CGFloat maxH = 0;
+    if (self.errorLabel.hidden == NO) {
+        maxH = CGRectGetMaxY(self.errorLabel.frame);
+    } else {
+        maxH = CGRectGetMaxY(self.placeholderView.frame);;
+    }
+    
+    if (self.type == SLIdCardTypeHand) {
+        maxH += 15;
+    }
+    return maxH;
+}
+
 @end
 
 
