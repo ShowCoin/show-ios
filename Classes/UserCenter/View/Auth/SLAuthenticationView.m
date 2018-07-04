@@ -178,3 +178,8 @@ static CGFloat const kMargin = 15;
 //@property (nonatomic, weak) UIImageView *accessoryView;
 
 @end
+
+@implementation SLAICountryView
+
+
+@end
