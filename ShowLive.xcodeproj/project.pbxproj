@@ -74,6 +74,7 @@
 		437921ED20ECC49900B2EC88 /* NSData+JKGzip.m in Sources */ = {isa = PBXBuildFile; fileRef = 437921EB20ECC49800B2EC88 /* NSData+JKGzip.m */; };
 		437921F020ECC4B100B2EC88 /* NSData+JKHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 437921EF20ECC4B100B2EC88 /* NSData+JKHash.m */; };
 		437921F320ECC4C000B2EC88 /* NSData+JKPCM.m in Sources */ = {isa = PBXBuildFile; fileRef = 437921F120ECC4C000B2EC88 /* NSData+JKPCM.m */; };
+		437921F620ECC4E100B2EC88 /* NSData+JKzlib.m in Sources */ = {isa = PBXBuildFile; fileRef = 437921F520ECC4E100B2EC88 /* NSData+JKzlib.m */; };
 		43968A6A20AC398C00149DCC /* NSObject+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 43968A6920AC398C00149DCC /* NSObject+Safe.m */; };
 		43993EB320E23E390017F1C3 /* UITextView+JKInputLimit.m in Sources */ = {isa = PBXBuildFile; fileRef = 43993EB220E23E390017F1C3 /* UITextView+JKInputLimit.m */; };
 		43993EB620E23E810017F1C3 /* UITextField+JKSelect.m in Sources */ = {isa = PBXBuildFile; fileRef = 43993EB520E23E810017F1C3 /* UITextField+JKSelect.m */; };
@@ -259,6 +260,8 @@
 		437921EF20ECC4B100B2EC88 /* NSData+JKHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+JKHash.m"; sourceTree = "<group>"; };
 		437921F120ECC4C000B2EC88 /* NSData+JKPCM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+JKPCM.m"; sourceTree = "<group>"; };
 		437921F220ECC4C000B2EC88 /* NSData+JKPCM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+JKPCM.h"; sourceTree = "<group>"; };
+		437921F420ECC4E100B2EC88 /* NSData+JKzlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+JKzlib.h"; sourceTree = "<group>"; };
+		437921F520ECC4E100B2EC88 /* NSData+JKzlib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+JKzlib.m"; sourceTree = "<group>"; };
 		43968A6820AC398B00149DCC /* NSObject+Safe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Safe.h"; sourceTree = "<group>"; };
 		43968A6920AC398C00149DCC /* NSObject+Safe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Safe.m"; sourceTree = "<group>"; };
 		43993EB120E23E390017F1C3 /* UITextView+JKInputLimit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+JKInputLimit.h"; sourceTree = "<group>"; };
@@ -484,6 +487,8 @@
 		434DDB4B20C92B4E00191FC1 /* JKCategories */ = {
 			isa = PBXGroup;
 			children = (
+				437921F420ECC4E100B2EC88 /* NSData+JKzlib.h */,
+				437921F520ECC4E100B2EC88 /* NSData+JKzlib.m */,
 				437921F220ECC4C000B2EC88 /* NSData+JKPCM.h */,
 				437921F120ECC4C000B2EC88 /* NSData+JKPCM.m */,
 				437921EE20ECC4B100B2EC88 /* NSData+JKHash.h */,
@@ -1292,6 +1297,7 @@
 				43291F4720E51FEE000C3C15 /* UITableViewCell+JKDelaysContentTouches.m in Sources */,
 				43291F5320E520FD000C3C15 /* UISearchBarDemoViewController.m in Sources */,
 				434DDB5A20C932FC00191FC1 /* CAShapeLayer+JKUIBezierPath.m in Sources */,
+				437921F620ECC4E100B2EC88 /* NSData+JKzlib.m in Sources */,
 				431BBB6820DBCB38006A3D50 /* UIView+JKBlockGesture.m in Sources */,
 				43291F4A20E5203A000C3C15 /* UITableView+JKiOS7Style.m in Sources */,
 				43993EB320E23E390017F1C3 /* UITextView+JKInputLimit.m in Sources */,
