@@ -797,4 +797,11 @@
 + (id)valueForKey:(NSString *)key {
     return [[NSUserDefaults standardUserDefaults] valueForKey:key];
 }
+
++ (void)setValue:(id)value forKey:(NSString *)key {
+    [[NSUserDefaults standardUserDefaults] setValue:value forKey:key];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+
 @end
