@@ -292,6 +292,38 @@ static CGFloat const kMargin = 15;
     return self.countries.count;
 }
 
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
+    return 1;
+}
+
+- (nullable NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
+    return self.countries[row];
+}
+
+//- (NSAttributedString *)pickerView:(UIPickerView *)pickerView attributedTitleForRow:(NSInteger)row forComponent:(NSInteger)component {// 15 font 333333color
+//
+//    return [[NSAttributedString alloc] initWithString:self.countries[row]
+//                                           attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:10],
+//                                                        NSForegroundColorAttributeName : [UIColor darkGrayColor]
+//                                                        }];
+//}
+
+- (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view {
+    UILabel *label = [[UILabel alloc] init];
+    label.text = [self pickerView:pickerView titleForRow:row forComponent:component];
+    label.textColor = [UIColor darkGrayColor];
+    label.textAlignment = NSTextAlignmentCenter;
+    return label;
+}
+
+- (CGFloat)pickerView:(UIPickerView *)pickerView rowHeightForComponent:(NSInteger)component {
+    return 44;
+}
+
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
+    
+}
+
 @end
 
 
