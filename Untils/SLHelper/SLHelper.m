@@ -685,4 +685,17 @@
     
     return data;
 }
+
++ (NSObject *)unarchiverObject:(NSData *)archivedData withKey:(NSString *)key {
+    if(archivedData == nil) {
+        return nil;
+    }
+    
+    NSKeyedUnarchiver *unarchiver = [[NSKeyedUnarchiver alloc] initForReadingWithData:archivedData];
+    NSObject *object = [unarchiver decodeObjectForKey:key];
+    [unarchiver finishDecoding];
+    
+    return object;
+}
+
 @end
