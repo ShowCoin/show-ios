@@ -68,6 +68,11 @@
 }
 
 
+-(CGSize)getLabelAttributedSize {
+    return [self.attributedText boundingRectWithSize:CGSizeMake(CGFLOAT_MAX, CGFLOAT_MAX)
+                                             options:NSStringDrawingUsesLineFragmentOrigin
+                                             context:nil].size;
+}
 
 
 
