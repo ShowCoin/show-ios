@@ -171,4 +171,10 @@ static CGFloat const kMargin = 15;
 
 @end
 
+@interface SLAICountryView ()
 
+@property (nonatomic, weak) UILabel *ctextLabel;
+@property (nonatomic, weak) UILabel *cdetialLabel;
+//@property (nonatomic, weak) UIImageView *accessoryView;
+
+@end
