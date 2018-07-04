@@ -776,5 +776,22 @@
     }
     
 }
+#pragma mark getValPara
+
++(NSString *)getValPara:(NSMutableDictionary *)dict{
+    NSMutableArray *keys= [NSMutableArray arrayWithArray:[dict allKeys]];
+    [keys sortUsingSelector:@selector(compare:)];
+    NSMutableString *val = [NSMutableString string];
+    @autoreleasepool {
+        for (NSString *key in keys) {
+            id v = [dict objectForKey:key];
+            
+            NSString *va=[NSString stringWithFormat:@"%@",[v lowercaseString]];
+            
+            [val appendString:va];
+        }
+    }
+    return val;
+}
 
 @end
