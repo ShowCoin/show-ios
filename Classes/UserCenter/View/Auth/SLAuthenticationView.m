@@ -248,4 +248,33 @@ static CGFloat const kMargin = 15;
 @end
 
 
+@implementation SLCountryModalView
+
+- (void)dealloc {
+    NSLog(@"%s", __func__);
+}
+
+- (void)initView
+{
+    [super initView];
+    
+    self.backgroundColor = [UIColor whiteColor];
+    
+    self.countries = @[@"中国", @"中国以外"];
+    UIPickerView *picker = [[UIPickerView alloc] init];
+    picker.delegate = self;
+    picker.dataSource = self;
+    [self addSubview:picker];
+    self.picker = picker;
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    //button.backgroundColor = [UIColor purpleColor];
+    [button setImage:[UIImage imageNamed:@"live_chat_close"] forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(hide) forControlEvents:UIControlEventTouchUpInside];
+    [self insertSubview:button aboveSubview:self.picker];
+    self.close = button;
+}
+
+@end
+
 
