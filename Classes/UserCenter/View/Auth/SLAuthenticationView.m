@@ -275,6 +275,23 @@ static CGFloat const kMargin = 15;
     self.close = button;
 }
 
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    CGFloat h = self.frame.size.height;
+    CGFloat w = self.frame.size.width;
+    CGFloat pickerY = 0;
+    CGFloat pickerH = h - pickerY;
+    self.picker.frame = CGRectMake(0, pickerY, w, pickerH);
+    
+    CGFloat closeWH = 30;
+    CGFloat closeX = w - closeWH - 10;
+    self.close.frame = CGRectMake(closeX, 0, closeWH, closeWH);
+}
+
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
+    return self.countries.count;
+}
+
 @end
 
 
