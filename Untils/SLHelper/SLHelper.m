@@ -803,5 +803,16 @@
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
++ (NSString *)friendFormatString:(NSString *)sourceStr{
+    if(![sourceStr isKindOfClass:[NSString class]]){
+        return nil;
+    }
+    //各四个字符插入一个空字符
+    NSMutableString *targetStr = [NSMutableString stringWithString:sourceStr];
+    for(int i = 4, k = 4; i < sourceStr.length; i += 4, k = i+1){
+        [targetStr insertString:@" " atIndex:k];
+    }
+    return [NSString stringWithFormat:@"%@", targetStr];
+}
 
 @end
