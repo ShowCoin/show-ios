@@ -7,25 +7,22 @@
 //
 
 #import "SLFriendListCell.h"
-
 static CGFloat lableMargin = 14;
 
 @interface SLFriendListCell()<HeadPortraitDelegate>
 
 @property (nonatomic, assign) BOOL isFollow;
-@property (nonatomic, strong) UIImageView * vipImageView;
-@property (nonatomic, strong) UILabel     * nickNameLabel;
-@property (nonatomic, strong) UILabel     * lblID;
-@property (nonatomic, strong) UIButton    * btnOperation;
-@property (nonatomic, strong) UIImageView * sexImageView;
-@property (nonatomic, strong) UILabel * ageLabel;
-@property (nonatomic, strong) NSArray *  randomArr;
-@property (nonatomic, strong) SLHeadPortrait     * headPortrait;
+@property(nonatomic,strong)UIImageView * vipImageView;
+@property(nonatomic,strong)UILabel     * nickNameLabel;
+@property(nonatomic,strong)UILabel     * lblID;
+@property(nonatomic,strong)UIButton    * btnOperation;
+@property(nonatomic,strong)UIImageView * sexImageView;
+@property(nonatomic,strong)UILabel * ageLabel;
+@property(nonatomic,strong)NSArray *  randomArr;
+@property(nonatomic,strong)SLHeadPortrait     * headPortrait;
 @property (assign, nonatomic) BOOL isSeparatorLineFull;
 @property (strong, nonatomic) UIView *line;
-
 @end
-
 @implementation SLFriendListCell
 
 - (void)awakeFromNib {
@@ -38,12 +35,11 @@ static CGFloat lableMargin = 14;
     
     // Configure the view for the selected state
 }
-
-+ (id)cellWithTableView:(UITableView*)tableView{
++(id)cellWithTableView:(UITableView*)tableView{
     return [SLFriendListCell cellWithTableView:tableView separatorLineFull:YES];
 }
-//类型，是否线到头
-+ (id)cellWithTableView:(UITableView*)tableView separatorLineFull:(BOOL)separatorLineFull{
+
++(id)cellWithTableView:(UITableView*)tableView separatorLineFull:(BOOL)separatorLineFull{
     static NSString *CellIdentifier = @"FriendListCell";
     SLFriendListCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil)
@@ -55,13 +51,14 @@ static CGFloat lableMargin = 14;
     }
     return cell;
 }
-//类型，复用池
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self)
     {
         self.selectionStyle = UITableViewCellSelectionStyleNone;
+        //        [self.contentView addSubview:self.sexImageView];
+        //        [self.contentView addSubview:self.vipImageView];
         
         self.frame = CGRectMake(0, 0, kMainScreenWidth, 72*Proportion375);
         self.backgroundColor = kthemeBlackColor;
@@ -70,7 +67,7 @@ static CGFloat lableMargin = 14;
     
     return self;
 }
-- (void)setupControls{
+-(void)setupControls{
     // 66
     _headPortrait=[[SLHeadPortrait alloc]initWithFrame:CGRectMake(15, 13, 40, 40)];
     _headPortrait.delegate=self;
@@ -87,8 +84,8 @@ static CGFloat lableMargin = 14;
     [self addSubview:self.lblID];
     
     
-    _moneyLabel = [UILabel labelWithFrame:CGRectMake(175+_headPortrait.width, lableMargin, 90, 20) text:@"999 测试币" textColor:kBlackThemetextColor font:Font_Regular(16) backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentRight];
-    _moneyLabel.attributedText= [SLHelper appendString:@"999 测试币" withColor:kBlackThemetextColor font:Font_Regular(12) lenght:3];
+    _moneyLabel = [UILabel labelWithFrame:CGRectMake(175+_headPortrait.width, lableMargin, 90, 20) text:@"999 秀币" textColor:kBlackThemetextColor font:Font_Regular(16) backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentRight];
+    _moneyLabel.attributedText= [SLHelper appendString:@"999 秀币" withColor:kBlackThemetextColor font:Font_Regular(12) lenght:3];
     _moneyLabel.opaque = YES;
     _moneyLabel.centerY = self.headPortrait.centerY;
     [self addSubview:_moneyLabel];
@@ -99,6 +96,7 @@ static CGFloat lableMargin = 14;
     _btnOperation.titleLabel.font  = Font_Medium(10);
     [_btnOperation setImage:[UIImage imageNamed:@"friendlistfollow"] forState:UIControlStateNormal];
     [_btnOperation addTarget:self action:@selector(operationClick:) forControlEvents:UIControlEventTouchUpInside];
+    //    [_btnOperation setAttributedTitle:[[NSAttributedString alloc] initWithString:@"聊天" attributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:12],NSForegroundColorAttributeName:HexRGBAlpha(0xffffff, 1)}] forState:UIControlStateNormal];
     [self addSubview:self.btnOperation];
     
     _moneyLabel.right = _btnOperation.left -10;
@@ -108,8 +106,7 @@ static CGFloat lableMargin = 14;
     [self addSubview:line];
     self.line = line;
 }
-
-- (void)layoutSubviews{
+-(void)layoutSubviews{
     [super layoutSubviews];
     _lblID.frame=CGRectMake(_headPortrait.right + 10, self.height - lableMargin - 15 ,225*Proportion375,15);
     if (self.isSeparatorLineFull) {
@@ -123,8 +120,7 @@ static CGFloat lableMargin = 14;
         self.line.hidden =YES;
     }
 }
-
-- (void)setIsAt:(BOOL)isAt
+-(void)setIsAt:(BOOL)isAt
 {
     _isAt = isAt;
     if (_isAt) {
@@ -137,8 +133,7 @@ static CGFloat lableMargin = 14;
         self.line.frame = CGRectMake(0, 65.5, kMainScreenWidth, 0.5);
     }
 }
-
-- (void)setUserListModel:(SLFansModel *)userListModel
+-(void)setUserListModel:(SLFansModel *)userListModel
 {
     _userListModel = userListModel;
     UIColor *nickNameColor = kBlackThemetextColor;
@@ -168,17 +163,38 @@ static CGFloat lableMargin = 14;
         [self.nickNameLabel setAttributedText:attstring];
     }else{
         _nickNameLabel.frame=CGRectMake(_headPortrait.right + 10, lableMargin, 105*Proportion375,20);
+//        self.nickNameLabel.centerY = _headPortrait.centerY-10;
     }
     
     _lblID.text = userListModel.descriptions?[NSString stringWithFormat:@"%@",userListModel.descriptions]:@"这个人很懒,没留下任何东西";
 }
 
-- (void)operationClick:(UIButton*)sender{
+-(void)operationClick:(UIButton*)sender{
     NSString * follow_state = self.userListModel.isFollowed;
     if ([follow_state integerValue]>0) {
+        //        if (_isAt)
+        //        {
+        //            sender.selected = !sender.selected;
+        //            if (sender.selected) {
+        //                sender.backgroundColor = kGrayTextColor;
+        //                [sender setTitleColor:kGrayTextColor forState:UIControlStateNormal];
+        //            }
+        //            else
+        //            {
+        //                sender.backgroundColor = RGBACOLOR(100, 194, 248, 1);
+        //                [sender setTitleColor:kBlackThemetextColor forState:UIControlStateNormal];
+        //            }
+        //            if (_functionDelegate && [_functionDelegate respondsToSelector:@selector(onClickAt:button:)])
+        //            {
+        //                [_functionDelegate onClickAt:self.userListModel button:sender];
+        //            }
+        //        }
+        //        else
+        //        {
         if (_functionDelegate && [_functionDelegate respondsToSelector:@selector(onClickChat:)]) {
             [_functionDelegate onClickChat:self.userListModel];
         }
+        //        }
     }
     else{
         if (_functionDelegate && [_functionDelegate respondsToSelector:@selector(onClickFollow:withData:)]) {
@@ -205,7 +221,7 @@ static CGFloat lableMargin = 14;
 }
 
 #pragma mark HeadPortraitDelegate
-- (void)headPortraitClickAuthor{
+-(void)headPortraitClickAuthor{
     if (_functionDelegate && [_functionDelegate respondsToSelector:@selector(onClickUser:)]) {
         [_functionDelegate onClickUser:self.userListModel];
     }
