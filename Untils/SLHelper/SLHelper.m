@@ -815,4 +815,28 @@
     return [NSString stringWithFormat:@"%@", targetStr];
 }
 
+/**
+ *    @brief    将json数据转换成id
+ *
+ *    @param data 数据
+ *
+ *    @return     id类型的数据
+ */
++ (id)parserJsonData:(id)jsonData{
+    
+    NSError *error;
+    id jsonResult = nil;
+    if (jsonData&&[jsonData isKindOfClass:[NSData class]])
+    {
+        jsonResult = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&error];
+    }
+    if (jsonResult != nil && error == nil)
+    {
+        return jsonResult;
+    }else{
+        // 解析错误
+        return nil;
+    }
+}
+
 @end
