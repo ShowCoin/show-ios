@@ -674,5 +674,15 @@
         return str;
     }
 }
-
++ (NSData *)archiverObject:(NSObject *)object forKey:(NSString *)key {
+    if(object == nil) {
+        return nil;
+    }
+    NSMutableData *data = [[NSMutableData alloc] init];
+    NSKeyedArchiver *archiver = [[NSKeyedArchiver alloc] initForWritingWithMutableData:data];
+    [archiver encodeObject:object forKey:key];
+    [archiver finishEncoding];
+    
+    return data;
+}
 @end
