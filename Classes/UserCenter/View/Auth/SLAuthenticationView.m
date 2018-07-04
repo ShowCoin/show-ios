@@ -182,4 +182,42 @@ static CGFloat const kMargin = 15;
 @implementation SLAICountryView
 
 
++ (instancetype)countryView {
+    SLAICountryView *view = [[SLAICountryView alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:nil];
+    return view;
+}
+
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+{
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
+        [self setupUI];
+    }
+    return self;
+}
+
+- (void)setupUI {
+    self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    self.backgroundColor = SLNormalColor;
+    UILabel *label = [[UILabel alloc] init];
+    label.textColor = [UIColor whiteColor];
+    label.text = @"国籍 / 地区";
+    label.font = [UIFont systemFontOfSize:15];
+    [self.contentView addSubview:label];
+    self.ctextLabel = label;
+    
+    label = [[UILabel alloc] init];
+    label.text = @"中国";
+    label.textColor = [UIColor whiteColor];
+    label.font = [UIFont systemFontOfSize:15];
+    label.textAlignment = NSTextAlignmentRight;
+    [self.contentView addSubview:label];
+    self.cdetialLabel = label;
+    
+    //    UIImageView *imageView = [[UIImageView alloc] init];
+    //    imageView.backgroundColor = [UIColor purpleColor];
+    //    [self addSubview:imageView];
+    //    self.accessoryView = imageView;
+}
+
 @end
