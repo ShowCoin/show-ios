@@ -41,6 +41,34 @@
 }
 
 
+- (CGSize)boundingRectWithHeight:(CGFloat)height
+{
+    if ([[UIDevice currentDevice].systemVersion floatValue] >= 7.0) {
+        
+        NSDictionary *attribute = @{NSFontAttributeName: self.font};
+        
+        return [self.text boundingRectWithSize:CGSizeMake(0, height)
+                                       options:\
+                NSStringDrawingTruncatesLastVisibleLine |
+                NSStringDrawingUsesLineFragmentOrigin |
+                NSStringDrawingUsesFontLeading
+                                    attributes:attribute
+                                       context:nil].size;
+    } else {
+        return [self.text sizeWithFont:self.font constrainedToSize:CGSizeMake(CGFLOAT_MAX, height) lineBreakMode:self.lineBreakMode];
+    }
+}
+
+-(CGSize)getLabelSize {
+    
+    return [self.text boundingRectWithSize:CGSizeMake(CGFLOAT_MAX, CGFLOAT_MAX)
+                                   options:NSStringDrawingUsesLineFragmentOrigin
+                                attributes:@{NSFontAttributeName: self.font}
+                                   context:nil].size;
+}
+
+
+
 
 
 
