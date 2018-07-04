@@ -8,6 +8,17 @@
 
 #import "UILabel+Category.h"
 @implementation UILabel (Category)
+//label自适应宽度
++ (CGFloat)getLabelWidthWithText:(NSString *)text wordSize:(CGFloat)wordSize height:(CGFloat)height
+{
+    UIFont * fnt = [UIFont fontWithName:TextFontName size:wordSize];
+    
+    CGRect tmpRect = [text boundingRectWithSize:CGSizeMake(MAXFLOAT, height) options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading attributes:[NSDictionary dictionaryWithObjectsAndKeys:fnt,NSFontAttributeName, nil] context:nil];
+    
+    return tmpRect.size.width;
+}
+
+
 
 
 @end
