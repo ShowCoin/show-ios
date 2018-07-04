@@ -220,4 +220,21 @@ static CGFloat const kMargin = 15;
     //    self.accessoryView = imageView;
 }
 
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    
+    CGFloat w = self.frame.size.width;
+    CGFloat h = self.frame.size.height;
+    
+    CGFloat labelW = (w - kMargin * 2) / 2;
+    self.ctextLabel.frame = CGRectMake(kMargin, 0, labelW, h);
+    
+    CGFloat accessoryW = self.accessoryView.frame.size.width;
+    CGFloat accessoryX = w - kMargin - accessoryW;
+    //    self.accessoryView.frame = CGRectMake(accessoryX, 0, accessoryW, h);
+    
+    CGFloat detialX = accessoryX - labelW - 8;
+    self.cdetialLabel.frame = CGRectMake(detialX, 0, labelW, h);
+}
+
 @end
