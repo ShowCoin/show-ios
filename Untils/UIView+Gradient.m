@@ -25,8 +25,6 @@
     [self.layer insertSublayer:gradient atIndex:0];
     return gradient;
 }
-
-
 - (void)removeGraDient {
     
     NSArray *array =  self.layer.sublayers;
