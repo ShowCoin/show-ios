@@ -326,4 +326,9 @@ static CGFloat const kMargin = 15;
 
 @end
 
+@implementation SLAuthImageView {
+    UIImageView *contenView;
+}
+
+@end
 
