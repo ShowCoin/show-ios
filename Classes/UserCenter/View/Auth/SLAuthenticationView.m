@@ -372,6 +372,7 @@ static CGFloat const kMargin = 15;
 
 - (void)setType:(SLAuthImageType)type {
     _type = type;
+    self.userInteractionEnabled = NO;
 }
 
 
