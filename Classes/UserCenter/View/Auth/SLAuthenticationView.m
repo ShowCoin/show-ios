@@ -370,6 +370,11 @@ static CGFloat const kMargin = 15;
     contenView.center = CGPointMake(w / 2, h / 2);
 }
 
+/**
+ <#Description#>
+
+ @param type <#type description#>
+ */
 - (void)setType:(SLAuthImageType)type {
     _type = type;
     self.userInteractionEnabled = NO;
