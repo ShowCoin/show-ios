@@ -28,6 +28,11 @@
  @param corlors    颜色数组
  @param locations    locations并不是表示颜色值所在位置,它表示的是颜色在Layer坐标系相对位置处要开始进行渐变颜色了.
  */
+- (CAGradientLayer *)addGradientStart:(CGPoint)startPoint
+                                  end:(CGPoint)endPoint
+                               colors:(NSArray *)corlors
+                            locations:(NSArray *)locations;
+
 
 
 @end
