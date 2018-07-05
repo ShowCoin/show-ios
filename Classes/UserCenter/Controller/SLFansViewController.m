@@ -114,6 +114,122 @@ static NSString * const kNoNetMessage = @"唔唔唔，没有网了";
     [self.view addSubview:self.TableView];
 }
 #pragma mark - ********************** Functions **********************
+-(void)setType:(NSInteger)type
+{
+    _type = type;
+    [self setupViews];
+}
+//请求数据的方法
+-(void)requestDataWithPage:(int)Type
+{
+    __weak typeof(self) weakSelf = self;
+    if (_type == 1) {
+        _fansListAction = [SLMeFansListAction action];
+        _fansListAction.uid = self.uid;
+        _fansListAction.cursor = self.cursor;
+        _fansListAction.count = @"20";
+        _fansListAction.finishedBlock = ^(id result) {
+            [weakSelf stopLoadData];
+            if ([result isKindOfClass:[NSDictionary class]]) {
+                if (IS_ARRAY_CLASS((NSArray*)[result valueForKey:@"list"])) {
+                    weakSelf.tableArray = [result valueForKey:@"list"];
+                    weakSelf.tableModelArray = [ShowUserModel mj_objectArrayWithKeyValuesArray:weakSelf.tableArray];
+                    if (Type == 1) {
+                        weakSelf.tableListArray = [NSMutableArray arrayWithArray:weakSelf.tableModelArray];
+//                        [weakSelf stopLoadData];
+                        [weakSelf.TableView reloadData];
+                    }else if(Type == 2){
+                        NSMutableArray * Array = [[NSMutableArray alloc] init];
+                        [Array addObjectsFromArray:weakSelf.tableListArray];
+                        [Array addObjectsFromArray:weakSelf.tableModelArray];
+                        weakSelf.tableListArray = Array;
+                        [weakSelf.TableView reloadData];
+                    }
+                }
+                weakSelf.cursor = [result valueForKey:@"next_cursor"];
+                NSString * page = [NSString stringWithFormat:@"%@", weakSelf.cursor];
+                if (![page isEqualToString:@"-1"]) {
+                    weakSelf.TableView.mj_footer = [SLRefreshFooter footerWithRefreshingBlock:^{
+                        [weakSelf loadMoreData];
+                    }];
+                }else if ([page isEqualToString:@"-1"]) {
+                    if([weakSelf.tableListArray count]==0) {
+                        if ([weakSelf.uid isEqualToString:AccountUserInfoModel.uid]) {
+                            [ShowWaringView waringView:kNoFansMessage style:WaringStyleRed];
+                        }
+                    }else {
+                        [weakSelf.TableView.mj_footer endRefreshingWithNoMoreData];
+                        if (Type == 2) {
+                            weakSelf.TableView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
+                        }
+                    }
+                }
+            }
+        };
+        _fansListAction.failedBlock = ^(NSError *error) {
+            if([weakSelf.tableListArray count]==0) {
+                [ShowWaringView waringView:weakSelf.network?kNoFansMessage:kNoNetMessage style:WaringStyleRed];
+            }
+            [weakSelf stopLoadData];
+        };
+        [_fansListAction start];
+        
+    }else{
+        _corcernListAction = [SLMeConcernListAction action];
+        _corcernListAction.uid = self.uid;
+        _corcernListAction.cursor = self.cursor;
+        _corcernListAction.count = @"20";
+        _corcernListAction.finishedBlock = ^(id result) {
+            [weakSelf stopLoadData];
+            if ([result isKindOfClass:[NSDictionary class]]) {
+                if (IS_ARRAY_CLASS((NSArray*)[result valueForKey:@"list"])) {
+                    weakSelf.tableArray = [result valueForKey:@"list"];
+                    weakSelf.tableModelArray = [ShowUserModel mj_objectArrayWithKeyValuesArray:weakSelf.tableArray];
+                    if (Type == 1) {
+                        weakSelf.tableListArray = [NSMutableArray arrayWithArray:weakSelf.tableModelArray];
+//                        [weakSelf stopLoadData];
+                        [weakSelf.TableView reloadData];
+                    }else if(Type == 2){
+                        NSMutableArray * Array = [[NSMutableArray alloc] init];
+                        [Array addObjectsFromArray:weakSelf.tableListArray];
+                        [Array addObjectsFromArray:weakSelf.tableModelArray];
+                        weakSelf.tableListArray = Array;
+//                        [weakSelf stopLoadData];
+                        [weakSelf.TableView reloadData];
+                    }
+                }
+                weakSelf.cursor = [result valueForKey:@"next_cursor"];
+                NSString * page = [NSString stringWithFormat:@"%@", weakSelf.cursor];
+                if (![page isEqualToString:@"-1"]) {
+                    weakSelf.TableView.mj_footer = [SLRefreshFooter footerWithRefreshingBlock:^{
+                        [weakSelf loadMoreData];
+                    }];
+                }else if ([page isEqualToString:@"-1"]) {
+                    if([weakSelf.tableListArray count]==0) {
+                        if ([weakSelf.uid isEqualToString:AccountUserInfoModel.uid]) {
+                            [ShowWaringView waringView:kNoAttentionMessage style:WaringStyleRed];
+                        }
+                    }else {
+                        [weakSelf.TableView.mj_footer endRefreshingWithNoMoreData];
+                        if (Type == 2) {
+                            weakSelf.TableView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
+                        }
+                    }
+                }
+            }
+        };
+        _corcernListAction.failedBlock = ^(NSError *error) {
+            if([weakSelf.tableListArray count]==0) {
+                [ShowWaringView waringView:weakSelf.network?kNoAttentionMessage:kNoNetMessage style:WaringStyleRed];
+            }
+            [weakSelf stopLoadData];
+        };
+        [_corcernListAction start];
+
+    }
+}
+
+//停止刷新
 
 /*
 #pragma mark - Navigation
