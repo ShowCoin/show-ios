@@ -375,6 +375,11 @@ static CGFloat const kMargin = 15;
     self.userInteractionEnabled = NO;
     contenView.hidden = NO;
     switch (type) {
+        case SLAuthImageTypeNormal:
+            self.userInteractionEnabled = YES;
+            contenView.hidden = YES;
+            break;
+            
     }
 }
 
