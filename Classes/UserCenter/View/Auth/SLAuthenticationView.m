@@ -352,6 +352,13 @@ static CGFloat const kMargin = 15;
     }
     return self;
 }
+// superView need imp @selector(tapAction)
+- (id)forwardingTargetForSelector:(SEL)aSelector {
+    if (aSelector == @selector(tapAction)) {
+        return self.superview;
+    }
+    return [super forwardingTargetForSelector:aSelector];
+}
 
 @end
 
