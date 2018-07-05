@@ -330,5 +330,28 @@ static CGFloat const kMargin = 15;
     UIImageView *contenView;
 }
 
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        self.contentMode = UIViewContentModeScaleAspectFill;
+        self.clipsToBounds = YES;
+        //self.backgroundColor = [UIColor purpleColor];
+        
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction)];
+        [self addGestureRecognizer:tap];
+        
+        UIImageView *mask = [[UIImageView alloc] init];
+        //mask.backgroundColor = [UIColor colorWithWhite:1 alpha:0.5];
+        //mask.image = [UIImage imageNamed:@"auth_faild"];
+        mask.contentMode = UIViewContentModeScaleAspectFit;
+        [self addSubview:mask];
+        contenView = mask;
+        
+        self.type = SLAuthImageTypeNormal;
+    }
+    return self;
+}
+
 @end
 
