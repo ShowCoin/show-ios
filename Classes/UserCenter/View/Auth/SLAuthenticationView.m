@@ -373,7 +373,7 @@ static CGFloat const kMargin = 15;
 /**
  <#Description#>
 
- @param type <#type description#>
+ @param type SLAuthImageType
  */
 - (void)setType:(SLAuthImageType)type {
     _type = type;
