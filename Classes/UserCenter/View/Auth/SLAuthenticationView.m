@@ -360,5 +360,15 @@ static CGFloat const kMargin = 15;
     return [super forwardingTargetForSelector:aSelector];
 }
 
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    CGFloat w = self.frame.size.width;
+    CGFloat h = self.frame.size.height;
+    CGFloat maskW = w * 0.8;
+    CGFloat maskH = h * 0.8;
+    contenView.bounds = CGRectMake(0, 0, maskW, maskH);
+    contenView.center = CGPointMake(w / 2, h / 2);
+}
+
 @end
 
