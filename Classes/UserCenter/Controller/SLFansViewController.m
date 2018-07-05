@@ -353,6 +353,27 @@ static NSString * const kNoNetMessage = @"唔唔唔，没有网了";
 
 
 #pragma Cell delegate
+-(void)SLUserlistCellFollowToast:(NSString *)toastStr withIndex:(NSInteger)index
+{
+    [ShowWaringView waringView:toastStr style:WaringStyleGreen];
+    SLFansModel * userModel = _tableListArray[index];
+    if ([[NSString stringWithFormat:@"%@",userModel.isFollowed] isEqualToString:@"0"]) {
+        userModel.isFollowed = @"1";
+    }else{
+        userModel.isFollowed = @"0";
+        
+    }
+}
+-(void)SLUserlistCellToChatWithId:(NSString *)userId;
+{
+    [PageMgr pushToChatViewControllerWithTargetUserId:userId];
+    
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
+{
+    
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
