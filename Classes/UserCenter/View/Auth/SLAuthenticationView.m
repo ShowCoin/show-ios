@@ -371,7 +371,7 @@ static CGFloat const kMargin = 15;
 }
 
 /**
- <#Description#>
+ type
 
  @param type SLAuthImageType
  */
