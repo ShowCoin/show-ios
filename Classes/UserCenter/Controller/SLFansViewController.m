@@ -296,6 +296,67 @@ static NSString * const kNoNetMessage = @"唔唔唔，没有网了";
         _network =YES;
     }
 }
+-(void)focusChange:(NSNotification *)noti
+{
+    id objcet = noti.object;
+    NSString * uid = [objcet objectForKey:@"uid"];
+    NSString * statue = [objcet objectForKey:@"type"];
+    for (int i = 0; i < _tableListArray.count; i++) {
+        ShowUserModel * userModel = _tableListArray[i];
+        if ([userModel.uid isEqualToString:uid]) {
+            userModel.isFollowed = statue;
+            return;
+        }
+    }
+    
+}
+#pragma TableViewDelegate
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
+{
+    return [SLUserListCell rowHeightForObject:nil];
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
+{
+    return [_tableListArray count];
+}
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView;
+{
+    return 1;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section;
+{
+    return 0.01;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
+
+{
+    static NSString * cellID = @"BKUserListCell";
+    
+    ShowUserModel * userModel = _tableListArray[indexPath.row];
+    
+    SLUserListCell * cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    
+    if (!cell) {
+        cell = [[SLUserListCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.delegate = self;
+    }
+    cell.type = _type;
+    cell.userModel = userModel;
+    
+    return cell;
+    
+}
+
+
+#pragma Cell delegate
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
 
 /*
 #pragma mark - Navigation
