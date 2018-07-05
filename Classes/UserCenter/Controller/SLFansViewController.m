@@ -90,6 +90,30 @@ static NSString * const kNoNetMessage = @"唔唔唔，没有网了";
     }
 }
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    _network =YES;
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifi:) name:AFNetworkingReachabilityDidChangeNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshFollowStatus:) name:kNotificationChangeFollowStatus object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(focusChange:) name:kFollowUserStatusWithUidNotification object:nil];
+
+    [self.navigationBarView setNavigationLineHidden:YES];
+//    [self setupViews];
+}
+-(void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+-(void)setupViews
+{
+    [self.navigationBarView setNavigationTitle:_type == 1?@"粉丝":@"关注"];
+    [self.navigationBarView setNavigationLeftBarStyle:NavigationBarLeftDefault];
+    [self.navigationBarView setNavigationColor:NavigationColorBlack];
+
+    self.view.backgroundColor = kBlackThemeBGColor;
+    [self.view addSubview:self.TableView];
+}
+#pragma mark - ********************** Functions **********************
 
 /*
 #pragma mark - Navigation
