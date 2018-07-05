@@ -10,6 +10,20 @@
 
 @implementation UIView (Gradient)
 
-
+- (CAGradientLayer *)addGradientStart:(CGPoint)startPoint
+                                  end:(CGPoint)endPoint
+                               colors:(NSArray *)corlors
+                            locations:(NSArray *)locations
+{
+    CAGradientLayer *gradient = [CAGradientLayer layer];
+    gradient.startPoint = startPoint;
+    gradient.endPoint   = endPoint;
+    gradient.frame = self.bounds;
+    gradient.colors = corlors;
+    gradient.locations = locations;
+    
+    [self.layer insertSublayer:gradient atIndex:0];
+    return gradient;
+}
 
 @end
