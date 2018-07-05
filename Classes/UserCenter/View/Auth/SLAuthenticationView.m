@@ -380,6 +380,9 @@ static CGFloat const kMargin = 15;
             contenView.hidden = YES;
             break;
             
+        case SLAuthImageTypeAuthing:
+            break;
+            
     }
 }
 
