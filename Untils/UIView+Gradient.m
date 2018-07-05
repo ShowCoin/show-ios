@@ -26,4 +26,18 @@
     return gradient;
 }
 
+
+- (void)removeGraDient {
+    
+    NSArray *array =  self.layer.sublayers;
+    
+    if ([[array objectAtIndex:0] isKindOfClass:[CAGradientLayer class]]) {
+        
+        CALayer *layer = [array objectAtIndex:0];
+        
+        [layer removeFromSuperlayer];
+    }
+    
+}
+
 @end
