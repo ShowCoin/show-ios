@@ -60,6 +60,7 @@
 		435D4C4420EDEA6D00C8DC85 /* NSDate+JKFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 435D4C4220EDEA6D00C8DC85 /* NSDate+JKFormatter.m */; };
 		435D4C4720EDEA8B00C8DC85 /* NSDate+JKInternetDateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 435D4C4520EDEA8A00C8DC85 /* NSDate+JKInternetDateTime.m */; };
 		435D4C4A20EDEAAE00C8DC85 /* NSDate+JKLunarCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 435D4C4920EDEAAD00C8DC85 /* NSDate+JKLunarCalendar.m */; };
+		435D4C4D20EDEAC600C8DC85 /* NSDate+JKReporting.m in Sources */ = {isa = PBXBuildFile; fileRef = 435D4C4C20EDEAC500C8DC85 /* NSDate+JKReporting.m */; };
 		435E3C8F20C02BB2002B7A7F /* NSDecimalNumber+JKExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 435E3AB420C02BB1002B7A7F /* NSDecimalNumber+JKExtensions.m */; };
 		435E3C9020C02BB2002B7A7F /* NSNumber+JKRound.m in Sources */ = {isa = PBXBuildFile; fileRef = 435E3AB720C02BB1002B7A7F /* NSNumber+JKRound.m */; };
 		435E3C9120C02BB2002B7A7F /* NSNumber+JKCGFloat.m in Sources */ = {isa = PBXBuildFile; fileRef = 435E3AB820C02BB1002B7A7F /* NSNumber+JKCGFloat.m */; };
@@ -241,6 +242,8 @@
 		435D4C4620EDEA8A00C8DC85 /* NSDate+JKInternetDateTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JKInternetDateTime.h"; sourceTree = "<group>"; };
 		435D4C4820EDEAAD00C8DC85 /* NSDate+JKLunarCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JKLunarCalendar.h"; sourceTree = "<group>"; };
 		435D4C4920EDEAAD00C8DC85 /* NSDate+JKLunarCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JKLunarCalendar.m"; sourceTree = "<group>"; };
+		435D4C4B20EDEAC500C8DC85 /* NSDate+JKReporting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JKReporting.h"; sourceTree = "<group>"; };
+		435D4C4C20EDEAC500C8DC85 /* NSDate+JKReporting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JKReporting.m"; sourceTree = "<group>"; };
 		435E3AB420C02BB1002B7A7F /* NSDecimalNumber+JKExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDecimalNumber+JKExtensions.m"; sourceTree = "<group>"; };
 		435E3AB720C02BB1002B7A7F /* NSNumber+JKRound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+JKRound.m"; sourceTree = "<group>"; };
 		435E3AB820C02BB1002B7A7F /* NSNumber+JKCGFloat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+JKCGFloat.m"; sourceTree = "<group>"; };
@@ -502,6 +505,8 @@
 		434DDB4B20C92B4E00191FC1 /* JKCategories */ = {
 			isa = PBXGroup;
 			children = (
+				435D4C4B20EDEAC500C8DC85 /* NSDate+JKReporting.h */,
+				435D4C4C20EDEAC500C8DC85 /* NSDate+JKReporting.m */,
 				435D4C4820EDEAAD00C8DC85 /* NSDate+JKLunarCalendar.h */,
 				435D4C4920EDEAAD00C8DC85 /* NSDate+JKLunarCalendar.m */,
 				435D4C4320EDEA6D00C8DC85 /* NSDate+JKFormatter.h */,
@@ -1388,6 +1393,7 @@
 				93D2C11220BD238500C9D960 /* SLFriendListCell.m in Sources */,
 				43205DD120DD25F000AD6952 /* UIView+Genie.m in Sources */,
 				43291F4420E51FDC000C3C15 /* UITableViewCellDemoViewController.m in Sources */,
+				435D4C4D20EDEAC600C8DC85 /* NSDate+JKReporting.m in Sources */,
 				720F860920B2F59500AD0C54 /* SLGetRyTokenAction.m in Sources */,
 				434DDB5720C932DB00191FC1 /* CAMediaTimingFunction+JKAdditionalEquations.m in Sources */,
 				437921ED20ECC49900B2EC88 /* NSData+JKGzip.m in Sources */,
