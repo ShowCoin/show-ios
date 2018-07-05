@@ -33,6 +33,6 @@
                                colors:(NSArray *)corlors
                             locations:(NSArray *)locations;
 
-
+- (void)removeGraDient;
 
 @end
