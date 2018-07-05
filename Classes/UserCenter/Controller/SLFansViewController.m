@@ -230,6 +230,72 @@ static NSString * const kNoNetMessage = @"唔唔唔，没有网了";
 }
 
 //停止刷新
+-(void)stopLoadData
+{
+    [_TableView.mj_header endRefreshing];
+    [_TableView.mj_footer endRefreshing];
+}
+
+//设置请求参数
+-(void)addParameter
+{
+    _cursor = @"0";
+}
+
+//加载更多数据
+-(void)loadMoreData
+{
+    
+    [self requestDataWithPage:2];
+}
+
+
+- (UITableView *)TableView
+{
+    if (!_TableView)
+    {
+        
+        _TableView = [[UITableView alloc] initWithFrame:CGRectMake(0, kNaviBarHeight, kMainScreenWidth,kMainScreenHeight-kNaviBarHeight) style:UITableViewStylePlain];
+        _TableView.dataSource = self;
+        _TableView.delegate = self;
+        _TableView.scrollEnabled = YES;
+        _TableView.backgroundColor = [UIColor clearColor];
+        _TableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        @weakify(self)
+        self.TableView.mj_header = [SLRefreshHeader headerWithRefreshingBlock:^{
+            @strongify(self)
+//            if (self.uid)
+//            {
+                [self addParameter];
+                [self requestDataWithPage:1];
+//            }
+        }];
+        [self.TableView.mj_header beginRefreshing];
+        self.TableView.mj_footer = [SLRefreshFooter footerWithRefreshingBlock:^{
+            @strongify(self)
+            if (self.cursor.integerValue!=-1) {
+                [self loadMoreData];
+            }
+        }];
+
+    }
+    return _TableView;
+}
+- (void)notifi:(NSNotification *)noti{
+    NSDictionary *dic = noti.userInfo;
+    
+    //获取网络状态
+    NSInteger status = [[dic objectForKey:@"AFNetworkingReachabilityNotificationStatusItem"] integerValue];
+    
+    if(status == AFNetworkReachabilityStatusNotReachable) {
+        //无网络连接
+        _network =NO;
+        
+    }else if (status == AFNetworkReachabilityStatusReachableViaWiFi || status == AFNetworkReachabilityStatusReachableViaWWAN) {
+        //蜂窝网络或者Wi-Fi连接
+        _network =YES;
+    }
+}
 
 /*
 #pragma mark - Navigation
