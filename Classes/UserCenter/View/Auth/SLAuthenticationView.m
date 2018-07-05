@@ -383,6 +383,17 @@ static CGFloat const kMargin = 15;
         case SLAuthImageTypeAuthing:
             break;
             
+        case SLAuthImageTypeSuccess:
+            contenView.image = [UIImage imageNamed:@"auth_success"];
+            break;
+            
+        case SLAuthImageTypeFailed:
+            contenView.image = [UIImage imageNamed:@"auth_faild"];
+            self.userInteractionEnabled = YES;
+            break;
+            
+        default:
+            break;
     }
 }
 
