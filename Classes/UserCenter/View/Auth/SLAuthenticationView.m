@@ -374,6 +374,8 @@ static CGFloat const kMargin = 15;
     _type = type;
     self.userInteractionEnabled = NO;
     contenView.hidden = NO;
+    switch (type) {
+    }
 }
 
 
