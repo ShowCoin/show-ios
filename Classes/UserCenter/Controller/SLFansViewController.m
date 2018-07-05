@@ -373,7 +373,58 @@ static NSString * const kNoNetMessage = @"唔唔唔，没有网了";
 {
     
 }
+-(void)SLUserListCellAttentionBtn:(UIButton *)attentionBtn clickedWithData:(id)celldata;
+{
+    SLFansModel * userModel = (SLFansModel*)celldata;
+    
+    NSString * userId  = userModel.uid;
+    
+    
+    
+    if ([AccountUserInfoModel.uid isEqualToString:userId]) {
+        [ShowWaringView waringView:@"您不能关注自己" style:WaringStyleRed];
+    }else
+    {
+        UIButton * btn = (UIButton*)attentionBtn;
+        
+        [btn setTitle:@"已关注" forState:UIControlStateNormal];
+        btn.backgroundColor = [UIColor whiteColor];
+        [btn setTitleColor:kthemeBlackColor forState:UIControlStateNormal];
+        [btn setBackgroundImage:nil forState:UIControlStateNormal];
+        [btn borderStyleWithColor:kGrayTextColor width:1];
+        
+        
+        userModel.isFollowed = @"1";
+        
+        if (IS_EXIST_STR(userId)) {
+            SLFollowUserAction *followAction = [SLFollowUserAction action];
+            followAction.to_uid = userId;
+            followAction.type = FollowTypeAdd;
+            followAction.failedBlock = ^(NSError *error) {
+                if (![error.userInfo[@"msg"] isEqualToString:@"你已经关注过人家了"]) {
+                    [btn setTitle:@"已关注" forState:UIControlStateNormal];
+                }
+            };
+            [followAction start];
+            
+            NSDictionary * dic = @{@"type":@(1),@"uid":userId};
+            [[NSNotificationCenter defaultCenter]postNotificationName:kFollowUserStatusWithUidNotification object:dic];
+            
+        }
+    }
+}
 
+- (void)refreshFollowStatus:(NSNotification *)notification {
+    NSDictionary *notifyDic = notification.object;
+    
+    for (SLUserListCell *cell in _TableView.visibleCells) {
+        if ([cell.userModel.uid isEqualToString:notifyDic[@"uid"]]) {
+            ShowUserModel *model = cell.userModel;
+            model.isFollowed = [NSString stringWithFormat:@"%@", notifyDic[@"isFollowed"]];
+            cell.userModel = model;
+        }
+    }
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
