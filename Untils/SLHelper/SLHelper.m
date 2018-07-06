@@ -653,6 +653,190 @@
     
     return timeStr;
 }
++(NSString *)trimright0:(double )param
+{
+    NSString *str = [NSString stringWithFormat:@"%.2lf",param];
+    NSUInteger len = str.length;
+    for (int i = 0; i < len; i++)
+    {
+        if (![str  hasSuffix:@"0"])
+            break;
+        else
+            str = [str substringToIndex:[str length]-1];
+    }
+    if ([str hasSuffix:@"."])//避免像2.0000这样的被解析成2.
+    {
+        //        return [NSString stringWithFormat:@"%@0", str];
+        return  [str substringToIndex:[str length]-1];
+    }
+    else
+    {
+        return str;
+    }
+}
++ (NSData *)archiverObject:(NSObject *)object forKey:(NSString *)key {
+    if(object == nil) {
+        return nil;
+    }
+    NSMutableData *data = [[NSMutableData alloc] init];
+    NSKeyedArchiver *archiver = [[NSKeyedArchiver alloc] initForWritingWithMutableData:data];
+    [archiver encodeObject:object forKey:key];
+    [archiver finishEncoding];
+    
+    return data;
+}
 
++ (NSObject *)unarchiverObject:(NSData *)archivedData withKey:(NSString *)key {
+    if(archivedData == nil) {
+        return nil;
+    }
+    
+    NSKeyedUnarchiver *unarchiver = [[NSKeyedUnarchiver alloc] initForReadingWithData:archivedData];
+    NSObject *object = [unarchiver decodeObjectForKey:key];
+    [unarchiver finishDecoding];
+    
+    return object;
+}
++(void)synchronizedToCalendarTitle:(NSString *)title location:(NSString *)location{
+    //事件市场
+    EKEventStore *eventStore = [[EKEventStore alloc] init];
+    //6.0及以上通过下面方式写入事件
+    if ([eventStore respondsToSelector:@selector(requestAccessToEntityType:completion:)])
+    {
+        // the selector is available, so we must be on iOS 6 or newer
+        [eventStore requestAccessToEntityType:EKEntityTypeEvent completion:^(BOOL granted, NSError *error) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                if (error)
+                {
+                    
+                    // display error message here
+                }
+                else if (!granted)
+                {
+                    //被用户拒绝，不允许访问日历
+                    // display access denied error message here
+                }
+                else
+                {
+                    // access granted
+                    // ***** do the important stuff here *****
+                    
+                    //事件保存到日历
+                    
+                    
+                    //创建事件
+                    EKEvent *event  = [EKEvent eventWithEventStore:eventStore];
+                    event.title     = title;
+                    event.location = location;
+                    
+                    NSDateFormatter *tempFormatter = [[NSDateFormatter alloc]init];
+                    [tempFormatter setDateFormat:@"dd.MM.yyyy HH:mm"];
+                    
+                    event.startDate = [[NSDate alloc]init ];
+                    event.endDate   = [[NSDate alloc]init ];
+                    event.allDay = YES;
+                    
+                    //添加提醒
+                    [event addAlarm:[EKAlarm alarmWithRelativeOffset:60.0f * -60.0f * 24]];
+                    [event addAlarm:[EKAlarm alarmWithRelativeOffset:60.0f * -15.0f]];
+                    
+                    [event setCalendar:[eventStore defaultCalendarForNewEvents]];
+                    NSError *err;
+                    [eventStore saveEvent:event span:EKSpanThisEvent error:&err];
+                    
+                }
+            });
+        }];
+    }
+    else
+    {
+        //4.0和5.0通过下述方式添加
+        
+        //保存日历
+        EKEvent *event  = [EKEvent eventWithEventStore:eventStore];
+        event.title     = title;
+        event.location = location;
+        
+        NSDateFormatter *tempFormatter = [[NSDateFormatter alloc]init];
+        [tempFormatter setDateFormat:@"dd.MM.yyyy HH:mm"];
+        
+        event.startDate = [[NSDate alloc]init ];
+        event.endDate   = [[NSDate alloc]init ];
+        event.allDay = YES;
+        
+        
+        [event addAlarm:[EKAlarm alarmWithRelativeOffset:60.0f * -60.0f * 24]];
+        [event addAlarm:[EKAlarm alarmWithRelativeOffset:60.0f * -15.0f]];
+        
+        [event setCalendar:[eventStore defaultCalendarForNewEvents]];
+        NSError *err;
+        [eventStore saveEvent:event span:EKSpanThisEvent error:&err];
+        NSLog(@"保存成功");
+        
+    }
+    
+}
+#pragma mark getValPara
+
++(NSString *)getValPara:(NSMutableDictionary *)dict{
+    NSMutableArray *keys= [NSMutableArray arrayWithArray:[dict allKeys]];
+    [keys sortUsingSelector:@selector(compare:)];
+    NSMutableString *val = [NSMutableString string];
+    @autoreleasepool {
+        for (NSString *key in keys) {
+            id v = [dict objectForKey:key];
+            
+            NSString *va=[NSString stringWithFormat:@"%@",[v lowercaseString]];
+            
+            [val appendString:va];
+        }
+    }
+    return val;
+}
+#pragma mark-
++ (id)valueForKey:(NSString *)key {
+    return [[NSUserDefaults standardUserDefaults] valueForKey:key];
+}
+
++ (void)setValue:(id)value forKey:(NSString *)key {
+    [[NSUserDefaults standardUserDefaults] setValue:value forKey:key];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
++ (NSString *)friendFormatString:(NSString *)sourceStr{
+    if(![sourceStr isKindOfClass:[NSString class]]){
+        return nil;
+    }
+    //各四个字符插入一个空字符
+    NSMutableString *targetStr = [NSMutableString stringWithString:sourceStr];
+    for(int i = 4, k = 4; i < sourceStr.length; i += 4, k = i+1){
+        [targetStr insertString:@" " atIndex:k];
+    }
+    return [NSString stringWithFormat:@"%@", targetStr];
+}
+
+/**
+ *    @brief    将json数据转换成id
+ *
+ *    @param data 数据
+ *
+ *    @return     id类型的数据
+ */
++ (id)parserJsonData:(id)jsonData{
+    
+    NSError *error;
+    id jsonResult = nil;
+    if (jsonData&&[jsonData isKindOfClass:[NSData class]])
+    {
+        jsonResult = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&error];
+    }
+    if (jsonResult != nil && error == nil)
+    {
+        return jsonResult;
+    }else{
+        // 解析错误
+        return nil;
+    }
+}
 
 @end
