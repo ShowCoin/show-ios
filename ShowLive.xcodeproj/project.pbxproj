@@ -65,8 +65,9 @@
 		435D4C5320EDEB1900C8DC85 /* NSDate+JKZeroDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 435D4C5220EDEB1900C8DC85 /* NSDate+JKZeroDate.m */; };
 		435D4C5620EDEB3200C8DC85 /* NSDateFormatter+JKMake.m in Sources */ = {isa = PBXBuildFile; fileRef = 435D4C5520EDEB3100C8DC85 /* NSDateFormatter+JKMake.m */; };
 		435D4C5920EDEB4B00C8DC85 /* NSDecimalNumber+JKCalculatingByString.m in Sources */ = {isa = PBXBuildFile; fileRef = 435D4C5820EDEB4B00C8DC85 /* NSDecimalNumber+JKCalculatingByString.m */; };
-		435D4C5C20EF3DB300C8DC85 /* NSDecimalNumber+JKCalculatingByString.m in Sources */ = {isa = PBXBuildFile; fileRef = 435D4C5B20EF3DB300C8DC85 /* NSDecimalNumber+JKCalculatingByString.m */; };
 		435D4C5F20EF3E0500C8DC85 /* NSDecimalNumber+JKExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 435D4C5E20EF3E0500C8DC85 /* NSDecimalNumber+JKExtensions.m */; };
+		435D4C6220EF3E2500C8DC85 /* NSDictionary+JKBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 435D4C6020EF3E2400C8DC85 /* NSDictionary+JKBlock.m */; };
+		435D4C6520EF3E3B00C8DC85 /* NSDictionary+JKJSONString.m in Sources */ = {isa = PBXBuildFile; fileRef = 435D4C6420EF3E3B00C8DC85 /* NSDictionary+JKJSONString.m */; };
 		435E3C8F20C02BB2002B7A7F /* NSDecimalNumber+JKExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 435E3AB420C02BB1002B7A7F /* NSDecimalNumber+JKExtensions.m */; };
 		435E3C9020C02BB2002B7A7F /* NSNumber+JKRound.m in Sources */ = {isa = PBXBuildFile; fileRef = 435E3AB720C02BB1002B7A7F /* NSNumber+JKRound.m */; };
 		435E3C9120C02BB2002B7A7F /* NSNumber+JKCGFloat.m in Sources */ = {isa = PBXBuildFile; fileRef = 435E3AB820C02BB1002B7A7F /* NSNumber+JKCGFloat.m */; };
@@ -258,10 +259,12 @@
 		435D4C5520EDEB3100C8DC85 /* NSDateFormatter+JKMake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+JKMake.m"; sourceTree = "<group>"; };
 		435D4C5720EDEB4B00C8DC85 /* NSDecimalNumber+JKCalculatingByString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDecimalNumber+JKCalculatingByString.h"; sourceTree = "<group>"; };
 		435D4C5820EDEB4B00C8DC85 /* NSDecimalNumber+JKCalculatingByString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDecimalNumber+JKCalculatingByString.m"; sourceTree = "<group>"; };
-		435D4C5A20EF3DB200C8DC85 /* NSDecimalNumber+JKCalculatingByString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDecimalNumber+JKCalculatingByString.h"; path = "../../../../Desktop/leiku/NSDecimalNumber+JKCalculatingByString.h"; sourceTree = "<group>"; };
-		435D4C5B20EF3DB300C8DC85 /* NSDecimalNumber+JKCalculatingByString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDecimalNumber+JKCalculatingByString.m"; path = "../../../../Desktop/leiku/NSDecimalNumber+JKCalculatingByString.m"; sourceTree = "<group>"; };
 		435D4C5D20EF3E0500C8DC85 /* NSDecimalNumber+JKExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDecimalNumber+JKExtensions.h"; sourceTree = "<group>"; };
 		435D4C5E20EF3E0500C8DC85 /* NSDecimalNumber+JKExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDecimalNumber+JKExtensions.m"; sourceTree = "<group>"; };
+		435D4C6020EF3E2400C8DC85 /* NSDictionary+JKBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+JKBlock.m"; sourceTree = "<group>"; };
+		435D4C6120EF3E2400C8DC85 /* NSDictionary+JKBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+JKBlock.h"; sourceTree = "<group>"; };
+		435D4C6320EF3E3B00C8DC85 /* NSDictionary+JKJSONString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+JKJSONString.h"; sourceTree = "<group>"; };
+		435D4C6420EF3E3B00C8DC85 /* NSDictionary+JKJSONString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+JKJSONString.m"; sourceTree = "<group>"; };
 		435E3AB420C02BB1002B7A7F /* NSDecimalNumber+JKExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDecimalNumber+JKExtensions.m"; sourceTree = "<group>"; };
 		435E3AB720C02BB1002B7A7F /* NSNumber+JKRound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+JKRound.m"; sourceTree = "<group>"; };
 		435E3AB820C02BB1002B7A7F /* NSNumber+JKCGFloat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+JKCGFloat.m"; sourceTree = "<group>"; };
@@ -523,12 +526,14 @@
 		434DDB4B20C92B4E00191FC1 /* JKCategories */ = {
 			isa = PBXGroup;
 			children = (
+				435D4C6320EF3E3B00C8DC85 /* NSDictionary+JKJSONString.h */,
+				435D4C6420EF3E3B00C8DC85 /* NSDictionary+JKJSONString.m */,
+				435D4C6120EF3E2400C8DC85 /* NSDictionary+JKBlock.h */,
+				435D4C6020EF3E2400C8DC85 /* NSDictionary+JKBlock.m */,
 				435D4C5D20EF3E0500C8DC85 /* NSDecimalNumber+JKExtensions.h */,
 				435D4C5E20EF3E0500C8DC85 /* NSDecimalNumber+JKExtensions.m */,
 				435D4C5720EDEB4B00C8DC85 /* NSDecimalNumber+JKCalculatingByString.h */,
 				435D4C5820EDEB4B00C8DC85 /* NSDecimalNumber+JKCalculatingByString.m */,
-				435D4C5A20EF3DB200C8DC85 /* NSDecimalNumber+JKCalculatingByString.h */,
-				435D4C5B20EF3DB300C8DC85 /* NSDecimalNumber+JKCalculatingByString.m */,
 				435D4C5420EDEB3100C8DC85 /* NSDateFormatter+JKMake.h */,
 				435D4C5520EDEB3100C8DC85 /* NSDateFormatter+JKMake.m */,
 				435D4C5120EDEB1800C8DC85 /* NSDate+JKZeroDate.h */,
@@ -1338,8 +1343,8 @@
 				43D87B3520EB6E7000E991D6 /* UIResponderDemoViewController.m in Sources */,
 				72FE9B6920621F59008DD3D5 /* main.m in Sources */,
 				435E3C9020C02BB2002B7A7F /* NSNumber+JKRound.m in Sources */,
-				435D4C5C20EF3DB300C8DC85 /* NSDecimalNumber+JKCalculatingByString.m in Sources */,
 				435D4C5320EDEB1900C8DC85 /* NSDate+JKZeroDate.m in Sources */,
+				435D4C6520EF3E3B00C8DC85 /* NSDictionary+JKJSONString.m in Sources */,
 				434DDB5D20C9332700191FC1 /* CATransaction+JKAnimateWithDuration.m in Sources */,
 				431BBB6520DBCB05006A3D50 /* UIView+JKConstraints.m in Sources */,
 				435E3C8F20C02BB2002B7A7F /* NSDecimalNumber+JKExtensions.m in Sources */,
@@ -1437,6 +1442,7 @@
 				724D4BC220C9155A0007E4E8 /* HomeHeader.m in Sources */,
 				7202FE1320EB5FE1008DF215 /* SLUserInfoViewController.m in Sources */,
 				724FF37A20E6678D00DD40EB /* SLInfoHeaderView.m in Sources */,
+				435D4C6220EF3E2500C8DC85 /* NSDictionary+JKBlock.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
