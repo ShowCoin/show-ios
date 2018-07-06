@@ -66,6 +66,7 @@
 		435D4C5620EDEB3200C8DC85 /* NSDateFormatter+JKMake.m in Sources */ = {isa = PBXBuildFile; fileRef = 435D4C5520EDEB3100C8DC85 /* NSDateFormatter+JKMake.m */; };
 		435D4C5920EDEB4B00C8DC85 /* NSDecimalNumber+JKCalculatingByString.m in Sources */ = {isa = PBXBuildFile; fileRef = 435D4C5820EDEB4B00C8DC85 /* NSDecimalNumber+JKCalculatingByString.m */; };
 		435D4C5C20EF3DB300C8DC85 /* NSDecimalNumber+JKCalculatingByString.m in Sources */ = {isa = PBXBuildFile; fileRef = 435D4C5B20EF3DB300C8DC85 /* NSDecimalNumber+JKCalculatingByString.m */; };
+		435D4C5F20EF3E0500C8DC85 /* NSDecimalNumber+JKExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 435D4C5E20EF3E0500C8DC85 /* NSDecimalNumber+JKExtensions.m */; };
 		435E3C8F20C02BB2002B7A7F /* NSDecimalNumber+JKExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 435E3AB420C02BB1002B7A7F /* NSDecimalNumber+JKExtensions.m */; };
 		435E3C9020C02BB2002B7A7F /* NSNumber+JKRound.m in Sources */ = {isa = PBXBuildFile; fileRef = 435E3AB720C02BB1002B7A7F /* NSNumber+JKRound.m */; };
 		435E3C9120C02BB2002B7A7F /* NSNumber+JKCGFloat.m in Sources */ = {isa = PBXBuildFile; fileRef = 435E3AB820C02BB1002B7A7F /* NSNumber+JKCGFloat.m */; };
@@ -259,6 +260,8 @@
 		435D4C5820EDEB4B00C8DC85 /* NSDecimalNumber+JKCalculatingByString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDecimalNumber+JKCalculatingByString.m"; sourceTree = "<group>"; };
 		435D4C5A20EF3DB200C8DC85 /* NSDecimalNumber+JKCalculatingByString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDecimalNumber+JKCalculatingByString.h"; path = "../../../../Desktop/leiku/NSDecimalNumber+JKCalculatingByString.h"; sourceTree = "<group>"; };
 		435D4C5B20EF3DB300C8DC85 /* NSDecimalNumber+JKCalculatingByString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDecimalNumber+JKCalculatingByString.m"; path = "../../../../Desktop/leiku/NSDecimalNumber+JKCalculatingByString.m"; sourceTree = "<group>"; };
+		435D4C5D20EF3E0500C8DC85 /* NSDecimalNumber+JKExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDecimalNumber+JKExtensions.h"; sourceTree = "<group>"; };
+		435D4C5E20EF3E0500C8DC85 /* NSDecimalNumber+JKExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDecimalNumber+JKExtensions.m"; sourceTree = "<group>"; };
 		435E3AB420C02BB1002B7A7F /* NSDecimalNumber+JKExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDecimalNumber+JKExtensions.m"; sourceTree = "<group>"; };
 		435E3AB720C02BB1002B7A7F /* NSNumber+JKRound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+JKRound.m"; sourceTree = "<group>"; };
 		435E3AB820C02BB1002B7A7F /* NSNumber+JKCGFloat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+JKCGFloat.m"; sourceTree = "<group>"; };
@@ -520,6 +523,8 @@
 		434DDB4B20C92B4E00191FC1 /* JKCategories */ = {
 			isa = PBXGroup;
 			children = (
+				435D4C5D20EF3E0500C8DC85 /* NSDecimalNumber+JKExtensions.h */,
+				435D4C5E20EF3E0500C8DC85 /* NSDecimalNumber+JKExtensions.m */,
 				435D4C5720EDEB4B00C8DC85 /* NSDecimalNumber+JKCalculatingByString.h */,
 				435D4C5820EDEB4B00C8DC85 /* NSDecimalNumber+JKCalculatingByString.m */,
 				435D4C5A20EF3DB200C8DC85 /* NSDecimalNumber+JKCalculatingByString.h */,
@@ -1380,6 +1385,7 @@
 				93615AF320C14BB2000D5658 /* SLSearchBar.m in Sources */,
 				431BBB5C20DBCA5F006A3D50 /* UIView+JKRecursion.m in Sources */,
 				43993EBF20E23EF90017F1C3 /* UITextField+JKBlocks.m in Sources */,
+				435D4C5F20EF3E0500C8DC85 /* NSDecimalNumber+JKExtensions.m in Sources */,
 				436B1EAE20DA300600419AC0 /* UIView+JKFind.m in Sources */,
 				4325535D20D8B45700FC0258 /* CAAnimationDemoViewController.m in Sources */,
 				437921E720ECC46400B2EC88 /* NSData+JKBase64.m in Sources */,
