@@ -300,7 +300,7 @@ static CGFloat const kMargin = 15;
 }
 
 /**
- <#Description#>
+ titleForRow title
 
  @param pickerView pickerView
  @param row row
