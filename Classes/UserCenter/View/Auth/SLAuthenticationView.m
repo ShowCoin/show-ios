@@ -296,6 +296,14 @@ static CGFloat const kMargin = 15;
     return 1;
 }
 
+/**
+ <#Description#>
+
+ @param pickerView pickerView
+ @param row row
+ @param component component
+ @return NSString
+ */
 - (nullable NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
     return self.countries[row];
 }
@@ -309,7 +317,7 @@ static CGFloat const kMargin = 15;
 //}
 
 /**
- custom view show 
+ custom view show
 
  @param pickerView pickerView
  @param row row
