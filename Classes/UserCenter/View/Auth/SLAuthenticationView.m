@@ -309,12 +309,12 @@ static CGFloat const kMargin = 15;
 //}
 
 /**
- <#Description#>
+ custom view show 
 
- @param pickerView <#pickerView description#>
- @param row <#row description#>
- @param component <#component description#>
- @param view <#view description#>
+ @param pickerView pickerView
+ @param row row
+ @param component component
+ @param view view
  @return UIView
  */
 - (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view {
