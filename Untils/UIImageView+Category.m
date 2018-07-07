@@ -33,5 +33,20 @@
 }
 
 +(UIImageView*)imageViewWithGifFileName:(NSString *)name gifCount:(NSInteger)giftCount frame:(CGRect)frame
+{
+    NSURL * gifUrl=[[NSBundle mainBundle]URLForResource:name withExtension:@"gif"];
+    NSData * giftData=[NSData dataWithContentsOfURL:gifUrl];
+    CGImageSourceRef  src=CGImageSourceCreateWithData((CFDataRef)giftData, NULL);
+ 
 
+}
+
++(UIImageView*)imageWithAnimationImages:(NSArray*)imagesArray animationDuration:(double)duration frame:(CGRect)frame
+{
+    UIImageView * animationImageView = [[UIImageView alloc]initWithFrame:frame];
+    animationImageView.animationImages = imagesArray;
+    animationImageView.animationDuration = duration;
+    [animationImageView startAnimating];
+    return animationImageView;
+}
 @end
