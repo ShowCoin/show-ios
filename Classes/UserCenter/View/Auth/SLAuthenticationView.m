@@ -248,6 +248,9 @@ static CGFloat const kMargin = 15;
 @end
 
 
+/**
+ SLCountryModalView
+ */
 @implementation SLCountryModalView
 
 - (void)dealloc {
