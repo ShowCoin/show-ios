@@ -12,4 +12,6 @@
 #import <ImageIO/ImageIO.h>
 @implementation UIImageView (Category)
 
++(UIImageView*)blurImageWithView:(UIView *)view
+
 @end
