@@ -316,6 +316,13 @@ static CGFloat const kMargin = 15;
     return label;
 }
 
+/**
+ <#Description#>
+
+ @param pickerView <#pickerView description#>
+ @param component <#component description#>
+ @return <#return value description#>
+ */
 - (CGFloat)pickerView:(UIPickerView *)pickerView rowHeightForComponent:(NSInteger)component {
     return 44;
 }
@@ -324,8 +331,8 @@ static CGFloat const kMargin = 15;
  UIPickerView
 
  @param pickerView UIPickerView
- @param row <#row description#>
- @param component <#component description#>
+ @param row row
+ @param component component
  */
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     
