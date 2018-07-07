@@ -308,6 +308,15 @@ static CGFloat const kMargin = 15;
 //                                                        }];
 //}
 
+/**
+ <#Description#>
+
+ @param pickerView <#pickerView description#>
+ @param row <#row description#>
+ @param component <#component description#>
+ @param view <#view description#>
+ @return UIView
+ */
 - (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view {
     UILabel *label = [[UILabel alloc] init];
     label.text = [self pickerView:pickerView titleForRow:row forComponent:component];
