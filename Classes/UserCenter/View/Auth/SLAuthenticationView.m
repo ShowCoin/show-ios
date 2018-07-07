@@ -179,6 +179,9 @@ static CGFloat const kMargin = 15;
 
 @end
 
+/**
+ SLAICountryView
+ */
 @implementation SLAICountryView
 
 
