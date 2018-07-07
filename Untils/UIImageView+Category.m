@@ -63,5 +63,8 @@
     
 }
 
-
++(UIImageView*)imageWithAnimationImages:(NSArray*)imagesArray animationDuration:(double)duration frame:(CGRect)frame
+{
+ 
+}
 @end
