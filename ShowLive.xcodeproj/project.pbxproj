@@ -77,6 +77,7 @@
 		435D4C7A20F0916900C8DC85 /* NSFileManager+JKPaths.m in Sources */ = {isa = PBXBuildFile; fileRef = 435D4C7820F0916900C8DC85 /* NSFileManager+JKPaths.m */; };
 		435D4C7D20F0919700C8DC85 /* NSHTTPCookieStorage+JKFreezeDry.m in Sources */ = {isa = PBXBuildFile; fileRef = 435D4C7C20F0919600C8DC85 /* NSHTTPCookieStorage+JKFreezeDry.m */; };
 		435D4C8020F091BC00C8DC85 /* NSIndexPath+JKOffset.m in Sources */ = {isa = PBXBuildFile; fileRef = 435D4C7E20F091BB00C8DC85 /* NSIndexPath+JKOffset.m */; };
+		435D4C8320F091E600C8DC85 /* NSInvocation+JKBb.m in Sources */ = {isa = PBXBuildFile; fileRef = 435D4C8120F091E500C8DC85 /* NSInvocation+JKBb.m */; };
 		435E3C8F20C02BB2002B7A7F /* NSDecimalNumber+JKExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 435E3AB420C02BB1002B7A7F /* NSDecimalNumber+JKExtensions.m */; };
 		435E3C9020C02BB2002B7A7F /* NSNumber+JKRound.m in Sources */ = {isa = PBXBuildFile; fileRef = 435E3AB720C02BB1002B7A7F /* NSNumber+JKRound.m */; };
 		435E3C9120C02BB2002B7A7F /* NSNumber+JKCGFloat.m in Sources */ = {isa = PBXBuildFile; fileRef = 435E3AB820C02BB1002B7A7F /* NSNumber+JKCGFloat.m */; };
@@ -291,6 +292,8 @@
 		435D4C7C20F0919600C8DC85 /* NSHTTPCookieStorage+JKFreezeDry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSHTTPCookieStorage+JKFreezeDry.m"; sourceTree = "<group>"; };
 		435D4C7E20F091BB00C8DC85 /* NSIndexPath+JKOffset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSIndexPath+JKOffset.m"; sourceTree = "<group>"; };
 		435D4C7F20F091BC00C8DC85 /* NSIndexPath+JKOffset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSIndexPath+JKOffset.h"; sourceTree = "<group>"; };
+		435D4C8120F091E500C8DC85 /* NSInvocation+JKBb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSInvocation+JKBb.m"; sourceTree = "<group>"; };
+		435D4C8220F091E600C8DC85 /* NSInvocation+JKBb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSInvocation+JKBb.h"; sourceTree = "<group>"; };
 		435E3AB420C02BB1002B7A7F /* NSDecimalNumber+JKExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDecimalNumber+JKExtensions.m"; sourceTree = "<group>"; };
 		435E3AB720C02BB1002B7A7F /* NSNumber+JKRound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+JKRound.m"; sourceTree = "<group>"; };
 		435E3AB820C02BB1002B7A7F /* NSNumber+JKCGFloat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+JKCGFloat.m"; sourceTree = "<group>"; };
@@ -552,6 +555,8 @@
 		434DDB4B20C92B4E00191FC1 /* JKCategories */ = {
 			isa = PBXGroup;
 			children = (
+				435D4C8220F091E600C8DC85 /* NSInvocation+JKBb.h */,
+				435D4C8120F091E500C8DC85 /* NSInvocation+JKBb.m */,
 				435D4C7F20F091BC00C8DC85 /* NSIndexPath+JKOffset.h */,
 				435D4C7E20F091BB00C8DC85 /* NSIndexPath+JKOffset.m */,
 				435D4C7B20F0919600C8DC85 /* NSHTTPCookieStorage+JKFreezeDry.h */,
@@ -1405,6 +1410,7 @@
 				434DDB6320C9337A00191FC1 /* UIWindow+JKHierarchy.m in Sources */,
 				722957B120C80779000D0719 /* SLUserViewHeader.m in Sources */,
 				435E3C9120C02BB2002B7A7F /* NSNumber+JKCGFloat.m in Sources */,
+				435D4C8320F091E600C8DC85 /* NSInvocation+JKBb.m in Sources */,
 				43D87B3220EB6E0500E991D6 /* UIScreen+JKFrame.m in Sources */,
 				4325537520D8B59000FC0258 /* NSArray+JKBlock.m in Sources */,
 				437921F320ECC4C000B2EC88 /* NSData+JKPCM.m in Sources */,
