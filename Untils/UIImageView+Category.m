@@ -32,4 +32,6 @@
     
 }
 
++(UIImageView*)imageViewWithGifFileName:(NSString *)name gifCount:(NSInteger)giftCount frame:(CGRect)frame
+
 @end
