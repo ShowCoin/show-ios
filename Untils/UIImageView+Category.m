@@ -66,6 +66,8 @@
 +(UIImageView*)imageWithAnimationImages:(NSArray*)imagesArray animationDuration:(double)duration frame:(CGRect)frame
 {
     UIImageView * animationImageView = [[UIImageView alloc]initWithFrame:frame];
-    
+    animationImageView.animationImages = imagesArray;
+    animationImageView.animationDuration = duration;
+
 }
 @end
