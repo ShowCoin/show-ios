@@ -89,4 +89,5 @@
 -(void)jk_setSize:(CGSize)o forKey:(NSString*)key;
 
 -(void)jk_setRect:(CGRect)o forKey:(NSString*)key;
+
 @end
