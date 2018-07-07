@@ -7,9 +7,6 @@
 //
 
 #import "UIImageView+Category.h"
-#import "UIImage+Compress.h"
-#import "AppDelegate.h"
-#import <ImageIO/ImageIO.h>
 
 
 @implementation UIImageView (Category)
