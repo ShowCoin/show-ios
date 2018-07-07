@@ -10,5 +10,8 @@
 
 @interface UIImageView (Category)
 
+//模糊加黑色蒙层在window 上
++(UIImageView*)blurImageWithView:(UIView*)view;
+
 
 @end
