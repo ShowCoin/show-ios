@@ -320,6 +320,13 @@ static CGFloat const kMargin = 15;
     return 44;
 }
 
+/**
+ <#Description#>
+
+ @param pickerView <#pickerView description#>
+ @param row <#row description#>
+ @param component <#component description#>
+ */
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     
 }
