@@ -321,9 +321,9 @@ static CGFloat const kMargin = 15;
 }
 
 /**
- <#Description#>
+ UIPickerView
 
- @param pickerView <#pickerView description#>
+ @param pickerView UIPickerView
  @param row <#row description#>
  @param component <#component description#>
  */
