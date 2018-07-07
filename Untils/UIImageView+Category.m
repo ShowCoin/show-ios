@@ -38,7 +38,22 @@
     NSData * giftData=[NSData dataWithContentsOfURL:gifUrl];
     CGImageSourceRef  src=CGImageSourceCreateWithData((CFDataRef)giftData, NULL);
  
-
+    NSMutableArray * imageArray=[NSMutableArray array];
+    
+    for (int i=0; i<giftCount; i++) {
+        CGImageRef refImage;
+        refImage=CGImageSourceCreateImageAtIndex(src, i, NULL);
+        UIImage * image=[UIImage imageWithCGImage:refImage];
+        [imageArray addObject:image];
+        CGImageRelease(refImage);
+        
+    }
+    
+    CFRelease(src);
+    
+    
+  
+    
 }
 
 +(UIImageView*)imageWithAnimationImages:(NSArray*)imagesArray animationDuration:(double)duration frame:(CGRect)frame
