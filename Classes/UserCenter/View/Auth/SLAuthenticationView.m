@@ -326,4 +326,82 @@ static CGFloat const kMargin = 15;
 
 @end
 
+@implementation SLAuthImageView {
+    UIImageView *contenView;
+}
+
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        self.contentMode = UIViewContentModeScaleAspectFill;
+        self.clipsToBounds = YES;
+        //self.backgroundColor = [UIColor purpleColor];
+        
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction)];
+        [self addGestureRecognizer:tap];
+        
+        UIImageView *mask = [[UIImageView alloc] init];
+        //mask.backgroundColor = [UIColor colorWithWhite:1 alpha:0.5];
+        //mask.image = [UIImage imageNamed:@"auth_faild"];
+        mask.contentMode = UIViewContentModeScaleAspectFit;
+        [self addSubview:mask];
+        contenView = mask;
+        
+        self.type = SLAuthImageTypeNormal;
+    }
+    return self;
+}
+// superView need imp @selector(tapAction)
+- (id)forwardingTargetForSelector:(SEL)aSelector {
+    if (aSelector == @selector(tapAction)) {
+        return self.superview;
+    }
+    return [super forwardingTargetForSelector:aSelector];
+}
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    CGFloat w = self.frame.size.width;
+    CGFloat h = self.frame.size.height;
+    CGFloat maskW = w * 0.8;
+    CGFloat maskH = h * 0.8;
+    contenView.bounds = CGRectMake(0, 0, maskW, maskH);
+    contenView.center = CGPointMake(w / 2, h / 2);
+}
+
+/**
+ type
+
+ @param type SLAuthImageType
+ */
+- (void)setType:(SLAuthImageType)type {
+    _type = type;
+    self.userInteractionEnabled = NO;
+    contenView.hidden = NO;
+    switch (type) {
+        case SLAuthImageTypeNormal:
+            self.userInteractionEnabled = YES;
+            contenView.hidden = YES;
+            break;
+            
+        case SLAuthImageTypeAuthing:
+            break;
+            
+        case SLAuthImageTypeSuccess:
+            contenView.image = [UIImage imageNamed:@"auth_success"];
+            break;
+            
+        case SLAuthImageTypeFailed:
+            contenView.image = [UIImage imageNamed:@"auth_faild"];
+            self.userInteractionEnabled = YES;
+            break;
+            
+        default:
+            break;
+    }
+}
+
+
+@end
 

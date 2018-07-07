@@ -95,8 +95,6 @@
 		43D87B2F20EB6DEA00E991D6 /* UIScreenDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D87B2E20EB6DE900E991D6 /* UIScreenDemoViewController.m */; };
 		43D87B3220EB6E0500E991D6 /* UIScreen+JKFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D87B3120EB6E0400E991D6 /* UIScreen+JKFrame.m */; };
 		43D87B3520EB6E7000E991D6 /* UIResponderDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D87B3320EB6E6F00E991D6 /* UIResponderDemoViewController.m */; };
-		7202FE1320EB5FE1008DF215 /* SLUserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7202FE1220EB5FE1008DF215 /* SLUserInfoViewController.m */; };
-		7202FE1520ECE81C008DF215 /* SLFriendListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7202FE1420ECE81C008DF215 /* SLFriendListViewController.m */; };
 		720F860920B2F59500AD0C54 /* SLGetRyTokenAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 720F860120B2F59500AD0C54 /* SLGetRyTokenAction.m */; };
 		722957B120C80779000D0719 /* SLUserViewHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 722957B020C80778000D0719 /* SLUserViewHeader.m */; };
 		723816B420C689AB00C3885E /* SLLevelMarkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 723816B320C689AB00C3885E /* SLLevelMarkView.m */; };
@@ -105,6 +103,7 @@
 		724D4BC220C9155A0007E4E8 /* HomeHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 724D4BC120C9155A0007E4E8 /* HomeHeader.m */; };
 		724FF37A20E6678D00DD40EB /* SLInfoHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 724FF37920E6678D00DD40EB /* SLInfoHeaderView.m */; };
 		724FF37D20E6680500DD40EB /* SLUserInfoListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 724FF37C20E6680500DD40EB /* SLUserInfoListCell.m */; };
+		72CA648D20EE4A710052E107 /* SLFansViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72CA648C20EE4A710052E107 /* SLFansViewController.m */; };
 		72FE9B6620621F59008DD3D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72FE9B6420621F59008DD3D5 /* LaunchScreen.storyboard */; };
 		72FE9B6920621F59008DD3D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FE9B6820621F59008DD3D5 /* main.m */; };
 		72FE9B7320621F59008DD3D5 /* ShowLiveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FE9B7220621F59008DD3D5 /* ShowLiveTests.m */; };
@@ -302,8 +301,6 @@
 		43D87B3120EB6E0400E991D6 /* UIScreen+JKFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+JKFrame.m"; sourceTree = "<group>"; };
 		43D87B3320EB6E6F00E991D6 /* UIResponderDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIResponderDemoViewController.m; sourceTree = "<group>"; };
 		43D87B3420EB6E7000E991D6 /* UIResponderDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIResponderDemoViewController.h; sourceTree = "<group>"; };
-		7202FE1220EB5FE1008DF215 /* SLUserInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLUserInfoViewController.m; sourceTree = "<group>"; };
-		7202FE1420ECE81C008DF215 /* SLFriendListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLFriendListViewController.m; sourceTree = "<group>"; };
 		720C304820A35ACC00207500 /* SLGetWithdrawAddressAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLGetWithdrawAddressAction.h; sourceTree = "<group>"; };
 		720F85F720B2F59400AD0C54 /* SLChatStatisticsAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLChatStatisticsAction.h; sourceTree = "<group>"; };
 		720F85F820B2F59400AD0C54 /* SLConfigAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLConfigAction.h; sourceTree = "<group>"; };
@@ -345,6 +342,8 @@
 		72C6166920A0C67500103C44 /* SLUrgeListAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLUrgeListAction.h; sourceTree = "<group>"; };
 		72C686F61D628C8898214FFC /* Pods-ShowLive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowLive.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShowLive/Pods-ShowLive.debug.xcconfig"; sourceTree = "<group>"; };
 		72C7B4F720C3EDE500065BC2 /* SLADView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLADView.h; sourceTree = "<group>"; };
+		72CA648B20EE4A4C0052E107 /* SLFansViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLFansViewController.h; sourceTree = "<group>"; };
+		72CA648C20EE4A710052E107 /* SLFansViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLFansViewController.m; sourceTree = "<group>"; };
 		72DFDE7820D9308600EA3AA1 /* ShowHomeMiddleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowHomeMiddleCell.h; sourceTree = "<group>"; };
 		72DFDE7C20D9328000EA3AA1 /* ShowHomeSamallCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowHomeSamallCell.h; sourceTree = "<group>"; };
 		72F17B6620AB18F50039E916 /* ShowForgetPwdAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowForgetPwdAction.h; sourceTree = "<group>"; };
@@ -756,9 +755,10 @@
 				7239EB3020BD38FC00588BED /* SLNetDiagnoViewController.h */,
 				7239EB3220BD38FC00588BED /* SLTextView.h */,
 				7239EB3120BD38FC00588BED /* SLUserInfoViewController.h */,
-				7202FE1220EB5FE1008DF215 /* SLUserInfoViewController.m */,
 				7239EB3320BD38FC00588BED /* UserCenterViewController.h */,
 				7290201820DBF3A600F02370 /* SLSafeCenterViewController.h */,
+				72CA648B20EE4A4C0052E107 /* SLFansViewController.h */,
+				72CA648C20EE4A710052E107 /* SLFansViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -924,7 +924,6 @@
 			isa = PBXGroup;
 			children = (
 				9319236920B7FF1C001C6144 /* SLFriendListViewController.h */,
-				7202FE1420ECE81C008DF215 /* SLFriendListViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1301,6 +1300,7 @@
 				431BBB6820DBCB38006A3D50 /* UIView+JKBlockGesture.m in Sources */,
 				43291F4A20E5203A000C3C15 /* UITableView+JKiOS7Style.m in Sources */,
 				43993EB320E23E390017F1C3 /* UITextView+JKInputLimit.m in Sources */,
+				72CA648D20EE4A710052E107 /* SLFansViewController.m in Sources */,
 				4325536020D8B49F00FC0258 /* CAShapeLayerDemoViewController.m in Sources */,
 				43D87B2620EB6D7E00E991D6 /* UIScrollView+JKAddition.m in Sources */,
 				434DDB4E20C9324F00191FC1 /* CAAnimation+JKEasingEquations.m in Sources */,
@@ -1329,7 +1329,6 @@
 				436B1EA520DA2FB100419AC0 /* UIView+JKVisuals.m in Sources */,
 				437921E420ECC44000B2EC88 /* NSData+JKAPNSToken.m in Sources */,
 				43D24A922094A43600C59AC8 /* ShowAppDelegate.m in Sources */,
-				7202FE1520ECE81C008DF215 /* SLFriendListViewController.m in Sources */,
 				43291F3E20E51F51000C3C15 /* UITextFieldDemoViewController.m in Sources */,
 				4325536620D8B4F200FC0258 /* CLLocation+JKCH1903.m in Sources */,
 				436B1EB420DA304000419AC0 /* UIView+JKScreenshot.m in Sources */,
@@ -1363,7 +1362,6 @@
 				437921ED20ECC49900B2EC88 /* NSData+JKGzip.m in Sources */,
 				431BBB5F20DBCA96006A3D50 /* UIView+JKDraggable.m in Sources */,
 				724D4BC220C9155A0007E4E8 /* HomeHeader.m in Sources */,
-				7202FE1320EB5FE1008DF215 /* SLUserInfoViewController.m in Sources */,
 				724FF37A20E6678D00DD40EB /* SLInfoHeaderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
