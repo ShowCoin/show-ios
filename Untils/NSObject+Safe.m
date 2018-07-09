@@ -11,5 +11,11 @@
 @implementation NSObject (Safe)
 
 //安全的字典样式
-- (instancetype)safeDictionary 
+- (instancetype)safeDictionary {
+    if (![self isKindOfClass:[NSDictionary class]]) {
+        return nil;
+    }
+    return self;
+}
+
 @end
