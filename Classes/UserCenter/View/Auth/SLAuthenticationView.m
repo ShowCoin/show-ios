@@ -179,6 +179,9 @@ static CGFloat const kMargin = 15;
 
 @end
 
+/**
+ SLAICountryView
+ */
 @implementation SLAICountryView
 
 
@@ -220,6 +223,9 @@ static CGFloat const kMargin = 15;
     //    self.accessoryView = imageView;
 }
 
+/**
+ layoutSubviews
+ */
 - (void)layoutSubviews {
     [super layoutSubviews];
     
@@ -248,6 +254,9 @@ static CGFloat const kMargin = 15;
 @end
 
 
+/**
+ SLCountryModalView
+ */
 @implementation SLCountryModalView
 
 - (void)dealloc {
@@ -296,6 +305,14 @@ static CGFloat const kMargin = 15;
     return 1;
 }
 
+/**
+ titleForRow title
+
+ @param pickerView pickerView
+ @param row row
+ @param component component
+ @return NSString
+ */
 - (nullable NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
     return self.countries[row];
 }
@@ -308,6 +325,15 @@ static CGFloat const kMargin = 15;
 //                                                        }];
 //}
 
+/**
+ custom view show
+
+ @param pickerView pickerView
+ @param row row
+ @param component component
+ @param view view
+ @return UIView
+ */
 - (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view {
     UILabel *label = [[UILabel alloc] init];
     label.text = [self pickerView:pickerView titleForRow:row forComponent:component];
@@ -316,16 +342,33 @@ static CGFloat const kMargin = 15;
     return label;
 }
 
+/**
+ rowHeightForComponent
+
+ @param pickerView pickerView
+ @param component component
+ @return CGFloat
+ */
 - (CGFloat)pickerView:(UIPickerView *)pickerView rowHeightForComponent:(NSInteger)component {
     return 44;
 }
 
+/**
+ UIPickerView
+
+ @param pickerView UIPickerView
+ @param row row
+ @param component component
+ */
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     
 }
 
 @end
 
+/**
+ SLAuthImageView
+ */
 @implementation SLAuthImageView {
     UIImageView *contenView;
 }

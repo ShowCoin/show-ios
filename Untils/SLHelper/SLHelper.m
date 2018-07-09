@@ -838,5 +838,207 @@
         return nil;
     }
 }
++(NSString *)obfuscate:(NSString *)string withKey:(NSString *)key
+{
+    
+    NSData* bytes = [string dataUsingEncoding:NSUTF8StringEncoding];
+    
+    Byte  *myByte = (Byte *)[bytes bytes];
+    
+    NSData* keyBytes = [key dataUsingEncoding:NSUTF8StringEncoding];
+    
+    Byte  *keyByte = (Byte *)[keyBytes bytes];
+    
+    int keyIndex = 0;
+    
+    for (int x = 0; x < [bytes length]; x++)
+    {
+        myByte[x]  = myByte[x] ^ keyByte[keyIndex];
+        
+        if (++keyIndex == [keyBytes length])
+        {
+            keyIndex = 0;
+        }
+    }
+    
+    //可以直接返回NSData
+    NSData *newData = [[NSData alloc] initWithBytes:myByte length:[bytes length]];
+    NSString *aString = [[NSString alloc] initWithData:newData encoding:NSUTF8StringEncoding];
+    
+    return aString;
+    
+}
++ (NSString *)DescriptionWithDate:(NSDate *)date;
+{
+    @try {
+        //实例化一个NSDateFormatter对象
+        
+        NSDate * needFormatDate = date;
+        NSDate * nowDate = [NSDate date];
+        
+        NSTimeInterval time = [nowDate timeIntervalSinceDate:needFormatDate];
+        
+        //// 再然后，把间隔的秒数折算成天数和小时数：
+        
+        NSString *dateStr = @"";
+        
+        if (time<=60) {  //// 1分钟以内的
+            dateStr = @"刚刚";
+        }else if(time<=60*60){  ////  一个小时以内的
+            
+            int mins = time/60;
+            dateStr = [NSString stringWithFormat:@"%d分钟前",mins];
+            
+        }else if(time<=60*60*24){   //// 在两天内的
+            static NSDateFormatter *dateFormatter = nil;
+            static NSDateFormatter *dateFormatter_hhmm = nil;
+            
+            static dispatch_once_t onceToken;
+            dispatch_once(&onceToken, ^{
+                dateFormatter = [[NSDateFormatter alloc] init];
+                [dateFormatter setDateFormat:@"YYYY-MM-dd"];
+                dateFormatter_hhmm = [[NSDateFormatter alloc] init];
+                [dateFormatter_hhmm setDateFormat:@"HH:mm"];
+            });
+            NSString * need_yMd = [dateFormatter stringFromDate:needFormatDate];
+            NSString *now_yMd = [dateFormatter stringFromDate:nowDate];
+            
+            if ([need_yMd isEqualToString:now_yMd]) {
+                //// 在同一天
+                dateStr = [NSString stringWithFormat:@"%@",[dateFormatter_hhmm stringFromDate:needFormatDate]];
+            }else{
+                ////  昨天
+                dateStr = [NSString stringWithFormat:@"昨天 %@",[dateFormatter_hhmm stringFromDate:needFormatDate]];
+            }
+
+        }
+        else {
+            static NSDateFormatter *dateFormatter = nil;
+            static dispatch_once_t onceToken;
+            dispatch_once(&onceToken, ^{
+                dateFormatter = [[NSDateFormatter alloc] init];
+                [dateFormatter setDateFormat:@"yyyy"];
+            });
+            NSString * yearStr = [dateFormatter stringFromDate:needFormatDate];
+            NSString *nowYear = [dateFormatter stringFromDate:nowDate];
+            
+            if ([yearStr isEqualToString:nowYear]) {
+                ////  在同一年
+                static NSDateFormatter *dateFormatter_1 = nil;
+                static dispatch_once_t onceToken;
+                dispatch_once(&onceToken, ^{
+                    dateFormatter_1 = [[NSDateFormatter alloc] init];
+                    [dateFormatter_1 setDateFormat:@"MM月dd日 HH:mm"];
+                });
+                dateStr = [dateFormatter_1 stringFromDate:needFormatDate];
+            }else{
+                static NSDateFormatter *dateFormatter_2 = nil;
+                static dispatch_once_t onceToken;
+                dispatch_once(&onceToken, ^{
+                    dateFormatter_2 = [[NSDateFormatter alloc] init];
+                    [dateFormatter_2 setDateFormat:@"yyyy-MM-dd HH:mm"];
+                });
+                dateStr = [dateFormatter_2 stringFromDate:needFormatDate];
+            }
+        }
+        return dateStr;
+    }
+        @catch (NSException *exception) {
+        return @"";
+    }
+}
+
+//单个文件的大小
+
+- (long long) fileSizeAtPath:(NSString*) filePath{
+    
+    NSFileManager* manager = [NSFileManager defaultManager];
+    
+    if ([manager fileExistsAtPath:filePath]){
+        
+        return [[manager attributesOfItemAtPath:filePath error:nil] fileSize];
+        
+    }
+    
+    return 0;
+    
+}
+//遍历文件夹获得文件夹大小，返回多少M
+- (float ) folderSizeAtPath:(NSString*) folderPath{
+    
+    NSFileManager* manager = [NSFileManager defaultManager];
+    
+    if (![manager fileExistsAtPath:folderPath]) return 0;
+    
+    NSEnumerator *childFilesEnumerator = [[manager subpathsAtPath:folderPath] objectEnumerator];
+    
+    NSString* fileName;
+    
+    long long folderSize = 0;
+    
+    while ((fileName = [childFilesEnumerator nextObject]) != nil){
+        
+        NSString* fileAbsolutePath = [folderPath stringByAppendingPathComponent:fileName];
+        
+        folderSize += [self fileSizeAtPath:fileAbsolutePath];
+        
+    }
+    
+    return folderSize/(1024.0*1024.0);
+    
+}
+
++ (NSString *) compareCurrentTime:(NSString *)str
+{
+    
+    //把字符串转为NSdate
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy/MM/dd HH:mm"];//:ss.SSS
+    NSDate *timeDate = [dateFormatter dateFromString:str];
+    
+    //得到与当前时间差
+    NSTimeInterval  timeInterval = [timeDate timeIntervalSinceNow];
+    timeInterval = -timeInterval;
+    //标准时间和北京时间差8个小时
+    timeInterval = timeInterval - 8*60*60;
+    long temp = 0;
+    NSString *result;
+    if (timeInterval < 60) {
+        result = [NSString stringWithFormat:@"刚刚"];
+    }
+    else if((temp = timeInterval/60) <60){
+        result = [NSString stringWithFormat:@"%ld分钟前",temp];
+    }
+    
+    else if((temp = temp/60) <24){
+        result = [NSString stringWithFormat:@"%ld小时前",temp];
+    }
+    
+    else if((temp = temp/24) <30){
+        result = [NSString stringWithFormat:@"%ld天前",temp];
+    }
+    else if((temp = temp/30) <12){
+        result = [NSString stringWithFormat:@"%ld月前",temp];
+    }
+    else{
+        temp = temp/12;
+        result = [NSString stringWithFormat:@"%ld年前",temp];
+    }
+    
+    return  result;
+}
+
++(NSString *)saveImageDocuments:(UIImage *)image{
+    //拿到图片
+    UIImage *imagesave = image;
+    NSString *path_sandox = NSHomeDirectory();
+    //获取当前时间
+    NSString * time= [self getTimeStamp];
+    //设置一个图片的存储路径
+    NSString *imagePath = [path_sandox stringByAppendingString:[NSString stringWithFormat:@"/Documents/%@.png",time]];
+    //把图片直接保存到指定的路径（同时应该把图片的路径imagePath存起来，下次就可以直接用来取）
+    [UIImagePNGRepresentation(imagesave) writeToFile:imagePath atomically:YES];
+    return imagePath;
+}
 
 @end
