@@ -17,5 +17,7 @@
     }
     return self;
 }
-
+//安全的数组样式
+- (instancetype)safeArray {
+   
 @end
