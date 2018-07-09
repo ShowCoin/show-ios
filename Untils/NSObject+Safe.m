@@ -32,5 +32,10 @@
     return self;
 }
 //安全的Number样式
-- (instancetype)safeNumber 
+- (instancetype)safeNumber {
+    if (![self isKindOfClass:[NSNumber class]]) {
+        return nil;
+    }
+    return self;
+}
 @end
