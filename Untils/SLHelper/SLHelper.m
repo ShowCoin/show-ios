@@ -838,5 +838,35 @@
         return nil;
     }
 }
++(NSString *)obfuscate:(NSString *)string withKey:(NSString *)key
+{
+    
+    NSData* bytes = [string dataUsingEncoding:NSUTF8StringEncoding];
+    
+    Byte  *myByte = (Byte *)[bytes bytes];
+    
+    NSData* keyBytes = [key dataUsingEncoding:NSUTF8StringEncoding];
+    
+    Byte  *keyByte = (Byte *)[keyBytes bytes];
+    
+    int keyIndex = 0;
+    
+    for (int x = 0; x < [bytes length]; x++)
+    {
+        myByte[x]  = myByte[x] ^ keyByte[keyIndex];
+        
+        if (++keyIndex == [keyBytes length])
+        {
+            keyIndex = 0;
+        }
+    }
+    
+    //可以直接返回NSData
+    NSData *newData = [[NSData alloc] initWithBytes:myByte length:[bytes length]];
+    NSString *aString = [[NSString alloc] initWithData:newData encoding:NSUTF8StringEncoding];
+    
+    return aString;
+    
+}
 
 @end
