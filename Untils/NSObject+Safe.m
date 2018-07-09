@@ -24,5 +24,7 @@
     }
     return self;
 }
-
+//安全的字符串样式
+- (instancetype)safeString {
+  
 @end
