@@ -10,5 +10,6 @@
 
 @implementation NSObject (Safe)
 
-
+//安全的字典样式
+- (instancetype)safeDictionary 
 @end
