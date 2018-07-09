@@ -34,10 +34,13 @@
 #pragma GCC diagnostic ignored "-Wgnu"
 static NSString *const JKAutocodingException = @"JKAutocodingException";
 @implementation NSObject (JKAutoCoding)
+
+
 + (BOOL)supportsSecureCoding
 {
     return YES;
 }
+
 + (instancetype)jk_objectWithContentsOfFile:(NSString *)filePath
 {
     //load the file
