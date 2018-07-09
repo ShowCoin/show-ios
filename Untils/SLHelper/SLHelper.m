@@ -1017,5 +1017,14 @@
     else if((temp = temp/24) <30){
         result = [NSString stringWithFormat:@"%ld天前",temp];
     }
-
+    else if((temp = temp/30) <12){
+        result = [NSString stringWithFormat:@"%ld月前",temp];
+    }
+    else{
+        temp = temp/12;
+        result = [NSString stringWithFormat:@"%ld年前",temp];
+    }
+    
+    return  result;
+}
 @end
