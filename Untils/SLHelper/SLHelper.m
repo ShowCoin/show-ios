@@ -912,6 +912,37 @@
             }
 
         }
+        else {
+            static NSDateFormatter *dateFormatter = nil;
+            static dispatch_once_t onceToken;
+            dispatch_once(&onceToken, ^{
+                dateFormatter = [[NSDateFormatter alloc] init];
+                [dateFormatter setDateFormat:@"yyyy"];
+            });
+            NSString * yearStr = [dateFormatter stringFromDate:needFormatDate];
+            NSString *nowYear = [dateFormatter stringFromDate:nowDate];
+            
+            if ([yearStr isEqualToString:nowYear]) {
+                ////  在同一年
+                static NSDateFormatter *dateFormatter_1 = nil;
+                static dispatch_once_t onceToken;
+                dispatch_once(&onceToken, ^{
+                    dateFormatter_1 = [[NSDateFormatter alloc] init];
+                    [dateFormatter_1 setDateFormat:@"MM月dd日 HH:mm"];
+                });
+                dateStr = [dateFormatter_1 stringFromDate:needFormatDate];
+            }else{
+                static NSDateFormatter *dateFormatter_2 = nil;
+                static dispatch_once_t onceToken;
+                dispatch_once(&onceToken, ^{
+                    dateFormatter_2 = [[NSDateFormatter alloc] init];
+                    [dateFormatter_2 setDateFormat:@"yyyy-MM-dd HH:mm"];
+                });
+                dateStr = [dateFormatter_2 stringFromDate:needFormatDate];
+            }
+        }
+        return dateStr;
+    }
         @catch (NSException *exception) {
         return @"";
     }
