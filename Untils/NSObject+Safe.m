@@ -26,5 +26,10 @@
 }
 //安全的字符串样式
 - (instancetype)safeString {
-  
+    if (![self isKindOfClass:[NSString class]]) {
+        return nil;
+    }
+    return self;
+}
+
 @end
