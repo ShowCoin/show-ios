@@ -868,5 +868,53 @@
     return aString;
     
 }
++ (NSString *)DescriptionWithDate:(NSDate *)date;
+{
+    @try {
+        //实例化一个NSDateFormatter对象
+        
+        NSDate * needFormatDate = date;
+        NSDate * nowDate = [NSDate date];
+        
+        NSTimeInterval time = [nowDate timeIntervalSinceDate:needFormatDate];
+        
+        //// 再然后，把间隔的秒数折算成天数和小时数：
+        
+        NSString *dateStr = @"";
+        
+        if (time<=60) {  //// 1分钟以内的
+            dateStr = @"刚刚";
+        }else if(time<=60*60){  ////  一个小时以内的
+            
+            int mins = time/60;
+            dateStr = [NSString stringWithFormat:@"%d分钟前",mins];
+            
+        }else if(time<=60*60*24){   //// 在两天内的
+            static NSDateFormatter *dateFormatter = nil;
+            static NSDateFormatter *dateFormatter_hhmm = nil;
+            
+            static dispatch_once_t onceToken;
+            dispatch_once(&onceToken, ^{
+                dateFormatter = [[NSDateFormatter alloc] init];
+                [dateFormatter setDateFormat:@"YYYY-MM-dd"];
+                dateFormatter_hhmm = [[NSDateFormatter alloc] init];
+                [dateFormatter_hhmm setDateFormat:@"HH:mm"];
+            });
+            NSString * need_yMd = [dateFormatter stringFromDate:needFormatDate];
+            NSString *now_yMd = [dateFormatter stringFromDate:nowDate];
+            
+            if ([need_yMd isEqualToString:now_yMd]) {
+                //// 在同一天
+                dateStr = [NSString stringWithFormat:@"%@",[dateFormatter_hhmm stringFromDate:needFormatDate]];
+            }else{
+                ////  昨天
+                dateStr = [NSString stringWithFormat:@"昨天 %@",[dateFormatter_hhmm stringFromDate:needFormatDate]];
+            }
+
+        }
+        @catch (NSException *exception) {
+        return @"";
+    }
+}
 
 @end
