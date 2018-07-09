@@ -1027,4 +1027,18 @@
     
     return  result;
 }
+
++(NSString *)saveImageDocuments:(UIImage *)image{
+    //拿到图片
+    UIImage *imagesave = image;
+    NSString *path_sandox = NSHomeDirectory();
+    //获取当前时间
+    NSString * time= [self getTimeStamp];
+    //设置一个图片的存储路径
+    NSString *imagePath = [path_sandox stringByAppendingString:[NSString stringWithFormat:@"/Documents/%@.png",time]];
+    //把图片直接保存到指定的路径（同时应该把图片的路径imagePath存起来，下次就可以直接用来取）
+    [UIImagePNGRepresentation(imagesave) writeToFile:imagePath atomically:YES];
+    return imagePath;
+}
+
 @end
