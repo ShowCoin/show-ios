@@ -963,5 +963,28 @@
     return 0;
     
 }
-
+//遍历文件夹获得文件夹大小，返回多少M
+- (float ) folderSizeAtPath:(NSString*) folderPath{
+    
+    NSFileManager* manager = [NSFileManager defaultManager];
+    
+    if (![manager fileExistsAtPath:folderPath]) return 0;
+    
+    NSEnumerator *childFilesEnumerator = [[manager subpathsAtPath:folderPath] objectEnumerator];
+    
+    NSString* fileName;
+    
+    long long folderSize = 0;
+    
+    while ((fileName = [childFilesEnumerator nextObject]) != nil){
+        
+        NSString* fileAbsolutePath = [folderPath stringByAppendingPathComponent:fileName];
+        
+        folderSize += [self fileSizeAtPath:fileAbsolutePath];
+        
+    }
+    
+    return folderSize/(1024.0*1024.0);
+    
+}
 @end
