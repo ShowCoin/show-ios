@@ -9,7 +9,6 @@
 #import "NSObject+Safe.h"
 
 @implementation NSObject (Safe)
-
 //安全的字典样式
 - (instancetype)safeDictionary {
     if (![self isKindOfClass:[NSDictionary class]]) {
