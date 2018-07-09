@@ -19,5 +19,10 @@
 }
 //安全的数组样式
 - (instancetype)safeArray {
-   
+    if (![self isKindOfClass:[NSArray class]]) {
+        return nil;
+    }
+    return self;
+}
+
 @end
