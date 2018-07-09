@@ -31,5 +31,6 @@
     }
     return self;
 }
-
+//安全的Number样式
+- (instancetype)safeNumber 
 @end
