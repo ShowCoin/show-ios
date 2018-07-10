@@ -24,7 +24,7 @@ static CGFloat const kMargin = 15;
 @implementation SLAuthenticationView
 
 /**
- 12
+ initWithFrame
 
  @param frame <#frame description#>
  @return <#return value description#>
