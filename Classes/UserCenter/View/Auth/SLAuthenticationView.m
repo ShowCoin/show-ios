@@ -39,7 +39,7 @@ static CGFloat const kMargin = 15;
 }
 
 /**
- <#Description#>
+ setupUI
  */
 - (void)setupUI {
     self.backgroundColor = SLNormalColor;
