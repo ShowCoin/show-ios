@@ -75,7 +75,7 @@ static CGFloat const kMargin = 15;
 }
 
 /**
- <#Description#>
+ layoutSubviews
  */
 - (void)layoutSubviews {
     [super layoutSubviews];
