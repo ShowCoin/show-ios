@@ -10,14 +10,7 @@
 
 @interface NSAttributedString (React)
 -(CGFloat)getWidthWithAttributeString:(NSMutableAttributedString*)attributeString labelheight:(CGFloat)height;
-
-
 -(CGFloat)getHeightWithAttributeString:(NSMutableAttributedString*)attributeString labelwidth:(CGFloat)width;
-
-
 -(CGFloat)getWidthWithFont:(UIFont *)font height:(CGFloat)height;
-
-
-
 -(CGFloat)getHeightWithFont:(UIFont *)font width:(CGFloat)width;
 @end
