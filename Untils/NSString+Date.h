@@ -19,6 +19,9 @@
 //时间差
 + (NSString *)dateTimeDifferenceWithStartTime:(NSString *)startTime endTime:(NSString *)endTime;
 
+//计算时间差
++ (NSString *)minutesWithStartTime:(NSString *)startTime endTime:(NSString *)endTime;
+
 
 
 
