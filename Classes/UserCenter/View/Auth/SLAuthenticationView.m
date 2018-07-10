@@ -74,6 +74,9 @@ static CGFloat const kMargin = 15;
     self.errorLabel = label;
 }
 
+/**
+ <#Description#>
+ */
 - (void)layoutSubviews {
     [super layoutSubviews];
     
