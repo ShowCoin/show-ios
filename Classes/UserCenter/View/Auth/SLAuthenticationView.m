@@ -27,7 +27,7 @@ static CGFloat const kMargin = 15;
  initWithFrame
 
  @param frame frame
- @return <#return value description#>
+ @return instancetype
  */
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -38,6 +38,9 @@ static CGFloat const kMargin = 15;
     return self;
 }
 
+/**
+ <#Description#>
+ */
 - (void)setupUI {
     self.backgroundColor = SLNormalColor;
     UILabel *label = [[UILabel alloc] init];
