@@ -16,6 +16,10 @@
 //date style
 -(long long)dateStringWithFormateStyle:(NSString*)style;
 
+//时间差
++ (NSString *)dateTimeDifferenceWithStartTime:(NSString *)startTime endTime:(NSString *)endTime;
+
+
 
 
 @end
