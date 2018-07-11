@@ -134,7 +134,7 @@ static CGFloat const kMargin = 15;
 }
 
 /**
- <#Description#>
+ setType
 
  @param type <#type description#>
  */
