@@ -133,6 +133,11 @@ static CGFloat const kMargin = 15;
     }
 }
 
+/**
+ <#Description#>
+
+ @param type <#type description#>
+ */
 - (void)setType:(SLIdCardType)type {
     _type = type;
     NSString *pString = nil;
