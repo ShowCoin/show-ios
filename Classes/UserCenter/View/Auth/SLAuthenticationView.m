@@ -23,6 +23,12 @@ static CGFloat const kMargin = 15;
 
 @implementation SLAuthenticationView
 
+/**
+ initWithFrame
+
+ @param frame frame
+ @return instancetype
+ */
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -32,6 +38,9 @@ static CGFloat const kMargin = 15;
     return self;
 }
 
+/**
+ setupUI
+ */
 - (void)setupUI {
     self.backgroundColor = SLNormalColor;
     UILabel *label = [[UILabel alloc] init];
@@ -65,6 +74,9 @@ static CGFloat const kMargin = 15;
     self.errorLabel = label;
 }
 
+/**
+ layoutSubviews
+ */
 - (void)layoutSubviews {
     [super layoutSubviews];
     
