@@ -163,7 +163,7 @@ static CGFloat const kMargin = 15;
 }
 
 /**
- <#Description#>
+ showAuthImageType
 
  @param type <#type description#>
  */
