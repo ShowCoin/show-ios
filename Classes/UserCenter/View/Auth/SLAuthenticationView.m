@@ -165,7 +165,7 @@ static CGFloat const kMargin = 15;
 /**
  showAuthImageType
 
- @param type SLAuthImageType
+ @param type SLAuthImageTypei
  */
 - (void)showAuthImageType:(SLAuthImageType)type {
     SLAuthImageView *imageV = (SLAuthImageView *)self.imageView;
