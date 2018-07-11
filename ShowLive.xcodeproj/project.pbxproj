@@ -115,6 +115,7 @@
 		4374EB1F20F62FED00BB947F /* NSString+JKMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 4374EB1E20F62FEC00BB947F /* NSString+JKMatcher.m */; };
 		4374EB2220F6300D00BB947F /* NSString+JKMIME.m in Sources */ = {isa = PBXBuildFile; fileRef = 4374EB2120F6300D00BB947F /* NSString+JKMIME.m */; };
 		4374EB2520F6307100BB947F /* NSString+JKNormalRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = 4374EB2420F6307000BB947F /* NSString+JKNormalRegex.m */; };
+		4374EB2820F6309500BB947F /* NSString+JKPinyin.m in Sources */ = {isa = PBXBuildFile; fileRef = 4374EB2720F6309500BB947F /* NSString+JKPinyin.m */; };
 		437921DE20ECC3E000B2EC88 /* NSArray+JKSafeAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 437921DD20ECC3E000B2EC88 /* NSArray+JKSafeAccess.m */; };
 		437921E120ECC40900B2EC88 /* NSBundle+JKAppIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 437921DF20ECC40900B2EC88 /* NSBundle+JKAppIcon.m */; };
 		437921E420ECC44000B2EC88 /* NSData+JKAPNSToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 437921E320ECC43F00B2EC88 /* NSData+JKAPNSToken.m */; };
@@ -398,6 +399,8 @@
 		4374EB2120F6300D00BB947F /* NSString+JKMIME.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JKMIME.m"; sourceTree = "<group>"; };
 		4374EB2320F6307000BB947F /* NSString+JKNormalRegex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JKNormalRegex.h"; sourceTree = "<group>"; };
 		4374EB2420F6307000BB947F /* NSString+JKNormalRegex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JKNormalRegex.m"; sourceTree = "<group>"; };
+		4374EB2620F6309500BB947F /* NSString+JKPinyin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JKPinyin.h"; sourceTree = "<group>"; };
+		4374EB2720F6309500BB947F /* NSString+JKPinyin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JKPinyin.m"; sourceTree = "<group>"; };
 		437864562075FD1E00146B97 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		437921DC20ECC3DF00B2EC88 /* NSArray+JKSafeAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+JKSafeAccess.h"; sourceTree = "<group>"; };
 		437921DD20ECC3E000B2EC88 /* NSArray+JKSafeAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+JKSafeAccess.m"; sourceTree = "<group>"; };
@@ -660,6 +663,8 @@
 		434DDB4B20C92B4E00191FC1 /* JKCategories */ = {
 			isa = PBXGroup;
 			children = (
+				4374EB2620F6309500BB947F /* NSString+JKPinyin.h */,
+				4374EB2720F6309500BB947F /* NSString+JKPinyin.m */,
 				4374EB2320F6307000BB947F /* NSString+JKNormalRegex.h */,
 				4374EB2420F6307000BB947F /* NSString+JKNormalRegex.m */,
 				4374EB2020F6300D00BB947F /* NSString+JKMIME.h */,
@@ -1585,6 +1590,7 @@
 				43968A6A20AC398C00149DCC /* NSObject+Safe.m in Sources */,
 				431CB4C620F498860043B0AC /* NSObject+JKEasyCopy.m in Sources */,
 				43993EBC20E23EDF0017F1C3 /* UITextField+JKShake.m in Sources */,
+				4374EB2820F6309500BB947F /* NSString+JKPinyin.m in Sources */,
 				435D4C6E20EF406600C8DC85 /* NSDictionary+JKXML.m in Sources */,
 				431BBB6220DBCABD006A3D50 /* UIView+JKCustomBorder.m in Sources */,
 				4325536920D8B51000FC0258 /* CLLocationManager+Blocks.m in Sources */,
