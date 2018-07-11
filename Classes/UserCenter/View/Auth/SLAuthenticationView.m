@@ -162,6 +162,11 @@ static CGFloat const kMargin = 15;
     [self layoutSubviews];
 }
 
+/**
+ <#Description#>
+
+ @param type <#type description#>
+ */
 - (void)showAuthImageType:(SLAuthImageType)type {
     SLAuthImageView *imageV = (SLAuthImageView *)self.imageView;
     imageV.type = type;
