@@ -136,7 +136,7 @@ static CGFloat const kMargin = 15;
 /**
  setType
 
- @param type <#type description#>
+ @param type SLIdCardType
  */
 - (void)setType:(SLIdCardType)type {
     _type = type;
