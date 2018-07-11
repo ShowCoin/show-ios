@@ -124,7 +124,7 @@ static CGFloat const kMargin = 15;
 }
 
 /**
- 
+ tapAction
  */
 - (void)tapAction {
     NSLog(@"%s", __func__);
