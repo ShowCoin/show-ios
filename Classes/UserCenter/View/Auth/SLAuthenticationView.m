@@ -23,6 +23,12 @@ static CGFloat const kMargin = 15;
 
 @implementation SLAuthenticationView
 
+/**
+ initWithFrame
+
+ @param frame frame
+ @return instancetype
+ */
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -32,6 +38,9 @@ static CGFloat const kMargin = 15;
     return self;
 }
 
+/**
+ setupUI
+ */
 - (void)setupUI {
     self.backgroundColor = SLNormalColor;
     UILabel *label = [[UILabel alloc] init];
@@ -65,6 +74,9 @@ static CGFloat const kMargin = 15;
     self.errorLabel = label;
 }
 
+/**
+ layoutSubviews
+ */
 - (void)layoutSubviews {
     [super layoutSubviews];
     
@@ -111,6 +123,9 @@ static CGFloat const kMargin = 15;
     }
 }
 
+/**
+ tapAction
+ */
 - (void)tapAction {
     NSLog(@"%s", __func__);
     if (self.clickBlock) {
@@ -118,6 +133,11 @@ static CGFloat const kMargin = 15;
     }
 }
 
+/**
+ setType
+
+ @param type SLIdCardType
+ */
 - (void)setType:(SLIdCardType)type {
     _type = type;
     NSString *pString = nil;
@@ -142,6 +162,11 @@ static CGFloat const kMargin = 15;
     [self layoutSubviews];
 }
 
+/**
+ showAuthImageType
+
+ @param type SLAuthImageTypei
+ */
 - (void)showAuthImageType:(SLAuthImageType)type {
     SLAuthImageView *imageV = (SLAuthImageView *)self.imageView;
     imageV.type = type;
