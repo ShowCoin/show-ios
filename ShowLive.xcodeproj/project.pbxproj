@@ -30,6 +30,7 @@
 		431CB4DB20F499D10043B0AC /* NSRunLoop+JKPerformBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 431CB4DA20F499D00043B0AC /* NSRunLoop+JKPerformBlock.m */; };
 		431CB4DE20F49A500043B0AC /* NSSet+JKBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 431CB4DD20F49A4F0043B0AC /* NSSet+JKBlock.m */; };
 		431CB4E120F49A810043B0AC /* NSString+JKBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 431CB4E020F49A800043B0AC /* NSString+JKBase64.m */; };
+		431F64B020F794160087DB8E /* UIResponder+JKFirstResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F64AE20F794150087DB8E /* UIResponder+JKFirstResponder.m */; };
 		43205DD120DD25F000AD6952 /* UIView+Genie.m in Sources */ = {isa = PBXBuildFile; fileRef = 43205DCF20DD25F000AD6952 /* UIView+Genie.m */; };
 		43205DD420DD263400AD6952 /* UIView+Debug.m in Sources */ = {isa = PBXBuildFile; fileRef = 43205DD220DD263300AD6952 /* UIView+Debug.m */; };
 		43205DD720DD264B00AD6952 /* UITextViewDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43205DD620DD264B00AD6952 /* UITextViewDemoViewController.m */; };
@@ -234,6 +235,8 @@
 		431CB4DD20F49A4F0043B0AC /* NSSet+JKBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSSet+JKBlock.m"; sourceTree = "<group>"; };
 		431CB4DF20F49A800043B0AC /* NSString+JKBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JKBase64.h"; sourceTree = "<group>"; };
 		431CB4E020F49A800043B0AC /* NSString+JKBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JKBase64.m"; sourceTree = "<group>"; };
+		431F64AE20F794150087DB8E /* UIResponder+JKFirstResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+JKFirstResponder.m"; sourceTree = "<group>"; };
+		431F64AF20F794160087DB8E /* UIResponder+JKFirstResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+JKFirstResponder.h"; sourceTree = "<group>"; };
 		43205DCF20DD25F000AD6952 /* UIView+Genie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Genie.m"; sourceTree = "<group>"; };
 		43205DD020DD25F000AD6952 /* UIView+Genie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Genie.h"; sourceTree = "<group>"; };
 		43205DD220DD263300AD6952 /* UIView+Debug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Debug.m"; sourceTree = "<group>"; };
@@ -663,6 +666,8 @@
 		434DDB4B20C92B4E00191FC1 /* JKCategories */ = {
 			isa = PBXGroup;
 			children = (
+				431F64AF20F794160087DB8E /* UIResponder+JKFirstResponder.h */,
+				431F64AE20F794150087DB8E /* UIResponder+JKFirstResponder.m */,
 				4374EB2620F6309500BB947F /* NSString+JKPinyin.h */,
 				4374EB2720F6309500BB947F /* NSString+JKPinyin.m */,
 				4374EB2320F6307000BB947F /* NSString+JKNormalRegex.h */,
@@ -1715,6 +1720,7 @@
 				431BBB5F20DBCA96006A3D50 /* UIView+JKDraggable.m in Sources */,
 				435D4C5020EDEAE000C8DC85 /* NSDate+JKUtilities.m in Sources */,
 				724D4BC220C9155A0007E4E8 /* HomeHeader.m in Sources */,
+				431F64B020F794160087DB8E /* UIResponder+JKFirstResponder.m in Sources */,
 				724FF37A20E6678D00DD40EB /* SLInfoHeaderView.m in Sources */,
 				435D4C6220EF3E2500C8DC85 /* NSDictionary+JKBlock.m in Sources */,
 			);
