@@ -122,6 +122,44 @@
         weakSelf.mainView.frame = CGRectMake(58*Proportion375, 163*Proportion375, 250*Proportion375, 300*Proportion375);
     }];
 }
+- (void)cancelClick {
+    __weak SLWithdrawAlert *weakSelf = self;
+    [UIView animateWithDuration:0.25 delay:0.1 usingSpringWithDamping:1.0 initialSpringVelocity:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        weakSelf.mainView.alpha = 0.0;
+    } completion:^(BOOL finished) {
+        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(SLWithdrawAlertCancelClick)]) {
+            [weakSelf.delegate SLWithdrawAlertCancelClick];
+        }
+    }];
+}
+- (void)sureClick {
+//    if (UserProfile.isTourist) {
+//        [PageMgr presentLoginViewController];
+//        return;
+//    }
+    
+    if (!_PhoneSafe) {//没手机
+        [self.delegate SLWithdrawGoToPhoneVC];
+    }else if (AccountUserInfoModel.authStatus.integerValue == 1 || AccountUserInfoModel.authStatus.integerValue == 4){//没KYC
+        [self.delegate SLWithdrawGoToKYC];
+
+    }else if (!_secretSafe){//没资金密码
+        [self.delegate SLWithdrawGoToSecret];
+
+    }else{//都完成
+        __weak SLWithdrawAlert *weakSelf = self;
+        [UIView animateWithDuration:0.25 delay:0.0 usingSpringWithDamping:1.0 initialSpringVelocity:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+            weakSelf.mainView.alpha = 0.0;
+        } completion:^(BOOL finished) {
+            if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(SLWithdrawAlertsureClick)]) {
+                [weakSelf.delegate SLWithdrawAlertsureClick];
+            }
+        }];
+    }
+}
+
+
+//tableview
 
 
 @end
