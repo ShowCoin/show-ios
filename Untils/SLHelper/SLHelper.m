@@ -1040,5 +1040,15 @@
     [UIImagePNGRepresentation(imagesave) writeToFile:imagePath atomically:YES];
     return imagePath;
 }
++(NSString *)decodeWorkUrl:(NSString *)workUrl
+{
+    if (workUrl.length > 0) {
+        NSString *strResult = [self decryptUseDES:workUrl key:DESKEY];
+        if (strResult.length > 0) {
+            return strResult;
+        }
+    }
+    return workUrl;
+}
 
 @end
