@@ -364,6 +364,47 @@
     
     //新加  设置页超链接
 
+- (void)dealloc{
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
+}
+#pragma mark -- alertDelegate
+- (void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    switch (alertView.tag) {
+        case 1000:{
+            if (buttonIndex == 1) {
+                SLPhoneBindVC *bindPhoneVC = [[SLPhoneBindVC alloc]init];
+                bindPhoneVC.refresh = ^{
+                    SLSafeCenterCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:2 inSection:0]];
+                    cell.textLab.text = @"已绑定";
+                    cell.textLab.textColor =kThemeGreenColor;
+                };
+                [self.navigationController pushViewController:bindPhoneVC animated:YES];
+                
+            }
+        }
+            break;
+        case 2000:{
+            if (buttonIndex == 1) {
+                [PageMgr pushToWalletController:self.userModel viewcontroller:self];
+            }
+        }
+            break;
+            
+        default:
+            break;
+    }
+
+}
+
+#pragma mark -- responder
+- (void)gotoWebView:(NSNotification *)notification{
+    NSDictionary *userInfo = notification.userInfo;
+    NSString *webAddress =  [userInfo objectForKey:@"url"];
+    [PageMgr pushToWebController:webAddress title:@"" share:NO];
+}
+
+
 //- (void)gotoHyperlinksWebView:(NSNotification *)notification{
 //
 //}
