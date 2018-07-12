@@ -113,6 +113,15 @@
 //    }];
 
 }
+- (void)setupAnimation {
+    self.mainView.transform = CGAffineTransformMakeScale(0.0, 0.0);
+    __weak SLWithdrawAlert *weakSelf = self;
+    [UIView animateWithDuration:0.55 delay:0.2 usingSpringWithDamping:0.7 initialSpringVelocity:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        weakSelf.mainView.transform = CGAffineTransformMakeScale(1.0, 1.0);
+    } completion:^(BOOL finished) {
+        weakSelf.mainView.frame = CGRectMake(58*Proportion375, 163*Proportion375, 250*Proportion375, 300*Proportion375);
+    }];
+}
 
 
 @end
