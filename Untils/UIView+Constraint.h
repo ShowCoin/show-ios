@@ -39,6 +39,106 @@ typedef NS_ENUM(NSUInteger, JQconstraintType) {
     //     |o      |
     //     |       |
     //     ---------
+    constraintStickyTypeInsideLeftEdge,//内边3----Edge
+    //     ---------
+    //     |   o   |
+    //     |       |
+    //     |       |
+    //     ---------
+    constraintStickyTypeInsideTopEdge,//内边2----Edge
+    //     ---------
+    //     |       |
+    //     |       |
+    //     |   o   |
+    //     ---------
+    constraintStickyTypeInsideBottomEdge,//内边4----Edge
+    
+    //     ---------
+    //     |      o|
+    //     |       |
+    //     |       |
+    //     ---------
+    constraintStickyTypeUpperRightCorner,//右上角a----Corner
+    //     ---------
+    //     |o      |
+    //     |       |
+    //     |       |
+    //     ---------
+    constraintStickyTypeUpperLeftCorner,//左上角b----Corne
+    //     ---------
+    //     |       |
+    //     |       |
+    //     |o      |
+    //     ---------
+    constraintStickyTypeLowerLeftCorner,//左下角c----Corne
+    //     ---------
+    //     |       |
+    //     |       |
+    //     |      o|
+    //     ---------
+    constraintStickyTypeLowerRightCorner,//右下角d----Corne
+    
+    //吸附View外边
+    //     ---------
+    //     |       |
+    //     |       |o
+    //     |       |
+    //     ---------
+    constraintStickyTypeOutsideRightEdge,//外边1----Edge
+    //     ---------
+    //     |       |
+    //    o|       |
+    //     |       |
+    //     ---------
+    constraintStickyTypeOutsideLeftEdge,//外边3----Edge
+    //         o
+    //     ---------
+    //     |       |
+    //     |       |
+    //     |       |
+    //     ---------
+    constraintStickyTypeOutsideTopEdge,//外边2----Edge
+    //     ---------
+    //     |       |
+    //     |       |
+    //     |       |
+    //     ---------
+    //         o
+    constraintStickyTypeOutsideBottomEdge,//外边4----Edge
+    
+    //     _________
+    //     |       |o
+    //     |       |
+    //     |       |
+    //     ---------
+    constraintStickyTypeOutsideRightEdgeTop,//外右边1,吸顶----Corner
+    //     _________
+    //     |       |
+    //     |       |
+    //     |       |o
+    //     ---------
+    constraintStickyTypeOutsideRightEdgeBottom,//外右边1,吸底部----Corner
+    
+    //     o
+    //     ---------
+    //     |       |
+    //     |       |
+    //     |       |
+    //     ---------
+    constraintStickyTypeOutsideUpperEdgeLeft,//外顶边2,吸左边----Corner
+    //             o
+    //     ---------
+    //     |       |
+    //     |       |
+    //     |       |
+    //     ---------
+    constraintStickyTypeOutsideUpperEdgeRight,//外顶边2,吸右边----Corner
+    
+    //     _________
+    //    o|       |
+    //     |       |
+    //     |       |
+    //     ---------
 
     
 };
