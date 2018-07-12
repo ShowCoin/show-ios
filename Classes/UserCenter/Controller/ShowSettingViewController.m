@@ -320,6 +320,50 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)addAppReview{
+    UIAlertController * alertVC = [UIAlertController alertControllerWithTitle:@"喜欢ShowLive么?给个五星好评吧亲!" message:nil preferredStyle:UIAlertControllerStyleAlert];
+    //跳转APPStore 中应用的撰写评价页面
+    UIAlertAction *review = [UIAlertAction actionWithTitle:@"我要吐槽" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        NSURL *appReviewUrl = [NSURL URLWithString:[NSString stringWithFormat: @"itms-apps://itunes.apple.com/app/id%@?action=write-review",@"55583156"]];
+        //换成你应用的 APPID
+        /// 大于等于10.0系统使用此openURL方法
+        if (@available(iOS 10.0, *)) {
+            [[UIApplication sharedApplication] openURL:appReviewUrl options:@{} completionHandler:nil];
+        } else {
+            // Fallback on earlier versions
+            [[UIApplication sharedApplication] openURL:appReviewUrl];
+        }
+    }];
+    //不做任何操作
+    UIAlertAction *noReview = [UIAlertAction actionWithTitle:@"用用再说" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action)
+    {
+        [alertVC removeFromParentViewController];
+    }];
+    [alertVC addAction:review];
+    [alertVC addAction:noReview];
+    //判断系统,是否添加五星好评的入口
+    if (@available(iOS 10.3, *)) {
+        if([SKStoreReviewController respondsToSelector:@selector(requestReview)])
+        {
+            UIAlertAction *fiveStar = [UIAlertAction actionWithTitle:@"五星好评" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action)
+                                       {
+                                           [[UIApplication sharedApplication].keyWindow endEditing:YES];
+                                           [SKStoreReviewController requestReview];
+                                           
+                                       }];
+            [alertVC addAction:fiveStar];
+            
+        }
+    }
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self presentViewController:alertVC animated:YES completion:nil];
+        
+    });
+    
+}
+    
+    //新加  设置页超链接
+
 //- (void)gotoHyperlinksWebView:(NSNotification *)notification{
 //
 //}
