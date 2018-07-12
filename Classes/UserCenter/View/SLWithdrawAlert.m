@@ -160,6 +160,211 @@
 
 
 //tableview
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 3;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 60*Proportion375;
+}
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    SLWithDrawIndentifyCell * Cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    if (!Cell) {
+        Cell = [[SLWithDrawIndentifyCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+        Cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    }
+    switch (indexPath.row) {//title
+        case 0:{
+            Cell.titleLab.text = @"手机绑定";
+        }
+            break;
+        case 1:{
+            Cell.titleLab.text = @"KYC认证";
+        }
+            break;
+        case 2:{
+            Cell.titleLab.text = @"资金密码";
+
+        }
+            break;
+            
+        default:
+            break;
+    }
+    if (_PhoneSafe) {//手机绑定完成
+        if (AccountUserInfoModel.authStatus.integerValue == 3) {//kyc完成
+            if (_secretSafe) {//自己密码完成    （非正常情况）
+                switch (indexPath.row) {//完成-完成-完成
+                    case 0:{
+                        Cell.statueLab.text = @"已完成";
+                        Cell.statueLab.textColor = kThemeGreenColor;
+                        Cell.contentView.backgroundColor = kGrayWithf4f4f4;
+
+                    }
+                        break;
+                    case 1:{
+                        Cell.statueLab.text = @"已完成";
+                        Cell.statueLab.textColor = kThemeGreenColor;
+                        Cell.contentView.backgroundColor = kGrayWithf4f4f4;
+
+                    }
+                        break;
+                    case 2:{
+                        Cell.statueLab.text = @"已完成";
+                        Cell.statueLab.textColor = kThemeGreenColor;
+                        Cell.contentView.backgroundColor = kGrayWithf4f4f4;
+
+                    }
+                        break;
+                        
+                    default:
+                        break;
+                }
+            } else {//资金密码未完成
+                switch (indexPath.row) {//完成-完成-未完成
+                    case 0:{
+                        Cell.statueLab.text = @"已完成";
+                        Cell.statueLab.textColor = kThemeGreenColor;
+                        Cell.contentView.backgroundColor = kGrayWithf4f4f4;
+
+                    }
+                        break;
+                    case 1:{
+                        Cell.statueLab.text = @"已完成";
+                        Cell.statueLab.textColor = kThemeGreenColor;
+                        Cell.contentView.backgroundColor = kGrayWithf4f4f4;
+
+                    }
+                        break;
+                    case 2:{
+                        Cell.statueLab.text = @"未完成";
+                        Cell.statueLab.textColor = kThemeRedColor;
+                        Cell.contentView.backgroundColor = kThemeWhiteColor;
+
+                    }
+                        break;
+                        
+                    default:
+                        break;
+                }
+            }
+        }else if (AccountUserInfoModel.authStatus.integerValue == 2){//kyc认证中
+            if (_secretSafe) {//资金密码完成
+                switch (indexPath.row) {//完成-中-完成
+                    case 0:{
+                        Cell.statueLab.text = @"已完成";
+                        Cell.statueLab.textColor = kThemeGreenColor;
+                        Cell.contentView.backgroundColor = kGrayWithf4f4f4;
+
+                    }
+                        break;
+                    case 1:{
+                        Cell.statueLab.text = @"审核中";
+                        Cell.statueLab.textColor = kGrayWith808080;
+                        Cell.contentView.backgroundColor = kGrayWithf4f4f4;
+
+                    }
+                        break;
+                    case 2:{
+                        Cell.statueLab.text = @"已完成";
+                        Cell.statueLab.textColor = kThemeGreenColor;
+                        Cell.contentView.backgroundColor = kGrayWithf4f4f4;
+
+                    }
+                        break;
+                        
+                    default:
+                        break;
+                }
+            } else {//资金密码未完成
+                switch (indexPath.row) {//完成-中-未完成
+                    case 0:{
+                        Cell.statueLab.text = @"已完成";
+                        Cell.statueLab.textColor = kThemeGreenColor;
+                        Cell.contentView.backgroundColor = kGrayWithf4f4f4;
+
+                    }
+                        break;
+                    case 1:{
+                        Cell.statueLab.text = @"审核中";
+                        Cell.statueLab.textColor = kGrayWith808080;
+                        Cell.contentView.backgroundColor = kGrayWithf4f4f4;
+
+                    }
+                        break;
+                    case 2:{
+                        Cell.statueLab.text = @"未完成";
+                        Cell.statueLab.textColor = kThemeRedColor;
+                        Cell.contentView.backgroundColor = kThemeWhiteColor;
+
+                    }
+                        break;
+                        
+                    default:
+                        break;
+                }
+            }
+        } else {//kyc认证未完成
+            switch (indexPath.row) {//完成-未完成-未完成
+                case 0:{
+                    Cell.statueLab.text = @"已完成";
+                    Cell.statueLab.textColor = kThemeGreenColor;
+                    Cell.contentView.backgroundColor = kGrayWithf4f4f4;
+
+                }
+                    break;
+                case 1:{
+                    Cell.statueLab.text = @"未完成";
+                    Cell.statueLab.textColor = kThemeRedColor;
+                    Cell.contentView.backgroundColor = kThemeWhiteColor;
+
+                }
+                    break;
+                case 2:{
+                    Cell.statueLab.text = @"未完成";
+                    Cell.statueLab.textColor = kthemeBlackColor;
+                    Cell.contentView.backgroundColor = kTextGrayColor;
+
+                }
+                    break;
+                    
+                default:
+                    break;
+            }
+        }
+    } else {//手机绑定未完成
+        switch (indexPath.row) {//未完成-未完成-未完成
+            case 0:{
+                Cell.statueLab.text = @"未完成";
+                Cell.statueLab.textColor = kThemeRedColor;
+                Cell.contentView.backgroundColor = kThemeWhiteColor;
+
+            }
+                break;
+            case 1:{
+                Cell.statueLab.text = @"未完成";
+                Cell.statueLab.textColor = kthemeBlackColor;
+                Cell.contentView.backgroundColor = kTextGrayColor;
+
+            }
+                break;
+            case 2:{
+                Cell.statueLab.text = @"未完成";
+                Cell.statueLab.textColor = kthemeBlackColor;
+                Cell.contentView.backgroundColor = kTextGrayColor;
+
+            }
+                break;
+                
+            default:
+                break;
+        }
+    }
+    return Cell;
+}
 
 
 @end
