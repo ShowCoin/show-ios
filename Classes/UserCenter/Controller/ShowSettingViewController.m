@@ -151,6 +151,97 @@
     }
     return view;
 }
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 10;
+}
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 65;
+}
+-(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    SLSafeCenterCell * Cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    Cell = [[SLSafeCenterCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+    Cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    if (!Cell) {
+        Cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }
+    switch (indexPath.row) {
+        case 0:
+            Cell.title.text = @"编辑资料";
+            break;
+        case 1:
+            Cell.title.text = @"安全中心";
+            break;
+        case 2:{
+            
+            Cell.title.text = @"手机绑定";
+            Cell.textLab.right = kMainScreenWidth - 32*Proportion375;
+            if(IsValidString([AccountModel shared].phoneNumber)){
+                Cell.textLab.text = @"已绑定";
+                Cell.textLab.textColor =kThemeGreenColor;
+            }else{
+                Cell.textLab.text = @"未绑定";
+                Cell.textLab.textColor =kThemeBlueColor;
+            }
+        }
+            break;
+        case 3:{
+            
+            Cell.title.text = @"身份认证";
+            Cell.textLab.right = kMainScreenWidth - 32*Proportion375;
+            switch (AccountUserInfoModel.authStatus.integerValue) {
+                case 1:
+                    Cell.textLab.text = @"未认证";
+                    Cell.textLab.textColor =kThemeBlueColor;
+                    break;
+                case 2:
+                    Cell.textLab.text = @"认证中";
+                    Cell.textLab.textColor =kGrayWith808080;
+                    break;
+                case 3:
+                    Cell.textLab.text = @"认证成功";
+                    Cell.textLab.textColor =kThemeGreenColor;
+                    break;
+                case 4:
+                    Cell.textLab.text = @"认证失败";
+                    Cell.textLab.textColor =kThemeRedColor;
+                    break;
+
+                default:
+                    break;
+            }
+        }
+            break;
+        case 4:
+            Cell.title.text = @"去评分";
+            break;
+        case 5:
+            Cell.title.text = @"帮助与反馈";
+            break;
+        case 6:
+            Cell.title.text = @"多语言";
+            break;
+        case 7:
+            Cell.title.text = @"货币单位";
+            break;
+        case 8:
+            Cell.title.text = @"网络诊断";
+            break;
+        case 9:
+            Cell.title.text = @"关于我们";
+            break;
+        default:
+            break;
+    }
+    return Cell;
+}
+
 //- (void)gotoHyperlinksWebView:(NSNotification *)notification{
 //
 //}
