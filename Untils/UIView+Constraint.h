@@ -145,7 +145,15 @@ typedef NS_ENUM(NSUInteger, JQconstraintType) {
     //     |       |
     //    o|       |
     //     ---------
-  
+    constraintStickyTypeOutsideLeftEdgeBottom,//外左边3,吸底部----Corner
+    
+    //     _________
+    //     |       |
+    //     |       |
+    //     |       |
+    //     ---------
+    //     o
+
     
 };
 
