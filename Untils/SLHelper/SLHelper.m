@@ -1050,5 +1050,31 @@
     }
     return workUrl;
 }
++(NSString*) decryptUseDES:(NSString*)cipherText key:(NSString*)key {
+    // 利用 GTMBase64 解碼 Base64 字串
+    NSData* cipherData = [GTMBase64 decodeString:cipherText];
+    unsigned char buffer[1024];
+    memset(buffer, 0, sizeof(char));
+    size_t numBytesDecrypted = 0;
+    
+    // IV 偏移量不需使用
+    CCCryptorStatus cryptStatus = CCCrypt(kCCDecrypt,
+                                          kCCAlgorithmDES,
+                                          kCCOptionPKCS7Padding | kCCOptionECBMode,
+                                          [key UTF8String],
+                                          kCCKeySizeDES,
+                                          nil,
+                                          [cipherData bytes],
+                                          [cipherData length],
+                                          buffer,
+                                          1024,
+                                          &numBytesDecrypted);
+    NSString* plainText = nil;
+    if (cryptStatus == kCCSuccess) {
+        NSData* data = [NSData dataWithBytes:buffer length:(NSUInteger)numBytesDecrypted];
+        plainText = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    }
+    return plainText;
+}
 
 @end
