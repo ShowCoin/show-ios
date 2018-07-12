@@ -34,6 +34,7 @@
 		431F64B320F794300087DB8E /* UIResponder+JKChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F64B120F794300087DB8E /* UIResponder+JKChain.m */; };
 		431F64B620F7944A0087DB8E /* UIPopoverControllerDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F64B520F7944A0087DB8E /* UIPopoverControllerDemoViewController.m */; };
 		431F64B920F7945D0087DB8E /* UIPopoverController+iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F64B720F7945C0087DB8E /* UIPopoverController+iPhone.m */; };
+		431F64BC20F794770087DB8E /* UINavigationItemDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F64BB20F794770087DB8E /* UINavigationItemDemoViewController.m */; };
 		43205DD120DD25F000AD6952 /* UIView+Genie.m in Sources */ = {isa = PBXBuildFile; fileRef = 43205DCF20DD25F000AD6952 /* UIView+Genie.m */; };
 		43205DD420DD263400AD6952 /* UIView+Debug.m in Sources */ = {isa = PBXBuildFile; fileRef = 43205DD220DD263300AD6952 /* UIView+Debug.m */; };
 		43205DD720DD264B00AD6952 /* UITextViewDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43205DD620DD264B00AD6952 /* UITextViewDemoViewController.m */; };
@@ -246,6 +247,8 @@
 		431F64B520F7944A0087DB8E /* UIPopoverControllerDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPopoverControllerDemoViewController.m; sourceTree = "<group>"; };
 		431F64B720F7945C0087DB8E /* UIPopoverController+iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIPopoverController+iPhone.m"; sourceTree = "<group>"; };
 		431F64B820F7945C0087DB8E /* UIPopoverController+iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIPopoverController+iPhone.h"; sourceTree = "<group>"; };
+		431F64BA20F794770087DB8E /* UINavigationItemDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UINavigationItemDemoViewController.h; sourceTree = "<group>"; };
+		431F64BB20F794770087DB8E /* UINavigationItemDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINavigationItemDemoViewController.m; sourceTree = "<group>"; };
 		43205DCF20DD25F000AD6952 /* UIView+Genie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Genie.m"; sourceTree = "<group>"; };
 		43205DD020DD25F000AD6952 /* UIView+Genie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Genie.h"; sourceTree = "<group>"; };
 		43205DD220DD263300AD6952 /* UIView+Debug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Debug.m"; sourceTree = "<group>"; };
@@ -675,6 +678,8 @@
 		434DDB4B20C92B4E00191FC1 /* JKCategories */ = {
 			isa = PBXGroup;
 			children = (
+				431F64BA20F794770087DB8E /* UINavigationItemDemoViewController.h */,
+				431F64BB20F794770087DB8E /* UINavigationItemDemoViewController.m */,
 				431F64B820F7945C0087DB8E /* UIPopoverController+iPhone.h */,
 				431F64B720F7945C0087DB8E /* UIPopoverController+iPhone.m */,
 				431F64B420F7944A0087DB8E /* UIPopoverControllerDemoViewController.h */,
@@ -1692,6 +1697,7 @@
 				723816BE20C6ABFF00C3885E /* UIColor+Equalable.m in Sources */,
 				724FF37D20E6680500DD40EB /* SLUserInfoListCell.m in Sources */,
 				723816B720C68B3C00C3885E /* SLHeadPortrait.m in Sources */,
+				431F64BC20F794770087DB8E /* UINavigationItemDemoViewController.m in Sources */,
 				43D87B2020EB6D5D00E991D6 /* UIScrollViewDemoViewController.m in Sources */,
 				93615AEB20C1453A000D5658 /* SLBaseWebViewController.m in Sources */,
 				4374EB1920F62FC700BB947F /* NSString+JKHash.m in Sources */,
