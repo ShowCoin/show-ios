@@ -33,7 +33,48 @@ typedef NS_ENUM(NSUInteger, JQconstraintType) {
     //     |      o|
     //     |       |
     //     ---------
-   
+    constraintStickyTypeInsideRightEdge,//内边1----Edge
+    //     ---------
+    //     |       |
+    //     |o      |
+    //     |       |
+    //     ---------
+
+    
+};
+
+typedef NS_ENUM(NSUInteger, JQconstraint2ViewType) {
+    //     _________         ________
+    //     |       |         |      |
+    //     |   *---|----0----|---*  |
+    //     |       |         |      |
+    //     ---------         --------
+    constraint2ViewTypeDivideDistance,//中心点距离等分
+    
+    //     _________
+    //     |       |
+    //     |   0   |
+    //     |   |   |
+    //     ---------
+    constraint2ViewTypeLowerEdge,//1view到2view的底边
+    //     _________
+    //     |   |   |
+    //     |   0   |
+    //     |       |
+    //     ---------
+    constraint2ViewTypeUpperEdge,//1view到2view的底边
+    //     _________
+    //     |       |
+    //     |---0   |
+    //     |       |
+    //     ---------
+    constraint2ViewTypeLeftEdge,//1view到2view的左边
+    //     _________
+    //     |       |
+    //     |   0---|
+    //     |       |
+    //     ---------
+    constraint2ViewTypeRightEdge,//1view到2view的右边
     
 };
 
