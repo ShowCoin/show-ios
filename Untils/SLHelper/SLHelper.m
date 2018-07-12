@@ -1183,4 +1183,11 @@
     return newArr;
 }
 
++ (NSTimeInterval)secondsOfSystemTimeSince:(NSTimeInterval)targetTime
+{
+    uint64_t serverTime = [ServerTimeMgr getServerStamp];
+    NSTimeInterval timeSpace = targetTime - serverTime / 1000;
+    return timeSpace;
+}
+
 @end
