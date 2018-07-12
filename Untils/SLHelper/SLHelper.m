@@ -1127,5 +1127,9 @@
     return mutStr;
     
 }
++ (NSString *)chatNavDisplayTitleStringWithInterval:(NSTimeInterval)timeInterval
+{
+    return [self _chatTimeStringWithInterval:timeInterval justNowString:@"在线"];
+}
 
 @end
