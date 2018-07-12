@@ -32,6 +32,7 @@
 		431CB4E120F49A810043B0AC /* NSString+JKBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 431CB4E020F49A800043B0AC /* NSString+JKBase64.m */; };
 		431F64B020F794160087DB8E /* UIResponder+JKFirstResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F64AE20F794150087DB8E /* UIResponder+JKFirstResponder.m */; };
 		431F64B320F794300087DB8E /* UIResponder+JKChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F64B120F794300087DB8E /* UIResponder+JKChain.m */; };
+		431F64B620F7944A0087DB8E /* UIPopoverControllerDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F64B520F7944A0087DB8E /* UIPopoverControllerDemoViewController.m */; };
 		43205DD120DD25F000AD6952 /* UIView+Genie.m in Sources */ = {isa = PBXBuildFile; fileRef = 43205DCF20DD25F000AD6952 /* UIView+Genie.m */; };
 		43205DD420DD263400AD6952 /* UIView+Debug.m in Sources */ = {isa = PBXBuildFile; fileRef = 43205DD220DD263300AD6952 /* UIView+Debug.m */; };
 		43205DD720DD264B00AD6952 /* UITextViewDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43205DD620DD264B00AD6952 /* UITextViewDemoViewController.m */; };
@@ -240,6 +241,8 @@
 		431F64AF20F794160087DB8E /* UIResponder+JKFirstResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+JKFirstResponder.h"; sourceTree = "<group>"; };
 		431F64B120F794300087DB8E /* UIResponder+JKChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+JKChain.m"; sourceTree = "<group>"; };
 		431F64B220F794300087DB8E /* UIResponder+JKChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+JKChain.h"; sourceTree = "<group>"; };
+		431F64B420F7944A0087DB8E /* UIPopoverControllerDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPopoverControllerDemoViewController.h; sourceTree = "<group>"; };
+		431F64B520F7944A0087DB8E /* UIPopoverControllerDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPopoverControllerDemoViewController.m; sourceTree = "<group>"; };
 		43205DCF20DD25F000AD6952 /* UIView+Genie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Genie.m"; sourceTree = "<group>"; };
 		43205DD020DD25F000AD6952 /* UIView+Genie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Genie.h"; sourceTree = "<group>"; };
 		43205DD220DD263300AD6952 /* UIView+Debug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Debug.m"; sourceTree = "<group>"; };
@@ -669,6 +672,8 @@
 		434DDB4B20C92B4E00191FC1 /* JKCategories */ = {
 			isa = PBXGroup;
 			children = (
+				431F64B420F7944A0087DB8E /* UIPopoverControllerDemoViewController.h */,
+				431F64B520F7944A0087DB8E /* UIPopoverControllerDemoViewController.m */,
 				431F64B220F794300087DB8E /* UIResponder+JKChain.h */,
 				431F64B120F794300087DB8E /* UIResponder+JKChain.m */,
 				431F64AF20F794160087DB8E /* UIResponder+JKFirstResponder.h */,
@@ -1604,6 +1609,7 @@
 				435D4C6E20EF406600C8DC85 /* NSDictionary+JKXML.m in Sources */,
 				431BBB6220DBCABD006A3D50 /* UIView+JKCustomBorder.m in Sources */,
 				4325536920D8B51000FC0258 /* CLLocationManager+Blocks.m in Sources */,
+				431F64B620F7944A0087DB8E /* UIPopoverControllerDemoViewController.m in Sources */,
 				4325535420CFE87700FC0258 /* UIWebViewDemoViewController.m in Sources */,
 				434DDB6320C9337A00191FC1 /* UIWindow+JKHierarchy.m in Sources */,
 				722957B120C80779000D0719 /* SLUserViewHeader.m in Sources */,
