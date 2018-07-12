@@ -404,7 +404,10 @@
     [PageMgr pushToWebController:webAddress title:@"" share:NO];
 }
 
-
+-(void)refreshTheKycStatue
+{
+    [self.tableView rectForRowAtIndexPath:[NSIndexPath indexPathForRow:3 inSection:0]];
+}
 //- (void)gotoHyperlinksWebView:(NSNotification *)notification{
 //
 //}
