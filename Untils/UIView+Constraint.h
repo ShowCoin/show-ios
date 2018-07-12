@@ -19,5 +19,187 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSUInteger, JQconstraintType) {
+    //     ---------
+    //     |       |
+    //     |   o   |
+    //     |       |
+    //     ---------
+    constraintStickyTypeCenter,//中心点
+    
+    //吸附View内边
+    //     ---------
+    //     |       |
+    //     |      o|
+    //     |       |
+    //     ---------
+    constraintStickyTypeInsideRightEdge,//内边1----Edge
+    //     ---------
+    //     |       |
+    //     |o      |
+    //     |       |
+    //     ---------
+    constraintStickyTypeInsideLeftEdge,//内边3----Edge
+    //     ---------
+    //     |   o   |
+    //     |       |
+    //     |       |
+    //     ---------
+    constraintStickyTypeInsideTopEdge,//内边2----Edge
+    //     ---------
+    //     |       |
+    //     |       |
+    //     |   o   |
+    //     ---------
+    constraintStickyTypeInsideBottomEdge,//内边4----Edge
+    
+    //     ---------
+    //     |      o|
+    //     |       |
+    //     |       |
+    //     ---------
+    constraintStickyTypeUpperRightCorner,//右上角a----Corner
+    //     ---------
+    //     |o      |
+    //     |       |
+    //     |       |
+    //     ---------
+    constraintStickyTypeUpperLeftCorner,//左上角b----Corne
+    //     ---------
+    //     |       |
+    //     |       |
+    //     |o      |
+    //     ---------
+    constraintStickyTypeLowerLeftCorner,//左下角c----Corne
+    //     ---------
+    //     |       |
+    //     |       |
+    //     |      o|
+    //     ---------
+    constraintStickyTypeLowerRightCorner,//右下角d----Corne
+    
+    //吸附View外边
+    //     ---------
+    //     |       |
+    //     |       |o
+    //     |       |
+    //     ---------
+    constraintStickyTypeOutsideRightEdge,//外边1----Edge
+    //     ---------
+    //     |       |
+    //    o|       |
+    //     |       |
+    //     ---------
+    constraintStickyTypeOutsideLeftEdge,//外边3----Edge
+    //         o
+    //     ---------
+    //     |       |
+    //     |       |
+    //     |       |
+    //     ---------
+    constraintStickyTypeOutsideTopEdge,//外边2----Edge
+    //     ---------
+    //     |       |
+    //     |       |
+    //     |       |
+    //     ---------
+    //         o
+    constraintStickyTypeOutsideBottomEdge,//外边4----Edge
+    
+    //     _________
+    //     |       |o
+    //     |       |
+    //     |       |
+    //     ---------
+    constraintStickyTypeOutsideRightEdgeTop,//外右边1,吸顶----Corner
+    //     _________
+    //     |       |
+    //     |       |
+    //     |       |o
+    //     ---------
+    constraintStickyTypeOutsideRightEdgeBottom,//外右边1,吸底部----Corner
+    
+    //     o
+    //     ---------
+    //     |       |
+    //     |       |
+    //     |       |
+    //     ---------
+    constraintStickyTypeOutsideUpperEdgeLeft,//外顶边2,吸左边----Corner
+    //             o
+    //     ---------
+    //     |       |
+    //     |       |
+    //     |       |
+    //     ---------
+    constraintStickyTypeOutsideUpperEdgeRight,//外顶边2,吸右边----Corner
+    
+    //     _________
+    //    o|       |
+    //     |       |
+    //     |       |
+    //     ---------
+    constraintStickyTypeOutsideLeftEdgeTop,//外左边3,吸顶----Corner
+    //     _________
+    //     |       |
+    //     |       |
+    //    o|       |
+    //     ---------
+    constraintStickyTypeOutsideLeftEdgeBottom,//外左边3,吸底部----Corner
+    
+    //     _________
+    //     |       |
+    //     |       |
+    //     |       |
+    //     ---------
+    //     o
+    constraintStickyTypeOutsideLowerEdgeLeft,//外顶边4,吸左边----Corner
+    //     _________
+    //     |       |
+    //     |       |
+    //     |       |
+    //     ---------
+    //             o
+    constraintStickyTypeOutsideLowerEdgeRight,//外顶边4,吸右边----Corner
+    
+};
+
+typedef NS_ENUM(NSUInteger, JQconstraint2ViewType) {
+    //     _________         ________
+    //     |       |         |      |
+    //     |   *---|----0----|---*  |
+    //     |       |         |      |
+    //     ---------         --------
+    constraint2ViewTypeDivideDistance,//中心点距离等分
+    
+    //     _________
+    //     |       |
+    //     |   0   |
+    //     |   |   |
+    //     ---------
+    constraint2ViewTypeLowerEdge,//1view到2view的底边
+    //     _________
+    //     |   |   |
+    //     |   0   |
+    //     |       |
+    //     ---------
+    constraint2ViewTypeUpperEdge,//1view到2view的底边
+    //     _________
+    //     |       |
+    //     |---0   |
+    //     |       |
+    //     ---------
+    constraint2ViewTypeLeftEdge,//1view到2view的左边
+    //     _________
+    //     |       |
+    //     |   0---|
+    //     |       |
+    //     ---------
+    constraint2ViewTypeRightEdge,//1view到2view的右边
+    
+};
+
+@interface UIView (Constraint)
+
 
 @end
