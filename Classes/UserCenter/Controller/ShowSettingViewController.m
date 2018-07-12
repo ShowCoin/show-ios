@@ -103,6 +103,54 @@
 }
 
 #pragma mark - delegates
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return .01;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    return 550*WScale;
+}
+-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    UIView * view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kMainScreenWidth, 70*Proportion375)];
+    view.backgroundColor = [UIColor clearColor];
+    
+    NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
+    NSString *app_Name = [infoDictionary objectForKey:@"CFBundleDisplayName"];
+    NSString *app_Version = [infoDictionary objectForKey:@"CFBundleShortVersionString"];
+
+    
+    UILabel * label = [UILabel labelWithText:[NSString stringWithFormat:@"%@ version %@",app_Name,app_Version] textColor:kGrayWith999999 font:Font_Regular(10*Proportion375) backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentCenter];
+    label.frame = CGRectMake(0, 60*Proportion375,kMainScreenWidth , 10*Proportion375);
+    [view addSubview:label];
+    
+    UILabel * desLab = [UILabel labelWithText:@"秀币团队信息\n扫微信二维码进秀粉群\n秀币小姐姐 SHOW00100" textColor:kGrayWith999999 font:Font_Regular(12*Proportion375) backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentCenter];
+    desLab.frame = CGRectMake(0, 80*Proportion375,kMainScreenWidth , 60*Proportion375);
+    desLab.numberOfLines = 0;
+    [view addSubview:desLab];
+    
+    UIImageView * codeImg = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 80 * Proportion375, 80 * Proportion375)];
+    codeImg.top = desLab.bottom + 10*Proportion375;
+    codeImg.contentMode = UIViewContentModeScaleAspectFill;
+    codeImg.centerX = kMainScreenWidth/2;
+    codeImg.image = [UIImage imageNamed:@"userhome_setting_code"];
+    [view addSubview:codeImg];
+
+
+    NSString * allstr = @"有关团队信息\n官网：http://www.xiubi.com\n官方微信公众号：ShowCoin（http://t.cn/RQHRKOv）\n加入官方微信群，请加ShowCoin小助手，微信ID：ShowCoin-001\n官方微博：ShowCoin(http://t.cn/RnFDsDT)\nTwitter：https://twitter.com/Show_coin\nFacebook：https://www.facebook.com/ShowCoin-144390446177396\nGithub：https://github.com/ShowCoin/\nInstagram：https://www.instagram.com/showcoin/\nTelegram: https://t.me/ShowCoinChinese\nShowCoin Official https://t.me/ShowCoinEnglish\nShowCoin 公式交流グループ \nhttps://t.me/ShowCoinJapanese\nShowCoin 공식 커뮤니티 \nhttps://t.me/ShowCoinKorea";
+    NSArray * strArr = [allstr componentsSeparatedByString:@"\n"];
+    for (int i = 0; i < strArr.count; i++) {
+        SLLinkLabel *_lab = [[SLLinkLabel alloc]initWithFrame:CGRectMake(0, codeImg.bottom + 10*Proportion375 + i*15*Proportion375,kMainScreenWidth , 12*Proportion375)];
+        [_lab setTextColor:[UIColor blackColor]];
+        _lab.font = Font_Regular(12*Proportion375);
+        _lab.numberOfLines = 1;
+        _lab.textAlignment = NSTextAlignmentCenter;
+        [_lab urlAndIphoneValidation:[strArr objectAtIndex:i]];
+        [view addSubview:_lab];
+    }
+    return view;
+}
 //- (void)gotoHyperlinksWebView:(NSNotification *)notification{
 //
 //}
