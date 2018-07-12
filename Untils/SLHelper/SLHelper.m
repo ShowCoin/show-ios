@@ -1135,5 +1135,39 @@
 {
     return [self _chatTimeStringWithInterval:timeInterval justNowString:@"刚刚"];
 }
+#pragma mark - Private
++ (NSString *)_chatTimeStringWithInterval:(NSTimeInterval)timeInterval justNowString:(NSString *)justNowString
+{
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:timeInterval];
+    NSDate *nowDate = [NSDate date];
+    NSTimeInterval time = [nowDate timeIntervalSinceDate:date];
+    NSString * strTime;
+    if (time <= 60) {  //// 1分钟以内的
+        strTime = justNowString;
+    }else if(time <= 60*60){  ////  一个小时以内的
+        NSInteger mins = time/60;
+        strTime = [NSString stringWithFormat:@"%ld分钟前",(long)mins];
+        
+    }else if(time <= 60*60*24){ //一天之内
+        
+        NSInteger mins = time/(60*60);
+        strTime = [NSString stringWithFormat:@"%ld小时前",(long)mins];
+    }else if(time <= 60*60*24*7){ //一周之内
+        
+        NSInteger mins = time/(60*60*24);
+        strTime = [NSString stringWithFormat:@"%ld天前",(long)mins];
+    }else if(time <= 60*60*24*30){ //一月之内
+        
+        NSInteger mins = time/(60*60*24*7);
+        strTime = [NSString stringWithFormat:@"%ld周前",(long)mins];
+    }else if(time <= 60*60*24*365){ //一年之内
+        
+        NSInteger mins = time/(60*60*24*30);
+        strTime = [NSString stringWithFormat:@"%ld月前",(long)mins];
+    }else{
+        strTime = @"1年前";
+    }
+    return strTime;
+}
 
 @end
