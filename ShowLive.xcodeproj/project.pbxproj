@@ -30,6 +30,16 @@
 		431CB4DB20F499D10043B0AC /* NSRunLoop+JKPerformBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 431CB4DA20F499D00043B0AC /* NSRunLoop+JKPerformBlock.m */; };
 		431CB4DE20F49A500043B0AC /* NSSet+JKBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 431CB4DD20F49A4F0043B0AC /* NSSet+JKBlock.m */; };
 		431CB4E120F49A810043B0AC /* NSString+JKBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 431CB4E020F49A800043B0AC /* NSString+JKBase64.m */; };
+		431F64B020F794160087DB8E /* UIResponder+JKFirstResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F64AE20F794150087DB8E /* UIResponder+JKFirstResponder.m */; };
+		431F64B320F794300087DB8E /* UIResponder+JKChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F64B120F794300087DB8E /* UIResponder+JKChain.m */; };
+		431F64B620F7944A0087DB8E /* UIPopoverControllerDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F64B520F7944A0087DB8E /* UIPopoverControllerDemoViewController.m */; };
+		431F64B920F7945D0087DB8E /* UIPopoverController+iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F64B720F7945C0087DB8E /* UIPopoverController+iPhone.m */; };
+		431F64BC20F794770087DB8E /* UINavigationItemDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F64BB20F794770087DB8E /* UINavigationItemDemoViewController.m */; };
+		431F64BF20F794940087DB8E /* UINavigationItem+JKMargin.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F64BD20F794930087DB8E /* UINavigationItem+JKMargin.m */; };
+		431F64C220F794AE0087DB8E /* UINavigationItem+JKLock.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F64C120F794AD0087DB8E /* UINavigationItem+JKLock.m */; };
+		431F64C520F794C40087DB8E /* UINavigationItem+JKLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F64C420F794C40087DB8E /* UINavigationItem+JKLoading.m */; };
+		431F64C820F794D20087DB8E /* UINavigationControllerDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F64C620F794D10087DB8E /* UINavigationControllerDemoViewController.m */; };
+		431F64CB20F794E80087DB8E /* UINavigationController+JKTransitions.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F64CA20F794E70087DB8E /* UINavigationController+JKTransitions.m */; };
 		43205DD120DD25F000AD6952 /* UIView+Genie.m in Sources */ = {isa = PBXBuildFile; fileRef = 43205DCF20DD25F000AD6952 /* UIView+Genie.m */; };
 		43205DD420DD263400AD6952 /* UIView+Debug.m in Sources */ = {isa = PBXBuildFile; fileRef = 43205DD220DD263300AD6952 /* UIView+Debug.m */; };
 		43205DD720DD264B00AD6952 /* UITextViewDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43205DD620DD264B00AD6952 /* UITextViewDemoViewController.m */; };
@@ -236,6 +246,26 @@
 		431CB4DD20F49A4F0043B0AC /* NSSet+JKBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSSet+JKBlock.m"; sourceTree = "<group>"; };
 		431CB4DF20F49A800043B0AC /* NSString+JKBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JKBase64.h"; sourceTree = "<group>"; };
 		431CB4E020F49A800043B0AC /* NSString+JKBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JKBase64.m"; sourceTree = "<group>"; };
+		431F64AE20F794150087DB8E /* UIResponder+JKFirstResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+JKFirstResponder.m"; sourceTree = "<group>"; };
+		431F64AF20F794160087DB8E /* UIResponder+JKFirstResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+JKFirstResponder.h"; sourceTree = "<group>"; };
+		431F64B120F794300087DB8E /* UIResponder+JKChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+JKChain.m"; sourceTree = "<group>"; };
+		431F64B220F794300087DB8E /* UIResponder+JKChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+JKChain.h"; sourceTree = "<group>"; };
+		431F64B420F7944A0087DB8E /* UIPopoverControllerDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPopoverControllerDemoViewController.h; sourceTree = "<group>"; };
+		431F64B520F7944A0087DB8E /* UIPopoverControllerDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPopoverControllerDemoViewController.m; sourceTree = "<group>"; };
+		431F64B720F7945C0087DB8E /* UIPopoverController+iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIPopoverController+iPhone.m"; sourceTree = "<group>"; };
+		431F64B820F7945C0087DB8E /* UIPopoverController+iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIPopoverController+iPhone.h"; sourceTree = "<group>"; };
+		431F64BA20F794770087DB8E /* UINavigationItemDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UINavigationItemDemoViewController.h; sourceTree = "<group>"; };
+		431F64BB20F794770087DB8E /* UINavigationItemDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINavigationItemDemoViewController.m; sourceTree = "<group>"; };
+		431F64BD20F794930087DB8E /* UINavigationItem+JKMargin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationItem+JKMargin.m"; sourceTree = "<group>"; };
+		431F64BE20F794930087DB8E /* UINavigationItem+JKMargin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationItem+JKMargin.h"; sourceTree = "<group>"; };
+		431F64C020F794AD0087DB8E /* UINavigationItem+JKLock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationItem+JKLock.h"; sourceTree = "<group>"; };
+		431F64C120F794AD0087DB8E /* UINavigationItem+JKLock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationItem+JKLock.m"; sourceTree = "<group>"; };
+		431F64C320F794C30087DB8E /* UINavigationItem+JKLoading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationItem+JKLoading.h"; sourceTree = "<group>"; };
+		431F64C420F794C40087DB8E /* UINavigationItem+JKLoading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationItem+JKLoading.m"; sourceTree = "<group>"; };
+		431F64C620F794D10087DB8E /* UINavigationControllerDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINavigationControllerDemoViewController.m; sourceTree = "<group>"; };
+		431F64C720F794D10087DB8E /* UINavigationControllerDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UINavigationControllerDemoViewController.h; sourceTree = "<group>"; };
+		431F64C920F794E70087DB8E /* UINavigationController+JKTransitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+JKTransitions.h"; sourceTree = "<group>"; };
+		431F64CA20F794E70087DB8E /* UINavigationController+JKTransitions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+JKTransitions.m"; sourceTree = "<group>"; };
 		43205DCF20DD25F000AD6952 /* UIView+Genie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Genie.m"; sourceTree = "<group>"; };
 		43205DD020DD25F000AD6952 /* UIView+Genie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Genie.h"; sourceTree = "<group>"; };
 		43205DD220DD263300AD6952 /* UIView+Debug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Debug.m"; sourceTree = "<group>"; };
@@ -669,6 +699,26 @@
 		434DDB4B20C92B4E00191FC1 /* JKCategories */ = {
 			isa = PBXGroup;
 			children = (
+				431F64C920F794E70087DB8E /* UINavigationController+JKTransitions.h */,
+				431F64CA20F794E70087DB8E /* UINavigationController+JKTransitions.m */,
+				431F64C720F794D10087DB8E /* UINavigationControllerDemoViewController.h */,
+				431F64C620F794D10087DB8E /* UINavigationControllerDemoViewController.m */,
+				431F64C320F794C30087DB8E /* UINavigationItem+JKLoading.h */,
+				431F64C420F794C40087DB8E /* UINavigationItem+JKLoading.m */,
+				431F64C020F794AD0087DB8E /* UINavigationItem+JKLock.h */,
+				431F64C120F794AD0087DB8E /* UINavigationItem+JKLock.m */,
+				431F64BE20F794930087DB8E /* UINavigationItem+JKMargin.h */,
+				431F64BD20F794930087DB8E /* UINavigationItem+JKMargin.m */,
+				431F64BA20F794770087DB8E /* UINavigationItemDemoViewController.h */,
+				431F64BB20F794770087DB8E /* UINavigationItemDemoViewController.m */,
+				431F64B820F7945C0087DB8E /* UIPopoverController+iPhone.h */,
+				431F64B720F7945C0087DB8E /* UIPopoverController+iPhone.m */,
+				431F64B420F7944A0087DB8E /* UIPopoverControllerDemoViewController.h */,
+				431F64B520F7944A0087DB8E /* UIPopoverControllerDemoViewController.m */,
+				431F64B220F794300087DB8E /* UIResponder+JKChain.h */,
+				431F64B120F794300087DB8E /* UIResponder+JKChain.m */,
+				431F64AF20F794160087DB8E /* UIResponder+JKFirstResponder.h */,
+				431F64AE20F794150087DB8E /* UIResponder+JKFirstResponder.m */,
 				4374EB2620F6309500BB947F /* NSString+JKPinyin.h */,
 				4374EB2720F6309500BB947F /* NSString+JKPinyin.m */,
 				4374EB2320F6307000BB947F /* NSString+JKNormalRegex.h */,
@@ -1578,6 +1628,7 @@
 				43D24A952094B4C500C59AC8 /* ShowNavigationBar.m in Sources */,
 				435D4C3E20EDEA2900C8DC85 /* NSDate+JKCupertinoYankee.m in Sources */,
 				435E3C9220C02BB2002B7A7F /* NSDecimalNumber+JKCalculatingByString.m in Sources */,
+				431F64C820F794D20087DB8E /* UINavigationControllerDemoViewController.m in Sources */,
 				4325536C20D8B53400FC0258 /* MKMapView+JKBetterMaps.m in Sources */,
 				43D87B3520EB6E7000E991D6 /* UIResponderDemoViewController.m in Sources */,
 				4374EB1C20F62FDD00BB947F /* NSString+JKHTML.m in Sources */,
@@ -1590,12 +1641,14 @@
 				435D4C8C20F0929A00C8DC85 /* NSManagedObjectContext+JKFetching.m in Sources */,
 				435D4C6520EF3E3B00C8DC85 /* NSDictionary+JKJSONString.m in Sources */,
 				431CB4D820F499B60043B0AC /* NSPersistentStoreCoordinatorDemoViewController.m in Sources */,
+				431F64B920F7945D0087DB8E /* UIPopoverController+iPhone.m in Sources */,
 				434DDB5D20C9332700191FC1 /* CATransaction+JKAnimateWithDuration.m in Sources */,
 				437B0A6020F3607100E93844 /* NSObject+JKAppInfo.m in Sources */,
 				435D4C8020F091BC00C8DC85 /* NSIndexPath+JKOffset.m in Sources */,
 				431BBB6520DBCB05006A3D50 /* UIView+JKConstraints.m in Sources */,
 				435E3C8F20C02BB2002B7A7F /* NSDecimalNumber+JKExtensions.m in Sources */,
 				43205DD720DD264B00AD6952 /* UITextViewDemoViewController.m in Sources */,
+				431F64BF20F794940087DB8E /* UINavigationItem+JKMargin.m in Sources */,
 				431CB4CC20F499070043B0AC /* NSObject+JKKVOBlocks.m in Sources */,
 				43993EC520E23F7A0017F1C3 /* UITableView+FDTemplateLayoutCell.m in Sources */,
 				43968A6A20AC398C00149DCC /* NSObject+Safe.m in Sources */,
@@ -1604,7 +1657,9 @@
 				4374EB2820F6309500BB947F /* NSString+JKPinyin.m in Sources */,
 				435D4C6E20EF406600C8DC85 /* NSDictionary+JKXML.m in Sources */,
 				431BBB6220DBCABD006A3D50 /* UIView+JKCustomBorder.m in Sources */,
+				431F64C520F794C40087DB8E /* UINavigationItem+JKLoading.m in Sources */,
 				4325536920D8B51000FC0258 /* CLLocationManager+Blocks.m in Sources */,
+				431F64B620F7944A0087DB8E /* UIPopoverControllerDemoViewController.m in Sources */,
 				4325535420CFE87700FC0258 /* UIWebViewDemoViewController.m in Sources */,
 				434DDB6320C9337A00191FC1 /* UIWindow+JKHierarchy.m in Sources */,
 				722957B120C80779000D0719 /* SLUserViewHeader.m in Sources */,
@@ -1663,9 +1718,11 @@
 				435D4C8920F0924D00C8DC85 /* NSManagedObject+JKExtensions.m in Sources */,
 				435D4C5F20EF3E0500C8DC85 /* NSDecimalNumber+JKExtensions.m in Sources */,
 				436B1EAE20DA300600419AC0 /* UIView+JKFind.m in Sources */,
+				431F64CB20F794E80087DB8E /* UINavigationController+JKTransitions.m in Sources */,
 				4325535D20D8B45700FC0258 /* CAAnimationDemoViewController.m in Sources */,
 				437921E720ECC46400B2EC88 /* NSData+JKBase64.m in Sources */,
 				437921DE20ECC3E000B2EC88 /* NSArray+JKSafeAccess.m in Sources */,
+				431F64C220F794AE0087DB8E /* UINavigationItem+JKLock.m in Sources */,
 				437921EA20ECC47C00B2EC88 /* NSData+JKEncrypt.m in Sources */,
 				43D24A912094A43600C59AC8 /* AppDelegate+ShowRegisterService.m in Sources */,
 				4374EB0D20F62F5600BB947F /* NSString+JKContains.m in Sources */,
@@ -1682,6 +1739,7 @@
 				723816BE20C6ABFF00C3885E /* UIColor+Equalable.m in Sources */,
 				724FF37D20E6680500DD40EB /* SLUserInfoListCell.m in Sources */,
 				723816B720C68B3C00C3885E /* SLHeadPortrait.m in Sources */,
+				431F64BC20F794770087DB8E /* UINavigationItemDemoViewController.m in Sources */,
 				43D87B2020EB6D5D00E991D6 /* UIScrollViewDemoViewController.m in Sources */,
 				93615AEB20C1453A000D5658 /* SLBaseWebViewController.m in Sources */,
 				4374EB1920F62FC700BB947F /* NSString+JKHash.m in Sources */,
@@ -1698,6 +1756,7 @@
 				435D4C5920EDEB4B00C8DC85 /* NSDecimalNumber+JKCalculatingByString.m in Sources */,
 				43993EB920E23EAD0017F1C3 /* UITextField+JKHistory.m in Sources */,
 				93398ECF20D93370004376FB /* SLHelper.m in Sources */,
+				431F64B320F794300087DB8E /* UIResponder+JKChain.m in Sources */,
 				437B0A6320F3608B00E93844 /* NSObject+JKAssociatedObject.m in Sources */,
 				43291F4D20E520CB000C3C15 /* UITableView+FDTemplateLayoutCellDebug.m in Sources */,
 				434DDB5420C932AB00191FC1 /* CALayerDemoViewController.m in Sources */,
@@ -1727,6 +1786,7 @@
 				431BBB5F20DBCA96006A3D50 /* UIView+JKDraggable.m in Sources */,
 				435D4C5020EDEAE000C8DC85 /* NSDate+JKUtilities.m in Sources */,
 				724D4BC220C9155A0007E4E8 /* HomeHeader.m in Sources */,
+				431F64B020F794160087DB8E /* UIResponder+JKFirstResponder.m in Sources */,
 				724FF37A20E6678D00DD40EB /* SLInfoHeaderView.m in Sources */,
 				435D4C6220EF3E2500C8DC85 /* NSDictionary+JKBlock.m in Sources */,
 			);
