@@ -242,6 +242,84 @@
     return Cell;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    switch (indexPath.row) {
+        case 0:
+            [PageMgr pushtoUserInfoVC];
+            break;
+        case 1:
+         //   [HDHud showMessageInView:self.view title:@"敬请期待"];
+           [PageMgr pushToSLSafeCenterViewController];
+
+            break;
+        case 2:{
+            if(IsValidString([AccountModel shared].phoneNumber)){
+                return ;
+            }
+            
+            SLPhoneBindVC *bindPhoneVC = [[SLPhoneBindVC alloc]init];
+            bindPhoneVC.refresh = ^{
+                SLSafeCenterCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+                cell.textLab.text = @"已绑定";
+                cell.textLab.textColor =kThemeGreenColor;
+            };
+            [self.navigationController pushViewController:bindPhoneVC animated:YES];
+        }
+            break;
+        case 3:{
+            if(IsValidString([AccountModel shared].phoneNumber)){
+                if (AccountUserInfoModel.authStatus.integerValue == 1 || AccountUserInfoModel.authStatus.integerValue == 4) {
+                    if (AccountUserInfoModel.showCoinRmb.floatValue > 1.0) {
+                        SLAuthIdentityViewController *authVC = [[SLAuthIdentityViewController alloc] init];
+                        authVC.refresh = ^{
+                            SLSafeCenterCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+                            cell.textLab.text = @"认证中";
+                            cell.textLab.textColor =kGrayWith808080;
+                        };
+                        [self.navigationController pushViewController:authVC animated:YES];
+                    }else{
+                        UIAlertView *CoinAlert = [[UIAlertView alloc] initWithTitle:@"余额不足" message:@"每次提交KYC认证，系统扣除约等于1.00元的SHOW币" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"充值", nil];
+                        CoinAlert.tag = 2000;
+                        [CoinAlert show];
+                    }
+                }
+            }else{
+                UIAlertView *BindPhoneAlert = [[UIAlertView alloc] initWithTitle:@"请先绑定手机" message:@"您还未绑定手机，无法进行身份认证" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"去绑定", nil];
+                BindPhoneAlert.tag = 1000;
+                [BindPhoneAlert show];
+            }
+        }
+            break;
+           
+        case 4:
+            [self addAppReview];
+            break;
+        case 5:
+            [HDHud showMessageInView:self.view title:@"敬请期待"];
+            break;
+        case 6:
+            [HDHud showMessageInView:self.view title:@"敬请期待"];
+            break;
+        case 7:
+            [HDHud showMessageInView:self.view title:@"敬请期待"];
+            break;
+        case 8:
+            [HDHud showMessageInView:self.view title:@"敬请期待"];
+//            [self.navigationController pushViewController:[SLNetDiagnoViewController initVC] animated:YES];
+            break;
+        case 9:
+            [HDHud showMessageInView:self.view title:@"敬请期待"];//[self.navigationController pushViewController:[ShowForUsViewController initVC] animated:YES];
+            break;
+        default:
+            break;
+    }
+}
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
 //- (void)gotoHyperlinksWebView:(NSNotification *)notification{
 //
 //}
