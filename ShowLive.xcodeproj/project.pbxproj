@@ -39,6 +39,7 @@
 		431F64C220F794AE0087DB8E /* UINavigationItem+JKLock.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F64C120F794AD0087DB8E /* UINavigationItem+JKLock.m */; };
 		431F64C520F794C40087DB8E /* UINavigationItem+JKLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F64C420F794C40087DB8E /* UINavigationItem+JKLoading.m */; };
 		431F64C820F794D20087DB8E /* UINavigationControllerDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F64C620F794D10087DB8E /* UINavigationControllerDemoViewController.m */; };
+		431F64CB20F794E80087DB8E /* UINavigationController+JKTransitions.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F64CA20F794E70087DB8E /* UINavigationController+JKTransitions.m */; };
 		43205DD120DD25F000AD6952 /* UIView+Genie.m in Sources */ = {isa = PBXBuildFile; fileRef = 43205DCF20DD25F000AD6952 /* UIView+Genie.m */; };
 		43205DD420DD263400AD6952 /* UIView+Debug.m in Sources */ = {isa = PBXBuildFile; fileRef = 43205DD220DD263300AD6952 /* UIView+Debug.m */; };
 		43205DD720DD264B00AD6952 /* UITextViewDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43205DD620DD264B00AD6952 /* UITextViewDemoViewController.m */; };
@@ -261,6 +262,8 @@
 		431F64C420F794C40087DB8E /* UINavigationItem+JKLoading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationItem+JKLoading.m"; sourceTree = "<group>"; };
 		431F64C620F794D10087DB8E /* UINavigationControllerDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINavigationControllerDemoViewController.m; sourceTree = "<group>"; };
 		431F64C720F794D10087DB8E /* UINavigationControllerDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UINavigationControllerDemoViewController.h; sourceTree = "<group>"; };
+		431F64C920F794E70087DB8E /* UINavigationController+JKTransitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+JKTransitions.h"; sourceTree = "<group>"; };
+		431F64CA20F794E70087DB8E /* UINavigationController+JKTransitions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+JKTransitions.m"; sourceTree = "<group>"; };
 		43205DCF20DD25F000AD6952 /* UIView+Genie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Genie.m"; sourceTree = "<group>"; };
 		43205DD020DD25F000AD6952 /* UIView+Genie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Genie.h"; sourceTree = "<group>"; };
 		43205DD220DD263300AD6952 /* UIView+Debug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Debug.m"; sourceTree = "<group>"; };
@@ -690,6 +693,8 @@
 		434DDB4B20C92B4E00191FC1 /* JKCategories */ = {
 			isa = PBXGroup;
 			children = (
+				431F64C920F794E70087DB8E /* UINavigationController+JKTransitions.h */,
+				431F64CA20F794E70087DB8E /* UINavigationController+JKTransitions.m */,
 				431F64C720F794D10087DB8E /* UINavigationControllerDemoViewController.h */,
 				431F64C620F794D10087DB8E /* UINavigationControllerDemoViewController.m */,
 				431F64C320F794C30087DB8E /* UINavigationItem+JKLoading.h */,
@@ -1701,6 +1706,7 @@
 				435D4C8920F0924D00C8DC85 /* NSManagedObject+JKExtensions.m in Sources */,
 				435D4C5F20EF3E0500C8DC85 /* NSDecimalNumber+JKExtensions.m in Sources */,
 				436B1EAE20DA300600419AC0 /* UIView+JKFind.m in Sources */,
+				431F64CB20F794E80087DB8E /* UINavigationController+JKTransitions.m in Sources */,
 				4325535D20D8B45700FC0258 /* CAAnimationDemoViewController.m in Sources */,
 				437921E720ECC46400B2EC88 /* NSData+JKBase64.m in Sources */,
 				437921DE20ECC3E000B2EC88 /* NSArray+JKSafeAccess.m in Sources */,
