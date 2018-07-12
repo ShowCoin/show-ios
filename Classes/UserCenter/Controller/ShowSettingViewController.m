@@ -61,6 +61,48 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshTheKycStatue) name:SLKYCRefreshNotification object:nil];
 
 }
+-(UIButton*)LogoutBtn
+{
+    if (!_LogoutBtn) {
+        UIButton *button = [[UIButton alloc] init];
+        button.frame = (CGRect){0,kMainScreenHeight-44*Proportion375-KTabbarSafeBottomMargin ,KScreenWidth,45*Proportion375+KTabbarSafeBottomMargin};
+        [button setTitle:@"退出" forState:UIControlStateNormal];
+        [button setTitleColor:kThemeWhiteColor forState:UIControlStateNormal];
+        [button setTitleEdgeInsets:UIEdgeInsetsMake(-KTabbarSafeBottomMargin, 0, 0, 0)];
+        button.backgroundColor = kBlackThemeColor;
+        _LogoutBtn = button;
+    }
+    [[_LogoutBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+        [PageMgr logout:nil];
+    }];
+    return _LogoutBtn;
+}
+-(UITableView *)tableView
+{
+    if (!_tableView) {
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, KNaviBarHeight, KScreenWidth, KScreenHeight-KNaviBarSafeBottomMargin - 45*Proportion375- KNaviBarHeight - KTabbarSafeBottomMargin) style:UITableViewStyleGrouped];
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
+        _tableView.scrollEnabled = YES;
+        _tableView.backgroundColor =kBlackThemeBGColor;
+        if (@available(iOS 11.0, *)) {
+            _tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+            _tableView.estimatedRowHeight = 0;
+            _tableView.estimatedSectionHeaderHeight = 0;
+            _tableView.estimatedSectionFooterHeight = 0;
+        } else {
+            
+        }
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+        _tableView.separatorColor = kBlackThemeColor;
+        _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+        
+    }
+    return _tableView;
+    
+}
+
+#pragma mark - delegates
 //- (void)gotoHyperlinksWebView:(NSNotification *)notification{
 //
 //}
