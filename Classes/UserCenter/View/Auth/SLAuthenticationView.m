@@ -123,6 +123,9 @@ static CGFloat const kMargin = 15;
     }
 }
 
+/**
+ tapAction
+ */
 - (void)tapAction {
     NSLog(@"%s", __func__);
     if (self.clickBlock) {
@@ -130,6 +133,11 @@ static CGFloat const kMargin = 15;
     }
 }
 
+/**
+ setType
+
+ @param type SLIdCardType
+ */
 - (void)setType:(SLIdCardType)type {
     _type = type;
     NSString *pString = nil;
@@ -154,6 +162,11 @@ static CGFloat const kMargin = 15;
     [self layoutSubviews];
 }
 
+/**
+ showAuthImageType
+
+ @param type SLAuthImageTypei
+ */
 - (void)showAuthImageType:(SLAuthImageType)type {
     SLAuthImageView *imageV = (SLAuthImageView *)self.imageView;
     imageV.type = type;
