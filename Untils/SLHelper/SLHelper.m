@@ -1131,5 +1131,9 @@
 {
     return [self _chatTimeStringWithInterval:timeInterval justNowString:@"在线"];
 }
++ (NSString *)chatMessageListTimeStringWithInterval:(NSTimeInterval)timeInterval
+{
+    return [self _chatTimeStringWithInterval:timeInterval justNowString:@"刚刚"];
+}
 
 @end
