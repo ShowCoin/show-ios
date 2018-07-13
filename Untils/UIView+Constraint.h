@@ -177,8 +177,13 @@ typedef NS_ENUM(NSUInteger, JQconstraint2ViewType) {
     //     |   |   |
     //     ---------
     constraint2ViewTypeLowerEdge,//1view到2view的底边
-   
-    
+    //     _________
+    //     |   |   |
+    //     |   0   |
+    //     |       |
+    //     ---------
+    constraint2ViewTypeUpperEdge,//1view到2view的底边
+ 
 };
 
 
