@@ -163,5 +163,13 @@
 
 
 
+- (void)selectCity {
+    if (!self.modalView) {
+        self.modalView = [[SLCountryModalView alloc] initWithSuperView:self.view animationTravel:0.25 viewHeight:200];
+    }
+    self.submit.enabled = YES;
+    [self.modalView show];
+}
+
 
 @end
