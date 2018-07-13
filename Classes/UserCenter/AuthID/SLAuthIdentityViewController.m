@@ -54,5 +54,75 @@
     [self viewDidLayoutSubviews];
 }
 
+- (void)setupUI {
+    UIScrollView *scrollView = [[UIScrollView alloc] init];
+    scrollView.showsVerticalScrollIndicator = NO;
+    [self.view addSubview:scrollView];
+    self.scrollView = scrollView;
+    
+    SLAICountryView *countryView = [SLAICountryView countryView];//[[SLAICountryView alloc] init];
+    [scrollView addSubview:countryView];
+    self.countryView = countryView;
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(selectCity)];
+    [countryView addGestureRecognizer:tap];
+    
+    SLAuthenticationView *prosView = [[SLAuthenticationView alloc] init];
+    prosView.type = SLIdCardTypePros;
+    __weak typeof(self) wself = self;
+    prosView.clickBlock = ^{
+        [wself selectProsImage];
+    };
+    [scrollView addSubview:prosView];
+    self.prosView = prosView;
+    
+    SLAuthenticationView *consView = [[SLAuthenticationView alloc] init];
+    consView.type = SLIdCardTypeCons;
+    consView.clickBlock = ^{
+        [wself selectConsImage];
+    };
+    [scrollView addSubview:consView];
+    self.consView = consView;
+    
+    SLAuthenticationView *handView = [[SLAuthenticationView alloc] init];
+    handView.type = SLIdCardTypeHand;
+    handView.clickBlock = ^{
+        [wself selectHandImage];
+    };
+    [scrollView addSubview:handView];
+    self.handView = handView;
+    
+    UITextView *textView = [[UITextView alloc] init];
+    textView.textContainerInset = UIEdgeInsetsMake(15, 13, 15, 13);
+    textView.textColor = [UIColor redColor];
+    textView.font = [UIFont systemFontOfSize:12];
+    textView.backgroundColor = SLNormalColor;
+    textView.userInteractionEnabled = NO;
+    textView.text = @"每提交一次KYC认证，系统将扣除价值人民币1.00元的SHOW币，请谨慎上传证件照片。";
+    [scrollView addSubview:textView];
+    self.payLabel = textView;
+    
+    UILabel *label = [[UILabel alloc] init];
+    label.text = @"请确认使用您的真实身份参加验证";
+    label.textColor = [UIColor lightGrayColor];
+    label.textAlignment = NSTextAlignmentCenter;
+    label.font = [UIFont systemFontOfSize:12];
+    [scrollView addSubview:label];
+    self.bottomLabel = label;
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    // bg 333333
+    // enable 808080
+    button.backgroundColor = SLNormalColor;
+    [button setTitle:@"提交" forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor darkGrayColor] forState:UIControlStateDisabled];
+    [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(submitAction) forControlEvents:UIControlEventTouchUpInside];
+    button.titleLabel.font = [UIFont systemFontOfSize:15];
+    button.enabled = NO;
+    [scrollView addSubview:button];
+    self.submit = button;
+}
+
 
 @end
