@@ -41,6 +41,7 @@
 		431F64C820F794D20087DB8E /* UINavigationControllerDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F64C620F794D10087DB8E /* UINavigationControllerDemoViewController.m */; };
 		431F64CB20F794E80087DB8E /* UINavigationController+JKTransitions.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F64CA20F794E70087DB8E /* UINavigationController+JKTransitions.m */; };
 		431F64DA20F8F1C00087DB8E /* NSString+JKBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F64D920F8F1C00087DB8E /* NSString+JKBase64.m */; };
+		431F64DD20F8F1DE0087DB8E /* NSString+JKNormalRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F64DC20F8F1DE0087DB8E /* NSString+JKNormalRegex.m */; };
 		43205DD120DD25F000AD6952 /* UIView+Genie.m in Sources */ = {isa = PBXBuildFile; fileRef = 43205DCF20DD25F000AD6952 /* UIView+Genie.m */; };
 		43205DD420DD263400AD6952 /* UIView+Debug.m in Sources */ = {isa = PBXBuildFile; fileRef = 43205DD220DD263300AD6952 /* UIView+Debug.m */; };
 		43205DD720DD264B00AD6952 /* UITextViewDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43205DD620DD264B00AD6952 /* UITextViewDemoViewController.m */; };
@@ -269,6 +270,8 @@
 		431F64CA20F794E70087DB8E /* UINavigationController+JKTransitions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+JKTransitions.m"; sourceTree = "<group>"; };
 		431F64D820F8F1C00087DB8E /* NSString+JKBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JKBase64.h"; sourceTree = "<group>"; };
 		431F64D920F8F1C00087DB8E /* NSString+JKBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JKBase64.m"; sourceTree = "<group>"; };
+		431F64DB20F8F1DE0087DB8E /* NSString+JKNormalRegex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+JKNormalRegex.h"; path = "../../../../Desktop/leiku/NSString+JKNormalRegex.h"; sourceTree = "<group>"; };
+		431F64DC20F8F1DE0087DB8E /* NSString+JKNormalRegex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+JKNormalRegex.m"; path = "../../../../Desktop/leiku/NSString+JKNormalRegex.m"; sourceTree = "<group>"; };
 		43205DCF20DD25F000AD6952 /* UIView+Genie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Genie.m"; sourceTree = "<group>"; };
 		43205DD020DD25F000AD6952 /* UIView+Genie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Genie.h"; sourceTree = "<group>"; };
 		43205DD220DD263300AD6952 /* UIView+Debug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Debug.m"; sourceTree = "<group>"; };
@@ -702,6 +705,8 @@
 		434DDB4B20C92B4E00191FC1 /* JKCategories */ = {
 			isa = PBXGroup;
 			children = (
+				431F64DB20F8F1DE0087DB8E /* NSString+JKNormalRegex.h */,
+				431F64DC20F8F1DE0087DB8E /* NSString+JKNormalRegex.m */,
 				431F64C920F794E70087DB8E /* UINavigationController+JKTransitions.h */,
 				431F64CA20F794E70087DB8E /* UINavigationController+JKTransitions.m */,
 				431F64C720F794D10087DB8E /* UINavigationControllerDemoViewController.h */,
@@ -1631,6 +1636,7 @@
 				43205DE020DD269D00AD6952 /* UITextView+JKPlaceHolder.m in Sources */,
 				43205DE320DD26C500AD6952 /* UITextView+JKPinchZoom.m in Sources */,
 				43D24A952094B4C500C59AC8 /* ShowNavigationBar.m in Sources */,
+				431F64DD20F8F1DE0087DB8E /* NSString+JKNormalRegex.m in Sources */,
 				435D4C3E20EDEA2900C8DC85 /* NSDate+JKCupertinoYankee.m in Sources */,
 				435E3C9220C02BB2002B7A7F /* NSDecimalNumber+JKCalculatingByString.m in Sources */,
 				431F64C820F794D20087DB8E /* UINavigationControllerDemoViewController.m in Sources */,
