@@ -124,5 +124,44 @@
     self.submit = button;
 }
 
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    NSLog(@"%s", __func__);
+    CGFloat w = self.view.frame.size.width;
+    CGFloat h = self.view.frame.size.height;
+    self.scrollView.frame = CGRectMake(0, 0, w, h);
+    
+    CGFloat marginX = 15;
+    CGFloat labelW = w - marginX * 2;
+    
+    CGFloat cityY = 13;//CGRectGetMaxY(self.tipLabel.frame) + 13;
+    CGFloat cityH = 45;
+    self.countryView.frame = CGRectMake(0, cityY, w, cityH);
+    
+    CGFloat prosY = CGRectGetMaxY(self.countryView.frame) + 15;
+    self.prosView.frame = CGRectMake(0, prosY, w, self.prosView.viewH);
+    
+    CGFloat consY = CGRectGetMaxY(self.prosView.frame);
+    self.consView.frame = CGRectMake(0, consY, w, self.consView.viewH);
+    
+    CGFloat handY = CGRectGetMaxY(self.consView.frame);
+    self.handView.frame = CGRectMake(0, handY, w, self.handView.viewH);
+    
+    CGFloat payY = CGRectGetMaxY(self.handView.frame) + 15;
+    CGFloat payH = [self.payLabel.text boundingRectWithSize:CGSizeMake(labelW, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : self.payLabel.font} context:nil].size.height + self.payLabel.textContainerInset.top + self.payLabel.textContainerInset.bottom;
+    self.payLabel.frame = CGRectMake(0, payY, w, payH);
+    
+    CGFloat bottomY = CGRectGetMaxY(self.payLabel.frame) + 60;
+    self.bottomLabel.frame = CGRectMake(0, bottomY, w, self.bottomLabel.font.lineHeight);
+    
+    CGFloat submitY = CGRectGetMaxY(self.bottomLabel.frame) + 15;
+    self.submit.frame = CGRectMake(0, submitY, w, 45);
+    
+    CGFloat sizeH = CGRectGetMaxY(self.submit.frame) + 50;
+    self.scrollView.contentSize = CGSizeMake(0, sizeH);
+}
+
+
+
 
 @end
