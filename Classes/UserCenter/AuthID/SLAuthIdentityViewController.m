@@ -189,5 +189,14 @@
     };
 }
 
+- (void)selectHandImage {
+    ImagePicker.sharedInstance.currentViewController = self;
+    [ImagePicker.sharedInstance showActionSheetWithViewController:self];
+    __weak typeof(self) wself = self;
+    ImagePicker.sharedInstance.pickerImage = ^(UIImage *image) {
+        wself.handView.imageView.image = image;
+    };
+}
+
 
 @end
