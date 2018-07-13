@@ -198,7 +198,6 @@ typedef NS_ENUM(NSUInteger, JQconstraint2ViewType) {
     
 };
 
-
 @interface UIView (Constraint)
 //按方向停靠在给定的某一个View的边上
 - (void)constraintStickyWithView:(UIView*)view orientation:(JQconstraintType)orientation offset:(NSArray*)offsetArray;
