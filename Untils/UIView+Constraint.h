@@ -164,40 +164,6 @@ typedef NS_ENUM(NSUInteger, JQconstraintType) {
     
 };
 
-typedef NS_ENUM(NSUInteger, JQconstraint2ViewType) {
-    //     _________         ________
-    //     |       |         |      |
-    //     |   *---|----0----|---*  |
-    //     |       |         |      |
-    //     ---------         --------
-    constraint2ViewTypeDivideDistance,//中心点距离等分
-    
-    //     _________
-    //     |       |
-    //     |   0   |
-    //     |   |   |
-    //     ---------
-    constraint2ViewTypeLowerEdge,//1view到2view的底边
-    //     _________
-    //     |   |   |
-    //     |   0   |
-    //     |       |
-    //     ---------
-    constraint2ViewTypeUpperEdge,//1view到2view的底边
-    //     _________
-    //     |       |
-    //     |---0   |
-    //     |       |
-    //     ---------
-    constraint2ViewTypeLeftEdge,//1view到2view的左边
-    //     _________
-    //     |       |
-    //     |   0---|
-    //     |       |
-    //     ---------
-    constraint2ViewTypeRightEdge,//1view到2view的右边
-    
-};
 
 @interface UIView (Constraint)
 //按方向停靠在给定的某一个View的边上
