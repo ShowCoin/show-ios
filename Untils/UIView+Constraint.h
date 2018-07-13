@@ -163,6 +163,10 @@ typedef NS_ENUM(NSUInteger, JQconstraintType) {
     constraintStickyTypeOutsideLowerEdgeRight,//外顶边4,吸右边----Corner
     
 };
+typedef NS_ENUM(NSUInteger, JQconstraint2ViewType) {
+
+    
+};
 
 
 @interface UIView (Constraint)
