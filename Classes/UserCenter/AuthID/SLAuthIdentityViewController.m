@@ -35,5 +35,24 @@
     [self setupUI];
 }
 
+- (void)refreshAction {
+    int i = arc4random_uniform(3);
+    if (i == 0) {
+        self.prosView.errorMsg = @"提示：快点傻女，赶紧湖区家里，嗷嗷add多多";
+        self.consView.errorMsg = @"";
+        self.handView.errorMsg = @"";
+    } else if ( i== 1) {
+        self.consView.errorMsg = @"提示：快点傻女那是多久，卡多少地，顶顶顶顶请求打点的的的的";
+        self.prosView.errorMsg = @"";
+        self.handView.errorMsg = @"";
+    } else {
+        self.prosView.errorMsg = @"";
+        self.consView.errorMsg = @"";
+        self.handView.errorMsg = @"提示：快点傻女，嗯哼哼看看密码奥奥奥，欧浓";
+    }
+    
+    [self viewDidLayoutSubviews];
+}
+
 
 @end
