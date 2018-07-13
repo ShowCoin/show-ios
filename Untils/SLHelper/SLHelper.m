@@ -1040,5 +1040,154 @@
     [UIImagePNGRepresentation(imagesave) writeToFile:imagePath atomically:YES];
     return imagePath;
 }
++(NSString *)decodeWorkUrl:(NSString *)workUrl
+{
+    if (workUrl.length > 0) {
+        NSString *strResult = [self decryptUseDES:workUrl key:DESKEY];
+        if (strResult.length > 0) {
+            return strResult;
+        }
+    }
+    return workUrl;
+}
++(NSString*) decryptUseDES:(NSString*)cipherText key:(NSString*)key {
+    // 利用 GTMBase64 解碼 Base64 字串
+    NSData* cipherData = [GTMBase64 decodeString:cipherText];
+    unsigned char buffer[1024];
+    memset(buffer, 0, sizeof(char));
+    size_t numBytesDecrypted = 0;
+    
+    // IV 偏移量不需使用
+    CCCryptorStatus cryptStatus = CCCrypt(kCCDecrypt,
+                                          kCCAlgorithmDES,
+                                          kCCOptionPKCS7Padding | kCCOptionECBMode,
+                                          [key UTF8String],
+                                          kCCKeySizeDES,
+                                          nil,
+                                          [cipherData bytes],
+                                          [cipherData length],
+                                          buffer,
+                                          1024,
+                                          &numBytesDecrypted);
+    NSString* plainText = nil;
+    if (cryptStatus == kCCSuccess) {
+        NSData* data = [NSData dataWithBytes:buffer length:(NSUInteger)numBytesDecrypted];
+        plainText = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    }
+    return plainText;
+}
++(NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString {
+    if (jsonString == nil)
+    {
+        return nil;
+    }
+    NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *err;
+    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&err];
+    if(err)
+    {
+        NSLog(@"json解析失败：%@",err);
+        return nil;
+    }
+    return dic;
+}
++(NSString *)convertToJsonData:(NSDictionary *)dict
+{
+    
+    NSError *error;
+    
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:&error];
+    
+    NSString *jsonString;
+    
+    if (!jsonData) {
+        
+        NSLog(@"%@",error);
+        
+    }else{
+        
+        jsonString = [[NSString alloc]initWithData:jsonData encoding:NSUTF8StringEncoding];
+        
+    }
+    
+    NSMutableString *mutStr = [NSMutableString stringWithString:jsonString];
+    
+    NSRange range = {0,jsonString.length};
+    
+    //去掉字符串中的空格
+    
+    [mutStr replaceOccurrencesOfString:@" " withString:@"" options:NSLiteralSearch range:range];
+    
+    NSRange range2 = {0,mutStr.length};
+    
+    //去掉字符串中的换行符
+    
+    [mutStr replaceOccurrencesOfString:@"\n" withString:@"" options:NSLiteralSearch range:range2];
+    
+    return mutStr;
+    
+}
++ (NSString *)chatNavDisplayTitleStringWithInterval:(NSTimeInterval)timeInterval
+{
+    return [self _chatTimeStringWithInterval:timeInterval justNowString:@"在线"];
+}
++ (NSString *)chatMessageListTimeStringWithInterval:(NSTimeInterval)timeInterval
+{
+    return [self _chatTimeStringWithInterval:timeInterval justNowString:@"刚刚"];
+}
+#pragma mark - Private
++ (NSString *)_chatTimeStringWithInterval:(NSTimeInterval)timeInterval justNowString:(NSString *)justNowString
+{
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:timeInterval];
+    NSDate *nowDate = [NSDate date];
+    NSTimeInterval time = [nowDate timeIntervalSinceDate:date];
+    NSString * strTime;
+    if (time <= 60) {  //// 1分钟以内的
+        strTime = justNowString;
+    }else if(time <= 60*60){  ////  一个小时以内的
+        NSInteger mins = time/60;
+        strTime = [NSString stringWithFormat:@"%ld分钟前",(long)mins];
+        
+    }else if(time <= 60*60*24){ //一天之内
+        
+        NSInteger mins = time/(60*60);
+        strTime = [NSString stringWithFormat:@"%ld小时前",(long)mins];
+    }else if(time <= 60*60*24*7){ //一周之内
+        
+        NSInteger mins = time/(60*60*24);
+        strTime = [NSString stringWithFormat:@"%ld天前",(long)mins];
+    }else if(time <= 60*60*24*30){ //一月之内
+        
+        NSInteger mins = time/(60*60*24*7);
+        strTime = [NSString stringWithFormat:@"%ld周前",(long)mins];
+    }else if(time <= 60*60*24*365){ //一年之内
+        
+        NSInteger mins = time/(60*60*24*30);
+        strTime = [NSString stringWithFormat:@"%ld月前",(long)mins];
+    }else{
+        strTime = @"1年前";
+    }
+    return strTime;
+}
++(NSMutableArray*)getRandomArrFrome:(NSArray*)arr
+{
+    NSMutableArray *newArr = [NSMutableArray new];
+    while (newArr.count != arr.count) {
+        //生成随机数
+        int x =arc4random() % arr.count;
+        id obj = arr[x];
+        if (![newArr containsObject:obj]) {
+            [newArr addObject:obj];
+        }
+    }
+    return newArr;
+}
+
++ (NSTimeInterval)secondsOfSystemTimeSince:(NSTimeInterval)targetTime
+{
+    uint64_t serverTime = [ServerTimeMgr getServerStamp];
+    NSTimeInterval timeSpace = targetTime - serverTime / 1000;
+    return timeSpace;
+}
 
 @end
