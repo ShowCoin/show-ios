@@ -268,8 +268,8 @@
 		431F64C720F794D10087DB8E /* UINavigationControllerDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UINavigationControllerDemoViewController.h; sourceTree = "<group>"; };
 		431F64C920F794E70087DB8E /* UINavigationController+JKTransitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+JKTransitions.h"; sourceTree = "<group>"; };
 		431F64CA20F794E70087DB8E /* UINavigationController+JKTransitions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+JKTransitions.m"; sourceTree = "<group>"; };
-		431F64D820F8F1C00087DB8E /* NSString+JKBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JKBase64.h"; sourceTree = "<group>"; };
-		431F64D920F8F1C00087DB8E /* NSString+JKBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JKBase64.m"; sourceTree = "<group>"; };
+		431F64D820F8F1C00087DB8E /* NSString+JKBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+JKBase64.h"; path = "../NSString+JKBase64.h"; sourceTree = "<group>"; };
+		431F64D920F8F1C00087DB8E /* NSString+JKBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+JKBase64.m"; path = "../NSString+JKBase64.m"; sourceTree = "<group>"; };
 		431F64DB20F8F1DE0087DB8E /* NSString+JKNormalRegex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+JKNormalRegex.h"; path = "../../../../Desktop/leiku/NSString+JKNormalRegex.h"; sourceTree = "<group>"; };
 		431F64DC20F8F1DE0087DB8E /* NSString+JKNormalRegex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+JKNormalRegex.m"; path = "../../../../Desktop/leiku/NSString+JKNormalRegex.m"; sourceTree = "<group>"; };
 		43205DCF20DD25F000AD6952 /* UIView+Genie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Genie.m"; sourceTree = "<group>"; };
@@ -705,6 +705,10 @@
 		434DDB4B20C92B4E00191FC1 /* JKCategories */ = {
 			isa = PBXGroup;
 			children = (
+				43968A6820AC398B00149DCC /* NSObject+Safe.h */,
+				43968A6920AC398C00149DCC /* NSObject+Safe.m */,
+				431F64D820F8F1C00087DB8E /* NSString+JKBase64.h */,
+				431F64D920F8F1C00087DB8E /* NSString+JKBase64.m */,
 				431F64DB20F8F1DE0087DB8E /* NSString+JKNormalRegex.h */,
 				431F64DC20F8F1DE0087DB8E /* NSString+JKNormalRegex.m */,
 				431F64C920F794E70087DB8E /* UINavigationController+JKTransitions.h */,
@@ -1008,12 +1012,8 @@
 		43968A6720AC397000149DCC /* Untils */ = {
 			isa = PBXGroup;
 			children = (
-				431F64D820F8F1C00087DB8E /* NSString+JKBase64.h */,
-				431F64D920F8F1C00087DB8E /* NSString+JKBase64.m */,
 				434DDB4B20C92B4E00191FC1 /* JKCategories */,
 				9314D1E420C53ACE00BB2429 /* SLHelper */,
-				43968A6820AC398B00149DCC /* NSObject+Safe.h */,
-				43968A6920AC398C00149DCC /* NSObject+Safe.m */,
 			);
 			path = Untils;
 			sourceTree = "<group>";
