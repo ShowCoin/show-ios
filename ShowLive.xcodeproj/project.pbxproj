@@ -42,6 +42,7 @@
 		431F64CB20F794E80087DB8E /* UINavigationController+JKTransitions.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F64CA20F794E70087DB8E /* UINavigationController+JKTransitions.m */; };
 		431F64DA20F8F1C00087DB8E /* NSString+JKBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F64D920F8F1C00087DB8E /* NSString+JKBase64.m */; };
 		431F64DD20F8F1DE0087DB8E /* NSString+JKNormalRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F64DC20F8F1DE0087DB8E /* NSString+JKNormalRegex.m */; };
+		431F64E020F8F2100087DB8E /* NSString+JKPinyin.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F64DF20F8F2100087DB8E /* NSString+JKPinyin.m */; };
 		43205DD120DD25F000AD6952 /* UIView+Genie.m in Sources */ = {isa = PBXBuildFile; fileRef = 43205DCF20DD25F000AD6952 /* UIView+Genie.m */; };
 		43205DD420DD263400AD6952 /* UIView+Debug.m in Sources */ = {isa = PBXBuildFile; fileRef = 43205DD220DD263300AD6952 /* UIView+Debug.m */; };
 		43205DD720DD264B00AD6952 /* UITextViewDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43205DD620DD264B00AD6952 /* UITextViewDemoViewController.m */; };
@@ -272,6 +273,8 @@
 		431F64D920F8F1C00087DB8E /* NSString+JKBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+JKBase64.m"; path = "../NSString+JKBase64.m"; sourceTree = "<group>"; };
 		431F64DB20F8F1DE0087DB8E /* NSString+JKNormalRegex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+JKNormalRegex.h"; path = "../../../../Desktop/leiku/NSString+JKNormalRegex.h"; sourceTree = "<group>"; };
 		431F64DC20F8F1DE0087DB8E /* NSString+JKNormalRegex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+JKNormalRegex.m"; path = "../../../../Desktop/leiku/NSString+JKNormalRegex.m"; sourceTree = "<group>"; };
+		431F64DE20F8F2100087DB8E /* NSString+JKPinyin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+JKPinyin.h"; path = "../../../../Desktop/leiku/NSString+JKPinyin.h"; sourceTree = "<group>"; };
+		431F64DF20F8F2100087DB8E /* NSString+JKPinyin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+JKPinyin.m"; path = "../../../../Desktop/leiku/NSString+JKPinyin.m"; sourceTree = "<group>"; };
 		43205DCF20DD25F000AD6952 /* UIView+Genie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Genie.m"; sourceTree = "<group>"; };
 		43205DD020DD25F000AD6952 /* UIView+Genie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Genie.h"; sourceTree = "<group>"; };
 		43205DD220DD263300AD6952 /* UIView+Debug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Debug.m"; sourceTree = "<group>"; };
@@ -705,6 +708,8 @@
 		434DDB4B20C92B4E00191FC1 /* JKCategories */ = {
 			isa = PBXGroup;
 			children = (
+				431F64DE20F8F2100087DB8E /* NSString+JKPinyin.h */,
+				431F64DF20F8F2100087DB8E /* NSString+JKPinyin.m */,
 				43968A6820AC398B00149DCC /* NSObject+Safe.h */,
 				43968A6920AC398C00149DCC /* NSObject+Safe.m */,
 				431F64D820F8F1C00087DB8E /* NSString+JKBase64.h */,
@@ -1681,6 +1686,7 @@
 				4325537520D8B59000FC0258 /* NSArray+JKBlock.m in Sources */,
 				431CB4D520F499580043B0AC /* NSOperationDemoViewController.m in Sources */,
 				435D4C9520F092D600C8DC85 /* NSMutableURLRequest+JKUpload.m in Sources */,
+				431F64E020F8F2100087DB8E /* NSString+JKPinyin.m in Sources */,
 				437921F320ECC4C000B2EC88 /* NSData+JKPCM.m in Sources */,
 				434DDB5120C9326800191FC1 /* CALayer+JKBorderColor.m in Sources */,
 				435D4C7A20F0916900C8DC85 /* NSFileManager+JKPaths.m in Sources */,
