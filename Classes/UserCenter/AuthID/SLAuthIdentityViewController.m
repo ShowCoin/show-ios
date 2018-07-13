@@ -198,5 +198,17 @@
     };
 }
 
+- (void)submitAction {
+    [self.prosView showAuthImageType:SLAuthImageTypeSuccess];
+    [self.consView showAuthImageType:SLAuthImageTypeFailed];
+    [self.handView showAuthImageType:SLAuthImageTypeNormal];
+}
+
+- (void)dealloc {
+    NSLog(@"%s", __func__);
+    if (self.modalView) {
+        [self.modalView disMiss];
+    }
+}
 
 @end
