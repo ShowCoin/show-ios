@@ -45,6 +45,7 @@
 		431F64E020F8F2100087DB8E /* NSString+JKPinyin.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F64DF20F8F2100087DB8E /* NSString+JKPinyin.m */; };
 		431F64E320F8F2310087DB8E /* NSString+JKRemoveEmoji.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F64E120F8F2300087DB8E /* NSString+JKRemoveEmoji.m */; };
 		431F64E620F8F23F0087DB8E /* NSString+JKScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F64E520F8F23F0087DB8E /* NSString+JKScore.m */; };
+		431F64E920F8F2530087DB8E /* NSString+JKSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F64E820F8F2520087DB8E /* NSString+JKSize.m */; };
 		43205DD120DD25F000AD6952 /* UIView+Genie.m in Sources */ = {isa = PBXBuildFile; fileRef = 43205DCF20DD25F000AD6952 /* UIView+Genie.m */; };
 		43205DD420DD263400AD6952 /* UIView+Debug.m in Sources */ = {isa = PBXBuildFile; fileRef = 43205DD220DD263300AD6952 /* UIView+Debug.m */; };
 		43205DD720DD264B00AD6952 /* UITextViewDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43205DD620DD264B00AD6952 /* UITextViewDemoViewController.m */; };
@@ -281,6 +282,8 @@
 		431F64E220F8F2300087DB8E /* NSString+JKRemoveEmoji.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JKRemoveEmoji.h"; sourceTree = "<group>"; };
 		431F64E420F8F23E0087DB8E /* NSString+JKScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JKScore.h"; sourceTree = "<group>"; };
 		431F64E520F8F23F0087DB8E /* NSString+JKScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JKScore.m"; sourceTree = "<group>"; };
+		431F64E720F8F2520087DB8E /* NSString+JKSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JKSize.h"; sourceTree = "<group>"; };
+		431F64E820F8F2520087DB8E /* NSString+JKSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JKSize.m"; sourceTree = "<group>"; };
 		43205DCF20DD25F000AD6952 /* UIView+Genie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Genie.m"; sourceTree = "<group>"; };
 		43205DD020DD25F000AD6952 /* UIView+Genie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Genie.h"; sourceTree = "<group>"; };
 		43205DD220DD263300AD6952 /* UIView+Debug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Debug.m"; sourceTree = "<group>"; };
@@ -714,6 +717,8 @@
 		434DDB4B20C92B4E00191FC1 /* JKCategories */ = {
 			isa = PBXGroup;
 			children = (
+				431F64E720F8F2520087DB8E /* NSString+JKSize.h */,
+				431F64E820F8F2520087DB8E /* NSString+JKSize.m */,
 				431F64E420F8F23E0087DB8E /* NSString+JKScore.h */,
 				431F64E520F8F23F0087DB8E /* NSString+JKScore.m */,
 				431F64E220F8F2300087DB8E /* NSString+JKRemoveEmoji.h */,
@@ -1657,6 +1662,7 @@
 				431F64C820F794D20087DB8E /* UINavigationControllerDemoViewController.m in Sources */,
 				4325536C20D8B53400FC0258 /* MKMapView+JKBetterMaps.m in Sources */,
 				43D87B3520EB6E7000E991D6 /* UIResponderDemoViewController.m in Sources */,
+				431F64E920F8F2530087DB8E /* NSString+JKSize.m in Sources */,
 				4374EB1C20F62FDD00BB947F /* NSString+JKHTML.m in Sources */,
 				7289901720F794D30044E74A /* ShowSettingViewController.m in Sources */,
 				435D4C7120EF422700C8DC85 /* NSException+JKTrace.m in Sources */,
