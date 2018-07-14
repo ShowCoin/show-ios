@@ -165,7 +165,11 @@ typedef NS_ENUM(NSUInteger, JQconstraintType) {
 };
 typedef NS_ENUM(NSUInteger, JQconstraint2ViewType) {
     //     _________         ________
-   
+    //     |       |         |      |
+    //     |   *---|----0----|---*  |
+    //     |       |         |      |
+    //     ---------         --------
+    constraint2ViewTypeDivideDistance,//中心点距离等分
     
     //     _________
     //     |       |
