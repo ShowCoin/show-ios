@@ -27,7 +27,19 @@ typedef NS_ENUM(NSUInteger, JQconstraintType) {
     //     ---------
     constraintStickyTypeCenter,//中心点
     
-   
+    //吸附View内边
+    //     ---------
+    //     |       |
+    //     |      o|
+    //     |       |
+    //     ---------
+    constraintStickyTypeInsideRightEdge,//内边1----Edge
+    //     ---------
+    //     |       |
+    //     |o      |
+    //     |       |
+    //     ---------
+  
     
 };
 
