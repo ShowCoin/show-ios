@@ -112,7 +112,12 @@ typedef NS_ENUM(NSUInteger, JQconstraintType) {
     //     |       |
     //     ---------
     constraintStickyTypeOutsideRightEdgeTop,//外右边1,吸顶----Corner
- ,//外右边1,吸底部----Corner
+    //     _________
+    //     |       |
+    //     |       |
+    //     |       |o
+    //     ---------
+    constraintStickyTypeOutsideRightEdgeBottom,//外右边1,吸底部----Corner
     
     //     o
     //     ---------
@@ -149,13 +154,7 @@ typedef NS_ENUM(NSUInteger, JQconstraintType) {
     //     ---------
     //     o
     constraintStickyTypeOutsideLowerEdgeLeft,//外顶边4,吸左边----Corner
-    //     _________
-    //     |       |
-    //     |       |
-    //     |       |
-    //     ---------
-    //             o
-    constraintStickyTypeOutsideLowerEdgeRight,//外顶边4,吸右边----Corner
+  
     
 };
 typedef NS_ENUM(NSUInteger, JQconstraint2ViewType) {
