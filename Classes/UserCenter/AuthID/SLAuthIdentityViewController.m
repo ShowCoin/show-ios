@@ -172,7 +172,7 @@
 }
 
 /**
- <#Description#>
+ selectProsImage
  */
 - (void)selectProsImage {
     ImagePicker.sharedInstance.currentViewController = self;
