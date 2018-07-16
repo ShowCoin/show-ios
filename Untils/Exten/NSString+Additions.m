@@ -21,4 +21,14 @@
     (([value isKindOfClass:[NSString class]] && [[value stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length]));
 }
 
+- (BOOL)isNilOrEmpty {
+    
+    if (!self)
+        return YES;
+    else if (self.length == 0)
+        return YES;
+    else
+        return NO;
+}
+
 @end
