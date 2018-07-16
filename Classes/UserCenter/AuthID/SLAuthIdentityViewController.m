@@ -180,6 +180,9 @@
     };
 }
 
+/**
+ <#Description#>
+ */
 - (void)selectConsImage {
     ImagePicker.sharedInstance.currentViewController = self;
     [ImagePicker.sharedInstance showActionSheetWithViewController:self];
@@ -190,7 +193,7 @@
 }
 
 /**
- <#Description#>
+ selectHandImage
  */
 - (void)selectHandImage {
     ImagePicker.sharedInstance.currentViewController = self;
