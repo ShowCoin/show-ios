@@ -7,6 +7,9 @@
     NSString *string = [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     return string;
 }
-
+- (NSString *)trimString:(NSString *)string {
+    
+    return [self stringByReplacingOccurrencesOfString:string withString:@""];
+}
 
 @end
