@@ -124,6 +124,9 @@
     self.submit = button;
 }
 
+/**
+ <#Description#>
+ */
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     NSLog(@"%s", __func__);
