@@ -50,5 +50,19 @@
     CFRelease(uuidObj);
     return uuidString;
 }
-
+- (NSString*) urlEncodedString {
+    
+    CFStringRef encodedCFString = CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,
+                                                                          (__bridge CFStringRef) self,
+                                                                          nil,
+                                                                          CFSTR("?!@#$^&%*+,:;='\"`<>()[]{}/\\|~ "),
+                                                                          kCFStringEncodingUTF8);
+    
+    NSString *encodedString = [[NSString alloc] initWithString:(__bridge_transfer NSString*) encodedCFString];
+    
+    if(!encodedString)
+        encodedString = @"";
+    
+    return encodedString;
+}
 @end
