@@ -129,7 +129,7 @@
  */
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
-    NSLog(@"%s", __func__);
+
     CGFloat w = self.view.frame.size.width;
     CGFloat h = self.view.frame.size.height;
     self.scrollView.frame = CGRectMake(0, 0, w, h);
