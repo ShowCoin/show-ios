@@ -204,6 +204,9 @@
     [self.handView showAuthImageType:SLAuthImageTypeNormal];
 }
 
+/**
+ <#Description#>
+ */
 - (void)dealloc {
     NSLog(@"%s", __func__);
     if (self.modalView) {
