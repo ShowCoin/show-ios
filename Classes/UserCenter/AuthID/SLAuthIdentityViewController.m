@@ -55,7 +55,7 @@
 }
 
 /**
- <#Description#>
+ setupUI
  */
 - (void)setupUI {
     UIScrollView *scrollView = [[UIScrollView alloc] init];
