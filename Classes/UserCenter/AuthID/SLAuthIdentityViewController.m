@@ -198,6 +198,9 @@
     };
 }
 
+/**
+ <#Description#>
+ */
 - (void)submitAction {
     [self.prosView showAuthImageType:SLAuthImageTypeSuccess];
     [self.consView showAuthImageType:SLAuthImageTypeFailed];
