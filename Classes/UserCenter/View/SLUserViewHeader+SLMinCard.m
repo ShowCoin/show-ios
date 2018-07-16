@@ -208,4 +208,23 @@
  
 }
 
++(CGFloat)minCardHeightWithDesc:(NSString *)desc{
+    NSMutableParagraphStyle *paraStyle = [[NSMutableParagraphStyle alloc] init];
+    paraStyle.lineBreakMode = NSLineBreakByCharWrapping;
+    paraStyle.alignment = NSTextAlignmentCenter;
+    paraStyle.lineSpacing = 0; //设置行间距
+    paraStyle.hyphenationFactor = 1.0;
+    paraStyle.firstLineHeadIndent = 0.0;
+    paraStyle.paragraphSpacingBefore = 0.0;
+    paraStyle.headIndent = 0;
+    paraStyle.tailIndent = 0;
+    //    设置字间距 NSKernAttributeName:@1.5f
+    NSDictionary *strdic = @{NSFontAttributeName:Font_Regular(14*Proportion375), NSParagraphStyleAttributeName:paraStyle, NSKernAttributeName:@0.5f
+                             };
+    NSAttributedString *attributeStr = [[NSAttributedString alloc] initWithString:desc attributes:strdic];
+    
+    CGSize size = CGSizeMake(kMainScreenWidth-40, CGFLOAT_MAX);
+    YYTextLayout *layout = [YYTextLayout layoutWithContainerSize:size text:attributeStr];
+    return layout.textBoundingSize.height + 410*Proportion375 +KNaviBarSafeBottomMargin;
+}
 @end
