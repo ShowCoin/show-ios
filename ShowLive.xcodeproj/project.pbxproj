@@ -20,6 +20,7 @@
 		431BBB6520DBCB05006A3D50 /* UIView+JKConstraints.m in Sources */ = {isa = PBXBuildFile; fileRef = 431BBB6420DBCB04006A3D50 /* UIView+JKConstraints.m */; };
 		431BBB6820DBCB38006A3D50 /* UIView+JKBlockGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 431BBB6620DBCB37006A3D50 /* UIView+JKBlockGesture.m */; };
 		431BBB6B20DBCB53006A3D50 /* UIView+JKAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 431BBB6920DBCB53006A3D50 /* UIView+JKAnimation.m */; };
+		431C075D20FC8D0C00479559 /* NSString+JKUUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 431C075C20FC8D0C00479559 /* NSString+JKUUID.m */; };
 		431CB4C620F498860043B0AC /* NSObject+JKEasyCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 431CB4C520F498850043B0AC /* NSObject+JKEasyCopy.m */; };
 		431CB4C920F498EF0043B0AC /* NSObject+JKGCD.m in Sources */ = {isa = PBXBuildFile; fileRef = 431CB4C820F498EF0043B0AC /* NSObject+JKGCD.m */; };
 		431CB4CC20F499070043B0AC /* NSObject+JKKVOBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 431CB4CB20F499060043B0AC /* NSObject+JKKVOBlocks.m */; };
@@ -234,6 +235,8 @@
 		431BBB6720DBCB37006A3D50 /* UIView+JKBlockGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JKBlockGesture.h"; sourceTree = "<group>"; };
 		431BBB6920DBCB53006A3D50 /* UIView+JKAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JKAnimation.m"; sourceTree = "<group>"; };
 		431BBB6A20DBCB53006A3D50 /* UIView+JKAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JKAnimation.h"; sourceTree = "<group>"; };
+		431C075B20FC8D0B00479559 /* NSString+JKUUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JKUUID.h"; sourceTree = "<group>"; };
+		431C075C20FC8D0C00479559 /* NSString+JKUUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JKUUID.m"; sourceTree = "<group>"; };
 		431CB4C420F498850043B0AC /* NSObject+JKEasyCopy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JKEasyCopy.h"; sourceTree = "<group>"; };
 		431CB4C520F498850043B0AC /* NSObject+JKEasyCopy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JKEasyCopy.m"; sourceTree = "<group>"; };
 		431CB4C720F498EF0043B0AC /* NSObject+JKGCD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JKGCD.h"; sourceTree = "<group>"; };
@@ -723,6 +726,8 @@
 		434DDB4B20C92B4E00191FC1 /* JKCategories */ = {
 			isa = PBXGroup;
 			children = (
+				431C075B20FC8D0B00479559 /* NSString+JKUUID.h */,
+				431C075C20FC8D0C00479559 /* NSString+JKUUID.m */,
 				431F64ED20F8F2710087DB8E /* NSString+JKTrims.h */,
 				431F64EE20F8F2720087DB8E /* NSString+JKTrims.m */,
 				431F64EA20F8F2610087DB8E /* NSString+JKStringPages.h */,
@@ -1795,6 +1800,7 @@
 				435D4C8F20F092B000C8DC85 /* NSManagedObjectContext+JKFetchRequestsConstructors.m in Sources */,
 				9391AA9720C03A4300D520F1 /* SLWebViewJSFuncNameConst.m in Sources */,
 				435D4C4120EDEA4C00C8DC85 /* NSDate+JKExtension.m in Sources */,
+				431C075D20FC8D0C00479559 /* NSString+JKUUID.m in Sources */,
 				43D87B2920EB6D9900E991D6 /* UIScrollView+EmptyDataSet.m in Sources */,
 				437921F020ECC4B100B2EC88 /* NSData+JKHash.m in Sources */,
 				4325536F20D8B56400FC0258 /* MKMapView+JKMoveLogo.m in Sources */,
