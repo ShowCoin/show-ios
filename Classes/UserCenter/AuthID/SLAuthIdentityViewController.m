@@ -164,7 +164,7 @@
 
 
 /**
- <#Description#>
+ selectCity
  */
 - (void)selectCity {
     if (!self.modalView) {
