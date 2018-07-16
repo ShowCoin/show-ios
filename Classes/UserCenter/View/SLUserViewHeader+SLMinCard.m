@@ -114,27 +114,51 @@
             make.height.equalTo(@(20*Proportion375));
             
         }];
- 
+        [self.constellationLab mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.showLevel.mas_bottom).with.offset(6*Proportion375);
+            make.left.equalTo(self.cityLab.mas_right).with.offset(10*Proportion375);
+            make.size.mas_equalTo(CGSizeMake(50*Proportion375, 20*Proportion375));
+        }];
+        [self.sexbg mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.showLevel.mas_bottom).with.offset(6*Proportion375);
+            make.right.equalTo(self.cityLab.mas_left).with.offset(-10*Proportion375);
+            make.size.mas_equalTo(CGSizeMake(50*Proportion375, 20*Proportion375));
+        }];
+        [self.sexImg mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.sexbg).with.offset(5*Proportion375);
+            make.left.equalTo(self.sexbg).with.offset(7*Proportion375);
+            make.size.mas_equalTo(CGSizeMake(10*Proportion375, 10*Proportion375));
+        }];
+        [self.sexlab mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.sexbg);
+            make.left.equalTo(self.sexImg.mas_right).with.offset(1*Proportion375);
+            make.size.mas_equalTo(CGSizeMake(30*Proportion375, 20*Proportion375));
+        }];
+        [self.wordsLab mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.cityLab.mas_bottom).with.offset(20*Proportion375);
+            make.left.equalTo(self.scrollerContentView).with.offset(20*Proportion375);
+            make.width.equalTo(@(kMainScreenWidth-40*Proportion375));
+        }];
+        
+
+        [self.fansBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.wordsLab.mas_bottom).with.offset(20*Proportion375);
+            make.centerX.equalTo(self.scrollerContentView);
+            make.size.mas_equalTo(CGSizeMake(100*Proportion375, 40*Proportion375));
+        }];
+        [self.concerBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.fansBtn);
+            make.right.equalTo(self.fansBtn.mas_left);
+            make.size.mas_equalTo(CGSizeMake(100*Proportion375, 40*Proportion375));
+        }];
+        [self.walletBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.fansBtn);
+            make.left.equalTo(self.fansBtn.mas_right);
+            make.size.mas_equalTo(CGSizeMake(100*Proportion375, 40*Proportion375));
+        }];
+    }
     return self;
 }
 
-
-
-- (void)adjustMiniCard{
-    self.listBtn.hidden = YES ;
-    self.giftStoreBtn.hidden = YES ;
-    self.settingBtn.hidden = YES;
-    self.shareBtn.hidden = YES ;
-    self.worksBtn.hidden = YES ;
-    self.likesBtn.hidden = YES ;
-    self.leftBtn.hidden = YES ;
-    
-    [self.headImgView mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self);
-        make.left.equalTo(self);
-        make.width.equalTo(self);
-        make.height.equalTo(self);
-    }];
-}
 
 @end
