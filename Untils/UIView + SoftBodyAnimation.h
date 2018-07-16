@@ -35,6 +35,10 @@
 
 -(void)touchDownBodyAnimation;
 
+//正常等比放大
+-(void)startScaleMotion;
+-(void)stopScaleMotion;
+
 
 
 
