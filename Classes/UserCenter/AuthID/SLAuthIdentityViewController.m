@@ -181,7 +181,7 @@
 }
 
 /**
- <#Description#>
+ selectConsImage
  */
 - (void)selectConsImage {
     ImagePicker.sharedInstance.currentViewController = self;
