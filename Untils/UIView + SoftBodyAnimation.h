@@ -16,6 +16,11 @@
  是否开启软体动画
  */
 @property(nonatomic,assign) BOOL isPlayBodyAnimation;
+/*
+ 是否正在缩放X轴
+ */
+@property(nonatomic,assign) BOOL isAnimationZoomX;
+
 
 @end
 
