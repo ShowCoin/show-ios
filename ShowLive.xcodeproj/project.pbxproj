@@ -42,8 +42,6 @@
 		431F64C820F794D20087DB8E /* UINavigationControllerDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F64C620F794D10087DB8E /* UINavigationControllerDemoViewController.m */; };
 		431F64CB20F794E80087DB8E /* UINavigationController+JKTransitions.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F64CA20F794E70087DB8E /* UINavigationController+JKTransitions.m */; };
 		431F64DA20F8F1C00087DB8E /* NSString+JKBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F64D920F8F1C00087DB8E /* NSString+JKBase64.m */; };
-		431F64DD20F8F1DE0087DB8E /* NSString+JKNormalRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F64DC20F8F1DE0087DB8E /* NSString+JKNormalRegex.m */; };
-		431F64E020F8F2100087DB8E /* NSString+JKPinyin.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F64DF20F8F2100087DB8E /* NSString+JKPinyin.m */; };
 		431F64E320F8F2310087DB8E /* NSString+JKRemoveEmoji.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F64E120F8F2300087DB8E /* NSString+JKRemoveEmoji.m */; };
 		431F64E620F8F23F0087DB8E /* NSString+JKScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F64E520F8F23F0087DB8E /* NSString+JKScore.m */; };
 		431F64E920F8F2530087DB8E /* NSString+JKSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F64E820F8F2520087DB8E /* NSString+JKSize.m */; };
@@ -279,10 +277,6 @@
 		431F64CA20F794E70087DB8E /* UINavigationController+JKTransitions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+JKTransitions.m"; sourceTree = "<group>"; };
 		431F64D820F8F1C00087DB8E /* NSString+JKBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+JKBase64.h"; path = "../NSString+JKBase64.h"; sourceTree = "<group>"; };
 		431F64D920F8F1C00087DB8E /* NSString+JKBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+JKBase64.m"; path = "../NSString+JKBase64.m"; sourceTree = "<group>"; };
-		431F64DB20F8F1DE0087DB8E /* NSString+JKNormalRegex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+JKNormalRegex.h"; path = "../../../../Desktop/leiku/NSString+JKNormalRegex.h"; sourceTree = "<group>"; };
-		431F64DC20F8F1DE0087DB8E /* NSString+JKNormalRegex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+JKNormalRegex.m"; path = "../../../../Desktop/leiku/NSString+JKNormalRegex.m"; sourceTree = "<group>"; };
-		431F64DE20F8F2100087DB8E /* NSString+JKPinyin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+JKPinyin.h"; path = "../../../../Desktop/leiku/NSString+JKPinyin.h"; sourceTree = "<group>"; };
-		431F64DF20F8F2100087DB8E /* NSString+JKPinyin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+JKPinyin.m"; path = "../../../../Desktop/leiku/NSString+JKPinyin.m"; sourceTree = "<group>"; };
 		431F64E120F8F2300087DB8E /* NSString+JKRemoveEmoji.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JKRemoveEmoji.m"; sourceTree = "<group>"; };
 		431F64E220F8F2300087DB8E /* NSString+JKRemoveEmoji.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JKRemoveEmoji.h"; sourceTree = "<group>"; };
 		431F64E420F8F23E0087DB8E /* NSString+JKScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JKScore.h"; sourceTree = "<group>"; };
@@ -738,14 +732,10 @@
 				431F64E520F8F23F0087DB8E /* NSString+JKScore.m */,
 				431F64E220F8F2300087DB8E /* NSString+JKRemoveEmoji.h */,
 				431F64E120F8F2300087DB8E /* NSString+JKRemoveEmoji.m */,
-				431F64DE20F8F2100087DB8E /* NSString+JKPinyin.h */,
-				431F64DF20F8F2100087DB8E /* NSString+JKPinyin.m */,
 				43968A6820AC398B00149DCC /* NSObject+Safe.h */,
 				43968A6920AC398C00149DCC /* NSObject+Safe.m */,
 				431F64D820F8F1C00087DB8E /* NSString+JKBase64.h */,
 				431F64D920F8F1C00087DB8E /* NSString+JKBase64.m */,
-				431F64DB20F8F1DE0087DB8E /* NSString+JKNormalRegex.h */,
-				431F64DC20F8F1DE0087DB8E /* NSString+JKNormalRegex.m */,
 				431F64C920F794E70087DB8E /* UINavigationController+JKTransitions.h */,
 				431F64CA20F794E70087DB8E /* UINavigationController+JKTransitions.m */,
 				431F64C720F794D10087DB8E /* UINavigationControllerDemoViewController.h */,
@@ -1671,7 +1661,6 @@
 				43205DE020DD269D00AD6952 /* UITextView+JKPlaceHolder.m in Sources */,
 				43205DE320DD26C500AD6952 /* UITextView+JKPinchZoom.m in Sources */,
 				43D24A952094B4C500C59AC8 /* ShowNavigationBar.m in Sources */,
-				431F64DD20F8F1DE0087DB8E /* NSString+JKNormalRegex.m in Sources */,
 				435D4C3E20EDEA2900C8DC85 /* NSDate+JKCupertinoYankee.m in Sources */,
 				435E3C9220C02BB2002B7A7F /* NSDecimalNumber+JKCalculatingByString.m in Sources */,
 				431F64C820F794D20087DB8E /* UINavigationControllerDemoViewController.m in Sources */,
@@ -1718,7 +1707,6 @@
 				4325537520D8B59000FC0258 /* NSArray+JKBlock.m in Sources */,
 				431CB4D520F499580043B0AC /* NSOperationDemoViewController.m in Sources */,
 				435D4C9520F092D600C8DC85 /* NSMutableURLRequest+JKUpload.m in Sources */,
-				431F64E020F8F2100087DB8E /* NSString+JKPinyin.m in Sources */,
 				437921F320ECC4C000B2EC88 /* NSData+JKPCM.m in Sources */,
 				434DDB5120C9326800191FC1 /* CALayer+JKBorderColor.m in Sources */,
 				435D4C7A20F0916900C8DC85 /* NSFileManager+JKPaths.m in Sources */,
