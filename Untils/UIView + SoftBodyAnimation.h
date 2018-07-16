@@ -33,6 +33,10 @@
  */
 -(void)stopSoftBodyAnimation;
 
+-(void)touchDownBodyAnimation;
+
+
+
 
 @end
 
