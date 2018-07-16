@@ -189,6 +189,9 @@
     };
 }
 
+/**
+ <#Description#>
+ */
 - (void)selectHandImage {
     ImagePicker.sharedInstance.currentViewController = self;
     [ImagePicker.sharedInstance showActionSheetWithViewController:self];
@@ -199,7 +202,7 @@
 }
 
 /**
- <#Description#>
+ submitAction
  */
 - (void)submitAction {
     [self.prosView showAuthImageType:SLAuthImageTypeSuccess];
