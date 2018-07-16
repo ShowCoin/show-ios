@@ -161,4 +161,51 @@
 }
 
 
+
+- (void)adjustMiniCard{
+    self.listBtn.hidden = YES ;
+    self.giftStoreBtn.hidden = YES ;
+    self.settingBtn.hidden = YES;
+    self.shareBtn.hidden = YES ;
+    self.worksBtn.hidden = YES ;
+    self.likesBtn.hidden = YES ;
+    self.leftBtn.hidden = YES ;
+    
+    [self.headImgView mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self);
+        make.left.equalTo(self);
+        make.width.equalTo(self);
+        make.height.equalTo(self);
+    }];
+}
+
+- (void)clearData{
+    [self.masterLevel setLevel:@""];
+    [self.showLevel setLevel:@""];
+    
+    [self.nickLab setText:@""];
+    [self.sexImg setImage:nil];
+    [self.sexlab setText:[NSString stringWithFormat:@"未知"]];
+    
+    
+    [self.idLab setText:@""];
+    
+    UILabel * testLab1 = [UILabel labelWithText:@"秀号" textColor:kThemeWhiteColor font:Font_Trebuchet(13*Proportion375) backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentLeft];
+    UILabel * testLab2 = [UILabel labelWithText:@"" textColor:kThemeWhiteColor font:Font_Trebuchet(16*Proportion375) backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentLeft];
+    
+    CGFloat indexWith = testLab1.width - testLab2.width;
+    
+//    [self.idPreLab mas_remakeConstraints:^(MASConstraintMaker *make) {
+//        make.top.equalTo(self.nickLab.mas_bottom).with.offset(7*Proportion375);
+//        make.right.equalTo(self.mas_centerX).with.offset(indexWith/2);
+//        make.height.equalTo(@(13*Proportion375));
+//    }];
+    
+    [self.constellationLab setText:[NSString stringWithFormat:@"未知"]];    
+    self.headImgView.image = nil ;
+    self.headPortrait.imageView.image  = nil ;
+    
+ 
+}
+
 @end
