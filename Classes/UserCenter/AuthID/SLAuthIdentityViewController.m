@@ -171,6 +171,9 @@
     [self.modalView show];
 }
 
+/**
+ <#Description#>
+ */
 - (void)selectProsImage {
     ImagePicker.sharedInstance.currentViewController = self;
     [ImagePicker.sharedInstance showActionSheetWithViewController:self];
