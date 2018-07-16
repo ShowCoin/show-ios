@@ -21,6 +21,6 @@
  */
 @property(nonatomic,assign) BOOL isAnimationZoomX;
 
+@property(nonatomic,assign) BOOL isScaleXY;
 
-@end
 
