@@ -12,6 +12,10 @@
 #pragma private property 
 
 
+/*
+ 是否开启软体动画
+ */
+@property(nonatomic,assign) BOOL isPlayBodyAnimation;
 
 @end
 
