@@ -54,6 +54,9 @@
     [self viewDidLayoutSubviews];
 }
 
+/**
+ setupUI
+ */
 - (void)setupUI {
     UIScrollView *scrollView = [[UIScrollView alloc] init];
     scrollView.showsVerticalScrollIndicator = NO;
@@ -124,9 +127,12 @@
     self.submit = button;
 }
 
+/**
+ viewDidLayoutSubviews
+ */
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
-    NSLog(@"%s", __func__);
+
     CGFloat w = self.view.frame.size.width;
     CGFloat h = self.view.frame.size.height;
     self.scrollView.frame = CGRectMake(0, 0, w, h);
@@ -163,6 +169,9 @@
 
 
 
+/**
+ selectCity
+ */
 - (void)selectCity {
     if (!self.modalView) {
         self.modalView = [[SLCountryModalView alloc] initWithSuperView:self.view animationTravel:0.25 viewHeight:200];
@@ -171,6 +180,9 @@
     [self.modalView show];
 }
 
+/**
+ selectProsImage
+ */
 - (void)selectProsImage {
     ImagePicker.sharedInstance.currentViewController = self;
     [ImagePicker.sharedInstance showActionSheetWithViewController:self];
@@ -180,6 +192,9 @@
     };
 }
 
+/**
+ selectConsImage
+ */
 - (void)selectConsImage {
     ImagePicker.sharedInstance.currentViewController = self;
     [ImagePicker.sharedInstance showActionSheetWithViewController:self];
@@ -189,6 +204,9 @@
     };
 }
 
+/**
+ selectHandImage
+ */
 - (void)selectHandImage {
     ImagePicker.sharedInstance.currentViewController = self;
     [ImagePicker.sharedInstance showActionSheetWithViewController:self];
@@ -198,12 +216,18 @@
     };
 }
 
+/**
+ submitAction
+ */
 - (void)submitAction {
     [self.prosView showAuthImageType:SLAuthImageTypeSuccess];
     [self.consView showAuthImageType:SLAuthImageTypeFailed];
     [self.handView showAuthImageType:SLAuthImageTypeNormal];
 }
 
+/**
+ dealloc
+ */
 - (void)dealloc {
     NSLog(@"%s", __func__);
     if (self.modalView) {

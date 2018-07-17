@@ -187,6 +187,9 @@
 		724FF37D20E6680500DD40EB /* SLUserInfoListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 724FF37C20E6680500DD40EB /* SLUserInfoListCell.m */; };
 		7289901720F794D30044E74A /* ShowSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7289901620F794D20044E74A /* ShowSettingViewController.m */; };
 		7289901B20F795EA0044E74A /* SLWithdrawAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 7289901820F795E90044E74A /* SLWithdrawAlert.m */; };
+		72A0088620FC9FE40051C643 /* SLBlankView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A0088520FC9FE40051C643 /* SLBlankView.m */; };
+		72A0088920FCA0710051C643 /* SLSafeCenterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A0088820FCA0710051C643 /* SLSafeCenterCell.m */; };
+		72A0088C20FCA1820051C643 /* SLUserViewHeader+SLMinCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A0088B20FCA1820051C643 /* SLUserViewHeader+SLMinCard.m */; };
 		72CA648D20EE4A710052E107 /* SLFansViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72CA648C20EE4A710052E107 /* SLFansViewController.m */; };
 		72FE9B6620621F59008DD3D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72FE9B6420621F59008DD3D5 /* LaunchScreen.storyboard */; };
 		72FE9B6920621F59008DD3D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FE9B6820621F59008DD3D5 /* main.m */; };
@@ -593,6 +596,11 @@
 		7289901920F795E90044E74A /* SLWithDrawIndentifyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWithDrawIndentifyCell.h; sourceTree = "<group>"; };
 		7289901A20F795EA0044E74A /* SLWithdrawAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWithdrawAlert.h; sourceTree = "<group>"; };
 		7290201820DBF3A600F02370 /* SLSafeCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLSafeCenterViewController.h; sourceTree = "<group>"; };
+		72A0088520FC9FE40051C643 /* SLBlankView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLBlankView.m; sourceTree = "<group>"; };
+		72A0088720FCA0490051C643 /* SLSafeCenterCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLSafeCenterCell.h; path = Classes/UserCenter/View/SLSafeCenterCell.h; sourceTree = SOURCE_ROOT; };
+		72A0088820FCA0710051C643 /* SLSafeCenterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLSafeCenterCell.m; path = Classes/UserCenter/View/SLSafeCenterCell.m; sourceTree = SOURCE_ROOT; };
+		72A0088A20FCA1820051C643 /* SLUserViewHeader+SLMinCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SLUserViewHeader+SLMinCard.h"; path = "Classes/UserCenter/View/SLUserViewHeader+SLMinCard.h"; sourceTree = SOURCE_ROOT; };
+		72A0088B20FCA1820051C643 /* SLUserViewHeader+SLMinCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "SLUserViewHeader+SLMinCard.m"; path = "Classes/UserCenter/View/SLUserViewHeader+SLMinCard.m"; sourceTree = SOURCE_ROOT; };
 		72C6166920A0C67500103C44 /* SLUrgeListAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLUrgeListAction.h; sourceTree = "<group>"; };
 		72C686F61D628C8898214FFC /* Pods-ShowLive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowLive.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShowLive/Pods-ShowLive.debug.xcconfig"; sourceTree = "<group>"; };
 		72C7B4F720C3EDE500065BC2 /* SLADView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLADView.h; sourceTree = "<group>"; };
@@ -1144,6 +1152,10 @@
 				724FF37920E6678D00DD40EB /* SLInfoHeaderView.m */,
 				724FF37B20E667E200DD40EB /* SLUserInfoListCell.h */,
 				724FF37C20E6680500DD40EB /* SLUserInfoListCell.m */,
+				72A0088720FCA0490051C643 /* SLSafeCenterCell.h */,
+				72A0088820FCA0710051C643 /* SLSafeCenterCell.m */,
+				72A0088A20FCA1820051C643 /* SLUserViewHeader+SLMinCard.h */,
+				72A0088B20FCA1820051C643 /* SLUserViewHeader+SLMinCard.m */,
 			);
 			path = setting;
 			sourceTree = "<group>";
@@ -1388,6 +1400,7 @@
 			children = (
 				9314D1E620C57AD100BB2429 /* singleChat */,
 				9391AA8C20C0369100D520F1 /* SLBlankView.h */,
+				72A0088520FC9FE40051C643 /* SLBlankView.m */,
 				9391AA8D20C036DC00D520F1 /* SLChatBusiness.h */,
 				9391AA8E20C0376B00D520F1 /* SLPureColorImageGenerate.h */,
 				9391AA9020C0380800D520F1 /* SLStringSizeCalculation.h */,
@@ -1718,6 +1731,7 @@
 				4374EB1C20F62FDD00BB947F /* NSString+JKHTML.m in Sources */,
 				7289901720F794D30044E74A /* ShowSettingViewController.m in Sources */,
 				435D4C7120EF422700C8DC85 /* NSException+JKTrace.m in Sources */,
+				72A0088620FC9FE40051C643 /* SLBlankView.m in Sources */,
 				72FE9B6920621F59008DD3D5 /* main.m in Sources */,
 				435E3C9020C02BB2002B7A7F /* NSNumber+JKRound.m in Sources */,
 				4374EB1320F62F9E00BB947F /* NSString+JKEmoji.m in Sources */,
@@ -1786,7 +1800,11 @@
 				435D4C8620F0920A00C8DC85 /* NSManagedObject+JKDictionary.m in Sources */,
 				4325535720CFE88D00FC0258 /* UIWebView+JKWebStorage.m in Sources */,
 				431CB4D220F499380043B0AC /* NSObject+JKRuntime.m in Sources */,
+<<<<<<< HEAD
 				431C076920FC8E3000479559 /* NSURL+JKParam.m in Sources */,
+=======
+				72A0088C20FCA1820051C643 /* SLUserViewHeader+SLMinCard.m in Sources */,
+>>>>>>> 324b7c89d691f987d57e9359cb18c000882d7c6c
 				434DDB6020C9335B00191FC1 /* WebView+Debug.m in Sources */,
 				431CB4E120F49A810043B0AC /* NSString+JKBase64.m in Sources */,
 				436B1EAB20DA2FF100419AC0 /* UIView+JKShake.m in Sources */,
@@ -1838,6 +1856,7 @@
 				93615AEB20C1453A000D5658 /* SLBaseWebViewController.m in Sources */,
 				4374EB1920F62FC700BB947F /* NSString+JKHash.m in Sources */,
 				4325535A20CFE8B100FC0258 /* UIWebVIew+JKSwipeGesture.m in Sources */,
+				72A0088920FCA0710051C643 /* SLSafeCenterCell.m in Sources */,
 				431CB4C920F498EF0043B0AC /* NSObject+JKGCD.m in Sources */,
 				435D4C9820F0931100C8DC85 /* NSNotificationCenter+JKMainThread.m in Sources */,
 				435D4C8F20F092B000C8DC85 /* NSManagedObjectContext+JKFetchRequestsConstructors.m in Sources */,
