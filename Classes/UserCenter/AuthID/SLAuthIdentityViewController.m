@@ -35,6 +35,9 @@
     [self setupUI];
 }
 
+/**
+ <#Description#>
+ */
 - (void)refreshAction {
     int i = arc4random_uniform(3);
     if (i == 0) {
