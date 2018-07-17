@@ -29,7 +29,7 @@
 @implementation SLAuthIdentityViewController
 
 /**
- <#Description#>
+ viewDidLoad
  */
 - (void)viewDidLoad {
     [super viewDidLoad];
