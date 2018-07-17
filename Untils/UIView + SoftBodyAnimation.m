@@ -8,7 +8,7 @@
 #import <objc/runtime.h>
 #import "UIView + SoftBodyAnimation.h"
 
-
+static const char *kisPlayBodyAnimation = "kisPlayBodyAnimation";
 
 
 @implementation UIView(SoftBodyAnimation)
