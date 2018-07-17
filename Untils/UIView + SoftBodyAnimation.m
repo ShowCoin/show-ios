@@ -83,5 +83,55 @@ static const char *kisScaleXY = "kisScaleXY";
     return num.boolValue;
 }
 
+-(void)setIsScaleXY:(BOOL)isScaleXY{
+    objc_setAssociatedObject(self, kisScaleXY, [NSNumber numberWithBool:isScaleXY], OBJC_ASSOCIATION_ASSIGN);
+}
 
+-(BOOL)isScaleXY{
+    NSNumber * num = (NSNumber *)objc_getAssociatedObject(self, kisScaleXY);
+    return num.boolValue;
+    
+}
+
+-(void)touchDownBodyAnimation{
+    [self stopSoftBodyAnimation];
+    __weak typeof(self) weakSelf = self;
+    [UIView animateWithDuration:0.15 delay:0 usingSpringWithDamping:1.0 initialSpringVelocity:.1 options:UIViewAnimationOptionCurveLinear animations:^{
+        weakSelf.transform = CGAffineTransformMakeScale(0.9, 0.9);
+    } completion:^(BOOL finished) {
+        if(finished){
+            [weakSelf touchDownBodyAnimationFinish];
+        }
+    }];
+}
+
+-(void)touchDownBodyAnimationFinish{
+    __weak typeof(self) weakSelf = self;
+    [UIView animateWithDuration:0.15 delay:0 usingSpringWithDamping:1.0 initialSpringVelocity:.1 options:UIViewAnimationOptionCurveLinear animations:^{
+        weakSelf.transform = CGAffineTransformMakeScale(1, 1);
+    } completion:^(BOOL finished) {
+        if(finished){
+            
+        }
+    }];
+}
+
+
+- (void)startSoftBodyAnimationWithView:(UIView *)view {
+    [self startSoftBodyAnimationWithView:view isZoom:YES];
+}
+
+- (void)startSoftBodyAnimationWithView:(UIView *)view isZoom:(BOOL)isZoom {
+    [UIView animateWithDuration:1.0 delay:0 options:UIViewAnimationOptionCurveLinear|UIViewAnimationOptionAllowUserInteraction  animations:^{
+        if(isZoom){
+            view.transform = CGAffineTransformMakeScale(1.04, 0.96);
+        }else{
+            view.transform = CGAffineTransformMakeScale(0.96, 1.04);
+        }
+    } completion:^(BOOL finished) {
+        if(finished){
+            [self startSoftBodyAnimationWithView:view isZoom:!isZoom];
+        }
+    }];
+}
 @end
