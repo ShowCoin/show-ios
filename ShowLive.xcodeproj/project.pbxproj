@@ -28,6 +28,9 @@
 		431C076C20FC8EB900479559 /* NSURL+JKQueryDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 431C076B20FC8EB900479559 /* NSURL+JKQueryDictionary.m */; };
 		431C077720FE279700479559 /* NSURLConnection+JKSelfSigned.m in Sources */ = {isa = PBXBuildFile; fileRef = 431C077520FE279600479559 /* NSURLConnection+JKSelfSigned.m */; };
 		431C077A20FE282600479559 /* NSURLDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 431C077920FE282600479559 /* NSURLDemoViewController.m */; };
+		431C077D20FE284300479559 /* NSURLRequest+JKParamsFromDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 431C077B20FE284300479559 /* NSURLRequest+JKParamsFromDictionary.m */; };
+		431C078020FE286F00479559 /* NSURLRequestDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 431C077F20FE286F00479559 /* NSURLRequestDemoViewController.m */; };
+		431C078320FE28BF00479559 /* NSURLSession+JKSynchronousTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 431C078120FE28BF00479559 /* NSURLSession+JKSynchronousTask.m */; };
 		431CB4C620F498860043B0AC /* NSObject+JKEasyCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 431CB4C520F498850043B0AC /* NSObject+JKEasyCopy.m */; };
 		431CB4C920F498EF0043B0AC /* NSObject+JKGCD.m in Sources */ = {isa = PBXBuildFile; fileRef = 431CB4C820F498EF0043B0AC /* NSObject+JKGCD.m */; };
 		431CB4CC20F499070043B0AC /* NSObject+JKKVOBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 431CB4CB20F499060043B0AC /* NSObject+JKKVOBlocks.m */; };
@@ -261,6 +264,12 @@
 		431C077620FE279700479559 /* NSURLConnection+JKSelfSigned.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLConnection+JKSelfSigned.h"; sourceTree = "<group>"; };
 		431C077820FE282600479559 /* NSURLDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSURLDemoViewController.h; sourceTree = "<group>"; };
 		431C077920FE282600479559 /* NSURLDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSURLDemoViewController.m; sourceTree = "<group>"; };
+		431C077B20FE284300479559 /* NSURLRequest+JKParamsFromDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+JKParamsFromDictionary.m"; sourceTree = "<group>"; };
+		431C077C20FE284300479559 /* NSURLRequest+JKParamsFromDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+JKParamsFromDictionary.h"; sourceTree = "<group>"; };
+		431C077E20FE286F00479559 /* NSURLRequestDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSURLRequestDemoViewController.h; sourceTree = "<group>"; };
+		431C077F20FE286F00479559 /* NSURLRequestDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSURLRequestDemoViewController.m; sourceTree = "<group>"; };
+		431C078120FE28BF00479559 /* NSURLSession+JKSynchronousTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLSession+JKSynchronousTask.m"; sourceTree = "<group>"; };
+		431C078220FE28BF00479559 /* NSURLSession+JKSynchronousTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLSession+JKSynchronousTask.h"; sourceTree = "<group>"; };
 		431CB4C420F498850043B0AC /* NSObject+JKEasyCopy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JKEasyCopy.h"; sourceTree = "<group>"; };
 		431CB4C520F498850043B0AC /* NSObject+JKEasyCopy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JKEasyCopy.m"; sourceTree = "<group>"; };
 		431CB4C720F498EF0043B0AC /* NSObject+JKGCD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JKGCD.h"; sourceTree = "<group>"; };
@@ -1084,6 +1093,12 @@
 		43968A6720AC397000149DCC /* Untils */ = {
 			isa = PBXGroup;
 			children = (
+				431C078220FE28BF00479559 /* NSURLSession+JKSynchronousTask.h */,
+				431C078120FE28BF00479559 /* NSURLSession+JKSynchronousTask.m */,
+				431C077E20FE286F00479559 /* NSURLRequestDemoViewController.h */,
+				431C077F20FE286F00479559 /* NSURLRequestDemoViewController.m */,
+				431C077C20FE284300479559 /* NSURLRequest+JKParamsFromDictionary.h */,
+				431C077B20FE284300479559 /* NSURLRequest+JKParamsFromDictionary.m */,
 				431C077820FE282600479559 /* NSURLDemoViewController.h */,
 				431C077920FE282600479559 /* NSURLDemoViewController.m */,
 				934AE45E20FC6B7B00B60AD4 /* Exten */,
@@ -1749,6 +1764,7 @@
 				437B0A6020F3607100E93844 /* NSObject+JKAppInfo.m in Sources */,
 				435D4C8020F091BC00C8DC85 /* NSIndexPath+JKOffset.m in Sources */,
 				431BBB6520DBCB05006A3D50 /* UIView+JKConstraints.m in Sources */,
+				431C077D20FE284300479559 /* NSURLRequest+JKParamsFromDictionary.m in Sources */,
 				431F64EC20F8F2610087DB8E /* NSString+JKStringPages.m in Sources */,
 				435E3C8F20C02BB2002B7A7F /* NSDecimalNumber+JKExtensions.m in Sources */,
 				43205DD720DD264B00AD6952 /* UITextViewDemoViewController.m in Sources */,
@@ -1765,6 +1781,7 @@
 				431F64C520F794C40087DB8E /* UINavigationItem+JKLoading.m in Sources */,
 				4325536920D8B51000FC0258 /* CLLocationManager+Blocks.m in Sources */,
 				431F64B620F7944A0087DB8E /* UIPopoverControllerDemoViewController.m in Sources */,
+				431C078320FE28BF00479559 /* NSURLSession+JKSynchronousTask.m in Sources */,
 				4325535420CFE87700FC0258 /* UIWebViewDemoViewController.m in Sources */,
 				434DDB6320C9337A00191FC1 /* UIWindow+JKHierarchy.m in Sources */,
 				722957B120C80779000D0719 /* SLUserViewHeader.m in Sources */,
@@ -1868,6 +1885,7 @@
 				431C075D20FC8D0C00479559 /* NSString+JKUUID.m in Sources */,
 				43D87B2920EB6D9900E991D6 /* UIScrollView+EmptyDataSet.m in Sources */,
 				437921F020ECC4B100B2EC88 /* NSData+JKHash.m in Sources */,
+				431C078020FE286F00479559 /* NSURLRequestDemoViewController.m in Sources */,
 				4325536F20D8B56400FC0258 /* MKMapView+JKMoveLogo.m in Sources */,
 				43205DD420DD263400AD6952 /* UIView+Debug.m in Sources */,
 				435D4C5920EDEB4B00C8DC85 /* NSDecimalNumber+JKCalculatingByString.m in Sources */,
