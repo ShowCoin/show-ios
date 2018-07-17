@@ -10,7 +10,7 @@
 
 static const char *kisPlayBodyAnimation = "kisPlayBodyAnimation";
 static const char *kisAnimationZoomX = "kisAnimationZoomX";
-
+static const char *kisScaleXY = "kisScaleXY";
 
 
 @implementation UIView(SoftBodyAnimation)
