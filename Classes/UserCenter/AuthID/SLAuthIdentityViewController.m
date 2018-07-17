@@ -18,6 +18,7 @@
 @property (nonatomic, weak) SLAICountryView *countryView;
 // prosView
 @property (nonatomic, weak) SLAuthenticationView *prosView;
+// consView
 @property (nonatomic, weak) SLAuthenticationView *consView;
 @property (nonatomic, weak) SLAuthenticationView *handView;
 @property (nonatomic, weak) UIView *tipView;
