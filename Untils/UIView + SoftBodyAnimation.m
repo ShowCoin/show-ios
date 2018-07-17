@@ -9,6 +9,8 @@
 #import "UIView + SoftBodyAnimation.h"
 
 static const char *kisPlayBodyAnimation = "kisPlayBodyAnimation";
+static const char *kisAnimationZoomX = "kisAnimationZoomX";
+
 
 
 @implementation UIView(SoftBodyAnimation)
