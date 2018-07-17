@@ -36,7 +36,7 @@
 }
 
 /**
- <#Description#>
+ refreshAction
  */
 - (void)refreshAction {
     int i = arc4random_uniform(3);
