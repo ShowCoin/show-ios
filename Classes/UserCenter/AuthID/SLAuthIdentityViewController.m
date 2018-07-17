@@ -16,10 +16,11 @@
 @property (nonatomic, weak) UIScrollView *scrollView;
 /// countryView
 @property (nonatomic, weak) SLAICountryView *countryView;
-// prosView
+/// prosView
 @property (nonatomic, weak) SLAuthenticationView *prosView;
-// consView
+/// consView
 @property (nonatomic, weak) SLAuthenticationView *consView;
+/// handView
 @property (nonatomic, weak) SLAuthenticationView *handView;
 @property (nonatomic, weak) UIView *tipView;
 @property (nonatomic, weak) UITextView *payLabel;
