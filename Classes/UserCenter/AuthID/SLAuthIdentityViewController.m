@@ -28,6 +28,9 @@
 
 @implementation SLAuthIdentityViewController
 
+/**
+ <#Description#>
+ */
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor blackColor];
