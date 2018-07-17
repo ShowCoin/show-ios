@@ -61,5 +61,27 @@ static const char *kisScaleXY = "kisScaleXY";
     self.isScaleXY  = NO;
 }
 
+-(void)stopSoftBodyAnimation{
+    self.isPlayBodyAnimation = NO;
+}
+
+
+-(void)setIsPlayBodyAnimation:(BOOL)isPlayBodyAnimation{
+    objc_setAssociatedObject(self, kisPlayBodyAnimation, [NSNumber numberWithBool:isPlayBodyAnimation], OBJC_ASSOCIATION_ASSIGN);
+    
+}
+-(BOOL)isPlayBodyAnimation{
+    NSNumber * num = (NSNumber*) objc_getAssociatedObject(self, kisPlayBodyAnimation);
+    return num.boolValue;
+}
+
+-(void)setIsAnimationZoomX:(BOOL)isAnimationZoomX{
+    objc_setAssociatedObject(self, kisAnimationZoomX, [NSNumber numberWithBool:isAnimationZoomX], OBJC_ASSOCIATION_ASSIGN);
+}
+-(BOOL)isAnimationZoomX{
+    NSNumber * num = (NSNumber *)objc_getAssociatedObject(self, kisAnimationZoomX);
+    return num.boolValue;
+}
+
 
 @end
