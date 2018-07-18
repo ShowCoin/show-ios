@@ -39,3 +39,11 @@ typedef NS_ENUM(NSUInteger, SLVerifyCodeType) {
 
 @end
 
+
+@interface SLVerificationButton : UIButton
+
+@property (nonatomic, assign) SLVerifyCodeType type;
+
+- (void)sl_getVerifyCodeWithPhone:(NSString *)phone;
+
+@end
