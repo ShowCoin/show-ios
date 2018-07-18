@@ -15,5 +15,17 @@
     float height = self.bounds.size.height / 2.0;
     float width = self.bounds.size.width / 2.0;
     
+    
+    switch (orientation) {
+            //停靠中心
+            //
+            //     ---------
+            //     |       |
+            //     |   o   |
+            //     |       |
+            //     ---------
+            //
+      
+    }
 }
 @end
