@@ -12,6 +12,8 @@
 
 - (void)constraintStickyWithView:(UIView*)view orientation:(JQconstraintType)orientation offset:(NSArray*)offsetArray
 {
+    float height = self.bounds.size.height / 2.0;
+    float width = self.bounds.size.width / 2.0;
     
 }
 @end
