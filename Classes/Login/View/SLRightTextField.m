@@ -69,7 +69,24 @@ CGFloat const kSLRightTextFieldH = 50;
     [self setNeedsDisplay];
 }
 
-
+- (void)drawRect:(CGRect)rect {
+    if (self.showBottomLine) {
+        CGContextRef context = UIGraphicsGetCurrentContext();
+        CGContextMoveToPoint(context, 0, rect.size.height);
+        CGContextAddLineToPoint(context, rect.size.width, rect.size.height);
+        CGContextSetLineWidth(context, 1);
+        [self.lineColor set];
+        CGContextStrokePath(context);
+    }
+    if (self.showTopLine) {
+        CGContextRef context = UIGraphicsGetCurrentContext();
+        CGContextMoveToPoint(context, 0, 0);
+        CGContextAddLineToPoint(context, rect.size.width, 0);
+        CGContextSetLineWidth(context, 1);
+        [self.lineColor set];
+        CGContextStrokePath(context);
+    }
+}
 @end
 
 @interface SLVerificationButton ()
