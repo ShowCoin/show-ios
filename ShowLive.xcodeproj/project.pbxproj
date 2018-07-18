@@ -96,6 +96,7 @@
 		434DDB6020C9335B00191FC1 /* WebView+Debug.m in Sources */ = {isa = PBXBuildFile; fileRef = 434DDB5F20C9335A00191FC1 /* WebView+Debug.m */; };
 		434DDB6320C9337A00191FC1 /* UIWindow+JKHierarchy.m in Sources */ = {isa = PBXBuildFile; fileRef = 434DDB6220C9337900191FC1 /* UIWindow+JKHierarchy.m */; };
 		4355A4D620FF106A0020B7DE /* UINavigationItem+JKLock.m in Sources */ = {isa = PBXBuildFile; fileRef = 4355A4D520FF106A0020B7DE /* UINavigationItem+JKLock.m */; };
+		4355A4D920FF10CC0020B7DE /* UINavigationItem+JKLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = 4355A4D820FF10CC0020B7DE /* UINavigationItem+JKLoading.m */; };
 		435D4C3E20EDEA2900C8DC85 /* NSDate+JKCupertinoYankee.m in Sources */ = {isa = PBXBuildFile; fileRef = 435D4C3D20EDEA2800C8DC85 /* NSDate+JKCupertinoYankee.m */; };
 		435D4C4120EDEA4C00C8DC85 /* NSDate+JKExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 435D4C3F20EDEA4B00C8DC85 /* NSDate+JKExtension.m */; };
 		435D4C4420EDEA6D00C8DC85 /* NSDate+JKFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 435D4C4220EDEA6D00C8DC85 /* NSDate+JKFormatter.m */; };
@@ -404,6 +405,8 @@
 		434DDB6220C9337900191FC1 /* UIWindow+JKHierarchy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+JKHierarchy.m"; sourceTree = "<group>"; };
 		4355A4D420FF106A0020B7DE /* UINavigationItem+JKLock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UINavigationItem+JKLock.h"; path = "../../../../Desktop/leiku/UINavigationItem+JKLock.h"; sourceTree = "<group>"; };
 		4355A4D520FF106A0020B7DE /* UINavigationItem+JKLock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UINavigationItem+JKLock.m"; path = "../../../../Desktop/leiku/UINavigationItem+JKLock.m"; sourceTree = "<group>"; };
+		4355A4D720FF10CC0020B7DE /* UINavigationItem+JKLoading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UINavigationItem+JKLoading.h"; path = "../../../../Desktop/leiku/UINavigationItem+JKLoading.h"; sourceTree = "<group>"; };
+		4355A4D820FF10CC0020B7DE /* UINavigationItem+JKLoading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UINavigationItem+JKLoading.m"; path = "../../../../Desktop/leiku/UINavigationItem+JKLoading.m"; sourceTree = "<group>"; };
 		435D4C3C20EDEA2800C8DC85 /* NSDate+JKCupertinoYankee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JKCupertinoYankee.h"; sourceTree = "<group>"; };
 		435D4C3D20EDEA2800C8DC85 /* NSDate+JKCupertinoYankee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JKCupertinoYankee.m"; sourceTree = "<group>"; };
 		435D4C3F20EDEA4B00C8DC85 /* NSDate+JKExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JKExtension.m"; sourceTree = "<group>"; };
@@ -777,6 +780,8 @@
 			isa = PBXGroup;
 			children = (
 				4355A4D420FF106A0020B7DE /* UINavigationItem+JKLock.h */,
+				4355A4D720FF10CC0020B7DE /* UINavigationItem+JKLoading.h */,
+				4355A4D820FF10CC0020B7DE /* UINavigationItem+JKLoading.m */,
 				4355A4D520FF106A0020B7DE /* UINavigationItem+JKLock.m */,
 				431C078B20FE293200479559 /* NSUserDefaultsDemoViewController.h */,
 				431C078A20FE293200479559 /* NSUserDefaultsDemoViewController.m */,
@@ -1801,6 +1806,7 @@
 				431F64C520F794C40087DB8E /* UINavigationItem+JKLoading.m in Sources */,
 				4325536920D8B51000FC0258 /* CLLocationManager+Blocks.m in Sources */,
 				431F64B620F7944A0087DB8E /* UIPopoverControllerDemoViewController.m in Sources */,
+				4355A4D920FF10CC0020B7DE /* UINavigationItem+JKLoading.m in Sources */,
 				431C078320FE28BF00479559 /* NSURLSession+JKSynchronousTask.m in Sources */,
 				4325535420CFE87700FC0258 /* UIWebViewDemoViewController.m in Sources */,
 				434DDB6320C9337A00191FC1 /* UIWindow+JKHierarchy.m in Sources */,
