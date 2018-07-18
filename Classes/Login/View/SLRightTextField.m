@@ -18,6 +18,20 @@ CGFloat const kSLRightTextFieldH = 50;
 @implementation SLRightTextField {
     SLVerificationButton *vButton__;
 }
+
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        self.textColor = [UIColor whiteColor];
+        self.font = [UIFont systemFontOfSize:15];
+        self.placeholderColor = kGrayWith808080;
+        self.lineColor = [UIColor blackColor];
+        self.showBottomLine = YES;
+    }
+    return self;
+}
+
 @end
 
 @interface SLVerificationButton ()
