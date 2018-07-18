@@ -95,6 +95,19 @@ CGFloat const kSLRightTextFieldH = 50;
     [vButton__ sl_getVerifyCodeWithPhone:phone];
 }
 
+#pragma mark - Action
+
+- (void)sl_buttonAction:(UIButton *)button {
+    if (self.rightType == SLFieldRightTypePwd) {
+        button.selected = !button.selected;
+        self.secureTextEntry = !button.selected;
+        return;
+    }
+    if (self.rightBlock) {
+        self.rightBlock();
+    }
+}
+
 @end
 
 @interface SLVerificationButton ()
