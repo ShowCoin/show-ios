@@ -132,6 +132,10 @@
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF matches %@", match];
     return [predicate evaluateWithObject:self];
 }
+- (CGFloat)heightOfTextWithWidth:(float)width theFont:(UIFont*)aFont {
+    
+    return [self heightOfTextWithWidth:width height:MAXFLOAT theFont:aFont];
+}
 
 
 
