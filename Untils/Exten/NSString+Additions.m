@@ -65,4 +65,88 @@
     
     return encodedString;
 }
+
+- (NSString*) urlDecodedString {
+    
+    CFStringRef decodedCFString = CFURLCreateStringByReplacingPercentEscapesUsingEncoding(kCFAllocatorDefault,
+                                                                                          (__bridge CFStringRef) self,
+                                                                                          CFSTR(""),
+                                                                                          kCFStringEncodingUTF8);
+    
+    // We need to replace "+" with " " because the CF method above doesn't do it
+    NSString *decodedString = [[NSString alloc] initWithString:(__bridge_transfer NSString*) decodedCFString];
+    return (!decodedString) ? @"" : [decodedString stringByReplacingOccurrencesOfString:@"+" withString:@" "];
+}
+- (NSDate *)date {
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy-MM-dd"];
+    [formatter setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"UTC"]];
+    NSDate *nationalDate2 = [formatter dateFromString:self];
+    
+    return nationalDate2;
+}
+- (NSDate *)datetime {
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    [formatter setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"UTC"]];
+    NSDate *nationalDate2 = [formatter dateFromString:self];
+    
+    return nationalDate2;
+}
+
++ (NSString *)fileSize:(long long)size {
+    
+    NSInteger KB = 1024;
+    NSInteger MB = KB * KB;
+    NSInteger GB = MB * KB;
+    if (size < 10)
+        return @"0.0 KB";
+    else if (size < KB)
+        return @"小于1KB";
+    else if (size < MB)
+        return [NSString stringWithFormat:@"%.1f KB", ((CGFloat)size)/KB];
+    else if (size < GB)
+        return [NSString stringWithFormat:@"%.1f MB", ((CGFloat)size)/MB];
+    else
+        return [NSString stringWithFormat:@"%.1f GB", ((CGFloat)size)/GB];
+}
+
+- (BOOL)isValidatePhoneNumber {
+    
+    NSString *regex = @"^((13[0-9])|(15[^4,\\D])|(18[0,0-9])|(17[0,0-9]))\\d{8}$";
+    NSPredicate *phoneTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
+    
+    return [phoneTest evaluateWithObject:self];
+}
+- (BOOL)isValidateEmail {
+    
+    NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
+    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES%@", emailRegex];
+    return [emailTest evaluateWithObject:self];
+}
+- (BOOL)isChinese {
+    
+    NSString *match=@"(^[\u4e00-\u9fa5]+$)";
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF matches %@", match];
+    return [predicate evaluateWithObject:self];
+}
+- (CGFloat)heightOfTextWithWidth:(float)width theFont:(UIFont*)aFont {
+    
+    return [self heightOfTextWithWidth:width height:MAXFLOAT theFont:aFont];
+}
+- (CGFloat)heightOfTextWithWidth:(float)width height:(float)height theFont:(UIFont*)aFont {
+    
+    CGFloat result;
+    CGSize textSize = { width, height };
+    
+    CGSize size = [self sizeWithFont:aFont constrainedToSize:textSize lineBreakMode:NSLineBreakByWordWrapping];
+    result = size.height + size.height * 0.15f;
+    return result;
+}
+
+
+
+
 @end
