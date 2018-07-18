@@ -113,5 +113,13 @@
         return [NSString stringWithFormat:@"%.1f GB", ((CGFloat)size)/GB];
 }
 
+- (BOOL)isValidatePhoneNumber {
+    
+    NSString *regex = @"^((13[0-9])|(15[^4,\\D])|(18[0,0-9])|(17[0,0-9]))\\d{8}$";
+    NSPredicate *phoneTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
+    
+    return [phoneTest evaluateWithObject:self];
+}
+
 
 @end
