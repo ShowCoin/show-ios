@@ -139,7 +139,11 @@
             //     |       |
             //     ---------
             //
-            
+        case constraintStickyTypeUpperRightCorner:{
+            self.center = CGPointMake(CGRectGetMaxX(view.frame) - width - [offsetArray[0] integerValue], CGRectGetMinY(view.frame) + height + [offsetArray[1] integerValue]);
+        }
+            break;
+
             //停靠左上角b
             //
             //     ---------
