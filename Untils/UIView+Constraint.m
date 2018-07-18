@@ -328,7 +328,12 @@
         }
             break;
             
-    
+        case constraint2ViewTypeRightEdge:{
+            
+        }
+            break;
+        default:
+            break;
     }
 }
 @end
