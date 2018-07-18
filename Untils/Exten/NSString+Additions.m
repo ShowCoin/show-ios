@@ -86,5 +86,14 @@
     
     return nationalDate2;
 }
+- (NSDate *)datetime {
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    [formatter setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"UTC"]];
+    NSDate *nationalDate2 = [formatter dateFromString:self];
+    
+    return nationalDate2;
+}
 
 @end
