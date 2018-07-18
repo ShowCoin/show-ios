@@ -54,6 +54,12 @@ CGFloat const kSLRightTextFieldH = 50;
     self.leftViewMode = UITextFieldViewModeAlways;
 }
 
+- (void)setShowBottomLine:(BOOL)showBottomLine {
+    _showBottomLine = showBottomLine;
+    [self setNeedsDisplay];
+}
+
+
 @end
 
 @interface SLVerificationButton ()
