@@ -65,4 +65,17 @@
     
     return encodedString;
 }
+
+- (NSString*) urlDecodedString {
+    
+    CFStringRef decodedCFString = CFURLCreateStringByReplacingPercentEscapesUsingEncoding(kCFAllocatorDefault,
+                                                                                          (__bridge CFStringRef) self,
+                                                                                          CFSTR(""),
+                                                                                          kCFStringEncodingUTF8);
+    
+    // We need to replace "+" with " " because the CF method above doesn't do it
+    NSString *decodedString = [[NSString alloc] initWithString:(__bridge_transfer NSString*) decodedCFString];
+    return (!decodedString) ? @"" : [decodedString stringByReplacingOccurrencesOfString:@"+" withString:@" "];
+}
+
 @end
