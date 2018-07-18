@@ -21,4 +21,14 @@ CGFloat const kSLConfirmButtonH = 46;
     return self;
 }
 
+- (void)setupUI {
+    [self setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [self setTitleColor:kGrayWith808080 forState:UIControlStateDisabled];
+    self.titleLabel.font = [UIFont systemFontOfSize:15];
+    self.layer.cornerRadius = kSLConfirmButtonH / 2;
+    self.layer.masksToBounds = YES;
+    self.enabled = NO;
+}
+
+
 @end
