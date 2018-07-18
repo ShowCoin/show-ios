@@ -24,3 +24,18 @@ typedef NS_ENUM(NSUInteger, SLVerifyCodeType) {
     SLVerifyCodeTypeEmail,
 };
 
+@interface SLRightTextField : UITextField
+
+@property (nonatomic, strong) UIColor *placeholderColor;
+@property (nonatomic, assign) SLFieldRightType rightType;
+@property (nonatomic, assign) BOOL showBottomLine; // default YES
+@property (nonatomic, assign) BOOL showTopLine; // default NO
+@property (nonatomic, strong) UIColor *lineColor;
+@property (nonatomic, strong) NSString *leftTitle;
+
+@property (nonatomic, copy) SLSimpleBlock rightBlock;
+
+- (void)sl_getVerifyCodeWithPhone:(NSString *)phone;
+
+@end
+
