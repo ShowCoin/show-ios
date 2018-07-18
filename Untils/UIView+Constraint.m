@@ -25,7 +25,10 @@
             //     |       |
             //     ---------
             //
-      
+        case constraintStickyTypeCenter:
+            self.center = CGPointMake(view.center.x + [offsetArray[0] integerValue], view.center.y + [offsetArray[0] integerValue]);
+            break;
+            
     }
 }
 @end
