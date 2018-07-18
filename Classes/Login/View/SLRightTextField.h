@@ -18,3 +18,9 @@ typedef NS_ENUM(NSUInteger, SLFieldRightType) {
     SLFieldRightTypeEmailVCode,
 };
 
+typedef NS_ENUM(NSUInteger, SLVerifyCodeType) {
+    SLVerifyCodeTypeNormal,
+    SLVerifyCodeTypePhone,
+    SLVerifyCodeTypeEmail,
+};
+
