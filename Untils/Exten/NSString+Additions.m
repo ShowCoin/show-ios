@@ -96,4 +96,22 @@
     return nationalDate2;
 }
 
++ (NSString *)fileSize:(long long)size {
+    
+    NSInteger KB = 1024;
+    NSInteger MB = KB * KB;
+    NSInteger GB = MB * KB;
+    if (size < 10)
+        return @"0.0 KB";
+    else if (size < KB)
+        return @"小于1KB";
+    else if (size < MB)
+        return [NSString stringWithFormat:@"%.1f KB", ((CGFloat)size)/KB];
+    else if (size < GB)
+        return [NSString stringWithFormat:@"%.1f MB", ((CGFloat)size)/MB];
+    else
+        return [NSString stringWithFormat:@"%.1f GB", ((CGFloat)size)/GB];
+}
+
+
 @end
