@@ -41,6 +41,19 @@ CGFloat const kSLRightTextFieldH = 50;
     label.textColor = placeholderColor;
 }
 
+
+- (void)setLeftTitle:(NSString *)leftTitle {
+    _leftTitle = leftTitle;
+    
+    UILabel *label = [[UILabel alloc] init];
+    label.frame = CGRectMake(0, 0, 120, kSLRightTextFieldH);
+    label.text = leftTitle;
+    label.textColor = [UIColor whiteColor];
+    label.font = self.font;
+    self.leftView = label;
+    self.leftViewMode = UITextFieldViewModeAlways;
+}
+
 @end
 
 @interface SLVerificationButton ()
