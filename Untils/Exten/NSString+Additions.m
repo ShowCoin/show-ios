@@ -136,6 +136,16 @@
     
     return [self heightOfTextWithWidth:width height:MAXFLOAT theFont:aFont];
 }
+- (CGFloat)heightOfTextWithWidth:(float)width height:(float)height theFont:(UIFont*)aFont {
+    
+    CGFloat result;
+    CGSize textSize = { width, height };
+    
+    CGSize size = [self sizeWithFont:aFont constrainedToSize:textSize lineBreakMode:NSLineBreakByWordWrapping];
+    result = size.height + size.height * 0.15f;
+    return result;
+}
+
 
 
 
