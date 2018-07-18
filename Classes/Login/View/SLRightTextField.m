@@ -87,6 +87,14 @@ CGFloat const kSLRightTextFieldH = 50;
         CGContextStrokePath(context);
     }
 }
+
+- (void)sl_getVerifyCodeWithPhone:(NSString *)phone {
+    if (self.rightType == SLFieldRightTypeVCode) {
+        [SLReportManager reportEvent:kReport_PhoneREG andSubEvent:kReport_PhoneREG_GetVerifiCode];
+    }
+    [vButton__ sl_getVerifyCodeWithPhone:phone];
+}
+
 @end
 
 @interface SLVerificationButton ()
