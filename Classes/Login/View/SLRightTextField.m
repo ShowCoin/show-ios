@@ -32,6 +32,15 @@ CGFloat const kSLRightTextFieldH = 50;
     return self;
 }
 
+- (void)setPlaceholderColor:(UIColor *)placeholderColor {
+    _placeholderColor = placeholderColor;
+    if (self.placeholder.length == 0) {
+        self.placeholder = @"p";
+    }
+    UILabel *label = [self valueForKey:@"_placeholderLabel"];
+    label.textColor = placeholderColor;
+}
+
 @end
 
 @interface SLVerificationButton ()
