@@ -194,6 +194,133 @@
         case constraintStickyTypeOutsideRightEdgeTop:{
             self.center = CGPointMake(CGRectGetMaxX(view.frame) + width + [offsetArray[0] integerValue], CGRectGetMinY(view.frame) + height + [offsetArray[1] integerValue]);
         }
+            break;
+            
+            //停靠右外边-吸底
+            //
+            //     _________
+            //     |       |
+            //     |       |
+            //     |       |o
+            //     ---------
+            //
+        case constraintStickyTypeOutsideRightEdgeBottom:{
+            self.center = CGPointMake(CGRectGetMaxX(view.frame) + width + [offsetArray[0] integerValue], CGRectGetMaxY(view.frame) - height - [offsetArray[1] integerValue]);
+        }
+            break;
+            
+            //停靠外顶边-吸左边
+            //     o
+            //     ---------
+            //     |       |
+            //     |       |
+            //     |       |
+            //     ---------
+            //
+        case constraintStickyTypeOutsideUpperEdgeLeft:{
+            self.center = CGPointMake(CGRectGetMinX(view.frame) + width + [offsetArray[1] integerValue], CGRectGetMinY(view.frame) - height - [offsetArray[0] integerValue]);
+        }
+            break;
+            
+            //停靠外顶边-吸右边
+            //             o
+            //     ---------
+            //     |       |
+            //     |       |
+            //     |       |
+            //     ---------
+            //
+        case constraintStickyTypeOutsideUpperEdgeRight:{
+            self.center = CGPointMake(CGRectGetMaxX(view.frame) - width + [offsetArray[1] integerValue], CGRectGetMinY(view.frame) - height - [offsetArray[0] integerValue]);
+        }
+            break;
+            
+            //停靠外左边-吸顶
+            //
+            //     _________
+            //    o|       |
+            //     |       |
+            //     |       |
+            //     ---------
+            //
+        case constraintStickyTypeOutsideLeftEdgeTop:{
+            self.center = CGPointMake(CGRectGetMinX(view.frame) - width - [offsetArray[0] integerValue], CGRectGetMinY(view.frame) + height + [offsetArray[1] integerValue]);
+        }
+            break;
+            
+            //停靠外左边-吸底
+            //
+            //     ---------
+            //     |       |
+            //     |       |
+            //    o|       |
+            //     ---------
+            //
+        case constraintStickyTypeOutsideLeftEdgeBottom:{
+            self.center = CGPointMake(CGRectGetMinX(view.frame) - width - [offsetArray[0] integerValue], CGRectGetMaxY(view.frame) - height + [offsetArray[1] integerValue]);
+        }
+            break;
+            
+            //停靠外底边-吸左边
+            //
+            //     ---------
+            //     |       |
+            //     |       |
+            //     |       |
+            //     ---------
+            //     o
+        case constraintStickyTypeOutsideLowerEdgeLeft:{
+            self.center = CGPointMake(CGRectGetMinX(view.frame) + width + [offsetArray[1] integerValue], CGRectGetMaxY(view.frame) + height + [offsetArray[0] integerValue]);
+        }
+            break;
+            
+            //停靠外底边-吸左边
+            //
+            //     ---------
+            //     |       |
+            //     |       |
+            //     |       |
+            //     ---------
+            //             o
+        case constraintStickyTypeOutsideLowerEdgeRight:{
+            self.center = CGPointMake(CGRectGetMaxX(view.frame) - width + [offsetArray[1] integerValue], CGRectGetMaxY(view.frame) + height + [offsetArray[0] integerValue]);
+        }
+            break;
+            
+        default:
+            break;
+    }
+}
+
+- (void)constraint2View:(NSArray<UIView *>*)views constraintType:(JQconstraint2ViewType)type offset:(NSArray*)offsetArray
+{
+    switch (type) {
+        case constraint2ViewTypeDivideDistance:{
+            CGPoint fistViewCenter = views[0].center;
+            CGPoint secondViewCenter = views[1].center;
+            
+            self.center = CGPointMake((fistViewCenter.x + secondViewCenter.x) / 2.0 + [offsetArray[0] integerValue],
+                                      (fistViewCenter.y + secondViewCenter.y) / 2.0 + [offsetArray[1] integerValue]);
+        }
+            break;
+            
+        case constraint2ViewTypeLowerEdge:{
+            CGFloat lowerEdgeMaxY = CGRectGetMaxY(views[1].frame);
+            NSLog(@"%f", lowerEdgeMaxY);
+            self.center = CGPointMake(views[0].center.x + [offsetArray[0] integerValue],
+                                      views[0].center.y + (lowerEdgeMaxY - views[0].center.y) / 2.0 + [offsetArray[1] integerValue]);
+            
+            NSLog(@"%@", NSStringFromCGPoint(self.center));
+            
+        }
+            break;
+            
+        case constraint2ViewTypeUpperEdge:{
+            CGFloat upperEdgeMinY = CGRectGetMaxY(views[1].frame);
+            self.center = CGPointMake(views[0].center.x + [offsetArray[0] integerValue],
+                                      views[0].center.y - (upperEdgeMinY - views[0].center.y) / 2.0);
+            
+        }
      
     }
 }
