@@ -321,7 +321,14 @@
                                       views[0].center.y - (upperEdgeMinY - views[0].center.y) / 2.0);
             
         }
-     
+            break;
+            
+        case constraint2ViewTypeLeftEdge:{
+            
+        }
+            break;
+            
+    
     }
 }
 @end
