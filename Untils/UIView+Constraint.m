@@ -29,6 +29,19 @@
             self.center = CGPointMake(view.center.x + [offsetArray[0] integerValue], view.center.y + [offsetArray[0] integerValue]);
             break;
             
+            //停靠内边-右边
+            //
+            //     ---------
+            //     |       |
+            //     |      o|
+            //     |       |
+            //     ---------
+            //
+        case constraintStickyTypeInsideRightEdge:{
+            self.center = CGPointMake(CGRectGetMaxX(view.frame) - width - [offsetArray[0] integerValue], view.center.y + [offsetArray[1] integerValue]) ;
+        }
+            break;
+      
     }
 }
 @end
