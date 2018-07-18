@@ -30,5 +30,16 @@ CGFloat const kSLConfirmButtonH = 46;
     self.enabled = NO;
 }
 
+- (void)setEnabled:(BOOL)enabled {
+    [super setEnabled:enabled];
+    
+    // 不可点击状态 按钮底色是#1e1e1e 字体颜色#808080
+    // 可点击状态 按钮底色是#333333 字体是白色
+    if (enabled) {
+        self.backgroundColor = kthemeBlackColor;
+    } else {
+        self.backgroundColor = HexRGBAlpha(0x1e1e1e, 1);
+    }
+}
 
 @end
