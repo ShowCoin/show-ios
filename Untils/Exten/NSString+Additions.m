@@ -113,5 +113,40 @@
         return [NSString stringWithFormat:@"%.1f GB", ((CGFloat)size)/GB];
 }
 
+- (BOOL)isValidatePhoneNumber {
+    
+    NSString *regex = @"^((13[0-9])|(15[^4,\\D])|(18[0,0-9])|(17[0,0-9]))\\d{8}$";
+    NSPredicate *phoneTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
+    
+    return [phoneTest evaluateWithObject:self];
+}
+- (BOOL)isValidateEmail {
+    
+    NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
+    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES%@", emailRegex];
+    return [emailTest evaluateWithObject:self];
+}
+- (BOOL)isChinese {
+    
+    NSString *match=@"(^[\u4e00-\u9fa5]+$)";
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF matches %@", match];
+    return [predicate evaluateWithObject:self];
+}
+- (CGFloat)heightOfTextWithWidth:(float)width theFont:(UIFont*)aFont {
+    
+    return [self heightOfTextWithWidth:width height:MAXFLOAT theFont:aFont];
+}
+- (CGFloat)heightOfTextWithWidth:(float)width height:(float)height theFont:(UIFont*)aFont {
+    
+    CGFloat result;
+    CGSize textSize = { width, height };
+    
+    CGSize size = [self sizeWithFont:aFont constrainedToSize:textSize lineBreakMode:NSLineBreakByWordWrapping];
+    result = size.height + size.height * 0.15f;
+    return result;
+}
+
+
+
 
 @end
