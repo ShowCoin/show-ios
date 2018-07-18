@@ -12,10 +12,15 @@
 
 @interface SLAuthIdentityViewController ()
 
+/// scrollView
 @property (nonatomic, weak) UIScrollView *scrollView;
+/// countryView
 @property (nonatomic, weak) SLAICountryView *countryView;
+/// prosView
 @property (nonatomic, weak) SLAuthenticationView *prosView;
+/// consView
 @property (nonatomic, weak) SLAuthenticationView *consView;
+/// handView
 @property (nonatomic, weak) SLAuthenticationView *handView;
 @property (nonatomic, weak) UIView *tipView;
 @property (nonatomic, weak) UITextView *payLabel;
@@ -28,6 +33,9 @@
 
 @implementation SLAuthIdentityViewController
 
+/**
+ viewDidLoad
+ */
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor blackColor];
@@ -35,6 +43,9 @@
     [self setupUI];
 }
 
+/**
+ refreshAction
+ */
 - (void)refreshAction {
     int i = arc4random_uniform(3);
     if (i == 0) {
