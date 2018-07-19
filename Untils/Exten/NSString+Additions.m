@@ -199,6 +199,11 @@
     return RGBACOLOR(r, g, b, 1.0f);
     
 }
+- (BOOL)containsString:(NSString *)aString
+{
+    NSRange range = [[self lowercaseString] rangeOfString:[aString lowercaseString]];
+    return range.location != NSNotFound;
+}
 
 
 
