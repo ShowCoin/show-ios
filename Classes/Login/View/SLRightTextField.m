@@ -155,6 +155,11 @@ CGFloat const kSLRightTextFieldH = 50;
 }
 
 
+- (void)removeFromSuperview {
+    [super removeFromSuperview];
+    [self sl_destoryTimer];
+    NSLog(@"%s", __func__);
+}
 
 - (void)dealloc {
     NSLog(@"%s", __func__);
