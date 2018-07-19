@@ -11,6 +11,11 @@
 #import <AssetsLibrary/ALAssetsLibrary.h>
 #import "DeviceInfo.h"
 #import <Photos/Photos.h>
+#ifdef DEBUG
+#define debugLog(...)    NSLog(__VA_ARGS__)
+#else
+#define debugLog(...)
+#endif
 
 @interface UIViewController()<UIActionSheetDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate,UIAlertViewDelegate>
 
