@@ -18,7 +18,7 @@
 #endif
 
 static  BOOL canEdit = YES;
-
+static  char blockKey;
 @interface UIViewController()<UIActionSheetDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate,UIAlertViewDelegate>
 
 @property (nonatomic,copy)photoBlock photoBlock;
