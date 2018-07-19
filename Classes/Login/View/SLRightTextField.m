@@ -120,4 +120,23 @@ CGFloat const kSLRightTextFieldH = 50;
     NSTimer *timer;
 }
 
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self setTitle:@"发送验证码" forState:UIControlStateNormal];
+        [self setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        self.titleLabel.font = [UIFont systemFontOfSize:15];
+        self.titleLabel.textAlignment = NSTextAlignmentRight;
+        //self.backgroundColor = [UIColor orangeColor];
+        
+        UIView *line = [[UIView alloc] init];
+        line.backgroundColor = kGrayWith808080;
+        [self addSubview:line];
+        self.lineView = line;
+    }
+    return self;
+}
+
+
 @end
