@@ -190,6 +190,16 @@
     
     return result;
 }
+- (UIColor *)color {
+    
+    NSArray *rgbArray = [self componentsSeparatedByString:@","];
+    int r = [[rgbArray objectAtIndex:0] intValue];
+    int g = [[rgbArray objectAtIndex:1] intValue];
+    int b = [[rgbArray objectAtIndex:2] intValue];
+    return RGBACOLOR(r, g, b, 1.0f);
+    
+}
+
 
 
 
