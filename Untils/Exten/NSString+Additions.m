@@ -151,6 +151,20 @@
 }
 
 
+- (CGFloat)heightOfTextViewWithWidth:(float)width height:(float)height theFont:(UIFont*)aFont {
+    
+    CGFloat result;
+    
+    if (self.length == 0)
+        return 0.0f;
+    
+    CGSize textSize = CGSizeMake(width - 16.0f, height - 16.0f);
+    CGSize size = [self sizeWithFont:aFont constrainedToSize:textSize lineBreakMode:NSLineBreakByWordWrapping];
+    result = size.height + size.height * 0.15f + 16.0f;
+    return result;
+}
+
+
 
 
 @end
