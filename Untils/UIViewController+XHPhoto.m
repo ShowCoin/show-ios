@@ -7,6 +7,8 @@
 //  Copyright © 2017年 showgx. All rights reserved.
 
 #import "UIViewController+XHPhoto.h"
+#import "objc/runtime.h"
+
 
 @interface UIViewController()<UIActionSheetDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate,UIAlertViewDelegate>
 
