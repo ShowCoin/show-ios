@@ -155,6 +155,18 @@ CGFloat const kSLRightTextFieldH = 50;
 }
 
 
+- (void)sl_timerAction {
+    count--;
+    if (count == 0) {
+        [self setTitle:@"重发" forState:UIControlStateNormal];
+        self.userInteractionEnabled = YES;
+        [self sl_destoryTimer];
+        return;
+    }
+    NSString *title = [NSString stringWithFormat:@"%ds", count];
+    [self setTitle:title forState:UIControlStateNormal];
+}
+
 - (void)sl_destoryTimer {
     [timer invalidate];
     timer = nil;
