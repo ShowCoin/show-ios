@@ -145,6 +145,10 @@
     result = size.height + size.height * 0.15f;
     return result;
 }
+- (CGFloat)heightOfTextViewWithWidth:(float)width theFont:(UIFont*)aFont {
+    
+    return [self heightOfTextViewWithWidth:width height:MAXFLOAT theFont:aFont];
+}
 
 
 
