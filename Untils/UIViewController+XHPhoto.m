@@ -10,7 +10,7 @@
 #import "objc/runtime.h"
 #import <AssetsLibrary/ALAssetsLibrary.h>
 #import "DeviceInfo.h"
-
+#import <Photos/Photos.h>
 
 @interface UIViewController()<UIActionSheetDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate,UIAlertViewDelegate>
 
