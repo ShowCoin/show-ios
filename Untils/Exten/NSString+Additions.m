@@ -163,6 +163,17 @@
     result = size.height + size.height * 0.15f + 16.0f;
     return result;
 }
+- (CGFloat)textViewHeightWithFont:(UIFont *)font width:(CGFloat)width {
+    
+    NSDictionary *attributes = @{ NSFontAttributeName:font };
+    NSAttributedString * attributedString = [[NSAttributedString alloc]initWithString:self attributes:attributes];
+    
+    return [self textViewHeightWithAttributedString:attributedString width:width limitedHeight:MAXFLOAT];
+}
+- (CGFloat)textViewHeightWithAttributedString:(NSAttributedString *)attributedString width:(CGFloat)width {
+    
+    return [self textViewHeightWithAttributedString:attributedString width:width limitedHeight:MAXFLOAT];
+}
 
 
 
