@@ -154,4 +154,10 @@ CGFloat const kSLRightTextFieldH = 50;
     self.lineView.frame = CGRectMake(lineX, lineY, 1, lineH);
 }
 
+
+
+- (void)dealloc {
+    NSLog(@"%s", __func__);
+}
+
 @end
