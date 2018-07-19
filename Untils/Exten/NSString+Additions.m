@@ -205,6 +205,36 @@
     return range.location != NSNotFound;
 }
 
+- (NSString*)telephoneWithReformat
+{
+    NSString *telphoneString = self;
+    
+    if ([telphoneString containsString:@"-"])
+    {
+        telphoneString = [telphoneString stringByReplacingOccurrencesOfString:@"-" withString:@""];
+    }
+    
+    if ([telphoneString containsString:@"("])
+    {
+        telphoneString = [telphoneString stringByReplacingOccurrencesOfString:@"(" withString:@""];
+    }
+    
+    if ([telphoneString containsString:@")"])
+    {
+        telphoneString = [telphoneString stringByReplacingOccurrencesOfString:@")" withString:@""];
+    }
+    
+    if ([telphoneString containsString:@" "])
+    {
+        telphoneString = [telphoneString stringByReplacingOccurrencesOfString:@" " withString:@""];
+    }
+    
+    if ([telphoneString containsString:@" "])
+    {
+        telphoneString = [telphoneString stringByReplacingOccurrencesOfString:@" " withString:@""];
+    }
+    
+    return telphoneString;
 
 
 
