@@ -138,5 +138,20 @@ CGFloat const kSLRightTextFieldH = 50;
     return self;
 }
 
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    CGFloat w = self.frame.size.width;
+    CGFloat h = self.frame.size.height;
+    [self.titleLabel sizeToFit];
+    CGFloat titleW = self.titleLabel.frame.size.width;
+    titleW = titleW < 35 ? 35 : titleW;
+    CGFloat titleX = w - titleW;
+    self.titleLabel.frame = CGRectMake(titleX, 0, titleW, h);
+    
+    CGFloat lineH = self.titleLabel.font.lineHeight;
+    CGFloat lineY = (h - lineH) / 2;
+    CGFloat lineX = w - titleW - 15;
+    self.lineView.frame = CGRectMake(lineX, lineY, 1, lineH);
+}
 
 @end
