@@ -175,6 +175,22 @@
     return [self textViewHeightWithAttributedString:attributedString width:width limitedHeight:MAXFLOAT];
 }
 
+- (CGFloat)textViewHeightWithAttributedString:(NSAttributedString *)attributedString width:(CGFloat)width limitedHeight:(CGFloat)height {
+    
+    CGFloat result;
+    
+    UITextView *textView = [[UITextView alloc] init];
+    [textView setAttributedText:attributedString];
+    CGSize size = [textView sizeThatFits:CGSizeMake(width, FLT_MAX)];
+    //    size.height -= 16.0f;
+    if (size.height > height)
+        result = height;
+    else
+        result = size.height;
+    
+    return result;
+}
+
 
 
 
