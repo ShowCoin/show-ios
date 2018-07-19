@@ -111,7 +111,8 @@ CGFloat const kSLRightTextFieldH = 50;
 @end
 
 @interface SLVerificationButton ()
-
+@property (nonatomic, weak) UIView *lineView;
+@property (nonatomic, strong) ShowVerifycodeAction *action;
 @end
 
 @implementation SLVerificationButton
