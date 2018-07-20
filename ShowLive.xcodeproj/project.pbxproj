@@ -134,6 +134,7 @@
 		435E3C9320C02BB2002B7A7F /* NSNumber+JKRomanNumerals.m in Sources */ = {isa = PBXBuildFile; fileRef = 435E3ABB20C02BB1002B7A7F /* NSNumber+JKRomanNumerals.m */; };
 		435F3C8D2101B6E400EDF645 /* UINavigationItem+JKLock.m in Sources */ = {isa = PBXBuildFile; fileRef = 435F3C8C2101B6E400EDF645 /* UINavigationItem+JKLock.m */; };
 		435F3C902101B70600EDF645 /* UINavigationItem+JKLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = 435F3C8F2101B70600EDF645 /* UINavigationItem+JKLoading.m */; };
+		435F3C932101B72A00EDF645 /* UINavigationController+JKTransitions.m in Sources */ = {isa = PBXBuildFile; fileRef = 435F3C922101B72900EDF645 /* UINavigationController+JKTransitions.m */; };
 		436B1EA520DA2FB100419AC0 /* UIView+JKVisuals.m in Sources */ = {isa = PBXBuildFile; fileRef = 436B1EA320DA2FB000419AC0 /* UIView+JKVisuals.m */; };
 		436B1EAB20DA2FF100419AC0 /* UIView+JKShake.m in Sources */ = {isa = PBXBuildFile; fileRef = 436B1EAA20DA2FF000419AC0 /* UIView+JKShake.m */; };
 		436B1EAE20DA300600419AC0 /* UIView+JKFind.m in Sources */ = {isa = PBXBuildFile; fileRef = 436B1EAC20DA300600419AC0 /* UIView+JKFind.m */; };
@@ -478,6 +479,8 @@
 		435F3C8C2101B6E400EDF645 /* UINavigationItem+JKLock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UINavigationItem+JKLock.m"; path = "../../../../Desktop/leiku/UINavigationItem+JKLock.m"; sourceTree = "<group>"; };
 		435F3C8E2101B70600EDF645 /* UINavigationItem+JKLoading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UINavigationItem+JKLoading.h"; path = "../../../../Desktop/leiku/UINavigationItem+JKLoading.h"; sourceTree = "<group>"; };
 		435F3C8F2101B70600EDF645 /* UINavigationItem+JKLoading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UINavigationItem+JKLoading.m"; path = "../../../../Desktop/leiku/UINavigationItem+JKLoading.m"; sourceTree = "<group>"; };
+		435F3C912101B72900EDF645 /* UINavigationController+JKTransitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+JKTransitions.h"; path = "../../../../Desktop/leiku/UINavigationController+JKTransitions.h"; sourceTree = "<group>"; };
+		435F3C922101B72900EDF645 /* UINavigationController+JKTransitions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+JKTransitions.m"; path = "../../../../Desktop/leiku/UINavigationController+JKTransitions.m"; sourceTree = "<group>"; };
 		436B1EA320DA2FB000419AC0 /* UIView+JKVisuals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JKVisuals.m"; sourceTree = "<group>"; };
 		436B1EA420DA2FB000419AC0 /* UIView+JKVisuals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JKVisuals.h"; sourceTree = "<group>"; };
 		436B1EA920DA2FF000419AC0 /* UIView+JKShake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JKShake.h"; sourceTree = "<group>"; };
@@ -785,6 +788,8 @@
 		434DDB4B20C92B4E00191FC1 /* JKCategories */ = {
 			isa = PBXGroup;
 			children = (
+				435F3C912101B72900EDF645 /* UINavigationController+JKTransitions.h */,
+				435F3C922101B72900EDF645 /* UINavigationController+JKTransitions.m */,
 				4355A4DB20FF11000020B7DE /* UINavigationController+JKStackManager.h */,
 				4355A4DA20FF11000020B7DE /* UINavigationController+JKStackManager.m */,
 				435F3C8E2101B70600EDF645 /* UINavigationItem+JKLoading.h */,
@@ -1857,6 +1862,7 @@
 				431C076320FC8DAB00479559 /* NSTimer+JKAddition.m in Sources */,
 				437B0A6920F360EA00E93844 /* NSObject+JKBlockTimer.m in Sources */,
 				43993EC220E23F530017F1C3 /* UITableViewCell+JKNIB.m in Sources */,
+				435F3C932101B72A00EDF645 /* UINavigationController+JKTransitions.m in Sources */,
 				435D4C8620F0920A00C8DC85 /* NSManagedObject+JKDictionary.m in Sources */,
 				4325535720CFE88D00FC0258 /* UIWebView+JKWebStorage.m in Sources */,
 				431CB4D220F499380043B0AC /* NSObject+JKRuntime.m in Sources */,
