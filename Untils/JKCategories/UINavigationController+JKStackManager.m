@@ -1,3 +1,4 @@
+lear
 //
 //  UINavigationController+JKStackManager.m
 //  JKCategories (https://github.com/shaojiankui/JKCategories)
