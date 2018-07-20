@@ -42,7 +42,7 @@ CGFloat const kSLRightTextFieldH = 50;
 }
 
 /**
- <#Description#>
+ placeholderColor
 
  @param placeholderColor <#placeholderColor description#>
  */
