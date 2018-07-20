@@ -145,6 +145,96 @@
     result = size.height + size.height * 0.15f;
     return result;
 }
+- (CGFloat)heightOfTextViewWithWidth:(float)width theFont:(UIFont*)aFont {
+    
+    return [self heightOfTextViewWithWidth:width height:MAXFLOAT theFont:aFont];
+}
+
+
+- (CGFloat)heightOfTextViewWithWidth:(float)width height:(float)height theFont:(UIFont*)aFont {
+    
+    CGFloat result;
+    
+    if (self.length == 0)
+        return 0.0f;
+    
+    CGSize textSize = CGSizeMake(width - 16.0f, height - 16.0f);
+    CGSize size = [self sizeWithFont:aFont constrainedToSize:textSize lineBreakMode:NSLineBreakByWordWrapping];
+    result = size.height + size.height * 0.15f + 16.0f;
+    return result;
+}
+- (CGFloat)textViewHeightWithFont:(UIFont *)font width:(CGFloat)width {
+    
+    NSDictionary *attributes = @{ NSFontAttributeName:font };
+    NSAttributedString * attributedString = [[NSAttributedString alloc]initWithString:self attributes:attributes];
+    
+    return [self textViewHeightWithAttributedString:attributedString width:width limitedHeight:MAXFLOAT];
+}
+- (CGFloat)textViewHeightWithAttributedString:(NSAttributedString *)attributedString width:(CGFloat)width {
+    
+    return [self textViewHeightWithAttributedString:attributedString width:width limitedHeight:MAXFLOAT];
+}
+
+- (CGFloat)textViewHeightWithAttributedString:(NSAttributedString *)attributedString width:(CGFloat)width limitedHeight:(CGFloat)height {
+    
+    CGFloat result;
+    
+    UITextView *textView = [[UITextView alloc] init];
+    [textView setAttributedText:attributedString];
+    CGSize size = [textView sizeThatFits:CGSizeMake(width, FLT_MAX)];
+    //    size.height -= 16.0f;
+    if (size.height > height)
+        result = height;
+    else
+        result = size.height;
+    
+    return result;
+}
+- (UIColor *)color {
+    
+    NSArray *rgbArray = [self componentsSeparatedByString:@","];
+    int r = [[rgbArray objectAtIndex:0] intValue];
+    int g = [[rgbArray objectAtIndex:1] intValue];
+    int b = [[rgbArray objectAtIndex:2] intValue];
+    return RGBACOLOR(r, g, b, 1.0f);
+    
+}
+- (BOOL)containsString:(NSString *)aString
+{
+    NSRange range = [[self lowercaseString] rangeOfString:[aString lowercaseString]];
+    return range.location != NSNotFound;
+}
+
+- (NSString*)telephoneWithReformat
+{
+    NSString *telphoneString = self;
+    
+    if ([telphoneString containsString:@"-"])
+    {
+        telphoneString = [telphoneString stringByReplacingOccurrencesOfString:@"-" withString:@""];
+    }
+    
+    if ([telphoneString containsString:@"("])
+    {
+        telphoneString = [telphoneString stringByReplacingOccurrencesOfString:@"(" withString:@""];
+    }
+    
+    if ([telphoneString containsString:@")"])
+    {
+        telphoneString = [telphoneString stringByReplacingOccurrencesOfString:@")" withString:@""];
+    }
+    
+    if ([telphoneString containsString:@" "])
+    {
+        telphoneString = [telphoneString stringByReplacingOccurrencesOfString:@" " withString:@""];
+    }
+    
+    if ([telphoneString containsString:@" "])
+    {
+        telphoneString = [telphoneString stringByReplacingOccurrencesOfString:@" " withString:@""];
+    }
+    
+    return telphoneString;
 
 
 

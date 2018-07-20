@@ -11,7 +11,6 @@
 #import <AssetsLibrary/ALAssetsLibrary.h>
 #import "DeviceInfo.h"
 #import <Photos/Photos.h>
-
 #ifdef DEBUG
 #define debugLog(...)    NSLog(__VA_ARGS__)
 #else
@@ -20,7 +19,6 @@
 
 static  BOOL canEdit = YES;
 static  char blockKey;
-
 @interface UIViewController()<UIActionSheetDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate,UIAlertViewDelegate>
 
 @property (nonatomic,copy)photoBlock photoBlock;
@@ -200,17 +198,7 @@ static  char blockKey;
         self.photoBlock(image);
     }
 }
-/*
- #pragma mark - UINavigationControllerDelegate
- - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
- if ([navigationController isKindOfClass:[UIImagePickerController class]] &&
- ((UIImagePickerController *)navigationController).sourceType ==     UIImagePickerControllerSourceTypePhotoLibrary) {
- [[UIApplication sharedApplication] setStatusBarHidden:NO];
- 
- [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
- }
- }
- */
+
 
 
 
