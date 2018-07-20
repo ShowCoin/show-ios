@@ -41,6 +41,11 @@ CGFloat const kSLRightTextFieldH = 50;
     return self;
 }
 
+/**
+ <#Description#>
+
+ @param placeholderColor <#placeholderColor description#>
+ */
 - (void)setPlaceholderColor:(UIColor *)placeholderColor {
     _placeholderColor = placeholderColor;
     if (self.placeholder.length == 0) {
