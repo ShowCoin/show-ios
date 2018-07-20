@@ -132,7 +132,7 @@
 		435E3C9120C02BB2002B7A7F /* NSNumber+JKCGFloat.m in Sources */ = {isa = PBXBuildFile; fileRef = 435E3AB820C02BB1002B7A7F /* NSNumber+JKCGFloat.m */; };
 		435E3C9220C02BB2002B7A7F /* NSDecimalNumber+JKCalculatingByString.m in Sources */ = {isa = PBXBuildFile; fileRef = 435E3ABA20C02BB1002B7A7F /* NSDecimalNumber+JKCalculatingByString.m */; };
 		435E3C9320C02BB2002B7A7F /* NSNumber+JKRomanNumerals.m in Sources */ = {isa = PBXBuildFile; fileRef = 435E3ABB20C02BB1002B7A7F /* NSNumber+JKRomanNumerals.m */; };
-		435F3C842101B63200EDF645 /* UIPopoverController+iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 435F3C822101B63100EDF645 /* UIPopoverController+iPhone.m */; };
+		435F3C872101B68B00EDF645 /* UINavigationItemDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 435F3C862101B68A00EDF645 /* UINavigationItemDemoViewController.m */; };
 		436B1EA520DA2FB100419AC0 /* UIView+JKVisuals.m in Sources */ = {isa = PBXBuildFile; fileRef = 436B1EA320DA2FB000419AC0 /* UIView+JKVisuals.m */; };
 		436B1EAB20DA2FF100419AC0 /* UIView+JKShake.m in Sources */ = {isa = PBXBuildFile; fileRef = 436B1EAA20DA2FF000419AC0 /* UIView+JKShake.m */; };
 		436B1EAE20DA300600419AC0 /* UIView+JKFind.m in Sources */ = {isa = PBXBuildFile; fileRef = 436B1EAC20DA300600419AC0 /* UIView+JKFind.m */; };
@@ -473,8 +473,8 @@
 		435E3AB820C02BB1002B7A7F /* NSNumber+JKCGFloat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+JKCGFloat.m"; sourceTree = "<group>"; };
 		435E3ABA20C02BB1002B7A7F /* NSDecimalNumber+JKCalculatingByString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDecimalNumber+JKCalculatingByString.m"; sourceTree = "<group>"; };
 		435E3ABB20C02BB1002B7A7F /* NSNumber+JKRomanNumerals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+JKRomanNumerals.m"; sourceTree = "<group>"; };
-		435F3C822101B63100EDF645 /* UIPopoverController+iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIPopoverController+iPhone.m"; path = "../../../../Desktop/leiku/UIPopoverController+iPhone.m"; sourceTree = "<group>"; };
-		435F3C832101B63200EDF645 /* UIPopoverController+iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIPopoverController+iPhone.h"; path = "../../../../Desktop/leiku/UIPopoverController+iPhone.h"; sourceTree = "<group>"; };
+		435F3C852101B68A00EDF645 /* UINavigationItemDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UINavigationItemDemoViewController.h; path = ../../../../Desktop/leiku/UINavigationItemDemoViewController.h; sourceTree = "<group>"; };
+		435F3C862101B68A00EDF645 /* UINavigationItemDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UINavigationItemDemoViewController.m; path = ../../../../Desktop/leiku/UINavigationItemDemoViewController.m; sourceTree = "<group>"; };
 		436B1EA320DA2FB000419AC0 /* UIView+JKVisuals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JKVisuals.m"; sourceTree = "<group>"; };
 		436B1EA420DA2FB000419AC0 /* UIView+JKVisuals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JKVisuals.h"; sourceTree = "<group>"; };
 		436B1EA920DA2FF000419AC0 /* UIView+JKShake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JKShake.h"; sourceTree = "<group>"; };
@@ -782,8 +782,8 @@
 		434DDB4B20C92B4E00191FC1 /* JKCategories */ = {
 			isa = PBXGroup;
 			children = (
-				435F3C832101B63200EDF645 /* UIPopoverController+iPhone.h */,
-				435F3C822101B63100EDF645 /* UIPopoverController+iPhone.m */,
+				435F3C852101B68A00EDF645 /* UINavigationItemDemoViewController.h */,
+				435F3C862101B68A00EDF645 /* UINavigationItemDemoViewController.m */,
 				4355A4DB20FF11000020B7DE /* UINavigationController+JKStackManager.h */,
 				4355A4DA20FF11000020B7DE /* UINavigationController+JKStackManager.m */,
 				4355A4D720FF10CC0020B7DE /* UINavigationItem+JKLoading.h */,
@@ -1793,6 +1793,7 @@
 				431F64B920F7945D0087DB8E /* UIPopoverController+iPhone.m in Sources */,
 				434DDB5D20C9332700191FC1 /* CATransaction+JKAnimateWithDuration.m in Sources */,
 				437B0A6020F3607100E93844 /* NSObject+JKAppInfo.m in Sources */,
+				435F3C872101B68B00EDF645 /* UINavigationItemDemoViewController.m in Sources */,
 				435D4C8020F091BC00C8DC85 /* NSIndexPath+JKOffset.m in Sources */,
 				431BBB6520DBCB05006A3D50 /* UIView+JKConstraints.m in Sources */,
 				431C077D20FE284300479559 /* NSURLRequest+JKParamsFromDictionary.m in Sources */,
@@ -1929,7 +1930,6 @@
 				437B0A6320F3608B00E93844 /* NSObject+JKAssociatedObject.m in Sources */,
 				43291F4D20E520CB000C3C15 /* UITableView+FDTemplateLayoutCellDebug.m in Sources */,
 				434DDB5420C932AB00191FC1 /* CALayerDemoViewController.m in Sources */,
-				435F3C842101B63200EDF645 /* UIPopoverController+iPhone.m in Sources */,
 				43291F5020E520E0000C3C15 /* UITableView+FDKeyedHeightCache.m in Sources */,
 				437B0A5D20F3602F00E93844 /* NSObject+JKAddProperty.m in Sources */,
 				431CB4CF20F4991D0043B0AC /* NSObject+JKReflection.m in Sources */,
