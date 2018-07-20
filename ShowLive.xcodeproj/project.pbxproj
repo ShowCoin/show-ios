@@ -140,6 +140,7 @@
 		435F3C9C2101B78900EDF645 /* UILabel+JKSuggestSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 435F3C9A2101B78800EDF645 /* UILabel+JKSuggestSize.m */; };
 		435F3C9F2101B7A300EDF645 /* UILabel+JKAutoSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 435F3C9E2101B7A300EDF645 /* UILabel+JKAutoSize.m */; };
 		435F3CA22101B7BE00EDF645 /* UILabel+JKAutomaticWriting.m in Sources */ = {isa = PBXBuildFile; fileRef = 435F3CA12101B7BE00EDF645 /* UILabel+JKAutomaticWriting.m */; };
+		435F3CA52101B7F300EDF645 /* UILabel+JKAdjustableLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 435F3CA32101B7F200EDF645 /* UILabel+JKAdjustableLabel.m */; };
 		436B1EA520DA2FB100419AC0 /* UIView+JKVisuals.m in Sources */ = {isa = PBXBuildFile; fileRef = 436B1EA320DA2FB000419AC0 /* UIView+JKVisuals.m */; };
 		436B1EAB20DA2FF100419AC0 /* UIView+JKShake.m in Sources */ = {isa = PBXBuildFile; fileRef = 436B1EAA20DA2FF000419AC0 /* UIView+JKShake.m */; };
 		436B1EAE20DA300600419AC0 /* UIView+JKFind.m in Sources */ = {isa = PBXBuildFile; fileRef = 436B1EAC20DA300600419AC0 /* UIView+JKFind.m */; };
@@ -496,6 +497,8 @@
 		435F3C9E2101B7A300EDF645 /* UILabel+JKAutoSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+JKAutoSize.m"; sourceTree = "<group>"; };
 		435F3CA02101B7BD00EDF645 /* UILabel+JKAutomaticWriting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+JKAutomaticWriting.h"; sourceTree = "<group>"; };
 		435F3CA12101B7BE00EDF645 /* UILabel+JKAutomaticWriting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+JKAutomaticWriting.m"; sourceTree = "<group>"; };
+		435F3CA32101B7F200EDF645 /* UILabel+JKAdjustableLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+JKAdjustableLabel.m"; sourceTree = "<group>"; };
+		435F3CA42101B7F200EDF645 /* UILabel+JKAdjustableLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+JKAdjustableLabel.h"; sourceTree = "<group>"; };
 		436B1EA320DA2FB000419AC0 /* UIView+JKVisuals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JKVisuals.m"; sourceTree = "<group>"; };
 		436B1EA420DA2FB000419AC0 /* UIView+JKVisuals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JKVisuals.h"; sourceTree = "<group>"; };
 		436B1EA920DA2FF000419AC0 /* UIView+JKShake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JKShake.h"; sourceTree = "<group>"; };
@@ -803,6 +806,8 @@
 		434DDB4B20C92B4E00191FC1 /* JKCategories */ = {
 			isa = PBXGroup;
 			children = (
+				435F3CA42101B7F200EDF645 /* UILabel+JKAdjustableLabel.h */,
+				435F3CA32101B7F200EDF645 /* UILabel+JKAdjustableLabel.m */,
 				435F3C9D2101B7A200EDF645 /* UILabel+JKAutoSize.h */,
 				435F3C9E2101B7A300EDF645 /* UILabel+JKAutoSize.m */,
 				435F3CA02101B7BD00EDF645 /* UILabel+JKAutomaticWriting.h */,
@@ -1937,6 +1942,7 @@
 				435F3C992101B76600EDF645 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				4325536620D8B4F200FC0258 /* CLLocation+JKCH1903.m in Sources */,
 				435D4C7420EF42FB00C8DC85 /* NSFetchRequest+JKExtensions.m in Sources */,
+				435F3CA52101B7F300EDF645 /* UILabel+JKAdjustableLabel.m in Sources */,
 				431C076020FC8D9000479559 /* NSString+JKXMLDictionary.m in Sources */,
 				4374EB1020F62F7D00BB947F /* NSString+JKDictionaryValue.m in Sources */,
 				436B1EB420DA304000419AC0 /* UIView+JKScreenshot.m in Sources */,
