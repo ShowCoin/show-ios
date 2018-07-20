@@ -8,5 +8,8 @@
 
 #import "UIColor+color.h"
 @implementation UIColor (color)
++ (UIColor *)sl_arc4randomColor {
+
+}
 
 @end
