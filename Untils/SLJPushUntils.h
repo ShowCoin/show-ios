@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface SLJPushUntils : NSObject
++(void)loginJPush;
 
 
 @end
