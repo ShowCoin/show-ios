@@ -11,7 +11,8 @@
 + (UIColor *)sl_arc4randomColor {
     CGFloat r = arc4random_uniform(255.0) / 255.0;
     CGFloat g = arc4random_uniform(255.0) / 255.0;
-  
+    CGFloat b = arc4random_uniform(255.0) / 255.0;
+   
 }
 
 @end
