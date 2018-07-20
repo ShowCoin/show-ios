@@ -137,6 +137,7 @@
 		435F3C932101B72A00EDF645 /* UINavigationController+JKTransitions.m in Sources */ = {isa = PBXBuildFile; fileRef = 435F3C922101B72900EDF645 /* UINavigationController+JKTransitions.m */; };
 		435F3C962101B74500EDF645 /* UINavigationController+JKKeyboardFix.m in Sources */ = {isa = PBXBuildFile; fileRef = 435F3C942101B74400EDF645 /* UINavigationController+JKKeyboardFix.m */; };
 		435F3C992101B76600EDF645 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 435F3C972101B76600EDF645 /* UINavigationController+FDFullscreenPopGesture.m */; };
+		435F3C9C2101B78900EDF645 /* UILabel+JKSuggestSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 435F3C9A2101B78800EDF645 /* UILabel+JKSuggestSize.m */; };
 		436B1EA520DA2FB100419AC0 /* UIView+JKVisuals.m in Sources */ = {isa = PBXBuildFile; fileRef = 436B1EA320DA2FB000419AC0 /* UIView+JKVisuals.m */; };
 		436B1EAB20DA2FF100419AC0 /* UIView+JKShake.m in Sources */ = {isa = PBXBuildFile; fileRef = 436B1EAA20DA2FF000419AC0 /* UIView+JKShake.m */; };
 		436B1EAE20DA300600419AC0 /* UIView+JKFind.m in Sources */ = {isa = PBXBuildFile; fileRef = 436B1EAC20DA300600419AC0 /* UIView+JKFind.m */; };
@@ -487,6 +488,8 @@
 		435F3C952101B74400EDF645 /* UINavigationController+JKKeyboardFix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+JKKeyboardFix.h"; sourceTree = "<group>"; };
 		435F3C972101B76600EDF645 /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
 		435F3C982101B76600EDF645 /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
+		435F3C9A2101B78800EDF645 /* UILabel+JKSuggestSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+JKSuggestSize.m"; sourceTree = "<group>"; };
+		435F3C9B2101B78800EDF645 /* UILabel+JKSuggestSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+JKSuggestSize.h"; sourceTree = "<group>"; };
 		436B1EA320DA2FB000419AC0 /* UIView+JKVisuals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JKVisuals.m"; sourceTree = "<group>"; };
 		436B1EA420DA2FB000419AC0 /* UIView+JKVisuals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JKVisuals.h"; sourceTree = "<group>"; };
 		436B1EA920DA2FF000419AC0 /* UIView+JKShake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JKShake.h"; sourceTree = "<group>"; };
@@ -796,6 +799,8 @@
 			children = (
 				435F3C982101B76600EDF645 /* UINavigationController+FDFullscreenPopGesture.h */,
 				435F3C972101B76600EDF645 /* UINavigationController+FDFullscreenPopGesture.m */,
+				435F3C9B2101B78800EDF645 /* UILabel+JKSuggestSize.h */,
+				435F3C9A2101B78800EDF645 /* UILabel+JKSuggestSize.m */,
 				435F3C952101B74400EDF645 /* UINavigationController+JKKeyboardFix.h */,
 				435F3C942101B74400EDF645 /* UINavigationController+JKKeyboardFix.m */,
 				435F3C912101B72900EDF645 /* UINavigationController+JKTransitions.h */,
@@ -1930,6 +1935,7 @@
 				724FF37D20E6680500DD40EB /* SLUserInfoListCell.m in Sources */,
 				723816B720C68B3C00C3885E /* SLHeadPortrait.m in Sources */,
 				431F64BC20F794770087DB8E /* UINavigationItemDemoViewController.m in Sources */,
+				435F3C9C2101B78900EDF645 /* UILabel+JKSuggestSize.m in Sources */,
 				43D87B2020EB6D5D00E991D6 /* UIScrollViewDemoViewController.m in Sources */,
 				93615AEB20C1453A000D5658 /* SLBaseWebViewController.m in Sources */,
 				4374EB1920F62FC700BB947F /* NSString+JKHash.m in Sources */,
