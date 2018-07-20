@@ -22,6 +22,12 @@ CGFloat const kSLRightTextFieldH = 50;
     SLVerificationButton *vButton__;
 }
 
+/**
+ <#Description#>
+
+ @param frame <#frame description#>
+ @return <#return value description#>
+ */
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
