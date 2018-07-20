@@ -16,7 +16,7 @@ CGFloat const kSLRightTextFieldH = 50;
 @end
 
 /**
- <#Description#>
+ SLRightTextField
  */
 @implementation SLRightTextField {
     SLVerificationButton *vButton__;
