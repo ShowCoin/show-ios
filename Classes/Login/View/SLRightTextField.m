@@ -74,7 +74,7 @@ CGFloat const kSLRightTextFieldH = 50;
 }
 
 /**
- <#Description#>
+ showBottomLine
 
  @param showBottomLine <#showBottomLine description#>
  */
