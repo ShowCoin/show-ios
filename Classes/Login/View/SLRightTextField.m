@@ -59,7 +59,7 @@ CGFloat const kSLRightTextFieldH = 50;
 /**
  setLeftTitle
 
- @param leftTitle <#leftTitle description#>
+ @param leftTitle NSString
  */
 - (void)setLeftTitle:(NSString *)leftTitle {
     _leftTitle = leftTitle;
