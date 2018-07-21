@@ -76,7 +76,7 @@ CGFloat const kSLRightTextFieldH = 50;
 /**
  showBottomLine
 
- @param showBottomLine <#showBottomLine description#>
+ @param showBottomLine BOOL
  */
 - (void)setShowBottomLine:(BOOL)showBottomLine {
     _showBottomLine = showBottomLine;
