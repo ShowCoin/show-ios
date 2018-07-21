@@ -57,7 +57,7 @@ CGFloat const kSLRightTextFieldH = 50;
 
 
 /**
- <#Description#>
+ setLeftTitle
 
  @param leftTitle <#leftTitle description#>
  */
