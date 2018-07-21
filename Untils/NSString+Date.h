@@ -13,6 +13,10 @@
 //时间戳转时间
 +(NSString *)dateWithIntervale:(long long)interval formateStyle:(NSString*)style;
 
+//date style
+-(long long)dateStringWithFormateStyle:(NSString*)style;
+
+
 
 
 @end
