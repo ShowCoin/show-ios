@@ -150,6 +150,7 @@
 		435F3CBA2103117000EDF645 /* UIImageView+JKLetters.m in Sources */ = {isa = PBXBuildFile; fileRef = 435F3CB82103116F00EDF645 /* UIImageView+JKLetters.m */; };
 		435F3CBD2103118900EDF645 /* UIImageView+JKGeometryConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = 435F3CBB2103118900EDF645 /* UIImageView+JKGeometryConversion.m */; };
 		435F3CC0210311ED00EDF645 /* UIImageView+JKFaceAwareFill.m in Sources */ = {isa = PBXBuildFile; fileRef = 435F3CBE210311EC00EDF645 /* UIImageView+JKFaceAwareFill.m */; };
+		435F3CC32103120A00EDF645 /* UIImageView+JKBetterFace.m in Sources */ = {isa = PBXBuildFile; fileRef = 435F3CC12103120900EDF645 /* UIImageView+JKBetterFace.m */; };
 		436B1EA520DA2FB100419AC0 /* UIView+JKVisuals.m in Sources */ = {isa = PBXBuildFile; fileRef = 436B1EA320DA2FB000419AC0 /* UIView+JKVisuals.m */; };
 		436B1EAB20DA2FF100419AC0 /* UIView+JKShake.m in Sources */ = {isa = PBXBuildFile; fileRef = 436B1EAA20DA2FF000419AC0 /* UIView+JKShake.m */; };
 		436B1EAE20DA300600419AC0 /* UIView+JKFind.m in Sources */ = {isa = PBXBuildFile; fileRef = 436B1EAC20DA300600419AC0 /* UIView+JKFind.m */; };
@@ -526,6 +527,8 @@
 		435F3CBC2103118900EDF645 /* UIImageView+JKGeometryConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+JKGeometryConversion.h"; sourceTree = "<group>"; };
 		435F3CBE210311EC00EDF645 /* UIImageView+JKFaceAwareFill.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+JKFaceAwareFill.m"; sourceTree = "<group>"; };
 		435F3CBF210311ED00EDF645 /* UIImageView+JKFaceAwareFill.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+JKFaceAwareFill.h"; sourceTree = "<group>"; };
+		435F3CC12103120900EDF645 /* UIImageView+JKBetterFace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+JKBetterFace.m"; sourceTree = "<group>"; };
+		435F3CC22103120A00EDF645 /* UIImageView+JKBetterFace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+JKBetterFace.h"; sourceTree = "<group>"; };
 		436B1EA320DA2FB000419AC0 /* UIView+JKVisuals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JKVisuals.m"; sourceTree = "<group>"; };
 		436B1EA420DA2FB000419AC0 /* UIView+JKVisuals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JKVisuals.h"; sourceTree = "<group>"; };
 		436B1EA920DA2FF000419AC0 /* UIView+JKShake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JKShake.h"; sourceTree = "<group>"; };
@@ -833,6 +836,8 @@
 		434DDB4B20C92B4E00191FC1 /* JKCategories */ = {
 			isa = PBXGroup;
 			children = (
+				435F3CC22103120A00EDF645 /* UIImageView+JKBetterFace.h */,
+				435F3CC12103120900EDF645 /* UIImageView+JKBetterFace.m */,
 				435F3CBF210311ED00EDF645 /* UIImageView+JKFaceAwareFill.h */,
 				435F3CBE210311EC00EDF645 /* UIImageView+JKFaceAwareFill.m */,
 				435F3CBC2103118900EDF645 /* UIImageView+JKGeometryConversion.h */,
@@ -1902,6 +1907,7 @@
 				4355A4D920FF10CC0020B7DE /* UINavigationItem+JKLoading.m in Sources */,
 				431C078320FE28BF00479559 /* NSURLSession+JKSynchronousTask.m in Sources */,
 				4325535420CFE87700FC0258 /* UIWebViewDemoViewController.m in Sources */,
+				435F3CC32103120A00EDF645 /* UIImageView+JKBetterFace.m in Sources */,
 				434DDB6320C9337A00191FC1 /* UIWindow+JKHierarchy.m in Sources */,
 				722957B120C80779000D0719 /* SLUserViewHeader.m in Sources */,
 				435E3C9120C02BB2002B7A7F /* NSNumber+JKCGFloat.m in Sources */,
