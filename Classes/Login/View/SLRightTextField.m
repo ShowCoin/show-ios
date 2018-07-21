@@ -73,6 +73,11 @@ CGFloat const kSLRightTextFieldH = 50;
     self.leftViewMode = UITextFieldViewModeAlways;
 }
 
+/**
+ <#Description#>
+
+ @param showBottomLine <#showBottomLine description#>
+ */
 - (void)setShowBottomLine:(BOOL)showBottomLine {
     _showBottomLine = showBottomLine;
     [self setNeedsDisplay];
