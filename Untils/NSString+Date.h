@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface NSString (Date)
+
 //时间戳转时间
 +(NSString *)dateWithIntervale:(long long)interval formateStyle:(NSString*)style;
 
