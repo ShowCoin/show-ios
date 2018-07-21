@@ -143,6 +143,7 @@
 		435F3CA52101B7F300EDF645 /* UILabel+JKAdjustableLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 435F3CA32101B7F200EDF645 /* UILabel+JKAdjustableLabel.m */; };
 		435F3CA82101B81A00EDF645 /* UIImageViewDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 435F3CA62101B81900EDF645 /* UIImageViewDemoViewController.m */; };
 		435F3CAB2103107800EDF645 /* UILabel+JKAutoSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 435F3CAA2103107700EDF645 /* UILabel+JKAutoSize.m */; };
+		435F3CAE210310FE00EDF645 /* UILabel+JKAutomaticWriting.m in Sources */ = {isa = PBXBuildFile; fileRef = 435F3CAD210310FD00EDF645 /* UILabel+JKAutomaticWriting.m */; };
 		436B1EA520DA2FB100419AC0 /* UIView+JKVisuals.m in Sources */ = {isa = PBXBuildFile; fileRef = 436B1EA320DA2FB000419AC0 /* UIView+JKVisuals.m */; };
 		436B1EAB20DA2FF100419AC0 /* UIView+JKShake.m in Sources */ = {isa = PBXBuildFile; fileRef = 436B1EAA20DA2FF000419AC0 /* UIView+JKShake.m */; };
 		436B1EAE20DA300600419AC0 /* UIView+JKFind.m in Sources */ = {isa = PBXBuildFile; fileRef = 436B1EAC20DA300600419AC0 /* UIView+JKFind.m */; };
@@ -505,6 +506,8 @@
 		435F3CA72101B81900EDF645 /* UIImageViewDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageViewDemoViewController.h; sourceTree = "<group>"; };
 		435F3CA92103107700EDF645 /* UILabel+JKAutoSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UILabel+JKAutoSize.h"; path = "../../../../Desktop/leiku/UILabel+JKAutoSize.h"; sourceTree = "<group>"; };
 		435F3CAA2103107700EDF645 /* UILabel+JKAutoSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UILabel+JKAutoSize.m"; path = "../../../../Desktop/leiku/UILabel+JKAutoSize.m"; sourceTree = "<group>"; };
+		435F3CAC210310FD00EDF645 /* UILabel+JKAutomaticWriting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UILabel+JKAutomaticWriting.h"; path = "../../../../Desktop/leiku/UILabel+JKAutomaticWriting.h"; sourceTree = "<group>"; };
+		435F3CAD210310FD00EDF645 /* UILabel+JKAutomaticWriting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UILabel+JKAutomaticWriting.m"; path = "../../../../Desktop/leiku/UILabel+JKAutomaticWriting.m"; sourceTree = "<group>"; };
 		436B1EA320DA2FB000419AC0 /* UIView+JKVisuals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JKVisuals.m"; sourceTree = "<group>"; };
 		436B1EA420DA2FB000419AC0 /* UIView+JKVisuals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JKVisuals.h"; sourceTree = "<group>"; };
 		436B1EA920DA2FF000419AC0 /* UIView+JKShake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JKShake.h"; sourceTree = "<group>"; };
@@ -812,6 +815,8 @@
 		434DDB4B20C92B4E00191FC1 /* JKCategories */ = {
 			isa = PBXGroup;
 			children = (
+				435F3CAC210310FD00EDF645 /* UILabel+JKAutomaticWriting.h */,
+				435F3CAD210310FD00EDF645 /* UILabel+JKAutomaticWriting.m */,
 				435F3CA92103107700EDF645 /* UILabel+JKAutoSize.h */,
 				435F3CAA2103107700EDF645 /* UILabel+JKAutoSize.m */,
 				435F3CA72101B81900EDF645 /* UIImageViewDemoViewController.h */,
@@ -1895,6 +1900,7 @@
 				435D4C9220F092C000C8DC85 /* NSManagedObjectContext+JKObjectClear.m in Sources */,
 				431F64EF20F8F2720087DB8E /* NSString+JKTrims.m in Sources */,
 				43993EB320E23E390017F1C3 /* UITextView+JKInputLimit.m in Sources */,
+				435F3CAE210310FE00EDF645 /* UILabel+JKAutomaticWriting.m in Sources */,
 				72CA648D20EE4A710052E107 /* SLFansViewController.m in Sources */,
 				4325536020D8B49F00FC0258 /* CAShapeLayerDemoViewController.m in Sources */,
 				43D87B2620EB6D7E00E991D6 /* UIScrollView+JKAddition.m in Sources */,
