@@ -22,6 +22,14 @@
 //计算时间差
 + (NSString *)minutesWithStartTime:(NSString *)startTime endTime:(NSString *)endTime;
 
+/**
+ 获取时间差
+ 
+ @param date 时间
+ 
+ @return 格式化时间字符串
+ */
++ (NSString *)strintFromeDate:(NSDate *)date formate:(NSString *)formate;
 
 
 
