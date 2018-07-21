@@ -44,6 +44,7 @@
 //获取当前时间戳
 +(NSString *)getNowTimeInterval;
 
-
+//时间转换时间戳
++(NSString*)exchageTimeInterval:(NSString*)timeString;
 
 @end
