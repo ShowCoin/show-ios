@@ -15,10 +15,19 @@ CGFloat const kSLRightTextFieldH = 50;
 
 @end
 
+/**
+ SLRightTextField
+ */
 @implementation SLRightTextField {
     SLVerificationButton *vButton__;
 }
 
+/**
+ initWithFrame
+
+ @param frame frame
+ @return instancetype
+ */
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -32,6 +41,11 @@ CGFloat const kSLRightTextFieldH = 50;
     return self;
 }
 
+/**
+ placeholderColor
+
+ @param placeholderColor <#placeholderColor description#>
+ */
 - (void)setPlaceholderColor:(UIColor *)placeholderColor {
     _placeholderColor = placeholderColor;
     if (self.placeholder.length == 0) {
