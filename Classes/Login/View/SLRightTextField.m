@@ -84,7 +84,7 @@ CGFloat const kSLRightTextFieldH = 50;
 }
 
 /**
- <#Description#>
+ setShowTopLine
 
  @param showTopLine <#showTopLine description#>
  */
