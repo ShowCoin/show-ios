@@ -32,5 +32,15 @@
 + (NSString *)strintFromeDate:(NSDate *)date formate:(NSString *)formate;
 
 
+/**
+ 获取当前时间的格式化字符串
+ 
+ @param date 时间
+ 
+ @return 格式化时间字符串
+ */
++(NSString*)getNowString;
+
+
 
 @end
