@@ -147,6 +147,7 @@
 		435F3CB12103111700EDF645 /* UILabel+JKAdjustableLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 435F3CAF2103111600EDF645 /* UILabel+JKAdjustableLabel.m */; };
 		435F3CB42103114900EDF645 /* UIImageViewDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 435F3CB22103114800EDF645 /* UIImageViewDemoViewController.m */; };
 		435F3CB72103115D00EDF645 /* UIImageView+JKReflect.m in Sources */ = {isa = PBXBuildFile; fileRef = 435F3CB62103115D00EDF645 /* UIImageView+JKReflect.m */; };
+		435F3CBA2103117000EDF645 /* UIImageView+JKLetters.m in Sources */ = {isa = PBXBuildFile; fileRef = 435F3CB82103116F00EDF645 /* UIImageView+JKLetters.m */; };
 		436B1EA520DA2FB100419AC0 /* UIView+JKVisuals.m in Sources */ = {isa = PBXBuildFile; fileRef = 436B1EA320DA2FB000419AC0 /* UIView+JKVisuals.m */; };
 		436B1EAB20DA2FF100419AC0 /* UIView+JKShake.m in Sources */ = {isa = PBXBuildFile; fileRef = 436B1EAA20DA2FF000419AC0 /* UIView+JKShake.m */; };
 		436B1EAE20DA300600419AC0 /* UIView+JKFind.m in Sources */ = {isa = PBXBuildFile; fileRef = 436B1EAC20DA300600419AC0 /* UIView+JKFind.m */; };
@@ -517,6 +518,8 @@
 		435F3CB32103114900EDF645 /* UIImageViewDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIImageViewDemoViewController.h; path = ../../../../Desktop/leiku/UIImageViewDemoViewController.h; sourceTree = "<group>"; };
 		435F3CB52103115D00EDF645 /* UIImageView+JKReflect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+JKReflect.h"; sourceTree = "<group>"; };
 		435F3CB62103115D00EDF645 /* UIImageView+JKReflect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+JKReflect.m"; sourceTree = "<group>"; };
+		435F3CB82103116F00EDF645 /* UIImageView+JKLetters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+JKLetters.m"; sourceTree = "<group>"; };
+		435F3CB92103116F00EDF645 /* UIImageView+JKLetters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+JKLetters.h"; sourceTree = "<group>"; };
 		436B1EA320DA2FB000419AC0 /* UIView+JKVisuals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JKVisuals.m"; sourceTree = "<group>"; };
 		436B1EA420DA2FB000419AC0 /* UIView+JKVisuals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JKVisuals.h"; sourceTree = "<group>"; };
 		436B1EA920DA2FF000419AC0 /* UIView+JKShake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JKShake.h"; sourceTree = "<group>"; };
@@ -824,6 +827,8 @@
 		434DDB4B20C92B4E00191FC1 /* JKCategories */ = {
 			isa = PBXGroup;
 			children = (
+				435F3CB92103116F00EDF645 /* UIImageView+JKLetters.h */,
+				435F3CB82103116F00EDF645 /* UIImageView+JKLetters.m */,
 				435F3CB52103115D00EDF645 /* UIImageView+JKReflect.h */,
 				435F3CB62103115D00EDF645 /* UIImageView+JKReflect.m */,
 				435F3CB32103114900EDF645 /* UIImageViewDemoViewController.h */,
@@ -2038,6 +2043,7 @@
 				435D4C4D20EDEAC600C8DC85 /* NSDate+JKReporting.m in Sources */,
 				435F3C902101B70600EDF645 /* UINavigationItem+JKLoading.m in Sources */,
 				720F860920B2F59500AD0C54 /* SLGetRyTokenAction.m in Sources */,
+				435F3CBA2103117000EDF645 /* UIImageView+JKLetters.m in Sources */,
 				434DDB5720C932DB00191FC1 /* CAMediaTimingFunction+JKAdditionalEquations.m in Sources */,
 				437921ED20ECC49900B2EC88 /* NSData+JKGzip.m in Sources */,
 				431BBB5F20DBCA96006A3D50 /* UIView+JKDraggable.m in Sources */,
