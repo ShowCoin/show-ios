@@ -184,6 +184,9 @@ CGFloat const kSLRightTextFieldH = 50;
 }
 
 
+/**
+ <#Description#>
+ */
 - (void)sl_timerAction {
     count--;
     if (count == 0) {
