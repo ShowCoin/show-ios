@@ -196,6 +196,9 @@ CGFloat const kSLRightTextFieldH = 50;
     [self setTitle:title forState:UIControlStateNormal];
 }
 
+/**
+ <#Description#>
+ */
 - (void)sl_destoryTimer {
     [timer invalidate];
     timer = nil;
