@@ -24,7 +24,8 @@
 
 #import "UIImageView+JKLetters.h"
 
-// This multiplier sets the font size based on the view bounds
+// This multiplier sets the font size based on the view boundslear
+op
 static const CGFloat jk_FontResizingProportion = 0.42f;
 
 @interface UIImageView (JKLettersPrivate)

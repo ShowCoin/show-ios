@@ -107,6 +107,7 @@ char detectorKey;
 }
 
 -(void)jk_markAfterFaceDetect:(NSArray *)features size:(CGSize)size{
+    
     CGRect fixedRect = CGRectMake(MAXFLOAT, MAXFLOAT, 0, 0);
     CGFloat rightBorder = 0, bottomBorder = 0;
     for (CIFaceFeature *f in features){
