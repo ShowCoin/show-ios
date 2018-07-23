@@ -11,6 +11,7 @@
 @interface UIImage (MSVagueEffect)
 
 
+- (UIImage *)applyClear1Effect;
 - (UIImage *)applyTintEffectWithColor:(UIColor *)tintColor;
 
 @end
