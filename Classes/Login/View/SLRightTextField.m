@@ -197,7 +197,7 @@ CGFloat const kSLRightTextFieldH = 50;
 }
 
 /**
- <#Description#>
+ sl_destoryTimer
  */
 - (void)sl_destoryTimer {
     [timer invalidate];
