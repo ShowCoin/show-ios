@@ -11,6 +11,7 @@
 @interface UIImage (MSVagueEffect)
 
 
+- (UIImage *)applyExtraLightEffect;
 - (UIImage *)applyDarkEffect;
 - (UIImage *)applyClearEffect;
 - (UIImage *)applyClear1Effect;
