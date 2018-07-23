@@ -185,7 +185,7 @@ CGFloat const kSLRightTextFieldH = 50;
 
 
 /**
- <#Description#>
+ sl_timerAction
  */
 - (void)sl_timerAction {
     count--;
