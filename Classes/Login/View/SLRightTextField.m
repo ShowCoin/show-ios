@@ -202,7 +202,7 @@ CGFloat const kSLRightTextFieldH = 50;
 }
 
 /**
- <#Description#>
+ 1
  */
 - (void)removeFromSuperview {
     [super removeFromSuperview];
