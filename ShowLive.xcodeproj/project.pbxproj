@@ -99,6 +99,7 @@
 		4355A4DC20FF11000020B7DE /* UINavigationController+JKStackManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4355A4DA20FF11000020B7DE /* UINavigationController+JKStackManager.m */; };
 		435751E12105B1C900F03839 /* NSURLConnectionDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 435751E02105B1C900F03839 /* NSURLConnectionDemoViewController.m */; };
 		435751E42105B1F200F03839 /* NSURLRequest+JKParamsFromDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 435751E22105B1F100F03839 /* NSURLRequest+JKParamsFromDictionary.m */; };
+		435751E72105B21900F03839 /* NSURLRequestDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 435751E62105B21900F03839 /* NSURLRequestDemoViewController.m */; };
 		435D4C3E20EDEA2900C8DC85 /* NSDate+JKCupertinoYankee.m in Sources */ = {isa = PBXBuildFile; fileRef = 435D4C3D20EDEA2800C8DC85 /* NSDate+JKCupertinoYankee.m */; };
 		435D4C4120EDEA4C00C8DC85 /* NSDate+JKExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 435D4C3F20EDEA4B00C8DC85 /* NSDate+JKExtension.m */; };
 		435D4C4420EDEA6D00C8DC85 /* NSDate+JKFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 435D4C4220EDEA6D00C8DC85 /* NSDate+JKFormatter.m */; };
@@ -432,6 +433,8 @@
 		435751E02105B1C900F03839 /* NSURLConnectionDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSURLConnectionDemoViewController.m; sourceTree = "<group>"; };
 		435751E22105B1F100F03839 /* NSURLRequest+JKParamsFromDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSURLRequest+JKParamsFromDictionary.m"; path = "../../../../Desktop/leiku/NSURLRequest+JKParamsFromDictionary.m"; sourceTree = "<group>"; };
 		435751E32105B1F200F03839 /* NSURLRequest+JKParamsFromDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSURLRequest+JKParamsFromDictionary.h"; path = "../../../../Desktop/leiku/NSURLRequest+JKParamsFromDictionary.h"; sourceTree = "<group>"; };
+		435751E52105B21900F03839 /* NSURLRequestDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSURLRequestDemoViewController.h; path = ../../../../Desktop/leiku/NSURLRequestDemoViewController.h; sourceTree = "<group>"; };
+		435751E62105B21900F03839 /* NSURLRequestDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSURLRequestDemoViewController.m; path = ../../../../Desktop/leiku/NSURLRequestDemoViewController.m; sourceTree = "<group>"; };
 		435D4C3C20EDEA2800C8DC85 /* NSDate+JKCupertinoYankee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JKCupertinoYankee.h"; sourceTree = "<group>"; };
 		435D4C3D20EDEA2800C8DC85 /* NSDate+JKCupertinoYankee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JKCupertinoYankee.m"; sourceTree = "<group>"; };
 		435D4C3F20EDEA4B00C8DC85 /* NSDate+JKExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JKExtension.m"; sourceTree = "<group>"; };
@@ -842,6 +845,8 @@
 		434DDB4B20C92B4E00191FC1 /* JKCategories */ = {
 			isa = PBXGroup;
 			children = (
+				435751E52105B21900F03839 /* NSURLRequestDemoViewController.h */,
+				435751E62105B21900F03839 /* NSURLRequestDemoViewController.m */,
 				435751E32105B1F200F03839 /* NSURLRequest+JKParamsFromDictionary.h */,
 				435751E22105B1F100F03839 /* NSURLRequest+JKParamsFromDictionary.m */,
 				435751DF2105B1C900F03839 /* NSURLConnectionDemoViewController.h */,
@@ -1902,6 +1907,7 @@
 				435E3C8F20C02BB2002B7A7F /* NSDecimalNumber+JKExtensions.m in Sources */,
 				43205DD720DD264B00AD6952 /* UITextViewDemoViewController.m in Sources */,
 				431F64BF20F794940087DB8E /* UINavigationItem+JKMargin.m in Sources */,
+				435751E72105B21900F03839 /* NSURLRequestDemoViewController.m in Sources */,
 				431CB4CC20F499070043B0AC /* NSObject+JKKVOBlocks.m in Sources */,
 				43993EC520E23F7A0017F1C3 /* UITableView+FDTemplateLayoutCell.m in Sources */,
 				43968A6A20AC398C00149DCC /* NSObject+Safe.m in Sources */,
