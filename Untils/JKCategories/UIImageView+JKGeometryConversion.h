@@ -19,10 +19,11 @@
 
 
 @interface UIImageView (JKGeometryConversion)
-
+//覆盖图片从点
 - (CGPoint)jk_convertPointFromImage:(CGPoint)imagePoint;
+//根据rect 覆盖图片
 - (CGRect)jk_convertRectFromImage:(CGRect)imageRect;
-
+//根据viewPoint覆盖
 - (CGPoint)jk_convertPointFromView:(CGPoint)viewPoint;
 - (CGRect)jk_convertRectFromView:(CGRect)viewRect;
 
