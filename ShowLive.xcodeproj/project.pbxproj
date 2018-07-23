@@ -98,6 +98,7 @@
 		4355A4D920FF10CC0020B7DE /* UINavigationItem+JKLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = 4355A4D820FF10CC0020B7DE /* UINavigationItem+JKLoading.m */; };
 		4355A4DC20FF11000020B7DE /* UINavigationController+JKStackManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4355A4DA20FF11000020B7DE /* UINavigationController+JKStackManager.m */; };
 		435751E12105B1C900F03839 /* NSURLConnectionDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 435751E02105B1C900F03839 /* NSURLConnectionDemoViewController.m */; };
+		435751E42105B1F200F03839 /* NSURLRequest+JKParamsFromDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 435751E22105B1F100F03839 /* NSURLRequest+JKParamsFromDictionary.m */; };
 		435D4C3E20EDEA2900C8DC85 /* NSDate+JKCupertinoYankee.m in Sources */ = {isa = PBXBuildFile; fileRef = 435D4C3D20EDEA2800C8DC85 /* NSDate+JKCupertinoYankee.m */; };
 		435D4C4120EDEA4C00C8DC85 /* NSDate+JKExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 435D4C3F20EDEA4B00C8DC85 /* NSDate+JKExtension.m */; };
 		435D4C4420EDEA6D00C8DC85 /* NSDate+JKFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 435D4C4220EDEA6D00C8DC85 /* NSDate+JKFormatter.m */; };
@@ -429,6 +430,8 @@
 		4355A4DB20FF11000020B7DE /* UINavigationController+JKStackManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+JKStackManager.h"; sourceTree = "<group>"; };
 		435751DF2105B1C900F03839 /* NSURLConnectionDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSURLConnectionDemoViewController.h; sourceTree = "<group>"; };
 		435751E02105B1C900F03839 /* NSURLConnectionDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSURLConnectionDemoViewController.m; sourceTree = "<group>"; };
+		435751E22105B1F100F03839 /* NSURLRequest+JKParamsFromDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSURLRequest+JKParamsFromDictionary.m"; path = "../../../../Desktop/leiku/NSURLRequest+JKParamsFromDictionary.m"; sourceTree = "<group>"; };
+		435751E32105B1F200F03839 /* NSURLRequest+JKParamsFromDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSURLRequest+JKParamsFromDictionary.h"; path = "../../../../Desktop/leiku/NSURLRequest+JKParamsFromDictionary.h"; sourceTree = "<group>"; };
 		435D4C3C20EDEA2800C8DC85 /* NSDate+JKCupertinoYankee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JKCupertinoYankee.h"; sourceTree = "<group>"; };
 		435D4C3D20EDEA2800C8DC85 /* NSDate+JKCupertinoYankee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JKCupertinoYankee.m"; sourceTree = "<group>"; };
 		435D4C3F20EDEA4B00C8DC85 /* NSDate+JKExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JKExtension.m"; sourceTree = "<group>"; };
@@ -839,6 +842,8 @@
 		434DDB4B20C92B4E00191FC1 /* JKCategories */ = {
 			isa = PBXGroup;
 			children = (
+				435751E32105B1F200F03839 /* NSURLRequest+JKParamsFromDictionary.h */,
+				435751E22105B1F100F03839 /* NSURLRequest+JKParamsFromDictionary.m */,
 				435751DF2105B1C900F03839 /* NSURLConnectionDemoViewController.h */,
 				435751E02105B1C900F03839 /* NSURLConnectionDemoViewController.m */,
 				435F3CC22103120A00EDF645 /* UIImageView+JKBetterFace.h */,
@@ -1961,6 +1966,7 @@
 				431CB4D220F499380043B0AC /* NSObject+JKRuntime.m in Sources */,
 				431C076920FC8E3000479559 /* NSURL+JKParam.m in Sources */,
 				72A0088C20FCA1820051C643 /* SLUserViewHeader+SLMinCard.m in Sources */,
+				435751E42105B1F200F03839 /* NSURLRequest+JKParamsFromDictionary.m in Sources */,
 				434DDB6020C9335B00191FC1 /* WebView+Debug.m in Sources */,
 				431CB4E120F49A810043B0AC /* NSString+JKBase64.m in Sources */,
 				436B1EAB20DA2FF100419AC0 /* UIView+JKShake.m in Sources */,
