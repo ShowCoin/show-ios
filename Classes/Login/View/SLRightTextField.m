@@ -201,6 +201,9 @@ CGFloat const kSLRightTextFieldH = 50;
     timer = nil;
 }
 
+/**
+ <#Description#>
+ */
 - (void)removeFromSuperview {
     [super removeFromSuperview];
     [self sl_destoryTimer];
