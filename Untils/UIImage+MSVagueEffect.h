@@ -11,5 +11,6 @@
 @interface UIImage (MSVagueEffect)
 
 
+- (UIImage *)applyTintEffectWithColor:(UIColor *)tintColor;
 
 @end
