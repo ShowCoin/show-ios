@@ -31,6 +31,7 @@
  */
 + (NSString *)strintFromeDate:(NSDate *)date formate:(NSString *)formate;
 
+
 /**
  获取当前时间的格式化字符串
  
@@ -45,9 +46,5 @@
 
 //时间转换时间戳
 +(NSString*)exchageTimeInterval:(NSString*)timeString;
-
-//获取pk当天日期
-+(NSString*)getPKString;
-
 
 @end

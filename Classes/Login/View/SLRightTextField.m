@@ -44,7 +44,7 @@ CGFloat const kSLRightTextFieldH = 50;
 /**
  placeholderColor
 
- @param placeholderColor <#placeholderColor description#>
+ @param placeholderColor UIColor
  */
 - (void)setPlaceholderColor:(UIColor *)placeholderColor {
     _placeholderColor = placeholderColor;
@@ -56,6 +56,11 @@ CGFloat const kSLRightTextFieldH = 50;
 }
 
 
+/**
+ setLeftTitle
+
+ @param leftTitle NSString
+ */
 - (void)setLeftTitle:(NSString *)leftTitle {
     _leftTitle = leftTitle;
     
@@ -68,11 +73,21 @@ CGFloat const kSLRightTextFieldH = 50;
     self.leftViewMode = UITextFieldViewModeAlways;
 }
 
+/**
+ showBottomLine
+
+ @param showBottomLine BOOL
+ */
 - (void)setShowBottomLine:(BOOL)showBottomLine {
     _showBottomLine = showBottomLine;
     [self setNeedsDisplay];
 }
 
+/**
+ setShowTopLine
+
+ @param showTopLine BOOL
+ */
 - (void)setShowTopLine:(BOOL)showTopLine {
     _showTopLine = showTopLine;
     [self setNeedsDisplay];
