@@ -153,7 +153,7 @@ CGFloat const kSLRightTextFieldH = 50;
  initWithFrame
 
  @param frame frame
- @return <#return value description#>
+ @return instancetype
  */
 - (instancetype)initWithFrame:(CGRect)frame
 {
