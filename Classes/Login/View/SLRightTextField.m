@@ -126,6 +126,11 @@ CGFloat const kSLRightTextFieldH = 50;
 
 #pragma mark - Action
 
+/**
+ <#Description#>
+
+ @param button <#button description#>
+ */
 - (void)sl_buttonAction:(UIButton *)button {
     if (self.rightType == SLFieldRightTypePwd) {
         button.selected = !button.selected;
