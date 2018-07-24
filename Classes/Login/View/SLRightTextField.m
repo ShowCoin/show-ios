@@ -168,7 +168,7 @@ CGFloat const kSLRightTextFieldH = 50;
 }
 
 /**
- <#Description#>
+ layoutSubviews
  */
 - (void)layoutSubviews {
     [super layoutSubviews];
