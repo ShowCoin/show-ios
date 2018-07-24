@@ -127,7 +127,7 @@ CGFloat const kSLRightTextFieldH = 50;
 #pragma mark - Action
 
 /**
- <#Description#>
+ sl_buttonAction
 
  @param button <#button description#>
  */
