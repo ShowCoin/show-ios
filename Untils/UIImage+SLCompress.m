@@ -66,9 +66,11 @@
     CGRect thumbnailRect = CGRectZero;
  
     thumbnailRect.origin = thumbnailPoint;
-   
     thumbnailRect.size.width= scaledWidth;
    
+    thumbnailRect.size.height = scaledHeight;
+    [sourceImage drawInRect:thumbnailRect];
+
 }
 -(UIImage*)imageWithImage:(UIImage*)image scaledToSize:(CGSize)newSize
 {
