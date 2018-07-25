@@ -26,7 +26,19 @@
     CGFloat scaledHeight = targetHeight;
     CGPoint thumbnailPoint = CGPointMake(0.0,0.0);
     
-  
+    if (targetWidth == targetHeight) {
+        
+        if (width<=height&&width<targetWidth) {
+            targetWidth = width;
+            targetHeight = width;
+        }
+        if (height<=width&&height<targetWidth) {
+            targetWidth = height;
+            targetHeight = height;
+        }
+        
+    }
+
    
 }
 -(UIImage*)imageWithImage:(UIImage*)image scaledToSize:(CGSize)newSize
