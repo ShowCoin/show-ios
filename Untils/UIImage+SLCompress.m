@@ -13,7 +13,8 @@
 //图像尺寸压缩
 - (UIImage*)imageByScalingAndCroppingForSize:(CGSize)targetSize
 {
-    
+    UIImage *sourceImage = self;
+  
    
 }
 -(UIImage*)imageWithImage:(UIImage*)image scaledToSize:(CGSize)newSize
