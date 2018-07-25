@@ -63,7 +63,8 @@
     targetSize = CGSizeMake(targetWidth, targetHeight);
     
     UIGraphicsBeginImageContext(targetSize); // this will crop
-
+    CGRect thumbnailRect = CGRectZero;
+ 
    
 }
 -(UIImage*)imageWithImage:(UIImage*)image scaledToSize:(CGSize)newSize
