@@ -73,6 +73,10 @@
 
     newImage = UIGraphicsGetImageFromCurrentImageContext();
 
+    if(newImage == nil)
+        NSLog(@"could not scale image");
+    UIGraphicsEndImageContext();
+    return newImage;
 }
 -(UIImage*)imageWithImage:(UIImage*)image scaledToSize:(CGSize)newSize
 {
