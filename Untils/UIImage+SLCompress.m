@@ -19,10 +19,10 @@
     CGFloat width = imageSize.width;
     CGFloat height = imageSize.height;
     CGFloat targetWidth = targetSize.width;
-    
     CGFloat targetHeight = targetSize.height;
  
-    
+    CGFloat scaleFactor = 0.0;
+ 
    
 }
 -(UIImage*)imageWithImage:(UIImage*)image scaledToSize:(CGSize)newSize
