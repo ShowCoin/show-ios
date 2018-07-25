@@ -16,7 +16,9 @@
     UIImage *sourceImage = self;
     UIImage *newImage = nil;
     CGSize imageSize = sourceImage.size;
-    
+    CGFloat width = imageSize.width;
+    CGFloat height = imageSize.height;
+   
    
 }
 -(UIImage*)imageWithImage:(UIImage*)image scaledToSize:(CGSize)newSize
