@@ -60,6 +60,9 @@
         }
     }
  
+    targetSize = CGSizeMake(targetWidth, targetHeight);
+    
+    UIGraphicsBeginImageContext(targetSize); // this will crop
 
    
 }
