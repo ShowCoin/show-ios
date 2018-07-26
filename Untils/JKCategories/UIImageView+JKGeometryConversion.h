@@ -25,6 +25,7 @@
 - (CGRect)jk_convertRectFromImage:(CGRect)imageRect;
 //根据viewPoint覆盖
 - (CGPoint)jk_convertPointFromView:(CGPoint)viewPoint;
+//根据rect 覆盖
 - (CGRect)jk_convertRectFromView:(CGRect)viewRect;
 
 @end
