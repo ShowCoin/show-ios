@@ -30,6 +30,7 @@
 
 @interface UINavigationController (JKTransitions)
 
+//自定义推出动画
 - (void)jk_pushViewController:(UIViewController *)controller withTransition:(UIViewAnimationTransition)transition;
 - (UIViewController *)jk_popViewControllerWithTransition:(UIViewAnimationTransition)transition;
 
