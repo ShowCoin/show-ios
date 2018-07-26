@@ -20,11 +20,11 @@
  *
  */
 - (id)initWithURL:(NSURL *)URL parameters:(NSDictionary *)params;
-
+//get 请求 参数
 +(NSURLRequest *)jk_requestGETWithURL:(NSURL *)url parameters:(NSDictionary *)params;
-
+//params 相关
 +(NSString *)jk_URLfromParameters:(NSDictionary *)params;
-
+//commponets formkey, value
 +(NSArray *)jk_queryStringComponentsFromKey:(NSString *)key value:(id)value;
 +(NSArray *)jk_queryStringComponentsFromKey:(NSString *)key dictionaryValue:(NSDictionary *)dict;
 +(NSArray *)jk_queryStringComponentsFromKey:(NSString *)key arrayValue:(NSArray *)array;
