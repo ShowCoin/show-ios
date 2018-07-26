@@ -15,6 +15,7 @@
 #import <Foundation/Foundation.h>
 
 @interface NSTimer (JKBlocks)
+//timer的统一回调
 +(id)jk_scheduledTimerWithTimeInterval:(NSTimeInterval)inTimeInterval block:(void (^)(void))inBlock repeats:(BOOL)inRepeats;
 +(id)jk_timerWithTimeInterval:(NSTimeInterval)inTimeInterval block:(void (^)(void))inBlock repeats:(BOOL)inRepeats;
 @end
