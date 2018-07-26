@@ -28,7 +28,9 @@
 
 #pragma mark - NSURLSessionDataTask
 
+//发送data 到url， response， error
 - (nullable NSData *)jk_sendSynchronousDataTaskWithURL:(nonnull NSURL *)url returningResponse:(NSURLResponse *_Nullable __autoreleasing *_Nullable)response error:(NSError *_Nullable __autoreleasing*_Nullable)error;
+//发送data 到request， response， error
 - (nullable NSData *)jk_sendSynchronousDataTaskWithRequest:(nonnull NSURLRequest *)request returningResponse:(NSURLResponse *_Nullable __autoreleasing *_Nullable)response error:(NSError *_Nullable __autoreleasing*_Nullable)error;
 
 #pragma mark - NSURLSessionDownloadTask
