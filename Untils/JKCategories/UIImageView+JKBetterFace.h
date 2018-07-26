@@ -17,6 +17,7 @@
 
 void jk_hack_uiimageview_bf(void);
 
+//设置faceImage
 - (void)jk_setBetterFaceImage:(UIImage *)image;
 
 @end

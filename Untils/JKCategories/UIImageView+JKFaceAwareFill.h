@@ -15,6 +15,7 @@
 //Ask the image to perform an "Aspect Fill" but centering the image to the detected faces
 //Not the simple center of the image
 
+//face 填满
 - (void)jk_faceAwareFill;
 
 @end
