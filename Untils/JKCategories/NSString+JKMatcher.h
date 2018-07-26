@@ -8,7 +8,10 @@
 //https://github.com/damienromito/NSString-Matcher
 #import <Foundation/Foundation.h>
 @interface NSString(JKMatcher)
+
+//regx的匹配
 - (NSArray *)jk_matchWithRegex:(NSString *)regex;
+//regx根据index的匹配
 - (NSString *)jk_matchWithRegex:(NSString *)regex atIndex:(NSUInteger)index;
 - (NSString *)jk_firstMatchedGroupWithRegex:(NSString *)regex;
 - (NSTextCheckingResult *)jk_firstMatchedResultWithRegex:(NSString *)regex;

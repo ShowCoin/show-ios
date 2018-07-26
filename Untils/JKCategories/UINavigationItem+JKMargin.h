@@ -29,7 +29,9 @@ FOUNDATION_EXPORT const unsigned char UINavigationItem_MarginVersionString[];
 
 @interface UINavigationItem (JKMargin)
 
+//设置左边的间距
 @property (nonatomic, assign) CGFloat jk_leftMargin;
+//设置右边的间距
 @property (nonatomic, assign) CGFloat jk_rightMargin;
 
 + (CGFloat)jk_systemMargin;
