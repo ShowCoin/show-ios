@@ -12,8 +12,9 @@
 
 
 @interface NSUserDefaults (JKiCloudSync)
-
+//设置  value,key iClound
 -(void)jk_setValue:(id)value  forKey:(NSString *)key iCloudSync:(BOOL)sync;
+//设置  object,key iClound
 -(void)jk_setObject:(id)value forKey:(NSString *)key iCloudSync:(BOOL)sync;
 
 -(id)jk_valueForKey:(NSString *)key  iCloudSync:(BOOL)sync;
