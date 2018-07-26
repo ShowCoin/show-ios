@@ -16,8 +16,9 @@
 -(void)jk_setValue:(id)value  forKey:(NSString *)key iCloudSync:(BOOL)sync;
 //设置  object,key iClound
 -(void)jk_setObject:(id)value forKey:(NSString *)key iCloudSync:(BOOL)sync;
-
+//根据key取出value
 -(id)jk_valueForKey:(NSString *)key  iCloudSync:(BOOL)sync;
+//根据key取出对象
 -(id)jk_objectForKey:(NSString *)key iCloudSync:(BOOL)sync;
 
 -(BOOL)jk_synchronizeAlsoiCloudSync:(BOOL)sync;
