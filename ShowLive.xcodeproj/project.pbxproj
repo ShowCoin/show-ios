@@ -144,7 +144,6 @@
 		435F3CAE210310FE00EDF645 /* UILabel+JKAutomaticWriting.m in Sources */ = {isa = PBXBuildFile; fileRef = 435F3CAD210310FD00EDF645 /* UILabel+JKAutomaticWriting.m */; };
 		435F3CB12103111700EDF645 /* UILabel+JKAdjustableLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 435F3CAF2103111600EDF645 /* UILabel+JKAdjustableLabel.m */; };
 		435F3CB42103114900EDF645 /* UIImageViewDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 435F3CB22103114800EDF645 /* UIImageViewDemoViewController.m */; };
-		435F3CB72103115D00EDF645 /* UIImageView+JKReflect.m in Sources */ = {isa = PBXBuildFile; fileRef = 435F3CB62103115D00EDF645 /* UIImageView+JKReflect.m */; };
 		435F3CBA2103117000EDF645 /* UIImageView+JKLetters.m in Sources */ = {isa = PBXBuildFile; fileRef = 435F3CB82103116F00EDF645 /* UIImageView+JKLetters.m */; };
 		435F3CBD2103118900EDF645 /* UIImageView+JKGeometryConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = 435F3CBB2103118900EDF645 /* UIImageView+JKGeometryConversion.m */; };
 		435F3CC0210311ED00EDF645 /* UIImageView+JKFaceAwareFill.m in Sources */ = {isa = PBXBuildFile; fileRef = 435F3CBE210311EC00EDF645 /* UIImageView+JKFaceAwareFill.m */; };
@@ -513,8 +512,6 @@
 		435F3CB02103111700EDF645 /* UILabel+JKAdjustableLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UILabel+JKAdjustableLabel.h"; path = "../../../../Desktop/leiku/UILabel+JKAdjustableLabel.h"; sourceTree = "<group>"; };
 		435F3CB22103114800EDF645 /* UIImageViewDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIImageViewDemoViewController.m; path = ../../../../Desktop/leiku/UIImageViewDemoViewController.m; sourceTree = "<group>"; };
 		435F3CB32103114900EDF645 /* UIImageViewDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIImageViewDemoViewController.h; path = ../../../../Desktop/leiku/UIImageViewDemoViewController.h; sourceTree = "<group>"; };
-		435F3CB52103115D00EDF645 /* UIImageView+JKReflect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+JKReflect.h"; sourceTree = "<group>"; };
-		435F3CB62103115D00EDF645 /* UIImageView+JKReflect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+JKReflect.m"; sourceTree = "<group>"; };
 		435F3CB82103116F00EDF645 /* UIImageView+JKLetters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+JKLetters.m"; sourceTree = "<group>"; };
 		435F3CB92103116F00EDF645 /* UIImageView+JKLetters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+JKLetters.h"; sourceTree = "<group>"; };
 		435F3CBB2103118900EDF645 /* UIImageView+JKGeometryConversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+JKGeometryConversion.m"; sourceTree = "<group>"; };
@@ -842,8 +839,6 @@
 				435F3CBB2103118900EDF645 /* UIImageView+JKGeometryConversion.m */,
 				435F3CB92103116F00EDF645 /* UIImageView+JKLetters.h */,
 				435F3CB82103116F00EDF645 /* UIImageView+JKLetters.m */,
-				435F3CB52103115D00EDF645 /* UIImageView+JKReflect.h */,
-				435F3CB62103115D00EDF645 /* UIImageView+JKReflect.m */,
 				435F3CB32103114900EDF645 /* UIImageViewDemoViewController.h */,
 				435F3CB22103114800EDF645 /* UIImageViewDemoViewController.m */,
 				435F3CAC210310FD00EDF645 /* UILabel+JKAutomaticWriting.h */,
@@ -1870,7 +1865,6 @@
 				435D4C8C20F0929A00C8DC85 /* NSManagedObjectContext+JKFetching.m in Sources */,
 				435D4C6520EF3E3B00C8DC85 /* NSDictionary+JKJSONString.m in Sources */,
 				431CB4D820F499B60043B0AC /* NSPersistentStoreCoordinatorDemoViewController.m in Sources */,
-				435F3CB72103115D00EDF645 /* UIImageView+JKReflect.m in Sources */,
 				431F64B920F7945D0087DB8E /* UIPopoverController+iPhone.m in Sources */,
 				434DDB5D20C9332700191FC1 /* CATransaction+JKAnimateWithDuration.m in Sources */,
 				437B0A6020F3607100E93844 /* NSObject+JKAppInfo.m in Sources */,
