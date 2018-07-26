@@ -126,6 +126,11 @@ CGFloat const kSLRightTextFieldH = 50;
 
 #pragma mark - Action
 
+/**
+ sl_buttonAction
+
+ @param button <#button description#>
+ */
 - (void)sl_buttonAction:(UIButton *)button {
     if (self.rightType == SLFieldRightTypePwd) {
         button.selected = !button.selected;
@@ -139,6 +144,9 @@ CGFloat const kSLRightTextFieldH = 50;
 
 @end
 
+/**
+ SLVerificationButton
+ */
 @interface SLVerificationButton ()
 @property (nonatomic, weak) UIView *lineView;
 @property (nonatomic, strong) ShowVerifycodeAction *action;
@@ -149,6 +157,12 @@ CGFloat const kSLRightTextFieldH = 50;
     NSTimer *timer;
 }
 
+/**
+ initWithFrame
+
+ @param frame frame
+ @return instancetype
+ */
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -167,6 +181,9 @@ CGFloat const kSLRightTextFieldH = 50;
     return self;
 }
 
+/**
+ layoutSubviews
+ */
 - (void)layoutSubviews {
     [super layoutSubviews];
     CGFloat w = self.frame.size.width;
@@ -184,6 +201,9 @@ CGFloat const kSLRightTextFieldH = 50;
 }
 
 
+/**
+ sl_timerAction
+ */
 - (void)sl_timerAction {
     count--;
     if (count == 0) {
@@ -196,11 +216,17 @@ CGFloat const kSLRightTextFieldH = 50;
     [self setTitle:title forState:UIControlStateNormal];
 }
 
+/**
+ sl_destoryTimer
+ */
 - (void)sl_destoryTimer {
     [timer invalidate];
     timer = nil;
 }
 
+/**
+ removeFromSuperview
+ */
 - (void)removeFromSuperview {
     [super removeFromSuperview];
     [self sl_destoryTimer];
