@@ -33,6 +33,7 @@ typedef NS_ENUM(NSInteger, UILabelJKlinkingMode)
 @property (strong, nonatomic) NSOperationQueue *jk_automaticWritingOperationQueue;
 @property (assign, nonatomic) UIEdgeInsets jk_edgeInsets;
 
+//自动书写的
 - (void)jk_setTextWithAutomaticWritingAnimation:(NSString *)text;
 
 - (void)jk_setText:(NSString *)text automaticWritingAnimationWithBlinkingMode:(UILabelJKlinkingMode)blinkingMode;
