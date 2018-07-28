@@ -385,6 +385,14 @@
     return frame.size.height;
 }
 
+//根据添加行间距后的内容计算高度
+- (CGFloat)heightOfAttributedText:(NSAttributedString*)attributed width:(float)width limitedHeight:(CGFloat)height {
+    
+    //获取设置文本间距以后的高度
+    CGRect frame = [attributed boundingRectWithSize:CGSizeMake(width, height) options:NSStringDrawingUsesLineFragmentOrigin context:nil];
+    
+    return frame.size.height;
+}
 
 
 
