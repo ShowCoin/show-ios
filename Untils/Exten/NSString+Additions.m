@@ -300,6 +300,26 @@
     return typesettingString;
 }
 
+-(NSMutableString*)urlWithStringFormatAddString:(NSString*)addString //给字符串 添加 语音秒数
+{
+    NSMutableString *string=[NSMutableString stringWithFormat:@"%@",self];
+    [string insertString:addString atIndex:string.length-4];
+    
+    return string;
+}
+- (NSAttributedString *)highlightColor:(UIColor *)color betweenIndex:(NSInteger)startIndex andIndex:(NSInteger)lastIndex {
+    
+    NSInteger length = self.length - lastIndex - startIndex;
+    if (length < 0)
+        return nil;
+    
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:self];
+    [attributedString addAttribute:NSForegroundColorAttributeName value:color range:NSMakeRange(startIndex, length)];
+    return attributedString;
+}
+
+
+
 
 
 @end
