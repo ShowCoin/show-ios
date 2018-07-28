@@ -376,6 +376,16 @@
     return attributed;
 }
 
+//根据添加行间距后的内容计算高度
+- (CGFloat)heightOfAttributedText:(NSAttributedString*)attributed width:(float)width {
+    
+    //获取设置文本间距以后的高度
+    CGRect frame = [attributed boundingRectWithSize:CGSizeMake(width, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading context:nil];
+    
+    return frame.size.height;
+}
+
+
 
 
 
