@@ -235,8 +235,17 @@
     }
     
     return telphoneString;
-
-
+}
++ (NSString *)spaceWithCount:(NSInteger)count {
+    
+    NSMutableString *space = [[NSMutableString alloc] init];
+    for (int i = 0;i<count;i++) {
+        
+        [space appendString:@" "];
+    }
+    
+    return space;
+}
 
 
 @end
