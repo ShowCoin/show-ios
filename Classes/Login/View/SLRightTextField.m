@@ -93,6 +93,11 @@ CGFloat const kSLRightTextFieldH = 50;
     [self setNeedsDisplay];
 }
 
+/**
+ <#Description#>
+
+ @param lineColor <#lineColor description#>
+ */
 - (void)setLineColor:(UIColor *)lineColor {
     _lineColor = lineColor;
     [self setNeedsDisplay];
