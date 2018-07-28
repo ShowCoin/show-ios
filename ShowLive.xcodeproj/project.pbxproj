@@ -14,6 +14,7 @@
 		43143926209497E80059D373 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 43143921209497E80059D373 /* .gitignore */; };
 		43143927209497E80059D373 /* UNLICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 43143922209497E80059D373 /* UNLICENSE */; };
 		43143928209497E80059D373 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 43143923209497E80059D373 /* Cartfile */; };
+		431A3FF7210C3E7600A4B422 /* UINavigationController+JKStackManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 431A3FF5210C3E7600A4B422 /* UINavigationController+JKStackManager.m */; };
 		431BBB5C20DBCA5F006A3D50 /* UIView+JKRecursion.m in Sources */ = {isa = PBXBuildFile; fileRef = 431BBB5B20DBCA5F006A3D50 /* UIView+JKRecursion.m */; };
 		431BBB5F20DBCA96006A3D50 /* UIView+JKDraggable.m in Sources */ = {isa = PBXBuildFile; fileRef = 431BBB5E20DBCA96006A3D50 /* UIView+JKDraggable.m */; };
 		431BBB6220DBCABD006A3D50 /* UIView+JKCustomBorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 431BBB6020DBCABD006A3D50 /* UIView+JKCustomBorder.m */; };
@@ -254,6 +255,8 @@
 		43143921209497E80059D373 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		43143922209497E80059D373 /* UNLICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UNLICENSE; sourceTree = "<group>"; };
 		43143923209497E80059D373 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		431A3FF5210C3E7600A4B422 /* UINavigationController+JKStackManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+JKStackManager.m"; path = "../../../../Desktop/leiku/UINavigationController+JKStackManager.m"; sourceTree = "<group>"; };
+		431A3FF6210C3E7600A4B422 /* UINavigationController+JKStackManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+JKStackManager.h"; path = "../../../../Desktop/leiku/UINavigationController+JKStackManager.h"; sourceTree = "<group>"; };
 		431BBB5A20DBCA5E006A3D50 /* UIView+JKRecursion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JKRecursion.h"; sourceTree = "<group>"; };
 		431BBB5B20DBCA5F006A3D50 /* UIView+JKRecursion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JKRecursion.m"; sourceTree = "<group>"; };
 		431BBB5D20DBCA95006A3D50 /* UIView+JKDraggable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JKDraggable.h"; sourceTree = "<group>"; };
@@ -849,6 +852,7 @@
 				435F3C952101B74400EDF645 /* UINavigationController+JKKeyboardFix.h */,
 				435F3C942101B74400EDF645 /* UINavigationController+JKKeyboardFix.m */,
 				4355A4DB20FF11000020B7DE /* UINavigationController+JKStackManager.h */,
+				431A3FF6210C3E7600A4B422 /* UINavigationController+JKStackManager.h */,
 				4355A4DA20FF11000020B7DE /* UINavigationController+JKStackManager.m */,
 				431C078B20FE293200479559 /* NSUserDefaultsDemoViewController.h */,
 				431C078A20FE293200479559 /* NSUserDefaultsDemoViewController.m */,
@@ -1172,6 +1176,7 @@
 				434DDB5020C9326800191FC1 /* CALayer+JKBorderColor.m */,
 				434DDB4D20C9324F00191FC1 /* CAAnimation+JKEasingEquations.h */,
 				434DDB4C20C9324F00191FC1 /* CAAnimation+JKEasingEquations.m */,
+				431A3FF5210C3E7600A4B422 /* UINavigationController+JKStackManager.m */,
 			);
 			path = JKCategories;
 			sourceTree = "<group>";
@@ -1944,6 +1949,7 @@
 				934AE46120FC6BB400B60AD4 /* UIImage+Avatar.m in Sources */,
 				43993EBF20E23EF90017F1C3 /* UITextField+JKBlocks.m in Sources */,
 				934AE46420FC6C1000B60AD4 /* NSString+Additions.m in Sources */,
+				431A3FF7210C3E7600A4B422 /* UINavigationController+JKStackManager.m in Sources */,
 				435D4C8920F0924D00C8DC85 /* NSManagedObject+JKExtensions.m in Sources */,
 				435D4C5F20EF3E0500C8DC85 /* NSDecimalNumber+JKExtensions.m in Sources */,
 				436B1EAE20DA300600419AC0 /* UIView+JKFind.m in Sources */,
