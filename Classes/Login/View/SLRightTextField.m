@@ -117,6 +117,11 @@ CGFloat const kSLRightTextFieldH = 50;
     }
 }
 
+/**
+ <#Description#>
+
+ @param phone <#phone description#>
+ */
 - (void)sl_getVerifyCodeWithPhone:(NSString *)phone {
     if (self.rightType == SLFieldRightTypeVCode) {
         [SLReportManager reportEvent:kReport_PhoneREG andSubEvent:kReport_PhoneREG_GetVerifiCode];
@@ -127,7 +132,7 @@ CGFloat const kSLRightTextFieldH = 50;
 #pragma mark - Action
 
 /**
- sl_buttonAction add 
+ sl_buttonAction add
 
  @param button UIButton
  */
