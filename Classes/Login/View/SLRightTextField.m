@@ -129,7 +129,7 @@ CGFloat const kSLRightTextFieldH = 50;
 /**
  sl_buttonAction
 
- @param button <#button description#>
+ @param button UIButton
  */
 - (void)sl_buttonAction:(UIButton *)button {
     if (self.rightType == SLFieldRightTypePwd) {
