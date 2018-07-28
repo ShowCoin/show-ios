@@ -255,6 +255,15 @@
     NSString *dollarStr = [NSString stringWithFormat:@"%0.2f", dollar];
     return dollarStr;
 }
+//元转分
+- (NSString *)dollarToPoint {
+    
+    float dollarTemp = [self floatValue];
+    float pointTemp = dollarTemp * 100;
+    NSString *pointStr = [NSString stringWithFormat:@"%0.0f", pointTemp];
+    return pointStr;
+}
+
 
 
 
