@@ -99,7 +99,7 @@ CGFloat const kSLRightTextFieldH = 50;
 }
 
 /**
- <#Description#>
+ drawRect
 
  @param rect <#rect description#>
  */
