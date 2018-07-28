@@ -127,7 +127,7 @@ CGFloat const kSLRightTextFieldH = 50;
 #pragma mark - Action
 
 /**
- sl_buttonAction
+ sl_buttonAction add 
 
  @param button UIButton
  */
