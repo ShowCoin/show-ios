@@ -264,6 +264,22 @@
     return pointStr;
 }
 
+//数字转换成万
+-(NSString *)numberToMyriad{
+    
+    long number = 0;
+    
+    if (![self isEqualToString:@"(null)"]) {
+        number = [self integerValue];
+    }
+    long myriad ;
+    NSString *myriadStr = [NSString stringWithFormat:@"%ld", number];
+    if (number>=100000) {
+        myriad= number/10000;
+        myriadStr = [NSString stringWithFormat:@"%ld万", myriad];
+    }
+    return myriadStr;
+}
 
 
 
