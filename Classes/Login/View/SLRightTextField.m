@@ -93,11 +93,21 @@ CGFloat const kSLRightTextFieldH = 50;
     [self setNeedsDisplay];
 }
 
+/**
+ setLineColor
+
+ @param lineColor UIColor
+ */
 - (void)setLineColor:(UIColor *)lineColor {
     _lineColor = lineColor;
     [self setNeedsDisplay];
 }
 
+/**
+ drawRect
+
+ @param rect rect
+ */
 - (void)drawRect:(CGRect)rect {
     if (self.showBottomLine) {
         CGContextRef context = UIGraphicsGetCurrentContext();
@@ -117,6 +127,11 @@ CGFloat const kSLRightTextFieldH = 50;
     }
 }
 
+/**
+ sl_getVerifyCodeWithPhone
+
+ @param phone phone
+ */
 - (void)sl_getVerifyCodeWithPhone:(NSString *)phone {
     if (self.rightType == SLFieldRightTypeVCode) {
         [SLReportManager reportEvent:kReport_PhoneREG andSubEvent:kReport_PhoneREG_GetVerifiCode];
@@ -127,9 +142,9 @@ CGFloat const kSLRightTextFieldH = 50;
 #pragma mark - Action
 
 /**
- sl_buttonAction
+ sl_buttonAction add
 
- @param button <#button description#>
+ @param button UIButton
  */
 - (void)sl_buttonAction:(UIButton *)button {
     if (self.rightType == SLFieldRightTypePwd) {
