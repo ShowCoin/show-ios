@@ -430,6 +430,15 @@
     }
     return dic;
 }
+-(NSString *)validNameString{
+    if(self.length >8){
+        NSString *newString = [self substringToIndex:7];
+        return [NSString stringWithFormat:@"%@...",newString];
+    }else{
+        return self;
+    }
+}
+
 
 
 
