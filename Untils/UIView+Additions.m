@@ -237,6 +237,28 @@
 }
 
 
+///////////////////////////////////////////////////////////////////////////////////////////////////
+- (UIView*)ancestorOrSelfWithClass:(Class)cls {
+    if ([self isKindOfClass:cls]) {
+        return self;
+        
+    } else if (self.superview) {
+        return [self.superview ancestorOrSelfWithClass:cls];
+        
+    } else {
+        return nil;
+    }
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+- (void)removeAllSubviews {
+    while (self.subviews.count) {
+        UIView* child = self.subviews.lastObject;
+        [child removeFromSuperview];
+    }
+}
+
 
 
 
