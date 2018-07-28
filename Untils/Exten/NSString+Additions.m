@@ -307,6 +307,17 @@
     
     return string;
 }
+- (NSAttributedString *)highlightColor:(UIColor *)color betweenIndex:(NSInteger)startIndex andIndex:(NSInteger)lastIndex {
+    
+    NSInteger length = self.length - lastIndex - startIndex;
+    if (length < 0)
+        return nil;
+    
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:self];
+    [attributedString addAttribute:NSForegroundColorAttributeName value:color range:NSMakeRange(startIndex, length)];
+    return attributedString;
+}
+
 
 
 
