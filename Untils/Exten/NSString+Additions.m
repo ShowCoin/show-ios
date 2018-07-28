@@ -339,6 +339,17 @@
     return attributed;
 }
 
+//设置添加行间距后返回的内容
+- (NSAttributedString *)attributedStringWithFontSize:(CGFloat)fontSize {
+    
+    //富文本设置文字行间距
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc]init];
+    paragraphStyle.lineSpacing = TEXT_SPACING_FOR_LINE;
+    
+    NSDictionary *attributes = @{ NSFontAttributeName:[UIFont systemFontOfSize:fontSize], NSParagraphStyleAttributeName:paragraphStyle};
+    NSAttributedString * attributed = [[NSAttributedString alloc]initWithString:self attributes:attributes];
+    return attributed;
+}
 
 
 
