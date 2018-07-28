@@ -101,7 +101,7 @@ CGFloat const kSLRightTextFieldH = 50;
 /**
  drawRect
 
- @param rect <#rect description#>
+ @param rect rect
  */
 - (void)drawRect:(CGRect)rect {
     if (self.showBottomLine) {
