@@ -98,6 +98,11 @@ CGFloat const kSLRightTextFieldH = 50;
     [self setNeedsDisplay];
 }
 
+/**
+ <#Description#>
+
+ @param rect <#rect description#>
+ */
 - (void)drawRect:(CGRect)rect {
     if (self.showBottomLine) {
         CGContextRef context = UIGraphicsGetCurrentContext();
