@@ -17,6 +17,7 @@
 		431A3FFA210C3EB700A4B422 /* UINavigationController+JKKeyboardFix.m in Sources */ = {isa = PBXBuildFile; fileRef = 431A3FF8210C3EB700A4B422 /* UINavigationController+JKKeyboardFix.m */; };
 		431A4000210C3F0300A4B422 /* UINavigationBar+JKAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 431A3FFE210C3F0200A4B422 /* UINavigationBar+JKAwesome.m */; };
 		431A4003210C3F2900A4B422 /* UILabel+JKSuggestSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 431A4001210C3F2800A4B422 /* UILabel+JKSuggestSize.m */; };
+		431A4006210C3F6600A4B422 /* UILabel+JKAdjustableLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 431A4004210C3F6500A4B422 /* UILabel+JKAdjustableLabel.m */; };
 		431BBB5C20DBCA5F006A3D50 /* UIView+JKRecursion.m in Sources */ = {isa = PBXBuildFile; fileRef = 431BBB5B20DBCA5F006A3D50 /* UIView+JKRecursion.m */; };
 		431BBB5F20DBCA96006A3D50 /* UIView+JKDraggable.m in Sources */ = {isa = PBXBuildFile; fileRef = 431BBB5E20DBCA96006A3D50 /* UIView+JKDraggable.m */; };
 		431BBB6220DBCABD006A3D50 /* UIView+JKCustomBorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 431BBB6020DBCABD006A3D50 /* UIView+JKCustomBorder.m */; };
@@ -265,6 +266,8 @@
 		431A3FFF210C3F0200A4B422 /* UINavigationBar+JKAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+JKAwesome.h"; sourceTree = "<group>"; };
 		431A4001210C3F2800A4B422 /* UILabel+JKSuggestSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+JKSuggestSize.m"; sourceTree = "<group>"; };
 		431A4002210C3F2800A4B422 /* UILabel+JKSuggestSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+JKSuggestSize.h"; sourceTree = "<group>"; };
+		431A4004210C3F6500A4B422 /* UILabel+JKAdjustableLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UILabel+JKAdjustableLabel.m"; path = "../../../../Desktop/leiku/UILabel+JKAdjustableLabel.m"; sourceTree = "<group>"; };
+		431A4005210C3F6500A4B422 /* UILabel+JKAdjustableLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UILabel+JKAdjustableLabel.h"; path = "../../../../Desktop/leiku/UILabel+JKAdjustableLabel.h"; sourceTree = "<group>"; };
 		431BBB5A20DBCA5E006A3D50 /* UIView+JKRecursion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JKRecursion.h"; sourceTree = "<group>"; };
 		431BBB5B20DBCA5F006A3D50 /* UIView+JKRecursion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JKRecursion.m"; sourceTree = "<group>"; };
 		431BBB5D20DBCA95006A3D50 /* UIView+JKDraggable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JKDraggable.h"; sourceTree = "<group>"; };
@@ -845,6 +848,7 @@
 				435F3CB22103114800EDF645 /* UIImageViewDemoViewController.m */,
 				435F3CAC210310FD00EDF645 /* UILabel+JKAutomaticWriting.h */,
 				435F3CB02103111700EDF645 /* UILabel+JKAdjustableLabel.h */,
+				431A4005210C3F6500A4B422 /* UILabel+JKAdjustableLabel.h */,
 				435F3CAF2103111600EDF645 /* UILabel+JKAdjustableLabel.m */,
 				435F3CAD210310FD00EDF645 /* UILabel+JKAutomaticWriting.m */,
 				435F3CA72101B81900EDF645 /* UIImageViewDemoViewController.h */,
@@ -1182,6 +1186,7 @@
 				431BBB6420DBCB04006A3D50 /* UIView+JKConstraints.m */,
 				431A4002210C3F2800A4B422 /* UILabel+JKSuggestSize.h */,
 				431A4001210C3F2800A4B422 /* UILabel+JKSuggestSize.m */,
+				431A4004210C3F6500A4B422 /* UILabel+JKAdjustableLabel.m */,
 				43205DD020DD25F000AD6952 /* UIView+Genie.h */,
 				43205DCF20DD25F000AD6952 /* UIView+Genie.m */,
 				431BBB5A20DBCA5E006A3D50 /* UIView+JKRecursion.h */,
@@ -1929,6 +1934,7 @@
 				4325536020D8B49F00FC0258 /* CAShapeLayerDemoViewController.m in Sources */,
 				43D87B2620EB6D7E00E991D6 /* UIScrollView+JKAddition.m in Sources */,
 				4374EB2520F6307100BB947F /* NSString+JKNormalRegex.m in Sources */,
+				431A4006210C3F6600A4B422 /* UILabel+JKAdjustableLabel.m in Sources */,
 				434DDB4E20C9324F00191FC1 /* CAAnimation+JKEasingEquations.m in Sources */,
 				435D4C7D20F0919700C8DC85 /* NSHTTPCookieStorage+JKFreezeDry.m in Sources */,
 				431C076320FC8DAB00479559 /* NSTimer+JKAddition.m in Sources */,
