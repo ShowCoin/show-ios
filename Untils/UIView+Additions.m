@@ -291,7 +291,28 @@
     }
 }
 //+ (void)load{
-//    method_exchangeImplementations(class_getInstanceMethod([UIView 
+//    method_exchangeImplementations(class_getInstanceMethod([UIView class], @selector(setHidden:)), class_getInstanceMethod([UIView class], @selector(setTHChidden:)));
+//}
+//
+//- (void)setTHChidden:(BOOL)ishidden{
+//    [self setTHChidden:ishidden];
+//    DDLogDebug(@"syp====setTHChidden==%d,class==%@",ishidden,[self className]);
+//}
+
+@end
+
+
+@implementation UIView (AppliedAffineTransform)
+
+- (CGRect)frameAppliedAffineTransform
+{
+    CGRect frame = CGRectApplyAffineTransform(self.frame, self.transform);
+    
+    return frame;
+}
+
+
+
 
 
 @end
