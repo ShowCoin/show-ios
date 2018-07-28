@@ -300,6 +300,15 @@
     return typesettingString;
 }
 
+-(NSMutableString*)urlWithStringFormatAddString:(NSString*)addString //给字符串 添加 语音秒数
+{
+    NSMutableString *string=[NSMutableString stringWithFormat:@"%@",self];
+    [string insertString:addString atIndex:string.length-4];
+    
+    return string;
+}
+
+
 
 
 @end
