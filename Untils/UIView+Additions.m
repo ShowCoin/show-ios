@@ -215,6 +215,13 @@
 }
 
 
+///////////////////////////////////////////////////////////////////////////////////////////////////
+- (CGFloat)orientationHeight {
+    return UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation)
+    ? self.width : self.height;
+}
+
+
 
 
 @end
