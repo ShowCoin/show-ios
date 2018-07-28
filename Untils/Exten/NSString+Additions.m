@@ -318,6 +318,16 @@
     return attributedString;
 }
 
+- (NSAttributedString *)spacingForLine:(NSInteger)spacing {
+    
+    NSMutableAttributedString * attributedString = [[NSMutableAttributedString alloc] initWithString:self];
+    NSMutableParagraphStyle * paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+    [paragraphStyle setLineSpacing:spacing];
+    [attributedString addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, [self length])];
+    return attributedString;
+}
+
+
 
 
 
