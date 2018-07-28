@@ -123,5 +123,14 @@
 }
 
 
+///////////////////////////////////////////////////////////////////////////////////////////////////
+- (CGFloat)ttScreenX {
+    CGFloat x = 0;
+    for (UIView* view = self; view; view = view.superview) {
+        x += view.left;
+    }
+    return x;
+}
+
 
 @end
