@@ -264,6 +264,41 @@
     return pointStr;
 }
 
+//数字转换成万
+-(NSString *)numberToMyriad{
+    
+    long number = 0;
+    
+    if (![self isEqualToString:@"(null)"]) {
+        number = [self integerValue];
+    }
+    long myriad ;
+    NSString *myriadStr = [NSString stringWithFormat:@"%ld", number];
+    if (number>=100000) {
+        myriad= number/10000;
+        myriadStr = [NSString stringWithFormat:@"%ld万", myriad];
+    }
+    return myriadStr;
+}
+- (NSString *)typesetting {
+    
+    NSString *typesettingString;
+    
+    NSArray *array = [NSArray arrayWithArray:[self componentsSeparatedByString:@"\n"]];
+    NSMutableString *allStr = [[NSMutableString alloc] initWithString:@"       "];
+    for (int i = 0; i < array.count; i++) {
+        
+        NSString *str = [[array objectAtIndex:i] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        [allStr appendFormat:@"%@\n       ", str];
+    }
+    
+    if (allStr.length > 7)
+        typesettingString = [allStr substringToIndex:allStr.length - 7];//去掉最后的\n
+    else
+        typesettingString = allStr;
+    
+    return typesettingString;
+}
 
 
 
