@@ -365,6 +365,17 @@
 
 
 
+//设置内容末尾显示省略号
+- (NSAttributedString *)attributedStringForTruncatingTail:(NSAttributedString *)attributedString {
+    
+    //富文本设置文字行间距
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc]init];
+    paragraphStyle.lineBreakMode = NSLineBreakByTruncatingTail;
+    NSDictionary *attributes = @{ NSParagraphStyleAttributeName:paragraphStyle };
+    NSAttributedString * attributed = [[NSAttributedString alloc]initWithString:self attributes:attributes];
+    return attributed;
+}
+
 
 
 
