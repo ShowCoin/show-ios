@@ -94,7 +94,7 @@ CGFloat const kSLRightTextFieldH = 50;
 }
 
 /**
- <#Description#>
+ setLineColor
 
  @param lineColor <#lineColor description#>
  */
