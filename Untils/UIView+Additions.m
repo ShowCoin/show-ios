@@ -260,6 +260,18 @@
 }
 
 
+@end
+
+
+
+@implementation UIView (MarkBorderWithRandomColor)
+
+- (void)markBorderWithColor:(UIColor *)color borderWidth:(CGFloat)borderWidth{
+    self.layer.borderWidth = borderWidth;
+    self.layer.borderColor = color.CGColor;
+}
+
+
 
 
 
