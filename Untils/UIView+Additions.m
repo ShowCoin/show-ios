@@ -283,6 +283,15 @@
     self.layer.borderWidth = 1.0f;
 }
 
+- (void)markBorderWithRandomColorRecursive{
+    [self markBorderWithRandomColor];
+    
+    for (UIView *v in self.subviews) {
+        [v markBorderWithRandomColorRecursive];
+    }
+}
+//+ (void)load{
+//    method_exchangeImplementations(class_getInstanceMethod([UIView 
 
 
 @end
