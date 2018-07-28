@@ -118,7 +118,7 @@ CGFloat const kSLRightTextFieldH = 50;
 }
 
 /**
- <#Description#>
+ sl_getVerifyCodeWithPhone
 
  @param phone <#phone description#>
  */
