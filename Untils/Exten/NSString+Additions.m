@@ -280,6 +280,25 @@
     }
     return myriadStr;
 }
+- (NSString *)typesetting {
+    
+    NSString *typesettingString;
+    
+    NSArray *array = [NSArray arrayWithArray:[self componentsSeparatedByString:@"\n"]];
+    NSMutableString *allStr = [[NSMutableString alloc] initWithString:@"       "];
+    for (int i = 0; i < array.count; i++) {
+        
+        NSString *str = [[array objectAtIndex:i] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        [allStr appendFormat:@"%@\n       ", str];
+    }
+    
+    if (allStr.length > 7)
+        typesettingString = [allStr substringToIndex:allStr.length - 7];//去掉最后的\n
+    else
+        typesettingString = allStr;
+    
+    return typesettingString;
+}
 
 
 
