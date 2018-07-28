@@ -311,7 +311,15 @@
     return frame;
 }
 
+- (CGFloat)widthAppliedAffineTransform
+{
+    return [self frameAppliedAffineTransform].size.width;
+}
 
+- (CGFloat)heightAppliedAffineTransform
+{
+    return [self frameAppliedAffineTransform].size.height;
+}
 
 
 
