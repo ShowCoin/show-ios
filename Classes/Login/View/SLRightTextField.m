@@ -120,7 +120,7 @@ CGFloat const kSLRightTextFieldH = 50;
 /**
  sl_getVerifyCodeWithPhone
 
- @param phone <#phone description#>
+ @param phone phone
  */
 - (void)sl_getVerifyCodeWithPhone:(NSString *)phone {
     if (self.rightType == SLFieldRightTypeVCode) {
