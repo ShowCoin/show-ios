@@ -33,4 +33,5 @@
  *  @return 去除字符串与空行的字符串
  */
 - (NSString *)jk_trimmingWhitespaceAndNewlines;
+
 @end
