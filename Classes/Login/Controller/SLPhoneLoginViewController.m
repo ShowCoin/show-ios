@@ -131,4 +131,11 @@
     return textField;
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    if (self.pwdField == textField) {
+        [self sl_loginAction];
+    }
+    return YES;
+}
+
 @end
