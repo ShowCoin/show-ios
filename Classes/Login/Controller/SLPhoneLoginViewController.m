@@ -161,4 +161,19 @@
     [HDHud sl_showRedTextInView:self.view title:@"忘记密码，敬请期待"];
 
 }
+
+- (void)sl_loginAction {
+    [self.view endEditing:YES];
+    
+    [SLReportManager reportEvent:kReport_PhoneLogin andSubEvent:kReport_PhoneLogin_Login];
+    NSString *phone = self.phoneField.text;
+    NSString *pwd = self.pwdField.text;
+    if (![phone isValidPhone]) {
+        [HDHud sl_showRedTextInView:self.view title:@"请输入正确手机号"];
+        return;
+    }
+    NSString *md5 = [NSString MD5AndSaltString:pwd];
+    [LoginManager.manager phoneLogin:phone password:md5 currentController:self];
+}
+
 @end
