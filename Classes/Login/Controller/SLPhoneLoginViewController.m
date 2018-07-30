@@ -182,9 +182,9 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
-- (void)clickLeftButton:(UIButton *)sender {
-    NSLog(@"[xx] -- %s", __func__);
-    [SLReportManager reportEvent:kReport_PhoneLogin andSubEvent:kReport_PhoneLogin_Return];
-}
+//- (void)clickLeftButton:(UIButton *)sender {
+//    NSLog(@"[xx] -- %s", __func__);
+//    [SLReportManager reportEvent:kReport_PhoneLogin andSubEvent:kReport_PhoneLogin_Return];
+//}
 
 @end
