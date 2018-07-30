@@ -92,4 +92,31 @@
     
 #endif
 }
+
+- (void)viewWillLayoutSubviews {
+    [super viewWillLayoutSubviews];
+    CGFloat w = self.view.frame.size.width;
+    CGFloat h = self.view.frame.size.height;
+    self.imageView.frame = CGRectMake(0, 0, w, h);
+    
+    CGFloat labelY = h * 0.4;
+    self.loginLabel.frame = CGRectMake(0, labelY, w, self.loginLabel.font.lineHeight);
+    
+    CGFloat kMargin = 15;
+    CGFloat maxW = w - kMargin * 2;
+    CGFloat phoneY = CGRectGetMaxY(self.loginLabel.frame) + 8;
+    self.phoneField.frame = CGRectMake(kMargin, phoneY, maxW, kSLRightTextFieldH*Proportion375);
+    CGFloat pwdY = CGRectGetMaxY(self.phoneField.frame);
+    self.pwdField.frame = CGRectMake(kMargin, pwdY, maxW, kSLRightTextFieldH*Proportion375);
+    
+    CGFloat forgetW = 70;
+    CGFloat forgetX = w - forgetW - kMargin;
+    CGFloat forgetY = CGRectGetMaxY(self.pwdField.frame);
+    CGFloat forgetH = self.forgetButton.titleLabel.font.lineHeight + 20 * 2;
+    self.forgetButton.frame = CGRectMake(forgetX, forgetY, forgetW, forgetH);
+    
+    CGFloat loginY = CGRectGetMaxY(self.forgetButton.frame) + 32;
+    self.loginButton.frame = CGRectMake(kMargin, loginY, maxW, kSLConfirmButtonH);
+}
+
 @end
