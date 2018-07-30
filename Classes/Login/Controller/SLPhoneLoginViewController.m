@@ -32,4 +32,12 @@
     [self setupUI];
 }
 
+- (void)setupNavigation {
+    self.navigationBarView.backgroundColor = [UIColor clearColor];
+    [self.navigationBarView setRightTitle:@"注册新用户" titleColor:[UIColor whiteColor]
+                                     font:[UIFont systemFontOfSize:12]];
+    [self.navigationBarView sl_adjustPhoneLogin];
+    [self.navigationBarView setNavigationLineHidden:YES];
+}
+
 @end
