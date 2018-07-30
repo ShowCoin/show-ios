@@ -365,6 +365,80 @@
 
 
 
+//设置内容末尾显示省略号
+- (NSAttributedString *)attributedStringForTruncatingTail:(NSAttributedString *)attributedString {
+    
+    //富文本设置文字行间距
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc]init];
+    paragraphStyle.lineBreakMode = NSLineBreakByTruncatingTail;
+    NSDictionary *attributes = @{ NSParagraphStyleAttributeName:paragraphStyle };
+    NSAttributedString * attributed = [[NSAttributedString alloc]initWithString:self attributes:attributes];
+    return attributed;
+}
+
+//根据添加行间距后的内容计算高度
+- (CGFloat)heightOfAttributedText:(NSAttributedString*)attributed width:(float)width {
+    
+    //获取设置文本间距以后的高度
+    CGRect frame = [attributed boundingRectWithSize:CGSizeMake(width, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading context:nil];
+    
+    return frame.size.height;
+}
+
+//根据添加行间距后的内容计算高度
+- (CGFloat)heightOfAttributedText:(NSAttributedString*)attributed width:(float)width limitedHeight:(CGFloat)height {
+    
+    //获取设置文本间距以后的高度
+    CGRect frame = [attributed boundingRectWithSize:CGSizeMake(width, height) options:NSStringDrawingUsesLineFragmentOrigin context:nil];
+    
+    return frame.size.height;
+}
+
+//data转换为十六进制的string
++ (NSString *)hexStringFromData:(NSData *)myD{
+    
+    Byte *bytes = (Byte *)[myD bytes];
+    //下面是Byte 转换为16进制。
+    NSString *hexStr=@"";
+    for(int i=0;i<[myD length];i++)
+        
+    {
+        NSString *newHexStr = [NSString stringWithFormat:@"%x",bytes[i]&0xff];///16进制数
+        
+        if([newHexStr length]==1)
+            
+            hexStr = [NSString stringWithFormat:@"%@0%@",hexStr,newHexStr];
+        
+        else
+            
+            hexStr = [NSString stringWithFormat:@"%@%@",hexStr,newHexStr];
+    }
+    NSLog(@"hex = %@",hexStr);
+    
+    return hexStr;
+}
++ (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString {
+    if (jsonString == nil) {
+        return nil;
+    }
+    
+    NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *err;
+    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:jsonData  options:NSJSONReadingMutableContainers error:&err];
+    if(err) {
+        return nil;
+    }
+    return dic;
+}
+-(NSString *)validNameString{
+    if(self.length >8){
+        NSString *newString = [self substringToIndex:7];
+        return [NSString stringWithFormat:@"%@...",newString];
+    }else{
+        return self;
+    }
+}
+
 
 
 
