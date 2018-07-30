@@ -176,4 +176,10 @@
     [LoginManager.manager phoneLogin:phone password:md5 currentController:self];
 }
 
+- (void)clickRightButton:(UIButton *)sender {
+    [SLReportManager reportEvent:kReport_PhoneLogin andSubEvent:kReport_PhoneLogin_Register];
+    SLPhoneRegisterViewController *vc = [[SLPhoneRegisterViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 @end
