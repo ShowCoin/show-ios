@@ -138,4 +138,22 @@
     return YES;
 }
 
+#pragma mark - Action
+
+- (void)al_textFieldTextDidChange:(UITextField *)textField {
+    if (self.phoneField.text.length > kPhoneMaxLength) {
+        self.phoneField.text = [self.phoneField.text substringToIndex:kPhoneMaxLength];
+    }
+    if (self.pwdField.text.length > kPasswordMaxLength) {
+        self.pwdField.text = [self.pwdField.text substringToIndex:kPasswordMaxLength];
+    }
+    if (self.phoneField.text.length > 0 && self.pwdField.text.length > 0) {
+        self.loginButton.enabled = YES;
+        self.loginButton.backgroundColor = HexRGBAlpha(0x1e1e1e, 1);
+    } else {
+        self.loginButton.enabled = NO;
+        self.loginButton.backgroundColor = HexRGBAlpha(0x333333, 1);
+    }
+}
+
 @end
