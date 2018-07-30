@@ -123,4 +123,12 @@
     [self.view endEditing:YES];
 }
 
+- (SLRightTextField *)sl_createTextFieldWithPlaceholder:(NSString *)placeholder {
+    SLRightTextField *textField = [[SLRightTextField alloc] init];
+    textField.placeholder = placeholder;
+    [textField addTarget:self action:@selector(al_textFieldTextDidChange:) forControlEvents:UIControlEventEditingChanged];
+    [self.view addSubview:textField];
+    return textField;
+}
+
 @end
