@@ -131,6 +131,12 @@
     self.loginButton.frame = CGRectMake(kMargin, loginY, maxW, kSLConfirmButtonH);
 }
 
+/**
+ <#Description#>
+
+ @param touches <#touches description#>
+ @param event <#event description#>
+ */
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [self.view endEditing:YES];
 }
