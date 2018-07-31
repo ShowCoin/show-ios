@@ -13,7 +13,7 @@
 #import "SLConfirmButton.h"
 
 /**
- <#Description#>
+ SLPhoneLoginViewController
  */
 @interface SLPhoneLoginViewController () <ShowNavigationBarDelegate, UITextFieldDelegate>
 
