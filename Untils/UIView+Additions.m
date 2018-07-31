@@ -102,7 +102,177 @@
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
+- (void)setWidth:(CGFloat)width {
+    CGRect frame = self.frame;
+    frame.size.width = width;
+    self.frame = frame;
+}
 
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+- (CGFloat)height {
+    return self.frame.size.height;
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+- (void)setHeight:(CGFloat)height {
+    CGRect frame = self.frame;
+    frame.size.height = height;
+    self.frame = frame;
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+- (CGFloat)ttScreenX {
+    CGFloat x = 0;
+    for (UIView* view = self; view; view = view.superview) {
+        x += view.left;
+    }
+    return x;
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+- (CGFloat)ttScreenY {
+    CGFloat y = 0;
+    for (UIView* view = self; view; view = view.superview) {
+        y += view.top;
+    }
+    return y;
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+- (CGFloat)screenViewX {
+    CGFloat x = 0;
+    for (UIView* view = self; view; view = view.superview) {
+        x += view.left;
+        
+        if ([view isKindOfClass:[UIScrollView class]]) {
+            UIScrollView* scrollView = (UIScrollView*)view;
+            x -= scrollView.contentOffset.x;
+        }
+    }
+    
+    return x;
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+- (CGFloat)screenViewY {
+    CGFloat y = 0;
+    for (UIView* view = self; view; view = view.superview) {
+        y += view.top;
+        
+        if ([view isKindOfClass:[UIScrollView class]]) {
+            UIScrollView* scrollView = (UIScrollView*)view;
+            y -= scrollView.contentOffset.y;
+        }
+    }
+    return y;
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+- (CGRect)screenFrame {
+    return CGRectMake(self.screenViewX, self.screenViewY, self.width, self.height);
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+- (CGPoint)origin {
+    return self.frame.origin;
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+- (void)setOrigin:(CGPoint)origin {
+    CGRect frame = self.frame;
+    frame.origin = origin;
+    self.frame = frame;
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+- (CGSize)size {
+    return self.frame.size;
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+- (void)setSize:(CGSize)size {
+    CGRect frame = self.frame;
+    frame.size = size;
+    self.frame = frame;
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+- (CGFloat)orientationWidth {
+    return UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation)
+    ? self.height : self.width;
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+- (CGFloat)orientationHeight {
+    return UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation)
+    ? self.width : self.height;
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+- (UIView*)descendantOrSelfWithClass:(Class)cls {
+    if ([self isKindOfClass:cls])
+        return self;
+    
+    for (UIView* child in self.subviews) {
+        UIView* it = [child descendantOrSelfWithClass:cls];
+        if (it)
+            return it;
+    }
+    
+    return nil;
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+- (UIView*)ancestorOrSelfWithClass:(Class)cls {
+    if ([self isKindOfClass:cls]) {
+        return self;
+        
+    } else if (self.superview) {
+        return [self.superview ancestorOrSelfWithClass:cls];
+        
+    } else {
+        return nil;
+    }
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+- (void)removeAllSubviews {
+    while (self.subviews.count) {
+        UIView* child = self.subviews.lastObject;
+        [child removeFromSuperview];
+    }
+}
+
+
+@end
+
+
+
+@implementation UIView (MarkBorderWithRandomColor)
+
+
+- (void)markBorderWithRandomColorRecursive{
+    [self markBorderWithRandomColor];
+    
+    for (UIView *v in self.subviews) {
+        [v markBorderWithRandomColorRecursive];
+    }
+}
 + (void)load{
     method_exchangeImplementations(class_getInstanceMethod([UIView class], @selector(setHidden:)), class_getInstanceMethod([UIView class], @selector(setTHChidden:)));
 }
