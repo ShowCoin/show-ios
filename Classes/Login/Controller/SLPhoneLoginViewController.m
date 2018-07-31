@@ -35,6 +35,9 @@
     [self setupUI];
 }
 
+/**
+ <#Description#>
+ */
 - (void)setupNavigation {
     self.navigationBarView.backgroundColor = [UIColor clearColor];
     [self.navigationBarView setRightTitle:@"注册新用户" titleColor:[UIColor whiteColor]
