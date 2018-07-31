@@ -135,7 +135,7 @@
  touchesBegan
 
  @param touches touches
- @param event <#event description#>
+ @param event event
  */
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [self.view endEditing:YES];
