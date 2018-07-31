@@ -12,6 +12,9 @@
 #import "NSString+MD5.h"
 #import "SLConfirmButton.h"
 
+/**
+ <#Description#>
+ */
 @interface SLPhoneLoginViewController () <ShowNavigationBarDelegate, UITextFieldDelegate>
 
 @property (nonatomic, weak) UIImageView *imageView;
