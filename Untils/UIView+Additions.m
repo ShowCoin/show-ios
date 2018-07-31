@@ -101,7 +101,71 @@
 }
 
 
+///////////////////////////////////////////////////////////////////////////////////////////////////
+- (void)setWidth:(CGFloat)width {
+    CGRect frame = self.frame;
+    frame.size.width = width;
+    self.frame = frame;
+}
 
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+- (CGFloat)height {
+    return self.frame.size.height;
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+- (void)setHeight:(CGFloat)height {
+    CGRect frame = self.frame;
+    frame.size.height = height;
+    self.frame = frame;
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+- (CGFloat)ttScreenX {
+    CGFloat x = 0;
+    for (UIView* view = self; view; view = view.superview) {
+        x += view.left;
+    }
+    return x;
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+- (CGFloat)ttScreenY {
+    CGFloat y = 0;
+    for (UIView* view = self; view; view = view.superview) {
+        y += view.top;
+    }
+    return y;
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+- (CGFloat)screenViewX {
+    CGFloat x = 0;
+    for (UIView* view = self; view; view = view.superview) {
+        x += view.left;
+        
+        if ([view isKindOfClass:[UIScrollView class]]) {
+            UIScrollView* scrollView = (UIScrollView*)view;
+            x -= scrollView.contentOffset.x;
+        }
+    }
+    
+    return x;
+}
+
+
+
+
+- (void)setTHChidden:(BOOL)ishidden{
+    [self setTHChidden:ishidden];
+    DDLogDebug(@"syp====setTHChidden==%d,class==%@",ishidden,[self className]);
+}
+
+@end
 
 
 @implementation UIView (AppliedAffineTransform)
