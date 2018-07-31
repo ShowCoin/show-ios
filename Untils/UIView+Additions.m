@@ -219,8 +219,6 @@
     return UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation)
     ? self.width : self.height;
 }
-
-
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (UIView*)descendantOrSelfWithClass:(Class)cls {
     if ([self isKindOfClass:cls])
