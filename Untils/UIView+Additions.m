@@ -236,18 +236,7 @@
 }
 
 
-///////////////////////////////////////////////////////////////////////////////////////////////////
-- (UIView*)ancestorOrSelfWithClass:(Class)cls {
-    if ([self isKindOfClass:cls]) {
-        return self;
-        
-    } else if (self.superview) {
-        return [self.superview ancestorOrSelfWithClass:cls];
-        
-    } else {
-        return nil;
-    }
-}
+
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -265,7 +254,10 @@
 
 @implementation UIView (MarkBorderWithRandomColor)
 
-
+- (void)markBorderWithColor:(UIColor *)color borderWidth:(CGFloat)borderWidth{
+    self.layer.borderWidth = borderWidth;
+    self.layer.borderColor = color.CGColor;
+}
 
 - (void)markBorderWithColor:(UIColor *)color{
     [self markBorderWithColor:color borderWidth:1.0f];
