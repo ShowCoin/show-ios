@@ -132,7 +132,6 @@
     return x;
 }
 
-
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (CGFloat)ttScreenY {
     CGFloat y = 0;
@@ -214,14 +213,11 @@
     ? self.height : self.width;
 }
 
-
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (CGFloat)orientationHeight {
     return UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation)
     ? self.width : self.height;
 }
-
-
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (UIView*)descendantOrSelfWithClass:(Class)cls {
     if ([self isKindOfClass:cls])
@@ -290,19 +286,20 @@
         [v markBorderWithRandomColorRecursive];
     }
 }
-//+ (void)load{
-//    method_exchangeImplementations(class_getInstanceMethod([UIView class], @selector(setHidden:)), class_getInstanceMethod([UIView class], @selector(setTHChidden:)));
-//}
-//
-//- (void)setTHChidden:(BOOL)ishidden{
-//    [self setTHChidden:ishidden];
-//    DDLogDebug(@"syp====setTHChidden==%d,class==%@",ishidden,[self className]);
-//}
++ (void)load{
+    method_exchangeImplementations(class_getInstanceMethod([UIView class], @selector(setHidden:)), class_getInstanceMethod([UIView class], @selector(setTHChidden:)));
+}
+
+- (void)setTHChidden:(BOOL)ishidden{
+    [self setTHChidden:ishidden];
+    DDLogDebug(@"syp====setTHChidden==%d,class==%@",ishidden,[self className]);
+}
 
 @end
 
 
 @implementation UIView (AppliedAffineTransform)
+
 
 - (CGRect)frameAppliedAffineTransform
 {
