@@ -36,7 +36,7 @@
 }
 
 /**
- <#Description#>
+ setupNavigation
  */
 - (void)setupNavigation {
     self.navigationBarView.backgroundColor = [UIColor clearColor];
@@ -46,6 +46,9 @@
     [self.navigationBarView setNavigationLineHidden:YES];
 }
 
+/**
+ <#Description#>
+ */
 - (void)setupUI {
     self.view.backgroundColor = kBlackThemeBGColor;
     
