@@ -47,7 +47,7 @@
 }
 
 /**
- <#Description#>
+ setupUI
  */
 - (void)setupUI {
     self.view.backgroundColor = kBlackThemeBGColor;
@@ -102,6 +102,9 @@
 #endif
 }
 
+/**
+ <#Description#>
+ */
 - (void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
     CGFloat w = self.view.frame.size.width;
