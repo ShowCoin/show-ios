@@ -101,37 +101,10 @@
 }
 
 
-///////////////////////////////////////////////////////////////////////////////////////////////////
-- (void)setWidth:(CGFloat)width {
-    CGRect frame = self.frame;
-    frame.size.width = width;
-    self.frame = frame;
-}
 
 
-///////////////////////////////////////////////////////////////////////////////////////////////////
-- (CGFloat)height {
-    return self.frame.size.height;
-}
 
-
-///////////////////////////////////////////////////////////////////////////////////////////////////
-- (void)setHeight:(CGFloat)height {
-    CGRect frame = self.frame;
-    frame.size.height = height;
-    self.frame = frame;
-}
-
-
-///////////////////////////////////////////////////////////////////////////////////////////////////
-- (CGFloat)ttScreenX {
-    CGFloat x = 0;
-    for (UIView* view = self; view; view = view.superview) {
-        x += view.left;
-    }
-    return x;
-}
-
+@implementation UIView (AppliedAffineTransform)
 
 
 - (CGRect)frameAppliedAffineTransform
