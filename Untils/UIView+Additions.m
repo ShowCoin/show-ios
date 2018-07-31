@@ -266,6 +266,12 @@
 @implementation UIView (MarkBorderWithRandomColor)
 
 
+- (void)markBorderWithRandomColor{
+    
+    self.layer.borderColor = [UIColor redColor].CGColor;
+    self.layer.borderWidth = 1.0f;
+}
+
 - (void)markBorderWithRandomColorRecursive{
     [self markBorderWithRandomColor];
     
