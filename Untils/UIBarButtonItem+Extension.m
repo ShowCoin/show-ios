@@ -11,5 +11,8 @@
 @implementation UIBarButtonItem (Extension)
 
 + (UIBarButtonItem *)itemWithTarget:(id)target action:(SEL)action image:(NSString *)image highImage:(NSString *)highImage
+{
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
 
+}
 @end
