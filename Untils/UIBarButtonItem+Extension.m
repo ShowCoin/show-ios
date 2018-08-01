@@ -16,6 +16,7 @@
     [btn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
     // 设置图片
     [btn setBackgroundImage:[UIImage imageNamed:image] forState:UIControlStateNormal];
-  
+    [btn setBackgroundImage:[UIImage imageNamed:highImage] forState:UIControlStateHighlighted];
+
 }
 @end
