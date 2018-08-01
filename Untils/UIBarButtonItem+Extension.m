@@ -18,5 +18,6 @@
     [btn setBackgroundImage:[UIImage imageNamed:image] forState:UIControlStateNormal];
     [btn setBackgroundImage:[UIImage imageNamed:highImage] forState:UIControlStateHighlighted];
 
+    return [[UIBarButtonItem alloc] initWithCustomView:btn];
 }
 @end
