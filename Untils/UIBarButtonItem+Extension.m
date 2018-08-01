@@ -15,6 +15,7 @@
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     [btn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
     // 设置图片
-   
+    [btn setBackgroundImage:[UIImage imageNamed:image] forState:UIControlStateNormal];
+  
 }
 @end
