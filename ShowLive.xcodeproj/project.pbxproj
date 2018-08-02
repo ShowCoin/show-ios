@@ -32,7 +32,6 @@
 		431C077D20FE284300479559 /* NSURLRequest+JKParamsFromDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 431C077B20FE284300479559 /* NSURLRequest+JKParamsFromDictionary.m */; };
 		431C078020FE286F00479559 /* NSURLRequestDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 431C077F20FE286F00479559 /* NSURLRequestDemoViewController.m */; };
 		431C078320FE28BF00479559 /* NSURLSession+JKSynchronousTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 431C078120FE28BF00479559 /* NSURLSession+JKSynchronousTask.m */; };
-		431C078620FE290100479559 /* NSUserDefaults+JKiCloudSync.m in Sources */ = {isa = PBXBuildFile; fileRef = 431C078520FE290100479559 /* NSUserDefaults+JKiCloudSync.m */; };
 		431C078920FE291700479559 /* NSUserDefaults+JKSafeAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 431C078820FE291700479559 /* NSUserDefaults+JKSafeAccess.m */; };
 		431C078C20FE293300479559 /* NSUserDefaultsDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 431C078A20FE293200479559 /* NSUserDefaultsDemoViewController.m */; };
 		431CB4C620F498860043B0AC /* NSObject+JKEasyCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 431CB4C520F498850043B0AC /* NSObject+JKEasyCopy.m */; };
@@ -267,8 +266,6 @@
 		431C077F20FE286F00479559 /* NSURLRequestDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSURLRequestDemoViewController.m; sourceTree = "<group>"; };
 		431C078120FE28BF00479559 /* NSURLSession+JKSynchronousTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLSession+JKSynchronousTask.m"; sourceTree = "<group>"; };
 		431C078220FE28BF00479559 /* NSURLSession+JKSynchronousTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLSession+JKSynchronousTask.h"; sourceTree = "<group>"; };
-		431C078420FE290100479559 /* NSUserDefaults+JKiCloudSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+JKiCloudSync.h"; sourceTree = "<group>"; };
-		431C078520FE290100479559 /* NSUserDefaults+JKiCloudSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+JKiCloudSync.m"; sourceTree = "<group>"; };
 		431C078720FE291700479559 /* NSUserDefaults+JKSafeAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+JKSafeAccess.h"; sourceTree = "<group>"; };
 		431C078820FE291700479559 /* NSUserDefaults+JKSafeAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+JKSafeAccess.m"; sourceTree = "<group>"; };
 		431C078A20FE293200479559 /* NSUserDefaultsDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSUserDefaultsDemoViewController.m; sourceTree = "<group>"; };
@@ -765,8 +762,6 @@
 				431C078A20FE293200479559 /* NSUserDefaultsDemoViewController.m */,
 				431C078720FE291700479559 /* NSUserDefaults+JKSafeAccess.h */,
 				431C078820FE291700479559 /* NSUserDefaults+JKSafeAccess.m */,
-				431C078420FE290100479559 /* NSUserDefaults+JKiCloudSync.h */,
-				431C078520FE290100479559 /* NSUserDefaults+JKiCloudSync.m */,
 				431C078220FE28BF00479559 /* NSURLSession+JKSynchronousTask.h */,
 				431C078120FE28BF00479559 /* NSURLSession+JKSynchronousTask.m */,
 				431C077E20FE286F00479559 /* NSURLRequestDemoViewController.h */,
@@ -1900,7 +1895,6 @@
 				43291F4120E51F6F000C3C15 /* UITableViewDemoViewController.m in Sources */,
 				431F64DA20F8F1C00087DB8E /* NSString+JKBase64.m in Sources */,
 				93D2C11220BD238500C9D960 /* SLFriendListCell.m in Sources */,
-				431C078620FE290100479559 /* NSUserDefaults+JKiCloudSync.m in Sources */,
 				4374EB2220F6300D00BB947F /* NSString+JKMIME.m in Sources */,
 				43291F4420E51FDC000C3C15 /* UITableViewCellDemoViewController.m in Sources */,
 				435D4C4D20EDEAC600C8DC85 /* NSDate+JKReporting.m in Sources */,
