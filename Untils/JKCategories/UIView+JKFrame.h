@@ -24,4 +24,5 @@
 
 @property (nonatomic) CGFloat jk_width;
 @property (nonatomic) CGFloat jk_height;
+
 @end

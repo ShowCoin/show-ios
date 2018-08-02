@@ -12,6 +12,9 @@
 #import "NSString+MD5.h"
 #import "SLConfirmButton.h"
 
+/**
+ SLPhoneLoginViewController
+ */
 @interface SLPhoneLoginViewController () <ShowNavigationBarDelegate, UITextFieldDelegate>
 
 @property (nonatomic, weak) UIImageView *imageView;
@@ -32,6 +35,9 @@
     [self setupUI];
 }
 
+/**
+ setupNavigation
+ */
 - (void)setupNavigation {
     self.navigationBarView.backgroundColor = [UIColor clearColor];
     [self.navigationBarView setRightTitle:@"注册新用户" titleColor:[UIColor whiteColor]
@@ -40,6 +46,9 @@
     [self.navigationBarView setNavigationLineHidden:YES];
 }
 
+/**
+ setupUI
+ */
 - (void)setupUI {
     self.view.backgroundColor = kBlackThemeBGColor;
     
@@ -93,6 +102,9 @@
 #endif
 }
 
+/**
+ viewWillLayoutSubviews
+ */
 - (void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
     CGFloat w = self.view.frame.size.width;
@@ -119,6 +131,12 @@
     self.loginButton.frame = CGRectMake(kMargin, loginY, maxW, kSLConfirmButtonH);
 }
 
+/**
+ touchesBegan
+
+ @param touches touches
+ @param event event
+ */
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [self.view endEditing:YES];
 }
