@@ -12,7 +12,7 @@
 
 // 根据defaultName 得到string
 + (NSString *)jk_stringForKey:(NSString *)defaultName;
-
+// 根据defaultName 得到array
 + (NSArray *)jk_arrayForKey:(NSString *)defaultName;
 
 + (NSDictionary *)jk_dictionaryForKey:(NSString *)defaultName;
