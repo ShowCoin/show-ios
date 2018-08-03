@@ -74,14 +74,10 @@
  */
 @property (nonatomic, readonly) CGFloat ttScreenY;
 
-/**
- * Return the x coordinate on the screen, taking into account scroll views.
- */
+
 @property (nonatomic, readonly) CGFloat screenViewX;
 
-/**
- * Return the y coordinate on the screen, taking into account scroll views.
- */
+
 @property (nonatomic, readonly) CGFloat screenViewY;
 
 /**
