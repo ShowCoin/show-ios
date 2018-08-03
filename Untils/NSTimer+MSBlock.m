@@ -32,6 +32,9 @@
                                repeats:repeats];
 }
 
++(void)blockInvoke:(NSTimer *)timer
+{
 
+}
 
 @end
