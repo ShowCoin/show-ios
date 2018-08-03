@@ -20,7 +20,7 @@
 + (NSData *)jk_dataForKey:(NSString *)defaultName;
 // 根据defaultName 得到stringArray
 + (NSArray *)jk_stringArrayForKey:(NSString *)defaultName;
-
+// 根据defaultName 得到integer
 + (NSInteger)jk_integerForKey:(NSString *)defaultName;
 
 + (float)jk_floatForKey:(NSString *)defaultName;
