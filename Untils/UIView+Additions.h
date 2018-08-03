@@ -114,6 +114,10 @@
  */
 - (UIView*)descendantOrSelfWithClass:(Class)cls;
 
+/**
+ * Finds the first ancestor view (including this view) that is a member of a particular class.
+ */
+- (UIView*)ancestorOrSelfWithClass:(Class)cls;
 
 /**
  * Removes all subviews.
