@@ -18,7 +18,7 @@
 + (NSDictionary *)jk_dictionaryForKey:(NSString *)defaultName;
 // 根据defaultName 得到data
 + (NSData *)jk_dataForKey:(NSString *)defaultName;
-
+// 根据defaultName 得到stringArray
 + (NSArray *)jk_stringArrayForKey:(NSString *)defaultName;
 
 + (NSInteger)jk_integerForKey:(NSString *)defaultName;
