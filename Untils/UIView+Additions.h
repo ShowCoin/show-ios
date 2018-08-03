@@ -154,5 +154,8 @@
 
 @property (nonatomic, readonly) CGRect frameAppliedAffineTransform;
 
+@property (nonatomic, readonly) CGFloat widthAppliedAffineTransform;
+
+
 
 @end
