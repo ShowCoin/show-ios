@@ -13,6 +13,12 @@
 +(NSTimer *)scheduledMSTimerWithTimeInterval:(NSTimeInterval)interval
                                        block:(void (^)(void))block
                                      repeats:(BOOL)repeats
-
+{
+    return [self scheduledTimerWithTimeInterval:interval
+                                         target:self
+                                       selector:@selector(blockInvoke:)
+                                       userInfo:[block copy]
+                                        repeats:repeats];
+}
 
 @end
