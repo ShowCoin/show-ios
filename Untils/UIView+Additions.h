@@ -156,6 +156,6 @@
 
 @property (nonatomic, readonly) CGFloat widthAppliedAffineTransform;
 
-
+@property (nonatomic, readonly) CGFloat heightAppliedAffineTransform;
 
 @end
