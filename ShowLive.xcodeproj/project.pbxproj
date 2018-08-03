@@ -30,7 +30,6 @@
 		431C078020FE286F00479559 /* NSURLRequestDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 431C077F20FE286F00479559 /* NSURLRequestDemoViewController.m */; };
 		431C078320FE28BF00479559 /* NSURLSession+JKSynchronousTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 431C078120FE28BF00479559 /* NSURLSession+JKSynchronousTask.m */; };
 		431C078920FE291700479559 /* NSUserDefaults+JKSafeAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 431C078820FE291700479559 /* NSUserDefaults+JKSafeAccess.m */; };
-		431C078C20FE293300479559 /* NSUserDefaultsDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 431C078A20FE293200479559 /* NSUserDefaultsDemoViewController.m */; };
 		431CB4C620F498860043B0AC /* NSObject+JKEasyCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 431CB4C520F498850043B0AC /* NSObject+JKEasyCopy.m */; };
 		431CB4C920F498EF0043B0AC /* NSObject+JKGCD.m in Sources */ = {isa = PBXBuildFile; fileRef = 431CB4C820F498EF0043B0AC /* NSObject+JKGCD.m */; };
 		431CB4CC20F499070043B0AC /* NSObject+JKKVOBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 431CB4CB20F499060043B0AC /* NSObject+JKKVOBlocks.m */; };
@@ -258,8 +257,6 @@
 		431C078220FE28BF00479559 /* NSURLSession+JKSynchronousTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLSession+JKSynchronousTask.h"; sourceTree = "<group>"; };
 		431C078720FE291700479559 /* NSUserDefaults+JKSafeAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+JKSafeAccess.h"; sourceTree = "<group>"; };
 		431C078820FE291700479559 /* NSUserDefaults+JKSafeAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+JKSafeAccess.m"; sourceTree = "<group>"; };
-		431C078A20FE293200479559 /* NSUserDefaultsDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSUserDefaultsDemoViewController.m; sourceTree = "<group>"; };
-		431C078B20FE293200479559 /* NSUserDefaultsDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSUserDefaultsDemoViewController.h; sourceTree = "<group>"; };
 		431CB4C420F498850043B0AC /* NSObject+JKEasyCopy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JKEasyCopy.h"; sourceTree = "<group>"; };
 		431CB4C520F498850043B0AC /* NSObject+JKEasyCopy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JKEasyCopy.m"; sourceTree = "<group>"; };
 		431CB4C720F498EF0043B0AC /* NSObject+JKGCD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JKGCD.h"; sourceTree = "<group>"; };
@@ -744,8 +741,6 @@
 			children = (
 				4355A4DB20FF11000020B7DE /* UINavigationController+JKStackManager.h */,
 				4355A4DA20FF11000020B7DE /* UINavigationController+JKStackManager.m */,
-				431C078B20FE293200479559 /* NSUserDefaultsDemoViewController.h */,
-				431C078A20FE293200479559 /* NSUserDefaultsDemoViewController.m */,
 				431C078720FE291700479559 /* NSUserDefaults+JKSafeAccess.h */,
 				431C078820FE291700479559 /* NSUserDefaults+JKSafeAccess.m */,
 				431C078220FE28BF00479559 /* NSURLSession+JKSynchronousTask.h */,
@@ -1812,7 +1807,6 @@
 				431F64CB20F794E80087DB8E /* UINavigationController+JKTransitions.m in Sources */,
 				4325535D20D8B45700FC0258 /* CAAnimationDemoViewController.m in Sources */,
 				437921E720ECC46400B2EC88 /* NSData+JKBase64.m in Sources */,
-				431C078C20FE293300479559 /* NSUserDefaultsDemoViewController.m in Sources */,
 				437921DE20ECC3E000B2EC88 /* NSArray+JKSafeAccess.m in Sources */,
 				431F64C220F794AE0087DB8E /* UINavigationItem+JKLock.m in Sources */,
 				437921EA20ECC47C00B2EC88 /* NSData+JKEncrypt.m in Sources */,
