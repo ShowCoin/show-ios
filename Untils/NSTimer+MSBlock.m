@@ -24,5 +24,14 @@
 +(NSTimer *)timerWithTimeInterval:(NSTimeInterval)interval
                             block:(void (^)(void))block
                           repeats:(BOOL)repeats
+{
+    return [self timerWithTimeInterval:interval
+                                target:self
+                              selector:@selector(blockInvoke:)
+                              userInfo:[block copy]
+                               repeats:repeats];
+}
+
+
 
 @end
