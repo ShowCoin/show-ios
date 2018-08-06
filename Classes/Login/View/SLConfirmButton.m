@@ -10,8 +10,17 @@
 
 CGFloat const kSLConfirmButtonH = 46;
 
+/**
+ SLConfirmButton
+ */
 @implementation SLConfirmButton
 
+/**
+ initWithFrame
+
+ @param frame <#frame description#>
+ @return instancetype
+ */
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -21,6 +30,9 @@ CGFloat const kSLConfirmButtonH = 46;
     return self;
 }
 
+/**
+ setupUI
+ */
 - (void)setupUI {
     [self setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self setTitleColor:kGrayWith808080 forState:UIControlStateDisabled];
@@ -30,6 +42,11 @@ CGFloat const kSLConfirmButtonH = 46;
     self.enabled = NO;
 }
 
+/**
+ setEnabled
+
+ @param enabled enabled
+ */
 - (void)setEnabled:(BOOL)enabled {
     [super setEnabled:enabled];
     

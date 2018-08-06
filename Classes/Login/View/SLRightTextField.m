@@ -163,10 +163,22 @@ CGFloat const kSLRightTextFieldH = 50;
  SLVerificationButton
  */
 @interface SLVerificationButton ()
+
+/**
+ lineView
+ */
 @property (nonatomic, weak) UIView *lineView;
+
+/**
+ action
+ */
 @property (nonatomic, strong) ShowVerifycodeAction *action;
+
 @end
 
+/**
+ @implementation
+ */
 @implementation SLVerificationButton{
     int count;
     NSTimer *timer;
@@ -248,6 +260,9 @@ CGFloat const kSLRightTextFieldH = 50;
     NSLog(@"%s", __func__);
 }
 
+/**
+ dealloc
+ */
 - (void)dealloc {
     NSLog(@"%s", __func__);
 }
