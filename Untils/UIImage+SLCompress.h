@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #define MAX_IMAGEPIX 1000.0 // max pix 200.0px
-
+#define MAX_IMAGEDATA_LEN 1000000.0 // max data length 300k
 
 @interface UIImage (SLCompress)
 //图像质量压缩
