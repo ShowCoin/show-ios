@@ -9,6 +9,7 @@
 #import "NSUserDefaults+JKSafeAccess.h"
 
 @implementation NSUserDefaults (JKSafeAccess)
+//安全保护
 + (NSString *)jk_stringForKey:(NSString *)defaultName {
     return [[NSUserDefaults standardUserDefaults] stringForKey:defaultName];
 }
