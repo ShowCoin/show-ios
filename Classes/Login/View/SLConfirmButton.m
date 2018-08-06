@@ -16,7 +16,7 @@ CGFloat const kSLConfirmButtonH = 46;
 @implementation SLConfirmButton
 
 /**
- <#Description#>
+ initWithFrame
 
  @param frame <#frame description#>
  @return <#return value description#>
