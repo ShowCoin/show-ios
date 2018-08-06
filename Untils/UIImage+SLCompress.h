@@ -15,5 +15,6 @@
 -(UIImage *)compressedImage;
 -(NSData *)compressedData;
 -(NSData *)compressedDataSize:(float)size;          //kb
+-(NSData *)compressedDataWithRate;
 
 @end
