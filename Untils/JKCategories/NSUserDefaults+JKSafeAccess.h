@@ -22,7 +22,7 @@
 + (NSArray *)jk_stringArrayForKey:(NSString *)defaultName;
 // 根据defaultName 得到integer
 + (NSInteger)jk_integerForKey:(NSString *)defaultName;
-
+// 根据defaultName 得到float
 + (float)jk_floatForKey:(NSString *)defaultName;
 
 + (double)jk_doubleForKey:(NSString *)defaultName;
