@@ -168,7 +168,7 @@ CGFloat const kSLRightTextFieldH = 50;
 @end
 
 /**
- <#Description#>
+ @implementation
  */
 @implementation SLVerificationButton{
     int count;
