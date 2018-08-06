@@ -28,7 +28,7 @@
 + (double)jk_doubleForKey:(NSString *)defaultName;
 // 根据defaultName 得到bool
 + (BOOL)jk_boolForKey:(NSString *)defaultName;
-
+// 根据defaultName 得到url
 + (NSURL *)jk_URLForKey:(NSString *)defaultName;
 
 #pragma mark - WRITE FOR STANDARD
