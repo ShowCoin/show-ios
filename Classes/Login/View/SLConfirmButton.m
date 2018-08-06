@@ -30,6 +30,9 @@ CGFloat const kSLConfirmButtonH = 46;
     return self;
 }
 
+/**
+ <#Description#>
+ */
 - (void)setupUI {
     [self setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self setTitleColor:kGrayWith808080 forState:UIControlStateDisabled];
