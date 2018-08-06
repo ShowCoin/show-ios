@@ -26,7 +26,7 @@
 + (float)jk_floatForKey:(NSString *)defaultName;
 // 根据defaultName 得到double
 + (double)jk_doubleForKey:(NSString *)defaultName;
-
+// 根据defaultName 得到bool
 + (BOOL)jk_boolForKey:(NSString *)defaultName;
 
 + (NSURL *)jk_URLForKey:(NSString *)defaultName;
