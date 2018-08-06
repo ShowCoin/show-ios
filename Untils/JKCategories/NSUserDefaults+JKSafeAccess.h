@@ -36,7 +36,7 @@
 + (void)jk_setObject:(id)value forKey:(NSString *)defaultName;
 
 #pragma mark - READ ARCHIVE FOR STANDARD
-
+// arc模式设置建制对
 + (id)jk_arcObjectForKey:(NSString *)defaultName;
 
 #pragma mark - WRITE ARCHIVE FOR STANDARD
