@@ -202,5 +202,14 @@
     return destDateString;
 }
 
+- (NSString *)timeText {
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"hh:mm"];
+    [formatter setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"UTC"]];
+    NSString *destDateString = [formatter stringFromDate:self];
+    return destDateString;
+}
+
 
 @end
