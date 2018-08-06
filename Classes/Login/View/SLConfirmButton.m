@@ -42,6 +42,11 @@ CGFloat const kSLConfirmButtonH = 46;
     self.enabled = NO;
 }
 
+/**
+ <#Description#>
+
+ @param enabled <#enabled description#>
+ */
 - (void)setEnabled:(BOOL)enabled {
     [super setEnabled:enabled];
     
