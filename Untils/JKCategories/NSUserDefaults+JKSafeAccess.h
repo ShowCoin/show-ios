@@ -32,7 +32,7 @@
 + (NSURL *)jk_URLForKey:(NSString *)defaultName;
 
 #pragma mark - WRITE FOR STANDARD
-
+// 设置建制对
 + (void)jk_setObject:(id)value forKey:(NSString *)defaultName;
 
 #pragma mark - READ ARCHIVE FOR STANDARD
