@@ -168,6 +168,10 @@ CGFloat const kSLRightTextFieldH = 50;
  lineView
  */
 @property (nonatomic, weak) UIView *lineView;
+
+/**
+ <#Description#>
+ */
 @property (nonatomic, strong) ShowVerifycodeAction *action;
 @end
 
