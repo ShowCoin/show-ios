@@ -249,7 +249,7 @@ CGFloat const kSLRightTextFieldH = 50;
 }
 
 /**
- <#Description#>
+ dealloc
  */
 - (void)dealloc {
     NSLog(@"%s", __func__);
