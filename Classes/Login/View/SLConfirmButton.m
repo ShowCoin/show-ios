@@ -43,7 +43,7 @@ CGFloat const kSLConfirmButtonH = 46;
 }
 
 /**
- <#Description#>
+ setEnabled
 
  @param enabled <#enabled description#>
  */
