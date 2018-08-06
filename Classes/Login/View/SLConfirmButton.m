@@ -19,7 +19,7 @@ CGFloat const kSLConfirmButtonH = 46;
  initWithFrame
 
  @param frame <#frame description#>
- @return <#return value description#>
+ @return instancetype
  */
 - (instancetype)initWithFrame:(CGRect)frame
 {
