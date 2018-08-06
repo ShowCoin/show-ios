@@ -167,6 +167,9 @@ CGFloat const kSLRightTextFieldH = 50;
 @property (nonatomic, strong) ShowVerifycodeAction *action;
 @end
 
+/**
+ <#Description#>
+ */
 @implementation SLVerificationButton{
     int count;
     NSTimer *timer;
