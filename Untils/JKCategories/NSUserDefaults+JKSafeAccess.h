@@ -24,7 +24,7 @@
 + (NSInteger)jk_integerForKey:(NSString *)defaultName;
 // 根据defaultName 得到float
 + (float)jk_floatForKey:(NSString *)defaultName;
-
+// 根据defaultName 得到double
 + (double)jk_doubleForKey:(NSString *)defaultName;
 
 + (BOOL)jk_boolForKey:(NSString *)defaultName;
