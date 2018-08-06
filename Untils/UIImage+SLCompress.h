@@ -13,5 +13,6 @@
 @interface UIImage (SLCompress)
 //图像质量压缩
 -(UIImage *)compressedImage;
+-(NSData *)compressedData;
 
 @end
