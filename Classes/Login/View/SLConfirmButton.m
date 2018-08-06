@@ -11,7 +11,7 @@
 CGFloat const kSLConfirmButtonH = 46;
 
 /**
- <#Description#>
+ SLConfirmButton
  */
 @implementation SLConfirmButton
 
