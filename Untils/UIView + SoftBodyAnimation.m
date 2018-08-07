@@ -105,13 +105,7 @@ static const char *kisScaleXY = "kisScaleXY";
 
 -(void)touchDownBodyAnimationFinish{
     __weak typeof(self) weakSelf = self;
-    [UIView animateWithDuration:0.15 delay:0 usingSpringWithDamping:1.0 initialSpringVelocity:.1 options:UIViewAnimationOptionCurveLinear animations:^{
-        weakSelf.transform = CGAffineTransformMakeScale(1, 1);
-    } completion:^(BOOL finished) {
-        if(finished){
-            
-        }
-    }];
+ 
 }
 
 
@@ -120,6 +114,16 @@ static const char *kisScaleXY = "kisScaleXY";
 }
 
 - (void)startSoftBodyAnimationWithView:(UIView *)view isZoom:(BOOL)isZoom {
-
+    [UIView animateWithDuration:1.0 delay:0 options:UIViewAnimationOptionCurveLinear|UIViewAnimationOptionAllowUserInteraction  animations:^{
+        if(isZoom){
+            view.transform = CGAffineTransformMakeScale(1.04, 0.96);
+        }else{
+            view.transform = CGAffineTransformMakeScale(0.96, 1.04);
+        }
+    } completion:^(BOOL finished) {
+        if(finished){
+            [self startSoftBodyAnimationWithView:view isZoom:!isZoom];
+        }
+    }];
 }
 @end
