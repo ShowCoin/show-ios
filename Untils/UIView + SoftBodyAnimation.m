@@ -86,8 +86,7 @@ static const char *kisScaleXY = "kisScaleXY";
 }
 
 -(BOOL)isScaleXY{
-    NSNumber * num = (NSNumber *)objc_getAssociatedObject(self, kisScaleXY);
-    return num.boolValue;
+
     
 }
 
@@ -105,7 +104,13 @@ static const char *kisScaleXY = "kisScaleXY";
 
 -(void)touchDownBodyAnimationFinish{
     __weak typeof(self) weakSelf = self;
- 
+    [UIView animateWithDuration:0.15 delay:0 usingSpringWithDamping:1.0 initialSpringVelocity:.1 options:UIViewAnimationOptionCurveLinear animations:^{
+        weakSelf.transform = CGAffineTransformMakeScale(1, 1);
+    } completion:^(BOOL finished) {
+        if(finished){
+            
+        }
+    }];
 }
 
 
