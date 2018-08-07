@@ -41,7 +41,7 @@
 + (double)jk_doubleForKey:(NSString *)defaultName {
     return [[NSUserDefaults standardUserDefaults] doubleForKey:defaultName];
 }
-
+//根据key获取boolforkey
 + (BOOL)jk_boolForKey:(NSString *)defaultName {
     return [[NSUserDefaults standardUserDefaults] boolForKey:defaultName];
 }
