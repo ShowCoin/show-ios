@@ -17,7 +17,7 @@
 + (NSArray *)jk_arrayForKey:(NSString *)defaultName {
     return [[NSUserDefaults standardUserDefaults] arrayForKey:defaultName];
 }
-
+//根据key获取dict
 + (NSDictionary *)jk_dictionaryForKey:(NSString *)defaultName {
     return [[NSUserDefaults standardUserDefaults] dictionaryForKey:defaultName];
 }
