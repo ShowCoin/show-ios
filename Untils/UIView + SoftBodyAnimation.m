@@ -77,8 +77,7 @@ static const char *kisScaleXY = "kisScaleXY";
     objc_setAssociatedObject(self, kisAnimationZoomX, [NSNumber numberWithBool:isAnimationZoomX], OBJC_ASSOCIATION_ASSIGN);
 }
 -(BOOL)isAnimationZoomX{
-    NSNumber * num = (NSNumber *)objc_getAssociatedObject(self, kisAnimationZoomX);
-    return num.boolValue;
+ 
 }
 
 -(void)setIsScaleXY:(BOOL)isScaleXY{
@@ -86,7 +85,8 @@ static const char *kisScaleXY = "kisScaleXY";
 }
 
 -(BOOL)isScaleXY{
-
+    NSNumber * num = (NSNumber *)objc_getAssociatedObject(self, kisScaleXY);
+    return num.boolValue;
     
 }
 
