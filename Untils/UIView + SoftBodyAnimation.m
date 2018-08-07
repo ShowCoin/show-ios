@@ -10,6 +10,7 @@
 
 static const char *kisPlayBodyAnimation = "kisPlayBodyAnimation";
 static const char *kisAnimationZoomX = "kisAnimationZoomX";
+static const char *kisScaleXY = "kisScaleXY";
 
 @implementation UIView(SoftBodyAnimation)
 
@@ -17,7 +18,6 @@ static const char *kisAnimationZoomX = "kisAnimationZoomX";
     
     self.isPlayBodyAnimation = YES;
     self.isAnimationZoomX = YES;
-    
     [self softBodyMotion];
 }
 
@@ -120,16 +120,6 @@ static const char *kisAnimationZoomX = "kisAnimationZoomX";
 }
 
 - (void)startSoftBodyAnimationWithView:(UIView *)view isZoom:(BOOL)isZoom {
-    [UIView animateWithDuration:1.0 delay:0 options:UIViewAnimationOptionCurveLinear|UIViewAnimationOptionAllowUserInteraction  animations:^{
-        if(isZoom){
-            view.transform = CGAffineTransformMakeScale(1.04, 0.96);
-        }else{
-            view.transform = CGAffineTransformMakeScale(0.96, 1.04);
-        }
-    } completion:^(BOOL finished) {
-        if(finished){
-            [self startSoftBodyAnimationWithView:view isZoom:!isZoom];
-        }
-    }];
+
 }
 @end
