@@ -21,7 +21,6 @@
 		431BBB6220DBCABD006A3D50 /* UIView+JKCustomBorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 431BBB6020DBCABD006A3D50 /* UIView+JKCustomBorder.m */; };
 		431BBB6820DBCB38006A3D50 /* UIView+JKBlockGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 431BBB6620DBCB37006A3D50 /* UIView+JKBlockGesture.m */; };
 		431BBB6B20DBCB53006A3D50 /* UIView+JKAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 431BBB6920DBCB53006A3D50 /* UIView+JKAnimation.m */; };
-		431C075D20FC8D0C00479559 /* NSString+JKUUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 431C075C20FC8D0C00479559 /* NSString+JKUUID.m */; };
 		431C076020FC8D9000479559 /* NSString+JKXMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 431C075F20FC8D9000479559 /* NSString+JKXMLDictionary.m */; };
 		431C076320FC8DAB00479559 /* NSTimer+JKAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 431C076120FC8DAB00479559 /* NSTimer+JKAddition.m */; };
 		431C076C20FC8EB900479559 /* NSURL+JKQueryDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 431C076B20FC8EB900479559 /* NSURL+JKQueryDictionary.m */; };
@@ -191,6 +190,7 @@
 		93398ECF20D93370004376FB /* SLHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 93398ECE20D93370004376FB /* SLHelper.m */; };
 		934AE46120FC6BB400B60AD4 /* UIImage+Avatar.m in Sources */ = {isa = PBXBuildFile; fileRef = 934AE46020FC6BB400B60AD4 /* UIImage+Avatar.m */; };
 		934AE46420FC6C1000B60AD4 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 934AE46320FC6C1000B60AD4 /* NSString+Additions.m */; };
+		934CBCD9211821A600608F2F /* NSDate+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 934CBCD8211821A500608F2F /* NSDate+Additions.m */; };
 		93615AEB20C1453A000D5658 /* SLBaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93615AEA20C1453A000D5658 /* SLBaseWebViewController.m */; };
 		93615AF320C14BB2000D5658 /* SLSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 93615AF220C14BB2000D5658 /* SLSearchBar.m */; };
 		9391AA8320BF078A00D520F1 /* SLTimerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9391AA8220BF078A00D520F1 /* SLTimerLabel.m */; };
@@ -239,8 +239,6 @@
 		431BBB6720DBCB37006A3D50 /* UIView+JKBlockGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JKBlockGesture.h"; sourceTree = "<group>"; };
 		431BBB6920DBCB53006A3D50 /* UIView+JKAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JKAnimation.m"; sourceTree = "<group>"; };
 		431BBB6A20DBCB53006A3D50 /* UIView+JKAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JKAnimation.h"; sourceTree = "<group>"; };
-		431C075B20FC8D0B00479559 /* NSString+JKUUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JKUUID.h"; sourceTree = "<group>"; };
-		431C075C20FC8D0C00479559 /* NSString+JKUUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JKUUID.m"; sourceTree = "<group>"; };
 		431C075E20FC8D9000479559 /* NSString+JKXMLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JKXMLDictionary.h"; sourceTree = "<group>"; };
 		431C075F20FC8D9000479559 /* NSString+JKXMLDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JKXMLDictionary.m"; sourceTree = "<group>"; };
 		431C076120FC8DAB00479559 /* NSTimer+JKAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+JKAddition.m"; sourceTree = "<group>"; };
@@ -639,6 +637,8 @@
 		934AE46020FC6BB400B60AD4 /* UIImage+Avatar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Avatar.m"; sourceTree = "<group>"; };
 		934AE46220FC6BE400B60AD4 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
 		934AE46320FC6C1000B60AD4 /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
+		934CBCD72118217800608F2F /* NSDate+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Additions.h"; sourceTree = "<group>"; };
+		934CBCD8211821A500608F2F /* NSDate+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Additions.m"; sourceTree = "<group>"; };
 		934E1B9720AC39D900A0B080 /* SLChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLChatViewController.h; sourceTree = "<group>"; };
 		934E1B9820AC3A1E00A0B080 /* SLChatViewController+BlankView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SLChatViewController+BlankView.h"; sourceTree = "<group>"; };
 		93615AE820C142D7000D5658 /* SLBaseWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLBaseWebViewController.h; sourceTree = "<group>"; };
@@ -757,8 +757,6 @@
 				431C076120FC8DAB00479559 /* NSTimer+JKAddition.m */,
 				431C075E20FC8D9000479559 /* NSString+JKXMLDictionary.h */,
 				431C075F20FC8D9000479559 /* NSString+JKXMLDictionary.m */,
-				431C075B20FC8D0B00479559 /* NSString+JKUUID.h */,
-				431C075C20FC8D0C00479559 /* NSString+JKUUID.m */,
 				431F64ED20F8F2710087DB8E /* NSString+JKTrims.h */,
 				431F64EE20F8F2720087DB8E /* NSString+JKTrims.m */,
 				431F64EA20F8F2610087DB8E /* NSString+JKStringPages.h */,
@@ -1372,6 +1370,8 @@
 				934AE46020FC6BB400B60AD4 /* UIImage+Avatar.m */,
 				934AE46220FC6BE400B60AD4 /* NSString+Additions.h */,
 				934AE46320FC6C1000B60AD4 /* NSString+Additions.m */,
+				934CBCD72118217800608F2F /* NSDate+Additions.h */,
+				934CBCD8211821A500608F2F /* NSDate+Additions.m */,
 			);
 			path = Exten;
 			sourceTree = "<group>";
@@ -1788,6 +1788,7 @@
 				437B0A5420F35FB600E93844 /* NSNumber+JKCGFloat.m in Sources */,
 				435E3C9320C02BB2002B7A7F /* NSNumber+JKRomanNumerals.m in Sources */,
 				435D4C4720EDEA8B00C8DC85 /* NSDate+JKInternetDateTime.m in Sources */,
+				934CBCD9211821A600608F2F /* NSDate+Additions.m in Sources */,
 				435D4C4420EDEA6D00C8DC85 /* NSDate+JKFormatter.m in Sources */,
 				435D4C7720F0913600C8DC85 /* NSFileHandle+JKReadLine.m in Sources */,
 				43D87B2F20EB6DEA00E991D6 /* UIScreenDemoViewController.m in Sources */,
@@ -1838,7 +1839,6 @@
 				435D4C8F20F092B000C8DC85 /* NSManagedObjectContext+JKFetchRequestsConstructors.m in Sources */,
 				9391AA9720C03A4300D520F1 /* SLWebViewJSFuncNameConst.m in Sources */,
 				435D4C4120EDEA4C00C8DC85 /* NSDate+JKExtension.m in Sources */,
-				431C075D20FC8D0C00479559 /* NSString+JKUUID.m in Sources */,
 				43D87B2920EB6D9900E991D6 /* UIScrollView+EmptyDataSet.m in Sources */,
 				437921F020ECC4B100B2EC88 /* NSData+JKHash.m in Sources */,
 				431C078020FE286F00479559 /* NSURLRequestDemoViewController.m in Sources */,
