@@ -13,7 +13,7 @@
 + (NSString *)jk_stringForKey:(NSString *)defaultName {
     return [[NSUserDefaults standardUserDefaults] stringForKey:defaultName];
 }
-
+//safeArray
 + (NSArray *)jk_arrayForKey:(NSString *)defaultName {
     return [[NSUserDefaults standardUserDefaults] arrayForKey:defaultName];
 }
