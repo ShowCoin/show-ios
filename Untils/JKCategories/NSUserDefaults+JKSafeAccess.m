@@ -29,7 +29,7 @@
 + (NSArray *)jk_stringArrayForKey:(NSString *)defaultName {
     return [[NSUserDefaults standardUserDefaults] stringArrayForKey:defaultName];
 }
-
+//根据key获取integerforkey
 + (NSInteger)jk_integerForKey:(NSString *)defaultName {
     return [[NSUserDefaults standardUserDefaults] integerForKey:defaultName];
 }
