@@ -7,12 +7,6 @@
 //
 #import <objc/runtime.h>
 #import "UIView + SoftBodyAnimation.h"
-
-static const char *kisPlayBodyAnimation = "kisPlayBodyAnimation";
-static const char *kisAnimationZoomX = "kisAnimationZoomX";
-static const char *kisScaleXY = "kisScaleXY";
-
-
 @implementation UIView(SoftBodyAnimation)
 
 -(void)startSoftBodyAnimation{
