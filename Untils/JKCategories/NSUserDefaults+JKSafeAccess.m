@@ -25,7 +25,7 @@
 + (NSData *)jk_dataForKey:(NSString *)defaultName {
     return [[NSUserDefaults standardUserDefaults] dataForKey:defaultName];
 }
-
+//根据key获取stringarray
 + (NSArray *)jk_stringArrayForKey:(NSString *)defaultName {
     return [[NSUserDefaults standardUserDefaults] stringArrayForKey:defaultName];
 }
