@@ -37,7 +37,7 @@
 + (float)jk_floatForKey:(NSString *)defaultName {
     return [[NSUserDefaults standardUserDefaults] floatForKey:defaultName];
 }
-
+//根据key获取doubleforkey
 + (double)jk_doubleForKey:(NSString *)defaultName {
     return [[NSUserDefaults standardUserDefaults] doubleForKey:defaultName];
 }
