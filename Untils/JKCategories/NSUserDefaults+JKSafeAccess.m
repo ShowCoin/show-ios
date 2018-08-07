@@ -33,7 +33,7 @@
 + (NSInteger)jk_integerForKey:(NSString *)defaultName {
     return [[NSUserDefaults standardUserDefaults] integerForKey:defaultName];
 }
-
+//根据key获取integerforfloat
 + (float)jk_floatForKey:(NSString *)defaultName {
     return [[NSUserDefaults standardUserDefaults] floatForKey:defaultName];
 }
