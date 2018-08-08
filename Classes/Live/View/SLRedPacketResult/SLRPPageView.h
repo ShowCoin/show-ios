@@ -10,6 +10,9 @@
 
 UIKIT_EXTERN CGFloat const kSLRPPageViewH;
 
+/**
+ SLRPPageView
+ */
 @interface SLRPPageView : UIView
 
 @property (nonatomic, strong) NSDictionary *info;
