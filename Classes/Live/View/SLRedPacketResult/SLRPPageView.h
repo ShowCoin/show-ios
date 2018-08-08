@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+/// kSLRPPageViewH
 UIKIT_EXTERN CGFloat const kSLRPPageViewH;
 
 /**
