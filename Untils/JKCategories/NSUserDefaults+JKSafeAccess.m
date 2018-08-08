@@ -45,7 +45,7 @@
 + (BOOL)jk_boolForKey:(NSString *)defaultName {
     return [[NSUserDefaults standardUserDefaults] boolForKey:defaultName];
 }
-
+//根据key获取url
 + (NSURL *)jk_URLForKey:(NSString *)defaultName {
     return [[NSUserDefaults standardUserDefaults] URLForKey:defaultName];
 }
