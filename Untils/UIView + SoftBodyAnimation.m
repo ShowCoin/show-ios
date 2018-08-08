@@ -12,14 +12,12 @@ static const char *kisPlayBodyAnimation = "kisPlayBodyAnimation";
 static const char *kisAnimationZoomX = "kisAnimationZoomX";
 static const char *kisScaleXY = "kisScaleXY";
 
-
 @implementation UIView(SoftBodyAnimation)
 
 -(void)startSoftBodyAnimation{
     
     self.isPlayBodyAnimation = YES;
     self.isAnimationZoomX = YES;
-    
     [self softBodyMotion];
 }
 
@@ -79,8 +77,7 @@ static const char *kisScaleXY = "kisScaleXY";
     objc_setAssociatedObject(self, kisAnimationZoomX, [NSNumber numberWithBool:isAnimationZoomX], OBJC_ASSOCIATION_ASSIGN);
 }
 -(BOOL)isAnimationZoomX{
-    NSNumber * num = (NSNumber *)objc_getAssociatedObject(self, kisAnimationZoomX);
-    return num.boolValue;
+ 
 }
 
 -(void)setIsScaleXY:(BOOL)isScaleXY{
