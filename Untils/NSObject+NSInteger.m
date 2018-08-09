@@ -10,6 +10,10 @@
 
 @implementation NSObject (NSInteger)
 
+
 +(NSString *)getStringForNum:(NSInteger)num
+{
+    
+    NSInteger count =num;
 
 @end
