@@ -62,5 +62,10 @@
     
     NSInteger star = num*10;
     NSString * starStr = [NSString stringWithFormat:@"%ld",star];
+    return starStr;
+}
+
+
++(NSString*)starDiamondFromDollar:(NSInteger)num
 
 @end
