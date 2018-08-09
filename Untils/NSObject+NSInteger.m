@@ -18,5 +18,6 @@
     if (count < 0) {
         count = 0;
     }
- 
+    NSString * str;
+  
 @end
