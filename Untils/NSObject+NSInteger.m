@@ -19,5 +19,6 @@
         count = 0;
     }
     NSString * str;
+    if (count >= 1000) {
   
 @end
