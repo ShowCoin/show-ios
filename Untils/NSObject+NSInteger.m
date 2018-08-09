@@ -10,4 +10,6 @@
 
 @implementation NSObject (NSInteger)
 
++(NSString *)getStringForNum:(NSInteger)num
+
 @end
