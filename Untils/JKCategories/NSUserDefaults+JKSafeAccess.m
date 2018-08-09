@@ -51,7 +51,7 @@
 }
 
 #pragma mark - WRITE FOR STANDARD
-
+//设置objectfor defaultname
 + (void)jk_setObject:(id)value forKey:(NSString *)defaultName {
     [[NSUserDefaults standardUserDefaults] setObject:value forKey:defaultName];
     [[NSUserDefaults standardUserDefaults] synchronize];
