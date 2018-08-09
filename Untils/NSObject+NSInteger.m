@@ -57,5 +57,6 @@
     return str;
 }
 
-+(NSString*)starDiamondFromChinayuan:(NSInteger)num
++(NSString*)starDiamondFromChinayuan:(NSInteger)nums
+
 @end
