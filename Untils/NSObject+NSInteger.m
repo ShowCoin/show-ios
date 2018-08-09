@@ -20,5 +20,12 @@
     }
     NSString * str;
     if (count >= 1000) {
-  
+        NSInteger count1 = count/100;
+        if (count%100>0) {
+            count1 = count1 + 1;
+        }
+        str = [NSString stringWithFormat:@"%ld.%ldk",count1/10,count1%10];
+        
+    }
+
 @end
