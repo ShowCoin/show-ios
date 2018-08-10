@@ -29,7 +29,7 @@
 - (NSUInteger)jk_unsignedIntegerForKey:(id)key;
 //key key对应的bool
 - (BOOL)jk_boolForKey:(id)key;
-
+//key key对应的int16
 - (int16_t)jk_int16ForKey:(id)key;
 
 - (int32_t)jk_int32ForKey:(id)key;
