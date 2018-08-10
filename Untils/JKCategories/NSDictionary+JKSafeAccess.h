@@ -19,13 +19,13 @@
 - (NSNumber*)jk_numberForKey:(id)key;
 //key对应的decimalNumber
 - (NSDecimalNumber *)jk_decimalNumberForKey:(id)key;
-
+//key对应的array
 - (NSArray*)jk_arrayForKey:(id)key;
-
+//key array对应的字典
 - (NSDictionary*)jk_dictionaryForKey:(id)key;
-
+//key key对应的interge
 - (NSInteger)jk_integerForKey:(id)key;
-
+//key key对应的unsignedInteger
 - (NSUInteger)jk_unsignedIntegerForKey:(id)key;
 
 - (BOOL)jk_boolForKey:(id)key;
