@@ -31,7 +31,7 @@
 - (BOOL)jk_boolForKey:(id)key;
 //key key对应的int16
 - (int16_t)jk_int16ForKey:(id)key;
-
+//key key对应的int32
 - (int32_t)jk_int32ForKey:(id)key;
 
 - (int64_t)jk_int64ForKey:(id)key;
