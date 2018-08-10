@@ -10,6 +10,8 @@
 #import <UIKit/UIKit.h>
 
 @interface NSDictionary (JKSafeAccess)
+
+//判断是否有key
 - (BOOL)jk_hasKey:(NSString *)key;
 
 - (NSString*)jk_stringForKey:(id)key;
