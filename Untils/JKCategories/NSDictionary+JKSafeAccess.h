@@ -15,9 +15,9 @@
 - (BOOL)jk_hasKey:(NSString *)key;
 //key对应的字符串
 - (NSString*)jk_stringForKey:(id)key;
-
+//key对应的number
 - (NSNumber*)jk_numberForKey:(id)key;
-
+//key对应的decimalNumber
 - (NSDecimalNumber *)jk_decimalNumberForKey:(id)key;
 
 - (NSArray*)jk_arrayForKey:(id)key;
