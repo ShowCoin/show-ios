@@ -13,7 +13,7 @@
 
 //判断是否有key
 - (BOOL)jk_hasKey:(NSString *)key;
-
+//key对应的字符串
 - (NSString*)jk_stringForKey:(id)key;
 
 - (NSNumber*)jk_numberForKey:(id)key;
