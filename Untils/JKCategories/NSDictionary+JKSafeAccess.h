@@ -33,7 +33,7 @@
 - (int16_t)jk_int16ForKey:(id)key;
 //key key对应的int32
 - (int32_t)jk_int32ForKey:(id)key;
-
+//key key对应的int64
 - (int64_t)jk_int64ForKey:(id)key;
 
 - (char)jk_charForKey:(id)key;
