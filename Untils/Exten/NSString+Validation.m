@@ -28,4 +28,15 @@
     return [emailTest evaluateWithObject:self];
 }
 
+/*判断输入帐号是否为邮箱*/
+-(BOOL)isValidEmail
+{
+    
+    NSString *stricterFilterString = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
+    NSString *laxString = @".+@.+\\.[A-Za-z]{2}[A-Za-z]";
+    NSString *emailRegex = stricterFilterString ? stricterFilterString : laxString;
+    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
+    return [emailTest evaluateWithObject:self];
+}
+
 @end
