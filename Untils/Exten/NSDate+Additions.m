@@ -369,4 +369,26 @@
     }
     return retStr;
 }
+
+- (NSString *)UMTimeInterval {
+    
+    NSString *timeInterval;
+    NSCalendar *cal = [NSCalendar currentCalendar];
+    unsigned int unitFlags = NSHourCalendarUnit;
+    NSDateComponents *nowComponents = [cal components:unitFlags fromDate:[NSDate date]];
+    NSInteger hour = nowComponents.hour;
+    if (hour >= 5 && hour < 11)
+        timeInterval = @"早上5:00至上午11:00";
+    else if (hour >= 11 && hour < 16)
+        timeInterval = @"上午11:00至下午16:00";
+    else if (hour >= 16 && hour < 20)
+        timeInterval = @"下午16:00至晚上20:00";
+    else if (hour >= 20 || hour < 2)
+        timeInterval = @"晚上20:00至凌晨2:00";
+    else
+        timeInterval = @"夜间";
+    
+    return timeInterval;
+}
+
 @end
