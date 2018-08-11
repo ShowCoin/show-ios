@@ -227,4 +227,12 @@
     return 0;
 }
 
+- (NSInteger)age {
+    
+    NSTimeInterval dateDiff = [self timeIntervalSinceNow];
+    int age = trunc(dateDiff / (60 * 60 * 24)) / 365 * -1;
+    return age;
+}
+
+
 @end
