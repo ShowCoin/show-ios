@@ -20,5 +20,12 @@
     return [passWordPredicate evaluateWithObject:self];
 
 }
+/*判断输入的是否是手机号码*/
+-(BOOL)isValidPhone
+{
+    NSString *stricterFilterString = @"\\b(1)[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]\\b";
+    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", stricterFilterString];
+    return [emailTest evaluateWithObject:self];
+}
 
 @end
