@@ -390,5 +390,12 @@
     
     return timeInterval;
 }
-
+- (NSDate *)UMTDate {
+    
+    NSTimeZone *zone = [NSTimeZone systemTimeZone];
+    NSInteger interval = [zone secondsFromGMTForDate:self];
+    NSDate *UMTDate = [self dateByAddingTimeInterval:interval];
+    
+    return UMTDate;
+}
 @end
