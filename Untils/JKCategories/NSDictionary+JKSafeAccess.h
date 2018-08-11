@@ -10,30 +10,32 @@
 #import <UIKit/UIKit.h>
 
 @interface NSDictionary (JKSafeAccess)
+
+//判断是否有key
 - (BOOL)jk_hasKey:(NSString *)key;
-
+//key对应的字符串
 - (NSString*)jk_stringForKey:(id)key;
-
+//key对应的number
 - (NSNumber*)jk_numberForKey:(id)key;
-
+//key对应的decimalNumber
 - (NSDecimalNumber *)jk_decimalNumberForKey:(id)key;
-
+//key对应的array
 - (NSArray*)jk_arrayForKey:(id)key;
-
+//key array对应的字典
 - (NSDictionary*)jk_dictionaryForKey:(id)key;
-
+//key key对应的interge
 - (NSInteger)jk_integerForKey:(id)key;
-
+//key key对应的unsignedInteger
 - (NSUInteger)jk_unsignedIntegerForKey:(id)key;
-
+//key key对应的bool
 - (BOOL)jk_boolForKey:(id)key;
-
+//key key对应的int16
 - (int16_t)jk_int16ForKey:(id)key;
-
+//key key对应的int32
 - (int32_t)jk_int32ForKey:(id)key;
-
+//key key对应的int64
 - (int64_t)jk_int64ForKey:(id)key;
-
+//key key对应的char
 - (char)jk_charForKey:(id)key;
 
 - (short)jk_shortForKey:(id)key;
