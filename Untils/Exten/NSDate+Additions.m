@@ -211,5 +211,20 @@
     return destDateString;
 }
 
+- (NSInteger)season {
+    
+    NSCalendar *cal = [NSCalendar currentCalendar];
+    unsigned int unitFlags = NSMonthCalendarUnit;
+    NSDateComponents *components = [cal components:unitFlags fromDate:self];
+    if (components.month >= 1 && components.month <=3)
+        return 1;
+    else if (components.month >= 4 && components.month <=6)
+        return 2;
+    else if (components.month >= 6 && components.month <=9)
+        return 3;
+    else if (components.month >= 9 && components.month <=12)
+        return 4;
+    return 0;
+}
 
 @end
