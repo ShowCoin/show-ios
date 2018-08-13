@@ -166,7 +166,8 @@
     int year =(int) [dateComponent year];
     int month = (int) [dateComponent month];
     int day = (int) [dateComponent day];
-  
+    int hour = (int) [dateComponent hour];
+   
 }
 
 
