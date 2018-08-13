@@ -49,8 +49,7 @@
 - (unsigned long long)jk_unsignedLongLongForKey:(id)key;
 //key key对应的date
 - (NSDate *)jk_dateForKey:(id)key dateFormat:(NSString *)dateFormat;
-
-//CG
+//key key对应的cgfloat
 - (CGFloat)jk_CGFloatForKey:(id)key;
 
 - (CGPoint)jk_pointForKey:(id)key;
