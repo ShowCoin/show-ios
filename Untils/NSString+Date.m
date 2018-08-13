@@ -228,6 +228,9 @@
     NSCalendar * gregorian_cal = [[NSCalendar alloc] initWithCalendarIdentifier:
                                   NSCalendarIdentifierGregorian];
     formatter.calendar = gregorian_cal;
+    
+    // 毫秒值转化为秒
+    NSDate* date = [NSDate dateWithTimeIntervalSince1970:[timeString doubleValue]];
   
 }
 
