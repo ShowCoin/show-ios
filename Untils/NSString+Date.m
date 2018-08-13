@@ -156,6 +156,7 @@
 
 +(NSString*)getNowString
 {
+   
     NSDate *now = [NSDate date];
    
 }
