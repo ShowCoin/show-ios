@@ -164,7 +164,8 @@
     NSDateComponents *dateComponent = [calendar components:unitFlags fromDate:now];
     
     int year =(int) [dateComponent year];
- 
+    int month = (int) [dateComponent month];
+   
 }
 
 
