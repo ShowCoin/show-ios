@@ -45,7 +45,7 @@
 - (double)jk_doubleForKey:(id)key;
 //key key对应的longlong
 - (long long)jk_longLongForKey:(id)key;
-
+//key key对应的unsignedlonglong
 - (unsigned long long)jk_unsignedLongLongForKey:(id)key;
 
 - (NSDate *)jk_dateForKey:(id)key dateFormat:(NSString *)dateFormat;
