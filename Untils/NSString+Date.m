@@ -157,7 +157,6 @@
 +(NSString*)getNowString
 {
     NSDate *now = [NSDate date];
-    
     NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:
                             NSCalendarIdentifierGregorian];
     NSUInteger unitFlags = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit;
