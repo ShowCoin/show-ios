@@ -157,35 +157,7 @@
 +(NSString*)getNowString
 {
     NSDate *now = [NSDate date];
-    
-    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:
-                            NSCalendarIdentifierGregorian];
-    NSUInteger unitFlags = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit;
-    NSDateComponents *dateComponent = [calendar components:unitFlags fromDate:now];
-    
-    int year =(int) [dateComponent year];
-    int month = (int) [dateComponent month];
-    int day = (int) [dateComponent day];
-    int hour = (int) [dateComponent hour];
-    int minute = (int) [dateComponent minute];
-    int second = (int) [dateComponent second];
-    
-    //字符串的转化并且拼接
-    NSString *yearstr=[NSString stringWithFormat:@"%ld-",(long)year];
-    NSString *monthstr=[NSString stringWithFormat:@"%@-",[self exchangeWithInt:month]];
-    NSString *daystr=[NSString stringWithFormat:@"%@ ",[self exchangeWithInt:day]];
-    NSString *hourstr=[NSString stringWithFormat:@"%@:",[self exchangeWithInt:hour]];
-    NSString *minutestr=[NSString stringWithFormat:@"%@:",[self exchangeWithInt:minute]];
-    NSString *secondstr=[NSString stringWithFormat:@"%@",[self exchangeWithInt:second]];
-    //字符串开始拼接
-    NSString *allstr=[yearstr stringByAppendingString:monthstr];
-    NSString *allstr1=[allstr stringByAppendingString:daystr];
-    NSString *allstr2=[allstr1 stringByAppendingString:hourstr];
-    NSString *allstr3=[allstr2 stringByAppendingString:minutestr];
-    NSString *DateTime=[allstr3 stringByAppendingString:secondstr];
-    
-    
-    return DateTime;
+   
 }
 
 
