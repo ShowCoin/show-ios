@@ -172,7 +172,20 @@
     
     //字符串的转化并且拼接
     NSString *yearstr=[NSString stringWithFormat:@"%ld-",(long)year];
- 
+    NSString *monthstr=[NSString stringWithFormat:@"%@-",[self exchangeWithInt:month]];
+    NSString *daystr=[NSString stringWithFormat:@"%@ ",[self exchangeWithInt:day]];
+    NSString *hourstr=[NSString stringWithFormat:@"%@:",[self exchangeWithInt:hour]];
+    NSString *minutestr=[NSString stringWithFormat:@"%@:",[self exchangeWithInt:minute]];
+    NSString *secondstr=[NSString stringWithFormat:@"%@",[self exchangeWithInt:second]];
+    //字符串开始拼接
+    NSString *allstr=[yearstr stringByAppendingString:monthstr];
+    NSString *allstr1=[allstr stringByAppendingString:daystr];
+    NSString *allstr2=[allstr1 stringByAppendingString:hourstr];
+    NSString *allstr3=[allstr2 stringByAppendingString:minutestr];
+    NSString *DateTime=[allstr3 stringByAppendingString:secondstr];
+    
+    
+    return DateTime;
 }
 
 
