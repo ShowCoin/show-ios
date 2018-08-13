@@ -41,7 +41,7 @@
 - (short)jk_shortForKey:(id)key;
 //key key对应的float
 - (float)jk_floatForKey:(id)key;
-
+//key key对应的doule
 - (double)jk_doubleForKey:(id)key;
 
 - (long long)jk_longLongForKey:(id)key;
