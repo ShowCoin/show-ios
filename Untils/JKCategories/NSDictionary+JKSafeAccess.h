@@ -37,7 +37,7 @@
 - (int64_t)jk_int64ForKey:(id)key;
 //key key对应的char
 - (char)jk_charForKey:(id)key;
-
+//key key对应的short
 - (short)jk_shortForKey:(id)key;
 
 - (float)jk_floatForKey:(id)key;
