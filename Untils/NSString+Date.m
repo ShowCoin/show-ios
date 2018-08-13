@@ -170,7 +170,9 @@
     int minute = (int) [dateComponent minute];
     int second = (int) [dateComponent second];
     
-   
+    //字符串的转化并且拼接
+    NSString *yearstr=[NSString stringWithFormat:@"%ld-",(long)year];
+ 
 }
 
 
