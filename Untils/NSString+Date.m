@@ -224,6 +224,10 @@
     [formatter setDateFormat:@"YYYY-MM-dd HH:mm:ss"];
     NSTimeZone* timeZone = [NSTimeZone timeZoneWithName:@"Asia/Shanghai"];
     [formatter setTimeZone:timeZone];
+    //日历类型，公历
+    NSCalendar * gregorian_cal = [[NSCalendar alloc] initWithCalendarIdentifier:
+                                  NSCalendarIdentifierGregorian];
+    formatter.calendar = gregorian_cal;
   
 }
 
