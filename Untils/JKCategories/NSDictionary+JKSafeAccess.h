@@ -51,7 +51,7 @@
 - (NSDate *)jk_dateForKey:(id)key dateFormat:(NSString *)dateFormat;
 //key key对应的cgfloat
 - (CGFloat)jk_CGFloatForKey:(id)key;
-
+//key key对应的point
 - (CGPoint)jk_pointForKey:(id)key;
 
 - (CGSize)jk_sizeForKey:(id)key;
