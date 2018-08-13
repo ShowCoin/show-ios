@@ -167,6 +167,9 @@
     int month = (int) [dateComponent month];
     int day = (int) [dateComponent day];
     int hour = (int) [dateComponent hour];
+    int minute = (int) [dateComponent minute];
+    int second = (int) [dateComponent second];
+    
    
 }
 
