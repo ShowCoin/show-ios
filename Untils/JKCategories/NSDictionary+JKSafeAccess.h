@@ -55,7 +55,7 @@
 - (CGPoint)jk_pointForKey:(id)key;
 //key key对应的size
 - (CGSize)jk_sizeForKey:(id)key;
-
+//key key对应的rect
 - (CGRect)jk_rectForKey:(id)key;
 @end
 
