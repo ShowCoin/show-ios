@@ -66,5 +66,14 @@
     return [floatTest evaluateWithObject:self];
 }
 
+/*判断是否有效的正浮点数*/
+- (BOOL)isValidPositiveFloat {
+    NSString *stricterFilterString = @"^(([0-9]+\\.[0-9]*[1-9][0-9]*)|([0-9]*[1-9][0-9]*\\.[0-9]+)|([0-9]*[1-9][0-9]*))$";
+    
+    NSPredicate *test = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", stricterFilterString];
+    return [test evaluateWithObject:self];
+}
+
+
 
 @end
