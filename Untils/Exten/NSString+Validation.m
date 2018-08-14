@@ -53,4 +53,81 @@
     return [integerTest evaluateWithObject:self];
 }
 
+/*判断是否有效的正整数*/
+-(BOOL)isValidPositiveInteger {
+    NSString *stricterFilterString = @"^[0-9]*[1-9][0-9]*$";
+    NSPredicate *integerTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", stricterFilterString];
+    return [integerTest evaluateWithObject:self];
+}
+/*判断是否有效的浮点数*/
+- (BOOL)isValidFloat {
+    NSString *stricterFilterString = @"^(\\d*\\.)?\\d+$";
+    NSPredicate *floatTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", stricterFilterString];
+    return [floatTest evaluateWithObject:self];
+}
+
+/*判断是否有效的正浮点数*/
+- (BOOL)isValidPositiveFloat {
+    NSString *stricterFilterString = @"^(([0-9]+\\.[0-9]*[1-9][0-9]*)|([0-9]*[1-9][0-9]*\\.[0-9]+)|([0-9]*[1-9][0-9]*))$";
+    
+    NSPredicate *test = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", stricterFilterString];
+    return [test evaluateWithObject:self];
+}
+
+
+/*判断是否为空字符串*/
+- (BOOL)isEmpty {
+    NSString *stricterFilterString = @"^\[ \t]*$";
+    NSPredicate *emptyTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", stricterFilterString];
+    return [emptyTest evaluateWithObject:self];
+    
+}
+
+/*去除电话号码中的特殊字符*/
+- (NSString*)extractNumber{
+    NSCharacterSet *doNotWant = [NSCharacterSet characterSetWithCharactersInString:@" @／：；（）¥「」、[]{}#%-*+=_\\|~＜＞$€^•’@#$%^&*()_+’\\”"];
+    NSString *trimmedString = [[[self componentsSeparatedByCharactersInSet:doNotWant]componentsJoinedByString: @""] stringByReplacingOccurrencesOfString:@" " withString:@""];
+    
+    
+    return trimmedString;
+}
+
+/*隐藏身份证中间的几个数字*/
+- (NSString *)ittemDisposeIdcardNumber:(NSString *)idcardNumber;
+{
+    //星号字符串
+    NSString *xinghaoStr = @"";
+    //动态计算星号的个数
+    for (int i  = 0; i < idcardNumber.length - 7; i++) {
+        xinghaoStr = [xinghaoStr stringByAppendingString:@"*"];
+    }
+    //身份证号取前3后四中间以星号拼接
+    idcardNumber = [NSString stringWithFormat:@"%@%@%@",[idcardNumber substringToIndex:3],xinghaoStr,[idcardNumber substringFromIndex:idcardNumber.length-4]];
+    //返回处理好的身份证号
+    return idcardNumber;
+}
+
++(NSString *)countNumAndChangeformat:(NSString *)num
+{
+    int count = 0;
+    long long int a = num.longLongValue;
+    while (a != 0)
+    {
+        count++;
+        a /= 10;
+    }
+    NSMutableString *string = [NSMutableString stringWithString:num];
+    NSMutableString *newstring = [NSMutableString string];
+    while (count > 3) {
+        count -= 3;
+        NSRange rang = NSMakeRange(string.length - 3, 3);
+        NSString *str = [string substringWithRange:rang];
+        [newstring insertString:str atIndex:0];
+        [newstring insertString:@"," atIndex:0];
+        [string deleteCharactersInRange:rang];
+    }
+    [newstring insertString:string atIndex:0];
+    return newstring;
+}
+
 @end
