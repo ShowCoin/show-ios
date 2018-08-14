@@ -129,5 +129,25 @@
     [newstring insertString:string atIndex:0];
     return newstring;
 }
+- (NSInteger)getStringLenthOfBytes
+{
+    NSInteger length = 0;
+    for (int i = 0; i<[self length]; i++) {
+        //截取字符串中的每一个字符
+        NSString *s = [self substringWithRange:NSMakeRange(i, 1)];
+        if ([self validateChineseChar:s]) {
+            
+            NSLog(@" s 打印信息:%@",s);
+            
+            length +=2;
+        }else{
+            length +=1;
+        }
+        
+        NSLog(@" 打印信息:%@  %ld",s,(long)length);
+    }
+    return length;
+}
+
 
 @end
