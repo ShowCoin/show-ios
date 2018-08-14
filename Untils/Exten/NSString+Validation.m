@@ -75,5 +75,14 @@
 }
 
 
+/*判断是否为空字符串*/
+- (BOOL)isEmpty {
+    NSString *stricterFilterString = @"^\[ \t]*$";
+    NSPredicate *emptyTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", stricterFilterString];
+    return [emptyTest evaluateWithObject:self];
+    
+}
+
+
 
 @end
