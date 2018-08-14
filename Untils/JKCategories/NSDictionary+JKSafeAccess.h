@@ -64,7 +64,7 @@
 @interface NSMutableDictionary(SafeAccess)
 //key 设置的value 对应key
 -(void)jk_setObj:(id)i forKey:(NSString*)key;
-
+//key 设置的string 对应key
 -(void)jk_setString:(NSString*)i forKey:(NSString*)key;
 
 -(void)jk_setBool:(BOOL)i forKey:(NSString*)key;
