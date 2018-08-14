@@ -37,24 +37,23 @@
 - (int64_t)jk_int64ForKey:(id)key;
 //key key对应的char
 - (char)jk_charForKey:(id)key;
-
+//key key对应的short
 - (short)jk_shortForKey:(id)key;
-
+//key key对应的float
 - (float)jk_floatForKey:(id)key;
-
+//key key对应的doule
 - (double)jk_doubleForKey:(id)key;
-
+//key key对应的longlong
 - (long long)jk_longLongForKey:(id)key;
-
+//key key对应的unsignedlonglong
 - (unsigned long long)jk_unsignedLongLongForKey:(id)key;
-
+//key key对应的date
 - (NSDate *)jk_dateForKey:(id)key dateFormat:(NSString *)dateFormat;
-
-//CG
+//key key对应的cgfloat
 - (CGFloat)jk_CGFloatForKey:(id)key;
-
+//key key对应的point
 - (CGPoint)jk_pointForKey:(id)key;
-
+//key key对应的size
 - (CGSize)jk_sizeForKey:(id)key;
 
 - (CGRect)jk_rectForKey:(id)key;
