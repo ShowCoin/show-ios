@@ -15,5 +15,6 @@
     
     return ceilf(tmpRect.size.width);
 }
+-(CGFloat)getHeightWithAttributeString:(NSMutableAttributedString *)attributeString labelwidth:(CGFloat)width
 
 @end
