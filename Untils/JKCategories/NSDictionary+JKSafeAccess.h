@@ -74,7 +74,7 @@
 -(void)jk_setInteger:(NSInteger)i forKey:(NSString*)key;
 //key 设置的UnsignedInteger 对应key
 -(void)jk_setUnsignedInteger:(NSUInteger)i forKey:(NSString*)key;
-
+//key 设置的cgfloat 对应key
 -(void)jk_setCGFloat:(CGFloat)f forKey:(NSString*)key;
 
 -(void)jk_setChar:(char)c forKey:(NSString*)key;
