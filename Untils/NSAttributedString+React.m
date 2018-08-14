@@ -25,5 +25,13 @@
 -(CGFloat)getWidthWithFont:(UIFont *)font height:(CGFloat)height
 {
     CGRect tmpRect = [self boundingRectWithSize:CGSizeMake(MAXFLOAT, height) options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading context:nil];
-
+    
+    return tmpRect.size.width;
+}
+-(CGFloat)getHeightWithFont:(UIFont *)font width:(CGFloat)width
+{
+    
+    CGRect tmpRect = [self boundingRectWithSize:CGSizeMake(width, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin context:nil];
+    return tmpRect.size.height;
+}
 @end
