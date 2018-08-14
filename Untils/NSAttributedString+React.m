@@ -9,5 +9,6 @@
 #import "NSAttributedString+React.h"
 
 @implementation NSAttributedString (React)
+-(CGFloat)getWidthWithAttributeString:(NSMutableAttributedString *)attributeString labelheight:(CGFloat)height
 
 @end
