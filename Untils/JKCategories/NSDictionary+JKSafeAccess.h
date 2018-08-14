@@ -70,7 +70,7 @@
 -(void)jk_setBool:(BOOL)i forKey:(NSString*)key;
 //key 设置的int 对应key
 -(void)jk_setInt:(int)i forKey:(NSString*)key;
-
+//key 设置的integer 对应key
 -(void)jk_setInteger:(NSInteger)i forKey:(NSString*)key;
 
 -(void)jk_setUnsignedInteger:(NSUInteger)i forKey:(NSString*)key;
