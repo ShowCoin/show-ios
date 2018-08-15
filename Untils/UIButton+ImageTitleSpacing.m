@@ -52,11 +52,16 @@
             labelEdgeInsets = UIEdgeInsetsMake(-imageHeight-space/2.0, -imageWith, 0, 0);
         }
             break;
-     
+        case SLButtonEdgeInsetsStyleRight:
+        {
+            imageEdgeInsets = UIEdgeInsetsMake(0, labelWidth+space/2.0, 0, -labelWidth-space/2.0);
+            labelEdgeInsets = UIEdgeInsetsMake(0, -imageWith-space/2.0, 0, imageWith+space/2.0);
+        }
+            break;
+        default:
+            break;
     }
-    // 4. 赋值
-    self.titleEdgeInsets = labelEdgeInsets;
-    self.imageEdgeInsets = imageEdgeInsets;
+  
 }
 
 @end
