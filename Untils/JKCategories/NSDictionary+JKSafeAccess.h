@@ -86,7 +86,7 @@
 -(void)jk_setLongLong:(long long)i forKey:(NSString*)key;
 //key 设置的Point 对应key
 -(void)jk_setPoint:(CGPoint)o forKey:(NSString*)key;
-
+//key 设置的Size 对应key
 -(void)jk_setSize:(CGSize)o forKey:(NSString*)key;
 
 -(void)jk_setRect:(CGRect)o forKey:(NSString*)key;
