@@ -13,6 +13,8 @@
 - (void)layoutButtonWithEdgeInsetsStyle:(SLButtonEdgeInsetsStyle)style
                         imageTitleSpace:(CGFloat)space
 {
+    // 1. 得到imageView和titleLabel的宽、高
+    CGFloat imageWith = self.imageView.frame.size.width;
   
 }
 
