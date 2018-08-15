@@ -17,7 +17,9 @@
     CGFloat imageWith = self.imageView.frame.size.width;
     CGFloat imageHeight = self.imageView.frame.size.height;
     
-
+    CGFloat labelWidth = 0.0;
+    CGFloat labelHeight = 0.0;
+   
 }
 
 @end
