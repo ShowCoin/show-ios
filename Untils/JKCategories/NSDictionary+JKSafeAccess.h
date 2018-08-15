@@ -80,7 +80,7 @@
 -(void)jk_setChar:(char)c forKey:(NSString*)key;
 //key 设置的float 对应key
 -(void)jk_setFloat:(float)i forKey:(NSString*)key;
-
+//key 设置的Double 对应key
 -(void)jk_setDouble:(double)i forKey:(NSString*)key;
 
 -(void)jk_setLongLong:(long long)i forKey:(NSString*)key;
