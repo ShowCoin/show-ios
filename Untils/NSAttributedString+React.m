@@ -32,7 +32,6 @@
 {
     
     CGRect tmpRect = [self boundingRectWithSize:CGSizeMake(width, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin context:nil];
-    
     return tmpRect.size.height;
 }
 @end
