@@ -34,7 +34,13 @@
     
     // 3. 根据style和space得到imageEdgeInsets和labelEdgeInsets的值
     switch (style) {
-     
+        case SLButtonEdgeInsetsStyleTop:
+        {
+            imageEdgeInsets = UIEdgeInsetsMake(-labelHeight-space/2.0, 0, 0, -labelWidth);
+            labelEdgeInsets = UIEdgeInsetsMake(0, -imageWith, -imageHeight-space/2.0, 0);
+        }
+            break;
+       
     }
     // 4. 赋值
     self.titleEdgeInsets = labelEdgeInsets;
