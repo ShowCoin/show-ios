@@ -43,6 +43,31 @@ inline NSAttributedString *SLFuncInvitaAttributedString(NSString *text, NSString
     return aAttr;
 }
 
+inline NSAttributedString *SLFuncServerAttributedString(BOOL isAlert) {
+    
+    NSString *text = @"注册即您同意分成协议。";
+    
+    UIColor *wColor = isAlert ? [UIColor blackColor] : kGrayWith676767;
+    UIColor *sColor = isAlert ? [UIColor blueColor] : kBlackThemetextColor;
+
+    UIFont *font = isAlert ? [UIFont systemFontOfSize:14] : [UIFont systemFontOfSize:12];
+
+    NSDictionary *dict = @{NSFontAttributeName : font,
+                           NSForegroundColorAttributeName : wColor,
+                           };
+    
+    NSMutableAttributedString *attr = [[NSMutableAttributedString alloc] initWithString:text attributes:dict];
+    
+    dict = @{NSForegroundColorAttributeName : sColor,
+             NSUnderlineStyleAttributeName : [NSNumber numberWithInteger:NSUnderlineStyleSingle]
+             };
+    
+    NSUInteger len = 4;
+    NSUInteger loc = text.length - len - 1;
+    [attr addAttributes:dict range:NSMakeRange(loc, len)];
+    
+    return attr;
+}
 
 @interface SLLoginInviteView () <UITextFieldDelegate>
 
