@@ -138,6 +138,17 @@ inline NSAttributedString *SLFuncServerAttributedString(BOOL isAlert) {
 }
 
 
+- (UILabel *)invLabel {
+    if (!_invLabel) {
+        _invLabel = [[UILabel alloc] init];
+        _invLabel.textAlignment = NSTextAlignmentCenter;
+        _invLabel.text = @"邀请码";
+        _invLabel.textColor = kGrayWith676767;
+        _invLabel.font = [UIFont systemFontOfSize:16];
+    }
+    return _invLabel;
+}
+
 - (SLControlLabel *)contentLabel {
     if (!_contentLabel) {
         _contentLabel = [[SLControlLabel alloc] init];
