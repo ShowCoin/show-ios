@@ -13,7 +13,10 @@ typedef NS_ENUM(NSInteger, GradientType) {
     GradientFromTopToBottom = 1,
     GradientFromLeftToRight,
     GradientFromLeftTopToRightBottom,
- 
+    GradientFromLeftBottomToRightTop
+};
+
+
 
 
 @end
