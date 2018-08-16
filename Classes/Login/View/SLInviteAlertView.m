@@ -95,4 +95,12 @@ FOUNDATION_EXPORT NSAttributedString *SLFuncServerAttributedString(BOOL isAlert)
     return self;
 }
 
+- (UIView *)line {
+    if (!_line) {
+        _line = [[UIView alloc] init];
+        _line.backgroundColor = [UIColor colorWithWhite:0 alpha:0.15];
+    }
+    return _line;
+}
+
 @end
