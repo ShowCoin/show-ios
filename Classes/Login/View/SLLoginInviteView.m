@@ -106,5 +106,32 @@ inline NSAttributedString *SLFuncServerAttributedString(BOOL isAlert) {
     self.contentLabel.attributedText = SLFuncInvitaAttributedString(_inviteCode, _inviteRatio, NO);
 }
 
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    CGFloat w = CGRectGetWidth(self.frame);
+    
+    CGFloat margin = 42;
+    CGFloat maxW = w - margin * 2;
+    
+    self.invLabel.frame = CGRectMake(margin, 0, maxW, self.invLabel.font.lineHeight);
+    
+    CGFloat fieldY = CGRectGetMaxY(self.invLabel.frame) + 14;
+    CGFloat fieldH = kSLRightTextFieldH;
+    self.textField.frame = CGRectMake(margin, fieldY, maxW, fieldH);
+    
+    CGFloat buttonWH = 33;
+    CGFloat buttonY = CGRectGetMinY(self.textField.frame) + (fieldH - buttonWH) / 2;
+    CGFloat buttonX = CGRectGetMaxX(self.textField.frame) - buttonWH;
+    self.button.frame = CGRectMake(buttonX, buttonY, buttonWH, buttonWH);
+    
+    CGFloat tipY = CGRectGetMaxY(self.textField.frame) + 16;
+    CGFloat tipH = SLFuncGetAttributedStringHeight(self.contentLabel.attributedText, maxW);
+    self.contentLabel.frame = CGRectMake(margin, tipY, maxW, tipH);
+    
+    CGFloat serY = CGRectGetMaxY(self.contentLabel.frame) + 4;
+    CGFloat serH = SLFuncGetAttributedStringHeight(self.serverLabel.attributedText, maxW);
+    self.serverLabel.frame = CGRectMake(margin, serY, maxW, serH);
+}
+
 
 @end
