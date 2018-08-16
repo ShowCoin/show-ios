@@ -43,4 +43,16 @@ FOUNDATION_EXPORT NSAttributedString *SLFuncServerAttributedString(BOOL isAlert)
     }];
 }
 
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self addSubview:self.contentView];
+        [self.contentView addSubview:self.titleControl];
+        [self.contentView addSubview:self.serveControl];
+        [self.contentView addSubview:self.button];
+    }
+    return self;
+}
+
 @end
