@@ -80,5 +80,19 @@ FOUNDATION_EXPORT NSAttributedString *SLFuncServerAttributedString(BOOL isAlert)
     self.contentView.center = CGPointMake(w / 2, h / 2);
 }
 
+@end
+
+@implementation HIButton
+
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self setTitle:@"确定" forState:UIControlStateNormal];
+        self.titleLabel.font = [UIFont systemFontOfSize:15];
+        [self addSubview:self.line];
+    }
+    return self;
+}
 
 @end
