@@ -16,7 +16,9 @@ typedef NS_ENUM(NSInteger, GradientType) {
     GradientFromLeftBottomToRightTop
 };
 
+@interface UIImage (Gradient)
 
+- (UIImage *)purpleGradientColorPictureWithSize:(CGSize)size;
 
 
 @end
