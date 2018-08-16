@@ -11,7 +11,9 @@
 @interface NSDate (Additions)
 //往后推几天
 - (NSDate *)addDays:(NSInteger)days;
+//年月日
 - (NSString *)yearmonthdayDateFormattedString;
+//time格式的
 - (NSString *)timeDateFormattedString;
 - (NSString *)longDateFormattedString;
 - (NSString *)lastUpdateDateFormattedString;
