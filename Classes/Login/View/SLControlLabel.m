@@ -13,9 +13,9 @@
 }
 
 /**
- <#Description#>
+ initWithFrame
 
- @param frame <#frame description#>
+ @param frame frame
  @return <#return value description#>
  */
 - (instancetype)initWithFrame:(CGRect)frame
