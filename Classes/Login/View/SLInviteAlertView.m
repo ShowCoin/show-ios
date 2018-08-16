@@ -55,4 +55,30 @@ FOUNDATION_EXPORT NSAttributedString *SLFuncServerAttributedString(BOOL isAlert)
     return self;
 }
 
+- (void)layoutSubviews {
+    CGFloat w = CGRectGetWidth(self.frame);
+    CGFloat h = CGRectGetHeight(self.frame);
+    
+    CGFloat contentW = w * 0.8;
+    
+    CGFloat titleX = 20;
+    CGFloat titleW = contentW - titleX * 2;
+    CGFloat titleH = SLFuncGetAttributedStringHeight(self.titleControl.attributedText, titleW);
+    CGFloat titleY = 20;
+    self.titleControl.frame = CGRectMake(titleX, titleY, titleW, titleH);
+    
+    CGFloat serveH = SLFuncGetAttributedStringHeight(self.serveControl.attributedText, titleW);
+    CGFloat serveY = CGRectGetMaxY(self.titleControl.frame) + 4;
+    self.serveControl.frame = CGRectMake(titleX, serveY, titleW, serveH);
+    
+    CGFloat buttonY = CGRectGetMaxY(self.serveControl.frame) + 21;
+    CGFloat buttonH = 44;
+    self.button.frame = CGRectMake(0, buttonY, contentW, buttonH);
+    
+    CGFloat contentH = CGRectGetMaxY(self.button.frame);
+    self.contentView.bounds = CGRectMake(0, 0, contentW, contentH);
+    self.contentView.center = CGPointMake(w / 2, h / 2);
+}
+
+
 @end
