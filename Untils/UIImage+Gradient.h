@@ -32,6 +32,10 @@ typedef NS_ENUM(NSInteger, GradientType) {
                       percentage:(NSArray *)percents
                     gradientType:(GradientType)gradientType;
 
+- (UIImage *)createCornerImageWithSize:(CGRect)imageRect
+                        gradientColors:(NSArray *)colors
+                            percentage:(NSArray *)percents
+                          gradientType:(GradientType)gradientType;
 
 
 @end
