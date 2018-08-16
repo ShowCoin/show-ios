@@ -138,4 +138,15 @@ inline NSAttributedString *SLFuncServerAttributedString(BOOL isAlert) {
 }
 
 
+- (UIButton *)button {
+    if (!_button) {
+        _button = [UIButton buttonWithType:UIButtonTypeCustom];
+        _button.alpha = 0.7;
+        [_button setImage:[UIImage imageNamed:@"sl_login_inv_sacn"] forState:UIControlStateNormal];
+        [_button addTarget:self action:@selector(scanAction) forControlEvents:UIControlEventTouchUpInside];
+        _button.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
+    }
+    return _button;
+}
+
 @end
