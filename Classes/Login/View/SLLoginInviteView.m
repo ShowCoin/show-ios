@@ -137,6 +137,19 @@ inline NSAttributedString *SLFuncServerAttributedString(BOOL isAlert) {
     return CGRectGetMaxY(self.serverLabel.frame) + 10;
 }
 
+#pragma mark - lazy
+
+- (SLRightTextField *)textField {
+    if (!_textField) {
+        _textField = [[SLRightTextField alloc] init];
+        _textField.textAlignment = NSTextAlignmentCenter;
+        _textField.showBottomLine = YES;
+        _textField.placeholder = @"请输入邀请码";
+        _textField.textColor = HexRGBAlpha(0xe6b693, 1);
+        _textField.font = [UIFont systemFontOfSize:24];
+    }
+    return _textField;
+}
 
 - (UILabel *)invLabel {
     if (!_invLabel) {
