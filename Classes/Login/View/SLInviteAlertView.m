@@ -31,5 +31,16 @@ FOUNDATION_EXPORT NSAttributedString *SLFuncServerAttributedString(BOOL isAlert)
 
 @implementation SLInviteAlertView
 
++ (void)showAlertMessage:(NSAttributedString *)attr handler:(SLSimpleBlock)handler {
+    SLInviteAlertView *alert = [[self alloc] init];
+    alert.frame = UIScreen.mainScreen.bounds;
+    alert.attr = attr;
+    alert.handler = handler;
+    alert.alpha = 0;
+    [UIApplication.sharedApplication.keyWindow addSubview:alert];
+    [UIView animateWithDuration:0.25 animations:^{
+        alert.alpha = 1;
+    }];
+}
 
 @end
