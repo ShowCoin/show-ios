@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface NSDate (Additions)
-
+//往后推几天
 - (NSDate *)addDays:(NSInteger)days;
 - (NSString *)yearmonthdayDateFormattedString;
 - (NSString *)timeDateFormattedString;
