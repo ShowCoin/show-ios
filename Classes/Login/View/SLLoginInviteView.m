@@ -133,5 +133,9 @@ inline NSAttributedString *SLFuncServerAttributedString(BOOL isAlert) {
     self.serverLabel.frame = CGRectMake(margin, serY, maxW, serH);
 }
 
+- (CGFloat)viewH {
+    return CGRectGetMaxY(self.serverLabel.frame) + 10;
+}
+
 
 @end
