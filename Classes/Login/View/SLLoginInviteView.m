@@ -83,5 +83,28 @@ inline NSAttributedString *SLFuncServerAttributedString(BOOL isAlert) {
 
 @implementation SLLoginInviteView
 
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self setupUI];
+    }
+    return self;
+}
+
+- (void)setupUI {
+    [self addSubview:self.invLabel];
+    [self addSubview:self.textField];
+    [self addSubview:self.button];
+    [self addSubview:self.contentLabel];
+    [self addSubview:self.serverLabel];
+    
+    _inviteCode = @"胡震生";
+    _inviteRatio = @"1";
+    self.textField.text = self.inviteCode;
+    [NSUserDefaults.standardUserDefaults setObject:self.inviteCode forKey:kSLInviteCodeKey];
+    self.contentLabel.attributedText = SLFuncInvitaAttributedString(_inviteCode, _inviteRatio, NO);
+}
+
 
 @end
