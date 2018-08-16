@@ -23,6 +23,7 @@
 - (NSString *)longStringValue;
 //字符串的value
 - (NSString *)stringValue;
+//时间的text
 - (NSString *)timeText;
 - (NSInteger)season;
 - (NSInteger)age;
