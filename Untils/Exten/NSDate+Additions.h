@@ -25,6 +25,7 @@
 - (NSString *)stringValue;
 //时间的text
 - (NSString *)timeText;
+//季节
 - (NSInteger)season;
 - (NSInteger)age;
 - (NSString *)constellation;
