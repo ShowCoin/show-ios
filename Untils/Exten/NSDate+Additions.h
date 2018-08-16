@@ -27,6 +27,7 @@
 - (NSString *)timeText;
 //季节
 - (NSInteger)season;
+//年龄
 - (NSInteger)age;
 - (NSString *)constellation;
 - (NSString *)UMTimeInterval;
