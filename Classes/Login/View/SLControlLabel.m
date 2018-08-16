@@ -12,6 +12,12 @@
     UILabel *_textLabel;
 }
 
+/**
+ <#Description#>
+
+ @param frame <#frame description#>
+ @return <#return value description#>
+ */
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -24,7 +30,7 @@
 }
 
 /**
- <#Description#>
+ layoutSubviews
  */
 - (void)layoutSubviews {
     _textLabel.frame = self.bounds;
