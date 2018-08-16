@@ -19,6 +19,8 @@ typedef NS_ENUM(NSInteger, GradientType) {
 @interface UIImage (Gradient)
 
 - (UIImage *)purpleGradientColorPictureWithSize:(CGSize)size;
+- (UIImage *)purpleGradientColorHighlightedPictureWithSize:(CGSize)size;
+
 
 
 @end
