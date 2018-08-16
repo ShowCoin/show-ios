@@ -137,6 +137,16 @@ inline NSAttributedString *SLFuncServerAttributedString(BOOL isAlert) {
     return CGRectGetMaxY(self.serverLabel.frame) + 10;
 }
 
+
+#pragma mark - <UITextFieldDelegate>
+
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    NSLog(@"%s", __func__);
+    if (self.textField.text.length > 0) {
+        [self checkInviteExistAction];
+    }
+}
+
 #pragma mark - lazy
 
 - (SLRightTextField *)textField {
