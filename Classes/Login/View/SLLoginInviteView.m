@@ -138,6 +138,15 @@ inline NSAttributedString *SLFuncServerAttributedString(BOOL isAlert) {
 }
 
 
+- (SLControlLabel *)serverLabel {
+    if (!_serverLabel) {
+        _serverLabel = [[SLControlLabel alloc] init];
+        _serverLabel.attributedText = SLFuncServerAttributedString(NO);
+        [_serverLabel addTarget:self action:@selector(serveAction) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _serverLabel;
+}
+
 - (UIButton *)button {
     if (!_button) {
         _button = [UIButton buttonWithType:UIButtonTypeCustom];
