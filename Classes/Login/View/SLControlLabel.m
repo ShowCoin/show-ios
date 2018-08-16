@@ -27,6 +27,10 @@
     _textLabel.frame = self.bounds;
 }
 
+
+/**
+ @synthesize
+ */
 @synthesize attributedText = _attributedText;
 
 - (void)setAttributedText:(NSAttributedString *)attributedText {
