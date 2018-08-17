@@ -9,6 +9,12 @@
 #import "SLInviteAlertView.h"
 #import "SLControlLabel.h"
 
+/**
+ <#Description#>
+
+ @param isAlert <#isAlert description#>
+ @return <#return value description#>
+ */
 FOUNDATION_EXPORT NSAttributedString *SLFuncServerAttributedString(BOOL isAlert);
 
 @interface HIButton : UIButton
