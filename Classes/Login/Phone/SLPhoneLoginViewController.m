@@ -173,7 +173,7 @@
 /**
  al_textFieldTextDidChange
 
- @param textField <#textField description#>
+ @param textField UITextField
  */
 - (void)al_textFieldTextDidChange:(UITextField *)textField {
     if (self.phoneField.text.length > kPhoneMaxLength) {
