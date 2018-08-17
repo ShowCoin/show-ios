@@ -220,7 +220,7 @@
 /**
  clickRightButton
 
- @param sender <#sender description#>
+ @param sender UIButton
  */
 - (void)clickRightButton:(UIButton *)sender {
     [SLReportManager reportEvent:kReport_PhoneLogin andSubEvent:kReport_PhoneLogin_Register];
