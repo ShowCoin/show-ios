@@ -170,6 +170,11 @@
 
 #pragma mark - Action
 
+/**
+ <#Description#>
+
+ @param textField <#textField description#>
+ */
 - (void)al_textFieldTextDidChange:(UITextField *)textField {
     if (self.phoneField.text.length > kPhoneMaxLength) {
         self.phoneField.text = [self.phoneField.text substringToIndex:kPhoneMaxLength];
