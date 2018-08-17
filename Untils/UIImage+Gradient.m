@@ -19,6 +19,11 @@
         [ar addObject:(id)c.CGColor];
     }
     
-
+    CGFloat locations[5];
+    for (int i = 0; i < percents.count; i++) {
+        locations[i] = [percents[i] floatValue];
+    }
+    
+    
 
 @end
