@@ -135,11 +135,7 @@
 
 - (UIImage *)purpleGradientColorHighlightedPictureWithSize:(CGSize)size
 {
-    UIImage *image = [[UIImage alloc] createImageWithSize:CGSizeMake(size.width, size.height)
-                                           gradientColors:@[(id)kUIImageGradientARGB(0.8, 248, 54, 0), (id)kUIImageGradientARGB(0.8, 249, 212, 35)]
-                                               percentage:@[@(0.3), @(1)]
-                                             gradientType:GradientFromLeftToRight];
-    return image;
+    UIImage *image =
 }
 
 @end
