@@ -192,7 +192,7 @@
 }
 
 /**
- <#Description#>
+ sl_forgetAction
  */
 - (void)sl_forgetAction {
     [SLReportManager reportEvent:kReport_PhoneLogin andSubEvent:kReport_PhoneLogin_ForgetPWD];
