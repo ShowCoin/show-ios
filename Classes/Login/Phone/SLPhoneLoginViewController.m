@@ -145,7 +145,7 @@
  sl_createTextFieldWithPlaceholder
 
  @param placeholder <#placeholder description#>
- @return <#return value description#>
+ @return SLRightTextField
  */
 - (SLRightTextField *)sl_createTextFieldWithPlaceholder:(NSString *)placeholder {
     SLRightTextField *textField = [[SLRightTextField alloc] init];
