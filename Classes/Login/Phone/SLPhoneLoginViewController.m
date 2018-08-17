@@ -144,7 +144,7 @@
 /**
  sl_createTextFieldWithPlaceholder
 
- @param placeholder <#placeholder description#>
+ @param placeholder NSString
  @return SLRightTextField
  */
 - (SLRightTextField *)sl_createTextFieldWithPlaceholder:(NSString *)placeholder {
