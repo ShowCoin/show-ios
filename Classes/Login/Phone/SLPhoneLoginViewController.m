@@ -142,7 +142,7 @@
 }
 
 /**
- <#Description#>
+ sl_createTextFieldWithPlaceholder
 
  @param placeholder <#placeholder description#>
  @return <#return value description#>
