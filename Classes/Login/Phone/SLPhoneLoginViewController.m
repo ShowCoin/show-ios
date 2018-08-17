@@ -155,6 +155,12 @@
     return textField;
 }
 
+/**
+ <#Description#>
+
+ @param textField <#textField description#>
+ @return <#return value description#>
+ */
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     if (self.pwdField == textField) {
         [self sl_loginAction];
