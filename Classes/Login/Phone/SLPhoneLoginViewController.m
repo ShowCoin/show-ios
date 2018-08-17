@@ -201,7 +201,7 @@
 }
 
 /**
- <#Description#>
+ sl_loginAction
  */
 - (void)sl_loginAction {
     [self.view endEditing:YES];
