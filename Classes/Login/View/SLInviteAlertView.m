@@ -12,7 +12,7 @@
 /**
  Server Attributed String
 
- @param isAlert <#isAlert description#>
+ @param isAlert isAlert
  @return <#return value description#>
  */
 FOUNDATION_EXPORT NSAttributedString *SLFuncServerAttributedString(BOOL isAlert);
