@@ -16,7 +16,7 @@
  SLPhoneLoginViewController
  */
 @interface SLPhoneLoginViewController () <ShowNavigationBarDelegate, UITextFieldDelegate>
-
+/// imageView
 @property (nonatomic, weak) UIImageView *imageView;
 @property (nonatomic, weak) UILabel *loginLabel;
 @property (nonatomic, weak) SLRightTextField *phoneField;
