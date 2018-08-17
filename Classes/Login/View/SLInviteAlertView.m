@@ -10,7 +10,7 @@
 #import "SLControlLabel.h"
 
 /**
- <#Description#>
+ Server Attributed String
 
  @param isAlert <#isAlert description#>
  @return <#return value description#>
