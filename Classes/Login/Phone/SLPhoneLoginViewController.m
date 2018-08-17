@@ -141,6 +141,12 @@
     [self.view endEditing:YES];
 }
 
+/**
+ <#Description#>
+
+ @param placeholder <#placeholder description#>
+ @return <#return value description#>
+ */
 - (SLRightTextField *)sl_createTextFieldWithPlaceholder:(NSString *)placeholder {
     SLRightTextField *textField = [[SLRightTextField alloc] init];
     textField.placeholder = placeholder;
