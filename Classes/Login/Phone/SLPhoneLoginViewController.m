@@ -191,6 +191,9 @@
     }
 }
 
+/**
+ <#Description#>
+ */
 - (void)sl_forgetAction {
     [SLReportManager reportEvent:kReport_PhoneLogin andSubEvent:kReport_PhoneLogin_ForgetPWD];
     [HDHud sl_showRedTextInView:self.view title:@"忘记密码，敬请期待"];
