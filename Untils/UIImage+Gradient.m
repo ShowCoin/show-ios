@@ -1,9 +1,9 @@
 //
 //  UIImage+Gradient.m
-//  Dreamer-ios-client
+//  SHOW
 //
-//  Created by lei on 2017/12/18.
-//  Copyright © 2017年 Beijing Dreamer. All rights reserved.
+//  Created by SHOWGX on 2017/12/18.
+//  Copyright © SHOW. All rights reserved.
 //
 
 #import "UIImage+Gradient.h"
