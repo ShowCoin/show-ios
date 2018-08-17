@@ -218,7 +218,7 @@
 }
 
 /**
- <#Description#>
+ clickRightButton
 
  @param sender <#sender description#>
  */
