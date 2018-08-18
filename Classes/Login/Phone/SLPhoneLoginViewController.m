@@ -16,7 +16,7 @@
  SLPhoneLoginViewController
  */
 @interface SLPhoneLoginViewController () <ShowNavigationBarDelegate, UITextFieldDelegate>
-
+/// imageView
 @property (nonatomic, weak) UIImageView *imageView;
 @property (nonatomic, weak) UILabel *loginLabel;
 @property (nonatomic, weak) SLRightTextField *phoneField;
@@ -141,6 +141,12 @@
     [self.view endEditing:YES];
 }
 
+/**
+ sl_createTextFieldWithPlaceholder
+
+ @param placeholder NSString
+ @return SLRightTextField
+ */
 - (SLRightTextField *)sl_createTextFieldWithPlaceholder:(NSString *)placeholder {
     SLRightTextField *textField = [[SLRightTextField alloc] init];
     textField.placeholder = placeholder;
@@ -149,6 +155,12 @@
     return textField;
 }
 
+/**
+ delegate Method
+
+ @param textField UITextField
+ @return BOOL
+ */
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     if (self.pwdField == textField) {
         [self sl_loginAction];
@@ -158,6 +170,11 @@
 
 #pragma mark - Action
 
+/**
+ al_textFieldTextDidChange
+
+ @param textField UITextField
+ */
 - (void)al_textFieldTextDidChange:(UITextField *)textField {
     if (self.phoneField.text.length > kPhoneMaxLength) {
         self.phoneField.text = [self.phoneField.text substringToIndex:kPhoneMaxLength];
@@ -174,12 +191,18 @@
     }
 }
 
+/**
+ sl_forgetAction
+ */
 - (void)sl_forgetAction {
     [SLReportManager reportEvent:kReport_PhoneLogin andSubEvent:kReport_PhoneLogin_ForgetPWD];
     [HDHud sl_showRedTextInView:self.view title:@"忘记密码，敬请期待"];
 
 }
 
+/**
+ sl_loginAction
+ */
 - (void)sl_loginAction {
     [self.view endEditing:YES];
     
@@ -194,6 +217,11 @@
     [LoginManager.manager phoneLogin:phone password:md5 currentController:self];
 }
 
+/**
+ clickRightButton
+
+ @param sender UIButton
+ */
 - (void)clickRightButton:(UIButton *)sender {
     [SLReportManager reportEvent:kReport_PhoneLogin andSubEvent:kReport_PhoneLogin_Register];
     SLPhoneRegisterViewController *vc = [[SLPhoneRegisterViewController alloc] init];
