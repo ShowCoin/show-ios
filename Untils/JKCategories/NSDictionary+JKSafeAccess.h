@@ -55,40 +55,40 @@
 - (CGPoint)jk_pointForKey:(id)key;
 //key key对应的size
 - (CGSize)jk_sizeForKey:(id)key;
-
+//key key对应的rect
 - (CGRect)jk_rectForKey:(id)key;
 @end
 
 #pragma --mark NSMutableDictionary setter
 
 @interface NSMutableDictionary(SafeAccess)
-
+//key 设置的value 对应key
 -(void)jk_setObj:(id)i forKey:(NSString*)key;
-
+//key 设置的string 对应key
 -(void)jk_setString:(NSString*)i forKey:(NSString*)key;
-
+//key 设置的bool 对应key
 -(void)jk_setBool:(BOOL)i forKey:(NSString*)key;
-
+//key 设置的int 对应key
 -(void)jk_setInt:(int)i forKey:(NSString*)key;
-
+//key 设置的integer 对应key
 -(void)jk_setInteger:(NSInteger)i forKey:(NSString*)key;
-
+//key 设置的UnsignedInteger 对应key
 -(void)jk_setUnsignedInteger:(NSUInteger)i forKey:(NSString*)key;
-
+//key 设置的cgfloat 对应key
 -(void)jk_setCGFloat:(CGFloat)f forKey:(NSString*)key;
-
+//key 设置的Char 对应key
 -(void)jk_setChar:(char)c forKey:(NSString*)key;
-
+//key 设置的float 对应key
 -(void)jk_setFloat:(float)i forKey:(NSString*)key;
-
+//key 设置的Double 对应key
 -(void)jk_setDouble:(double)i forKey:(NSString*)key;
-
+//key 设置的longlong 对应key
 -(void)jk_setLongLong:(long long)i forKey:(NSString*)key;
-
+//key 设置的Point 对应key
 -(void)jk_setPoint:(CGPoint)o forKey:(NSString*)key;
-
+//key 设置的Size 对应key
 -(void)jk_setSize:(CGSize)o forKey:(NSString*)key;
-
+//key 设置的Rect 对应key
 -(void)jk_setRect:(CGRect)o forKey:(NSString*)key;
 
 @end
