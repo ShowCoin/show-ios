@@ -116,11 +116,19 @@ FOUNDATION_EXPORT NSAttributedString *SLFuncServerAttributedString(BOOL isAlert)
     return self;
 }
 
+/**
+ layoutSubviews
+ */
 - (void)layoutSubviews {
     [super layoutSubviews];
     self.line.frame = CGRectMake(0, 0, CGRectGetWidth(self.frame), 1);
 }
 
+/**
+ line
+
+ @return <#return value description#>
+ */
 - (UIView *)line {
     if (!_line) {
         _line = [[UIView alloc] init];
