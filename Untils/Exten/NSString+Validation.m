@@ -200,5 +200,11 @@
     }
     return YES;
 }
+//检测url
+- (BOOL)isUrlString {
+    NSString *emailRegex = @"[a-zA-z]+://.*";
+    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
+    return [emailTest evaluateWithObject:self];
+}
 
 @end
