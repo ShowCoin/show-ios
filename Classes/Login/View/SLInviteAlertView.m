@@ -105,6 +105,13 @@ FOUNDATION_EXPORT NSAttributedString *SLFuncServerAttributedString(BOOL isAlert)
 
 @implementation HIButton
 
+/**
+ HIButton create
+ 
+
+ @param frame <#frame description#>
+ @return <#return value description#>
+ */
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
