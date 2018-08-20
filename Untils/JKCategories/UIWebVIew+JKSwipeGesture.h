@@ -24,6 +24,7 @@
 
 @interface UIWebView (JKSwipeGesture)
 
+//清扫的手势
 - (void)jk_useSwipeGesture;
 
 @end

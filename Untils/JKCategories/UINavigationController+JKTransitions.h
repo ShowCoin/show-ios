@@ -32,6 +32,7 @@
 
 //自定义推出动画
 - (void)jk_pushViewController:(UIViewController *)controller withTransition:(UIViewAnimationTransition)transition;
+//自定义返回动画
 - (UIViewController *)jk_popViewControllerWithTransition:(UIViewAnimationTransition)transition;
 
 @end
