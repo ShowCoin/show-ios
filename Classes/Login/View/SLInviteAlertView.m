@@ -38,7 +38,7 @@ FOUNDATION_EXPORT NSAttributedString *SLFuncServerAttributedString(BOOL isAlert)
 @implementation SLInviteAlertView
 
 /**
- <#Description#>
+ showAlertMessage
 
  @param attr <#attr description#>
  @param handler <#handler description#>
