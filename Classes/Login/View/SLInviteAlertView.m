@@ -40,7 +40,7 @@ FOUNDATION_EXPORT NSAttributedString *SLFuncServerAttributedString(BOOL isAlert)
 /**
  showAlertMessage
 
- @param attr <#attr description#>
+ @param attr NSAttributedString
  @param handler <#handler description#>
  */
 + (void)showAlertMessage:(NSAttributedString *)attr handler:(SLSimpleBlock)handler {
