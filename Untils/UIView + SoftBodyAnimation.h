@@ -29,6 +29,11 @@
 -(void)startSoftBodyAnimation;
 
 /*
+ 停止软体动画
+ */
+-(void)stopSoftBodyAnimation;
+
+-(void)touchDownBodyAnimation;
 
 
 
