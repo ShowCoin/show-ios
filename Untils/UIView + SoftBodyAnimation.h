@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface UIView (SoftBodyAnimation)
+#pragma private property
 
 
 
