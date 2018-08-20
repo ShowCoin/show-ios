@@ -35,6 +35,14 @@
 
 -(void)touchDownBodyAnimation;
 
+//正常等比放大
+-(void)startScaleMotion;
+-(void)stopScaleMotion;
+
+// =======================================================
+// 按钮跳动动效
+// =======================================================
+- (void)startSoftBodyAnimationWithView:(UIView *)view;
 
 
 @end
