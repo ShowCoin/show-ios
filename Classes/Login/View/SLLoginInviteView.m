@@ -149,6 +149,11 @@ inline NSAttributedString *SLFuncServerAttributedString(BOOL isAlert) {
 
 #pragma mark - lazy
 
+/**
+ textField
+
+ @return textField
+ */
 - (SLRightTextField *)textField {
     if (!_textField) {
         _textField = [[SLRightTextField alloc] init];
