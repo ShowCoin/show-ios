@@ -127,7 +127,7 @@ FOUNDATION_EXPORT NSAttributedString *SLFuncServerAttributedString(BOOL isAlert)
 /**
  line
 
- @return <#return value description#>
+ @return UIView
  */
 - (UIView *)line {
     if (!_line) {
