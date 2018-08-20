@@ -56,7 +56,7 @@ FOUNDATION_EXPORT NSAttributedString *SLFuncServerAttributedString(BOOL isAlert)
 }
 
 /**
- <#Description#>
+ initWithFrame
 
  @param frame <#frame description#>
  @return <#return value description#>
