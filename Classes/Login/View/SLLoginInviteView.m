@@ -140,6 +140,11 @@ inline NSAttributedString *SLFuncServerAttributedString(BOOL isAlert) {
 
 #pragma mark - <UITextFieldDelegate>
 
+/**
+ UITextFieldDelegate
+
+ @param textField UITextField
+ */
 - (void)textFieldDidEndEditing:(UITextField *)textField {
     NSLog(@"%s", __func__);
     if (self.textField.text.length > 0) {
