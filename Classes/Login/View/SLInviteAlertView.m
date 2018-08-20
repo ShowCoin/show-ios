@@ -59,7 +59,7 @@ FOUNDATION_EXPORT NSAttributedString *SLFuncServerAttributedString(BOOL isAlert)
  initWithFrame
 
  @param frame frame
- @return <#return value description#>
+ @return instancetype
  */
 - (instancetype)initWithFrame:(CGRect)frame
 {
