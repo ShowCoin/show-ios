@@ -74,7 +74,7 @@ FOUNDATION_EXPORT NSAttributedString *SLFuncServerAttributedString(BOOL isAlert)
 }
 //
 /**
- <#Description#>
+ layoutSubviews
  */
 - (void)layoutSubviews {
     CGFloat w = CGRectGetWidth(self.frame);
