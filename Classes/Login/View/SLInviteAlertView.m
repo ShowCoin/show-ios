@@ -41,7 +41,7 @@ FOUNDATION_EXPORT NSAttributedString *SLFuncServerAttributedString(BOOL isAlert)
  showAlertMessage
 
  @param attr NSAttributedString
- @param handler <#handler description#>
+ @param handler SLSimpleBlock
  */
 + (void)showAlertMessage:(NSAttributedString *)attr handler:(SLSimpleBlock)handler {
     SLInviteAlertView *alert = [[self alloc] init];
