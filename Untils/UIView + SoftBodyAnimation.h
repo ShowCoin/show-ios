@@ -23,6 +23,13 @@
 
 @property(nonatomic,assign) BOOL isScaleXY;
 
+/*
+ 开始软体动画
+ */
+-(void)startSoftBodyAnimation;
+
+/*
+
 
 
 @end
