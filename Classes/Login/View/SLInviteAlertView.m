@@ -107,10 +107,9 @@ FOUNDATION_EXPORT NSAttributedString *SLFuncServerAttributedString(BOOL isAlert)
 
 /**
  HIButton create
- 
 
- @param frame <#frame description#>
- @return <#return value description#>
+ @param frame frame
+ @return instancetype
  */
 - (instancetype)initWithFrame:(CGRect)frame
 {
