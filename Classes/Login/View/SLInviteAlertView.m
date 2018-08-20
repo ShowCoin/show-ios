@@ -37,6 +37,12 @@ FOUNDATION_EXPORT NSAttributedString *SLFuncServerAttributedString(BOOL isAlert)
 
 @implementation SLInviteAlertView
 
+/**
+ <#Description#>
+
+ @param attr <#attr description#>
+ @param handler <#handler description#>
+ */
 + (void)showAlertMessage:(NSAttributedString *)attr handler:(SLSimpleBlock)handler {
     SLInviteAlertView *alert = [[self alloc] init];
     alert.frame = UIScreen.mainScreen.bounds;
