@@ -210,7 +210,6 @@ inline NSAttributedString *SLFuncServerAttributedString(BOOL isAlert) {
 - (SLControlLabel *)contentLabel {
     if (!_contentLabel) {
         _contentLabel = [[SLControlLabel alloc] init];
-//        [_contentLabel addTarget:self action:@selector(tipAction) forControlEvents:UIControlEventTouchUpInside];
     }
     return _contentLabel;
 }
