@@ -51,6 +51,12 @@ inline NSAttributedString *SLFuncInvitaAttributedString(NSString *text, NSString
     return aAttr;
 }
 
+/**
+ <#Description#>
+
+ @param isAlert <#isAlert description#>
+ @return <#return value description#>
+ */
 inline NSAttributedString *SLFuncServerAttributedString(BOOL isAlert) {
     
     NSString *text = @"注册即您同意分成协议。";
