@@ -123,6 +123,9 @@ inline NSAttributedString *SLFuncServerAttributedString(BOOL isAlert) {
     self.contentLabel.attributedText = SLFuncInvitaAttributedString(_inviteCode, _inviteRatio, NO);
 }
 
+/**
+ layoutSubviews
+ */
 - (void)layoutSubviews {
     [super layoutSubviews];
     CGFloat w = CGRectGetWidth(self.frame);
