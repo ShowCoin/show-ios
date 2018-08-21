@@ -66,4 +66,6 @@
 }
 
 
++(NSString*)starDiamondFromDollar:(NSInteger)num
+
 @end
