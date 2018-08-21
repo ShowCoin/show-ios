@@ -14,7 +14,7 @@
 #import "SLControlLabel.h"
 
 /**
- <#Description#>
+ Invita Attributed String
 
  @param text <#text description#>
  @param r <#r description#>
