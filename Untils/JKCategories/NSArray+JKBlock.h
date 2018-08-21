@@ -22,4 +22,6 @@
 - (id)jk_detect:(BOOL (^)(id object))block;
 - (id)jk_reduce:(id (^)(id accumulator, id object))block;
 - (id)jk_reduce:(id)initial withBlock:(id (^)(id accumulator, id object))block;
+
+
 @end

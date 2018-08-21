@@ -37,6 +37,12 @@ FOUNDATION_EXPORT NSAttributedString *SLFuncServerAttributedString(BOOL isAlert)
 
 @implementation SLInviteAlertView
 
+/**
+ showAlertMessage
+
+ @param attr NSAttributedString
+ @param handler SLSimpleBlock
+ */
 + (void)showAlertMessage:(NSAttributedString *)attr handler:(SLSimpleBlock)handler {
     SLInviteAlertView *alert = [[self alloc] init];
     alert.frame = UIScreen.mainScreen.bounds;
@@ -49,6 +55,12 @@ FOUNDATION_EXPORT NSAttributedString *SLFuncServerAttributedString(BOOL isAlert)
     }];
 }
 
+/**
+ initWithFrame
+
+ @param frame frame
+ @return instancetype
+ */
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -60,7 +72,10 @@ FOUNDATION_EXPORT NSAttributedString *SLFuncServerAttributedString(BOOL isAlert)
     }
     return self;
 }
-
+//
+/**
+ layoutSubviews
+ */
 - (void)layoutSubviews {
     CGFloat w = CGRectGetWidth(self.frame);
     CGFloat h = CGRectGetHeight(self.frame);
@@ -90,6 +105,12 @@ FOUNDATION_EXPORT NSAttributedString *SLFuncServerAttributedString(BOOL isAlert)
 
 @implementation HIButton
 
+/**
+ HIButton create
+
+ @param frame frame
+ @return instancetype
+ */
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -101,11 +122,19 @@ FOUNDATION_EXPORT NSAttributedString *SLFuncServerAttributedString(BOOL isAlert)
     return self;
 }
 
+/**
+ layoutSubviews
+ */
 - (void)layoutSubviews {
     [super layoutSubviews];
     self.line.frame = CGRectMake(0, 0, CGRectGetWidth(self.frame), 1);
 }
 
+/**
+ line
+
+ @return UIView
+ */
 - (UIView *)line {
     if (!_line) {
         _line = [[UIView alloc] init];
