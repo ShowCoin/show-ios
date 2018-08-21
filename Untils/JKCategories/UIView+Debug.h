@@ -10,6 +10,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import <objc/runtime.h>
 
+//UIView的debug模式
 @interface UIView (Debug)
 
 @end
