@@ -16,7 +16,7 @@
 /**
  Invita Attributed String
 
- @param text <#text description#>
+ @param text name text
  @param r <#r description#>
  @param isAlert <#isAlert description#>
  @return <#return value description#>
