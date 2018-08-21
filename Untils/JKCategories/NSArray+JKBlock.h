@@ -20,7 +20,9 @@
 - (NSArray *)jk_reject:(BOOL (^)(id object))block;
 //删除
 - (id)jk_detect:(BOOL (^)(id object))block;
+//转化
 - (id)jk_reduce:(id (^)(id accumulator, id object))block;
+//带block的转化
 - (id)jk_reduce:(id)initial withBlock:(id (^)(id accumulator, id object))block;
 
 
