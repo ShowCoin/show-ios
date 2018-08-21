@@ -9,8 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface UIScreen (JKFrame)
+
+//获取SIZE
 + (CGSize)jk_size;
+//获取Width
 + (CGFloat)jk_width;
+//获取height
 + (CGFloat)jk_height;
 
 + (CGSize)jk_orientationSize;
