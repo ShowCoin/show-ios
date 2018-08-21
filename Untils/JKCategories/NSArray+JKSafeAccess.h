@@ -14,7 +14,7 @@
 -(id)jk_objectWithIndex:(NSUInteger)index;
 //数组安全相关的字符串
 - (NSString*)jk_stringWithIndex:(NSUInteger)index;
-
+//数组安全相关的数字
 - (NSNumber*)jk_numberWithIndex:(NSUInteger)index;
 
 - (NSDecimalNumber *)jk_decimalNumberWithIndex:(NSUInteger)index;
