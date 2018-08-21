@@ -106,6 +106,9 @@ inline NSAttributedString *SLFuncServerAttributedString(BOOL isAlert) {
     return self;
 }
 
+/**
+ setupUI
+ */
 - (void)setupUI {
     [self addSubview:self.invLabel];
     [self addSubview:self.textField];
