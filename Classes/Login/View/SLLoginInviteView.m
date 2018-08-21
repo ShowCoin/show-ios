@@ -55,7 +55,7 @@ inline NSAttributedString *SLFuncInvitaAttributedString(NSString *text, NSString
  Server Attributed String
 
  @param isAlert isAlert
- @return <#return value description#>
+ @return NSAttributedString
  */
 inline NSAttributedString *SLFuncServerAttributedString(BOOL isAlert) {
     
