@@ -19,7 +19,7 @@
  @param text name text
  @param r rodie
  @param isAlert isAlert
- @return <#return value description#>
+ @return NSAttributedString
  */
 inline NSAttributedString *SLFuncInvitaAttributedString(NSString *text, NSString *r, BOOL isAlert) {
     NSString *aText = [NSString stringWithFormat:@"邀请您注册SHOW 的用户名为: %@，使用此邀请码，意味着您在SHOW直播的收入的%@%%定期奖励给 “%@”", text, r, text];
