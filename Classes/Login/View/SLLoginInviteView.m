@@ -18,7 +18,7 @@
 
  @param text name text
  @param r rodie
- @param isAlert <#isAlert description#>
+ @param isAlert isAlert
  @return <#return value description#>
  */
 inline NSAttributedString *SLFuncInvitaAttributedString(NSString *text, NSString *r, BOOL isAlert) {
