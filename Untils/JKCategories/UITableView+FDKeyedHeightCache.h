@@ -24,8 +24,11 @@
 
 @interface FDKeyedHeightCache : NSObject
 
+//heightForKey
 - (BOOL)existsHeightForKey:(id<NSCopying>)key;
+//存储height key
 - (void)cacheHeight:(CGFloat)height byKey:(id<NSCopying>)key;
+//获取height
 - (CGFloat)heightForKey:(id<NSCopying>)key;
 
 // Invalidation
