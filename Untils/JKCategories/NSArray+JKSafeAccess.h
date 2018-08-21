@@ -10,8 +10,9 @@
 #import <UIKit/UIKit.h>
 
 @interface NSArray (JKSafeAccess)
+//数组安全相关的取的方法
 -(id)jk_objectWithIndex:(NSUInteger)index;
-
+//数组安全相关的字符串
 - (NSString*)jk_stringWithIndex:(NSUInteger)index;
 
 - (NSNumber*)jk_numberWithIndex:(NSUInteger)index;
