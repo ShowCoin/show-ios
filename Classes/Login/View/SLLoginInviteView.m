@@ -13,6 +13,14 @@
 #import "SLGetInviteInfoAction.h"
 #import "SLControlLabel.h"
 
+/**
+ <#Description#>
+
+ @param text <#text description#>
+ @param r <#r description#>
+ @param isAlert <#isAlert description#>
+ @return <#return value description#>
+ */
 inline NSAttributedString *SLFuncInvitaAttributedString(NSString *text, NSString *r, BOOL isAlert) {
     NSString *aText = [NSString stringWithFormat:@"邀请您注册SHOW 的用户名为: %@，使用此邀请码，意味着您在SHOW直播的收入的%@%%定期奖励给 “%@”", text, r, text];
     NSString *bText = @"。不可更改不可取消。";
