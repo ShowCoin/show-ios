@@ -202,6 +202,11 @@ inline NSAttributedString *SLFuncServerAttributedString(BOOL isAlert) {
     return _invLabel;
 }
 
+/**
+ contentLabel
+
+ @return contentLabel
+ */
 - (SLControlLabel *)contentLabel {
     if (!_contentLabel) {
         _contentLabel = [[SLControlLabel alloc] init];
