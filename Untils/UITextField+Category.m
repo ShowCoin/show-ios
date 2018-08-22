@@ -34,7 +34,7 @@
     self.placeholder = [NSString stringWithFormat:@" %@",placeholder];
     [self setValue:[UIColor customColorWithString:color] forKeyPath:@"_placeholderLabel.textColor"];
     [self setValue:[UIFont fontWithName:TextFontName size:font] forKeyPath:@"_placeholderLabel.font"];
-
+    [self setValue:[NSNumber numberWithFloat:alpha] forKeyPath:@"_placeholderLabel.alpha"];
     
 }
 
