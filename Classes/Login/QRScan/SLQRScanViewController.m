@@ -222,6 +222,14 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/invite/clickLink/";
         [self setNeedsDisplay];
     }
 }
+
+- (void)setBorderColor:(UIColor *)borderColor {
+    if (borderColor != _borderColor) {
+        _borderColor = borderColor;
+        [self setNeedsDisplay];
+    }
+}
+
 @end
 
 
