@@ -161,6 +161,20 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/invite/clickLink/";
     }];
 }
 
+- (void)backActionWithInfo:(NSString *)result {
+    if (![result hasPrefix:kInviteCodePrefix]) {
+        [self sl_showAlertMessage:@"此二维码不符合标准！" cancel:@"重新扫描"];
+        return;
+    }
+    
+    if (self.scanBlock) {
+        self.scanBlock(result);
+    }
+    
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+
 @end
 
 @implementation SLQRScanView
