@@ -24,9 +24,7 @@
     [attString addAttributes:attrsDictionary range:NSMakeRange(0, placeholder.length)];
     
     self.attributedPlaceholder=attString;
-    
     self.keyboardAppearance=UIKeyboardAppearanceDark;
-
 
 }
 
