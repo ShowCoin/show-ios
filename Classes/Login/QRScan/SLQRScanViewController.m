@@ -230,6 +230,10 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/invite/clickLink/";
     }
 }
 
+- (void)setScanRect:(CGRect)scanRect {
+    _scanRect = scanRect;
+    [self setNeedsDisplay];
+}
 @end
 
 
