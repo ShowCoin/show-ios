@@ -184,6 +184,15 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/invite/clickLink/";
     return _centerView;
 }
 
+- (SLQRBottomView *)bottomView {
+    if (!_bottomView) {
+        _bottomView = [[SLQRBottomView alloc] init];
+        _bottomView.target = self;
+    }
+    return _bottomView;
+}
+
+
 @end
 
 @implementation SLQRScanView
