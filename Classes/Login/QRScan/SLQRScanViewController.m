@@ -62,6 +62,13 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/invite/clickLink/";
     self.bottomView.frame = CGRectMake(0, bottomY, w, bottomH);
 }
 
+- (void)addPreviewLayer {
+    AVCaptureVideoPreviewLayer *preview = [AVCaptureVideoPreviewLayer layerWithSession:self.session];
+    preview.videoGravity = AVLayerVideoGravityResizeAspectFill;
+    preview.frame = UIScreen.mainScreen.bounds;
+    [self.view.layer insertSublayer:preview atIndex:0];
+}
+
 
 @end
 
