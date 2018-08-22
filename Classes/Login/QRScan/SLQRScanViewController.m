@@ -116,6 +116,17 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/invite/clickLink/";
     self.input = input;
 }
 
+- (void)captureOutput:(AVCaptureOutput *)output didOutputMetadataObjects:(NSArray<__kindof AVMetadataObject *> *)metadataObjects fromConnection:(AVCaptureConnection *)connection {
+
+    if (metadataObjects.count == 0) return;
+    
+    [self.session stopRunning];
+    
+    AVMetadataMachineReadableCodeObject *obj = metadataObjects.firstObject;
+    
+    [self backActionWithInfo:obj.stringValue];
+}
+
 
 @end
 
