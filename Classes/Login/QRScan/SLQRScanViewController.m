@@ -216,6 +216,12 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/invite/clickLink/";
     return self;
 }
 
+- (void)setCornerLineColor:(UIColor *)cornerLineColor {
+    if (_cornerLineColor != cornerLineColor) {
+        _cornerLineColor = cornerLineColor;
+        [self setNeedsDisplay];
+    }
+}
 @end
 
 
