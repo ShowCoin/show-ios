@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface UIView (SoftBodyAnimation)
-#pragma private property 
+#pragma private property
 
 
 /*
@@ -42,7 +42,6 @@
 // =======================================================
 // 按钮跳动动效
 // =======================================================
-
 - (void)startSoftBodyAnimationWithView:(UIView *)view;
 
 
