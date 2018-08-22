@@ -50,6 +50,18 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/invite/clickLink/";
     [self.view addSubview:self.bottomView];
 }
 
+- (void)viewWillLayoutSubviews {
+    [super viewWillLayoutSubviews];
+    CGFloat h = CGRectGetHeight(self.view.frame);
+    CGFloat w = CGRectGetWidth(self.view.frame);
+    
+    self.centerView.frame = self.view.bounds;
+    
+    CGFloat bottomH = KTabbarSafeBottomMargin + 44;
+    CGFloat bottomY = h - bottomH;
+    self.bottomView.frame = CGRectMake(0, bottomY, w, bottomH);
+}
+
 
 @end
 
