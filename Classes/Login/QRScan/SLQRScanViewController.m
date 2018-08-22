@@ -69,6 +69,38 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/invite/clickLink/";
     [self.view.layer insertSublayer:preview atIndex:0];
 }
 
+- (void)addDeviceOutput {
+    AVCaptureMetadataOutput *output = [[AVCaptureMetadataOutput alloc] init];
+    [output setMetadataObjectsDelegate:self queue:dispatch_get_main_queue()];
+    
+    if ([self.session canAddOutput:output]) {
+        [self.session addOutput:output];
+    }
+    
+    output.metadataObjectTypes = @[AVMetadataObjectTypeQRCode];
+    
+    CGSize screenSize = UIScreen.mainScreen.bounds.size;
+    
+    CGFloat scanWH = screenSize.width * 0.6;
+
+    CGRect scanRect = CGRectMake((screenSize.width - scanWH) / 2,
+                                 (screenSize.height - scanWH) / 2,
+                                 scanWH, scanWH);
+
+    self.centerView.scanRect = scanRect;
+
+    CGFloat x = scanRect.origin.y / screenSize.height;
+    CGFloat y = scanRect.origin.x / screenSize.width;
+    CGFloat w = scanRect.size.height / screenSize.height;
+    CGFloat h = scanRect.size.width  / screenSize.width;
+    scanRect = CGRectMake(x, y, w, h);
+    
+    output.rectOfInterest = scanRect;//SLFuncGetScreenCenterRect(100);
+    
+    
+    self.output = output;
+}
+
 
 @end
 
