@@ -101,6 +101,21 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/invite/clickLink/";
     self.output = output;
 }
 
+- (void)addDeviceInput {
+    AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+    
+    NSError *error = nil;
+    AVCaptureDeviceInput *input = [[AVCaptureDeviceInput alloc] initWithDevice:device error:&error];
+    if (error) {
+        NSLog(@"%@", error);
+        return;
+    }
+    if ([self.session canAddInput:input]) {
+        [self.session addInput:input];
+    }
+    self.input = input;
+}
+
 
 @end
 
