@@ -240,6 +240,66 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/invite/clickLink/";
     [self setNeedsDisplay];
 }
 
+- (void)drawRect:(CGRect)rect {
+    [[UIColor colorWithWhite:0 alpha:0.3] set];
+    UIRectFill(rect);
+    CGRect clearIntersection = CGRectIntersection(self.scanRect, rect);
+    [[UIColor clearColor] set];
+    UIRectFill(clearIntersection);
+    
+    UIBezierPath *path = [UIBezierPath bezierPathWithRect:self.scanRect];
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextAddPath(context, path.CGPath);
+    [self.borderColor set];
+    CGContextStrokePath(context);
+    
+    CGFloat x = self.scanRect.origin.x;
+    CGFloat y = self.scanRect.origin.y;
+    CGFloat margin = self.size.height;
+    
+    CGPoint p1[3];
+    p1[0] = CGPointMake(x + margin, y);
+    p1[1] = CGPointMake(x, y);
+    p1[2] = CGPointMake(x, y + margin);
+    CGContextAddLines(context, p1, 3);
+    CGContextSetLineWidth(context, self.size.width);
+    [self.cornerLineColor set];
+    CGContextDrawPath(context, kCGPathStroke);
+    
+    x = CGRectGetMaxX(self.scanRect);
+    y = self.scanRect.origin.y;
+    
+    CGPoint p2[3];
+    p2[0] = CGPointMake(x - margin, y);
+    p2[1] = CGPointMake(x, y);
+    p2[2] = CGPointMake(x, y + margin);
+    CGContextAddLines(context, p2, 3);
+    CGContextSetLineWidth(context, self.size.width);
+    CGContextDrawPath(context, kCGPathStroke);
+    
+    x = self.scanRect.origin.x;
+    y = CGRectGetMaxY(self.scanRect);
+    
+    CGPoint p3[3];
+    p3[0] = CGPointMake(x, y - margin);
+    p3[1] = CGPointMake(x, y);
+    p3[2] = CGPointMake(x + margin, y);
+    CGContextAddLines(context, p3, 3);
+    CGContextSetLineWidth(context, self.size.width);
+    CGContextDrawPath(context, kCGPathStroke);
+    
+    x = CGRectGetMaxX(self.scanRect);
+    y = CGRectGetMaxY(self.scanRect);
+    
+    CGPoint p4[3];
+    p4[0] = CGPointMake(x, y - margin);
+    p4[1] = CGPointMake(x, y);
+    p4[2] = CGPointMake(x - margin, y);
+    CGContextAddLines(context, p4, 3);
+    CGContextSetLineWidth(context, self.size.width);
+    CGContextDrawPath(context, kCGPathStroke);
+}
+
 @end
 
 
