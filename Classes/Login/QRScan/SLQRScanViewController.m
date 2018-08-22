@@ -234,6 +234,12 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/invite/clickLink/";
     _scanRect = scanRect;
     [self setNeedsDisplay];
 }
+
+- (void)setSize:(CGSize)size {
+    _size = size;
+    [self setNeedsDisplay];
+}
+
 @end
 
 
