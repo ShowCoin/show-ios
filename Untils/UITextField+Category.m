@@ -20,7 +20,12 @@
     
     NSDictionary *attrsDictionary = [NSDictionary dictionaryWithObjectsAndKeys:font,NSFontAttributeName,color,NSForegroundColorAttributeName,style,NSParagraphStyleAttributeName, nil];
     
- 
+    
+    [attString addAttributes:attrsDictionary range:NSMakeRange(0, placeholder.length)];
+    
+    self.attributedPlaceholder=attString;
+    
+    self.keyboardAppearance=UIKeyboardAppearanceDark;
 
 
 }
