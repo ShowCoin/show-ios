@@ -174,6 +174,15 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/invite/clickLink/";
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+#pragma mark - lazy
+
+- (SLQRScanView *)centerView {
+    if (!_centerView) {
+        _centerView = [[SLQRScanView alloc] init];
+        _centerView.backgroundColor = [UIColor colorWithRed:1 green:0 blue:0 alpha:0.2];
+    }
+    return _centerView;
+}
 
 @end
 
