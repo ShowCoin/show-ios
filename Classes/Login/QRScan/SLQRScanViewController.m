@@ -320,4 +320,10 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/invite/clickLink/";
     return self;
 }
 
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    CGFloat w = CGRectGetWidth(self.frame);
+    self.button.frame = CGRectMake(0, 0, w, 44);
+}
+
 @end
