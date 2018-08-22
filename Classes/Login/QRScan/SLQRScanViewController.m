@@ -141,6 +141,26 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/invite/clickLink/";
     return feature.messageString;
 }
 
+- (void)photoLibraryAction {
+    [SLImagePicker.shared showPickerControllerWithViewController:self];
+    @weakify(self)
+    [SLImagePicker.shared getPickerImage:^(NSDictionary<NSString *,id> *info) {
+        @strongify(self)
+        UIImage *image = info[UIImagePickerControllerEditedImage];
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.25 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            NSString *result = [self sl_detectorQRImage:image];
+            
+            if (result.length == 0) {
+                [self sl_showAlertMessage:@"未扫识别到二维码" cancel:@"重新扫描"];
+                return;
+            }
+            [self backActionWithInfo:result];
+        });
+        
+    }];
+}
+
 @end
 
 @implementation SLQRScanView
