@@ -36,6 +36,20 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/invite/clickLink/";
     [self.session stopRunning];
 }
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
+    [self.navigationBarView setNavigationTitle:@"扫描二维码"];
+    self.navigationBarView.backgroundColor = kNavigationBGColor;
+    [self.navigationBarView setNavigationLineHidden:YES];
+    
+    [self addDeviceInput];
+    [self addDeviceOutput];
+    [self addPreviewLayer];
+    [self.view insertSubview:self.centerView atIndex:1];
+    [self.view addSubview:self.bottomView];
+}
+
 
 @end
 
