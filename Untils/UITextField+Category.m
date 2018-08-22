@@ -18,7 +18,9 @@
     
     NSMutableAttributedString * attString=[[NSMutableAttributedString alloc]initWithString:placeholder];
     
-
+    NSDictionary *attrsDictionary = [NSDictionary dictionaryWithObjectsAndKeys:font,NSFontAttributeName,color,NSForegroundColorAttributeName,style,NSParagraphStyleAttributeName, nil];
+    
+ 
 
 
 }
