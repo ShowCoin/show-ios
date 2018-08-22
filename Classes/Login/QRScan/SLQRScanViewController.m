@@ -333,4 +333,10 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/invite/clickLink/";
     }
     return _button;
 }
+
+- (void)setTarget:(id)target {
+    _target = target;
+    [self.button addTarget:target action:@selector(photoLibraryAction) forControlEvents:UIControlEventTouchUpInside];
+}
+
 @end
