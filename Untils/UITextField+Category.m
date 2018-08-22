@@ -14,7 +14,9 @@
     
     NSMutableParagraphStyle *style =[[self.defaultTextAttributes objectForKey:NSParagraphStyleAttributeName] mutableCopy];
     
+    style.minimumLineHeight =self.font.lineHeight - (self.font.lineHeight -font.lineHeight)/2;
     
+  
 
 
 }
