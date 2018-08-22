@@ -127,6 +127,19 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/invite/clickLink/";
     [self backActionWithInfo:obj.stringValue];
 }
 
+- (NSString *)sl_detectorQRImage:(UIImage *)image {
+    CIDetector *detector = [CIDetector detectorOfType:CIDetectorTypeQRCode
+                                              context:nil
+                                              options:@{CIDetectorAccuracy : CIDetectorAccuracyHigh}];
+    
+    CIImage *cImage = [CIImage imageWithCGImage:image.CGImage];
+    
+    NSArray *features = [detector featuresInImage:cImage];
+    
+    CIQRCodeFeature *feature = features.firstObject;
+    
+    return feature.messageString;
+}
 
 @end
 
