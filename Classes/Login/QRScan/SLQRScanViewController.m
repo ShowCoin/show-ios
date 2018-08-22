@@ -310,4 +310,14 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/invite/clickLink/";
 
 @implementation SLQRBottomView
 
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self addSubview:self.button];
+        self.backgroundColor = [UIColor colorWithWhite:0 alpha:0.8];
+    }
+    return self;
+}
+
 @end
