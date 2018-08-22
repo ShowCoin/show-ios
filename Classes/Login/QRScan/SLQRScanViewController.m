@@ -205,6 +205,17 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/invite/clickLink/";
 
 @implementation SLQRScanView
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.size = CGSizeMake(3, 25);
+        self.cornerLineColor = [UIColor blueColor];
+        self.borderColor = [UIColor whiteColor];
+    }
+    return self;
+}
+
 @end
 
 
