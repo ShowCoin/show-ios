@@ -16,7 +16,9 @@
     
     style.minimumLineHeight =self.font.lineHeight - (self.font.lineHeight -font.lineHeight)/2;
     
-  
+    NSMutableAttributedString * attString=[[NSMutableAttributedString alloc]initWithString:placeholder];
+    
+
 
 
 }
