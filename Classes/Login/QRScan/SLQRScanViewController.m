@@ -192,6 +192,14 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/invite/clickLink/";
     return _bottomView;
 }
 
+- (AVCaptureSession *)session {
+    if (!_session) {
+        _session = [[AVCaptureSession alloc] init];
+        [_session setSessionPreset:AVCaptureSessionPresetHigh];
+    }
+    return _session;
+}
+
 
 @end
 
