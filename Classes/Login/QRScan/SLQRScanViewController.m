@@ -326,4 +326,11 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/invite/clickLink/";
     self.button.frame = CGRectMake(0, 0, w, 44);
 }
 
+- (UIButton *)button {
+    if (!_button) {
+        _button = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_button setTitle:@"相册" forState:UIControlStateNormal];
+    }
+    return _button;
+}
 @end
