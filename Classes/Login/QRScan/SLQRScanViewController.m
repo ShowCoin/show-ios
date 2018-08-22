@@ -11,7 +11,7 @@
 #import "SLImagePicker.h"
 #import "SLPlayerMoreController.h"
 
-NSString * const kInviteCodePrefix = @"http://api.xiubi.com/invite/clickLink/";
+NSString * const kInviteCodePrefix = @"http://api.xiubi.com/";
 
 @interface SLQRScanViewController () <AVCaptureMetadataOutputObjectsDelegate>
 
