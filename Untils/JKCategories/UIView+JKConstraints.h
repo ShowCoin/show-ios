@@ -19,6 +19,7 @@
 //底部的约束
 - (NSLayoutConstraint *)jk_bottomConstraint;
 
+//头部的约束
 - (NSLayoutConstraint *)jk_leadingConstraint;
 - (NSLayoutConstraint *)jk_trailingConstraint;
 //宽度的约束
