@@ -46,6 +46,9 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/";
     [self.session stopRunning];
 }
 
+/**
+ viewDidLoad
+ */
 - (void)viewDidLoad {
     [super viewDidLoad];
 
