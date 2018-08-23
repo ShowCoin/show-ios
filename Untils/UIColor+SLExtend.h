@@ -1,9 +1,9 @@
 //
-//  UIColor+DLExtend.h
+//  UIColor+sLExtend.h
 //  Dreamer
 //
-//  Created by 景中杰 on 16/8/30.
-//  Copyright © 2016年 Beijing Dreamer. All rights reserved.
+//  Created by show on 16/8/30.
+//  Copyright © 2016年 show. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
