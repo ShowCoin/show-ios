@@ -142,7 +142,7 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/";
 }
 
 /**
- <#Description#>
+ captureOutput
 
  @param output <#output description#>
  @param metadataObjects <#metadataObjects description#>
