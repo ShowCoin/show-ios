@@ -10,6 +10,7 @@
 
 @interface UITableViewCell (JKDelaysContentTouches)
 
+//jk_delaysContentTouches
 @property (nonatomic, assign) BOOL jk_delaysContentTouches;
 
 @end
