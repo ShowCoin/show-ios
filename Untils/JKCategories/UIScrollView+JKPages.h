@@ -20,7 +20,9 @@
 - (CGFloat)jk_pagesY;
 //page的X坐标
 - (CGFloat)jk_pagesX;
+//当前页面的Y
 - (CGFloat)jk_currentPageY;
+//当前页面的X
 - (CGFloat)jk_currentPageX;
 - (void)jk_setPageY:(CGFloat)page;
 - (void)jk_setPageX:(CGFloat)page;
