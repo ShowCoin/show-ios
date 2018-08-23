@@ -78,6 +78,9 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/";
     self.bottomView.frame = CGRectMake(0, bottomY, w, bottomH);
 }
 
+/**
+ <#Description#>
+ */
 - (void)addPreviewLayer {
     AVCaptureVideoPreviewLayer *preview = [AVCaptureVideoPreviewLayer layerWithSession:self.session];
     preview.videoGravity = AVLayerVideoGravityResizeAspectFill;
