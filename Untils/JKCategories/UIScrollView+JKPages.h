@@ -14,6 +14,7 @@
 - (NSInteger)jk_pages;
 //当前的野鼠
 - (NSInteger)jk_currentPage;
+//scrollPercent
 - (CGFloat)jk_scrollPercent;
 
 - (CGFloat)jk_pagesY;
