@@ -36,6 +36,11 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/";
     [self.session startRunning];
 }
 
+/**
+ viewDidDisappear
+
+ @param animated animated
+ */
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
     [self.session stopRunning];
