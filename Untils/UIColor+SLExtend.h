@@ -22,5 +22,10 @@
 /**
  *  反回颜色的 RBG 格式字符串，如：#FFFFCC
  *
+ *  @param color 颜色对象
+ *
+ *  @return 颜色字符串
+ */
++ (NSString* _Nonnull)rgbFromColor:(UIColor* _Nonnull)color;
 
 @end
