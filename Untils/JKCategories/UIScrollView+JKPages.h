@@ -18,6 +18,7 @@
 - (CGFloat)jk_scrollPercent;
 //page的Y坐标
 - (CGFloat)jk_pagesY;
+//page的X坐标
 - (CGFloat)jk_pagesX;
 - (CGFloat)jk_currentPageY;
 - (CGFloat)jk_currentPageX;
