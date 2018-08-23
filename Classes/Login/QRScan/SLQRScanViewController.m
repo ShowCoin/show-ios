@@ -63,6 +63,9 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/";
     [self.view addSubview:self.bottomView];
 }
 
+/**
+ viewWillLayoutSubviews
+ */
 - (void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
     CGFloat h = CGRectGetHeight(self.view.frame);
