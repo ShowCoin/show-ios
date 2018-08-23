@@ -123,6 +123,9 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/";
     self.output = output;
 }
 
+/**
+ <#Description#>
+ */
 - (void)addDeviceInput {
     AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
     
