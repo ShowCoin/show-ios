@@ -13,6 +13,14 @@
 #import "SLGetInviteInfoAction.h"
 #import "SLControlLabel.h"
 
+/**
+ Invita Attributed String
+
+ @param text name text
+ @param r rodie
+ @param isAlert isAlert
+ @return NSAttributedString
+ */
 inline NSAttributedString *SLFuncInvitaAttributedString(NSString *text, NSString *r, BOOL isAlert) {
     NSString *aText = [NSString stringWithFormat:@"邀请您注册SHOW 的用户名为: %@，使用此邀请码，意味着您在SHOW直播的收入的%@%%定期奖励给 “%@”", text, r, text];
     NSString *bText = @"。不可更改不可取消。";
@@ -43,6 +51,12 @@ inline NSAttributedString *SLFuncInvitaAttributedString(NSString *text, NSString
     return aAttr;
 }
 
+/**
+ Server Attributed String
+
+ @param isAlert isAlert
+ @return NSAttributedString
+ */
 inline NSAttributedString *SLFuncServerAttributedString(BOOL isAlert) {
     
     NSString *text = @"注册即您同意分成协议。";
@@ -92,6 +106,9 @@ inline NSAttributedString *SLFuncServerAttributedString(BOOL isAlert) {
     return self;
 }
 
+/**
+ setupUI
+ */
 - (void)setupUI {
     [self addSubview:self.invLabel];
     [self addSubview:self.textField];
@@ -106,6 +123,9 @@ inline NSAttributedString *SLFuncServerAttributedString(BOOL isAlert) {
     self.contentLabel.attributedText = SLFuncInvitaAttributedString(_inviteCode, _inviteRatio, NO);
 }
 
+/**
+ layoutSubviews
+ */
 - (void)layoutSubviews {
     [super layoutSubviews];
     CGFloat w = CGRectGetWidth(self.frame);
@@ -182,14 +202,23 @@ inline NSAttributedString *SLFuncServerAttributedString(BOOL isAlert) {
     return _invLabel;
 }
 
+/**
+ contentLabel
+
+ @return contentLabel
+ */
 - (SLControlLabel *)contentLabel {
     if (!_contentLabel) {
         _contentLabel = [[SLControlLabel alloc] init];
-//        [_contentLabel addTarget:self action:@selector(tipAction) forControlEvents:UIControlEventTouchUpInside];
     }
     return _contentLabel;
 }
 
+/**
+ serverLabel
+
+ @return serverLabel
+ */
 - (SLControlLabel *)serverLabel {
     if (!_serverLabel) {
         _serverLabel = [[SLControlLabel alloc] init];

@@ -59,7 +59,6 @@
 
 +(NSString*)starDiamondFromChinayuan:(NSInteger)num
 {
-    
     NSInteger star = num*10;
     NSString * starStr = [NSString stringWithFormat:@"%ld",star];
     return starStr;
