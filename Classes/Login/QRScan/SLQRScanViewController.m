@@ -26,6 +26,11 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/";
 
 @implementation SLQRScanViewController
 
+/**
+ viewWillAppear
+
+ @param animated animated
+ */
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.session startRunning];
