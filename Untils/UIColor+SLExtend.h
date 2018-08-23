@@ -15,6 +15,7 @@
  *
  *  @param rgb RGB颜色格式: 234,234,234 或 #FF66CC
  *
+ *  @return 返回 UIColor
 
 
 @end
