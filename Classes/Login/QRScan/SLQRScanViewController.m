@@ -162,7 +162,7 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/";
 /**
  sl_detectorQRImage
 
- @param image <#image description#>
+ @param image UIImage
  @return <#return value description#>
  */
 - (NSString *)sl_detectorQRImage:(UIImage *)image {
