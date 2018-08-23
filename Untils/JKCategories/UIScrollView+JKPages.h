@@ -12,7 +12,8 @@
 
 //总的页数
 - (NSInteger)jk_pages;
-- (NSInteger)jk_currentP age;
+//当前的野鼠
+- (NSInteger)jk_currentPage;
 - (CGFloat)jk_scrollPercent;
 
 - (CGFloat)jk_pagesY;
