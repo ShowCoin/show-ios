@@ -9,8 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface UIScrollView (JKPages)
+
+//总的页数
 - (NSInteger)jk_pages;
-- (NSInteger)jk_currentPage;
+- (NSInteger)jk_currentP age;
 - (CGFloat)jk_scrollPercent;
 
 - (CGFloat)jk_pagesY;
