@@ -16,7 +16,7 @@
 + (CGFloat)jk_width;
 //获取height
 + (CGFloat)jk_height;
-
+//获取orientationSize
 + (CGSize)jk_orientationSize;
 + (CGFloat)jk_orientationWidth;
 + (CGFloat)jk_orientationHeight;
