@@ -179,6 +179,9 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/";
     return feature.messageString;
 }
 
+/**
+ photoLibraryAction
+ */
 - (void)photoLibraryAction {
     [SLImagePicker.shared showPickerControllerWithViewController:self];
     @weakify(self)
