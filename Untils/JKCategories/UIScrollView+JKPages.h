@@ -16,7 +16,7 @@
 - (NSInteger)jk_currentPage;
 //scrollPercent
 - (CGFloat)jk_scrollPercent;
-
+//page的Y坐标
 - (CGFloat)jk_pagesY;
 - (CGFloat)jk_pagesX;
 - (CGFloat)jk_currentPageY;
