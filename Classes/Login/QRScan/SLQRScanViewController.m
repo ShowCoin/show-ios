@@ -146,7 +146,7 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/";
 
  @param output AVCaptureOutput
  @param metadataObjects NSArray
- @param connection <#connection description#>
+ @param connection AVCaptureConnection
  */
 - (void)captureOutput:(AVCaptureOutput *)output didOutputMetadataObjects:(NSArray<__kindof AVMetadataObject *> *)metadataObjects fromConnection:(AVCaptureConnection *)connection {
 
