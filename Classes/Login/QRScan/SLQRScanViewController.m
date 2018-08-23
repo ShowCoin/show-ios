@@ -88,6 +88,9 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/";
     [self.view.layer insertSublayer:preview atIndex:0];
 }
 
+/**
+ <#Description#>
+ */
 - (void)addDeviceOutput {
     AVCaptureMetadataOutput *output = [[AVCaptureMetadataOutput alloc] init];
     [output setMetadataObjectsDelegate:self queue:dispatch_get_main_queue()];
