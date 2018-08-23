@@ -159,6 +159,12 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/";
     [self backActionWithInfo:obj.stringValue];
 }
 
+/**
+ sl_detectorQRImage
+
+ @param image <#image description#>
+ @return <#return value description#>
+ */
 - (NSString *)sl_detectorQRImage:(UIImage *)image {
     CIDetector *detector = [CIDetector detectorOfType:CIDetectorTypeQRCode
                                               context:nil
