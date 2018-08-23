@@ -19,5 +19,8 @@
  */
 + (UIColor* _Nonnull)colorWithRGB:(NSString* _Nonnull)rgb;
 
+/**
+ *  反回颜色的 RBG 格式字符串，如：#FFFFCC
+ *
 
 @end
