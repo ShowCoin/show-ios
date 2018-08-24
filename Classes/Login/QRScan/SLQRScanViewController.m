@@ -202,6 +202,11 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/";
     }];
 }
 
+/**
+ backActionWithInfo
+
+ @param result NSString
+ */
 - (void)backActionWithInfo:(NSString *)result {
     if (![result hasPrefix:kInviteCodePrefix]) {
         [self sl_showAlertMessage:@"此二维码不符合标准！" cancel:@"重新扫描"];
@@ -217,6 +222,11 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/";
 
 #pragma mark - lazy
 
+/**
+ centerView
+
+ @return SLQRScanView
+ */
 - (SLQRScanView *)centerView {
     if (!_centerView) {
         _centerView = [[SLQRScanView alloc] init];
@@ -225,6 +235,11 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/";
     return _centerView;
 }
 
+/**
+ bottomView
+
+ @return SLQRBottomView
+ */
 - (SLQRBottomView *)bottomView {
     if (!_bottomView) {
         _bottomView = [[SLQRBottomView alloc] init];
@@ -233,6 +248,11 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/";
     return _bottomView;
 }
 
+/**
+ session
+
+ @return AVCaptureSession
+ */
 - (AVCaptureSession *)session {
     if (!_session) {
         _session = [[AVCaptureSession alloc] init];
@@ -244,6 +264,9 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/";
 
 @end
 
+/**
+ SLQRScanView
+ */
 @implementation SLQRScanView
 
 - (instancetype)init
@@ -257,6 +280,11 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/";
     return self;
 }
 
+/**
+ setCornerLineColor
+
+ @param cornerLineColor UIColor
+ */
 - (void)setCornerLineColor:(UIColor *)cornerLineColor {
     if (_cornerLineColor != cornerLineColor) {
         _cornerLineColor = cornerLineColor;
@@ -264,6 +292,11 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/";
     }
 }
 
+/**
+ setBorderColor
+
+ @param borderColor borderColor
+ */
 - (void)setBorderColor:(UIColor *)borderColor {
     if (borderColor != _borderColor) {
         _borderColor = borderColor;
@@ -271,11 +304,21 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/";
     }
 }
 
+/**
+ setScanRect
+
+ @param scanRect scanRect
+ */
 - (void)setScanRect:(CGRect)scanRect {
     _scanRect = scanRect;
     [self setNeedsDisplay];
 }
 
+/**
+ setSize
+
+ @param size size
+ */
 - (void)setSize:(CGSize)size {
     _size = size;
     [self setNeedsDisplay];
