@@ -225,7 +225,7 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/";
 /**
  centerView
 
- @return <#return value description#>
+ @return SLQRScanView
  */
 - (SLQRScanView *)centerView {
     if (!_centerView) {
@@ -235,6 +235,11 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/";
     return _centerView;
 }
 
+/**
+ bottomView
+
+ @return SLQRBottomView
+ */
 - (SLQRBottomView *)bottomView {
     if (!_bottomView) {
         _bottomView = [[SLQRBottomView alloc] init];
