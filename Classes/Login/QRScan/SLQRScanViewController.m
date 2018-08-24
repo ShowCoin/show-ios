@@ -202,6 +202,11 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/";
     }];
 }
 
+/**
+ backActionWithInfo
+
+ @param result <#result description#>
+ */
 - (void)backActionWithInfo:(NSString *)result {
     if (![result hasPrefix:kInviteCodePrefix]) {
         [self sl_showAlertMessage:@"此二维码不符合标准！" cancel:@"重新扫描"];
