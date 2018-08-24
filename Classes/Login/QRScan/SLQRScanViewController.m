@@ -222,6 +222,11 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/";
 
 #pragma mark - lazy
 
+/**
+ centerView
+
+ @return <#return value description#>
+ */
 - (SLQRScanView *)centerView {
     if (!_centerView) {
         _centerView = [[SLQRScanView alloc] init];
