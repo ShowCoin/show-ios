@@ -307,7 +307,7 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/";
 /**
  setScanRect
 
- @param scanRect <#scanRect description#>
+ @param scanRect scanRect
  */
 - (void)setScanRect:(CGRect)scanRect {
     _scanRect = scanRect;
