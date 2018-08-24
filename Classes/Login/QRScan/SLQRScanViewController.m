@@ -248,6 +248,11 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/";
     return _bottomView;
 }
 
+/**
+ session
+
+ @return AVCaptureSession
+ */
 - (AVCaptureSession *)session {
     if (!_session) {
         _session = [[AVCaptureSession alloc] init];
