@@ -314,6 +314,11 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/";
     [self setNeedsDisplay];
 }
 
+/**
+ <#Description#>
+
+ @param size <#size description#>
+ */
 - (void)setSize:(CGSize)size {
     _size = size;
     [self setNeedsDisplay];
