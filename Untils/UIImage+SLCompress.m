@@ -14,7 +14,8 @@
 - (UIImage*)imageByScalingAndCroppingForSize:(CGSize)targetSize
 {
     UIImage *sourceImage = self;
-  
+    UIImage *newImage = nil;
+   
 }
 -(UIImage*)imageWithImage:(UIImage*)image scaledToSize:(CGSize)newSize
 {
