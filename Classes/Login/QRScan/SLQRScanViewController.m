@@ -265,7 +265,7 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/";
 @end
 
 /**
- SLQRScanView 
+ SLQRScanView
  */
 @implementation SLQRScanView
 
@@ -280,6 +280,11 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/";
     return self;
 }
 
+/**
+ setCornerLineColor
+
+ @param cornerLineColor <#cornerLineColor description#>
+ */
 - (void)setCornerLineColor:(UIColor *)cornerLineColor {
     if (_cornerLineColor != cornerLineColor) {
         _cornerLineColor = cornerLineColor;
