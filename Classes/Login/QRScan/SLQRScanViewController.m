@@ -205,7 +205,7 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/";
 /**
  backActionWithInfo
 
- @param result <#result description#>
+ @param result NSString
  */
 - (void)backActionWithInfo:(NSString *)result {
     if (![result hasPrefix:kInviteCodePrefix]) {
