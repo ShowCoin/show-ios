@@ -283,7 +283,7 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/";
 /**
  setCornerLineColor
 
- @param cornerLineColor <#cornerLineColor description#>
+ @param cornerLineColor UIColor
  */
 - (void)setCornerLineColor:(UIColor *)cornerLineColor {
     if (_cornerLineColor != cornerLineColor) {
