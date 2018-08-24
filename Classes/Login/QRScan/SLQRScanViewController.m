@@ -264,6 +264,9 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/";
 
 @end
 
+/**
+ SLQRScanView 
+ */
 @implementation SLQRScanView
 
 - (instancetype)init
