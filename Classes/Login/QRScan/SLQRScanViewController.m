@@ -295,7 +295,7 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/";
 /**
  setBorderColor
 
- @param borderColor <#borderColor description#>
+ @param borderColor borderColor
  */
 - (void)setBorderColor:(UIColor *)borderColor {
     if (borderColor != _borderColor) {
