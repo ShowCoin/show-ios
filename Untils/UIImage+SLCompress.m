@@ -23,7 +23,8 @@
     CGFloat scaleFactor = 0.0;
     CGFloat scaledWidth = targetWidth;
     CGFloat scaledHeight = targetHeight;
-    
+    CGPoint thumbnailPoint = CGPointMake(0.0,0.0);
+
     if (targetWidth == targetHeight) {
         
         if (width<=height&&width<targetWidth) {
