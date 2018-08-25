@@ -19,7 +19,9 @@
 
 @interface UISplitViewController (JKQuickAccess)
 
+//左边的VC
 @property (weak, readonly, nonatomic) UIViewController *jk_leftController;
+//右边的VC
 @property (weak, readonly, nonatomic) UIViewController *jk_rightController;
 
 @end
