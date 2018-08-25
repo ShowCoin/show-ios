@@ -26,16 +26,29 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/";
 
 @implementation SLQRScanViewController
 
+/**
+ viewWillAppear
+
+ @param animated animated
+ */
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.session startRunning];
 }
 
+/**
+ viewDidDisappear
+
+ @param animated animated
+ */
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
     [self.session stopRunning];
 }
 
+/**
+ viewDidLoad
+ */
 - (void)viewDidLoad {
     [super viewDidLoad];
 
@@ -50,6 +63,9 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/";
     [self.view addSubview:self.bottomView];
 }
 
+/**
+ viewWillLayoutSubviews
+ */
 - (void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
     CGFloat h = CGRectGetHeight(self.view.frame);
@@ -62,6 +78,9 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/";
     self.bottomView.frame = CGRectMake(0, bottomY, w, bottomH);
 }
 
+/**
+ addPreviewLayer
+ */
 - (void)addPreviewLayer {
     AVCaptureVideoPreviewLayer *preview = [AVCaptureVideoPreviewLayer layerWithSession:self.session];
     preview.videoGravity = AVLayerVideoGravityResizeAspectFill;
@@ -69,6 +88,9 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/";
     [self.view.layer insertSublayer:preview atIndex:0];
 }
 
+/**
+ addDeviceOutput
+ */
 - (void)addDeviceOutput {
     AVCaptureMetadataOutput *output = [[AVCaptureMetadataOutput alloc] init];
     [output setMetadataObjectsDelegate:self queue:dispatch_get_main_queue()];
@@ -101,6 +123,9 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/";
     self.output = output;
 }
 
+/**
+ addDeviceInput
+ */
 - (void)addDeviceInput {
     AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
     
@@ -116,6 +141,13 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/";
     self.input = input;
 }
 
+/**
+ captureOutput
+
+ @param output AVCaptureOutput
+ @param metadataObjects NSArray
+ @param connection AVCaptureConnection
+ */
 - (void)captureOutput:(AVCaptureOutput *)output didOutputMetadataObjects:(NSArray<__kindof AVMetadataObject *> *)metadataObjects fromConnection:(AVCaptureConnection *)connection {
 
     if (metadataObjects.count == 0) return;
@@ -127,6 +159,12 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/";
     [self backActionWithInfo:obj.stringValue];
 }
 
+/**
+ sl_detectorQRImage
+
+ @param image UIImage
+ @return NSString
+ */
 - (NSString *)sl_detectorQRImage:(UIImage *)image {
     CIDetector *detector = [CIDetector detectorOfType:CIDetectorTypeQRCode
                                               context:nil
@@ -141,6 +179,9 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/";
     return feature.messageString;
 }
 
+/**
+ photoLibraryAction
+ */
 - (void)photoLibraryAction {
     [SLImagePicker.shared showPickerControllerWithViewController:self];
     @weakify(self)
@@ -161,6 +202,11 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/";
     }];
 }
 
+/**
+ backActionWithInfo
+
+ @param result NSString
+ */
 - (void)backActionWithInfo:(NSString *)result {
     if (![result hasPrefix:kInviteCodePrefix]) {
         [self sl_showAlertMessage:@"此二维码不符合标准！" cancel:@"重新扫描"];
@@ -176,6 +222,11 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/";
 
 #pragma mark - lazy
 
+/**
+ centerView
+
+ @return SLQRScanView
+ */
 - (SLQRScanView *)centerView {
     if (!_centerView) {
         _centerView = [[SLQRScanView alloc] init];
@@ -184,6 +235,11 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/";
     return _centerView;
 }
 
+/**
+ bottomView
+
+ @return SLQRBottomView
+ */
 - (SLQRBottomView *)bottomView {
     if (!_bottomView) {
         _bottomView = [[SLQRBottomView alloc] init];
@@ -192,6 +248,11 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/";
     return _bottomView;
 }
 
+/**
+ session
+
+ @return AVCaptureSession
+ */
 - (AVCaptureSession *)session {
     if (!_session) {
         _session = [[AVCaptureSession alloc] init];
@@ -203,6 +264,9 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/";
 
 @end
 
+/**
+ SLQRScanView
+ */
 @implementation SLQRScanView
 
 - (instancetype)init
@@ -216,6 +280,11 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/";
     return self;
 }
 
+/**
+ setCornerLineColor
+
+ @param cornerLineColor UIColor
+ */
 - (void)setCornerLineColor:(UIColor *)cornerLineColor {
     if (_cornerLineColor != cornerLineColor) {
         _cornerLineColor = cornerLineColor;
@@ -223,6 +292,11 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/";
     }
 }
 
+/**
+ setBorderColor
+
+ @param borderColor borderColor
+ */
 - (void)setBorderColor:(UIColor *)borderColor {
     if (borderColor != _borderColor) {
         _borderColor = borderColor;
@@ -230,11 +304,21 @@ NSString * const kInviteCodePrefix = @"http://api.xiubi.com/";
     }
 }
 
+/**
+ setScanRect
+
+ @param scanRect scanRect
+ */
 - (void)setScanRect:(CGRect)scanRect {
     _scanRect = scanRect;
     [self setNeedsDisplay];
 }
 
+/**
+ setSize
+
+ @param size size
+ */
 - (void)setSize:(CGSize)size {
     _size = size;
     [self setNeedsDisplay];

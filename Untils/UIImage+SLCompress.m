@@ -21,11 +21,10 @@
     CGFloat targetWidth = targetSize.width;
     CGFloat targetHeight = targetSize.height;
     CGFloat scaleFactor = 0.0;
- 
     CGFloat scaledWidth = targetWidth;
     CGFloat scaledHeight = targetHeight;
     CGPoint thumbnailPoint = CGPointMake(0.0,0.0);
-    
+
     if (targetWidth == targetHeight) {
         
         if (width<=height&&width<targetWidth) {
@@ -59,7 +58,7 @@
             thumbnailPoint.x = (targetWidth - scaledWidth) * 0.5;
         }
     }
- 
+
     targetSize = CGSizeMake(targetWidth, targetHeight);
     
     UIGraphicsBeginImageContext(targetSize); // this will crop
@@ -67,12 +66,9 @@
  
     thumbnailRect.origin = thumbnailPoint;
     thumbnailRect.size.width= scaledWidth;
-   
     thumbnailRect.size.height = scaledHeight;
     [sourceImage drawInRect:thumbnailRect];
-
     newImage = UIGraphicsGetImageFromCurrentImageContext();
-
     if(newImage == nil)
         NSLog(@"could not scale image");
     UIGraphicsEndImageContext();
