@@ -9,7 +9,9 @@
 #import <Foundation/Foundation.h>
 
 @interface NSString (JKBase64)
+//base64的string
 + (NSString *)jk_stringWithBase64EncodedString:(NSString *)string;
+//base64的string和wrap
 - (NSString *)jk_base64EncodedStringWithWrapWidth:(NSUInteger)wrapWidth;
 - (NSString *)jk_base64EncodedString;
 - (NSString *)jk_base64DecodedString;
