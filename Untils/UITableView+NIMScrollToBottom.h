@@ -10,5 +10,5 @@
 
 @interface UITableView (NIMKit)
 
-- (void)nim_scrollToBottom:(BOOL)animation;
+- (void)show_scrollToBottom:(BOOL)animation;
 @end
