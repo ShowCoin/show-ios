@@ -10,7 +10,7 @@
 
 @implementation UITableView (NIMKit)
 
-- (void)nim_scrollToBottom:(BOOL)animation
+- (void)show_scrollToBottom:(BOOL)animation
 {
     if (self.contentSize.height + self.contentInset.top > self.frame.size.height)
     {
