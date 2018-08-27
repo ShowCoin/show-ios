@@ -20,6 +20,7 @@
 - (NSArray *)jk_select:(BOOL (^)(id object))block;
 //each jk_reject操作
 - (NSArray *)jk_reject:(BOOL (^)(id object))block;
+//each 排序算法
 - (NSArray *)jk_sort;
 - (id)jk_reduce:(id(^)(id accumulator, id object))block;
 - (id)jk_reduce:(id)initial withBlock:(id(^)(id accumulator, id object))block;
