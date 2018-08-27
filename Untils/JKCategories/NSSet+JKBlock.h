@@ -9,7 +9,10 @@
 #import <Foundation/Foundation.h>
 
 @interface NSSet (JKBlock)
+
+//each 操作
 - (void)jk_each:(void (^)(id))block;
+//each index操作
 - (void)jk_eachWithIndex:(void (^)(id, int))block;
 - (NSArray *)jk_map:(id (^)(id object))block;
 - (NSArray *)jk_select:(BOOL (^)(id object))block;
