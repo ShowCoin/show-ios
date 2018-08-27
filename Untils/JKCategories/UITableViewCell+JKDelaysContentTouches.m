@@ -15,7 +15,7 @@
     id sv = self.contentView.superview;
     while ( ![sv isKindOfClass: [UIScrollView class]] && sv != self )
     {
-        sv = [sv superview];
+        sv = [sv superview];lear
     }
     
     return sv == self ? nil : sv;
