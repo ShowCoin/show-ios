@@ -24,8 +24,12 @@
 - (CGFloat)jk_currentPageY;
 //当前页面的X
 - (CGFloat)jk_currentPageX;
+//设置页面的Y
 - (void)jk_setPageY:(CGFloat)page;
+//设置页面的X
 - (void)jk_setPageX:(CGFloat)page;
+//设置页面的Y 动画
 - (void)jk_setPageY:(CGFloat)page animated:(BOOL)animated;
+//设置页面的X 动画
 - (void)jk_setPageX:(CGFloat)page animated:(BOOL)animated;
 @end

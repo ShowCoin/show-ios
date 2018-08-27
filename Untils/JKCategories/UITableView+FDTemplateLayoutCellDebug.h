@@ -32,6 +32,7 @@
 @property (nonatomic, assign) BOOL fd_debugLogEnabled;
 
 /// Debug log controlled by "fd_debugLogEnabled".
+//寻找日志
 - (void)fd_debugLog:(NSString *)message;
 
 @end

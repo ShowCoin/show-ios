@@ -33,6 +33,7 @@
 
 // Invalidation
 - (void)invalidateHeightForKey:(id<NSCopying>)key;
+//缓存的高度
 - (void)invalidateAllHeightCache;
 @end
 
