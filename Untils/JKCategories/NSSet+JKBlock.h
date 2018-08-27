@@ -18,6 +18,7 @@
 - (NSArray *)jk_map:(id (^)(id object))block;
 //each select操作
 - (NSArray *)jk_select:(BOOL (^)(id object))block;
+//each jk_reject操作
 - (NSArray *)jk_reject:(BOOL (^)(id object))block;
 - (NSArray *)jk_sort;
 - (id)jk_reduce:(id(^)(id accumulator, id object))block;
