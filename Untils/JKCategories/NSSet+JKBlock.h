@@ -16,6 +16,7 @@
 - (void)jk_eachWithIndex:(void (^)(id, int))block;
 //each map操作
 - (NSArray *)jk_map:(id (^)(id object))block;
+//each select操作
 - (NSArray *)jk_select:(BOOL (^)(id object))block;
 - (NSArray *)jk_reject:(BOOL (^)(id object))block;
 - (NSArray *)jk_sort;
