@@ -14,6 +14,7 @@
 
 @implementation UIWebView (JKSwipeGesture)
 
+//webView的左滑，右滑
 - (void)jk_useSwipeGesture {
     UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(jk_swipeRight:)];
     [swipeRight setDirection:UISwipeGestureRecognizerDirectionRight];
