@@ -89,6 +89,7 @@ static const void *JKUITextFieldShouldReturnKey = &JKUITextFieldShouldReturnKey;
         [delegate textFieldDidBeginEditing:textField];
     }
 }
+//重写block替换字符串
 + (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
     JKUITextFieldCharacterChangeBlock block = textField.jk_shouldChangeCharactersInRangeBlock;
@@ -101,6 +102,7 @@ static const void *JKUITextFieldShouldReturnKey = &JKUITextFieldShouldReturnKey;
     }
     return YES;
 }
+
 + (BOOL)textFieldShouldClear:(UITextField *)textField
 {
     JKUITextFieldReturnBlock block = textField.jk_shouldClearBlock;
