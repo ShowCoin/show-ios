@@ -66,6 +66,7 @@ static const void *JKUITextFieldShouldReturnKey = &JKUITextFieldShouldReturnKey;
     // return default value just in case
     return YES;
 }
+//重写代理为block已经开始编辑
 + (void)textFieldDidBeginEditing:(UITextField *)textField
 {
    JKUITextFieldVoidBlock block = textField.jk_didBeginEditingBlock;
