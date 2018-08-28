@@ -102,7 +102,7 @@ static const void *JKUITextFieldShouldReturnKey = &JKUITextFieldShouldReturnKey;
     }
     return YES;
 }
-
+//是否清除
 + (BOOL)textFieldShouldClear:(UITextField *)textField
 {
     JKUITextFieldReturnBlock block = textField.jk_shouldClearBlock;
