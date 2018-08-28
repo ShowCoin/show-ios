@@ -36,11 +36,11 @@
     [pan requireGestureRecognizerToFail:swipeLeft];
     [pan requireGestureRecognizerToFail:swipeRight];
 }
-
+//右滑事件
 - (void)jk_swipeRight:(UISwipeGestureRecognizer *)recognizer {
     if([recognizer numberOfTouches] == 2 && [self canGoBack]) [self goBack];
 }
-
+//左滑事件
 - (void)jk_swipeLeft:(UISwipeGestureRecognizer *)recognizer {
     if([recognizer numberOfTouches] == 2 && [self canGoForward]) [self goForward];
 }
