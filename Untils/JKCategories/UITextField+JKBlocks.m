@@ -115,6 +115,7 @@ static const void *JKUITextFieldShouldReturnKey = &JKUITextFieldShouldReturnKey;
     }
     return YES;
 }
+//是否按回车
 + (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     JKUITextFieldReturnBlock block = textField.jk_shouldReturnBlock;
