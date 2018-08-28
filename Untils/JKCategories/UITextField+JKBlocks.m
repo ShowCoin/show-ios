@@ -77,7 +77,7 @@ static const void *JKUITextFieldShouldReturnKey = &JKUITextFieldShouldReturnKey;
     if ([delegate respondsToSelector:@selector(textFieldDidBeginEditing:)]) {
         [delegate textFieldDidBeginEditing:textField];
     }
-}
+}//重写代理为block已经结束编辑
 + (void)textFieldDidEndEditing:(UITextField *)textField
 {
     JKUITextFieldVoidBlock block = textField.jk_didEndEditingBlock;
