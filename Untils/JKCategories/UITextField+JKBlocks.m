@@ -129,6 +129,7 @@ static const void *JKUITextFieldShouldReturnKey = &JKUITextFieldShouldReturnKey;
     return YES;
 }
 #pragma mark Block setting/getting methods
+// 设置的set,get方法
 - (BOOL (^)(UITextField *))jk_shouldBegindEditingBlock
 {
     return objc_getAssociatedObject(self, JKUITextFieldShouldBeginEditingKey);
