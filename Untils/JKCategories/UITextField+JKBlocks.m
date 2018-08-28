@@ -175,10 +175,12 @@ static const void *JKUITextFieldShouldReturnKey = &JKUITextFieldShouldReturnKey;
     [self jk_setDelegateIfNoDelegateSet];
     objc_setAssociatedObject(self, JKUITextFieldShouldChangeCharactersInRangeKey, shouldChangeCharactersInRangeBlock, OBJC_ASSOCIATION_COPY);
 }
+//设置block
 - (BOOL (^)(UITextField *))jk_shouldReturnBlock
 {
     return objc_getAssociatedObject(self, JKUITextFieldShouldReturnKey);
 }
+
 - (void)setJk_shouldReturnBlock:(BOOL (^)(UITextField *))shouldReturnBlock
 {
     [self jk_setDelegateIfNoDelegateSet];
