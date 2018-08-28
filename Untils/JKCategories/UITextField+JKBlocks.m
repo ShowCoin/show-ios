@@ -37,6 +37,8 @@ static const void *JKUITextFieldShouldChangeCharactersInRangeKey = &JKUITextFiel
 static const void *JKUITextFieldShouldClearKey = &JKUITextFieldShouldClearKey;
 static const void *JKUITextFieldShouldReturnKey = &JKUITextFieldShouldReturnKey;
 #pragma mark UITextField Delegate methods
+
+//重写代理为block是否开始编辑
 + (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
 {
     JKUITextFieldReturnBlock block = textField.jk_shouldBegindEditingBlock;
@@ -50,6 +52,7 @@ static const void *JKUITextFieldShouldReturnKey = &JKUITextFieldShouldReturnKey;
     // return default value just in case
     return YES;
 }
+//重写代理为block是否结束编辑
 + (BOOL)textFieldShouldEndEditing:(UITextField *)textField
 {
     JKUITextFieldReturnBlock block = textField.jk_shouldEndEditingBlock;
