@@ -20,6 +20,7 @@
 @property (copy, nonatomic) BOOL (^jk_shouldChangeCharactersInRangeBlock)(UITextField *textField, NSRange range, NSString *replacementString);
 //是否回车的问题
 @property (copy, nonatomic) BOOL (^jk_shouldReturnBlock)(UITextField *textField);
+//是否消除的问题
 @property (copy, nonatomic) BOOL (^jk_shouldClearBlock)(UITextField *textField);
 
 - (void)setJk_shouldBegindEditingBlock:(BOOL (^)(UITextField *textField))shouldBegindEditingBlock;
