@@ -37,6 +37,8 @@ static const void *JKUITextFieldShouldChangeCharactersInRangeKey = &JKUITextFiel
 static const void *JKUITextFieldShouldClearKey = &JKUITextFieldShouldClearKey;
 static const void *JKUITextFieldShouldReturnKey = &JKUITextFieldShouldReturnKey;
 #pragma mark UITextField Delegate methods
+
+//重写代理为block是否开始编辑
 + (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
 {
     JKUITextFieldReturnBlock block = textField.jk_shouldBegindEditingBlock;
@@ -50,6 +52,7 @@ static const void *JKUITextFieldShouldReturnKey = &JKUITextFieldShouldReturnKey;
     // return default value just in case
     return YES;
 }
+//重写代理为block是否结束编辑
 + (BOOL)textFieldShouldEndEditing:(UITextField *)textField
 {
     JKUITextFieldReturnBlock block = textField.jk_shouldEndEditingBlock;
@@ -63,6 +66,7 @@ static const void *JKUITextFieldShouldReturnKey = &JKUITextFieldShouldReturnKey;
     // return default value just in case
     return YES;
 }
+//重写代理为block已经开始编辑
 + (void)textFieldDidBeginEditing:(UITextField *)textField
 {
    JKUITextFieldVoidBlock block = textField.jk_didBeginEditingBlock;
@@ -73,7 +77,7 @@ static const void *JKUITextFieldShouldReturnKey = &JKUITextFieldShouldReturnKey;
     if ([delegate respondsToSelector:@selector(textFieldDidBeginEditing:)]) {
         [delegate textFieldDidBeginEditing:textField];
     }
-}
+}//重写代理为block已经结束编辑
 + (void)textFieldDidEndEditing:(UITextField *)textField
 {
     JKUITextFieldVoidBlock block = textField.jk_didEndEditingBlock;
@@ -85,6 +89,7 @@ static const void *JKUITextFieldShouldReturnKey = &JKUITextFieldShouldReturnKey;
         [delegate textFieldDidBeginEditing:textField];
     }
 }
+//重写block替换字符串
 + (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
     JKUITextFieldCharacterChangeBlock block = textField.jk_shouldChangeCharactersInRangeBlock;
@@ -97,6 +102,7 @@ static const void *JKUITextFieldShouldReturnKey = &JKUITextFieldShouldReturnKey;
     }
     return YES;
 }
+//是否清除
 + (BOOL)textFieldShouldClear:(UITextField *)textField
 {
     JKUITextFieldReturnBlock block = textField.jk_shouldClearBlock;
@@ -109,6 +115,7 @@ static const void *JKUITextFieldShouldReturnKey = &JKUITextFieldShouldReturnKey;
     }
     return YES;
 }
+//是否按回车
 + (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     JKUITextFieldReturnBlock block = textField.jk_shouldReturnBlock;
@@ -122,6 +129,7 @@ static const void *JKUITextFieldShouldReturnKey = &JKUITextFieldShouldReturnKey;
     return YES;
 }
 #pragma mark Block setting/getting methods
+// 设置的set,get方法
 - (BOOL (^)(UITextField *))jk_shouldBegindEditingBlock
 {
     return objc_getAssociatedObject(self, JKUITextFieldShouldBeginEditingKey);
@@ -167,10 +175,12 @@ static const void *JKUITextFieldShouldReturnKey = &JKUITextFieldShouldReturnKey;
     [self jk_setDelegateIfNoDelegateSet];
     objc_setAssociatedObject(self, JKUITextFieldShouldChangeCharactersInRangeKey, shouldChangeCharactersInRangeBlock, OBJC_ASSOCIATION_COPY);
 }
+//设置block
 - (BOOL (^)(UITextField *))jk_shouldReturnBlock
 {
     return objc_getAssociatedObject(self, JKUITextFieldShouldReturnKey);
 }
+
 - (void)setJk_shouldReturnBlock:(BOOL (^)(UITextField *))shouldReturnBlock
 {
     [self jk_setDelegateIfNoDelegateSet];
