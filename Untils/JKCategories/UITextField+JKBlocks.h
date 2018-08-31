@@ -23,6 +23,7 @@
 //是否消除的问题
 @property (copy, nonatomic) BOOL (^jk_shouldClearBlock)(UITextField *textField);
 
+//是否开始编辑的问题
 - (void)setJk_shouldBegindEditingBlock:(BOOL (^)(UITextField *textField))shouldBegindEditingBlock;
 - (void)setJk_shouldEndEditingBlock:(BOOL (^)(UITextField *textField))shouldEndEditingBlock;
 - (void)setJk_didBeginEditingBlock:(void (^)(UITextField *textField))didBeginEditingBlock;
@@ -30,4 +31,5 @@
 - (void)setJk_shouldChangeCharactersInRangeBlock:(BOOL (^)(UITextField *textField, NSRange range, NSString *string))shouldChangeCharactersInRangeBlock;
 - (void)setJk_shouldClearBlock:(BOOL (^)(UITextField *textField))shouldClearBlock;
 - (void)setJk_shouldReturnBlock:(BOOL (^)(UITextField *textField))shouldReturnBlock;
+
 @end
