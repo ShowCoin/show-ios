@@ -45,6 +45,7 @@
 {
     NSString *stricterFilterString = @"^[A-Za-z0-9!@#$%^&*.~/{}|()'\"?><,.`+-=_:;\\\\[]]\\\[]{6,20}$";
     //    NSLog(@"stricterFilterString = %@",stricterFilterString);
+    
     NSPredicate *passwordTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", stricterFilterString];
     return [passwordTest evaluateWithObject:self];
 }
