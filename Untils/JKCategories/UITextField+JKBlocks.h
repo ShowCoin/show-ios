@@ -10,6 +10,7 @@
 @interface UITextField (JKBlocks)
 //开始编辑的BLOCK
 @property (copy, nonatomic) BOOL (^jk_shouldBegindEditingBlock)(UITextField *textField);
+//是否开始编辑的BLOCK
 @property (copy, nonatomic) BOOL (^jk_shouldEndEditingBlock)(UITextField *textField);
 @property (copy, nonatomic) void (^jk_didBeginEditingBlock)(UITextField *textField);
 @property (copy, nonatomic) void (^jk_didEndEditingBlock)(UITextField *textField);
