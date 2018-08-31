@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 @interface UITextField (JKBlocks)
+//开始编辑的BLOCK
 @property (copy, nonatomic) BOOL (^jk_shouldBegindEditingBlock)(UITextField *textField);
 @property (copy, nonatomic) BOOL (^jk_shouldEndEditingBlock)(UITextField *textField);
 @property (copy, nonatomic) void (^jk_didBeginEditingBlock)(UITextField *textField);
