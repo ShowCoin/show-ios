@@ -80,6 +80,8 @@
     
     NSPredicate *test = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", stricterFilterString];
     return [test evaluateWithObject:self];
+    
+    
 }
 
 /*判断是否为空字符串*/
