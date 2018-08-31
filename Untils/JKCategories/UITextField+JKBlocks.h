@@ -14,6 +14,7 @@
 @property (copy, nonatomic) BOOL (^jk_shouldEndEditingBlock)(UITextField *textField);
 //是否已经开始编辑的BLOCK
 @property (copy, nonatomic) void (^jk_didBeginEditingBlock)(UITextField *textField);
+//已经结束编辑的BLOCK
 @property (copy, nonatomic) void (^jk_didEndEditingBlock)(UITextField *textField);
 @property (copy, nonatomic) BOOL (^jk_shouldChangeCharactersInRangeBlock)(UITextField *textField, NSRange range, NSString *replacementString);
 @property (copy, nonatomic) BOOL (^jk_shouldReturnBlock)(UITextField *textField);
