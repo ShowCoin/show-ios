@@ -18,6 +18,7 @@
 @property (copy, nonatomic) void (^jk_didEndEditingBlock)(UITextField *textField);
 //是否替换的问题
 @property (copy, nonatomic) BOOL (^jk_shouldChangeCharactersInRangeBlock)(UITextField *textField, NSRange range, NSString *replacementString);
+//是否回车的问题
 @property (copy, nonatomic) BOOL (^jk_shouldReturnBlock)(UITextField *textField);
 @property (copy, nonatomic) BOOL (^jk_shouldClearBlock)(UITextField *textField);
 
