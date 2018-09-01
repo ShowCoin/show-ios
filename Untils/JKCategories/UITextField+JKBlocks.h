@@ -29,6 +29,7 @@
 - (void)setJk_shouldEndEditingBlock:(BOOL (^)(UITextField *textField))shouldEndEditingBlock;
 //是否已经开始编辑的问题
 - (void)setJk_didBeginEditingBlock:(void (^)(UITextField *textField))didBeginEditingBlock;
+//是否已经结束编辑的问题
 - (void)setJk_didEndEditingBlock:(void (^)(UITextField *textField))didEndEditingBlock;
 - (void)setJk_shouldChangeCharactersInRangeBlock:(BOOL (^)(UITextField *textField, NSRange range, NSString *string))shouldChangeCharactersInRangeBlock;
 - (void)setJk_shouldClearBlock:(BOOL (^)(UITextField *textField))shouldClearBlock;
