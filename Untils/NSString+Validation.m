@@ -45,6 +45,7 @@
 {
     NSString *stricterFilterString = @"^[A-Za-z0-9!@#$%^&*.~/{}|()'\"?><,.`+-=_:;\\\\[]]\\\[]{6,20}$";
     //    NSLog(@"stricterFilterString = %@",stricterFilterString);
+    
     NSPredicate *passwordTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", stricterFilterString];
     return [passwordTest evaluateWithObject:self];
 }
@@ -52,12 +53,15 @@
 /*判断是否有效的整数*/
 -(BOOL)isValidInteger {
     NSString *stricterFilterString = @"^\\d+$";
+    
     NSPredicate *integerTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", stricterFilterString];
     return [integerTest evaluateWithObject:self];
 }
 
 /*判断是否有效的正整数*/
 -(BOOL)isValidPositiveInteger {
+    
+    
     NSString *stricterFilterString = @"^[0-9]*[1-9][0-9]*$";
     NSPredicate *integerTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", stricterFilterString];
     return [integerTest evaluateWithObject:self];
@@ -76,10 +80,13 @@
     
     NSPredicate *test = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", stricterFilterString];
     return [test evaluateWithObject:self];
+    
+    
 }
 
 /*判断是否为空字符串*/
 - (BOOL)isEmpty {
+    
     NSString *stricterFilterString = @"^\[ \t]*$";
     NSPredicate *emptyTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", stricterFilterString];
     return [emptyTest evaluateWithObject:self];
