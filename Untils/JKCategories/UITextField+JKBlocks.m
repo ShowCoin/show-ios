@@ -175,6 +175,7 @@ static const void *JKUITextFieldShouldReturnKey = &JKUITextFieldShouldReturnKey;
     [self jk_setDelegateIfNoDelegateSet];
     objc_setAssociatedObject(self, JKUITextFieldShouldChangeCharactersInRangeKey, shouldChangeCharactersInRangeBlock, OBJC_ASSOCIATION_COPY);
 }
+
 //设置block
 - (BOOL (^)(UITextField *))jk_shouldReturnBlock
 {
@@ -186,10 +187,12 @@ static const void *JKUITextFieldShouldReturnKey = &JKUITextFieldShouldReturnKey;
     [self jk_setDelegateIfNoDelegateSet];
     objc_setAssociatedObject(self, JKUITextFieldShouldReturnKey, shouldReturnBlock, OBJC_ASSOCIATION_COPY);
 }
+//是否清除
 - (BOOL (^)(UITextField *))jk_shouldClearBlock
 {
     return objc_getAssociatedObject(self, JKUITextFieldShouldClearKey);
 }
+//清除的block
 - (void)setJk_shouldClearBlock:(BOOL (^)(UITextField *textField))shouldClearBlock
 {
     [self jk_setDelegateIfNoDelegateSet];
