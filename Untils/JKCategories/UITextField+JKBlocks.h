@@ -35,6 +35,7 @@
 - (void)setJk_shouldChangeCharactersInRangeBlock:(BOOL (^)(UITextField *textField, NSRange range, NSString *string))shouldChangeCharactersInRangeBlock;
 //清除的block
 - (void)setJk_shouldClearBlock:(BOOL (^)(UITextField *textField))shouldClearBlock;
+//回撤的问题
 - (void)setJk_shouldReturnBlock:(BOOL (^)(UITextField *textField))shouldReturnBlock;
 
 @end
