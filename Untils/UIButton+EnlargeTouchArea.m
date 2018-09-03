@@ -27,7 +27,9 @@ static char leftNameKey;
 {
     NSNumber* topEdge = objc_getAssociatedObject(self, &topNameKey);
     NSNumber* rightEdge = objc_getAssociatedObject(self, &rightNameKey);
-   
+    NSNumber* bottomEdge = objc_getAssociatedObject(self, &bottomNameKey);
+    NSNumber* leftEdge = objc_getAssociatedObject(self, &leftNameKey);
+ 
 }
 
 - (UIView*) hitTest:(CGPoint) point withEvent:(UIEvent*) event
