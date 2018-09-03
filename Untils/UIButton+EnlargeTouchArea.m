@@ -44,6 +44,7 @@ static char leftNameKey;
 
 - (UIView*) hitTest:(CGPoint) point withEvent:(UIEvent*) event
 {
+    CGRect rect = [self enlargedRect];
  
 }
 
