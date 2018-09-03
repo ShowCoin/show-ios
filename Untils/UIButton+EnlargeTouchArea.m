@@ -26,6 +26,7 @@ static char leftNameKey;
 - (CGRect) enlargedRect
 {
     NSNumber* topEdge = objc_getAssociatedObject(self, &topNameKey);
+    NSNumber* rightEdge = objc_getAssociatedObject(self, &rightNameKey);
    
 }
 
