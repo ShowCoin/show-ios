@@ -13,7 +13,10 @@
 + (NSString *)jk_stringWithBase64EncodedString:(NSString *)string;
 //base64的string和wrap
 - (NSString *)jk_base64EncodedStringWithWrapWidth:(NSUInteger)wrapWidth;
+//base64加密
 - (NSString *)jk_base64EncodedString;
+//base64解密
 - (NSString *)jk_base64DecodedString;
+//base64 解密DATA
 - (NSData *)jk_base64DecodedData;
 @end
