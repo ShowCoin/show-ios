@@ -37,5 +37,7 @@
 #import <Foundation/Foundation.h>
 
 @interface NSObject (JKBlockTimer)
+//prefix runblock
 -(void)jk_logTimeTakenToRunBlock:(void (^)(void)) block withPrefix:(NSString*) prefixString;
+
 @end
