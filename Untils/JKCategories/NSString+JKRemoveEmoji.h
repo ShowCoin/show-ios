@@ -29,5 +29,7 @@
 @end
 
 @interface NSCharacterSet (JKEmojiCharacterSet)
+//表情集合
 + (NSCharacterSet *)jk_emojiCharacterSet;
+
 @end
