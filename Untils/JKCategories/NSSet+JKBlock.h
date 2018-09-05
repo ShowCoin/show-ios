@@ -22,6 +22,8 @@
 - (NSArray *)jk_reject:(BOOL (^)(id object))block;
 //each 排序算法
 - (NSArray *)jk_sort;
+// 聚合操作
 - (id)jk_reduce:(id(^)(id accumulator, id object))block;
+// block聚合
 - (id)jk_reduce:(id)initial withBlock:(id(^)(id accumulator, id object))block;
 @end
