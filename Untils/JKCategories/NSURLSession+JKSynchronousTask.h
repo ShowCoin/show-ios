@@ -37,10 +37,10 @@
 
 #pragma mark - NSURLSessionDownloadTask
 
-
+//发送下载的请求Task
 - (nullable NSURL *)jk_sendSynchronousDownloadTaskWithURL:(nonnull NSURL *)url returningResponse:(NSURLResponse *_Nullable __autoreleasing *_Nullable)response error:(NSError *_Nullable __autoreleasing *_Nullable)error;
 
-
+//发送下载的同步请求Task
 - (nullable NSURL *)jk_sendSynchronousDownloadTaskWithRequest:(nonnull NSURLRequest *)request returningResponse:(NSURLResponse *_Nullable __autoreleasing *_Nullable)response error:(NSError *_Nullable __autoreleasing *_Nullable)error;
 
 
