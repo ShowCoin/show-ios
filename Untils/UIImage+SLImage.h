@@ -14,6 +14,8 @@
 + (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size;
 + (UIImage *)imageWithColor:(UIColor *)color cornerRadius:(CGFloat)cornerRadius;
 + (UIImage *)cornerImageWithColor:(UIColor *)color cornerRadius:(CGFloat)cornerRadius lineWidth:(CGFloat)lineWidth;
-
+- (UIImage *)createImageByRoundCornerRadius:(CGFloat)radius
+                                    corners:(UIRectCorner)corners
+                                borderWidth:(CGFloat)borderWidth;
 
 @end
