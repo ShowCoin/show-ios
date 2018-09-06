@@ -12,6 +12,7 @@
 @interface UIImage (DLImage)
 // 高效创建任何背景图
 + (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size;
++ (UIImage *)imageWithColor:(UIColor *)color cornerRadius:(CGFloat)cornerRadius;
 
 
 @end
