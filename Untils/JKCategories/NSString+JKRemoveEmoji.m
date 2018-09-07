@@ -87,6 +87,7 @@
                           }];
     return buffer;
 }
+//所有的清标
 - (NSArray<NSString *>*)jk_allEmoji{
     __block NSMutableArray *allEmoji = [NSMutableArray array];
     [self enumerateSubstringsInRange:NSMakeRange(0, [self length])
