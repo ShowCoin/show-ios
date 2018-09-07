@@ -75,6 +75,7 @@
     
     return buffer;
 }
+//所有的表情字符串
 - (NSString *)jk_allEmojiString{
     NSMutableString* __block buffer = [NSMutableString stringWithCapacity:[self length]];
     [self enumerateSubstringsInRange:NSMakeRange(0, [self length])
