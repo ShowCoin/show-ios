@@ -55,14 +55,15 @@
     return NO;
 }
 
-
+//根据字符删除表情
 - (NSString *)jk_stringByRemovingEmoji {
     return  [self jk_removingEmoji];
 }
-
+//删除表情
 - (NSString *)jk_removingEmoji {
     return  [self jk_stringByReplaceingEmojiWithString:@""];
 }
+//替换表情
 - (NSString *)jk_stringByReplaceingEmojiWithString:(NSString*)string{
     NSMutableString* __block buffer = [NSMutableString stringWithCapacity:[self length]];
     
