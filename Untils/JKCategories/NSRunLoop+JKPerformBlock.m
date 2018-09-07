@@ -11,12 +11,12 @@
 NSString *const NSRunloopTimeoutException = @"NSRunloopTimeoutException";
 
 @implementation NSRunLoop (JKPerformBlock)
-
+//隔段时间执行
 - (void)jk_performBlockAndWait:(void (^)(BOOL *))block
 {
     [self jk_performBlockAndWait:block timeoutInterval:10.0];
 }
-
+//超时
 - (void)jk_performBlockAndWait:(void (^)(BOOL *))block timeoutInterval:(NSTimeInterval)timeoutInterval
 {
     if (!block || timeoutInterval < 0.0) {
