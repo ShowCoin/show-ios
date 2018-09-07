@@ -99,6 +99,7 @@
                           }];
     return allEmoji;
 }
+//表情range
 - (NSArray<NSString *>*)jk_allEmojiRanges{
     __block NSMutableArray *rangs = [NSMutableArray array];
     [self enumerateSubstringsInRange:NSMakeRange(0, [self length])
