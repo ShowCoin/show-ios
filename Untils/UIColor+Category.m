@@ -39,7 +39,11 @@
     
     unsigned int R ,G, B;
     
- 
+    [Rscanner scanHexInt:&R];
+    [Gscanner scanHexInt:&G];
+    [Bscanner scanHexInt:&B];
+
+    return [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:1.0f];
 }
 
 @end
