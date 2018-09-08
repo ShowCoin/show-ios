@@ -27,7 +27,9 @@
     NSString *colorR = [tempS substringWithRange:rangR];
     
     NSRange rangG = NSMakeRange(2, 2);
+    NSString *colorG = [tempS substringWithRange:rangG];
     
+ 
 }
 
 @end
