@@ -34,7 +34,12 @@
     
     
     NSScanner * Rscanner = [NSScanner scannerWithString:colorR];
-  
+    NSScanner * Gscanner = [NSScanner scannerWithString:colorG];
+    NSScanner * Bscanner = [NSScanner scannerWithString:colorB];
+    
+    unsigned int R ,G, B;
+    
+ 
 }
 
 @end
