@@ -33,7 +33,8 @@
     NSString *colorB = [tempS substringWithRange:rangB];
     
     
-
+    NSScanner * Rscanner = [NSScanner scannerWithString:colorR];
+  
 }
 
 @end
