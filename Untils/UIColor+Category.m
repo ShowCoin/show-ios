@@ -12,6 +12,10 @@
 
 + (UIColor *)customColorWithString:(NSString *)string
 {
+    //十六进制色值，过滤输入带不带#
+    //#121212,121212
+    NSString * tempS = nil;
+    
   
 }
 
