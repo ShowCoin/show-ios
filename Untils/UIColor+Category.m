@@ -16,7 +16,15 @@
     //#121212,121212
     NSString * tempS = nil;
     
-  
+    if (string.length == 7) {//#121212,
+        tempS = [string substringFromIndex:1];
+    }else if(string.length == 6){//121212
+        tempS = string;
+    }else{
+        return nil;
+    }
+    NSRange rangR = NSMakeRange(0, 2);
+
 }
 
 @end
