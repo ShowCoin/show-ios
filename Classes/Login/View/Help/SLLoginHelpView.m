@@ -152,3 +152,8 @@ static NSString * const kSLHelpViewCellID = @"kSLHelpViewCellID";
 
 @end
 
+
+@implementation SLHelpViewCell
+
+
+@end
