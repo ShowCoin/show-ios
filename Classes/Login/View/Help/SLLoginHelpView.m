@@ -67,5 +67,23 @@ static NSString * const kSLHelpViewCellID = @"kSLHelpViewCellID";
     self.closeButton.frame = CGRectMake(viewX, viewY, viewW, viewH);
 }
 
+#pragma mark - <UITableViewDelegate, UITableViewDataSource>
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 10;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return [tableView dequeueReusableCellWithIdentifier:kSLHelpViewCellID];
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(SLHelpViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    cell.textLabel.text = @"如何获取正确推荐人?";
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
 
 @end
