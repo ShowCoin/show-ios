@@ -102,7 +102,7 @@
 //    };
 //    group.delegate = self.delegate;
 //    [self.layer addAnimation:group forKey:nil];
-}
+}  
 
 - (void)doColorAni {
     CABasicAnimation *colorAni = [CABasicAnimation animationWithKeyPath:@"backgroundColor"];
