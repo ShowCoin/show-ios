@@ -16,4 +16,9 @@ static NSString * const kSLInviteCacheModelKey = @"kSLInviteCacheModelKey";
 
 @implementation SLInviteCacheModel
 
+- (void)dealloc {
+    NSLog(@"%s", __func__);
+}
+
+
 @end
