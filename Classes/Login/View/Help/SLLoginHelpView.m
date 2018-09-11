@@ -118,5 +118,37 @@ static NSString * const kSLHelpViewCellID = @"kSLHelpViewCellID";
     [self closeAction];
 }
 
+#pragma mark - lazy
+
+- (UIView *)navigationView {
+    if (!_navigationView) {
+        _navigationView = [[UIView alloc] init];
+        _navigationView.backgroundColor = [UIColor blackColor];
+    }
+    return _navigationView;
+}
+
+- (UIButton *)closeButton {
+    if (!_closeButton) {
+        _closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_closeButton setImage:[UIImage imageNamed:@"live_mini_close"] forState:UIControlStateNormal];
+        [_closeButton addTarget:self action:@selector(closeAction) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _closeButton;
+}
+
+- (UITableView *)tableView {
+    if (!_tableView) {
+        _tableView = [[UITableView alloc] init];
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
+        _tableView.rowHeight = 40;
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        _tableView.backgroundColor = [UIColor clearColor];
+        [_tableView registerClass:[SLHelpViewCell class] forCellReuseIdentifier:kSLHelpViewCellID];
+    }
+    return _tableView;
+}
 
 @end
+
