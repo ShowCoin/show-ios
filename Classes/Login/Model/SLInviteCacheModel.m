@@ -49,5 +49,15 @@ static NSString * const kSLInviteCacheModelKey = @"kSLInviteCacheModelKey";
     [NSUserDefaults.standardUserDefaults synchronize];
 }
 
+- (void)sl_checkInviteCode:(NSString *)code handler:(SLSimpleBlock)handler {
+    [self resetModel];
+    if (!IsValidString(code)) {
+        if (handler) handler();
+        return;
+    }
+    self.code = code;
+    
+}
+
 
 @end
