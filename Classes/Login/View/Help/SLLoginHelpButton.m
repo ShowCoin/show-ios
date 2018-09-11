@@ -34,5 +34,22 @@
     NSLog(@"%s", __func__);
 }
 
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        self.backgroundColor = [self blackColor];
+        [self setTitle:@"帮助" forState:UIControlStateNormal];
+        [self setTitleColor:kGrayWith676767 forState:UIControlStateNormal];
+        
+        self.titleLabel.font = [UIFont sl_fontMediumOfSize:10];
+        self.titleLabel.textAlignment = NSTextAlignmentCenter;
+
+        self.layer.cornerRadius = 14;
+        self.layer.masksToBounds = YES;
+    }
+    return self;
+}
+
 
 @end
