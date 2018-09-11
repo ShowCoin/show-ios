@@ -20,4 +20,7 @@
 /// 是否存在
 @property (nonatomic, assign) BOOL exit;
 
+/// 更新保存
+- (void)sl_update;
+
 @end
