@@ -41,5 +41,31 @@ static NSString * const kSLHelpViewCellID = @"kSLHelpViewCellID";
     return self;
 }
 
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    CGFloat w = self.frame.size.width;
+    CGFloat h = self.frame.size.height;
+    
+    CGFloat viewW = w * 0.6;
+    CGFloat viewX = w - viewW;
+    CGFloat viewY = 0;
+    CGFloat viewH = h;
+    self.contentView.frame = CGRectMake(viewX, viewY, viewW, viewH);
+    
+    viewX = 0;
+    viewH = KNaviBarHeight;
+    self.navigationView.frame = CGRectMake(viewX, viewY, viewW, viewH);
+
+    viewY = CGRectGetMaxY(self.navigationView.frame);
+    viewH = CGRectGetHeight(self.contentView.frame) - viewY;
+    self.tableView.frame = CGRectMake(viewX, viewY, viewW, viewH);
+    
+    viewH = 44;
+    viewW = 44;
+    viewX = CGRectGetWidth(self.navigationView.frame) - viewW;
+    viewY = CGRectGetHeight(self.navigationView.frame) - viewH;
+    self.closeButton.frame = CGRectMake(viewX, viewY, viewW, viewH);
+}
+
 
 @end
