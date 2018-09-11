@@ -28,6 +28,16 @@
     return view;
 }
 
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        self.backgroundColor = HexRGBAlpha(0x0c0c0c, 0.7);
+        [self addSubview:self.contentView];
+    }
+    return self;
+}
+
 #pragma mark - lazy
 
 - (UIView *)contentView {
