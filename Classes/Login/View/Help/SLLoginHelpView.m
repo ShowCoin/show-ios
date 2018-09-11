@@ -110,5 +110,13 @@ static NSString * const kSLHelpViewCellID = @"kSLHelpViewCellID";
     }];
 }
 
+- (void)closeAction {
+    [self hideViewHandler:nil];
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self closeAction];
+}
+
 
 @end
