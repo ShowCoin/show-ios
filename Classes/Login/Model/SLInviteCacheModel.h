@@ -23,4 +23,13 @@
 /// 更新保存
 - (void)sl_update;
 
+/**
+ 检测invitecode是否可用, 如果可用赋值自己同时回调
+
+ @param code 邀请码
+ @param handler 回调
+ */
+- (void)sl_checkInviteCode:(NSString *)code handler:(SLSimpleBlock)handler;
+
+
 @end
