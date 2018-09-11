@@ -155,5 +155,24 @@ static NSString * const kSLHelpViewCellID = @"kSLHelpViewCellID";
 
 @implementation SLHelpViewCell
 
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
+        UIView *selectedBackgroundView =  [[UIView alloc] init];
+        selectedBackgroundView.backgroundColor = [UIColor colorWithWhite:1 alpha:0.2];
+        self.selectedBackgroundView = selectedBackgroundView;
+        //self.selectionStyle = UITableViewCellSelectionStyleNone;
+        self.contentView.backgroundColor = [UIColor clearColor];
+        self.backgroundColor = [UIColor clearColor];
+        self.textLabel.textColor = [UIColor whiteColor];
+        self.textLabel.font = [UIFont systemFontOfSize:14];
+    }
+    return self;
+}
+
+//- (void)layoutSubviews {
+//    [super layoutSubviews];
+//    self.textLabel.frame = self.bounds;
+//}
 
 @end
