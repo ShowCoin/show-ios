@@ -19,6 +19,15 @@
 - (void)dealloc {
     NSLog(@"%s -> %@", __func__, NSStringFromClass([self class]));
 }
+
++ (instancetype)alertView {
+    SLAlertView *view = [[self alloc] init];
+    view.frame = UIScreen.mainScreen.bounds;
+    view.alpha = 0;
+    [UIApplication.sharedApplication.keyWindow addSubview:view];
+    return view;
+}
+
 #pragma mark - lazy
 
 - (UIView *)contentView {
