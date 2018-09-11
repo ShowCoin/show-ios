@@ -36,5 +36,12 @@ static NSString * const kSLInviteCacheModelKey = @"kSLInviteCacheModelKey";
     return per;
 }
 
+- (void)resetModel {
+    self.code     = @"";
+    self.ratio    = @"0";
+    self.nickname = @"";
+    self.exit     = NO;
+}
+
 
 @end
