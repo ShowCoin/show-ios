@@ -98,5 +98,17 @@ static NSString * const kSLHelpViewCellID = @"kSLHelpViewCellID";
     } completion:nil];
 }
 
+- (void)hideViewHandler:(SLSimpleBlock)handler {
+    [UIView animateWithDuration:0.25 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+        self.alpha = 0.1;
+        self.contentView.mj_x = kScreenWidth;
+    } completion:^(BOOL finished) {
+        [self removeFromSuperview];
+        if (handler) {
+            handler();
+        }
+    }];
+}
+
 
 @end
