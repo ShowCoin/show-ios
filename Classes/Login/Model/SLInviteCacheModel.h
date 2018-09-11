@@ -31,5 +31,6 @@
  */
 - (void)sl_checkInviteCode:(NSString *)code handler:(SLSimpleBlock)handler;
 
++ (instancetype)currentCache;
 
 @end
