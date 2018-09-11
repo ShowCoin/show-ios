@@ -43,5 +43,11 @@ static NSString * const kSLInviteCacheModelKey = @"kSLInviteCacheModelKey";
     self.exit     = NO;
 }
 
+- (void)sl_update {
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:self];
+    [NSUserDefaults.standardUserDefaults setObject:data forKey:kSLInviteCacheModelKey];
+    [NSUserDefaults.standardUserDefaults synchronize];
+}
+
 
 @end
