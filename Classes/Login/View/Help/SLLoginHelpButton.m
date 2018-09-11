@@ -51,5 +51,13 @@
     return self;
 }
 
+- (UIColor *)blackColor {
+     return HexRGBAlpha(0x242424, 1);
+}
+
+- (UIColor *)highlightedColor {
+    return HexRGBAlpha(0x242424, 1);
+}
+
 
 @end
