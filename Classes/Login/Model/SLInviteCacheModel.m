@@ -24,4 +24,17 @@ static NSString * const kSLInviteCacheModelKey = @"kSLInviteCacheModelKey";
     return @[@"existAction"];
 }
 
++ (instancetype)currentCache {
+    NSData *data = [NSUserDefaults.standardUserDefaults objectForKey:kSLInviteCacheModelKey];
+    SLInviteCacheModel *per = nil;
+    if (data) {
+        per = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    } else {
+        per = [[self alloc] init];
+        [per resetModel];
+    }
+    return per;
+}
+
+
 @end
