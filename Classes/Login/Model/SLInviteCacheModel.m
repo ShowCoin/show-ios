@@ -20,5 +20,8 @@ static NSString * const kSLInviteCacheModelKey = @"kSLInviteCacheModelKey";
     NSLog(@"%s", __func__);
 }
 
+- (NSArray *)ignoreArrary{
+    return @[@"existAction"];
+}
 
 @end
