@@ -85,5 +85,18 @@ static NSString * const kSLHelpViewCellID = @"kSLHelpViewCellID";
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
+#pragma mark - Method
+
+- (void)showView {
+    [UIApplication.sharedApplication.keyWindow addSubview:self];
+    
+    self.alpha = 0;
+    self.contentView.mj_x = kScreenWidth;
+    [UIView animateWithDuration:0.25 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+        self.alpha = 1;
+        self.contentView.mj_x = kScreenWidth * 0.4;
+    } completion:nil];
+}
+
 
 @end
