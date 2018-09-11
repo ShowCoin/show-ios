@@ -38,6 +38,9 @@
     return self;
 }
 
+- (void)showView {
+}
+
 #pragma mark - lazy
 
 - (UIView *)contentView {
