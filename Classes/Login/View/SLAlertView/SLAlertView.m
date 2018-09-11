@@ -39,6 +39,11 @@
 }
 
 - (void)showView {
+    
+}
+
+- (void)hideViewHandler:(SLSimpleBlock)handler {
+    
 }
 
 #pragma mark - lazy
