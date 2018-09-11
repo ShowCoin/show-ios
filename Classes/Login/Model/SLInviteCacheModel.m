@@ -36,28 +36,6 @@ static NSString * const kSLInviteCacheModelKey = @"kSLInviteCacheModelKey";
     return per;
 }
 
-- (void)resetModel {
-    self.code     = @"";
-    self.ratio    = @"0";
-    self.nickname = @"";
-    self.exit     = NO;
-}
-
-- (void)sl_update {
-    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:self];
-    [NSUserDefaults.standardUserDefaults setObject:data forKey:kSLInviteCacheModelKey];
-    [NSUserDefaults.standardUserDefaults synchronize];
-}
-
-- (void)sl_checkInviteCode:(NSString *)code handler:(SLSimpleBlock)handler {
-    [self resetModel];
-    if (!IsValidString(code)) {
-        if (handler) handler();
-        return;
-    }
-    self.code = code;
-    
-}
 
 
 @end
