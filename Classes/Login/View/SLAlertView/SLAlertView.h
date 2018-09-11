@@ -14,7 +14,4 @@
 
 + (instancetype)alertView;
 
-- (void)showView;
-- (void)hideViewHandler:(SLSimpleBlock)handler;
-
 @end
