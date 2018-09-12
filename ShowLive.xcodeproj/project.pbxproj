@@ -76,9 +76,7 @@
 		435D4C6820EF3FA600C8DC85 /* NSDictionary+JKMerge.m in Sources */ = {isa = PBXBuildFile; fileRef = 435D4C6720EF3FA500C8DC85 /* NSDictionary+JKMerge.m */; };
 		435D4C6B20EF3FF200C8DC85 /* NSDictionary+JKSafeAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 435D4C6A20EF3FF200C8DC85 /* NSDictionary+JKSafeAccess.m */; };
 		435D4C6E20EF406600C8DC85 /* NSDictionary+JKXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 435D4C6D20EF406600C8DC85 /* NSDictionary+JKXML.m */; };
-		435D4C7120EF422700C8DC85 /* NSException+JKTrace.m in Sources */ = {isa = PBXBuildFile; fileRef = 435D4C6F20EF422700C8DC85 /* NSException+JKTrace.m */; };
 		435D4C7420EF42FB00C8DC85 /* NSFetchRequest+JKExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 435D4C7220EF42FB00C8DC85 /* NSFetchRequest+JKExtensions.m */; };
-		435D4C7720F0913600C8DC85 /* NSFileHandle+JKReadLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 435D4C7520F0913500C8DC85 /* NSFileHandle+JKReadLine.m */; };
 		435D4C7A20F0916900C8DC85 /* NSFileManager+JKPaths.m in Sources */ = {isa = PBXBuildFile; fileRef = 435D4C7820F0916900C8DC85 /* NSFileManager+JKPaths.m */; };
 		435D4C7D20F0919700C8DC85 /* NSHTTPCookieStorage+JKFreezeDry.m in Sources */ = {isa = PBXBuildFile; fileRef = 435D4C7C20F0919600C8DC85 /* NSHTTPCookieStorage+JKFreezeDry.m */; };
 		435D4C8020F091BC00C8DC85 /* NSIndexPath+JKOffset.m in Sources */ = {isa = PBXBuildFile; fileRef = 435D4C7E20F091BB00C8DC85 /* NSIndexPath+JKOffset.m */; };
@@ -315,12 +313,8 @@
 		435D4C6A20EF3FF200C8DC85 /* NSDictionary+JKSafeAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+JKSafeAccess.m"; sourceTree = "<group>"; };
 		435D4C6C20EF406600C8DC85 /* NSDictionary+JKXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+JKXML.h"; sourceTree = "<group>"; };
 		435D4C6D20EF406600C8DC85 /* NSDictionary+JKXML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+JKXML.m"; sourceTree = "<group>"; };
-		435D4C6F20EF422700C8DC85 /* NSException+JKTrace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSException+JKTrace.m"; sourceTree = "<group>"; };
-		435D4C7020EF422700C8DC85 /* NSException+JKTrace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSException+JKTrace.h"; sourceTree = "<group>"; };
 		435D4C7220EF42FB00C8DC85 /* NSFetchRequest+JKExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFetchRequest+JKExtensions.m"; sourceTree = "<group>"; };
 		435D4C7320EF42FB00C8DC85 /* NSFetchRequest+JKExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFetchRequest+JKExtensions.h"; sourceTree = "<group>"; };
-		435D4C7520F0913500C8DC85 /* NSFileHandle+JKReadLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileHandle+JKReadLine.m"; sourceTree = "<group>"; };
-		435D4C7620F0913500C8DC85 /* NSFileHandle+JKReadLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileHandle+JKReadLine.h"; sourceTree = "<group>"; };
 		435D4C7820F0916900C8DC85 /* NSFileManager+JKPaths.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+JKPaths.m"; sourceTree = "<group>"; };
 		435D4C7920F0916900C8DC85 /* NSFileManager+JKPaths.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+JKPaths.h"; sourceTree = "<group>"; };
 		435D4C7B20F0919600C8DC85 /* NSHTTPCookieStorage+JKFreezeDry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSHTTPCookieStorage+JKFreezeDry.h"; sourceTree = "<group>"; };
@@ -712,10 +706,6 @@
 				435D4C9120F092C000C8DC85 /* NSManagedObjectContext+JKObjectClear.m */,
 				435D4C7920F0916900C8DC85 /* NSFileManager+JKPaths.h */,
 				435D4C7820F0916900C8DC85 /* NSFileManager+JKPaths.m */,
-				435D4C7620F0913500C8DC85 /* NSFileHandle+JKReadLine.h */,
-				435D4C7520F0913500C8DC85 /* NSFileHandle+JKReadLine.m */,
-				435D4C7020EF422700C8DC85 /* NSException+JKTrace.h */,
-				435D4C6F20EF422700C8DC85 /* NSException+JKTrace.m */,
 				435D4C8D20F092B000C8DC85 /* NSManagedObjectContext+JKFetchRequestsConstructors.h */,
 				435D4C8E20F092B000C8DC85 /* NSManagedObjectContext+JKFetchRequestsConstructors.m */,
 				435D4C8A20F0929900C8DC85 /* NSManagedObjectContext+JKFetching.h */,
@@ -1530,7 +1520,6 @@
 				4325536C20D8B53400FC0258 /* MKMapView+JKBetterMaps.m in Sources */,
 				43D87B3520EB6E7000E991D6 /* UIResponderDemoViewController.m in Sources */,
 				7289901720F794D30044E74A /* ShowSettingViewController.m in Sources */,
-				435D4C7120EF422700C8DC85 /* NSException+JKTrace.m in Sources */,
 				72A0088620FC9FE40051C643 /* SLBlankView.m in Sources */,
 				72FE9B6920621F59008DD3D5 /* main.m in Sources */,
 				435E3C9020C02BB2002B7A7F /* NSNumber+JKRound.m in Sources */,
@@ -1589,7 +1578,6 @@
 				435D4C4720EDEA8B00C8DC85 /* NSDate+JKInternetDateTime.m in Sources */,
 				934CBCD9211821A600608F2F /* NSDate+Additions.m in Sources */,
 				435D4C4420EDEA6D00C8DC85 /* NSDate+JKFormatter.m in Sources */,
-				435D4C7720F0913600C8DC85 /* NSFileHandle+JKReadLine.m in Sources */,
 				437921E120ECC40900B2EC88 /* NSBundle+JKAppIcon.m in Sources */,
 				9391AA8320BF078A00D520F1 /* SLTimerLabel.m in Sources */,
 				4325537220D8B57C00FC0258 /* MKMapView+JKZoomLevel.m in Sources */,
