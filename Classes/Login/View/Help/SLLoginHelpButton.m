@@ -28,7 +28,9 @@
 @end
 
 @interface SLLoginHelpButton ()
+
 @property (nonatomic, strong) SLLHBAniDelegate *delegate;
+
 @end
 
 @implementation SLLoginHelpButton
