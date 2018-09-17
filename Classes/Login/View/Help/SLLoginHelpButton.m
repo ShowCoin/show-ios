@@ -14,6 +14,9 @@
 
 @end
 
+/**
+ SLLHBAniDelegate
+ */
 @implementation SLLHBAniDelegate
 
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
