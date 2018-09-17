@@ -14,6 +14,9 @@
 
 @end
 
+/**
+ SLLHBAniDelegate
+ */
 @implementation SLLHBAniDelegate
 
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
@@ -25,7 +28,9 @@
 @end
 
 @interface SLLoginHelpButton ()
+
 @property (nonatomic, strong) SLLHBAniDelegate *delegate;
+
 @end
 
 @implementation SLLoginHelpButton
@@ -34,6 +39,12 @@
     NSLog(@"%s", __func__);
 }
 
+/**
+ initWithFrame
+
+ @param frame frame
+ @return instancetype
+ */
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
