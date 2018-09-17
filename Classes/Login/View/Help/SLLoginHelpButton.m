@@ -43,7 +43,7 @@
  initWithFrame
 
  @param frame frame
- @return <#return value description#>
+ @return instancetype
  */
 - (instancetype)initWithFrame:(CGRect)frame
 {
