@@ -8,6 +8,7 @@
 #import <UIKit/UIKit.h>
 
 @interface UITextField (Category)
+-(void)setPlaceholder:(NSString *)placeholder withFont:(UIFont*)font color:(UIColor*)color;
 
 
 @end
