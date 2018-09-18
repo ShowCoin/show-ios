@@ -10,5 +10,6 @@
 @interface UITextField (Category)
 -(void)setPlaceholder:(NSString *)placeholder withFont:(UIFont*)font color:(UIColor*)color;
 
+-(void)setPlaceholder:(NSString *)placeholder withFont:(float)font color:(NSString *)color alpha:(float)alpha;
 
 @end
