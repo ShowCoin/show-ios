@@ -60,6 +60,7 @@
             thumbnailPoint.x = (targetWidth - scaledWidth) * 0.5;
         }
     }
+    
     targetSize = CGSizeMake(targetWidth, targetHeight);
     
     UIGraphicsBeginImageContext(targetSize); // this will crop
