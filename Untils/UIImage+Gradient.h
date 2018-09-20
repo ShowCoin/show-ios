@@ -20,6 +20,7 @@ typedef NS_ENUM(NSInteger, GradientType) {
 
 - (UIImage *)purpleGradientColorPictureWithSize:(CGSize)size;
 
+
 - (UIImage *)purpleGradientColorHighlightedPictureWithSize:(CGSize)size;
 /**
  *  根据给定的颜色，生成渐变色的图片
