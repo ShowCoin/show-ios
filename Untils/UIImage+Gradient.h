@@ -22,6 +22,8 @@ typedef NS_ENUM(NSInteger, GradientType) {
 
 
 - (UIImage *)purpleGradientColorHighlightedPictureWithSize:(CGSize)size;
+
+
 /**
  *  根据给定的颜色，生成渐变色的图片
  *  @param imageSize        要生成的图片的大小
