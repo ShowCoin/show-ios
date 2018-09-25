@@ -16,4 +16,5 @@
  *  @return 开启状态
  */
 + (BOOL)_popoversDisabled;
+
 @end
