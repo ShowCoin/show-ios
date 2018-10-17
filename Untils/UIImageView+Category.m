@@ -26,6 +26,7 @@
     imageView.image=blurImage;
     
     UIView * blackView=[[UIView alloc]initWithFrame:imageView.bounds];
+    
     blackView.backgroundColor=[UIColor blackColor];
     blackView.alpha=0.2;
     [imageView addSubview:blackView];
