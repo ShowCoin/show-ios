@@ -55,7 +55,6 @@
         CGImageRelease(refImage);
         
     }
-    
     CFRelease(src);
     
     UIImageView * gifImageView=[[UIImageView alloc]initWithFrame:frame];
