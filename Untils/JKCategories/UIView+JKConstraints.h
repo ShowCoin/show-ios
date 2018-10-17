@@ -21,6 +21,7 @@
 
 //头部的约束
 - (NSLayoutConstraint *)jk_leadingConstraint;
+//落后的约束
 - (NSLayoutConstraint *)jk_trailingConstraint;
 //宽度的约束
 - (NSLayoutConstraint *)jk_widthConstraint;
