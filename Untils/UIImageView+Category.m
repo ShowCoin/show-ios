@@ -19,6 +19,7 @@
     
     //将图片模糊
     UIImage * blurImage=[screenImage blurredImageWithRadius:25 iterations:1 tintColor:[UIColor blackColor]];
+    
     UIImageView * imageView=[[UIImageView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
     imageView.userInteractionEnabled=YES;
     imageView.image=blurImage;
