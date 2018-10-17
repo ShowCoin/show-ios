@@ -19,6 +19,8 @@
 + (NSString *)trimNewline:(NSString *)val;
 
 + (NSString *)trimWhitespaceAndNewline:(NSString *)val;
+
+
 - (NSString *)stringByTrim;
 
 @end
