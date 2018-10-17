@@ -39,6 +39,7 @@
 +(UIImageView*)imageViewWithGifFileName:(NSString *)name gifCount:(NSInteger)giftCount frame:(CGRect)frame
 {
     NSURL * gifUrl=[[NSBundle mainBundle]URLForResource:name withExtension:@"gif"];
+    
     NSData * giftData=[NSData dataWithContentsOfURL:gifUrl];
     CGImageSourceRef  src=CGImageSourceCreateWithData((CFDataRef)giftData, NULL);
  
