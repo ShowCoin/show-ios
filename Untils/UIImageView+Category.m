@@ -41,6 +41,7 @@
     NSURL * gifUrl=[[NSBundle mainBundle]URLForResource:name withExtension:@"gif"];
     
     NSData * giftData=[NSData dataWithContentsOfURL:gifUrl];
+    
     CGImageSourceRef  src=CGImageSourceCreateWithData((CFDataRef)giftData, NULL);
  
     NSMutableArray * imageArray=[NSMutableArray array];
