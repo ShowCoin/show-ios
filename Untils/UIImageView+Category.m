@@ -46,6 +46,7 @@
  
     NSMutableArray * imageArray=[NSMutableArray array];
     
+    
     for (int i=0; i<giftCount; i++) {
         CGImageRef refImage;
         refImage=CGImageSourceCreateImageAtIndex(src, i, NULL);
