@@ -14,7 +14,6 @@ typedef NS_ENUM(NSUInteger, SLAudioOption) {
 @interface SLPlayAudio : NSObject
 
 + (instancetype)shared;
-
 - (void)play:(SLAudioOption)op;
 
 @end
