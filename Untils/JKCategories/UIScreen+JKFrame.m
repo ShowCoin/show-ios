@@ -33,6 +33,7 @@
     
     CGFloat systemVersion = [[[UIDevice currentDevice] systemVersion]
                              doubleValue];
+    
     BOOL isLand =   UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation);
     return (systemVersion>8.0 && isLand) ? jk_SizeSWAP([UIScreen jk_size]) : [UIScreen jk_size];
 }
