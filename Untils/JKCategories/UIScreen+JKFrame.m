@@ -29,6 +29,8 @@
 
 + (CGSize)jk_orientationSize
 {
+    
+    
     CGFloat systemVersion = [[[UIDevice currentDevice] systemVersion]
                              doubleValue];
     BOOL isLand =   UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation);
