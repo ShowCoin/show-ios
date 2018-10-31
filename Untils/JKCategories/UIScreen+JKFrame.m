@@ -17,6 +17,7 @@
 
 + (CGFloat)jk_width
 {
+    
     return [[UIScreen mainScreen] bounds].size.width;
 }
 
