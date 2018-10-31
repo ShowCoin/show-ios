@@ -11,6 +11,7 @@
 @implementation UIScreen (JKFrame)
 + (CGSize)jk_size
 {
+    
     return [[UIScreen mainScreen] bounds].size;
 }
 
