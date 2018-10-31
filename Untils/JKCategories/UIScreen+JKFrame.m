@@ -53,6 +53,7 @@
 
 + (CGSize)jk_DPISize
 {
+    
     CGSize size = [[UIScreen mainScreen] bounds].size;
     CGFloat scale = [[UIScreen mainScreen] scale];
     return CGSizeMake(size.width * scale, size.height * scale);
