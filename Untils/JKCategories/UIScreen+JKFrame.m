@@ -41,6 +41,7 @@
 
 + (CGFloat)jk_orientationWidth
 {
+    
     return [UIScreen jk_orientationSize].width;
 }
 
