@@ -134,4 +134,8 @@
 
 @end
 
+@implementation LPAwardButton {
+    UIImageView *selectIcon_;
+}
+
 @end
