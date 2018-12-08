@@ -101,4 +101,15 @@
     CGContextStrokePath(context);
 }
 
+#pragma mark - lazy
+
+- (LPAwardButton *)coinButton {
+    if (!_coinButton) {
+        _coinButton = [LPAwardButton buttonWithType:UIButtonTypeCustom];
+        _coinButton.type = LPAwardTypeCoin;
+        [_coinButton addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _coinButton;
+}
+
 @end
