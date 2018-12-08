@@ -173,6 +173,17 @@
     self.titleLabel.frame = titleF;
 }
 
+- (void)setType:(LPAwardType)type {
+    _type = type;
+    if (type == LPAwardTypeCoin) {
+        [self setTitle:@"币天" forState:UIControlStateNormal];
+        [self setImage:[UIImage imageNamed:@"lp_award_coin"] forState:UIControlStateNormal];
+    } else if (type == LPAwardTypeRandom) {
+        [self setTitle:@"随机" forState:UIControlStateNormal];
+        [self setImage:[UIImage imageNamed:@"lp_award_random"] forState:UIControlStateNormal];
+    }
+}
+
 - (void)setSelected:(BOOL)selected {
     [super setSelected:selected];
     
