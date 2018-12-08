@@ -138,4 +138,21 @@
     UIImageView *selectIcon_;
 }
 
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        selectIcon_ = [[UIImageView alloc] init];
+        selectIcon_.image = [UIImage imageNamed:@"lp_award_select"];
+        selectIcon_.contentMode = UIViewContentModeScaleAspectFill;
+        selectIcon_.hidden = YES;
+        [self addSubview:selectIcon_];
+        
+        self.titleLabel.font = [UIFont systemFontOfSize:16];
+        self.layer.borderColor = HexRGBAlpha(0xff3968, 1).CGColor;
+        self.imageView.contentMode = UIViewContentModeScaleAspectFit;
+    }
+    return self;
+}
+
 @end
