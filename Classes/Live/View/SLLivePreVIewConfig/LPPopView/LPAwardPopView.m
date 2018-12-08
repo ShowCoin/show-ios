@@ -121,4 +121,17 @@
     return _randomButton;
 }
 
+- (UIButton *)explainButton {
+    if (!_explainButton) {
+        _explainButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_explainButton setTitle:@"说明" forState:UIControlStateNormal];
+        [_explainButton setImage:[UIImage imageNamed:@"lp_award_explain"] forState:UIControlStateNormal];
+        [_explainButton addTarget:self action:@selector(explainAction) forControlEvents:UIControlEventTouchUpInside];
+        _explainButton.titleLabel.font = [UIFont systemFontOfSize:11];
+    }
+    return _explainButton;
+}
+
+@end
+
 @end
