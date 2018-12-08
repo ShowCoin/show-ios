@@ -82,4 +82,23 @@
     select_.selected = YES;
 }
 
+#pragma mark - Life
+
+- (void)drawRect:(CGRect)rect {
+    [super drawRect:rect];
+    
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    [LPLineColor() set];
+    CGFloat x = rect.size.width / 2;
+    CGContextMoveToPoint(context, x, 0);
+    CGContextAddLineToPoint(context, x, kLPSmallViewH);
+    CGContextSetLineWidth(context, 1);
+    
+    CGRect bounds = CGRectMake(0, 0, rect.size.width, kLPSmallViewH);
+    UIBezierPath *path = [UIBezierPath bezierPathWithRect:bounds];
+    CGContextAddPath(context, path.CGPath);
+    
+    CGContextStrokePath(context);
+}
+
 @end
