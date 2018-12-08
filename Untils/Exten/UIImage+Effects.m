@@ -191,5 +191,20 @@
     UIColor *tintColor = [UIColor colorWithWhite:1.0 alpha:0.3];
     return [self imageByApplyingBlurToImage:self withRadius:60 tintColor:tintColor saturationDeltaFactor:1.8 maskImage:nil];
 }
+
+//| ----------------------------------------------------------------------------
+- (UIImage *)imageByApplyingExtraLightEffect
+{
+    UIColor *tintColor = [UIColor colorWithWhite:0.97 alpha:0.82];
+    return [self imageByApplyingBlurToImage:self withRadius:40 tintColor:tintColor saturationDeltaFactor:1.8 maskImage:nil];
+}
+
+
+//| ----------------------------------------------------------------------------
+- (UIImage *)imageByApplyingDarkEffect
+{
+    UIColor *tintColor = HexRGBAlpha(0x000000, 0.70f);
+    return [self imageByApplyingBlurToImage:self withRadius:40 tintColor:tintColor saturationDeltaFactor:1.8 maskImage:nil];
+}
 @end
 
