@@ -333,6 +333,105 @@
     }
     return _hideBtn;
 }
+-(UIButton *)addBtn
+{
+    if (!_addBtn) {
+        _addBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, _dealButton.bottom + 32*Proportion375, 70*Proportion375, 34*Proportion375)];
+        _addBtn.right = kMainScreenWidth - 16*Proportion375;
+//        _addBtn.backgroundColor = kThemeRedColor;
+        [_addBtn setBackgroundImage:[UIImage imageNamed:@"wallet_home_addType"] forState:UIControlStateNormal];
+        [_addBtn setBackgroundImage:[UIImage imageNamed:@"wallet_home_addType"] forState:UIControlStateHighlighted];
+        _addBtn.hidden = YES;
+        [[_addBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+        }];
+    }
+    return _addBtn;
+}
+
+
+- (void)setUser:(ShowUserModel *)user
+{
+    if ([user.uid isEqualToString:AccountUserInfoModel.uid]) {
+        [self addSubview:self.dealButton];
+        [self addSubview:self.addBtn];
+        [self addSubview:self.hideBtn];
+    }
+    _user = user;
+    [_headerImage setRoundStyle:YES imageUrl:_user?_user.avatar:AccountUserInfoModel.avatar imageHeight:45 vip:NO attestation:NO];
+    _NameLab.text =_user?_user.nickname:AccountUserInfoModel.nickname;
+}
+- (void)setWalletModel:(SLWalletModel *)walletModel
+{
+    if (!walletModel) {
+        return;
+    }
+    _walletModel = walletModel;
+    SLWalletCoinModel *showModel = walletModel.coinList[0];
+    _showNumLab.text = showModel.balance;
+    _showPriceLab.text =  [NSString stringWithFormat:@"%@CNY",showModel.balance_rmb];
+    _otherPriceLab.text = [NSString stringWithFormat:@"%.2fCNY",walletModel.rmb_num.floatValue - showModel.balance_rmb.floatValue];
+    _allPriceLab.text = [NSString stringWithFormat:@"%@CNY",walletModel.rmb_num];
+    if (walletModel.chg.floatValue < 0) {
+        _showPriceChangeLab.backgroundColor = kThemeKRedColor;
+        [_showPriceDisplayImg setImage:[UIImage imageNamed:@"wallet_home_line_down"]];
+        _showPriceChangeLab.text = [NSString stringWithFormat:@"%@%@",walletModel.chg,@"%"];
+    }else{
+        _showPriceChangeLab.backgroundColor = kThemeKGreenColor;
+        [_showPriceDisplayImg setImage:[UIImage imageNamed:@"wallet_home_line_up"]];
+        _showPriceChangeLab.text = [NSString stringWithFormat:@"+%@%@",walletModel.chg,@"%"];
+    }
+    _showPriceDisplayLab.text  = [NSString stringWithFormat:@"￥%@",walletModel.last];
+    [_showPriceDisplayLab sizeToFit];
+    _showPriceDisplayLab.centerY = _showPriceChangeLab.bottom + 41*Proportion375;
+    _showPriceDisplayLab.left = 8*Proportion375;
+    
+    _showPriceDisplayImg.left = _showPriceDisplayLab.right + 17*Proportion375;
+    _showPriceDisplayImg.centerY = _showPriceDisplayLab.centerY;
+
+    _showDayLowPriceLabNum.text = [NSString stringWithFormat:@"￥%@",walletModel.low];
+    _showDayHighPriceLabNum.text = [NSString stringWithFormat:@"￥%@",walletModel.high];
+    
+    _showDayDealLabNum.text = [NSString stringWithFormat:@"￥%@万",walletModel.volcny];
+    _showValueLabNum.text = [NSString stringWithFormat:@"￥%@万",walletModel.val];
+    _showMarketNum.text = [NSString stringWithFormat:@"%@个交易所",walletModel.count];
+    [self makeData];
+    
+}
+
+-(void)makeData
+{
+    
+    NSArray * coinList = [NSArray arrayWithArray:_walletModel.list];
+    if (coinList.count == 0) {
+        return;
+    }
+    self.lineMinValue = [[coinList objectAtIndex:0] floatValue];
+    self.lineMaxValue = [[coinList objectAtIndex:0] floatValue];
+
+    for (int i = 0; i<coinList.count; i++) {
+        CGFloat valueY = [[coinList objectAtIndex:i] floatValue];
+        if (valueY > self.lineMaxValue) {
+            self.lineMaxValue = valueY;
+        }
+        if (valueY <self.lineMinValue) {
+            self.lineMinValue = valueY;
+        }
+    }
+    CGFloat cha = self.lineMaxValue - self.lineMinValue;
+    NSMutableArray * dataArr = [[NSMutableArray alloc] init];
+    for (int i = 0; i<coinList.count; i++) {
+        NSMutableDictionary * lineDataDic = [[NSMutableDictionary alloc] init];
+        [lineDataDic setObject:[NSString stringWithFormat:@"%d",i] forKey:@"item"];
+        CGFloat j =[[coinList objectAtIndex:i] floatValue];
+        [lineDataDic setObject:[NSString stringWithFormat:@"%f",(j - self.lineMinValue + cha/4)] forKey:@"count"];
+        [dataArr addObject:lineDataDic];
+    }
+    _graphView.maxValue = self.lineMaxValue - self.lineMinValue +cha/2;   // 最大值
+    _graphView.yMarkTitles = @[@"0",[NSString stringWithFormat:@"%f",self.lineMaxValue - self.lineMinValue + cha/2]]; // Y轴刻度标签
+    [_graphView setXMarkTitlesAndValues:dataArr titleKey:@"item" valueKey:@"count"];
+    [_graphView mapping];
+
+}
 
 /*
 // Only override drawRect: if you perform custom drawing.
