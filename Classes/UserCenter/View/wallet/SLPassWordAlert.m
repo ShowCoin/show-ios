@@ -158,6 +158,68 @@
     }
 }
 
+/**
+ 清除密码
+ */
+- (void)clearUpPassword {
+    
+    self.passwordTextField.text = @"";
+    [self textFieldDidChange:self.passwordTextField];
+}
+
+/**
+ 重置显示的点
+ */
+- (void)textFieldDidChange:(UITextField *)textField {
+    //    NSLog(@"%@", textField.text);
+    for (UIView *pointView in self.pointArr) {
+        pointView.hidden = YES;
+    }
+    for (NSInteger i = 0; i < textField.text.length; i++) {
+        ((UIView *)[self.pointArr objectAtIndex:i]).hidden = NO;
+    }
+    if (textField.text.length == kPasswordCount) {
+        //        NSLog(@"输入完毕,密码为%@", textField.text);
+        [self sureButtonAction];
+        
+    }
+}
+
+#pragma mark -
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [super touchesBegan:touches withEvent:event];
+    
+    [self endEditing:YES];
+}
+
+#pragma mark - 按钮的执行方法
+// 取消按钮
+- (void)cancelButtonAction {
+    
+    [self removeFromSuperview];
+}
+
+// 确定按钮
+- (void)sureButtonAction {
+    
+    if ([self.delegate respondsToSelector:@selector(sureActionWithAlertPasswordView:password:)]) {
+        [self.delegate sureActionWithAlertPasswordView:self password:self.passwordTextField.text];
+    }
+}
+
+#pragma mark - 键盘的出现和收回的监听方法
+- (void)keyboardWillShow:(NSNotification *)aNotification {
+    // 获取键盘的高度
+    NSDictionary *userInfo = [aNotification userInfo];
+    NSValue *aValue = [userInfo objectForKey:UIKeyboardFrameEndUserInfoKey];
+    CGRect keyboardRect = [aValue CGRectValue];
+    CGFloat keyboardHeight = keyboardRect.size.height;
+    self.BGView.frame = CGRectMake(self.BGView.frame.origin.x, kMainScreenHeight - keyboardHeight - self.BGView.frame.size.height - 30, self.BGView.frame.size.width, self.BGView.frame.size.height);
+}
+
+- (void)keyboardWillHide:(NSNotification *)aNotification {
+    self.BGView.center = CGPointMake(self.BGView.center.x, self.center.y);
+}
 
 
 @end
