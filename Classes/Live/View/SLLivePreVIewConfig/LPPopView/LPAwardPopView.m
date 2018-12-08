@@ -112,4 +112,13 @@
     return _coinButton;
 }
 
+- (LPAwardButton *)randomButton {
+    if (!_randomButton) {
+        _randomButton = [LPAwardButton buttonWithType:UIButtonTypeCustom];
+        _randomButton.type = LPAwardTypeRandom;
+        [_randomButton addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _randomButton;
+}
+
 @end
