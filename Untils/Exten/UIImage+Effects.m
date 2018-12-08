@@ -206,5 +206,31 @@
     UIColor *tintColor = HexRGBAlpha(0x000000, 0.70f);
     return [self imageByApplyingBlurToImage:self withRadius:40 tintColor:tintColor saturationDeltaFactor:1.8 maskImage:nil];
 }
+
+//| ----------------------------------------------------------------------------
+- (UIImage *)imageByApplyingTintEffectWithColor:(UIColor *)tintColor
+{
+    const CGFloat EffectColorAlpha = 0.6;
+    UIColor *effectColor = tintColor;
+    size_t componentCount = CGColorGetNumberOfComponents(tintColor.CGColor);
+    if (componentCount == 2) {
+        CGFloat b;
+        if ([tintColor getWhite:&b alpha:NULL]) {
+            effectColor = [UIColor colorWithWhite:b alpha:EffectColorAlpha];
+        }
+    }
+    else {
+        CGFloat r, g, b;
+        if ([tintColor getRed:&r green:&g blue:&b alpha:NULL]) {
+            effectColor = [UIColor colorWithRed:r green:g blue:b alpha:EffectColorAlpha];
+        }
+    }
+    return [self imageByApplyingBlurToImage:self withRadius:20 tintColor:effectColor saturationDeltaFactor:-1.0 maskImage:nil];
+}
+
+- (UIImage *)imageByApplyingTintEffectWithColor:(UIColor *)tintColor radius:(CGFloat)radius{
+    return [self imageByApplyingBlurToImage:self withRadius:radius tintColor:tintColor saturationDeltaFactor:1.8 maskImage:nil];
+}
+
 @end
 
