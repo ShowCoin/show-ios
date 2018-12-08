@@ -67,4 +67,9 @@
         self.popBlock(button.type);
     }
 }
+
+- (void)explainAction {
+    [HDHud showMessageInView:self title:@"敬请期待"];
+}
+
 @end
