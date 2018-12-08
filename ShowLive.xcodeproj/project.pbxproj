@@ -138,6 +138,7 @@
 		724D4BC220C9155A0007E4E8 /* HomeHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 724D4BC120C9155A0007E4E8 /* HomeHeader.m */; };
 		724FF37A20E6678D00DD40EB /* SLInfoHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 724FF37920E6678D00DD40EB /* SLInfoHeaderView.m */; };
 		724FF37D20E6680500DD40EB /* SLUserInfoListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 724FF37C20E6680500DD40EB /* SLUserInfoListCell.m */; };
+		725282CC21BB94FC00802C09 /* SLAuthenticationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 725282CB21BB94FC00802C09 /* SLAuthenticationView.m */; };
 		7289901720F794D30044E74A /* ShowSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7289901620F794D20044E74A /* ShowSettingViewController.m */; };
 		7289901B20F795EA0044E74A /* SLWithdrawAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 7289901820F795E90044E74A /* SLWithdrawAlert.m */; };
 		72A0088620FC9FE40051C643 /* SLBlankView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A0088520FC9FE40051C643 /* SLBlankView.m */; };
@@ -465,6 +466,12 @@
 		724FF37920E6678D00DD40EB /* SLInfoHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLInfoHeaderView.m; sourceTree = "<group>"; };
 		724FF37B20E667E200DD40EB /* SLUserInfoListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLUserInfoListCell.h; sourceTree = "<group>"; };
 		724FF37C20E6680500DD40EB /* SLUserInfoListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLUserInfoListCell.m; sourceTree = "<group>"; };
+		725282CA21BB94FC00802C09 /* SLAuthenticationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLAuthenticationView.h; sourceTree = "<group>"; };
+		725282CB21BB94FC00802C09 /* SLAuthenticationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLAuthenticationView.m; sourceTree = "<group>"; };
+		725282CE21BB959D00802C09 /* ShowAccountExchangeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowAccountExchangeView.h; sourceTree = "<group>"; };
+		725282CF21BB959D00802C09 /* AddressChooseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressChooseCell.h; sourceTree = "<group>"; };
+		725282D021BB959D00802C09 /* SLWalletHomePageHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWalletHomePageHeader.h; sourceTree = "<group>"; };
+		725282D121BB959D00802C09 /* ShowAccountCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowAccountCell.h; sourceTree = "<group>"; };
 		7289901620F794D20044E74A /* ShowSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowSettingViewController.m; sourceTree = "<group>"; };
 		7289901820F795E90044E74A /* SLWithdrawAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWithdrawAlert.m; sourceTree = "<group>"; };
 		7289901920F795E90044E74A /* SLWithDrawIndentifyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWithDrawIndentifyCell.h; sourceTree = "<group>"; };
@@ -960,6 +967,26 @@
 			path = setting;
 			sourceTree = "<group>";
 		};
+		725282C921BB94FC00802C09 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				725282CA21BB94FC00802C09 /* SLAuthenticationView.h */,
+				725282CB21BB94FC00802C09 /* SLAuthenticationView.m */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		725282CD21BB959D00802C09 /* wallet */ = {
+			isa = PBXGroup;
+			children = (
+				725282CE21BB959D00802C09 /* ShowAccountExchangeView.h */,
+				725282CF21BB959D00802C09 /* AddressChooseCell.h */,
+				725282D021BB959D00802C09 /* SLWalletHomePageHeader.h */,
+				725282D121BB959D00802C09 /* ShowAccountCell.h */,
+			);
+			path = wallet;
+			sourceTree = "<group>";
+		};
 		725B98BA20AC3CD400747F7A /* UserCenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -972,6 +999,8 @@
 		7297A17920BED7D00012DBEB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				725282CD21BB959D00802C09 /* wallet */,
+				725282C921BB94FC00802C09 /* Auth */,
 				724FF37420E666C200DD40EB /* setting */,
 				724DBA3820C0377F00EF6406 /* SLUserViewHeader.h */,
 				722957B020C80778000D0719 /* SLUserViewHeader.m */,
@@ -1617,6 +1646,7 @@
 				437921E720ECC46400B2EC88 /* NSData+JKBase64.m in Sources */,
 				437921DE20ECC3E000B2EC88 /* NSArray+JKSafeAccess.m in Sources */,
 				437921EA20ECC47C00B2EC88 /* NSData+JKEncrypt.m in Sources */,
+				725282CC21BB94FC00802C09 /* SLAuthenticationView.m in Sources */,
 				43D24A912094A43600C59AC8 /* AppDelegate+ShowRegisterService.m in Sources */,
 				4374EB0D20F62F5600BB947F /* NSString+JKContains.m in Sources */,
 				43205DDA20DD266600AD6952 /* UIView+FDCollapsibleConstraints.m in Sources */,
