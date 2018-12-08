@@ -72,4 +72,14 @@
     [HDHud showMessageInView:self title:@"敬请期待"];
 }
 
+- (void)sl_selectType:(LPAwardType)type {
+    select_.selected = NO;
+    if (type == LPAwardTypeCoin) {
+        select_ = self.coinButton;
+    } else if (type == LPAwardTypeRandom) {
+        select_ = self.randomButton;
+    }
+    select_.selected = YES;
+}
+
 @end
