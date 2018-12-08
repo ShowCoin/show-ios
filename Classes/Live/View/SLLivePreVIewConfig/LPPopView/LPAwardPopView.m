@@ -32,4 +32,29 @@
     return self;
 }
 
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    
+    CGFloat w = CGRectGetWidth(self.frame);
+    CGFloat h = CGRectGetHeight(self.frame);
+    
+    CGFloat viewW = w / 2;
+    CGFloat viewX = 0;
+    CGFloat viewH = kLPSmallViewH;
+    CGFloat viewY = 0;
+    self.coinButton.frame = CGRectMake(viewX, viewY, viewW, viewH);
+    
+    viewX = CGRectGetMaxX(self.coinButton.frame);
+    viewY = 0;
+    viewW = viewW;
+    viewH = viewH;
+    self.randomButton.frame = CGRectMake(viewX, viewY, viewW, viewH);
+    
+    viewX = 0;
+    viewY = CGRectGetMaxY(self.coinButton.frame);
+    viewW = w;
+    viewH = h - CGRectGetHeight(self.coinButton.frame);
+    self.explainButton.frame = CGRectMake(viewX, viewY, viewW, viewH);
+}
+
 @end
