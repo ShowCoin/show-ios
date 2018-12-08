@@ -184,6 +184,156 @@
 }
 
 
+-(UILabel*)showPriceTitleLab
+{
+    if (!_showPriceTitleLab) {
+        _showPriceTitleLab = [UILabel labelWithFrame:CGRectMake(16*Proportion375,10*Proportion375, 120*Proportion375, 18*Proportion375) text:@"SHOW价格" textColor:kTextWhitef7f7f7 font:Font_Regular(18*WScale)  backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentLeft];
+//        [_showPriceTitleLab sizeToFit];
+        _showPriceTitleLab.centerY = _showPriceChangeLab.centerY;
+    }
+    return _showPriceTitleLab;
+}
+-(UILabel*)showPriceChangeLab
+{
+    if (!_showPriceChangeLab) {
+        _showPriceChangeLab = [UILabel labelWithFrame:CGRectMake(120*Proportion375, 14*Proportion375, 84*Proportion375, 28*Proportion375) text:@"+0.00%" textColor:kTextWhitef7f7f7 font:Font_engMedium(18*WScale)  backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentCenter];
+        _showPriceChangeLab.clipsToBounds = YES;
+        _showPriceChangeLab.layer.cornerRadius = 2*Proportion375;
+    }
+    return _showPriceChangeLab;
+}
+-(UILabel*)showPriceDisplayLab
+{
+    if (!_showPriceDisplayLab) {
+        _showPriceDisplayLab = [UILabel labelWithFrame:CGRectMake(8*Proportion375, _showPriceTitleLab.bottom + 25*Proportion375, 200*Proportion375, 49*Proportion375) text:@"￥0.00" textColor:kGoldWithLight font:Font_engRegular(49*WScale)  backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentLeft];
+        _showPriceDisplayLab.centerY = _showPriceChangeLab.bottom + 41*Proportion375;
+    }
+    return _showPriceDisplayLab;
+}
+-(UIImageView*)showPriceDisplayImg
+{
+    if (!_showPriceDisplayImg) {
+        _showPriceDisplayImg = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 25*Proportion375, 35*Proportion375)];
+        _showPriceDisplayImg.centerY = _showPriceDisplayLab.centerY;
+//        _showPriceDisplayImg.right = kMainScreenWidth - 16*Proportion375;
+        
+    }
+    return _showPriceDisplayImg;
+}
+-(UILabel*)showDayLowPriceLabNum
+{
+    if (!_showDayLowPriceLabNum) {
+        _showDayLowPriceLabNum = [UILabel labelWithFrame:CGRectMake(_showPriceTitleLab.left - 3*Proportion375, _showPriceChangeLab.bottom + 81*Proportion375, 100*Proportion375, 14*Proportion375) text:@"￥0.01" textColor:kTextWhitef7f7f7 font:Font_engRegular(14*WScale)  backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentLeft];
+    }
+    return _showDayLowPriceLabNum;
+}
+-(UILabel*)showDayLowPriceLab
+{
+    if (!_showDayLowPriceLab) {
+        _showDayLowPriceLab = [UILabel labelWithFrame:CGRectMake(_showPriceTitleLab.left, _showDayLowPriceLabNum.bottom + 4*Proportion375, 100*Proportion375, 12*Proportion375) text:@"24h最低" textColor:kTextWith8b font:Font_Regular(12*WScale)  backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentLeft];
+
+    }
+    return _showDayLowPriceLab;
+}
+-(UILabel*)showDayHighPriceLabNum
+{
+    if (!_showDayHighPriceLabNum) {
+        _showDayHighPriceLabNum = [UILabel labelWithFrame:CGRectMake(_showPriceTitleLab.left - 3*Proportion375, _showDayLowPriceLab.bottom + 12*Proportion375, 100*Proportion375, 14*Proportion375) text:@"￥0.01" textColor:kTextWhitef7f7f7 font:Font_engRegular(14*WScale)  backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentLeft];
+        
+    }
+    return _showDayHighPriceLabNum;
+}
+-(UILabel*)showDayHighPriceLab
+{
+    if (!_showDayHighPriceLab) {
+        _showDayHighPriceLab = [UILabel labelWithFrame:CGRectMake(_showPriceTitleLab.left, _showDayHighPriceLabNum.bottom + 4*Proportion375, 100*Proportion375, 12*Proportion375) text:@"24h最高" textColor:kTextWith8b font:Font_Regular(12*WScale)  backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentLeft];
+
+    }
+    return _showDayHighPriceLab;
+}
+-(UILabel*)showDayDealLabNum
+{
+    if (!_showDayDealLabNum) {
+        _showDayDealLabNum = [UILabel labelWithFrame:CGRectMake(_showPriceTitleLab.left, _showDayLowPriceLabNum.top, 100*Proportion375, 14*Proportion375) text:@"￥万" textColor:kTextWhitef7f7f7 font:Font_engRegular(14*WScale)  backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentRight];
+        _showDayDealLabNum.right = kMainScreenWidth - 16*Proportion375;
+    }
+    return _showDayDealLabNum;
+}
+-(UILabel*)showDayDealLab
+{
+    if (!_showDayDealLab) {
+        _showDayDealLab = [UILabel labelWithFrame:CGRectMake(_showPriceTitleLab.left, _showDayLowPriceLabNum.bottom + 4*Proportion375, 100*Proportion375, 12*Proportion375) text:@"24h成交额" textColor:kTextWith8b font:Font_Regular(12*WScale)  backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentRight];
+        _showDayDealLab.right = kMainScreenWidth - 16*Proportion375;
+
+    }
+    return _showDayDealLab;
+}
+-(UILabel*)showValueLabNum
+{
+    if (!_showValueLabNum) {
+        _showValueLabNum = [UILabel labelWithFrame:CGRectMake(_showPriceTitleLab.left, _showDayLowPriceLab.bottom + 12*Proportion375, 100*Proportion375, 14*Proportion375) text:@"￥万" textColor:kTextWhitef7f7f7 font:Font_engRegular(14*WScale)  backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentRight];
+        _showValueLabNum.right = kMainScreenWidth - 16*Proportion375;
+
+    }
+    return _showValueLabNum;
+}
+-(UILabel*)showValueLab
+{
+    if (!_showValueLab) {
+        _showValueLab = [UILabel labelWithFrame:CGRectMake(_showPriceTitleLab.left, _showDayHighPriceLabNum.bottom + 4*Proportion375, 100*Proportion375, 12*Proportion375) text:@"市值" textColor:kTextWith8b font:Font_Regular(12*WScale)  backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentRight];
+        _showValueLab.right = kMainScreenWidth - 16*Proportion375;
+
+    }
+    return _showValueLab;
+}
+-(UILabel*)showMarketNum
+{
+    if (!_showMarketNum) {
+        _showMarketNum = [UILabel labelWithFrame:CGRectMake(_showPriceTitleLab.left, _showValueLab.bottom + 6*Proportion375, 100*Proportion375, 9*Proportion375) text:@"x个交易所" textColor:kTextWith5b font:Font_Regular(9*WScale)  backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentRight];
+        _showMarketNum.right = kMainScreenWidth - 16*Proportion375;
+    }
+    return _showMarketNum;
+}
+-(UIButton *)dealButton
+{
+    if (!_dealButton) {
+        _dealButton = [[UIButton alloc] initWithFrame:CGRectMake(0, _BGBottomimgView.bottom + 6*Proportion375, kMainScreenWidth, 60*Proportion375)];
+//        _dealButton.backgroundColor = kThemeRedColor;
+        [_dealButton setTitle:@"点对点交易" forState:UIControlStateNormal];
+        [_dealButton.titleLabel setFont:Font_Regular(19*Proportion375)];
+        [_dealButton setTitleColor:kBlackWith27 forState:UIControlStateNormal];
+        [_dealButton setBackgroundImage:[UIImage imageNamed:@"wallet_home_deal"] forState:UIControlStateNormal];
+        [_dealButton setBackgroundImage:[UIImage imageNamed:@"wallet_home_deal"] forState:UIControlStateHighlighted];
+        [[_dealButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+           //点对点交易入口
+            [PageMgr pushToPTTradeViewVC];
+        }];
+    }
+    return _dealButton;
+}
+-(UIButton *)hideBtn
+{
+    if (!_hideBtn) {
+        _hideBtn = [[UIButton alloc] initWithFrame:CGRectMake(16*Proportion375, _BGBottomimgView.bottom + 6*Proportion375, 90*Proportion375, 34*Proportion375)];
+        _hideBtn.centerY = _addBtn.centerY;
+        [_hideBtn setImage:[UIImage imageNamed:@"wallet_home_hideType_nomal"] forState:UIControlStateNormal];
+        [_hideBtn setImage:[UIImage imageNamed:@"wallet_home_hideType_selected"] forState:UIControlStateSelected];
+        [_hideBtn setTitle:@"隐藏小余额" forState:UIControlStateNormal];
+        [_hideBtn.titleLabel setFont:Font_Regular(12*Proportion375)];
+        [_hideBtn setTitleColor:kTextWith8b forState:UIControlStateNormal];
+        [_hideBtn setImageEdgeInsets:UIEdgeInsetsMake(0.0, -6*Proportion375, 0.0, 0.0)];
+        [_hideBtn setTitleEdgeInsets:UIEdgeInsetsMake(0.0, 0.0, 0.0, -6*Proportion375)];
+        @weakify(self)
+        [[_hideBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+            @strongify(self)
+            self.hideBtn.selected = !self.hideBtn.selected;
+            self.switchBlock(self.hideBtn.selected);
+
+        }];
+    }
+    return _hideBtn;
+}
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
