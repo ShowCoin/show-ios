@@ -57,4 +57,14 @@
     self.explainButton.frame = CGRectMake(viewX, viewY, viewW, viewH);
 }
 
+#pragma mark - Method
+
+- (void)buttonAction:(LPAwardButton *)button {
+    select_.selected = NO;
+    button.selected = YES;
+    select_ = button;
+    if (self.popBlock) {
+        self.popBlock(button.type);
+    }
+}
 @end
