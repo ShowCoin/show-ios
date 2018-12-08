@@ -173,4 +173,16 @@
     self.titleLabel.frame = titleF;
 }
 
+- (void)setSelected:(BOOL)selected {
+    [super setSelected:selected];
+    
+    if (selected) {
+        self.layer.borderWidth = 1;
+        selectIcon_.hidden = NO;
+    } else {
+        self.layer.borderWidth = 0;
+        selectIcon_.hidden = YES;
+    }
+}
+
 @end
