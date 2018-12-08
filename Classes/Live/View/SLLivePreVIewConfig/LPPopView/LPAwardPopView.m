@@ -155,4 +155,22 @@
     return self;
 }
 
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    
+    CGFloat w = CGRectGetWidth(self.frame);
+    
+    selectIcon_.frame = CGRectMake(0, 0, 15, 15);
+    
+    CGRect imageF = self.imageView.frame;
+    CGRect titleF = self.titleLabel.frame;
+    
+    CGFloat x = (w - imageF.size.width - titleF.size.width - 4) / 2;
+    imageF.origin.x = x;
+    self.imageView.frame = imageF;
+    
+    titleF.origin.x = CGRectGetMaxX(imageF) + 4;
+    self.titleLabel.frame = titleF;
+}
+
 @end
