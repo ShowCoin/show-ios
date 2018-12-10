@@ -24,6 +24,7 @@
         [weaks show_registerService:application didFinishLaunchingWithOptions:launchOptions];
     });
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    [PageMgr setupWithWindow:self.window];
 
     
     #if defined(DEBUG)
