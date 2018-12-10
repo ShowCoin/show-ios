@@ -40,7 +40,11 @@
     }
     
     [UIView animateWithDuration:kLPAniDuration delay:0 options:option animations:^{
-        
+        if (show) {
+        } else {
+            self.alpha = 0;
+            self.transform = CGAffineTransformMakeScale(1, 0.001);
+        }
     } completion:^(BOOL finished) {
         self->_animating = NO;
         if (cmp) {
