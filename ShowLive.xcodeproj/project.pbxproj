@@ -155,6 +155,7 @@
 		72FE9B6920621F59008DD3D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FE9B6820621F59008DD3D5 /* main.m */; };
 		72FE9B7320621F59008DD3D5 /* ShowLiveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FE9B7220621F59008DD3D5 /* ShowLiveTests.m */; };
 		72FE9B7E20621F59008DD3D5 /* ShowLiveUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FE9B7D20621F59008DD3D5 /* ShowLiveUITests.m */; };
+		9306818A21BE648D0021F976 /* NSData+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 9306818921BE648D0021F976 /* NSData+Image.m */; };
 		9309C73C21BB919B00AAFE87 /* UIWindow+SLMotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 9309C73B21BB919B00AAFE87 /* UIWindow+SLMotion.m */; };
 		9309C73F21BB91D600AAFE87 /* NSString+Json.m in Sources */ = {isa = PBXBuildFile; fileRef = 9309C73E21BB91D600AAFE87 /* NSString+Json.m */; };
 		9309C74221BB924700AAFE87 /* UIImage+Effects.m in Sources */ = {isa = PBXBuildFile; fileRef = 9309C74121BB924700AAFE87 /* UIImage+Effects.m */; };
@@ -522,6 +523,8 @@
 		72FE9B7920621F59008DD3D5 /* ShowLiveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShowLiveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		72FE9B7D20621F59008DD3D5 /* ShowLiveUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowLiveUITests.m; sourceTree = "<group>"; };
 		72FE9B7F20621F59008DD3D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9306818821BE64740021F976 /* NSData+Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Image.h"; sourceTree = "<group>"; };
+		9306818921BE648D0021F976 /* NSData+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Image.m"; sourceTree = "<group>"; };
 		9309C73A21BB917200AAFE87 /* UIWindow+SLMotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+SLMotion.h"; sourceTree = "<group>"; };
 		9309C73B21BB919B00AAFE87 /* UIWindow+SLMotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+SLMotion.m"; sourceTree = "<group>"; };
 		9309C73D21BB91B900AAFE87 /* NSString+Json.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Json.h"; sourceTree = "<group>"; };
@@ -1261,6 +1264,8 @@
 				9309C73E21BB91D600AAFE87 /* NSString+Json.m */,
 				9309C74021BB922200AAFE87 /* UIImage+Effects.h */,
 				9309C74121BB924700AAFE87 /* UIImage+Effects.m */,
+				9306818821BE64740021F976 /* NSData+Image.h */,
+				9306818921BE648D0021F976 /* NSData+Image.m */,
 				9314D1E420C53ACE00BB2429 /* SLHelper */,
 				934CBCD72118217800608F2F /* NSDate+Additions.h */,
 				934CBCD8211821A500608F2F /* NSDate+Additions.m */,
@@ -1666,6 +1671,7 @@
 				934CBCD9211821A600608F2F /* NSDate+Additions.m in Sources */,
 				435D4C4420EDEA6D00C8DC85 /* NSDate+JKFormatter.m in Sources */,
 				437921E120ECC40900B2EC88 /* NSBundle+JKAppIcon.m in Sources */,
+				9306818A21BE648D0021F976 /* NSData+Image.m in Sources */,
 				9391AA8320BF078A00D520F1 /* SLTimerLabel.m in Sources */,
 				4325537220D8B57C00FC0258 /* MKMapView+JKZoomLevel.m in Sources */,
 				43D87B1D20EB6CE600E991D6 /* UISplitViewController+JKQuickAccess.m in Sources */,
