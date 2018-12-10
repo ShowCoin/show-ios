@@ -123,51 +123,7 @@
     }
     return _percentTextView;
 }
--(void)setPercent:(CGFloat)percent
-{
-    if (percent) {
-        _percentView.hidden = NO;
-        CAGradientLayer *gradientLayer =  [CAGradientLayer layer];
-        gradientLayer.frame = CGRectMake(0, 0, _percentBgView.width * percent, 9*Proportion375);
-        gradientLayer.startPoint = CGPointMake(0, 0);
-        gradientLayer.endPoint = CGPointMake(1, 0);
-        gradientLayer.locations = @[@(0.0),@(1.0)];
-        [gradientLayer setColors:@[(id)HexRGBAlpha(0xbd9c77, 1).CGColor,(id)HexRGBAlpha(0xf8d2a5, 1).CGColor]];
-        [_percentView.layer addSublayer:gradientLayer];
-    }else{
-        _percentView.hidden = YES;
-    }
-    [_percentTextView setText:[NSString stringWithFormat:@"%.f%@",percent*100,@"%"]];
-    
-}
--(void)setType:(NSInteger)type
-{
-    if (type == 1) {
-        _coinDetailNamelabel.hidden = YES;
-        _coinNamelabel.top = _coinImage.top;
-        _percentBgView.top = _coinNamelabel.bottom + 6*Proportion375;
-    }else if (type == 2){
-        _coinDetailNamelabel.hidden = NO;
-        _coinNamelabel.top = 8*Proportion375;
-        _coinDetailNamelabel.top = _coinNamelabel.bottom + 6*Proportion375;
-        _percentBgView.top = _coinDetailNamelabel.bottom + 3*Proportion375;
 
-    }
-}
 
-- (void)bindModel:(NSString *)object{
-    _coinNumLabel.text = object?:@"0";
-    _RmbNumLabel.text = [NSString stringWithFormat:@"￥%.2f",object?object.floatValue/100:0];
-}
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
-}
 
 @end
