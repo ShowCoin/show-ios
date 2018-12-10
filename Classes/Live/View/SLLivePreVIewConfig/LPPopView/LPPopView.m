@@ -42,6 +42,7 @@
     [UIView animateWithDuration:kLPAniDuration delay:0 options:option animations:^{
         if (show) {
             self.alpha = 1;
+            self.transform = CGAffineTransformIdentity;
         } else {
             self.alpha = 0;
             self.transform = CGAffineTransformMakeScale(1, 0.001);
