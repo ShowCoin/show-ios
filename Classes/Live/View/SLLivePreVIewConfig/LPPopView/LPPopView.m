@@ -29,7 +29,7 @@
  des
 
  @param show show
- @param cmp <#cmp description#>
+ @param cmp cmp
  */
 - (void)sl_show:(BOOL)show complete:(void(^)(void))cmp {
     self->_animating = YES;
