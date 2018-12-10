@@ -23,5 +23,11 @@
     return self;
 }
 
+#pragma mark - Method
+
+- (void)sl_show:(BOOL)show complete:(void(^)(void))cmp {
+    self->_animating = YES;
+    
+}
 
 @end
