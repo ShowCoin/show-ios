@@ -16,7 +16,7 @@
  des
 
  @param frame frame
- @return <#return value description#>
+ @return instance
  */
 - (instancetype)initWithFrame:(CGRect)frame
 {
