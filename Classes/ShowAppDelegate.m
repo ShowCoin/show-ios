@@ -27,7 +27,7 @@
     [PageMgr setupWithWindow:self.window];
     self.window.backgroundColor = [UIColor whiteColor];
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
-
+    [self.window makeKeyAndVisible];
     
     #if defined(DEBUG)
         [[SLFPSStatus sharedInstance] open];
