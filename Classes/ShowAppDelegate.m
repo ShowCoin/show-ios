@@ -25,6 +25,7 @@
     });
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     [PageMgr setupWithWindow:self.window];
+    self.window.backgroundColor = [UIColor whiteColor];
 
     
     #if defined(DEBUG)
