@@ -29,9 +29,7 @@
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
     [self.window makeKeyAndVisible];
     
-    #if defined(DEBUG)
-        [[SLFPSStatus sharedInstance] open];
-    #endif
+  
     
     return YES;
 }
