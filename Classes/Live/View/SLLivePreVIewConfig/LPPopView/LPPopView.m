@@ -12,6 +12,12 @@
 
 @synthesize animating = _animating;
 
+/**
+ <#Description#>
+
+ @param frame <#frame description#>
+ @return <#return value description#>
+ */
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
