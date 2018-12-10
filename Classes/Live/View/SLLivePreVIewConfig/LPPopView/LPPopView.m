@@ -25,6 +25,12 @@
 
 #pragma mark - Method
 
+/**
+ <#Description#>
+
+ @param show <#show description#>
+ @param cmp <#cmp description#>
+ */
 - (void)sl_show:(BOOL)show complete:(void(^)(void))cmp {
     self->_animating = YES;
     
