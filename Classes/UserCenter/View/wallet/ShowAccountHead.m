@@ -231,7 +231,58 @@
      }
 }
 
+-(void)alertMessage:(NSString *)message withIndex:(NSInteger)buttonIndex{
+    @weakify(self);
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:[NSString stringWithFormat:@"确定%@？",message] preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        
+    }];
+    UIAlertAction *otherAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        @strongify(self);
+        if (self.ExchangeAction ) {
+            [self.ExchangeAction cancel];
+            self.ExchangeAction = nil;
+        }
+        [SLReportManager reportEvent:kReport_MyWallet andSubEvent:kReport_MyWallet_SHOWPurchase];
+        self.ExchangeAction = [SLWalletExchangeAction action];
+        NSDictionary * pay_config =self.walletModel.pay_config[buttonIndex];
+        
+        self.ExchangeAction.show_number = pay_config[@"show_number"];
+        self.ExchangeAction.type =@"ETH";
+        @weakify(self)
+        self.ExchangeAction.finishedBlock = ^(SLWalletModel *model)
+        {
+            @strongify(self)
+            [HDHud hideHUDInView:self];
+            [HDHud showMessageInView:self title:@"提交成功"];
+            
+            [[NSNotificationCenter defaultCenter] postNotificationName:SLWalletToRefreshNotification object:nil];
 
+        };
+        self.ExchangeAction.failedBlock = ^(NSError *error) {
+            @strongify(self)
+            [HDHud hideHUDInView:self];
+            if (error.code == 8001) {
+                [HDHud showMessageInView:self title:@"以太不足，请先充值以太"];
+                [self performSelector:@selector(jumpTorecharge) withObject:nil afterDelay:.75];
+
+            }else{
+                
+                [HDHud showMessageInView:self title:error.userInfo[@"msg"]];
+                
+            }
+        };
+        [self.ExchangeAction start];
+
+    }];
+    
+    [alertController addAction:cancelAction];
+    [alertController addAction:otherAction];
+    [self.viewController presentViewController:alertController animated:YES completion:nil];
+}
+-(void)jumpTorecharge{
+    [PageMgr pushToRechargeViewControllerWithModel:self.walletModel.coinList[1] ];
+}
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
