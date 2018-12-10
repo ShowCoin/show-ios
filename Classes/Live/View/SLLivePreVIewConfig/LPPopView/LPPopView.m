@@ -12,8 +12,8 @@
 
 @synthesize animating = _animating;
 
-/**
- <#Description#>
+/**d
+ des
 
  @param frame <#frame description#>
  @return <#return value description#>
