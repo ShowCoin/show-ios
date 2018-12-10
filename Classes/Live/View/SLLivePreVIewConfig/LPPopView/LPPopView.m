@@ -39,6 +39,14 @@
         option = UIViewAnimationOptionCurveEaseIn;
     }
     
+    [UIView animateWithDuration:kLPAniDuration delay:0 options:option animations:^{
+        
+    } completion:^(BOOL finished) {
+        self->_animating = NO;
+        if (cmp) {
+            cmp();
+        }
+    }];
 }
 
 @end
