@@ -26,7 +26,7 @@
 #pragma mark - Method
 
 /**
- <#Description#>
+ des
 
  @param show <#show description#>
  @param cmp <#cmp description#>
