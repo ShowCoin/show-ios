@@ -20,14 +20,7 @@
 //入口函数
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     __weak typeof(self) weaks = self;
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [weaks show_registerService:application didFinishLaunchingWithOptions:launchOptions];
-    });
-    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    [PageMgr setupWithWindow:self.window];
-    self.window.backgroundColor = [UIColor whiteColor];
-    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
-    [self.window makeKeyAndVisible];
+
     
     #if defined(DEBUG)
         [[SLFPSStatus sharedInstance] open];
