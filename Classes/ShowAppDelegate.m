@@ -112,7 +112,8 @@
         return  NO;
     }
     
-    
+    BOOL result = [[UMSocialManager defaultManager] handleOpenURL:url];
+
 }
 
 @end
