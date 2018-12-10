@@ -21,6 +21,10 @@
     return [self buttonWithTitle:@"" titleColor:titleColor font:font backgroundColor:backgroundColor];
 }
 
++ (instancetype)buttonWithTitle:(NSString *)title titleColor:(UIColor *)titleColor font:(UIFont *)font backgroundColor:(UIColor *)backgroundColor{
+    return [self buttonWithType:UIButtonTypeCustom frame:CGRectZero title:title titleColor:titleColor font:font backgroundColor:backgroundColor];
+}
+
 
 
 @end
