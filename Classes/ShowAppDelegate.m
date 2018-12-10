@@ -113,7 +113,7 @@
     }
     
     BOOL result = [[UMSocialManager defaultManager] handleOpenURL:url];
-
+    if (result == FALSE) {
 }
 
 @end
