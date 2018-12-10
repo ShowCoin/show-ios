@@ -28,6 +28,17 @@
 - (void)sl_show:(BOOL)show complete:(void(^)(void))cmp {
     self->_animating = YES;
     
+    UIViewAnimationOptions option;
+    if (show) {
+        self.alpha = 0;
+        self.transform = CGAffineTransformMakeScale(1, 0.001);
+        option = UIViewAnimationOptionCurveEaseOut;
+    } else {
+        self.alpha = 1;
+        self.transform = CGAffineTransformIdentity;
+        option = UIViewAnimationOptionCurveEaseIn;
+    }
+    
 }
 
 @end
