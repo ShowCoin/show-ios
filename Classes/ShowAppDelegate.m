@@ -29,7 +29,9 @@
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
     [self.window makeKeyAndVisible];
     
-  
+    #if defined(DEBUG)
+        [[SLFPSStatus sharedInstance] open];
+    #endif
     
     return YES;
 }
@@ -103,18 +105,7 @@
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url  sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
     // 地图打开
     NSString* wxPayPre=[NSString stringWithFormat:@"%@://",WX_APPID];
-    NSString* currentURLPre=[url.absoluteString substringToIndex:[wxPayPre length]];
-    if ([currentURLPre isEqualToString:wxPayPre]) {
-        if ([url.absoluteString containsString:@"ret=0"]) {//成功后pop
-        }
-        return  NO;
-    }
-    
-    BOOL result = [[UMSocialManager defaultManager] handleOpenURL:url];
-    if (result == FALSE) {
-        return  NO;
-    }
-    return result;
+ 
 }
 
 @end
