@@ -105,6 +105,7 @@
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url  sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
     // 地图打开
     NSString* wxPayPre=[NSString stringWithFormat:@"%@://",WX_APPID];
+    NSString* currentURLPre=[url.absoluteString substringToIndex:[wxPayPre length]];
  
 }
 
