@@ -131,6 +131,107 @@
     }
     return _userAlertLab;
 }
+-(UIButton*)sureBtn
+{
+    if (!_sureBtn) {
+        _sureBtn = [UIButton  buttonWithType:UIButtonTypeCustom];
+        _sureBtn.frame = CGRectMake(40, 350*Proportion375, kMainScreenWidth - 80, 45*Proportion375);
+        _sureBtn.layer.cornerRadius = 45/2*Proportion375;
+        [_sureBtn setBackgroundImage:[UIImage imageNamed:@"wallet_sure"] forState:UIControlStateNormal];
+        [_sureBtn.titleLabel setFont:Font_Regular(15*Proportion375)];
+        [_sureBtn setTitleColor:kThemeWhiteColor forState:UIControlStateNormal];
+        [_sureBtn setTitle:@"确认充值" forState:UIControlStateNormal];
+        _sureBtn.hidden = YES;
+        @weakify(self)
+
+        [[_sureBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+            @strongify(self);
+            
+            NSDictionary * pay_config =self.walletModel.pay_config[self.selectBtnIndex];
+            [self alertMessage:[NSString stringWithFormat:@"购买%@秀币",pay_config[@"show_number"]?:@"0"] withIndex:self.selectBtnIndex];
+//            [[YZAuthID alloc] yz_showAuthIDWithDescribe:nil BlockState:^(YZAuthIDState state, NSError *error) {
+//                if (state == YZAuthIDStateNotSupport) {
+//                    [HDHud _showMessageInView:[UIApplication sharedApplication].keyWindow title:@"对不起，当前设备不支持指纹/面部ID"];//                    NSLog(@"对不起，当前设备不支持指纹/面部ID");//                } else if(state == YZAuthIDStateFail) {
+//                    [HDHud _showMessageInView:[UIApplication sharedApplication].keyWindow title:@"指纹/面部ID不正确，认证失败"];
+//                    NSLog(@"指纹/面部ID不正确，认证失败");
+//                } else if(state == YZAuthIDStateTouchIDLockout) {
+//                    [HDHud _showMessageInView:[UIApplication sharedApplication].keyWindow title:@"多次错误，指纹/面部ID已被锁定，请到手机解锁界面输入密码"];
+//                    NSLog(@"多次错误，指纹/面部ID已被锁定，请到手机解锁界面输入密码");
+//                } else if (state == YZAuthIDStateSuccess) {
+//
+//                }
+//            }];
+
+        }];
+    }
+    return _sureBtn;
+}
+-(UIButton *)addButton
+{
+    if (!_addButton) {
+        
+        _addButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _addButton.frame = CGRectMake(kMainScreenWidth-50*Proportion375, self.height-40*Proportion375, 27*Proportion375, 27*Proportion375);
+        [_addButton setImage:[UIImage imageNamed:@"account_add"] forState:UIControlStateNormal];
+//        [_addButton addTarget:self action:@selector(shareSina:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _addButton;
+}
+-(void)addButtonS {
+    for (int i = 0 ; i < 3; i++)
+    {
+        NSInteger index = i % 3;
+        ShowAccountExchangeView *mapBtn = [[ShowAccountExchangeView alloc]initWithFrame:CGRectMake(index * (Button_Width + Width_Space) + Start_X, Start_Y, Button_Width, Button_Height)];
+        mapBtn.tag = i;
+        mapBtn.pay_config= self.walletModel.pay_config[i];
+        @weakify(self)
+        [[mapBtn.coverBtn rac_signalForControlEvents:UIControlEventTouchUpInside]subscribeNext:^(UIButton * x) {
+            @strongify(self);
+            if (self.selectBtn==mapBtn) {
+                
+            }else{
+                self.selectBtn.backimage.image = [UIImage imageNamed:@"account_coinBg"];
+                self.selectBtn = mapBtn;
+            }
+            mapBtn.backimage.image = [UIImage imageNamed:@"account_coinBg_select"];
+            self.selectBtnIndex = mapBtn.tag;
+            
+            switch (mapBtn.tag) {
+
+                case 0:
+                {
+//                    NSDictionary * pay_config =self.walletModel.pay_config[i];
+//                    [self alertMessage:[NSString stringWithFormat:@"购买%@测试",pay_config[@"gou'mai_number"]?:@"0"] withIndex:0];
+                }
+                    break;
+                case 1:
+                {
+//                    NSDictionary * pay_config =self.walletModel.pay_config[i];
+//                    [self alertMessage:[NSString stringWithFormat:@"购买%@测试",pay_config[@"show_number"]?:@"0"] withIndex:1];
+
+                }
+                    break;
+                case 2:
+                {
+//                     NSDictionary * pay_config =self.walletModel.pay_config[i];
+//                    [self alertMessage:[NSString stringWithFormat:@"购买%@测试",pay_config[@"show_number"]?:@"0"] withIndex:2];
+                }
+                    break;
+                default:
+                    break;
+            }
+            
+            
+        }];
+        if (mapBtn.tag == 1) {
+            mapBtn.backimage.image = [UIImage imageNamed:@"account_coinBg_select"];
+            self.selectBtn = mapBtn;
+        }
+        [self addSubview:mapBtn];
+     }
+}
+
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
