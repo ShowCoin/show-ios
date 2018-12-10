@@ -23,7 +23,8 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         [weaks show_registerService:application didFinishLaunchingWithOptions:launchOptions];
     });
-   
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+
     
     #if defined(DEBUG)
         [[SLFPSStatus sharedInstance] open];
