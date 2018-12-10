@@ -20,7 +20,10 @@
 //入口函数
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     __weak typeof(self) weaks = self;
-
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [weaks show_registerService:application didFinishLaunchingWithOptions:launchOptions];
+    });
+   
     
     #if defined(DEBUG)
         [[SLFPSStatus sharedInstance] open];
