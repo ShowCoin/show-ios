@@ -142,12 +142,12 @@
 		725282CC21BB94FC00802C09 /* SLAuthenticationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 725282CB21BB94FC00802C09 /* SLAuthenticationView.m */; };
 		725282E021BB968500802C09 /* SLWalletHomePageHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 725282D521BB968500802C09 /* SLWalletHomePageHeader.m */; };
 		725282E221BB971900802C09 /* ShowAccountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 725282E121BB971900802C09 /* ShowAccountCell.m */; };
-		725282E421BB977200802C09 /* AddressChooseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 725282E321BB977200802C09 /* AddressChooseCell.m */; };
 		725282E621BBE3EE00802C09 /* SLGooglePassWordAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 725282E521BBE3EE00802C09 /* SLGooglePassWordAlert.m */; };
 		725282E821BBE44200802C09 /* SLPassWordAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 725282E721BBE44200802C09 /* SLPassWordAlert.m */; };
 		725282EC21BE655400802C09 /* ShowAccountExchangeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 725282EB21BE655300802C09 /* ShowAccountExchangeView.m */; };
 		725282EE21BE65B300802C09 /* CoinDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 725282ED21BE65B300802C09 /* CoinDetailCell.m */; };
 		725282F021BE660A00802C09 /* ShowAccountHead.m in Sources */ = {isa = PBXBuildFile; fileRef = 725282EF21BE660A00802C09 /* ShowAccountHead.m */; };
+		725282F221BE666A00802C09 /* ShowAccountTableHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 725282F121BE666A00802C09 /* ShowAccountTableHeader.m */; };
 		7289901720F794D30044E74A /* ShowSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7289901620F794D20044E74A /* ShowSettingViewController.m */; };
 		7289901B20F795EA0044E74A /* SLWithdrawAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 7289901820F795E90044E74A /* SLWithdrawAlert.m */; };
 		72A0088620FC9FE40051C643 /* SLBlankView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A0088520FC9FE40051C643 /* SLBlankView.m */; };
@@ -494,12 +494,12 @@
 		725282DE21BB968500802C09 /* AddressChooseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressChooseCell.h; sourceTree = "<group>"; };
 		725282DF21BB968500802C09 /* ShowAddressTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowAddressTextCell.h; sourceTree = "<group>"; };
 		725282E121BB971900802C09 /* ShowAccountCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowAccountCell.m; sourceTree = "<group>"; };
-		725282E321BB977200802C09 /* AddressChooseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressChooseCell.m; sourceTree = "<group>"; };
 		725282E521BBE3EE00802C09 /* SLGooglePassWordAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLGooglePassWordAlert.m; sourceTree = "<group>"; };
 		725282E721BBE44200802C09 /* SLPassWordAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLPassWordAlert.m; sourceTree = "<group>"; };
 		725282EB21BE655300802C09 /* ShowAccountExchangeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowAccountExchangeView.m; sourceTree = "<group>"; };
 		725282ED21BE65B300802C09 /* CoinDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoinDetailCell.m; sourceTree = "<group>"; };
 		725282EF21BE660A00802C09 /* ShowAccountHead.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowAccountHead.m; sourceTree = "<group>"; };
+		725282F121BE666A00802C09 /* ShowAccountTableHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowAccountTableHeader.m; sourceTree = "<group>"; };
 		7289901620F794D20044E74A /* ShowSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowSettingViewController.m; sourceTree = "<group>"; };
 		7289901820F795E90044E74A /* SLWithdrawAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWithdrawAlert.m; sourceTree = "<group>"; };
 		7289901920F795E90044E74A /* SLWithDrawIndentifyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWithDrawIndentifyCell.h; sourceTree = "<group>"; };
@@ -1018,7 +1018,6 @@
 			isa = PBXGroup;
 			children = (
 				725282DE21BB968500802C09 /* AddressChooseCell.h */,
-				725282E321BB977200802C09 /* AddressChooseCell.m */,
 				725282DB21BB968500802C09 /* CoinDetailCell.h */,
 				725282ED21BE65B300802C09 /* CoinDetailCell.m */,
 				725282D421BB968400802C09 /* ShowAccountCell.h */,
@@ -1028,6 +1027,7 @@
 				725282DC21BB968500802C09 /* ShowAccountHead.h */,
 				725282EF21BE660A00802C09 /* ShowAccountHead.m */,
 				725282DD21BB968500802C09 /* ShowAccountTableHeader.h */,
+				725282F121BE666A00802C09 /* ShowAccountTableHeader.m */,
 				725282DF21BB968500802C09 /* ShowAddressTextCell.h */,
 				725282DA21BB968500802C09 /* SLGooglePassWordAlert.h */,
 				725282E521BBE3EE00802C09 /* SLGooglePassWordAlert.m */,
@@ -1610,6 +1610,7 @@
 			files = (
 				43D87B2320EB6D6C00E991D6 /* UIScrollView+JKPages.m in Sources */,
 				43205DE020DD269D00AD6952 /* UITextView+JKPlaceHolder.m in Sources */,
+				725282F221BE666A00802C09 /* ShowAccountTableHeader.m in Sources */,
 				4355A4DC20FF11000020B7DE /* UINavigationController+JKStackManager.m in Sources */,
 				43205DE320DD26C500AD6952 /* UITextView+JKPinchZoom.m in Sources */,
 				43D24A952094B4C500C59AC8 /* ShowNavigationBar.m in Sources */,
@@ -1643,7 +1644,6 @@
 				4325536920D8B51000FC0258 /* CLLocationManager+Blocks.m in Sources */,
 				431C078320FE28BF00479559 /* NSURLSession+JKSynchronousTask.m in Sources */,
 				434DDB6320C9337A00191FC1 /* UIWindow+JKHierarchy.m in Sources */,
-				725282E421BB977200802C09 /* AddressChooseCell.m in Sources */,
 				722957B120C80779000D0719 /* SLUserViewHeader.m in Sources */,
 				435E3C9120C02BB2002B7A7F /* NSNumber+JKCGFloat.m in Sources */,
 				435D4C8320F091E600C8DC85 /* NSInvocation+JKBb.m in Sources */,
