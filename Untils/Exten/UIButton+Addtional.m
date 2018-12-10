@@ -13,4 +13,9 @@
     return [self buttonWithTitle:title titleColor:titleColor backgroundColor:[UIColor whiteColor]];
 }
 
++ (instancetype)buttonWithTitle:(NSString *)title titleColor:(UIColor *)titleColor backgroundColor:(UIColor *)backgroundColor{
+    return [self buttonWithTitle:title titleColor:titleColor font:[UIFont systemFontOfSize:16] backgroundColor:backgroundColor];
+}
+
+
 @end
