@@ -29,6 +29,16 @@
     return [self buttonWithType:UIButtonTypeCustom frame:frame title:title titleColor:titleColor font:font backgroundColor:backgroundColor];
 }
 
++ (instancetype)buttonWithType:(UIButtonType)buttonType frame:(CGRect)frame title:(NSString *)title titleColor:(UIColor *)titleColor font:(UIFont *)font backgroundColor:(UIColor *)backgroundColor{
+    UIButton *button = [UIButton buttonWithType:buttonType];
+    button.frame = frame;
+    [button setTitle:title forState:UIControlStateNormal];
+    [button setTitleColor:titleColor forState:UIControlStateNormal];
+    button.titleLabel.font = font;
+    button.backgroundColor = backgroundColor;
+    return button;
+}
+
 
 
 @end
