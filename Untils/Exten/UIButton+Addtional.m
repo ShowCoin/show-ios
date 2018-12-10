@@ -17,5 +17,10 @@
     return [self buttonWithTitle:title titleColor:titleColor font:[UIFont systemFontOfSize:16] backgroundColor:backgroundColor];
 }
 
++ (instancetype)buttonWithTitleColor:(UIColor *)titleColor font:(UIFont *)font backgroundColor:(UIColor *)backgroundColor{
+    return [self buttonWithTitle:@"" titleColor:titleColor font:font backgroundColor:backgroundColor];
+}
+
+
 
 @end
