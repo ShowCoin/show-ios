@@ -28,7 +28,7 @@
 /**
  des
 
- @param show <#show description#>
+ @param show show
  @param cmp <#cmp description#>
  */
 - (void)sl_show:(BOOL)show complete:(void(^)(void))cmp {
