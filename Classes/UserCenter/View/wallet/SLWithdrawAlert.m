@@ -124,4 +124,66 @@
 //    }];
 
 }
+- (void)setupAnimation {
+    self.mainView.transform = CGAffineTransformMakeScale(0.0, 0.0);
+    __weak SLWithdrawAlert *weakSelf = self;
+    [UIView animateWithDuration:0.55 delay:0.2 usingSpringWithDamping:0.7 initialSpringVelocity:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        weakSelf.mainView.transform = CGAffineTransformMakeScale(1.0, 1.0);
+    } completion:^(BOOL finished) {
+        weakSelf.mainView.frame = CGRectMake(58*Proportion375, 163*Proportion375, 250*Proportion375, 300*Proportion375);
+    }];
+}
+- (void)cancelClick {
+    __weak SLWithdrawAlert *weakSelf = self;
+    [UIView animateWithDuration:0.25 delay:0.1 usingSpringWithDamping:1.0 initialSpringVelocity:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        weakSelf.mainView.alpha = 0.0;
+    } completion:^(BOOL finished) {
+        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(SLWithdrawAlertCancelClick)]) {
+            [weakSelf.delegate SLWithdrawAlertCancelClick];
+        }
+    }];
+}
+- (void)sureClick {
+//    if (UserProfile.isTourist) {
+//        [PageMgr presentLoginViewController];
+//        return;
+//    }
+    
+    if (!_PhoneSafe) {//没手机
+        [self.delegate SLWithdrawGoToPhoneVC];
+    }else if (AccountUserInfoModel.authStatus.integerValue == 1 || AccountUserInfoModel.authStatus.integerValue == 4){//没KYC
+        [self.delegate SLWithdrawGoToKYC];
+
+    }else if (!_secretSafe){//没资金密码
+        [self.delegate SLWithdrawGoToSecret];
+
+    }else{//都完成
+        __weak SLWithdrawAlert *weakSelf = self;
+        [UIView animateWithDuration:0.25 delay:0.0 usingSpringWithDamping:1.0 initialSpringVelocity:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+            weakSelf.mainView.alpha = 0.0;
+        } completion:^(BOOL finished) {
+            if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(SLWithdrawAlertsureClick)]) {
+                [weakSelf.delegate SLWithdrawAlertsureClick];
+            }
+        }];
+    }
+}
+
+
+//tableview
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 3;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 60*Proportion375;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self sureClick];
+}
+
 @end
