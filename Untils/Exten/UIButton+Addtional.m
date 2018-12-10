@@ -58,5 +58,12 @@
     return btn;
 }
 
++ (instancetype)buttonWithTitle:(NSString *)title frame:(CGRect)frame{
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.titleLabel.font = [UIFont systemFontOfSize:15];
+    [btn setTitle:title forState:UIControlStateNormal];
+    btn.frame = frame;
+    return btn;
+}
 
 @end
