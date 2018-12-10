@@ -51,6 +51,12 @@
         });
     });
 }
++ (instancetype)buttonWithImage:(UIImage *)image frame:(CGRect)frame{
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btn setImage:image forState:UIControlStateNormal];
+    btn.frame = frame;
+    return btn;
+}
 
 
 @end
