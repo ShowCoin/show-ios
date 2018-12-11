@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <ethers/Address.h>
+#import <ethers/BigNumber.h>
 
 
 typedef NSUInteger AccountIndex;
