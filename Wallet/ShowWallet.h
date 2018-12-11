@@ -13,7 +13,6 @@
 #import <ethers/Provider.h>
 #import <ethers/Transaction.h>
 #import <ethers/TransactionInfo.h>
-
 #import <ethers/Account.h>
 
 typedef NSUInteger AccountIndex;
@@ -21,8 +20,7 @@ typedef NSUInteger AccountIndex;
 #define AccountNotFound          NSIntegerMax
 
 static NSString *const ShowSessionAccount_token    = @"kSessionAccount_token";
-static NSString *const ShowSessionAccount_pass    = @"kSessionAccount_pass";
-static NSString *const ShowSessionAccount_mn    = @"kSessionAccount_mn";
+
 
 #pragma mark - Notifications
 
