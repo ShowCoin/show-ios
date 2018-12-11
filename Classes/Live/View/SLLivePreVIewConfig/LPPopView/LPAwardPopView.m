@@ -19,6 +19,9 @@
 
 @end
 
+/**
+ LPAwardPopView imp
+ */
 @implementation LPAwardPopView {
     UIButton *select_;
 }
