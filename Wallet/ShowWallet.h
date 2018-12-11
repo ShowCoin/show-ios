@@ -62,8 +62,6 @@ extern const NSString* ShowWalletNotificationSyncDateKey;
 #pragma mark - Errors
 extern NSErrorDomain WalletErrorDomain;
 
-
-
 //钱包的错误类型
 typedef enum ShowWalletError {
     ShowWalletErrorNetwork                   =  -1,
@@ -73,6 +71,7 @@ typedef enum ShowWalletError {
     ShowWalletErrorNoAccount                 = -40,
     ShowWalletErrorNotImplemented            = -50,
 } WalletError;
+
 
 #pragma mark - Constants
 //交易类型
