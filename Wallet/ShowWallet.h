@@ -60,7 +60,6 @@ extern const NSString* ShowWalletNotificationSyncDateKey;
 
 
 #pragma mark - Errors
-
 extern NSErrorDomain WalletErrorDomain;
 
 //钱包的错误类型
