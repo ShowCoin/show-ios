@@ -32,7 +32,7 @@
 
 /** sl_show method
 
- @param show show
+ @param show sl_show
  @param complete
  */
 - (void)sl_show:(BOOL)show complete:(void(^)(void))cmp {
