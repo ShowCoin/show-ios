@@ -33,7 +33,7 @@
 /** sl_show method
 
  @param show show
- @param cmp cmp
+ @param complete
  */
 - (void)sl_show:(BOOL)show complete:(void(^)(void))cmp {
     self->_animating = YES;
