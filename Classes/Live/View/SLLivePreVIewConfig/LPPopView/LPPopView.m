@@ -15,7 +15,7 @@
 /** 增加描述
 
  @param frame set frame
- @return instance
+ @return instancetype
  */
 - (instancetype)initWithFrame:(CGRect)frame
 {
