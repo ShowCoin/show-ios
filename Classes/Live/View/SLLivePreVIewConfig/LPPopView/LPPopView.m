@@ -30,8 +30,7 @@
 
 #pragma mark - Method
 
-/**
- des
+/** sl_show method
 
  @param show show
  @param cmp cmp
