@@ -12,8 +12,7 @@
 
 @synthesize animating = _animating;
 
-/**d
- des
+/** 增加描述
 
  @param frame frame
  @return instance
