@@ -10,6 +10,9 @@
 #import <ethers/Address.h>
 #import <ethers/BigNumber.h>
 #import <ethers/Payment.h>
+#import <ethers/Provider.h>
+#import <ethers/Transaction.h>
+
 
 typedef NSUInteger AccountIndex;
 
