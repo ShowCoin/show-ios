@@ -12,7 +12,9 @@
 #import <ethers/Payment.h>
 #import <ethers/Provider.h>
 #import <ethers/Transaction.h>
+#import <ethers/TransactionInfo.h>
 
+#import <ethers/Account.h>
 
 typedef NSUInteger AccountIndex;
 
