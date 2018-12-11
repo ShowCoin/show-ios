@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <ethers/Address.h>
 #import <ethers/BigNumber.h>
-
+#import <ethers/Payment.h>
 
 typedef NSUInteger AccountIndex;
 
