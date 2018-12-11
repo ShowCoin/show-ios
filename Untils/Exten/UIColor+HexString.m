@@ -111,4 +111,10 @@
     [[NSScanner scannerWithString:bString] scanHexInt:&b];
     return [UIColor colorWithRed:((float)r / 255.0f) green:((float)g / 255.0f) blue:((float)b / 255.0f) alpha:alpha];
 }
+
+//默认alpha值为1
++ (UIColor *)colorWithHexStringdata:(NSString *)color
+{
+    return [self colorWithHexStringdata:color alpha:1.0f];
+}
 @end
