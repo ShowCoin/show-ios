@@ -44,4 +44,32 @@ static const void *BKControlHandlersKey = &BKControlHandlersKey;
 
 @end
 
+#pragma mark Category
+
+@implementation UIControl (BlocksKit)
+
+- (void)bk_addEventHandler:(void (^)(id sender))handler forControlEvents:(UIControlEvents)controlEvents
+{
+	NSParameterAssert(handler);
+	
+	NSMutableDictionary *events = objc_getAssociatedObject(self, BKControlHandlersKey);
+	if (!events) {
+		events = [NSMutableDictionary dictionary];
+		objc_setAssociatedObject(self, BKControlHandlersKey, events, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+	}
+
+	NSNumber *key = @(controlEvents);
+	NSMutableSet *handlers = events[key];
+	if (!handlers) {
+		handlers = [NSMutableSet set];
+		events[key] = handlers;
+	}
+	
+	BKControlWrapper *target = [[BKControlWrapper alloc] initWithHandler:handler forControlEvents:controlEvents];
+	[handlers addObject:target];
+	[self addTarget:target action:@selector(invoke:) forControlEvents:controlEvents];
+}
+
+
+
 @end
