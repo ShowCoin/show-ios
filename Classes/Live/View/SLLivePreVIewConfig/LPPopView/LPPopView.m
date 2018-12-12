@@ -12,11 +12,10 @@
 
 @synthesize animating = _animating;
 
-/**d
- des
+/** 增加描述
 
- @param frame frame
- @return instance
+ @param frame set frame
+ @return instancetype
  */
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -31,11 +30,10 @@
 
 #pragma mark - Method
 
-/**
- des
+/** sl_show method
 
- @param show show
- @param cmp cmp
+ @param show sl_show
+ @param complete
  */
 - (void)sl_show:(BOOL)show complete:(void(^)(void))cmp {
     self->_animating = YES;
