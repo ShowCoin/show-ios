@@ -74,5 +74,8 @@ static const void *BKGestureRecognizerShouldHandleActionKey = &BKGestureRecogniz
 	objc_setAssociatedObject(self, BKGestureRecognizerBlockKey, handler, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
-
+- (void (^)(UIGestureRecognizer *sender, UIGestureRecognizerState state, CGPoint location))bk_handler
+{
+	return objc_getAssociatedObject(self, BKGestureRecognizerBlockKey);
+}
 @end
