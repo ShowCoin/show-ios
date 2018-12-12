@@ -510,6 +510,7 @@
 		725282F121BE666A00802C09 /* ShowAccountTableHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowAccountTableHeader.m; sourceTree = "<group>"; };
 		725282F321BE66A700802C09 /* SLWithdrawAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWithdrawAlert.m; sourceTree = "<group>"; };
 		7254542721C11C18000B3FB8 /* SLWithDrawIndentifyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWithDrawIndentifyCell.m; sourceTree = "<group>"; };
+		7254542A21C11CC9000B3FB8 /* SLWalletHomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWalletHomePageViewController.h; sourceTree = "<group>"; };
 		7289901620F794D20044E74A /* ShowSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowSettingViewController.m; sourceTree = "<group>"; };
 		7289901820F795E90044E74A /* SLWithdrawAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWithdrawAlert.m; sourceTree = "<group>"; };
 		7289901920F795E90044E74A /* SLWithDrawIndentifyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWithDrawIndentifyCell.h; sourceTree = "<group>"; };
@@ -1066,6 +1067,15 @@
 			path = wallet;
 			sourceTree = "<group>";
 		};
+		7254542921C11C99000B3FB8 /* wallet */ = {
+			isa = PBXGroup;
+			children = (
+				7254542A21C11CC9000B3FB8 /* SLWalletHomePageViewController.h */,
+			);
+			name = wallet;
+			path = ../../../../wallet;
+			sourceTree = "<group>";
+		};
 		725B98BA20AC3CD400747F7A /* UserCenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -1093,6 +1103,7 @@
 		7297A17A20BED7E30012DBEB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				7254542921C11C99000B3FB8 /* wallet */,
 				7239EB2D20BD38FC00588BED /* ChangeheadportraitController.h */,
 				7239EB3B20BD468F00588BED /* ChangeTextController.h */,
 				7239EB2820BD38FC00588BED /* ShowSettingViewController.h */,
