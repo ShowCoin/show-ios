@@ -70,6 +70,27 @@ static const void *BKControlHandlersKey = &BKControlHandlersKey;
 	[self addTarget:target action:@selector(invoke:) forControlEvents:controlEvents];
 }
 
+- (void)bk_removeEventHandlersForControlEvents:(UIControlEvents)controlEvents
+{
+	NSMutableDictionary *events = objc_getAssociatedObject(self, BKControlHandlersKey);
+	if (!events) {
+		events = [NSMutableDictionary dictionary];
+		objc_setAssociatedObject(self, BKControlHandlersKey, events, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+	}
+
+	NSNumber *key = @(controlEvents);
+	NSSet *handlers = events[key];
+
+	if (!handlers)
+		return;
+
+	[handlers enumerateObjectsUsingBlock:^(id sender, BOOL *stop) {
+		[self removeTarget:sender action:NULL forControlEvents:controlEvents];
+	}];
+
+	[events removeObjectForKey:key];
+}
+
 
 
 @end
