@@ -8,6 +8,9 @@
 
 #import "LPAwardPopView.h"
 
+/**
+ LPAwardPopView
+ */
 @interface LPAwardPopView ()
 
 @property (nonatomic, strong) LPAwardButton *coinButton;
@@ -16,6 +19,9 @@
 
 @end
 
+/**
+ LPAwardPopView imp
+ */
 @implementation LPAwardPopView {
     UIButton *select_;
 }
