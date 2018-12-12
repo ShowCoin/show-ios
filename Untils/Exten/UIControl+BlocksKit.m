@@ -37,6 +37,11 @@ static const void *BKControlHandlersKey = &BKControlHandlersKey;
 	return [[BKControlWrapper alloc] initWithHandler:self.handler forControlEvents:self.controlEvents];
 }
 
+- (void)invoke:(id)sender
+{
+	self.handler(sender);
+}
 
+@end
 
 @end
