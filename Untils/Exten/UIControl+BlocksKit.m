@@ -32,6 +32,11 @@ static const void *BKControlHandlersKey = &BKControlHandlersKey;
 	return self;
 }
 
+- (id)copyWithZone:(NSZone *)zone
+{
+	return [[BKControlWrapper alloc] initWithHandler:self.handler forControlEvents:self.controlEvents];
+}
+
 
 
 @end
