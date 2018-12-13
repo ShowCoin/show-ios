@@ -267,4 +267,13 @@ static CGFloat const kLPUserViewWH = 17;
     return _preCoverButton;
 }
 
+- (UIImageView *)imageView {
+    if (!_imageView) {
+        _imageView = [[UIImageView alloc] init];
+        _imageView.contentMode = UIViewContentModeScaleAspectFill;
+        _imageView.alpha = kLPAlpha;
+    }
+    return _imageView;
+}
+
 @end
