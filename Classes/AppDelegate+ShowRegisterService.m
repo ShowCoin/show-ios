@@ -82,7 +82,9 @@
  */
 - (void)show_registerJPush:(NSDictionary *)launchOptions{
     NSString *advertisingId = [KMUtils idfa];
- 
+    JPUSHRegisterEntity * entity = [[JPUSHRegisterEntity alloc] init];
+    entity.types = JPAuthorizationOptionAlert|JPAuthorizationOptionBadge|JPAuthorizationOptionSound;
+   
 }
 
 #ifdef NSFoundationVersionNumber_iOS_9_x_Max
