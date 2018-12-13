@@ -58,6 +58,7 @@
     [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_WechatSession appKey:WX_APPID appSecret:UM_WX_AppSecret redirectURL:UM_WX_RedirectURL];
     [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_Sina appKey:SINA_APPID appSecret:UM_SINA_AppSecret redirectURL:UM_SINA_RedirectURL];
     [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_QQ appKey:QQ_APPID appSecret:UM_QQ_AppSecret redirectURL:UM_QQ_RedirectURL];
+    
 }
 
 
@@ -65,7 +66,6 @@
  注册  阿里云
  */
 -(void)show_registerAliyun{
-    [[SLAliyunOSS sharedManager] initClient:nil];
 }
 
 /**
@@ -98,10 +98,7 @@
             NSLog(@"registrationID获取失败，code：%d",resCode);
         }
     }];
-    
-    if (AccountUserInfoModel.uid) {
-        [KMJPushUntils loginJPush];
-    }
+
 }
 
 #ifdef NSFoundationVersionNumber_iOS_9_x_Max
