@@ -176,4 +176,18 @@ static CGFloat const kLPUserViewWH = 17;
     }
 }
 
+- (void)setCoverUrl:(NSString *)coverUrl {
+    _coverUrl = coverUrl;
+    if (IsValidString(coverUrl)) {
+        [self.imageView yy_setImageWithURL:[NSURL URLWithString:coverUrl] options:0];
+        self.addButton.hidden = YES;
+        self.preCoverButton.hidden = NO;
+        self.backgroundColor = [UIColor clearColor];
+    } else {
+        self.addButton.hidden = NO;
+        self.preCoverButton.hidden = YES;
+        self.imageView.image = nil;
+        self.backgroundColor = [Color(@"0c0c0c") colorWithAlphaComponent:0.4]; // LPViewBackgroundColor();
+    }
+}
 @end
