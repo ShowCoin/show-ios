@@ -221,5 +221,102 @@ CGRect swapWidthAndHeight(CGRect rect)
     
     return outputImage;
 }
+- (UIImage *)blurred
+{
+    return [self applyBlurWithRadius:8 tintColor:[UIColor colorWithWhite:0.5 alpha:0.63] saturationDeltaFactor:1.8 maskImage:nil];
+    
+}
+
+
++ (UIImage *)createImageFromView:(UIView *)view{
+    UIGraphicsBeginImageContextWithOptions(view.bounds.size, NO, 0.0);
+    [view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *uiImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return uiImage;
+}
+
+- (UIImage *)imageWithQuality:(CGFloat)quality{
+    NSData *data = UIImageJPEGRepresentation(self, quality);
+    return [UIImage imageWithData:data];
+}
+
+- (UIImage *)imageWithWithRect:(CGRect)rect{
+    return [self imageWithWithRect:rect size:rect.size];
+}
+- (UIImage *)imageWithWithRect:(CGRect)rect size:(CGSize)imageSize{
+    // Create a graphics image context
+    //    UIGraphicsBeginImageContext(imageSize);
+    UIGraphicsBeginImageContextWithOptions(imageSize, YES, 0.0f);
+    
+    // Tell the old image to draw in this new context, with the desired
+    // new size
+    [self drawInRect:rect];
+    
+    // Get the new image from the context
+    UIImage* newImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    // End the context
+    UIGraphicsEndImageContext();
+    
+    // Return the new image.
+    return newImage;
+}
+/**
+  *  根据宽高比例生成一张新图，若是当前图的比例与新生成的图比例不一样，则截取中间部分
+  *
+  *  @param ratio 生成的新图的宽高比例
+  *
+  *  @return <#return value description#>
+  */
+- (UIImage *)createImageWithRatio:(CGFloat)ratio{
+    if(ratio <= 0){
+        return nil;
+    }
+    CGFloat oldRatio = self.size.width / self.size.height;
+    /**
+     *  w/h < w1/h1 裁剪h
+     *  w/h > w1/h1 裁剪w
+     *  oldRatio = w/h
+     *  ration = w1/h1
+     */
+    CGRect newRect = CGRectZero;
+    if(oldRatio < ratio){
+        CGFloat newHeight = self.size.width / ratio;
+        newRect = CGRectMake(0, (self.size.height-newHeight)/2.0, self.size.width, newHeight);
+        return [self imageWithWithRect:newRect];
+    }
+    else if(oldRatio > ratio){
+        CGFloat newWidth = self.size.height * ratio;
+        newRect = CGRectMake((self.size.width - newWidth)/2.0, 0, newWidth, self.size.height);
+        return [self imageWithWithRect:newRect];
+    }
+    else{
+        return self;
+    }
+}
+- (UIImage *)scaleImageToSize:(CGSize)size{
+    CGFloat oldRatio = self.size.width / self.size.height;
+    CGFloat ratio = size.width / size.height;
+    /**
+     *  w/h < w1/h1 裁剪h
+     *  w/h > w1/h1 裁剪w
+     *  oldRatio = w/h
+     *  ration = w1/h1
+     */
+    CGRect newRect = CGRectZero;
+    if(oldRatio < ratio){
+        CGFloat newHeight = self.size.width / ratio;
+        newRect = CGRectMake(0, (self.size.height-newHeight)/2.0, self.size.width, newHeight);
+    }
+    else if(oldRatio > ratio){
+        CGFloat newWidth = self.size.height * ratio;
+        newRect = CGRectMake((self.size.width - newWidth)/2.0, 0, newWidth, self.size.height);
+    }
+    else{
+        newRect = CGRectMake(0, 0, self.size.width, self.size.height);
+    }
+    return [self imageWithWithRect:newRect size:size];
+}
 
 @end
