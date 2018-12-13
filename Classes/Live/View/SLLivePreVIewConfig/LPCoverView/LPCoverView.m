@@ -285,4 +285,13 @@ static CGFloat const kLPUserViewWH = 17;
     return _showView;
 }
 
+- (LPIconView *)ratioView {
+    if (!_ratioView) {
+        _ratioView = [[LPIconView alloc] init];
+        _ratioView.imageView.image = [UIImage imageNamed:@"lp_cover_watch"];
+        _ratioView.textLabel.text = @"0%";
+    }
+    return _ratioView;
+}
+
 @end
