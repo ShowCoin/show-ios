@@ -72,9 +72,7 @@
  注册  本地通知
  */
 -(void)show_registerLocalNot{
-    [[SLLocalNotificationCenter sharedCenter] registerLocalNotification:^(BOOL success) {
-        //        NSLog(@"本地消息注册 %@", success?@"成功":@"失败");
-    }];
+ 
 }
 
 /**
