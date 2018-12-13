@@ -253,4 +253,18 @@ static CGFloat const kLPUserViewWH = 17;
     }
     return _addButton;
 }
+
+- (UIButton *)preCoverButton {
+    if (!_preCoverButton) {
+        _preCoverButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_preCoverButton setTitle:@"更换封面" forState:UIControlStateNormal];
+        [_preCoverButton addTarget:self action:@selector(addCorverAction) forControlEvents:UIControlEventTouchUpInside];
+        _preCoverButton.titleLabel.font = [UIFont systemFontOfSize:16];
+        _preCoverButton.backgroundColor = [UIColor colorWithWhite:0 alpha:0.2];
+        LPSetViewCornerRadius(_preCoverButton);
+        _preCoverButton.hidden = YES;
+    }
+    return _preCoverButton;
+}
+
 @end
