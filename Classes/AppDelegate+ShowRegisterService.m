@@ -24,7 +24,7 @@
     [self show_registerUmengSocial];
     [self show_registerAliyun];
     [self show_registerLocation];
-
+    [self show_registerLocalNot];
 }
 
 /**
