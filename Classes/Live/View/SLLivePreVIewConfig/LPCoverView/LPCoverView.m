@@ -312,4 +312,13 @@ static CGFloat const kLPUserViewWH = 17;
     return _userView;
 }
 
+- (UILabel *)nameLabel {
+    if (!_nameLabel) {
+        _nameLabel = [[SLShadowLabel alloc] init];
+        _nameLabel.textColor = [UIColor whiteColor];
+        _nameLabel.font = [UIFont systemFontOfSize:11];
+    }
+    return _nameLabel;
+}
+
 @end
