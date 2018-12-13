@@ -55,7 +55,8 @@
 -(void)show_registerUmengSocial;
 {
     [[UMSocialManager defaultManager] setUmSocialAppkey:UM_Social_Appkey];
-   
+    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_WechatSession appKey:WX_APPID appSecret:UM_WX_AppSecret redirectURL:UM_WX_RedirectURL];
+
 }
 
 
