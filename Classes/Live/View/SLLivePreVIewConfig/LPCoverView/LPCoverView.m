@@ -304,4 +304,12 @@ static CGFloat const kLPUserViewWH = 17;
     }
     return _textLabel;
 }
+
+- (SLHeadPortrait *)userView {
+    if (!_userView) {
+        _userView = [[SLHeadPortrait alloc] initWithFrame:CGRectMake(0, 0, kLPUserViewWH, kLPUserViewWH)];
+    }
+    return _userView;
+}
+
 @end
