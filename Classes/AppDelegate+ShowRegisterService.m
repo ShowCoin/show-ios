@@ -22,6 +22,7 @@
     [self show_registerJPush:launchOptions];
     [self show_registerMobClick];
     [self show_registerUmengSocial];
+    [self show_registerAliyun];
 
 }
 
