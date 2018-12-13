@@ -149,6 +149,8 @@
 		725282F021BE660A00802C09 /* ShowAccountHead.m in Sources */ = {isa = PBXBuildFile; fileRef = 725282EF21BE660A00802C09 /* ShowAccountHead.m */; };
 		725282F221BE666A00802C09 /* ShowAccountTableHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 725282F121BE666A00802C09 /* ShowAccountTableHeader.m */; };
 		725282F421BE66A700802C09 /* SLWithdrawAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 725282F321BE66A700802C09 /* SLWithdrawAlert.m */; };
+		7254542821C11C18000B3FB8 /* SLWithDrawIndentifyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7254542721C11C18000B3FB8 /* SLWithDrawIndentifyCell.m */; };
+		7254542C21C11D1C000B3FB8 /* SLWalletHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7254542B21C11D1C000B3FB8 /* SLWalletHomePageViewController.m */; };
 		7289901720F794D30044E74A /* ShowSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7289901620F794D20044E74A /* ShowSettingViewController.m */; };
 		7289901B20F795EA0044E74A /* SLWithdrawAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 7289901820F795E90044E74A /* SLWithdrawAlert.m */; };
 		72A0088620FC9FE40051C643 /* SLBlankView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A0088520FC9FE40051C643 /* SLBlankView.m */; };
@@ -488,7 +490,6 @@
 		725282CA21BB94FC00802C09 /* SLAuthenticationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLAuthenticationView.h; sourceTree = "<group>"; };
 		725282CB21BB94FC00802C09 /* SLAuthenticationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLAuthenticationView.m; sourceTree = "<group>"; };
 		725282D221BB968400802C09 /* ShowAccountExchangeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowAccountExchangeView.h; sourceTree = "<group>"; };
-		725282D321BB968400802C09 /* SLwithdrawListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLwithdrawListCell.h; sourceTree = "<group>"; };
 		725282D421BB968400802C09 /* ShowAccountCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowAccountCell.h; sourceTree = "<group>"; };
 		725282D521BB968500802C09 /* SLWalletHomePageHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWalletHomePageHeader.m; sourceTree = "<group>"; };
 		725282D621BB968500802C09 /* SLPassWordAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLPassWordAlert.h; sourceTree = "<group>"; };
@@ -509,6 +510,9 @@
 		725282EF21BE660A00802C09 /* ShowAccountHead.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowAccountHead.m; sourceTree = "<group>"; };
 		725282F121BE666A00802C09 /* ShowAccountTableHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowAccountTableHeader.m; sourceTree = "<group>"; };
 		725282F321BE66A700802C09 /* SLWithdrawAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWithdrawAlert.m; sourceTree = "<group>"; };
+		7254542721C11C18000B3FB8 /* SLWithDrawIndentifyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWithDrawIndentifyCell.m; sourceTree = "<group>"; };
+		7254542A21C11CC9000B3FB8 /* SLWalletHomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWalletHomePageViewController.h; sourceTree = "<group>"; };
+		7254542B21C11D1C000B3FB8 /* SLWalletHomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWalletHomePageViewController.m; sourceTree = "<group>"; };
 		7289901620F794D20044E74A /* ShowSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowSettingViewController.m; sourceTree = "<group>"; };
 		7289901820F795E90044E74A /* SLWithdrawAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWithdrawAlert.m; sourceTree = "<group>"; };
 		7289901920F795E90044E74A /* SLWithDrawIndentifyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWithDrawIndentifyCell.h; sourceTree = "<group>"; };
@@ -697,6 +701,25 @@
 		434DDB4B20C92B4E00191FC1 /* JKCategories */ = {
 			isa = PBXGroup;
 			children = (
+				4325536820D8B51000FC0258 /* CLLocationManager+Blocks.h */,
+				4325536720D8B50F00FC0258 /* CLLocationManager+Blocks.m */,
+				43205DD320DD263300AD6952 /* UIView+Debug.h */,
+				43205DD220DD263300AD6952 /* UIView+Debug.m */,
+				4325537420D8B59000FC0258 /* NSArray+JKBlock.h */,
+				4325537320D8B58F00FC0258 /* NSArray+JKBlock.m */,
+				4325535F20D8B49F00FC0258 /* CAShapeLayerDemoViewController.h */,
+				43205DD820DD266500AD6952 /* UIView+FDCollapsibleConstraints.h */,
+				43205DD920DD266600AD6952 /* UIView+FDCollapsibleConstraints.m */,
+				43205DD520DD264B00AD6952 /* UITextViewDemoViewController.h */,
+				43205DD620DD264B00AD6952 /* UITextViewDemoViewController.m */,
+				435D4C7F20F091BC00C8DC85 /* NSIndexPath+JKOffset.h */,
+				435D4C7E20F091BB00C8DC85 /* NSIndexPath+JKOffset.m */,
+				435D4C7B20F0919600C8DC85 /* NSHTTPCookieStorage+JKFreezeDry.h */,
+				435D4C7C20F0919600C8DC85 /* NSHTTPCookieStorage+JKFreezeDry.m */,
+				435D4C6620EF3FA500C8DC85 /* NSDictionary+JKMerge.h */,
+				435D4C6720EF3FA500C8DC85 /* NSDictionary+JKMerge.m */,
+				435D4C6320EF3E3B00C8DC85 /* NSDictionary+JKJSONString.h */,
+				435D4C6420EF3E3B00C8DC85 /* NSDictionary+JKJSONString.m */,
 				435D4C4B20EDEAC500C8DC85 /* NSDate+JKReporting.h */,
 				435D4C4C20EDEAC500C8DC85 /* NSDate+JKReporting.m */,
 				435D4C4820EDEAAD00C8DC85 /* NSDate+JKLunarCalendar.h */,
@@ -777,14 +800,6 @@
 				435D4C8420F0920900C8DC85 /* NSManagedObject+JKDictionary.h */,
 				435D4C8520F0920900C8DC85 /* NSManagedObject+JKDictionary.m */,
 				435D4C8120F091E500C8DC85 /* NSInvocation+JKBb.m */,
-				435D4C7F20F091BC00C8DC85 /* NSIndexPath+JKOffset.h */,
-				435D4C7E20F091BB00C8DC85 /* NSIndexPath+JKOffset.m */,
-				435D4C7B20F0919600C8DC85 /* NSHTTPCookieStorage+JKFreezeDry.h */,
-				435D4C7C20F0919600C8DC85 /* NSHTTPCookieStorage+JKFreezeDry.m */,
-				435D4C6620EF3FA500C8DC85 /* NSDictionary+JKMerge.h */,
-				435D4C6720EF3FA500C8DC85 /* NSDictionary+JKMerge.m */,
-				435D4C6320EF3E3B00C8DC85 /* NSDictionary+JKJSONString.h */,
-				435D4C6420EF3E3B00C8DC85 /* NSDictionary+JKJSONString.m */,
 				435D4C6120EF3E2400C8DC85 /* NSDictionary+JKBlock.h */,
 				435D4C6020EF3E2400C8DC85 /* NSDictionary+JKBlock.m */,
 				431F64E220F8F2300087DB8E /* NSString+JKRemoveEmoji.h */,
@@ -809,43 +824,6 @@
 				9309C73A21BB917200AAFE87 /* UIWindow+SLMotion.h */,
 				9309C73B21BB919B00AAFE87 /* UIWindow+SLMotion.m */,
 				9309C73D21BB91B900AAFE87 /* NSString+Json.h */,
-				435D4C4920EDEAAD00C8DC85 /* NSDate+JKLunarCalendar.m */,
-				435D4C4320EDEA6D00C8DC85 /* NSDate+JKFormatter.h */,
-				435D4C4620EDEA8A00C8DC85 /* NSDate+JKInternetDateTime.h */,
-				435D4C4520EDEA8A00C8DC85 /* NSDate+JKInternetDateTime.m */,
-				435D4C4220EDEA6D00C8DC85 /* NSDate+JKFormatter.m */,
-				435D4C4020EDEA4B00C8DC85 /* NSDate+JKExtension.h */,
-				435D4C3F20EDEA4B00C8DC85 /* NSDate+JKExtension.m */,
-				435D4C5420EDEB3100C8DC85 /* NSDateFormatter+JKMake.h */,
-				435D4C5520EDEB3100C8DC85 /* NSDateFormatter+JKMake.m */,
-				437921DC20ECC3DF00B2EC88 /* NSArray+JKSafeAccess.h */,
-				437921DD20ECC3E000B2EC88 /* NSArray+JKSafeAccess.m */,
-				43291F4C20E520CA000C3C15 /* UITableView+FDTemplateLayoutCellDebug.m */,
-				436B1EAD20DA300600419AC0 /* UIView+JKFind.h */,
-				436B1EB520DA306200419AC0 /* UIView+JKFrame.h */,
-				436B1EB320DA303F00419AC0 /* UIView+JKScreenshot.h */,
-				436B1EAC20DA300600419AC0 /* UIView+JKFind.m */,
-				434DDB5820C932FC00191FC1 /* CAShapeLayer+JKUIBezierPath.h */,
-				434DDB5920C932FC00191FC1 /* CAShapeLayer+JKUIBezierPath.m */,
-				434DDB5C20C9332700191FC1 /* CATransaction+JKAnimateWithDuration.h */,
-				43D87B1B20EB6CE600E991D6 /* UISplitViewController+JKQuickAccess.h */,
-				43D87B1C20EB6CE600E991D6 /* UISplitViewController+JKQuickAccess.m */,
-				43D87B3420EB6E7000E991D6 /* UIResponderDemoViewController.h */,
-				43D87B3320EB6E6F00E991D6 /* UIResponderDemoViewController.m */,
-				43D87B3020EB6E0400E991D6 /* UIScreen+JKFrame.h */,
-				43D87B3120EB6E0400E991D6 /* UIScreen+JKFrame.m */,
-				43D87B2A20EB6DCE00E991D6 /* UIScrollView+APParallaxHeader.h */,
-				43D87B2B20EB6DCE00E991D6 /* UIScrollView+APParallaxHeader.m */,
-				43D87B2820EB6D9900E991D6 /* UIScrollView+EmptyDataSet.h */,
-				43D87B2720EB6D9900E991D6 /* UIScrollView+EmptyDataSet.m */,
-				43D87B2520EB6D7E00E991D6 /* UIScrollView+JKAddition.h */,
-				43D87B2420EB6D7E00E991D6 /* UIScrollView+JKAddition.m */,
-				43D87B2220EB6D6C00E991D6 /* UIScrollView+JKPages.h */,
-				43D87B2120EB6D6C00E991D6 /* UIScrollView+JKPages.m */,
-				4325536420D8B4F100FC0258 /* CLLocation+JKCH1903.h */,
-				4325536520D8B4F100FC0258 /* CLLocation+JKCH1903.m */,
-				437921E820ECC47B00B2EC88 /* NSData+JKEncrypt.h */,
-				437921E920ECC47C00B2EC88 /* NSData+JKEncrypt.m */,
 				437921F420ECC4E100B2EC88 /* NSData+JKzlib.h */,
 				437921F520ECC4E100B2EC88 /* NSData+JKzlib.m */,
 				437921F220ECC4C000B2EC88 /* NSData+JKPCM.h */,
@@ -895,17 +873,6 @@
 				43291F4E20E520E0000C3C15 /* UITableView+FDKeyedHeightCache.m */,
 				43291F4B20E520CA000C3C15 /* UITableView+FDTemplateLayoutCellDebug.h */,
 				4325536220D8B4CD00FC0258 /* CATransactionDemoViewController.m */,
-				4325536820D8B51000FC0258 /* CLLocationManager+Blocks.h */,
-				4325536720D8B50F00FC0258 /* CLLocationManager+Blocks.m */,
-				43205DD320DD263300AD6952 /* UIView+Debug.h */,
-				43205DD220DD263300AD6952 /* UIView+Debug.m */,
-				4325537420D8B59000FC0258 /* NSArray+JKBlock.h */,
-				4325537320D8B58F00FC0258 /* NSArray+JKBlock.m */,
-				4325535F20D8B49F00FC0258 /* CAShapeLayerDemoViewController.h */,
-				43205DD820DD266500AD6952 /* UIView+FDCollapsibleConstraints.h */,
-				43205DD920DD266600AD6952 /* UIView+FDCollapsibleConstraints.m */,
-				43205DD520DD264B00AD6952 /* UITextViewDemoViewController.h */,
-				43205DD620DD264B00AD6952 /* UITextViewDemoViewController.m */,
 				434DDB5B20C9332700191FC1 /* CATransaction+JKAnimateWithDuration.m */,
 				434DDB5620C932DB00191FC1 /* CAMediaTimingFunction+JKAdditionalEquations.h */,
 				43205DDB20DD267D00AD6952 /* UITextView+JKSelect.h */,
@@ -931,6 +898,43 @@
 				434DDB5520C932DB00191FC1 /* CAMediaTimingFunction+JKAdditionalEquations.m */,
 				434DDB4F20C9326800191FC1 /* CALayer+JKBorderColor.h */,
 				431BBB6320DBCB04006A3D50 /* UIView+JKConstraints.h */,
+				435D4C4920EDEAAD00C8DC85 /* NSDate+JKLunarCalendar.m */,
+				435D4C4320EDEA6D00C8DC85 /* NSDate+JKFormatter.h */,
+				435D4C4620EDEA8A00C8DC85 /* NSDate+JKInternetDateTime.h */,
+				435D4C4520EDEA8A00C8DC85 /* NSDate+JKInternetDateTime.m */,
+				435D4C4220EDEA6D00C8DC85 /* NSDate+JKFormatter.m */,
+				435D4C4020EDEA4B00C8DC85 /* NSDate+JKExtension.h */,
+				435D4C3F20EDEA4B00C8DC85 /* NSDate+JKExtension.m */,
+				435D4C5420EDEB3100C8DC85 /* NSDateFormatter+JKMake.h */,
+				435D4C5520EDEB3100C8DC85 /* NSDateFormatter+JKMake.m */,
+				437921DC20ECC3DF00B2EC88 /* NSArray+JKSafeAccess.h */,
+				437921DD20ECC3E000B2EC88 /* NSArray+JKSafeAccess.m */,
+				43291F4C20E520CA000C3C15 /* UITableView+FDTemplateLayoutCellDebug.m */,
+				436B1EAD20DA300600419AC0 /* UIView+JKFind.h */,
+				436B1EB520DA306200419AC0 /* UIView+JKFrame.h */,
+				436B1EB320DA303F00419AC0 /* UIView+JKScreenshot.h */,
+				436B1EAC20DA300600419AC0 /* UIView+JKFind.m */,
+				434DDB5820C932FC00191FC1 /* CAShapeLayer+JKUIBezierPath.h */,
+				434DDB5920C932FC00191FC1 /* CAShapeLayer+JKUIBezierPath.m */,
+				434DDB5C20C9332700191FC1 /* CATransaction+JKAnimateWithDuration.h */,
+				43D87B1B20EB6CE600E991D6 /* UISplitViewController+JKQuickAccess.h */,
+				43D87B1C20EB6CE600E991D6 /* UISplitViewController+JKQuickAccess.m */,
+				43D87B3420EB6E7000E991D6 /* UIResponderDemoViewController.h */,
+				43D87B3320EB6E6F00E991D6 /* UIResponderDemoViewController.m */,
+				43D87B3020EB6E0400E991D6 /* UIScreen+JKFrame.h */,
+				43D87B3120EB6E0400E991D6 /* UIScreen+JKFrame.m */,
+				43D87B2A20EB6DCE00E991D6 /* UIScrollView+APParallaxHeader.h */,
+				43D87B2B20EB6DCE00E991D6 /* UIScrollView+APParallaxHeader.m */,
+				43D87B2820EB6D9900E991D6 /* UIScrollView+EmptyDataSet.h */,
+				43D87B2720EB6D9900E991D6 /* UIScrollView+EmptyDataSet.m */,
+				43D87B2520EB6D7E00E991D6 /* UIScrollView+JKAddition.h */,
+				43D87B2420EB6D7E00E991D6 /* UIScrollView+JKAddition.m */,
+				43D87B2220EB6D6C00E991D6 /* UIScrollView+JKPages.h */,
+				43D87B2120EB6D6C00E991D6 /* UIScrollView+JKPages.m */,
+				4325536420D8B4F100FC0258 /* CLLocation+JKCH1903.h */,
+				4325536520D8B4F100FC0258 /* CLLocation+JKCH1903.m */,
+				437921E820ECC47B00B2EC88 /* NSData+JKEncrypt.h */,
+				437921E920ECC47C00B2EC88 /* NSData+JKEncrypt.m */,
 			);
 			path = JKCategories;
 			sourceTree = "<group>";
@@ -1061,9 +1065,19 @@
 				725282D721BB968500802C09 /* SLWithdrawAlert.h */,
 				725282F321BE66A700802C09 /* SLWithdrawAlert.m */,
 				725282D921BB968500802C09 /* SLWithDrawIndentifyCell.h */,
-				725282D321BB968400802C09 /* SLwithdrawListCell.h */,
+				7254542721C11C18000B3FB8 /* SLWithDrawIndentifyCell.m */,
 			);
 			path = wallet;
+			sourceTree = "<group>";
+		};
+		7254542921C11C99000B3FB8 /* wallet */ = {
+			isa = PBXGroup;
+			children = (
+				7254542A21C11CC9000B3FB8 /* SLWalletHomePageViewController.h */,
+				7254542B21C11D1C000B3FB8 /* SLWalletHomePageViewController.m */,
+			);
+			name = wallet;
+			path = ../../../../wallet;
 			sourceTree = "<group>";
 		};
 		725B98BA20AC3CD400747F7A /* UserCenter */ = {
@@ -1093,6 +1107,7 @@
 		7297A17A20BED7E30012DBEB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				7254542921C11C99000B3FB8 /* wallet */,
 				7239EB2D20BD38FC00588BED /* ChangeheadportraitController.h */,
 				7239EB3B20BD468F00588BED /* ChangeTextController.h */,
 				7239EB2820BD38FC00588BED /* ShowSettingViewController.h */,
@@ -1725,6 +1740,7 @@
 				435D4C4720EDEA8B00C8DC85 /* NSDate+JKInternetDateTime.m in Sources */,
 				934CBCD9211821A600608F2F /* NSDate+Additions.m in Sources */,
 				435D4C4420EDEA6D00C8DC85 /* NSDate+JKFormatter.m in Sources */,
+				7254542C21C11D1C000B3FB8 /* SLWalletHomePageViewController.m in Sources */,
 				437921E120ECC40900B2EC88 /* NSBundle+JKAppIcon.m in Sources */,
 				9306818A21BE648D0021F976 /* NSData+Image.m in Sources */,
 				9391AA8320BF078A00D520F1 /* SLTimerLabel.m in Sources */,
@@ -1757,6 +1773,7 @@
 				431C078920FE291700479559 /* NSUserDefaults+JKSafeAccess.m in Sources */,
 				43205DDD20DD267E00AD6952 /* UITextView+JKSelect.m in Sources */,
 				725282F021BE660A00802C09 /* ShowAccountHead.m in Sources */,
+				7254542821C11C18000B3FB8 /* SLWithDrawIndentifyCell.m in Sources */,
 				723816BE20C6ABFF00C3885E /* UIColor+Equalable.m in Sources */,
 				724FF37D20E6680500DD40EB /* SLUserInfoListCell.m in Sources */,
 				723816B720C68B3C00C3885E /* SLHeadPortrait.m in Sources */,
