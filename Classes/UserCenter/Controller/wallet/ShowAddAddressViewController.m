@@ -322,6 +322,55 @@
     }
     return settingCell;
 }
+-(void)sure:(UIButton *)sender
+{
+    
+    [SLReportManager reportEvent:kReport_Me_Wallet andSubEvent:kReport_MyWallet_AddAddress];
+    if(!_walletName||_walletName.length==0){
+        [ShowWaringView waringView:@"请输入名称" style:WaringStyleRed];
+    }else if (![_walletAddress isValidETHAddress] && ![_walletAddress isValidBTCAddress]){
+        [ShowWaringView waringView:@"无效的钱包地址" style:WaringStyleRed];
+    }else{
+        if (self.addWithdrawAddressAction ) {
+            [self.addWithdrawAddressAction cancel];
+            self.addWithdrawAddressAction = nil;
+        }
+        [HDHud showHUDInView:self.view title:@""];
+        /*@property (nonatomic, copy) NSString *coin_type;//币种类型
+         @property (nonatomic, copy) NSString *name;//名称
+         @property (nonatomic, copy) NSString *address;//地址
+         @property (nonatomic, copy) NSString *is_verify;//是否认证
+         @property (nonatomic, copy) NSString *cash_passwd;//资金密码
+         @property (nonatomic, copy) NSString *sms_code;//短信验证码
+         @property (nonatomic, copy) NSString *google_code;//google验证码
+*/
+        self.addWithdrawAddressAction = [SLAddWithdrawAddressAction action];
+        self.addWithdrawAddressAction.name = self.walletName;
+        self.addWithdrawAddressAction.coin_type = self.walletModel.type;
+        self.addWithdrawAddressAction.address = self.walletAddress;
+        self.addWithdrawAddressAction.is_verify = self.walletVerify?@"1":@"0";
+        if (self.walletPassword && self.walletVerify) {
+            self.addWithdrawAddressAction.cash_passwd =[NSString MD5AndSaltString:self.walletPassword];
+        }
+        self.addWithdrawAddressAction.sms_code = self.messagePassword;
+//        self.addWithdrawAddressAction.google_code = self.googlePassword;
+//        self.addWithdrawAddressAction.mail_code = self.emailPassword;
+        @weakify(self)
+        self.addWithdrawAddressAction.finishedBlock = ^(id result) {
+       
+            @strongify(self)
+            [HDHud hideHUDInView:self.view];
+            //  初始化用户单例
+            [self.navigationController popViewControllerAnimated:YES];
+        };
+        self.addWithdrawAddressAction.failedBlock = ^(NSError *error) {
+            @strongify(self)
+            [HDHud hideHUDInView:self.view];
+            [HDHud showMessageInView:self.view title:error.userInfo[@"msg"]];
+        };
+        [self.addWithdrawAddressAction start];
+    }
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
