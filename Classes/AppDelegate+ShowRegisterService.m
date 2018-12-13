@@ -92,11 +92,7 @@
     
     //2.1.9版本新增获取registration id block接口。
     [JPUSHService registrationIDCompletionHandler:^(int resCode, NSString *registrationID) {
-        if(resCode == 0){
-            NSLog(@"registrationID获取成功：%@",registrationID);
-        } else{
-            NSLog(@"registrationID获取失败，code：%d",resCode);
-        }
+      
     }];
 
 }
