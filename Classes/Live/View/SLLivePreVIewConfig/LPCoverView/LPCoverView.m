@@ -294,4 +294,14 @@ static CGFloat const kLPUserViewWH = 17;
     return _ratioView;
 }
 
+- (UILabel *)textLabel {
+    if (!_textLabel) {
+        _textLabel = [[SLShadowLabel alloc] init];
+        _textLabel.textColor = kTextWhitef7f7f7;
+        _textLabel.font = [UIFont systemFontOfSize:12];
+        _textLabel.text = kLPPlaceholderText;
+        _textLabel.numberOfLines = 3;
+    }
+    return _textLabel;
+}
 @end
