@@ -66,7 +66,6 @@
  注册  阿里云
  */
 -(void)show_registerAliyun{
-    [[SLAliyunOSS sharedManager] initClient:nil];
 }
 
 /**
