@@ -126,4 +126,24 @@ static CGFloat const kLPUserViewWH = 17;
     self.showView.frame = CGRectMake(viewX, viewY, viewW, viewH);
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    if (isScale) {
+        self->isScale = NO;
+        [UIView animateWithDuration:0.25 delay:0 options:UIViewAnimationOptionCurveEaseIn | UIViewAnimationOptionLayoutSubviews animations:^{
+            self.frame = self->beginRect_;
+            [self setNeedsDisplay];
+        } completion:^(BOOL finished) {
+            self.frame = self->originRect_;
+            [self->beginView_ addSubview:self];
+            self.preCoverButton.hidden = NO;
+        }];
+    } else {
+        CGPoint point = [touches.anyObject locationInView:self];
+        CGRect topRect = CGRectMake(0, 0, self.width, self.height / 2);
+        if (CGRectContainsPoint(topRect, point)) {
+            [self addCorverAction];
+        }
+    }
+}
+
 @end
