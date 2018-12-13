@@ -25,6 +25,8 @@
     [self show_registerAliyun];
     [self show_registerLocation];
     [self show_registerLocalNot];
+    [SysConfig requestConfig];
+
 }
 
 /**
