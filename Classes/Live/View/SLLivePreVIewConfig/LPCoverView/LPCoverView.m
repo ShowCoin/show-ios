@@ -170,4 +170,10 @@ static CGFloat const kLPUserViewWH = 17;
     [self layoutSubviews];
 }
 
+- (void)addCorverAction {
+    if (self.changeCoverBlock) {
+        self.changeCoverBlock();
+    }
+}
+
 @end
