@@ -84,7 +84,12 @@
     NSString *advertisingId = [KMUtils idfa];
     JPUSHRegisterEntity * entity = [[JPUSHRegisterEntity alloc] init];
     entity.types = JPAuthorizationOptionAlert|JPAuthorizationOptionBadge|JPAuthorizationOptionSound;
-   
+    [JPUSHService registerForRemoteNotificationConfig:entity delegate:self];
+    [JPUSHService setupWithOption:launchOptions appKey:JPUSH_AppKey
+                          channel:JPUSH_Channel
+                 apsForProduction:JPUSH_isProduction
+            advertisingIdentifier:advertisingId];
+    
 }
 
 #ifdef NSFoundationVersionNumber_iOS_9_x_Max
