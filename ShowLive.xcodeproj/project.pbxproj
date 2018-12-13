@@ -240,7 +240,7 @@
 		431CB4DD20F49A4F0043B0AC /* NSSet+JKBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSSet+JKBlock.m"; sourceTree = "<group>"; };
 		431CB4DF20F49A800043B0AC /* NSString+JKBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JKBase64.h"; sourceTree = "<group>"; };
 		431CB4E020F49A800043B0AC /* NSString+JKBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JKBase64.m"; sourceTree = "<group>"; };
-		431F64AE20F794150087DB8E /* UIResponder+JKFirstResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+JKFirstResponder.m"; sourceTree = "<group>"; };
+		431F64AE20F794150087DB8E /* UIResponder+JKFirstResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIResponder+JKFirstResponder.m"; path = "../JKCategories/UIResponder+JKFirstResponder.m"; sourceTree = "<group>"; };
 		431F64AF20F794160087DB8E /* UIResponder+JKFirstResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+JKFirstResponder.h"; sourceTree = "<group>"; };
 		431F64B720F7945C0087DB8E /* UIPopoverController+iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIPopoverController+iPhone.m"; sourceTree = "<group>"; };
 		431F64B820F7945C0087DB8E /* UIPopoverController+iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIPopoverController+iPhone.h"; sourceTree = "<group>"; };
@@ -703,7 +703,6 @@
 				4325536820D8B51000FC0258 /* CLLocationManager+Blocks.h */,
 				4325536720D8B50F00FC0258 /* CLLocationManager+Blocks.m */,
 				43205DD320DD263300AD6952 /* UIView+Debug.h */,
-				43205DD220DD263300AD6952 /* UIView+Debug.m */,
 				4325537420D8B59000FC0258 /* NSArray+JKBlock.h */,
 				4325537320D8B58F00FC0258 /* NSArray+JKBlock.m */,
 				4325535F20D8B49F00FC0258 /* CAShapeLayerDemoViewController.h */,
@@ -716,10 +715,6 @@
 				435D4C6620EF3FA500C8DC85 /* NSDictionary+JKMerge.h */,
 				435D4C6720EF3FA500C8DC85 /* NSDictionary+JKMerge.m */,
 				435D4C6320EF3E3B00C8DC85 /* NSDictionary+JKJSONString.h */,
-				435D4C6420EF3E3B00C8DC85 /* NSDictionary+JKJSONString.m */,
-				435D4C4C20EDEAC500C8DC85 /* NSDate+JKReporting.m */,
-				435D4C4820EDEAAD00C8DC85 /* NSDate+JKLunarCalendar.h */,
-				431F64EA20F8F2610087DB8E /* NSString+JKStringPages.h */,
 				431F64EB20F8F2610087DB8E /* NSString+JKStringPages.m */,
 				435D4C7320EF42FB00C8DC85 /* NSFetchRequest+JKExtensions.h */,
 				435D4C7220EF42FB00C8DC85 /* NSFetchRequest+JKExtensions.m */,
@@ -727,7 +722,6 @@
 				431C078120FE28BF00479559 /* NSURLSession+JKSynchronousTask.m */,
 				431CB4D020F499370043B0AC /* NSObject+JKRuntime.m */,
 				4355A4DB20FF11000020B7DE /* UINavigationController+JKStackManager.h */,
-				431F64AE20F794150087DB8E /* UIResponder+JKFirstResponder.m */,
 				431F64B820F7945C0087DB8E /* UIPopoverController+iPhone.h */,
 				431F64B720F7945C0087DB8E /* UIPopoverController+iPhone.m */,
 				4374EB0E20F62F7C00BB947F /* NSString+JKDictionaryValue.h */,
@@ -741,8 +735,6 @@
 				437B0A5B20F3602E00E93844 /* NSObject+JKAddProperty.h */,
 				437B0A5C20F3602E00E93844 /* NSObject+JKAddProperty.m */,
 				437B0A5820F3600800E93844 /* NSNumber+JKRound.m */,
-				437B0A5620F35FDE00E93844 /* NSNumber+JKRomanNumerals.m */,
-				437B0A5920F3600900E93844 /* NSNumber+JKRound.h */,
 				431CB4DF20F49A800043B0AC /* NSString+JKBase64.h */,
 				4374EB1220F62F9D00BB947F /* NSString+JKEmoji.m */,
 				431CB4C820F498EF0043B0AC /* NSObject+JKGCD.m */,
@@ -1314,14 +1306,22 @@
 				9311B41621BF89A6009C9A1D /* UIButton+ImageTitleSpacing.m */,
 				9311B41821BF89EF009C9A1D /* UIColor+HexString.h */,
 				9311B41921BF8A16009C9A1D /* UIColor+HexString.m */,
+				43205DD220DD263300AD6952 /* UIView+Debug.m */,
 				43205DD620DD264B00AD6952 /* UITextViewDemoViewController.m */,
 				435D4C7E20F091BB00C8DC85 /* NSIndexPath+JKOffset.m */,
+				435D4C6420EF3E3B00C8DC85 /* NSDictionary+JKJSONString.m */,
 				435D4C4B20EDEAC500C8DC85 /* NSDate+JKReporting.h */,
+				435D4C4C20EDEAC500C8DC85 /* NSDate+JKReporting.m */,
+				435D4C4820EDEAAD00C8DC85 /* NSDate+JKLunarCalendar.h */,
 				431C076A20FC8EB900479559 /* NSURL+JKQueryDictionary.h */,
+				431F64EA20F8F2610087DB8E /* NSString+JKStringPages.h */,
 				4374EB0C20F62F5600BB947F /* NSString+JKContains.h */,
 				4374EB0B20F62F5600BB947F /* NSString+JKContains.m */,
 				435D4C6D20EF406600C8DC85 /* NSDictionary+JKXML.m */,
+				431F64AE20F794150087DB8E /* UIResponder+JKFirstResponder.m */,
 				437B0A5520F35FDE00E93844 /* NSNumber+JKRomanNumerals.h */,
+				437B0A5620F35FDE00E93844 /* NSNumber+JKRomanNumerals.m */,
+				437B0A5920F3600900E93844 /* NSNumber+JKRound.h */,
 				431CB4E020F49A800043B0AC /* NSString+JKBase64.m */,
 				431CB4C720F498EF0043B0AC /* NSObject+JKGCD.h */,
 				9311B41B21C104EA009C9A1D /* UIControl+BlocksKit.h */,
