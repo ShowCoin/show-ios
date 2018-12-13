@@ -151,6 +151,7 @@
 		725282F421BE66A700802C09 /* SLWithdrawAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 725282F321BE66A700802C09 /* SLWithdrawAlert.m */; };
 		7254542821C11C18000B3FB8 /* SLWithDrawIndentifyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7254542721C11C18000B3FB8 /* SLWithDrawIndentifyCell.m */; };
 		7254543121C2947A000B3FB8 /* SLWalletHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7254542F21C2947A000B3FB8 /* SLWalletHomePageViewController.m */; };
+		7254543421C294CC000B3FB8 /* ShowAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7254543321C294CB000B3FB8 /* ShowAccountViewController.m */; };
 		7289901720F794D30044E74A /* ShowSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7289901620F794D20044E74A /* ShowSettingViewController.m */; };
 		7289901B20F795EA0044E74A /* SLWithdrawAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 7289901820F795E90044E74A /* SLWithdrawAlert.m */; };
 		72A0088620FC9FE40051C643 /* SLBlankView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A0088520FC9FE40051C643 /* SLBlankView.m */; };
@@ -514,6 +515,8 @@
 		7254542721C11C18000B3FB8 /* SLWithDrawIndentifyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWithDrawIndentifyCell.m; sourceTree = "<group>"; };
 		7254542F21C2947A000B3FB8 /* SLWalletHomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWalletHomePageViewController.m; sourceTree = "<group>"; };
 		7254543021C2947A000B3FB8 /* SLWalletHomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWalletHomePageViewController.h; sourceTree = "<group>"; };
+		7254543221C294BE000B3FB8 /* ShowAccountViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowAccountViewController.h; sourceTree = "<group>"; };
+		7254543321C294CB000B3FB8 /* ShowAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowAccountViewController.m; sourceTree = "<group>"; };
 		7289901620F794D20044E74A /* ShowSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowSettingViewController.m; sourceTree = "<group>"; };
 		7289901820F795E90044E74A /* SLWithdrawAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWithdrawAlert.m; sourceTree = "<group>"; };
 		7289901920F795E90044E74A /* SLWithDrawIndentifyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWithDrawIndentifyCell.h; sourceTree = "<group>"; };
@@ -1077,6 +1080,8 @@
 			children = (
 				7254542F21C2947A000B3FB8 /* SLWalletHomePageViewController.m */,
 				7254543021C2947A000B3FB8 /* SLWalletHomePageViewController.h */,
+				7254543221C294BE000B3FB8 /* ShowAccountViewController.h */,
+				7254543321C294CB000B3FB8 /* ShowAccountViewController.m */,
 			);
 			path = wallet;
 			sourceTree = "<group>";
@@ -1765,6 +1770,7 @@
 				4374EB0D20F62F5600BB947F /* NSString+JKContains.m in Sources */,
 				43205DDA20DD266600AD6952 /* UIView+FDCollapsibleConstraints.m in Sources */,
 				9306818D21BE64C90021F976 /* NSData+ImageContentType.m in Sources */,
+				7254543421C294CC000B3FB8 /* ShowAccountViewController.m in Sources */,
 				437921E420ECC44000B2EC88 /* NSData+JKAPNSToken.m in Sources */,
 				43D24A922094A43600C59AC8 /* ShowAppDelegate.m in Sources */,
 				43291F3E20E51F51000C3C15 /* UITextFieldDemoViewController.m in Sources */,
