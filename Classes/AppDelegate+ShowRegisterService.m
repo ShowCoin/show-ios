@@ -20,7 +20,8 @@
 -(void)registerService:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
     [self show_registerBugtags];
     [self show_registerJPush:launchOptions];
-  
+    [self show_registerMobClick];
+
 }
 
 /**
