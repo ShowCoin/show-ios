@@ -243,4 +243,14 @@ static CGFloat const kLPUserViewWH = 17;
     }
 }
 
+#pragma mark - lazy
+
+- (UIButton *)addButton {
+    if (!_addButton) {
+        _addButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_addButton setImage:[UIImage imageNamed:@"lp_cover_add"] forState:UIControlStateNormal];
+        [_addButton addTarget:self action:@selector(addCorverAction) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _addButton;
+}
 @end
