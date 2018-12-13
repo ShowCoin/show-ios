@@ -72,7 +72,9 @@
  注册  本地通知
  */
 -(void)show_registerLocalNot{
- 
+    [[SLLocalNotificationCenter sharedCenter] registerLocalNotification:^(BOOL success) {
+        //        NSLog(@"本地消息注册 %@", success?@"成功":@"失败");
+    }];
 }
 
 /**
@@ -80,26 +82,7 @@
  */
 - (void)show_registerJPush:(NSDictionary *)launchOptions{
     NSString *advertisingId = [KMUtils idfa];
-    JPUSHRegisterEntity * entity = [[JPUSHRegisterEntity alloc] init];
-    entity.types = JPAuthorizationOptionAlert|JPAuthorizationOptionBadge|JPAuthorizationOptionSound;
-    [JPUSHService registerForRemoteNotificationConfig:entity delegate:self];
-    [JPUSHService setupWithOption:launchOptions appKey:JPUSH_AppKey
-                          channel:JPUSH_Channel
-                 apsForProduction:JPUSH_isProduction
-            advertisingIdentifier:advertisingId];
-    
-    //2.1.9版本新增获取registration id block接口。
-    [JPUSHService registrationIDCompletionHandler:^(int resCode, NSString *registrationID) {
-        if(resCode == 0){
-            NSLog(@"registrationID获取成功：%@",registrationID);
-        } else{
-            NSLog(@"registrationID获取失败，code：%d",resCode);
-        }
-    }];
-    
-    if (AccountUserInfoModel.uid) {
-        [KMJPushUntils loginJPush];
-    }
+ 
 }
 
 #ifdef NSFoundationVersionNumber_iOS_9_x_Max
