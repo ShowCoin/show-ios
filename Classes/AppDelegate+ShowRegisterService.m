@@ -45,7 +45,8 @@
  */
 -(void)show_registerMobClick;
 {
-
+    [UMConfigure initWithAppkey:UM_Analytics_AppKey channel:@"App Store"];
+    
 }
 
 /**
