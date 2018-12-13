@@ -165,4 +165,9 @@ static CGFloat const kLPUserViewWH = 17;
     [self layoutSubviews];
 }
 
+- (void)sl_updateCoin:(NSString *)text {
+    self.showView.textLabel.text = text;
+    [self layoutSubviews];
+}
+
 @end
