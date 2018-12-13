@@ -190,4 +190,27 @@ static CGFloat const kLPUserViewWH = 17;
         self.backgroundColor = [Color(@"0c0c0c") colorWithAlphaComponent:0.4]; // LPViewBackgroundColor();
     }
 }
+
+- (void)sl_showShare {
+    self.addButton.hidden = YES;
+    self.preCoverButton.hidden = YES;
+    
+    isScale = YES;
+    beginView_  = self.superview;
+    originRect_ = self.frame;
+    CGRect rect = [self convertRect:self.frame toCoordinateSpace:UIApplication.sharedApplication.keyWindow];
+    beginRect_ = rect;
+    self.frame = rect;
+    [UIApplication.sharedApplication.keyWindow addSubview:self];
+    
+    CGFloat w = UIScreen.mainScreen.bounds.size.width * 0.8;
+    CGFloat h = w * 818 / 375;
+    CGRect bounds = CGRectMake(0, 0, w, h);
+    
+    [UIView animateWithDuration:0.25 delay:0 options:UIViewAnimationOptionCurveEaseOut | UIViewAnimationOptionLayoutSubviews animations:^{
+        self.bounds = bounds;
+        self.center = UIApplication.sharedApplication.keyWindow.center;
+    } completion:nil];
+}
+
 @end
