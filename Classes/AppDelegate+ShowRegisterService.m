@@ -23,6 +23,7 @@
     [self show_registerMobClick];
     [self show_registerUmengSocial];
     [self show_registerAliyun];
+    [self show_registerLocation];
 
 }
 
