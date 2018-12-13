@@ -244,5 +244,23 @@ CGRect swapWidthAndHeight(CGRect rect)
 - (UIImage *)imageWithWithRect:(CGRect)rect{
     return [self imageWithWithRect:rect size:rect.size];
 }
+- (UIImage *)imageWithWithRect:(CGRect)rect size:(CGSize)imageSize{
+    // Create a graphics image context
+    //    UIGraphicsBeginImageContext(imageSize);
+    UIGraphicsBeginImageContextWithOptions(imageSize, YES, 0.0f);
+    
+    // Tell the old image to draw in this new context, with the desired
+    // new size
+    [self drawInRect:rect];
+    
+    // Get the new image from the context
+    UIImage* newImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    // End the context
+    UIGraphicsEndImageContext();
+    
+    // Return the new image.
+    return newImage;
+}
 
 @end
