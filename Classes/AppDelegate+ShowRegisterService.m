@@ -19,14 +19,7 @@
  */
 -(void)registerService:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
     [self show_registerBugtags];
-    [self show_registerJPush:launchOptions];
-    [self show_registerMobClick];
-    [self show_registerUmengSocial];
-    [self show_registerAliyun];
-    [self show_registerLocation];
-    [self show_registerLocalNot];
-    [SysConfig requestConfig];
-    [loginMgr setup];
+  
 }
 
 /**
