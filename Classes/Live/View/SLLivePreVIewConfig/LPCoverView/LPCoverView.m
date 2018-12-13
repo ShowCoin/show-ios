@@ -213,4 +213,14 @@ static CGFloat const kLPUserViewWH = 17;
     } completion:nil];
 }
 
+- (void)sl_shareConfig {
+    self.addButton.hidden = YES;
+    self.preCoverButton.hidden = YES;
+    self.layer.cornerRadius = 0;
+    self.imageView.alpha = 1;
+    isScale = YES;
+    [self viewIsShare:YES];
+    [self layoutSubviews];
+}
+
 @end
