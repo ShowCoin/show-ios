@@ -35,7 +35,8 @@
 - (void)show_registerBugtags{
 #if !defined(DEBUG)
     BugtagsOptions *options = [[BugtagsOptions alloc] init];
-  
+    options.trackingCrashes = YES; // 具体可设置的属性请查看 Bugtags.h
+
 #endif
 }
 
