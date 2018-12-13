@@ -37,4 +37,27 @@ static CGFloat const kLPUserViewWH = 17;
     UIView *beginView_;
 }
 
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self addSubview:self.imageView];
+        [self addSubview:self.addButton];
+        [self addSubview:self.preCoverButton];
+        [self addSubview:self.showView];
+        [self addSubview:self.ratioView];
+        [self addSubview:self.textLabel];
+        [self addSubview:self.userView];
+        [self addSubview:self.nameLabel];
+        
+        LPSetViewCornerRadius(self);
+        self.clipsToBounds = YES;
+        
+        [self addinfo];
+        [self viewIsShare:NO];
+        self.coverUrl = @"";
+    }
+    return self;
+}
+
 @end
