@@ -26,7 +26,7 @@
     [self show_registerLocation];
     [self show_registerLocalNot];
     [SysConfig requestConfig];
-
+    [loginMgr setup];
 }
 
 /**
