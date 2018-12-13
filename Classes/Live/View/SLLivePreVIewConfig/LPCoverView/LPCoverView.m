@@ -276,4 +276,13 @@ static CGFloat const kLPUserViewWH = 17;
     return _imageView;
 }
 
+- (LPIconView *)showView {
+    if (!_showView) {
+        _showView = [[LPIconView alloc] init];
+        _showView.imageView.image = [UIImage imageNamed:@"lp_cover_show"];
+        _showView.textLabel.text = @"0";
+    }
+    return _showView;
+}
+
 @end
