@@ -223,4 +223,24 @@ static CGFloat const kLPUserViewWH = 17;
     [self layoutSubviews];
 }
 
+// 分两种view 默认小图设置  大图分享
+- (void)viewIsShare:(BOOL)isShare {
+    if (isShare) {
+        [self.userView removeFromSuperview];
+        /// 重新创建SLHeadPortrait,重置大小
+        self.userView = [[SLHeadPortrait alloc] initWithFrame:CGRectMake(0, 0, 34, 34)];
+        [self addSubview:self.userView];
+        [self addinfo];
+        self.nameLabel.font = [UIFont systemFontOfSize:15];
+        self.textLabel.font = [UIFont systemFontOfSize:18];
+        self.ratioView.textLabel.font = [UIFont systemFontOfSize:18];
+        self.showView.textLabel.font  = [UIFont systemFontOfSize:18];
+    } else {
+        self.nameLabel.font = [UIFont systemFontOfSize:7];
+        self.textLabel.font = [UIFont systemFontOfSize:12];
+        self.ratioView.textLabel.font = [UIFont systemFontOfSize:10];
+        self.showView.textLabel.font  = [UIFont systemFontOfSize:10];
+    }
+}
+
 @end
