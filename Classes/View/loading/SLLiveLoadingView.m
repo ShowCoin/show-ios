@@ -31,7 +31,9 @@
     self.infoLabel.text = text;
     [self.infoLabel sizeToFit];
     self.infoLabel.center = self.center;
-
+    [self addSubview:self.coverImageView];
+    [self addSubview:self.infoLabel];
+    [self addSubview:self.closeButton];
 
 }
 
