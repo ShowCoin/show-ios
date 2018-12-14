@@ -26,6 +26,7 @@
 
     [view addSubview:self];
     [view  bringSubviewToFront:self];
+    NSURL * url = [NSURL URLWithString:cover];
 
 
 }
