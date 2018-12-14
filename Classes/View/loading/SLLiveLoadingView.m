@@ -27,7 +27,9 @@
     [view addSubview:self];
     [view  bringSubviewToFront:self];
     NSURL * url = [NSURL URLWithString:cover];
-
+    [self.coverImageView sd_setImageWithURL:url];
+    self.infoLabel.text = text;
+   
 
 }
 
