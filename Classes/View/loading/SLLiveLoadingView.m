@@ -21,5 +21,53 @@
 -(void)showLoadingCover:(NSString*)cover
                    text:(NSString*)text
                    view:(UIView*)view
+{
+  
+
+    [view addSubview:self];
+ 
+
+}
+
+-(void)removeLoading
+{
+   [self removeFromSuperview];
+}
+
+-(SLShadowLabel*)infoLabel
+{
+    if (!_infoLabel) {
+        _infoLabel = [[SLShadowLabel alloc]initWithFrame:CGRectMake(kScreenWidth/2, KScreenHeight/2-18, 100, 36)];
+        _infoLabel.textColor = [UIColor whiteColor];
+        _infoLabel.font = [UIFont systemFontOfSize:20];
+    }
+    return _infoLabel;
+}
+
+
+-(UIImageView*)coverImageView
+{
+    if (!_coverImageView) {
+        _coverImageView=[[UIImageView alloc]initWithFrame:self.bounds];
+        _coverImageView.userInteractionEnabled=YES;
+        _coverImageView.contentMode = UIViewContentModeScaleAspectFill;
+      
+    }
+    return _coverImageView;
+}
+
+-(UIButton*)closeButton
+{
+    if (!_closeButton) {
+        CGFloat closeButtonWidth =40;
+        
+        _closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _closeButton.frame = CGRectMake(self.frame.size.width - 10.f - closeButtonWidth,23+KNaviBarSafeBottomMargin, closeButtonWidth, closeButtonWidth);
+        _closeButton.backgroundColor = [[UIColor blackColor]colorWithAlphaComponent:0.f];
+        [_closeButton setImage:[UIImage imageNamed:@"live_close_button"] forState:UIControlStateNormal];
+       
+    }
+    return _closeButton;
+}
 
 @end
