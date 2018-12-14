@@ -25,7 +25,8 @@
   
 
     [view addSubview:self];
- 
+    [view  bringSubviewToFront:self];
+
 
 }
 
