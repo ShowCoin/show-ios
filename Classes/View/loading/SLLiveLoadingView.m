@@ -39,6 +39,7 @@
 
 -(void)removeLoading
 {
+    
    [self removeFromSuperview];
 }
 
