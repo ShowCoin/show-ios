@@ -635,5 +635,14 @@ CGRect swapWidthAndHeight(CGRect rect)
     //NSLog(@"After compressing size loop, image size = %ld KB", data.length / 1024);
     return data;
 }
+- (NSData *)compressQualityWithLengthLimit:(NSInteger)maxLength {
+    CGFloat compression = 1;
+    NSData *data = UIImageJPEGRepresentation(self, compression);
+    while (data.length > maxLength && compression > 0) {
+        compression -= 0.02;
+        data = UIImageJPEGRepresentation(self, compression); // When compression less than a value, this code dose not work
+    }
+    return data;
+}
 
 @end
