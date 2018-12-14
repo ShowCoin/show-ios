@@ -665,5 +665,24 @@ CGRect swapWidthAndHeight(CGRect rect)
     return data;
 }
 
+-(NSData *)compressBySizeWithLengthLimit:(NSUInteger)maxLength{
+    UIImage *resultImage = self;
+    NSData *data = UIImageJPEGRepresentation(resultImage, 1);
+    NSUInteger lastDataLength = 0;
+    while (data.length > maxLength && data.length != lastDataLength) {
+        lastDataLength = data.length;
+        CGFloat ratio = (CGFloat)maxLength / data.length;
+        CGSize size = CGSizeMake((NSUInteger)(resultImage.size.width * sqrtf(ratio)),
+                                 (NSUInteger)(resultImage.size.height * sqrtf(ratio))); // Use NSUInteger to prevent white blank
+        UIGraphicsBeginImageContext(size);
+        // Use image to draw (drawInRect:), image is larger but more compression time
+        // Use result image to draw, image is smaller but less compression time
+        [resultImage drawInRect:CGRectMake(0, 0, size.width, size.height)];
+        resultImage = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        data = UIImageJPEGRepresentation(resultImage, 1);
+    }
+    return data;
+}
 
 @end
