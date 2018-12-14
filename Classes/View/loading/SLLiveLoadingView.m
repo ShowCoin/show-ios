@@ -29,7 +29,9 @@
     NSURL * url = [NSURL URLWithString:cover];
     [self.coverImageView sd_setImageWithURL:url];
     self.infoLabel.text = text;
-   
+    [self.infoLabel sizeToFit];
+    self.infoLabel.center = self.center;
+
 
 }
 
