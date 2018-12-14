@@ -46,6 +46,7 @@
 -(SLShadowLabel*)infoLabel
 {
     if (!_infoLabel) {
+        _infoLabel = [[SLShadowLabel alloc]initWithFrame:CGRectMake(kScreenWidth/2, KScreenHeight/2-18, 100, 36)];
      
     }
     return _infoLabel;
