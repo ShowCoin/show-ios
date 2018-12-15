@@ -41,7 +41,9 @@
         self.switchArray = switchArray;
         self.frame =  [UIScreen mainScreen].bounds;
         self.delegate = self;
-     
+        self.bounces = NO;
+        self.pagingEnabled = YES;
+ 
     }
     
     return self;
