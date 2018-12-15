@@ -79,6 +79,152 @@
     }
 }
 
+#pragma mark - Views
+-(void)creatTopView
+{
+    _topView =[[UIView alloc] init];
+    _topView.backgroundColor = kBlackWith1c;
+    [self.view addSubview:_topView];
+    [_topView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.navigationBarView.mas_bottom);
+        make.left.equalTo(self.view);
+        make.size.mas_equalTo(CGSizeMake(kMainScreenWidth, 242*Proportion375));
+    }];
+//    UIView * topLine = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kMainScreenWidth, 1)];
+//    topLine.backgroundColor = kSeparationColor;
+//    [_topView addSubview:topLine];
+    
+    UILabel *coinTypeL = [[UILabel alloc]initWithFrame:CGRectMake(16*Proportion375, 0, 50, 44*Proportion375)];
+    coinTypeL.text = STRING_WITHDRAW_COINTYPE_44;
+    coinTypeL.font = [UIFont systemFontOfSize:16];
+    coinTypeL.textColor = kTextWith8b;
+    [_topView addSubview:coinTypeL];
+    
+    UILabel *detailTypeL = [[UILabel alloc]initWithFrame:CGRectMake(145*Proportion375, 0, 50, 44*Proportion375)];
+    detailTypeL.textAlignment = NSTextAlignmentLeft;
+    detailTypeL.text =self.walletModel.typeCName;
+    detailTypeL.font = [UIFont systemFontOfSize:15];
+    detailTypeL.textColor = kTextWithF7;
+    [_topView addSubview:detailTypeL];
+    
+    UIView * whiteBG1 = [[UIView alloc] initWithFrame:CGRectMake(0, 44 *Proportion375, kMainScreenWidth, 60*Proportion375)];
+    whiteBG1.backgroundColor = kBlackWith1c;
+    [_topView addSubview:whiteBG1];
+    UITapGestureRecognizer * whiteTap1 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(whiteTopClick)];
+    [whiteBG1 addGestureRecognizer:whiteTap1];
+    
+    UILabel *AccountL = [[UILabel alloc]initWithFrame:CGRectMake(16*Proportion375, 0, 150, 60*Proportion375)];
+    AccountL.textAlignment = NSTextAlignmentLeft;
+    AccountL.text = STRING_WITHDRAW_ADRESS_46;
+    AccountL.font = [UIFont systemFontOfSize:16];
+    AccountL.textColor = kTextWith8b;
+    [whiteBG1 addSubview:AccountL];
+    
+    _addressNameL = [[UILabel alloc]initWithFrame:CGRectMake(detailTypeL.left, 15*Proportion375, 95, 14*Proportion375)];
+    _addressNameL.textAlignment = NSTextAlignmentLeft;
+//    addressNameL.text = @"Binantt Jia";
+    _addressNameL.font = [UIFont systemFontOfSize:14*Proportion375];
+    _addressNameL.textColor = kTextWithF7;
+    [whiteBG1 addSubview:_addressNameL];
+    
+    _addressStrL = [[UILabel alloc]initWithFrame:CGRectMake(detailTypeL.left, 0, 95, 11*Proportion375)];
+    _addressStrL.bottom = 60*Proportion375 - 15*Proportion375;
+    _addressStrL.textAlignment = NSTextAlignmentLeft;
+//    addressStrL.text = @"0xjsksjskskakjs.....................";
+    _addressStrL.font = [UIFont systemFontOfSize:11*Proportion375];
+    _addressStrL.textColor = kTextWithF7;
+    [whiteBG1 addSubview:_addressStrL];
+    
+    UIButton * codeBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 34*Proportion375, 34*Proportion375)];
+    codeBtn.right = kMainScreenWidth - 38*Proportion375;
+    codeBtn.centerY = 30*Proportion375;
+    [codeBtn setBackgroundImage:[UIImage imageNamed:@"account_WD_scan"] forState:UIControlStateNormal];
+    [codeBtn addTarget:self action:@selector(scanAction:) forControlEvents:UIControlEventTouchUpInside];
+    codeBtn.hidden = YES;
+    [whiteBG1 addSubview:codeBtn];
+    
+    UIImageView * arrowImg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"userhome_arrow_right"]];
+    arrowImg.centerY = codeBtn.centerY;
+    arrowImg.right = kMainScreenWidth - 14*Proportion375;
+    [whiteBG1 addSubview:arrowImg];
+    
+    
+    
+    UIView * whiteBG2 = [[UIView alloc] initWithFrame:CGRectMake(0, whiteBG1.bottom, kMainScreenWidth, 60*Proportion375)];
+    whiteBG2.backgroundColor = kBlackWith1c;
+    [_topView addSubview:whiteBG2];
+    
+    UILabel *countL = [[UILabel alloc]initWithFrame:CGRectMake(16*Proportion375, 0, 100, 60*Proportion375)];
+    countL.textAlignment = NSTextAlignmentLeft;
+    countL.text = STRING_WITHDRAW_COUNT_47;
+    countL.font = [UIFont systemFontOfSize:16];
+    countL.textColor = kTextWith8b;
+    [whiteBG2 addSubview:countL];
+    
+    _numField = [[UITextField alloc]initWithFrame:CGRectMake(detailTypeL.left,0, 150*Proportion375,60*Proportion375)];
+    _numField.centerY = 30*Proportion375;
+    CGFloat numfielNum = self.walletModel.minWithdraw.floatValue;
+    _numField.placeholder = [NSString stringWithFormat:@"最小提现额度%@",[NSString stringWithFormat:@"%.2f",numfielNum]];
+    _numField.font = [UIFont fontWithName:KContentFont size:15];
+    _numField.clearButtonMode = UITextFieldViewModeWhileEditing;
+    _numField.autocorrectionType = UITextAutocorrectionTypeNo;
+    _numField.keyboardType = UIKeyboardTypeDecimalPad;
+    _numField.returnKeyType = UIReturnKeyDone;
+    _numField.delegate = self;
+    _numField.textAlignment = NSTextAlignmentLeft;
+    _numField.autocapitalizationType = UITextAutocapitalizationTypeNone;
+    _numField.textColor = kTextWithF7;
+//    _numField.tintColor = kTextWhitef7f7f7;
+    [_numField setValue:kTextWith5b forKeyPath:@"_placeholderLabel.textColor"];
+
+    _numField.adjustsFontSizeToFitWidth = YES;
+//    [numField addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
+    [whiteBG2 addSubview:_numField];
+//    [numField becomeFirstResponder];
+
+    UILabel *DWL = [[UILabel alloc]initWithFrame:CGRectMake(15, 0, 100, 60*Proportion375)];
+    DWL.right  = kMainScreenWidth - 16*Proportion375;
+    DWL.textAlignment = NSTextAlignmentRight;
+    DWL.text = self.walletModel.typeCName;
+    DWL.font = [UIFont systemFontOfSize:16];
+    DWL.textColor = kTextWith8b;
+    [whiteBG2 addSubview:DWL];
+    
+    
+    UILabel * openNumLab1 = [UILabel labelWithText:@"可转额度" textColor:kTextWith8b font:Font_Regular(12) backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentLeft];
+    openNumLab1.frame = CGRectMake(15, whiteBG2.bottom+ 25*Proportion375, 50, 12*Proportion375);
+    [_topView addSubview:openNumLab1];
+    
+    UILabel * openNumLab2 = [UILabel labelWithText:[AccountModel shared].showCoinNum textColor:kTextWith8b font:Font_Regular(12) backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentLeft];
+    openNumLab2.text = self.walletModel.balance;
+    openNumLab2.frame = CGRectMake(15, whiteBG2.bottom+ 25*Proportion375, kMainScreenWidth - 160 *Proportion375, 12*Proportion375);
+    openNumLab2.left = _numField.left;
+    [_topView addSubview:openNumLab2];
+
+    UILabel *withdrawAlltip = [[UILabel alloc]initWithFrame:CGRectMake(kMainScreenWidth - 126*Proportion375, 0, 110*Proportion375, 13)];
+    withdrawAlltip.centerY  = openNumLab2.centerY;
+    withdrawAlltip.right  = kMainScreenWidth - 15*Proportion375;
+    withdrawAlltip.textAlignment = NSTextAlignmentRight;
+    withdrawAlltip.text = STRING_WITHDRAW_ALL_49;
+    withdrawAlltip.font = [UIFont systemFontOfSize:12];
+    withdrawAlltip.textColor = kTextWithF7;
+    withdrawAlltip.userInteractionEnabled = YES;
+    [_topView addSubview:withdrawAlltip];
+    
+    UIButton * withdrawAllBtn = [[UIButton alloc] initWithFrame:CGRectMake(kMainScreenWidth - 126*Proportion375, 0, 110*Proportion375, 13)];
+    withdrawAllBtn.centerY  = openNumLab2.centerY;
+    withdrawAllBtn.backgroundColor = [UIColor clearColor];
+    //    [withdrawAllBtn setTitle:STRING_WITHDRAW_ALL_49 forState:UIControlStateNormal];
+    //    [withdrawAllBtn setTitleColor:HexRGBAlpha(0x664996, 1) forState:UIControlStateNormal];
+    //    withdrawAllBtn.titleLabel.textAlignment = NSTextAlignmentRight;
+    withdrawAllBtn.titleLabel.font = Font_Regular(12);
+    [[withdrawAllBtn rac_signalForControlEvents:UIControlEventTouchUpInside]subscribeNext:^(id x) {
+        self.numField.text = openNumLab2.text;
+    }];
+    [_topView addSubview:withdrawAllBtn];
+    
+}
+
 
 /*
 #pragma mark - Navigation
