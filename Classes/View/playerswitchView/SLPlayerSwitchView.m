@@ -16,7 +16,7 @@
 
 @property(nonatomic,assign)NSInteger    index;
 
-
+@property(nonatomic,strong)NSMutableArray * switchArray;
 
 
 @end
