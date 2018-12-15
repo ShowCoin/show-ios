@@ -383,6 +383,74 @@
     }];
     
 }
+#pragma mark - Action
+
+-(void)getCoinInfo{
+    if (self.getCoinInfoAction ) {
+        [self.getCoinInfoAction cancel];
+        self.getCoinInfoAction = nil;
+    }
+    [HDHud showHUDInView:self.view title:@""];
+    
+    self.getCoinInfoAction = [SLGetCoinInfo action];
+    self.getCoinInfoAction.coin_type = self.walletModel.type;
+    @weakify(self)
+    self.getCoinInfoAction.finishedBlock = ^(NSDictionary * dic)
+    {
+        @strongify(self)
+        [HDHud hideHUDInView:self.view];
+//        self.walletModel.address = dic[@"address"];
+//        [self reloadUI];
+//        //  初始化用户单例
+        self.coin_balance = [NSString stringWithFormat:@"%@",dic[@"rmb_rate"]];
+    };
+    self.getCoinInfoAction.failedBlock = ^(NSError *error) {
+        @strongify(self)
+        [HDHud hideHUDInView:self.view];
+    };
+    [self.getCoinInfoAction start];
+
+}
+
+-(void)refreshFee{
+    if (self.refreshFeeAction ) {
+        [self.refreshFeeAction cancel];
+        self.refreshFeeAction = nil;
+    }
+//    [HDHud showHUDInView:self.view title:@""];
+    
+    self.refreshFeeAction = [SLWithdrawFeeAction action];
+    self.refreshFeeAction.coinType = self.walletModel.type;
+    @weakify(self)
+    self.refreshFeeAction.finishedBlock = ^(NSDictionary * dic)
+    {
+        @strongify(self)
+        [HDHud hideHUDInView:self.view];
+        NSLog(@"");
+        NSDictionary * coinDic = [dic objectForKey:self.walletModel.type];
+        float high = [[coinDic objectForKey:@"fast"] floatValue];
+        float mid = [[coinDic objectForKey:@"normal"] floatValue];
+        float low = [[coinDic objectForKey:@"slow"] floatValue];
+        self.high_fee = [NSString stringWithFormat:@"%@",[NSString stringWithFormat:@"%.2f",high]];
+        self.mid_fee = [NSString stringWithFormat:@"%@",[NSString stringWithFormat:@"%.2f",mid]];
+        self.low_fee = [NSString stringWithFormat:@"%@",[NSString stringWithFormat:@"%.2f",low]];
+        self.server_fee = self.mid_fee;
+        self.numalertL.text = [NSString stringWithFormat:@"%@ %@",self.mid_fee,self.walletModel.typeCName];
+        
+//        self.withdrawAlertC.text = [NSString stringWithFormat:@"提现限额:每日最高可提现%@%@，单笔最高可提现%@%@。"];
+        self.withdrawAlertC.text = [NSString stringWithFormat:@"提现限额:等后台加参数"];
+        self.withdrawAlertD.text = [NSString stringWithFormat:@"提现手续费:%@-%@%@",self.low_fee,self.high_fee,self.walletModel.typeCName];
+    };
+    self.refreshFeeAction.failedBlock = ^(NSError *error) {
+        @strongify(self)
+        [HDHud hideHUDInView:self.view];
+        NSLog(@"");
+        
+    };
+    [self.refreshFeeAction start];
+    
+}
+
 /*
 #pragma mark - Navigation
 
