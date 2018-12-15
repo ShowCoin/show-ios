@@ -39,7 +39,8 @@
     if (self) {
         
         self.switchArray = switchArray;
-      
+        self.frame =  [UIScreen mainScreen].bounds;
+       
     }
     
     return self;
