@@ -44,7 +44,10 @@
         self.bounces = NO;
         self.pagingEnabled = YES;
         self.showsVerticalScrollIndicator = NO;
-      
+        self.showsHorizontalScrollIndicator = NO;
+
+ 
+    }
     
     return self;
 }
