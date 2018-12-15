@@ -584,6 +584,120 @@
     [self.withdrawAction start];
 
 }
+
+- (void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (alertView.tag == 1001) {
+        
+        if (buttonIndex == 1) {
+            [self showPassWordAlert];
+        }
+    }else if (alertView.tag == 1002){
+        if (buttonIndex == 1) {
+            [self showGooglePasswordAlert];
+        }
+
+    }else{
+        
+    }
+}
+- (void)clickRightButton:(UIButton *)sender{
+    [PageMgr pushToSLwithdrawListViewControllerFromViewcontroller:self wallCoinModel:self.walletModel];
+}
+-(void)whiteTopClick
+{
+    WithdrawAddressViewController * add = [[WithdrawAddressViewController alloc]init];
+    add.user = self.user;
+    add.walletModel = self.walletModel;
+   
+    @weakify(self);
+    add.block = ^(SLAddressList *addressModel) {
+        @strongify(self);
+        self.addressModel = addressModel;
+        self.addressNameL.text = addressModel.name;
+        self.addressStrL.text = addressModel.address;
+        self.addressID = [NSString stringWithFormat:@"%@",addressModel.id];
+    };
+    [self.navigationController pushViewController:add animated:YES];
+
+}
+-(void)scanAction:(UIButton *)sender
+{
+    [HDHud showMessageInView:self.view title:@"敬请期待"];
+//    [HDHud showHUDInView:self.viewController.view title:@"敬请期待"];
+//        @weakify(self);
+//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//            @strongify(self);
+//            [HDHud hideHUDInView:self.view];
+//        });
+}
+
+-(void)sliderChangeAction:(UISlider *)slider{
+    NSLog(@"------%f",slider.value);
+//    _numalertL.text = [NSString stringWithFormat:@"%f SHOW",slider.value];
+    if (slider.value<0.25) {
+        _numalertL.text = [NSString stringWithFormat:@"%@ %@",_low_fee,self.walletModel.typeCName];
+        _server_fee = _low_fee;
+        slider.value = 0;
+
+    }else if (slider.value >0.75){
+        _numalertL.text = [NSString stringWithFormat:@"%@ %@",_high_fee,self.walletModel.typeCName];
+        _server_fee = _high_fee;
+        slider.value = 1;
+  
+    }else {
+        _numalertL.text = [NSString stringWithFormat:@"%@ %@",_mid_fee,self.walletModel.typeCName];
+        _server_fee = _mid_fee;
+
+        slider.value = 0.5;
+    }
+}
+- (void)actionTapGesture:(UITapGestureRecognizer *)sender {
+    CGPoint touchPoint = [sender locationInView:_slider];
+    CGFloat value = (_slider.maximumValue - _slider.minimumValue) * (touchPoint.x / _slider.frame.size.width );
+    if (value<0.25) {
+        _numalertL.text = [NSString stringWithFormat:@"%@ %@",_low_fee,self.walletModel.typeCName];
+        _server_fee = _low_fee;
+        [_slider setValue:0 animated:YES];
+
+    }else if (value >0.75){
+        _numalertL.text = [NSString stringWithFormat:@"%@ %@",_high_fee,self.walletModel.typeCName];
+        _server_fee = _high_fee;
+        [_slider setValue:1 animated:YES];
+
+    }else {
+        _numalertL.text = [NSString stringWithFormat:@"%@ %@",_mid_fee,self.walletModel.typeCName];
+        _server_fee = _mid_fee;
+        [_slider setValue:0.5 animated:YES];
+    }
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [self.view endEditing:YES];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+//资金密码验证alert
+- (void)sureActionWithAlertPasswordView:(SLPassWordAlert *)alertPasswordView password:(NSString *)password {
+    self.moneyKey = password;
+    [alertPasswordView removeFromSuperview];
+    [self withdrawActionWithMoneyKey:self.moneyKey googleKey:self.googleKey];
+//    self.passwordLabel.text = [NSString stringWithFormat:@"输入的密码为:%@", password];
+}
+//资金密码验证alert
+- (void)sureActionWithAlertGooglePasswordView:(SLGooglePassWordAlert *)alertPasswordView password:(NSString *)password {
+    self.googleKey = password;
+
+    [alertPasswordView removeFromSuperview];
+    [self withdrawActionWithMoneyKey:self.moneyKey googleKey:self.googleKey];
+
+    //    self.passwordLabel.text = [NSString stringWithFormat:@"输入的密码为:%@", password];
+}
+
 /*
 #pragma mark - Navigation
 
