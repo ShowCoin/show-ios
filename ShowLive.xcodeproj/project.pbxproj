@@ -729,7 +729,6 @@
 				437B0A5020F35F9C00E93844 /* NSNotificationCenterDemoViewController.h */,
 				437B0A4F20F35F9C00E93844 /* NSNotificationCenterDemoViewController.m */,
 				435D4C9720F0931000C8DC85 /* NSNotificationCenter+JKMainThread.h */,
-				435D4C9620F0931000C8DC85 /* NSNotificationCenter+JKMainThread.m */,
 				435D4C9320F092D600C8DC85 /* NSMutableURLRequest+JKUpload.h */,
 				435D4C9420F092D600C8DC85 /* NSMutableURLRequest+JKUpload.m */,
 				435D4C9020F092BF00C8DC85 /* NSManagedObjectContext+JKObjectClear.h */,
@@ -741,8 +740,6 @@
 				435D4C8120F091E500C8DC85 /* NSInvocation+JKBb.m */,
 				435D4C6120EF3E2400C8DC85 /* NSDictionary+JKBlock.h */,
 				435D4C6020EF3E2400C8DC85 /* NSDictionary+JKBlock.m */,
-				431F64E120F8F2300087DB8E /* NSString+JKRemoveEmoji.m */,
-				431CB4DA20F499D00043B0AC /* NSRunLoop+JKPerformBlock.m */,
 				431CB4DD20F49A4F0043B0AC /* NSSet+JKBlock.m */,
 				431C078720FE291700479559 /* NSUserDefaults+JKSafeAccess.h */,
 				431C078820FE291700479559 /* NSUserDefaults+JKSafeAccess.m */,
@@ -1254,10 +1251,13 @@
 		934AE45E20FC6B7B00B60AD4 /* Exten */ = {
 			isa = PBXGroup;
 			children = (
+				435D4C9620F0931000C8DC85 /* NSNotificationCenter+JKMainThread.m */,
 				435D4C9120F092C000C8DC85 /* NSManagedObjectContext+JKObjectClear.m */,
 				435D4C8E20F092B000C8DC85 /* NSManagedObjectContext+JKFetchRequestsConstructors.m */,
 				435D4C8220F091E600C8DC85 /* NSInvocation+JKBb.h */,
 				431F64E220F8F2300087DB8E /* NSString+JKRemoveEmoji.h */,
+				431F64E120F8F2300087DB8E /* NSString+JKRemoveEmoji.m */,
+				431CB4DA20F499D00043B0AC /* NSRunLoop+JKPerformBlock.m */,
 				431CB4DC20F49A4F0043B0AC /* NSSet+JKBlock.h */,
 				431C076B20FC8EB900479559 /* NSURL+JKQueryDictionary.m */,
 				435D4C8A20F0929900C8DC85 /* NSManagedObjectContext+JKFetching.h */,
