@@ -18,6 +18,8 @@
 
 @property(nonatomic,strong)NSMutableArray * switchArray;
 
+@property(nonatomic,strong)NSMutableArray * subViewsArray;
+
 
 @end
 
