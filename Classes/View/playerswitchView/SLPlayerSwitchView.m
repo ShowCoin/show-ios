@@ -39,19 +39,7 @@
     if (self) {
         
         self.switchArray = switchArray;
-        self.frame =  [UIScreen mainScreen].bounds;
-        self.delegate = self;
-        self.bounces = NO;
-        self.pagingEnabled = YES;
-        self.showsVerticalScrollIndicator = NO;
-        self.showsHorizontalScrollIndicator = NO;
-
-        self.backgroundColor = [UIColor clearColor];
-        if (@available(iOS 11.0, *)) {
-            self.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-            
-        }
-        [self addSubViews];
+      
     }
     
     return self;
