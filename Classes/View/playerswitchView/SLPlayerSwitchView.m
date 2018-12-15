@@ -43,8 +43,8 @@
         self.delegate = self;
         self.bounces = NO;
         self.pagingEnabled = YES;
- 
-    }
+        self.showsVerticalScrollIndicator = NO;
+      
     
     return self;
 }
