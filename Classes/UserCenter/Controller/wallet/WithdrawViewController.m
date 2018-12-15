@@ -450,7 +450,140 @@
     [self.refreshFeeAction start];
     
 }
+-(void)showPassWordAlert
+{
+    SLPassWordAlert *alertPasswordView = [[SLPassWordAlert alloc] initWithFrame:self.view.bounds];
+    alertPasswordView.delegate = self;
+    alertPasswordView.cointypeLab.text = [NSString stringWithFormat:@"%@数量",self.walletModel.typeCName];
+    alertPasswordView.coinNumLab.text = self.numField.text;
+    float rmb = self.coin_balance.floatValue * self.numField.text.floatValue;
+    if (self.coin_balance.length) {
+        alertPasswordView.coinRMBLab.text = [NSString stringWithFormat:@"人民币价值%0.2f元",rmb];
+    }
+    [self.view addSubview:alertPasswordView];
 
+}
+-(void)showGooglePasswordAlert
+{
+    SLGooglePassWordAlert *alertPasswordView = [[SLGooglePassWordAlert alloc] initWithFrame:self.view.bounds];
+    alertPasswordView.delegate = self;
+    [self.view addSubview:alertPasswordView];
+}
+-(void)withdrawActionWithMoneyKey:(NSString *)moneyKey googleKey:(NSString*)googleKey{
+    
+    if ([self.walletModel.typeCName isEqualToString:@"秀币"] && self.walletModel.balance.floatValue<100) {
+        [HDHud showMessageInView:self.view title:@"秀币余额不足100，不能提现"];
+        return;
+    }else if ([self.walletModel.typeCName isEqualToString:@"以太"] && self.walletModel.balance.floatValue<0.01){
+        [HDHud showMessageInView:self.view title:@"以太余额不足0.01，不能提现"];
+        return;
+    }
+    self.withdrawAction = [SLWithdrawAction action];
+    self.withdrawAction.address = self.addressStrL.text;
+    self.withdrawAction.number = self.numField.text;
+    self.withdrawAction.service_fee = self.server_fee;
+    if (isStrValid(moneyKey)) {
+        self.withdrawAction.cash_passwd = [NSString MD5AndSaltString:moneyKey];
+    }
+    if (isStrValid(googleKey)) {
+        
+        self.withdrawAction.google_code = googleKey;
+    }
+    self.withdrawAction.sms_code = @"11";
+    self.withdrawAction.coin_type = self.walletModel.type;
+    [SLReportManager reportEvent:kReport_MyWallet andSubEvent:kReport_Mywallet_SHOWWithdraw];
+    
+    @weakify(self)
+    self.withdrawAction.finishedBlock = ^(SLWalletModel *model)
+    {
+        @strongify(self)
+        NSLog(@"222");
+        [self.navigationController popViewControllerAnimated:YES];
+    };
+    self.withdrawAction.failedBlock = ^(NSError *error) {
+        @strongify(self)
+        if (error.code == 11009) {
+            
+            NSString *msg = error.userInfo[@"msg"];//资金密码错误
+//            [HDHud showMessageInView:self.view title:msg];
+            if (msg.integerValue >0) {
+                
+//                UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:@"提示"message:[NSString stringWithFormat:@"资金密码不正确，还有%@次机会，否则将冻结2小时",msg] delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"重试",nil];
+//                errorAlert.tag = 1001;
+//                [errorAlert show];
+                
+                NSString *message = [NSString stringWithFormat:@"资金密码不正确，还有%@次机会，否则将冻结2小时",msg];
+                NSString *title = @"提示";
+                UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+                UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+                [alert addAction:cancel];
+                UIAlertAction *sure = [UIAlertAction actionWithTitle:@"重试" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                    [self showPassWordAlert];
+                }];
+                [alert addAction:sure];
+                [self presentViewController:alert animated:YES completion:nil];
+
+            }else{
+//                UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:@"提示"message:@"5次机会已经用尽,请2小时候重试" delegate:self cancelButtonTitle:@"确认" otherButtonTitles:nil];
+//                [errorAlert show];
+                
+                NSString *message = @"5次机会已经用尽,请2小时候重试";
+                NSString *title = @"提示";
+                UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+                UIAlertAction *sure = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                }];
+                [alert addAction:sure];
+                [self presentViewController:alert animated:YES completion:nil];
+            }
+        }else if (error.code == 11007){
+            //google 错误
+            NSString *msg = error.userInfo[@"msg"];
+            if (msg.integerValue>0) {
+//                UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:@"提示"message:[NSString stringWithFormat:@"google验证码不正确，还有%@次机会，否则将冻结2小时",msg] delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"重试",nil];
+//                errorAlert.tag = 1002;
+//                [errorAlert show];
+                
+                NSString *message = [NSString stringWithFormat:@"google验证码不正确，还有%@次机会，否则将冻结2小时",msg];
+                NSString *title = @"提示";
+                UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+                UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+                [alert addAction:cancel];
+                UIAlertAction *sure = [UIAlertAction actionWithTitle:@"重试" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                    [self showGooglePasswordAlert];
+                }];
+                [alert addAction:sure];
+                [self presentViewController:alert animated:YES completion:nil];
+            }else{
+//                UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:@"提示"message:@"5次机会已经用尽,请2小时候重试" delegate:self cancelButtonTitle:@"确认" otherButtonTitles:nil];
+//                [errorAlert show];
+                NSString *message = @"5次机会已经用尽,请2小时候重试";
+                NSString *title = @"提示";
+                UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+                UIAlertAction *sure = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                }];
+                [alert addAction:sure];
+                [self presentViewController:alert animated:YES completion:nil];
+
+            }
+        }else if (error.code == 11015){//需要google验证码
+             [self showGooglePasswordAlert];
+        }else{
+//            NSString *msg = error.userInfo[@"msg"];
+//            UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:@"提示"message:msg delegate:self cancelButtonTitle:@"确认" otherButtonTitles:nil];
+//            [errorAlert show];
+            NSString *message = error.userInfo[@"msg"];
+            NSString *title = @"提示";
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *sure = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            }];
+            [alert addAction:sure];
+            [self presentViewController:alert animated:YES completion:nil];
+
+        }
+    };
+    [self.withdrawAction start];
+
+}
 /*
 #pragma mark - Navigation
 
