@@ -16,17 +16,6 @@
 
 @property(nonatomic,assign)NSInteger    index;
 
-@property(nonatomic,strong)NSMutableArray * switchArray;
-
-@property(nonatomic,strong)NSMutableArray * subViewsArray;
-
-@property(nonatomic,strong)UIPanGestureRecognizer *pan;
-
-@property(nonatomic,strong)UIView     *showView;
-
-@property (nonatomic,assign) BOOL doingPan;//正在拖拽
-
-@property (nonatomic,assign) BOOL doingZoom;//正在缩放，此时不执行拖拽方法
 
 @end
 
