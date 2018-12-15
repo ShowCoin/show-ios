@@ -20,6 +20,8 @@
 
 @property(nonatomic,strong)NSMutableArray * subViewsArray;
 
+@property(nonatomic,strong)UIPanGestureRecognizer *pan;
+
 
 @end
 
