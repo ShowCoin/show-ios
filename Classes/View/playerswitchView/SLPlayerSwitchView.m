@@ -40,7 +40,8 @@
         
         self.switchArray = switchArray;
         self.frame =  [UIScreen mainScreen].bounds;
-       
+        self.delegate = self;
+     
     }
     
     return self;
