@@ -179,6 +179,46 @@
     
     
 }
+-(void)headPortraitClickAuthor:(id)head
+{
+    SLHeadPortrait * header = (SLHeadPortrait *)head;
+    
+    if (header.tag == 1000) {
+        ShowUserModel * model = [[ShowUserModel alloc]init];
+        model.uid = _tModel.from_uid;
+        model.avatar = _tModel.from_avatar;
+        model.nickname = _tModel.from_nickname;
+        if (_tModel.from_uid.length <1) {
+            return;
+        }
+        [PageMgr pushToUserCenterControllerWithUserModel:model viewcontroller:(BaseViewController *)self];
+    }else{
+        ShowUserModel * model = [[ShowUserModel alloc]init];
+        
+        model.uid = _tModel.to_uid;
+        model.avatar = _tModel.to_avatar;
+        model.nickname = _tModel.to_nickname;
+        if (_tModel.to_uid.length <1) {
+            return;
+        }
+        [PageMgr pushToUserCenterControllerWithUserModel:model viewcontroller:(BaseViewController *)self];
+
+    }
+}
+//- (void)headPortraitClickAuthor
+//{
+//    ShowUserModel * model = [[ShowUserModel alloc]init];
+//
+//    model.uid = _tModel.uid;
+//    model.avatar = _tModel.avatar;
+//    model.nickname = _tModel.nickname;
+//    [PageMgr pushToUserCenterControllerWithUserModel:model viewcontroller:(BaseViewController *)self];
+//
+//}
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
 
 /*
 #pragma mark - Navigation
