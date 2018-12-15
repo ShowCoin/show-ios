@@ -24,6 +24,7 @@
 
 @property(nonatomic,strong)UIView     *showView;
 
+@property (nonatomic,assign) BOOL doingPan;//正在拖拽
 
 @end
 
