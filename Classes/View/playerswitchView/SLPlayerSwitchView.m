@@ -17,6 +17,8 @@
 @property(nonatomic,assign)NSInteger    index;
 
 
+
+
 @end
 
 @implementation SLPlayerSwitchView
