@@ -22,6 +22,8 @@
 
 @property(nonatomic,strong)UIPanGestureRecognizer *pan;
 
+@property(nonatomic,strong)UIView     *showView;
+
 
 @end
 
