@@ -179,7 +179,7 @@ static CGFloat const kLPUserViewWH = 17;
 /**
  sl_updateTitle
 
- @param text <#text description#>
+ @param text NSString
  */
 - (void)sl_updateTitle:(NSString *)text {
     self.textLabel.text = text.length > 0 ? text : kLPPlaceholderText;
