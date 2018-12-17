@@ -69,6 +69,9 @@ static CGFloat const kLPUserViewWH = 17;
     return self;
 }
 
+/**
+ <#Description#>
+ */
 - (void)layoutSubviews {
     [super layoutSubviews];
     
