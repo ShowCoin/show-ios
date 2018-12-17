@@ -197,7 +197,7 @@ static CGFloat const kLPUserViewWH = 17;
 }
 
 /**
- <#Description#>
+ sl_updateCoin
 
  @param text <#text description#>
  */
