@@ -187,7 +187,7 @@ static CGFloat const kLPUserViewWH = 17;
 }
 
 /**
- <#Description#>
+ Descriptionsl_updateWatch
 
  @param text <#text description#>
  */
