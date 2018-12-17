@@ -16,4 +16,8 @@
     return label;
 }
 
++ (instancetype)labelWithFrame:(CGRect)frame text:(NSString *)text textColor:(UIColor *)textColor font:(UIFont *)font{
+    return [self labelWithFrame:frame text:text textColor:textColor font:font backgroundColor:[UIColor clearColor]];
+}
+
 @end
