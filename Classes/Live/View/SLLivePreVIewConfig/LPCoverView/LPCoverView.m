@@ -17,7 +17,10 @@ CGFloat LPGetLabelWidth(UILabel *label) {
 
 static CGFloat const kLPUserViewWH = 17;
 
-@interface LPCoverView () 
+/**
+ <#Description#>
+ */
+@interface LPCoverView ()
 
 @property (nonatomic, strong) UIButton *addButton;
 @property (nonatomic, strong) UIButton *preCoverButton;
