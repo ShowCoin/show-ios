@@ -41,7 +41,7 @@ static CGFloat const kLPUserViewWH = 17;
 }
 
 /**
- <#Description#>
+ initWithFrame
 
  @param frame <#frame description#>
  @return <#return value description#>
