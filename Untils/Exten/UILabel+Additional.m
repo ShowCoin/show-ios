@@ -24,4 +24,7 @@
     return [self labelWithFrame:frame text:text textColor:textColor font:font backgroundColor:backgroundColor alignment:NSTextAlignmentLeft];
 }
 
++ (instancetype)labelWithText:(NSString *)text font:(UIFont *)font alignment:(NSTextAlignment)alignment{
+    return [self labelWithText:text textColor:[UIColor blackColor] font:font backgroundColor:[UIColor clearColor] alignment:alignment];
+}
 @end
