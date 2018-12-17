@@ -68,7 +68,6 @@
 {
     if (!_closeButton) {
         CGFloat closeButtonWidth =40;
-        
         _closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
         _closeButton.frame = CGRectMake(self.frame.size.width - 10.f - closeButtonWidth,23+KNaviBarSafeBottomMargin, closeButtonWidth, closeButtonWidth);
         _closeButton.backgroundColor = [[UIColor blackColor]colorWithAlphaComponent:0.f];
