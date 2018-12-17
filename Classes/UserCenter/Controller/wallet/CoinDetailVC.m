@@ -405,4 +405,34 @@
 //        [CoinAlert show];
 //    }
 }
+- (void)SLWithdrawGoToSecret;
+{
+//    [PageMgr pushToSLChangeCoinPasswordController];
+    SLChangeCoinPasswordController * vc = [SLChangeCoinPasswordController initVC];
+    @weakify(self);
+    vc.refresh = ^{
+        @strongify(self);
+        [self.withdrawAlertView checkSafeStatue];
+        [self.withdrawAlertView.TabelView reloadData];
+
+    };
+    [self.navigationController pushViewController:vc animated:YES];
+
+
+}
+
+-(void)refreshTheKycStatue{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.withdrawAlertView checkSafeStatue];
+        [self.withdrawAlertView.TabelView reloadData];
+    });
+
+}
+
+- (void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 1) {
+        [PageMgr pushToWalletController:self.user viewcontroller:self];
+    }
+}
 @end
