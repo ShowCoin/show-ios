@@ -189,7 +189,7 @@ static CGFloat const kLPUserViewWH = 17;
 /**
  Descriptionsl_updateWatch
 
- @param text <#text description#>
+ @param text NSString
  */
 - (void)sl_updateWatch:(NSString *)text {
     self.ratioView.textLabel.text = [NSString stringWithFormat:@"%.2lf%%", [text doubleValue]];
