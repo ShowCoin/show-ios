@@ -199,7 +199,7 @@ static CGFloat const kLPUserViewWH = 17;
 /**
  sl_updateCoin
 
- @param text <#text description#>
+ @param text NSString
  */
 - (void)sl_updateCoin:(NSString *)text {
     self.showView.textLabel.text = text;
