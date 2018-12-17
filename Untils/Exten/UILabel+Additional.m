@@ -43,4 +43,13 @@
 + (instancetype)labelWithFont:(UIFont *)font textColor:(UIColor *)textColor backgroundColor:(UIColor *)backgroundColor alignment:(NSTextAlignment)alignment{
     return [self labelWithFrame:CGRectZero text:@"" textColor:textColor font:font backgroundColor:backgroundColor alignment:alignment];
 }
++ (instancetype)labelWithFrame:(CGRect)frame text:(NSString *)text textColor:(UIColor *)textColor font:(UIFont *)font backgroundColor:(UIColor *)backgroundColor alignment:(NSTextAlignment)alignment{
+    UILabel *label = [[UILabel alloc] initWithFrame:frame];
+    label.text = text;
+    label.textColor = textColor;
+    label.font = font;
+    label.backgroundColor = backgroundColor;
+    label.textAlignment = alignment;
+    return label;
+}
 @end
