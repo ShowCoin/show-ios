@@ -141,7 +141,7 @@ static CGFloat const kLPUserViewWH = 17;
 /**
  touchesBegan
 
- @param touches <#touches description#>
+ @param touches NSSet
  @param event <#event description#>
  */
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
