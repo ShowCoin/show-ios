@@ -165,6 +165,9 @@ static CGFloat const kLPUserViewWH = 17;
 }
 
 /// 设置用户信息
+/**
+ <#Description#>
+ */
 - (void)addinfo {
     [self.userView setRoundStyle:YES imageUrl:AccountModel.shared.avatar
                      imageHeight:self.userView.height vip:NO attestation:NO];
