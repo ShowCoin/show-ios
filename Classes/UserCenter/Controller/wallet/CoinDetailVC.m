@@ -218,4 +218,83 @@
 //        }
     }];
 }
+//展示提现认证弹窗
+-(void)ShowWithDrawAlert
+{
+    @weakify(self)
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.25 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        @strongify(self)
+        self.withdrawAlertView= [SLWithdrawAlert authView];
+        self.withdrawAlertView.delegate = self;
+        self.withdrawAlertView.alpha = 1;
+        self.withdrawAlertView.mainView.transform =CGAffineTransformMakeScale(0.5, 0.5);
+        [self.view addSubview:self.withdrawAlertView];
+        //            [[HWPopTool sharedInstance] showGiftTipsWithPresentView:_adAlertView];
+        //        [ServiceMgr.adService saveLaunchAlertAd];
+        [UIView animateWithDuration:0.25 animations:^{
+            self.withdrawAlertView.alpha = 1;
+            self.withdrawAlertView.mainView.transform =CGAffineTransformMakeScale(1, 1);
+
+        }];
+    
+    });
+}
+
+-(void)SLWithdrawAlertsureClick
+{
+    if (_withdrawAlertView) {
+        [_withdrawAlertView removeFromSuperview];
+        _withdrawAlertView.delegate = nil;
+        _withdrawAlertView = nil;
+    }
+    if (_withdrawAlertView) {
+        //        [PageMgr pushToOtherVcWithmodel:ServiceMgr.adService.launchAlertAdmodel];
+    }
+    _withDrawBtn.userInteractionEnabled = YES;
+
+}
+-(void)SLWithdrawAlertCancelClick
+{
+    if (_withdrawAlertView) {
+        [_withdrawAlertView removeFromSuperview];
+        _withdrawAlertView.delegate = nil;
+        _withdrawAlertView = nil;
+    }
+    _withDrawBtn.userInteractionEnabled = YES;
+
+}
+
+- (void)requestWithPage:(NSInteger)page perPage:(NSInteger)perpage paramters:(NSDictionary *)paramters SuccessBlock:(void(^)(BOOL sucess))successBlock FaildBlock:(void(^)(NSError *error))faildBlock{
+    @weakify(self);
+    
+    self.getTransacitonListAction = [SLGetTransactionListAction action];
+    if([self.tableView.mj_header isRefreshing])
+    {
+        self.cursor = @"0";
+    }
+    self.getTransacitonListAction.cursor = self.cursor;
+    self.getTransacitonListAction.count = @"10";
+    self.getTransacitonListAction.coin_type = self.walletModel.type;
+    if(![self.user.uid isEqualToString:[AccountModel shared].uid]){
+        self.getTransacitonListAction.uid = self.user.uid ;
+    }
+    self.getTransacitonListAction.finishedBlock = ^(id result) {
+        @strongify(self);
+        successBlock(YES);
+        //请求成功
+        NSDictionary * response=(NSDictionary *)result;
+        if ([response isKindOfClass:[NSDictionary class]])
+        {
+            [self parseSucessData:response];
+            //model转换或其他处理
+        }
+    };
+    self.getTransacitonListAction.failedBlock = ^(NSError *error) {
+        @strongify(self);
+        self.error = error ;
+        faildBlock(error);
+    };
+    [self.getTransacitonListAction start];
+}
+
 @end
