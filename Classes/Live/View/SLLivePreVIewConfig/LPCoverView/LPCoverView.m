@@ -138,6 +138,12 @@ static CGFloat const kLPUserViewWH = 17;
     self.showView.frame = CGRectMake(viewX, viewY, viewW, viewH);
 }
 
+/**
+ <#Description#>
+
+ @param touches <#touches description#>
+ @param event <#event description#>
+ */
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     if (isScale) {
         self->isScale = NO;
