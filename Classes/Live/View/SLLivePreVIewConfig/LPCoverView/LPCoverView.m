@@ -177,7 +177,7 @@ static CGFloat const kLPUserViewWH = 17;
 #pragma mark - Method
 
 /**
- <#Description#>
+ sl_updateTitle
 
  @param text <#text description#>
  */
