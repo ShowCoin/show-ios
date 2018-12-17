@@ -142,7 +142,7 @@ static CGFloat const kLPUserViewWH = 17;
  touchesBegan
 
  @param touches NSSet
- @param event <#event description#>
+ @param event UIEvent
  */
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     if (isScale) {
