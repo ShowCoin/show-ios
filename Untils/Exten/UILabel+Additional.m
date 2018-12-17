@@ -20,4 +20,8 @@
     return [self labelWithFrame:frame text:text textColor:textColor font:font backgroundColor:[UIColor clearColor]];
 }
 
++ (instancetype)labelWithFrame:(CGRect)frame text:(NSString *)text textColor:(UIColor *)textColor font:(UIFont *)font backgroundColor:(UIColor *)backgroundColor{
+    return [self labelWithFrame:frame text:text textColor:textColor font:font backgroundColor:backgroundColor alignment:NSTextAlignmentLeft];
+}
+
 @end
