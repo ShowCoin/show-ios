@@ -40,5 +40,10 @@ typedef void(^ShowActionCancelledBlock)(void);
  */
 @property(nonatomic, copy) ShowActionCancelledBlock cancelledBlock;
 
+/**
+ * 开始
+ * @note 子类复写
+ */
+- (void)start;
 
 @end
