@@ -358,4 +358,51 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
+- (CGFloat)configureCellHeightWithTableViewCell:(UITableViewCell *)cell AtIndexPath:(NSIndexPath *)indexPath withObject:(id)object{return 79.0f*Proportion375;
+}
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    NSLog(@"skkskk ==   %f",scrollView.contentOffset.y);
+    if (scrollView.contentOffset.y < -80*Proportion375) {
+        scrollView.contentOffset = CGPointMake(0, -80*Proportion375);
+    }
+    if (scrollView.contentOffset.y > 100*Proportion375 && self.dataSource.count<1) {
+        scrollView.contentOffset = CGPointMake(0, 100*Proportion375);
+        
+    }
+}
+
+#pragma mark - **********************withdrawAlert delegates **********************
+- (void)SLWithdrawGoToPhoneVC;
+{
+    SLPhoneBindVC *bindPhoneVC = [[SLPhoneBindVC alloc]init];
+    @weakify(self);
+    bindPhoneVC.refresh = ^{
+        @strongify(self);
+        [self.withdrawAlertView checkSafeStatue];
+        [self.withdrawAlertView.TabelView reloadData];
+    };
+    [self.navigationController pushViewController:bindPhoneVC animated:YES];
+
+}
+- (void)SLWithdrawGoToKYC;
+{
+//    if (AccountUserInfoModel.showCoinRmb.floatValue >= SysConfig.kyc_service_fee) {
+        SLAuthIdentityViewController *authVC = [[SLAuthIdentityViewController alloc] init];
+        authVC.userModel = self.user;
+        @weakify(self);
+        authVC.refresh = ^{
+            @strongify(self);
+            [self.withdrawAlertView checkSafeStatue];
+            [self.withdrawAlertView.TabelView reloadData];
+        };
+        [self.navigationController pushViewController:authVC animated:YES];
+//    }else{
+//        NSString *strValue=[NSString stringWithFormat:@"%0.2f", SysConfig.kyc_service_fee];
+//        UIAlertView *CoinAlert = [[UIAlertView alloc] initWithTitle:@"余额不足" message:[NSString stringWithFormat:@"每次提交KYC认证，系统扣除约等于%@元的SHOW币",strValue] delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"充值", nil];
+//        CoinAlert.tag = 2000;
+//        [CoinAlert show];
+//    }
+}
 @end
