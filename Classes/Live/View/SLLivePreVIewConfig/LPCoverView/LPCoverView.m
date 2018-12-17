@@ -18,7 +18,7 @@ CGFloat LPGetLabelWidth(UILabel *label) {
 static CGFloat const kLPUserViewWH = 17;
 
 /**
- <#Description#>
+ LPCoverView create
  */
 @interface LPCoverView ()
 
