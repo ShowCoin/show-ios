@@ -45,5 +45,26 @@ typedef void(^ShowActionCancelledBlock)(void);
  * @note 子类复写
  */
 - (void)start;
+/**
+ * 取消
+ * @note 子类复写
+ */
+- (void)cancel;
+
+//+(void)request
+
+#pragma mark - 子类使用，返回结果
+/**
+ 请求参数在子类中重写
+ 
+ @return 请求参数
+ */
+- (ShowRequestData *)requestData;
+/**
+ 请求的接口名需要在子类中重写
+
+ @return 接口名
+ */
+- (NSString *)interface;
 
 @end
