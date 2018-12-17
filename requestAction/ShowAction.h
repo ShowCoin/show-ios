@@ -16,9 +16,7 @@ typedef void(^ShowActionFailedBlock)(NSError *error);
 typedef void(^ShowActionCancelledBlock)(void);
 
 @interface ShowAction : NSObject
-/**
- * 创建并返回一个action
- */
+
 + (instancetype)action;
 
 @end
