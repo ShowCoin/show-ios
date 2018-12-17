@@ -103,4 +103,45 @@
 
 }
 
+- (void)getWalletInfo
+{
+    if (self.getWalletInfoAction ) {
+        [self.getWalletInfoAction cancel];
+        self.getWalletInfoAction = nil;
+    }
+    [HDHud showHUDInView:self.view title:@""];
+    
+    self.getWalletInfoAction = [SLGetWalletInfoAction action];
+    self.getWalletInfoAction.uid = self.user.uid?:AccountUserInfoModel.uid;
+    self.getWalletInfoAction.modelClass = SLWalletModel.self;
+    @weakify(self)
+    self.getWalletInfoAction.finishedBlock = ^(SLWalletModel *model)
+    {
+        [model newCoinList];
+        @strongify(self)
+        SLWalletCoinModel * show =model.coinList[0];
+        AccountUserInfoModel.showCoinNum = show.balance;
+        if (model.coinList.count>3) {
+            SLWalletCoinModel * eth =model.coinList[3];
+            AccountUserInfoModel.ethCoinNumber = eth.balance;
+        }
+        [AccountUserInfoModel save];
+        
+        for (int i = 0; i<model.coinList.count; i++) {
+            SLWalletCoinModel * coinmodel = model.coinList[i];
+            if ([coinmodel.typeCName isEqualToString:self.walletModel.typeCName]) {
+                self.walletModel = coinmodel;
+            }
+        }
+        [HDHud hideHUDInView:self.view];
+        self.headerView.walletModel = self.walletModel;
+        //  初始化用户单例
+    };
+    self.getWalletInfoAction.failedBlock = ^(NSError *error) {
+        @strongify(self)
+        [HDHud hideHUDInView:self.view];
+    };
+    [self.getWalletInfoAction start];
+}
+
 @end
