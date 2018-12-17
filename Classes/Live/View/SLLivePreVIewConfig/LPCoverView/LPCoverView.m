@@ -139,7 +139,7 @@ static CGFloat const kLPUserViewWH = 17;
 }
 
 /**
- <#Description#>
+ touchesBegan
 
  @param touches <#touches description#>
  @param event <#event description#>
