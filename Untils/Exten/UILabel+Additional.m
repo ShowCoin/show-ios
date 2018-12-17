@@ -36,4 +36,7 @@
     return [self labelWithFont:font textColor:[UIColor blackColor] alignment:alignment];
 }
 
++ (instancetype)labelWithFont:(UIFont *)font textColor:(UIColor *)textColor alignment:(NSTextAlignment)alignment{
+    return [self labelWithFont:font textColor:textColor backgroundColor:[UIColor clearColor] alignment:alignment];
+}
 @end
