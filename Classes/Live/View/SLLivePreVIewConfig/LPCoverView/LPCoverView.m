@@ -40,6 +40,12 @@ static CGFloat const kLPUserViewWH = 17;
     UIView *beginView_;
 }
 
+/**
+ <#Description#>
+
+ @param frame <#frame description#>
+ @return <#return value description#>
+ */
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
