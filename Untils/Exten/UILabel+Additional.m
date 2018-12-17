@@ -31,4 +31,9 @@
 + (instancetype)labelWithText:(NSString *)text textColor:(UIColor *)textColor font:(UIFont *)font backgroundColor:(UIColor *)backgroundColor alignment:(NSTextAlignment)alignment;{
     return [self labelWithFrame:CGRectZero text:text textColor:textColor font:font backgroundColor:backgroundColor alignment:alignment];
 }
+
++ (instancetype)labelWithFont:(UIFont *)font alignment:(NSTextAlignment)alignment{
+    return [self labelWithFont:font textColor:[UIColor blackColor] alignment:alignment];
+}
+
 @end
