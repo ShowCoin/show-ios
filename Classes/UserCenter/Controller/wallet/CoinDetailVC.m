@@ -297,4 +297,65 @@
     [self.getTransacitonListAction start];
 }
 
+- (void)parseSucessData:(id)data{
+    NSDictionary * result = (NSDictionary *)data;
+    self.tableArray = [result valueForKey:@"list"];
+    self.cursor = [NSString stringWithFormat:@"%@",[result objectForKey:@"next_cursor"]];
+
+    if ([self.tableView.mj_header isRefreshing]) {
+        self.dataSource =  @[[TransactionRecordsModel mj_objectArrayWithKeyValuesArray:self.tableArray]];
+    }else{
+        NSArray * dataArr = [TransactionRecordsModel mj_objectArrayWithKeyValuesArray:self.tableArray];
+        NSMutableArray * oldArray = [NSMutableArray arrayWithArray:self.dataSource[0]];
+        [oldArray addObjectsFromArray:dataArr];
+        self.dataSource = @[[NSArray arrayWithArray:oldArray]];
+    }
+//    [self.tableView reloadData];
+}
+
+- (BOOL)shouldInfiniteScrolling{
+    return YES;
+}
+
+//加载更多数据
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be d.
+}
+
+
+#pragma mark -tableView代理
+- (UITableViewCell *)tableView:(UITableView *)tableView dequeueReusableCellWithIdentifier:(NSString *)identifier forIndexPath:(NSIndexPath *)indexPath{
+    return [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([CoinDetailCell class])];
+}
+
+- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath withObject:(TransactionRecordsModel *)object {
+    [(CoinDetailCell *)cell bindModel:object withType:self.walletModel.typeCName];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{return 42.0f*WScale;};
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    UIView *headerSectionView = [[UIView alloc]init];
+    headerSectionView.frame = CGRectMake(0, 0, kScreenWidth, 44*WScale);
+    UILabel *headerLabel = [[UILabel alloc]initWithFrame:CGRectMake(15*WScale, 0, 100*WScale, 44*WScale)];
+    headerLabel.text = @"最近交易记录";
+    headerLabel.font = [UIFont boldSystemFontOfSize:14*WScale];
+    headerLabel.textColor = kTextWith5b;
+//    headerSectionView.backgroundColor = kBlackWith1c;
+    [headerSectionView addSubview:headerLabel];
+    return headerSectionView ;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    SLCoinDetailInfoVC * vc = [SLCoinDetailInfoVC initVC];
+     TransactionRecordsModel * model =self.dataSource[indexPath.section][indexPath.row];
+    vc.tModel = model;
+    vc.user = self.user;
+    vc.walletModel = self.walletModel;
+    [vc.navigationBarView setNavigationTitle:@"交易记录"];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 @end
