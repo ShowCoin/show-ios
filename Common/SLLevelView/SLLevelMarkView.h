@@ -12,7 +12,6 @@ typedef enum : NSUInteger {
     LevelType_Host,        //  主播等级
 } LevelType;
 
-
-
+@interface SLLevelMarkView : UIView
 
 @end
