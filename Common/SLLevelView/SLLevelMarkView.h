@@ -15,5 +15,9 @@ typedef enum : NSUInteger {
 @interface SLLevelMarkView : UIView
 //等级类型
 @property (nonatomic , assign) LevelType type;
+//等级
+@property (nonatomic , copy) NSString * level;
+//根据类型初始化
+- (id)initWithFrame:(CGRect)frame withType:(LevelType)type;
 
 @end
