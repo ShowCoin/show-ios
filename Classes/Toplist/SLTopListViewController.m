@@ -42,7 +42,102 @@
     }
 }
 
+-(void)setUid:(NSString *)uid
+{
+    _uid = uid;
+    UIButton * contributionBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [contributionBtn setTitle:@"激励榜" forState:UIControlStateNormal];
+    contributionBtn.backgroundColor = kBlackWith17;
+    [contributionBtn setTitleColor:kGoldWithNorm forState:UIControlStateNormal];
+    contributionBtn.titleLabel.font = Font_Regular(18*Proportion375);
+    [self.view addSubview:contributionBtn];
+    
+    UIButton * encourageBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [encourageBtn setTitle:@"贡献榜" forState:UIControlStateNormal];
+    encourageBtn.backgroundColor = kBlackWith17;
+    [encourageBtn setTitleColor:kTextWith8b forState:UIControlStateNormal];
+    encourageBtn.titleLabel.font = Font_Regular(18*Proportion375);
+    [self.view addSubview:encourageBtn];
 
+    @weakify(self);
+    [[contributionBtn rac_signalForControlEvents:UIControlEventTouchUpInside]subscribeNext:^(id x) {
+        @strongify(self);
+        [contributionBtn setTitleColor:kGoldWithNorm forState:UIControlStateNormal];
+        [encourageBtn setTitleColor:kTextWith8b forState:UIControlStateNormal];
+        [self.bkscrollerView setContentOffset:CGPointMake(0, 0) animated:NO];
+    }];
+    [[encourageBtn rac_signalForControlEvents:UIControlEventTouchUpInside]subscribeNext:^(id x) {
+        @strongify(self);
+        [encourageBtn setTitleColor:kGoldWithNorm forState:UIControlStateNormal];
+        [contributionBtn setTitleColor:kTextWith8b forState:UIControlStateNormal];
+        [self.bkscrollerView setContentOffset:CGPointMake(kMainScreenWidth, 0) animated:NO];
+        
+    }];
+    
+    [contributionBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        @strongify(self)
+        make.centerY.equalTo(self.navigationBarView.leftView);
+        //        make.right.equalTo(self.view).with.offset(kMainScreenWidth/2);
+        make.left.equalTo(self.view).with.offset(kMainScreenWidth/2 - 100*Proportion375);
+        
+        make.size.mas_equalTo(CGSizeMake(100*Proportion375, 40));
+    }];
+    
+    [encourageBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        @strongify(self)
+
+        make.centerY.equalTo(self.navigationBarView.leftView);
+        make.left.equalTo(self.view).with.offset(kMainScreenWidth/2);
+        make.size.mas_equalTo(CGSizeMake(100*Proportion375, 40));
+    }];
+    
+    [self.view addSubview:self.bkscrollerView];
+
+}
+- (UIScrollView *)bkscrollerView{
+    if (!_bkscrollerView) {
+        _bkscrollerView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, KNaviBarHeight, kMainScreenWidth, kMainScreenHeight - KNaviBarHeight)];
+        _bkscrollerView.contentSize = CGSizeMake(kMainScreenWidth * 2, 0);
+        _bkscrollerView.backgroundColor = kBlackWith1c;
+        if (@available(iOS 11.0, *)) {
+            _bkscrollerView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        }else{
+            self.automaticallyAdjustsScrollViewInsets = NO;
+        }
+        _bkscrollerView.bounces=NO;
+        _bkscrollerView.pagingEnabled = YES;
+        _bkscrollerView.delegate = self;
+        _bkscrollerView.showsHorizontalScrollIndicator = YES;
+        _bkscrollerView.showsVerticalScrollIndicator = YES;
+        _bkscrollerView.scrollEnabled = NO;
+        [_bkscrollerView setContentOffset:CGPointMake(0, 0) animated:NO];
+        [_bkscrollerView addSubview:self.contributionView];
+        [_bkscrollerView addSubview:self.encourageView];
+    }
+    return _bkscrollerView;
+}
+
+-(SLToplistSubView *)contributionView
+{
+    if (!_contributionView) {
+        _contributionView = [SLToplistSubView authViewWithFrame:CGRectMake(kMainScreenWidth, 0, kMainScreenWidth, kMainScreenHeight - KNaviBarHeight) andUid:self.uid];
+        _contributionView.viewType = TopViewType_Contribution;
+    }
+        return _contributionView;
+}
+-(SLToplistSubView *)encourageView
+{
+    if (!_encourageView) {
+        _encourageView = [SLToplistSubView authViewWithFrame:CGRectMake(0, 0, kMainScreenWidth, kMainScreenHeight - KNaviBarHeight) andUid:self.uid];
+        _encourageView.viewType = TopViewType_Encourage;
+
+    }
+    return _encourageView;
+}
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
 
 -(void)dealloc{
     
