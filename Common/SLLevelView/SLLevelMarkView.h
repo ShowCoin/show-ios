@@ -10,6 +10,9 @@
 typedef enum : NSUInteger {
     LevelType_ShowCoin,        //  财富等级
     LevelType_Host,        //  主播等级
-}
+} LevelType;
+
+
+
 
 @end
