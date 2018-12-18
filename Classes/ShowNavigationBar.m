@@ -263,27 +263,7 @@
             _titleLabel.textColor = [UIColor whiteColor];
             [self setLeftIconImage:[UIImage imageNamed:@"account_navBack"] forState:UIControlStateNormal];
             break;
-        case NavigationColorwihte:
-            _titleLabel.textColor = kthemeBlackColor;
-            self.backgroundColor = kThemeWhiteColor;
-            [self setLeftIconImage:[UIImage imageNamed:@"account_navBack_black"] forState:UIControlStateNormal];
-            _linView.backgroundColor = kSeparationColor;
 
-            break;
-        case NavigationColorGray:
-            self.backgroundColor = kGrayWithf4f4f4;
-            _titleLabel.textColor = kthemeBlackColor;
-            [self setLeftIconImage:[UIImage imageNamed:@"account_navBack_black"] forState:UIControlStateNormal];
-            _linView.backgroundColor = kSeparationColor;
-
-            break;
-        case NavigationColorClear:
-            self.backgroundColor = [UIColor clearColor];
-            _titleLabel.textColor = kThemeWhiteColor;
-            [self setLeftIconImage:[UIImage imageNamed:@"account_navBack"] forState:UIControlStateNormal];
-            _linView.backgroundColor = [UIColor clearColor];
-            
-            break;
             
         default:
             break;
