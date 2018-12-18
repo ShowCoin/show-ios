@@ -158,6 +158,68 @@
     [self presentViewController:alert animated:YES completion:nil];
     
 }
+-(void) supportRetryUploadAllAvatar{
+    NSString *imagePath = [SLPathUtils tempSaveImage:self.uploadSmallImage];
+
+    [[SLBusinessManager manager] uploadPhotosToUserInfo:@[imagePath]  progress:nil finish:^(id result, NSString *imagePath, NSString *videoPath) {
+        if ([result isKindOfClass:[NSDictionary class]]) {
+            if (IsValidString([result valueForKey:@"avatar"]))
+            {
+                AccountUserInfoModel.avatar =[result valueForKey:@"avatar"];
+            }
+            [AccountUserInfoModel save];
+        }
+    } failed:^(NSError *error) {
+
+    }];
+
+}
+-(void) supportRetryUploadAvatar{
+    [HDHud showHUDInView:self.view title:@"上传中..."];
+    @weakify(self);
+    NSString *imagePath = [SLPathUtils tempSaveImage:self.uploadSmallImage];
+    [[SLBusinessManager manager] uploadPhotoToUserInfo:imagePath upNumber:0 progress:nil finish:^(id result, NSString *imagePath, NSString *videoPath) {
+        @strongify(self);
+        [HDHud hideHUDInView:self.view];
+        if ([result isKindOfClass:[NSDictionary class]]) {
+            if (IsValidString([result valueForKey:@"avatar"]))
+            {
+                AccountUserInfoModel.avatar =[result valueForKey:@"avatar"];
+                AccountUserInfoModel.is_change_avatar =@"1";
+                [AccountUserInfoModel save];
+            }
+        }
+        [self.navigationController popViewControllerAnimated:YES];
+        
+        
+        [[NSNotificationCenter defaultCenter] postNotificationName:SLPREVIEWAVATARCHANGE object:nil];
+        
+        
+//        [self supportRetryUploadBigAvatar];
+    } failed:^(NSError *error) {
+        @strongify(self);
+        [HDHud hideHUDInView:self.view];
+    }];
+}
+-(void)supportRetryUploadBigAvatar{
+    @weakify(self);
+    NSString *imagePath = [SLPathUtils tempSaveImage:self.uploadImage];
+    [[SLBusinessManager manager] uploadPhotoToUserInfo:imagePath upNumber:1 progress:nil finish:^(id result, NSString *imagePath, NSString *videoPath) {
+        @strongify(self);
+        if ([result isKindOfClass:[NSDictionary class]]) {
+            if (IsValidString([result valueForKey:@"large_avatar"]))
+            {
+                AccountUserInfoModel.large_avatar =[result valueForKey:@"large_avatar"];
+                [AccountUserInfoModel save];
+            }
+        }
+        [[NSNotificationCenter defaultCenter]postNotificationName:kUserInfoChange object:nil];
+//        [HDHud hideHUDInView:self.view];
+        [self.headerBtn setImage:self.uploadImage];
+    } failed:^(NSError *error) {
+//        [HDHud hideHUDInView:self.view];
+    }];
+}
 /*
 #pragma mark - Navigation
 
