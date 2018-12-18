@@ -53,6 +53,43 @@
     [PageManager manager].changeHead = NO;
 }
 
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:YES];
+    [SLReportManager reportPageBegin:kReport_UploadPhotoPage];
+    
+}
+-(void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:YES];
+    [SLReportManager reportPageEnd:kReport_UploadPhotoPage];
+}
+
+-(void)clickRightButton:(id)sender{
+    [self headPortraitClickAuthor];
+}
+-(UIImageView *)headerBtn
+{
+    if (!_headerBtn) {
+        _headerBtn = [[UIImageView alloc] initWithFrame:CGRectMake(0,  KNaviBarHeight, KScreenWidth, kMainScreenHeight-KNaviBarHeight)];
+        _headerBtn.backgroundColor = kBlackWith1c;
+        _headerBtn.contentMode = UIViewContentModeScaleAspectFit;
+        _headerBtn.userInteractionEnabled = YES;
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer    alloc]init];
+        [_headerBtn addGestureRecognizer:tap];
+        @weakify(self);
+        [[tap rac_gestureSignal]subscribeNext:^(id x) {
+            @strongify(self);
+            [self headPortraitClickAuthor];
+        }];
+    }
+    return _headerBtn;
+}
+
+
+- (void)headPortraitClickAuthor{
+    [self showTheimagePicker];
+}
 /*
 #pragma mark - Navigation
 
