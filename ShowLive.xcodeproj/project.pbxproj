@@ -255,7 +255,7 @@
 		431F64AE20F794150087DB8E /* UIResponder+JKFirstResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+JKFirstResponder.m"; sourceTree = "<group>"; };
 		431F64AF20F794160087DB8E /* UIResponder+JKFirstResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+JKFirstResponder.h"; sourceTree = "<group>"; };
 		431F64B720F7945C0087DB8E /* UIPopoverController+iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIPopoverController+iPhone.m"; sourceTree = "<group>"; };
-		431F64B820F7945C0087DB8E /* UIPopoverController+iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIPopoverController+iPhone.h"; sourceTree = "<group>"; };
+		431F64B820F7945C0087DB8E /* UIPopoverController+iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIPopoverController+iPhone.h"; path = "../Exten/UIPopoverController+iPhone.h"; sourceTree = "<group>"; };
 		431F64C920F794E70087DB8E /* UINavigationController+JKTransitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+JKTransitions.h"; sourceTree = "<group>"; };
 		431F64CA20F794E70087DB8E /* UINavigationController+JKTransitions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+JKTransitions.m"; sourceTree = "<group>"; };
 		431F64E120F8F2300087DB8E /* NSString+JKRemoveEmoji.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JKRemoveEmoji.m"; sourceTree = "<group>"; };
@@ -761,6 +761,7 @@
 				43205DD220DD263300AD6952 /* UIView+Debug.m */,
 				4325537320D8B58F00FC0258 /* NSArray+JKBlock.m */,
 				43205DD820DD266500AD6952 /* UIView+FDCollapsibleConstraints.h */,
+				43205DD520DD264B00AD6952 /* UITextViewDemoViewController.h */,
 				43205DD620DD264B00AD6952 /* UITextViewDemoViewController.m */,
 				435D4C7E20F091BB00C8DC85 /* NSIndexPath+JKOffset.m */,
 				435D4C7B20F0919600C8DC85 /* NSHTTPCookieStorage+JKFreezeDry.h */,
@@ -777,8 +778,11 @@
 				435D4C6D20EF406600C8DC85 /* NSDictionary+JKXML.m */,
 				4355A4DB20FF11000020B7DE /* UINavigationController+JKStackManager.h */,
 				431F64AE20F794150087DB8E /* UIResponder+JKFirstResponder.m */,
+				431F64B820F7945C0087DB8E /* UIPopoverController+iPhone.h */,
 				4374EB0E20F62F7C00BB947F /* NSString+JKDictionaryValue.h */,
 				4374EB1120F62F9D00BB947F /* NSString+JKEmoji.h */,
+				4374EB2320F6307000BB947F /* NSString+JKNormalRegex.h */,
+				4374EB2420F6307000BB947F /* NSString+JKNormalRegex.m */,
 				431F64CA20F794E70087DB8E /* UINavigationController+JKTransitions.m */,
 				431C078220FE28BF00479559 /* NSURLSession+JKSynchronousTask.h */,
 				431CB4D920F499D00043B0AC /* NSRunLoop+JKPerformBlock.h */,
@@ -1359,7 +1363,6 @@
 				4325537420D8B59000FC0258 /* NSArray+JKBlock.h */,
 				4325535F20D8B49F00FC0258 /* CAShapeLayerDemoViewController.h */,
 				43205DD920DD266600AD6952 /* UIView+FDCollapsibleConstraints.m */,
-				43205DD520DD264B00AD6952 /* UITextViewDemoViewController.h */,
 				435D4C7F20F091BC00C8DC85 /* NSIndexPath+JKOffset.h */,
 				435D4C6620EF3FA500C8DC85 /* NSDictionary+JKMerge.h */,
 				435D4C6320EF3E3B00C8DC85 /* NSDictionary+JKJSONString.h */,
@@ -1369,10 +1372,7 @@
 				431F64EA20F8F2610087DB8E /* NSString+JKStringPages.h */,
 				431F64EB20F8F2610087DB8E /* NSString+JKStringPages.m */,
 				435D4C7220EF42FB00C8DC85 /* NSFetchRequest+JKExtensions.m */,
-				431F64B820F7945C0087DB8E /* UIPopoverController+iPhone.h */,
 				431F64B720F7945C0087DB8E /* UIPopoverController+iPhone.m */,
-				4374EB2320F6307000BB947F /* NSString+JKNormalRegex.h */,
-				4374EB2420F6307000BB947F /* NSString+JKNormalRegex.m */,
 				431F64C920F794E70087DB8E /* UINavigationController+JKTransitions.h */,
 				431C077620FE279700479559 /* NSURLConnection+JKSelfSigned.h */,
 				431CB4C420F498850043B0AC /* NSObject+JKEasyCopy.h */,
