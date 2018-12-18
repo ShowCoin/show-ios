@@ -13,5 +13,7 @@ typedef enum : NSUInteger {
 } LevelType;
 
 @interface SLLevelMarkView : UIView
+//等级类型
+@property (nonatomic , assign) LevelType type;
 
 @end
