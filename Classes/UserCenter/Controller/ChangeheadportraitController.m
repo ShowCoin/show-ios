@@ -330,6 +330,32 @@
     }
 
 }
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    [picker dismissViewControllerAnimated:YES completion:nil];
+}
+- (void)alertViewCancel:(UIAlertView *)alertView
+{
+    [self.Imgpicker dismissViewControllerAnimated:YES completion:nil];
+}
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+- (UIImage *)normalImageWithoriginalImage:(UIImage *)originalImage {
+    UIImageOrientation imgOrientation; //拍摄后获取的的图像方向
+    
+    
+        
+        // 前置摄像头图像方向 UIImageOrientationLeftMirrored
+        // IOS前置摄像头左右成像
+        imgOrientation = UIImageOrientationLeftMirrored;
+        
+        NSLog(@"前置摄像头");
+    
+    return [[UIImage alloc]initWithCGImage:originalImage.CGImage scale:1.0f orientation:imgOrientation];
+}
+
 /*
 #pragma mark - Navigation
 
