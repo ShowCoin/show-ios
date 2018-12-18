@@ -90,6 +90,74 @@
 - (void)headPortraitClickAuthor{
     [self showTheimagePicker];
 }
+- (void)authorityToJudge{
+    @weakify(self);
+    if ([PHPhotoLibrary authorizationStatus] == PHAuthorizationStatusAuthorized){//用户之前已经授权
+        [self openAlbum];
+    }else if([PHPhotoLibrary authorizationStatus] == PHAuthorizationStatusDenied){//用户之前已经拒绝授权
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"您之前拒绝了访问照片，请到手机设置" delegate:nil cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+        [alert show];
+        [[alert rac_buttonClickedSignal] subscribeNext:^(id x) {
+            NSURL *url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+            if( [[UIApplication sharedApplication]canOpenURL:url] ) {
+                if(@available(iOS 10.0, *)){
+                    [[UIApplication sharedApplication]openURL:url options:@{}completionHandler:^(BOOL success) {
+                    }];
+                }else{
+                    [[UIApplication sharedApplication]openURL:url];
+                }
+            }
+        }];
+    }else{//弹窗授权时监听
+        [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
+            @strongify(self);
+            if (status == PHAuthorizationStatusAuthorized){//允许
+                @weakify(self);
+                dispatch_main_async_safe(^{
+                    @strongify(self);
+                    [self openAlbum];
+                }
+              );
+            }
+        }];
+    }
+}
+-(void)showTheimagePicker
+{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil
+                                                                   message:nil
+                                                            preferredStyle:UIAlertControllerStyleActionSheet];
+    [alert addAction:[UIAlertAction actionWithTitle:STRING_USER_EDIT_PICKER_71
+                                              style:UIAlertActionStyleDefault
+                                            handler:^(UIAlertAction *action) {
+                                                [self openCamera];
+                                            }]];
+    
+    [alert addAction:[UIAlertAction actionWithTitle:@"从手机相册选择"
+                                              style:UIAlertActionStyleDefault
+                                            handler:^(UIAlertAction *action) {
+                                                
+                                                [self authorityToJudge];
+                                            }]];
+    
+    [alert addAction:[UIAlertAction actionWithTitle:STRING_IDENTIFY_CHECKCANCLE_10
+                                              style:UIAlertActionStyleCancel
+                                            handler:^(UIAlertAction *action) {
+                                                NSLog(@"Action 3 Handler Called");
+                                            }]];
+    
+    UIPopoverPresentationController *popover = alert.popoverPresentationController;
+   
+    //ipad 下需加入这段代码，否则崩溃
+    if (popover) {
+        popover.sourceView = self.view;
+        popover.sourceRect = CGRectMake(self.view.bounds.size.width / 2.0, self.view.bounds.size.height / 2.0, 1.0, 1.0);
+        popover.permittedArrowDirections = UIPopoverArrowDirectionAny;
+    }
+    
+    [self presentViewController:alert animated:YES completion:nil];
+    
+}
 /*
 #pragma mark - Navigation
 
