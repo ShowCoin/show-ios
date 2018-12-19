@@ -66,6 +66,7 @@ typedef void(^ShowActionCancelledBlock)(void);
  @return 接口名
  */
 - (NSString *)interface;
+
 /**
  数据解析，如果子类需要特殊的处理返回数据的话请重写这个方法
  
