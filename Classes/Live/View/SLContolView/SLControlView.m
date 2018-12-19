@@ -47,6 +47,7 @@
     [_gradiedtLayer removeFromSuperlayer];
 }
 
+// 底部遮罩
 -(void)addMask
 {
     //底部遮罩
