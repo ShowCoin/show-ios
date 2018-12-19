@@ -121,4 +121,11 @@
     frame.origin.x = right - frame.size.width;
     self.frame = frame;
 }
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+- (CGFloat)bottom {
+    return self.frame.origin.y + self.frame.size.height;
+}
+
 @end
