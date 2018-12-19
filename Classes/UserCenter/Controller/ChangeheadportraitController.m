@@ -304,57 +304,6 @@
     }
 }
 
-- (void)dissmissPickerAction:(NSNotification *)notification{
-    [self.Imgpicker dismissViewControllerAnimated:YES completion:nil];
-}
-
-#pragma mark - UIImagePickerControllerDelegate
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
-{
-    UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
-    image = [UIImage fixOrientation:[info objectForKey:UIImagePickerControllerOriginalImage]];
-    
-    NSData * imageData = UIImageJPEGRepresentation(image, 1);
-    if (image.size.width >=720&&image.size.height >=1280&&imageData.length/1000>100) {
-        self.uploadImage = image;
-        SLCropImageViewController *cropImg = [[SLCropImageViewController alloc] initWithCropImage:image withShoot:NO];
-        self.Imgpicker = picker;
-        [self.Imgpicker presentViewController:cropImg animated:YES completion:^{
-            [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dissmissPickerAction:) name:@"DISSMISSPICKER" object:nil];
-        }];
-    }
-    else
-    {
-        UIAlertView *alertview = [[UIAlertView alloc]initWithTitle:@"" message:@"欢迎上传高清的头像作为直播的封面，高清的头像才能开播哦。" delegate:self cancelButtonTitle:@"知道了" otherButtonTitles: nil];
-        [alertview show];
-    }
-
-}
-- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
-{
-    [picker dismissViewControllerAnimated:YES completion:nil];
-}
-- (void)alertViewCancel:(UIAlertView *)alertView
-{
-    [self.Imgpicker dismissViewControllerAnimated:YES completion:nil];
-}
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-- (UIImage *)normalImageWithoriginalImage:(UIImage *)originalImage {
-    UIImageOrientation imgOrientation; //拍摄后获取的的图像方向
-    
-    
-        
-        // 前置摄像头图像方向 UIImageOrientationLeftMirrored
-        // IOS前置摄像头左右成像
-        imgOrientation = UIImageOrientationLeftMirrored;
-        
-        NSLog(@"前置摄像头");
-    
-    return [[UIImage alloc]initWithCGImage:originalImage.CGImage scale:1.0f orientation:imgOrientation];
-}
 
 /*
 #pragma mark - Navigation
