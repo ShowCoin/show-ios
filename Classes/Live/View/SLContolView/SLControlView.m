@@ -10,6 +10,9 @@
 #import "HomeHeader.h"
 
 
+/**
+ SLControlView
+ */
 @implementation SLControlView {
     BOOL _isFirst;
 }
