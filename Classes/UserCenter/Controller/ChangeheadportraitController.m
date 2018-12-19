@@ -127,50 +127,6 @@
     [self presentViewController:alert animated:YES completion:nil];
     
 }
--(void) supportRetryUploadAllAvatar{
-    NSString *imagePath = [SLPathUtils tempSaveImage:self.uploadSmallImage];
-
-    [[SLBusinessManager manager] uploadPhotosToUserInfo:@[imagePath]  progress:nil finish:^(id result, NSString *imagePath, NSString *videoPath) {
-        if ([result isKindOfClass:[NSDictionary class]]) {
-            if (IsValidString([result valueForKey:@"avatar"]))
-            {
-                AccountUserInfoModel.avatar =[result valueForKey:@"avatar"];
-            }
-            [AccountUserInfoModel save];
-        }
-    } failed:^(NSError *error) {
-
-    }];
-
-}
--(void) supportRetryUploadAvatar{
-    [HDHud showHUDInView:self.view title:@"上传中..."];
-    @weakify(self);
-    NSString *imagePath = [SLPathUtils tempSaveImage:self.uploadSmallImage];
-    [[SLBusinessManager manager] uploadPhotoToUserInfo:imagePath upNumber:0 progress:nil finish:^(id result, NSString *imagePath, NSString *videoPath) {
-        @strongify(self);
-        [HDHud hideHUDInView:self.view];
-        if ([result isKindOfClass:[NSDictionary class]]) {
-            if (IsValidString([result valueForKey:@"avatar"]))
-            {
-                AccountUserInfoModel.avatar =[result valueForKey:@"avatar"];
-                AccountUserInfoModel.is_change_avatar =@"1";
-                [AccountUserInfoModel save];
-            }
-        }
-        [self.navigationController popViewControllerAnimated:YES];
-        
-        
-        [[NSNotificationCenter defaultCenter] postNotificationName:SLPREVIEWAVATARCHANGE object:nil];
-        
-        
-//        [self supportRetryUploadBigAvatar];
-    } failed:^(NSError *error) {
-        @strongify(self);
-        [HDHud hideHUDInView:self.view];
-    }];
-}
-
 
 /*
 #pragma mark - Navigation
