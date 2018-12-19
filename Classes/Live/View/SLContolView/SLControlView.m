@@ -80,7 +80,7 @@
     NSLog(@"[187] -- sl_tabbarHidden %@", [noti.object boolValue] ? @"YES" : @"NO");
     [self showAnimate:[noti.object boolValue]];
 }
-
+/// showAnimate
 - (void)showAnimate:(BOOL)show {
     self.hidden = NO;
     for (UIView *v in self.subviews) {
