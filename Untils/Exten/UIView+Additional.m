@@ -63,5 +63,8 @@
 - (void)addDefaultShadow{
     [self addShadowWithColor:[[UIColor blackColor] colorWithAlphaComponent:.2] radius:5];
 }
-
+- (void)setBackupAlpha:(CGFloat)backupAlpha
+{
+    objc_setAssociatedObject(self, @"backupAlpha", @(backupAlpha), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
 @end
