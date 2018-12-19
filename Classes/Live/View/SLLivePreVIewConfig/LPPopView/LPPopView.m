@@ -37,7 +37,7 @@
  */
 - (void)sl_show:(BOOL)show complete:(void(^)(void))cmp {
     self->_animating = YES;
-    
+    /// option
     UIViewAnimationOptions option;
     if (show) {
         self.alpha = 0;
