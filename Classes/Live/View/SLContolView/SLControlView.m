@@ -71,6 +71,7 @@
     NSLog(@"[gx] controlview dealloc");
 }
 
+/// removeFromSuperview
 - (void)removeFromSuperview {
     [NSNotificationCenter.defaultCenter removeObserver:self];
 }
