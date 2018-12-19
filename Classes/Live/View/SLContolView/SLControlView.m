@@ -66,7 +66,7 @@
 }
 
 
-
+/// dealloc
 - (void)dealloc{
     NSLog(@"[gx] controlview dealloc");
 }
