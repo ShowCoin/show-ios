@@ -28,8 +28,6 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        
-   
 
         _isFirst = YES;
         
