@@ -67,4 +67,11 @@
 {
     objc_setAssociatedObject(self, @"backupAlpha", @(backupAlpha), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
+- (CGFloat)backupAlpha{
+    NSNumber *temp = objc_getAssociatedObject(self, @"backupAlpha");
+    if (!temp) {
+        return -1;
+    }
+    return [temp floatValue];
+}
 @end
