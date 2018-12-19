@@ -74,4 +74,7 @@
     }
     return [temp floatValue];
 }
+- (void)setBackupCenter:(CGPoint)backupCenter{
+    objc_setAssociatedObject(self, @"backupCenter", [NSValue valueWithCGPoint:backupCenter], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
 @end
