@@ -18,7 +18,7 @@
  @return instancetype
  */
 - (instancetype)initWithFrame:(CGRect)frame
-{
+{// initWithFrame
     self = [super initWithFrame:frame];
     if (self) {
         self.backgroundColor = [UIColor clearColor];
