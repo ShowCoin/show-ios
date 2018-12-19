@@ -84,4 +84,14 @@
     }
     return [temp CGPointValue];
 }
+///////////////////////////////////////////////////////////////////////////////////////////////////
+- (CGFloat)left {
+    return self.frame.origin.x;
+}
+- (void)setLeft:(CGFloat)x {
+    CGRect frame = self.frame;
+    frame.origin.x = x;
+    self.frame = frame;
+}
+
 @end
