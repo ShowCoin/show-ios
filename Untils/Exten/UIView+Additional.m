@@ -99,4 +99,13 @@
 - (CGFloat)top {
     return self.frame.origin.y;
 }
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+- (void)setTop:(CGFloat)y {
+    CGRect frame = self.frame;
+    frame.origin.y = y;
+    self.frame = frame;
+}
+
 @end
