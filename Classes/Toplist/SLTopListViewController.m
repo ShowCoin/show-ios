@@ -117,27 +117,6 @@
     return _bkscrollerView;
 }
 
--(SLToplistSubView *)contributionView
-{
-    if (!_contributionView) {
-        _contributionView = [SLToplistSubView authViewWithFrame:CGRectMake(kMainScreenWidth, 0, kMainScreenWidth, kMainScreenHeight - KNaviBarHeight) andUid:self.uid];
-        _contributionView.viewType = TopViewType_Contribution;
-    }
-        return _contributionView;
-}
--(SLToplistSubView *)encourageView
-{
-    if (!_encourageView) {
-        _encourageView = [SLToplistSubView authViewWithFrame:CGRectMake(0, 0, kMainScreenWidth, kMainScreenHeight - KNaviBarHeight) andUid:self.uid];
-        _encourageView.viewType = TopViewType_Encourage;
-
-    }
-    return _encourageView;
-}
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 -(void)dealloc{
     
