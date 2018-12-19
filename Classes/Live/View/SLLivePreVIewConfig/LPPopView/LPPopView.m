@@ -48,7 +48,7 @@
         self.transform = CGAffineTransformIdentity;
         option = UIViewAnimationOptionCurveEaseIn;
     }
-    
+    /// animation
     [UIView animateWithDuration:kLPAniDuration delay:0 options:option animations:^{
         if (show) {
             self.alpha = 1;
