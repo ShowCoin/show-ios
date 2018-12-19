@@ -10,17 +10,24 @@
 #import "HomeHeader.h"
 
 
+/**
+ SLControlView
+ */
 @implementation SLControlView {
     BOOL _isFirst;
 }
 
 
+/**
+ initWithFrame
+
+ @param frame initWithFrame
+ @return instancetype
+ */
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
-        
-   
 
         _isFirst = YES;
         
@@ -40,6 +47,7 @@
     [_gradiedtLayer removeFromSuperlayer];
 }
 
+// 底部遮罩
 -(void)addMask
 {
     //底部遮罩
@@ -58,20 +66,21 @@
 }
 
 
-
+/// dealloc
 - (void)dealloc{
     NSLog(@"[gx] controlview dealloc");
 }
 
+/// removeFromSuperview
 - (void)removeFromSuperview {
     [NSNotificationCenter.defaultCenter removeObserver:self];
 }
-
+/// sl_tabbarHidden
 - (void)sl_tabbarHidden:(NSNotification *)noti {
     NSLog(@"[187] -- sl_tabbarHidden %@", [noti.object boolValue] ? @"YES" : @"NO");
     [self showAnimate:[noti.object boolValue]];
 }
-
+/// showAnimate
 - (void)showAnimate:(BOOL)show {
     self.hidden = NO;
     for (UIView *v in self.subviews) {
@@ -80,7 +89,7 @@
         }
     }
 }
-
+///setHidden
 //- (void)setHidden:(BOOL)hidden {
 //    if (_isFirst) {
 //        [super setHidden:hidden];

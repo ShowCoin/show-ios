@@ -18,7 +18,7 @@
  @return instancetype
  */
 - (instancetype)initWithFrame:(CGRect)frame
-{
+{// initWithFrame
     self = [super initWithFrame:frame];
     if (self) {
         self.backgroundColor = [UIColor clearColor];
@@ -37,7 +37,7 @@
  */
 - (void)sl_show:(BOOL)show complete:(void(^)(void))cmp {
     self->_animating = YES;
-    
+    /// option
     UIViewAnimationOptions option;
     if (show) {
         self.alpha = 0;
@@ -48,7 +48,7 @@
         self.transform = CGAffineTransformIdentity;
         option = UIViewAnimationOptionCurveEaseIn;
     }
-    
+    /// animation
     [UIView animateWithDuration:kLPAniDuration delay:0 options:option animations:^{
         if (show) {
             self.alpha = 1;
