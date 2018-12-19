@@ -77,4 +77,11 @@
 - (void)setBackupCenter:(CGPoint)backupCenter{
     objc_setAssociatedObject(self, @"backupCenter", [NSValue valueWithCGPoint:backupCenter], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
+- (CGPoint)backupCenter{
+    NSValue *temp = objc_getAssociatedObject(self, @"backupCenter");
+    if (!temp) {
+        return CGPointMake(-1, -1);
+    }
+    return [temp CGPointValue];
+}
 @end
