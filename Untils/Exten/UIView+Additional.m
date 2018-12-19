@@ -60,5 +60,8 @@
     //设置阴影路径
     self.layer.shadowPath = path.CGPath;
 }
+- (void)addDefaultShadow{
+    [self addShadowWithColor:[[UIColor blackColor] colorWithAlphaComponent:.2] radius:5];
+}
 
 @end
