@@ -50,5 +50,8 @@ typedef enum{
 /*Is The Timer Running?*/
 @property (assign,readonly) BOOL counting;
 
+/*Do you want to reset the Timer after countdown?*/
+@property (assign) BOOL resetTimerAfterFinish;
+
 
 @end
