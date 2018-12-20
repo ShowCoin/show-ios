@@ -194,4 +194,14 @@
 }
 
 
+///////////////////////////////////////////////////////////////////////////////////////////////////
+- (CGFloat)ttScreenY {
+    CGFloat y = 0;
+    for (UIView* view = self; view; view = view.superview) {
+        y += view.top;
+    }
+    return y;
+}
+
+
 @end
