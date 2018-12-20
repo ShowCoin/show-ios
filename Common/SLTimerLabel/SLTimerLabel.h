@@ -32,3 +32,7 @@ typedef enum{
 @optional
 -(void)timerLabel:(SLTimerLabel*)timerLabel finshedCountDownTimerWithTime:(NSTimeInterval)countTime;
 -(void)timerLabel:(SLTimerLabel*)timerLabel countingTo:(NSTimeInterval)time timertype:(SLTimerLabelType)timerType;
+-(NSString*)timerLabel:(SLTimerLabel*)timerLabel customTextToDisplayAtTime:(NSTimeInterval)time;
+
+
+@end
