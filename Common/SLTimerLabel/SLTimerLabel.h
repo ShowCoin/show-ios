@@ -60,3 +60,8 @@ typedef enum{
 @property (copy) void (^endedBlock)(NSTimeInterval);
 #endif
 
+
+/*--------Init methods to choose*/
+-(id)initWithTimerType:(SLTimerLabelType)theType;
+
+@end
