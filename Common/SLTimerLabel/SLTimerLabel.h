@@ -47,5 +47,8 @@ typedef enum{
 /*Type to choose from stopwatch or timer*/
 @property (assign) SLTimerLabelType timerType;
 
+/*Is The Timer Running?*/
+@property (assign,readonly) BOOL counting;
+
 
 @end
