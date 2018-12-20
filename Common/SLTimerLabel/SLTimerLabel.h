@@ -35,6 +35,8 @@ typedef enum{
 -(NSString*)timerLabel:(SLTimerLabel*)timerLabel customTextToDisplayAtTime:(NSTimeInterval)time;
 @end
 @interface SLTimerLabel : UILabel
+/*Delegate for finish of countdown timer */
+@property (nonatomic, weak) id<SLTimerLabelDelegate> delegate;
 
 
 @end
