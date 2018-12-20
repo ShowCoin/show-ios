@@ -78,5 +78,33 @@
     }
     return _dayTableView;
 }
+-(SLTopListTabelView *)weekTableView
+{
+    if (!_weekTableView) {
+        _weekTableView = [[SLTopListTabelView alloc] initWithFrame:CGRectMake(kMainScreenWidth, 0, kMainScreenWidth, kMainScreenHeight - KNaviBarHeight - 45*Proportion375)];
+
+        if (_viewType == TopViewType_Contribution) {
+            _weekTableView.topListType = TopListType_Contribution_Week;
+        }else{
+            _weekTableView.topListType = TopListType_Encourage_Week;
+        }
+        _weekTableView.uid = self.uid;
+
+    }
+    return _weekTableView;
+}
+-(SLTopListTabelView *)allTableView
+{
+    if (!_allTableView) {
+        _allTableView = [[SLTopListTabelView alloc] initWithFrame:CGRectMake(kMainScreenWidth*2, 0, kMainScreenWidth, kMainScreenHeight - KNaviBarHeight - 45*Proportion375)];
+        if (_viewType == TopViewType_Contribution) {
+            _allTableView.topListType = TopListType_Contribution_All;
+        }else{
+            _allTableView.topListType = TopListType_Encourage_All;
+        }
+        _allTableView.uid = self.uid;
+    }
+    return _allTableView;
+}
 
 @end
