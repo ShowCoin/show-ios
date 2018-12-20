@@ -74,6 +74,8 @@ typedef enum{
 #endif
 -(void)pause;
 -(void)reset;
+- (void)stop;
+
 
 
 @end
