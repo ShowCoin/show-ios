@@ -67,5 +67,8 @@ typedef enum{
 -(id)initWithLabel:(UILabel*)theLabel;
 
 
+/*--------Timer control methods to use*/
+-(void)start;
+
 
 @end
