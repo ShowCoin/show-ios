@@ -64,5 +64,8 @@ typedef enum{
 /*--------Init methods to choose*/
 -(id)initWithTimerType:(SLTimerLabelType)theType;
 -(id)initWithLabel:(UILabel*)theLabel andTimerType:(SLTimerLabelType)theType;
+-(id)initWithLabel:(UILabel*)theLabel;
+
+
 
 @end
