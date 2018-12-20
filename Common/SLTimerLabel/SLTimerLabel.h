@@ -44,6 +44,8 @@ typedef enum{
 /*Target label obejct, default self if you do not initWithLabel nor set*/
 @property (nonatomic,strong) UILabel *timeLabel;
 
+/*Type to choose from stopwatch or timer*/
+@property (assign) SLTimerLabelType timerType;
 
 
 @end
