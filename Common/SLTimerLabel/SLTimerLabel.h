@@ -11,5 +11,8 @@
 typedef enum{
     SLTimerLabelTypeStopWatch,
     SLTimerLabelTypeTimer
-}
+}SLTimerLabelType;
+
+
+
 @end
