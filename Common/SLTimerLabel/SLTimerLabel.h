@@ -38,5 +38,8 @@ typedef enum{
 /*Delegate for finish of countdown timer */
 @property (nonatomic, weak) id<SLTimerLabelDelegate> delegate;
 
+/*Time format wish to display in label*/
+@property (nonatomic,copy) NSString *timeFormat;
+
 
 @end
