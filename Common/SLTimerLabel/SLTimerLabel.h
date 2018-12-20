@@ -53,5 +53,8 @@ typedef enum{
 /*Do you want to reset the Timer after countdown?*/
 @property (assign) BOOL resetTimerAfterFinish;
 
+/*Do you want the timer to count beyond the HH limit from 0-23 e.g. 25:23:12 (HH:mm:ss) */
+@property (assign) BOOL shouldCountBeyondHHLimit;
+
 
 @end
