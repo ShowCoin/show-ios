@@ -151,7 +151,34 @@
     }];
 }
 
-
 #pragma mark--  scrollviewdelegate
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    if ( scrollView == _bkscrollerView) {
+        int page = 0;
+        page = floor((scrollView.contentOffset.x - kMainScreenWidth / 2) / kMainScreenWidth) + 1;
+        if (_currentPage == page) {
+            return;
+        }
+        _currentPage = floor((scrollView.contentOffset.x - kMainScreenWidth / 2) / kMainScreenWidth) + 1;
+        if (_currentPage == 0) {
+            _aniLine.centerX = _dayBtn.centerX;
+            [_dayBtn setTitleColor:kGoldWithNorm forState:UIControlStateNormal];
+            [_weekBtn setTitleColor:kTextWith8b forState:UIControlStateNormal];
+            [_allBtn setTitleColor:kTextWith8b forState:UIControlStateNormal];
+        }else if (_currentPage == 1){
+            _aniLine.centerX = _weekBtn.centerX;
+            [_dayBtn setTitleColor:kTextWith8b forState:UIControlStateNormal];
+            [_weekBtn setTitleColor:kGoldWithNorm forState:UIControlStateNormal];
+            [_allBtn setTitleColor:kTextWith8b forState:UIControlStateNormal];
+            
+        }else if (_currentPage == 2){
+            _aniLine.centerX = _allBtn.centerX;
+            [_dayBtn setTitleColor:kTextWith8b forState:UIControlStateNormal];
+            [_weekBtn setTitleColor:kTextWith8b forState:UIControlStateNormal];
+            [_allBtn setTitleColor:kGoldWithNorm forState:UIControlStateNormal];
+        }
+    }
+}
 
 @end
