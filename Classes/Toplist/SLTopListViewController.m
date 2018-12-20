@@ -94,6 +94,37 @@
     [self.view addSubview:self.bkscrollerView];
 
 }
+- (UIScrollView *)bkscrollerView{
+    if (!_bkscrollerView) {
+        _bkscrollerView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, KNaviBarHeight, kMainScreenWidth, kMainScreenHeight - KNaviBarHeight)];
+        _bkscrollerView.contentSize = CGSizeMake(kMainScreenWidth * 2, 0);
+        _bkscrollerView.backgroundColor = kBlackWith1c;
+        if (@available(iOS 11.0, *)) {
+            _bkscrollerView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        }else{
+            self.automaticallyAdjustsScrollViewInsets = NO;
+        }
+        _bkscrollerView.bounces=NO;
+        _bkscrollerView.pagingEnabled = YES;
+        _bkscrollerView.delegate = self;
+        _bkscrollerView.showsHorizontalScrollIndicator = YES;
+        _bkscrollerView.showsVerticalScrollIndicator = YES;
+        _bkscrollerView.scrollEnabled = NO;
+        [_bkscrollerView setContentOffset:CGPointMake(0, 0) animated:NO];
+        [_bkscrollerView addSubview:self.contributionView];
+        [_bkscrollerView addSubview:self.encourageView];
+    }
+    return _bkscrollerView;
+}
+
+-(SLToplistSubView *)contributionView
+{
+    if (!_contributionView) {
+        _contributionView = [SLToplistSubView authViewWithFrame:CGRectMake(kMainScreenWidth, 0, kMainScreenWidth, kMainScreenHeight - KNaviBarHeight) andUid:self.uid];
+        _contributionView.viewType = TopViewType_Contribution;
+    }
+        return _contributionView;
+}
 
 
 -(void)dealloc{
