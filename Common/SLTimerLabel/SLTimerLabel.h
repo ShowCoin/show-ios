@@ -76,6 +76,8 @@ typedef enum{
 -(void)reset;
 - (void)stop;
 
+/*--------Setter methods*/
+-(void)setCountDownTime:(NSTimeInterval)time;
 
 
 @end
