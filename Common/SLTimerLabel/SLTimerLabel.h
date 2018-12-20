@@ -31,6 +31,4 @@ typedef enum{
 @protocol SLTimerLabelDelegate <NSObject>
 @optional
 -(void)timerLabel:(SLTimerLabel*)timerLabel finshedCountDownTimerWithTime:(NSTimeInterval)countTime;
-
-
-@end
+-(void)timerLabel:(SLTimerLabel*)timerLabel countingTo:(NSTimeInterval)time timertype:(SLTimerLabelType)timerType;
