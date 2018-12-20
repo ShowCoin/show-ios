@@ -28,6 +28,7 @@ typedef enum{
  **********************************************/
 
 @class SLTimerLabel;
+@protocol SLTimerLabelDelegate <NSObject>
 
 
 @end
