@@ -73,5 +73,7 @@ typedef enum{
 -(void)startWithEndingBlock:(void(^)(NSTimeInterval countTime))end; //use it if you are not going to use delegate
 #endif
 -(void)pause;
+-(void)reset;
+
 
 @end
