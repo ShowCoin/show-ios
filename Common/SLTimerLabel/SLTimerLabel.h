@@ -29,6 +29,8 @@ typedef enum{
 
 @class SLTimerLabel;
 @protocol SLTimerLabelDelegate <NSObject>
+@optional
+-(void)timerLabel:(SLTimerLabel*)timerLabel finshedCountDownTimerWithTime:(NSTimeInterval)countTime;
 
 
 @end
