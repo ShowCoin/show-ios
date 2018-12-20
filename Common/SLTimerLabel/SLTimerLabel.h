@@ -69,6 +69,9 @@ typedef enum{
 
 /*--------Timer control methods to use*/
 -(void)start;
-
+#if NS_BLOCKS_AVAILABLE
+-(void)startWithEndingBlock:(void(^)(NSTimeInterval countTime))end; //use it if you are not going to use delegate
+#endif
+-(void)pause;
 
 @end
