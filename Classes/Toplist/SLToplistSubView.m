@@ -106,5 +106,52 @@
     }
     return _allTableView;
 }
+-(void)tagsTopView{
+    _dayBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, kMainScreenWidth/3, 45*Proportion375)];
+    _dayBtn.titleLabel.font = Font_Regular(16*Proportion375);
+    [_dayBtn setTitleColor:kGoldWithNorm forState:UIControlStateNormal];
+    [_dayBtn setTitle:@"日榜" forState:UIControlStateNormal];
+    [self addSubview:_dayBtn];
+    
+    _weekBtn = [[UIButton alloc] initWithFrame:CGRectMake(kMainScreenWidth/3, 0, kMainScreenWidth/3, 45*Proportion375)];
+    _weekBtn.titleLabel.font = Font_Regular(16*Proportion375);
+    [_weekBtn setTitleColor:kTextWith8b forState:UIControlStateNormal];
+    [_weekBtn setTitle:@"周榜" forState:UIControlStateNormal];
+    [self addSubview:_weekBtn];
+    
+    _allBtn = [[UIButton alloc] initWithFrame:CGRectMake(kMainScreenWidth/3*2, 0, kMainScreenWidth/3, 45*Proportion375)];
+    [_allBtn setTitleColor:kTextWith8b forState:UIControlStateNormal];
+    _allBtn.titleLabel.font = Font_Regular(16*Proportion375);
+    [_allBtn setTitle:@"总榜" forState:UIControlStateNormal];
+    [self addSubview:_allBtn];
+    
+//    UIView * lineView = [[UIView alloc] initWithFrame:CGRectMake(0, 44*Proportion375, kMainScreenWidth, 1*Proportion375)];
+//    lineView.backgroundColor = kSeparationColor;
+//    [self addSubview:lineView];
+    
+    _aniLine = [[UIView alloc] initWithFrame:CGRectMake(0, 43*Proportion375, 28*Proportion375, 2*Proportion375)];
+    _aniLine.backgroundColor = kGoldWithNorm;
+    _aniLine.centerX = _dayBtn.centerX;
+    [self addSubview:_aniLine];
+    
+    @weakify(self);
+    [[_dayBtn rac_signalForControlEvents:UIControlEventTouchUpInside]subscribeNext:^(id x) {
+        @strongify(self);
+        [self.bkscrollerView setContentOffset:CGPointMake(0, 0) animated:YES];
+        
+    }];
+    [[_weekBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+        @strongify(self);
+        [self.bkscrollerView setContentOffset:CGPointMake(kMainScreenWidth , 0) animated:YES];
+
+    }];
+    [[_allBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+        @strongify(self);
+        [self.bkscrollerView setContentOffset:CGPointMake(kMainScreenWidth * 2, 0) animated:YES];
+    }];
+}
+
+
+#pragma mark--  scrollviewdelegate
 
 @end
