@@ -44,5 +44,39 @@
     [self.bkscrollerView addSubview:self.weekTableView];
     [self.bkscrollerView addSubview:self.allTableView];
 }
+- (UIScrollView *)bkscrollerView{
+    if (!_bkscrollerView) {
+        _bkscrollerView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 45*Proportion375, kMainScreenWidth, kMainScreenHeight - KNaviBarHeight - 45*Proportion375)];
+        _bkscrollerView.contentSize = CGSizeMake(kMainScreenWidth * 3, 0);
+        _bkscrollerView.backgroundColor = kThemeWhiteColor;
+        if (@available(iOS 11.0, *)) {
+            _bkscrollerView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        }else{
+//            self.automaticallyAdjustsScrollViewInsets = NO;
+        }
+        _bkscrollerView.bounces=NO;
+        _bkscrollerView.pagingEnabled = YES;
+        _bkscrollerView.delegate = self;
+        _bkscrollerView.showsHorizontalScrollIndicator = YES;
+        _bkscrollerView.showsVerticalScrollIndicator = YES;
+        [_bkscrollerView setContentOffset:CGPointMake(0, 0) animated:YES];
+        _currentPage = 2;
+        
+    }
+    return _bkscrollerView;
+}
+-(SLTopListTabelView *)dayTableView
+{
+    if (!_dayTableView) {
+        _dayTableView = [[SLTopListTabelView alloc] initWithFrame:CGRectMake(0, 0, kMainScreenWidth, kMainScreenHeight - KNaviBarHeight - 45*Proportion375)];
+        if (_viewType == TopViewType_Contribution) {
+            _dayTableView.topListType = TopListType_Contribution_Day;
+        }else{
+            _dayTableView.topListType = TopListType_Encourage_Day;
+        }
+        _dayTableView.uid = self.uid;
+    }
+    return _dayTableView;
+}
 
 @end
