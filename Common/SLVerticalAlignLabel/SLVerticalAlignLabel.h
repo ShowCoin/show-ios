@@ -7,8 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-
-
-
+typedef enum
 
 @end
