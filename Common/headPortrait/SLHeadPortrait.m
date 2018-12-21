@@ -228,6 +228,37 @@
     
 }
 
+//添加点击方法
+-(void)headPortraitClick
+{
+    if (_delegate &&[_delegate respondsToSelector:@selector(headPortraitClickAuthor)]){
+        [_delegate headPortraitClickAuthor];
+    }
+    if (_delegate &&[_delegate respondsToSelector:@selector(headPortraitClickAuthor:)]) {
+        [_delegate headPortraitClickAuthor:self];
+
+    }
+}
+-(void)layerWithView:(UIImageView *)imageview withColor:(UIColor *)color width:(CGFloat)width
+{
+    if(!self.maskLayer){
+        self.maskLayer = [CAShapeLayer layer];
+    }
+    if (!self.borderLayer) {
+        self.borderLayer = [CAShapeLayer layer];
+    }
+    self.maskLayer.frame = CGRectMake(0, 0, imageview.width, imageview.height);
+    self.borderLayer.frame = CGRectMake(0, 0, imageview.width, imageview.height);
+    self.borderLayer.lineWidth = width;
+    self.borderLayer.strokeColor = color.CGColor;
+    self.borderLayer.fillColor = [UIColor clearColor].CGColor;
+    self.bezierPath = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, imageview.width, imageview.height) cornerRadius:imageview.height];
+    self.maskLayer.path = self.bezierPath.CGPath;
+    self.borderLayer.path = self.bezierPath.CGPath;
+    [imageview.layer insertSublayer:self.borderLayer atIndex:0];
+    [imageview.layer setMask:self. maskLayer];
+    
+}
 
 -(void)removeTap
 {
