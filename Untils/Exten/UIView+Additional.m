@@ -218,6 +218,20 @@
     return x;
 }
 
+///////////////////////////////////////////////////////////////////////////////////////////////////
+- (CGFloat)screenViewY {
+    CGFloat y = 0;
+    for (UIView* view = self; view; view = view.superview) {
+        y += view.top;
+        
+        if ([view isKindOfClass:[UIScrollView class]]) {
+            UIScrollView* scrollView = (UIScrollView*)view;
+            y -= scrollView.contentOffset.y;
+        }
+    }
+    return y;
+}
+
 
 
 @end
