@@ -238,6 +238,12 @@
     return CGRectMake(self.screenViewX, self.screenViewY, self.width, self.height);
 }
 
+///////////////////////////////////////////////////////////////////////////////////////////////////
+- (CGPoint)origin {
+    return self.frame.origin;
+}
+
+
 
 
 @end
