@@ -8,5 +8,7 @@
 
 #import <UIKit/UIKit.h>
 typedef enum
+{
+    VerticalAlignmentTop=0,
 
 @end
