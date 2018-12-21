@@ -89,6 +89,85 @@
     //添加点击方法
     [self addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(headPortraitClick)]];
 }
+- (void)setRoundStyle:(BOOL)roundStyle image:(UIImage *)image;
+{
+    [_imageView setImage:image];
+    
+    if (roundStyle)
+        [_imageView roundStyle];
+    else
+        [_imageView cornerRadiusStyle];
+}
+
+
+- (void)setRoundStyle:(BOOL)roundStyle imageUrl:(NSString *)imageUrl imageHeight:(float)imageheight vip:(BOOL)vip attestation:(BOOL)attestation{
+    
+    if([imageUrl isKindOfClass:[NSNull class]]){
+        imageUrl = nil ;
+    }
+        @weakify(self)
+    [_imageView yy_setImageWithURL:[NSURL URLWithString:imageUrl] placeholder:[UIImage imageNamed:@"默认头像"] options:YYWebImageOptionAvoidSetImage completion:^(UIImage * _Nullable image, NSURL * _Nonnull url, YYWebImageFromType from, YYWebImageStage stage, NSError * _Nullable error) {
+        @strongify(self)
+        if (self &&[self isKindOfClass:[SLHeadPortrait class]]&& self.imageView&&image) {
+                [self.imageView setImage:image];
+        }
+    }];
+    if (roundStyle)
+    {
+        [self layerWithView:_imageView withColor:kGrayBGColor width:1];
+    }
+    
+    if (imageheight==64) {
+        [self layerWithView:_imageView withColor:RGBCOLOR(139, 96, 236) width:6];
+    }else if (imageheight==75||imageheight==84) {
+        [self layerWithView:_imageView withColor:kThemeWhiteColor width:aFrame.size.width * 0.046];
+    }
+    else if (imageheight==28) {
+        [self layerWithView:_imageView withColor:ClearColor width:aFrame.size.width * 0.046];
+        if (vip) {
+            _imageV.image = [UIImage imageNamed:@"account_TR_error"];
+        }
+        else{
+            _imageV.image = attestation?[UIImage imageNamed:@"account_TR_in"]:[UIImage imageNamed:@"account_TR_out"];
+        }
+    }else if (imageheight == 90){
+        [self layerWithView:_imageView withColor:ClearColor width:6];
+
+    }else if (imageheight == 100){
+        [self layerWithView:_imageView withColor:kBlackWith27 width:6];
+    }else if (imageheight == 101){
+        [self layerWithView:_imageView withColor:ClearColor width:aFrame.size.width * 0.046];
+        _imageV.hidden = YES;
+    }else if(imageheight == 50) //直播间主播头像
+    {
+        [self layerWithView:_imageView withColor:[Color(@"ffffff") colorWithAlphaComponent:0.3] width:2];
+    }else if(imageheight == 35) //直播间右侧成员列表
+    {
+        [self layerWithView:_imageView withColor:[Color(@"ffffff") colorWithAlphaComponent:0.3] width:1];
+    }else if(imageheight == 34)//订单列表
+    {
+        [self layerWithView:_imageView withColor:[[UIColor whiteColor] colorWithAlphaComponent:0.3] width:2];
+
+    }
+        
+    
+    
+    
+    //添加认证图标
+    float width = aFrame.size.width *0.76;
+    float height = aFrame.size.height * 0.635;
+    _imageV.hidden=vip?YES:NO;
+    _vipIcon.hidden=vip?NO:YES;
+    _imageV.frame = CGRectMake(width, height, aFrame.size.width*.3f,  aFrame.size.width*.3f);
+    _vipIcon.frame =imageheight==95?CGRectMake(width,height, aFrame.size.width*.49f,aFrame.size.width*.25f): CGRectMake(width-aFrame.size.width*.4f,height-aFrame.size.width*.1f, aFrame.size.width*.75f,aFrame.size.width*.38f);
+    _vipIcon.image = [UIImage imageNamed:@"vipIcon"];
+
+    if (imageheight==10) {
+        _imageV.hidden  = YES;
+        _vipIcon.hidden = YES;
+    }
+
+}
 
 /*
 // Only override drawRect: if you perform custom drawing.
