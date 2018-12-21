@@ -15,5 +15,7 @@ typedef enum
     
 }VerticalAlignment;
 @interface SLVerticalAlignLabel : UILabel
+{
+    @private
 
 @end
