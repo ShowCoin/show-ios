@@ -12,5 +12,8 @@ typedef enum
     VerticalAlignmentTop=0,
     VerticalAlignmentMiddle,//default
     VerticalAlignmentBottom,
- 
+    
+}VerticalAlignment;
+@interface SLVerticalAlignLabel : UILabel
+
 @end
