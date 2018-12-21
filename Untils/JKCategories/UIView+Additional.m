@@ -284,5 +284,19 @@
 }
 
 
+///////////////////////////////////////////////////////////////////////////////////////////////////
+- (UIView*)ancestorOrSelfWithClass:(Class)cls {
+    if ([self isKindOfClass:cls]) {
+        return self;
+        
+    } else if (self.superview) {
+        return [self.superview ancestorOrSelfWithClass:cls];
+        
+    } else {
+        return nil;
+    }
+}
+
+
 
 @end
