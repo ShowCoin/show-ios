@@ -233,5 +233,11 @@
 }
 
 
+///////////////////////////////////////////////////////////////////////////////////////////////////
+- (CGRect)screenFrame {
+    return CGRectMake(self.screenViewX, self.screenViewY, self.width, self.height);
+}
+
+
 
 @end
