@@ -10,5 +10,10 @@
 typedef enum
 {
     VerticalAlignmentTop=0,
-
+    VerticalAlignmentMiddle,
+    
+    //default
+ 
 @end
+
+
