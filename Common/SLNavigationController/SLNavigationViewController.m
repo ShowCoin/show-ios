@@ -72,6 +72,48 @@
 }
 
 
+- (void)pan:(UIPanGestureRecognizer *)panGes {
+    NSLog(@"%s",__func__);
+    switch (panGes.state) {
+        case UIGestureRecognizerStateBegan:
+        {
+            self.delegate = self.transition;
+            if ([ShowHomeBaseController isScollerPlayerView]) {
+                ShowHomeBaseController * b = (ShowHomeBaseController *)self.viewControllers.lastObject;
+                if(![b isKindOfClass:[ShowHomeBaseController class]]){
+                    return ;
+                }
+                SLLiveListModel*model = [b.dataSource objectAtIndex:[[b getCurrentIndexPath] row]];
+                if(model){
+                    UserCenterViewController  *vc = [[UserCenterViewController alloc] initWithIsMe:NO andUserModel:model.master];
+                    [self pushViewController:vc animated:YES];
+                }
+            }
+            else
+            {
+                ShowHomeViewController * p = (ShowHomeViewController *)self.viewControllers.lastObject;
+                ShowHomeBaseController * b = p.secondVC;
+                SLLiveListModel*model = [b.dataSource objectAtIndex:[[b getCurrentIndexPath] row]];
+                if(model){
+                    UserCenterViewController  *vc = [[UserCenterViewController alloc] initWithIsMe:NO andUserModel:model.master];
+                    [self pushViewController:vc animated:YES];
+                }
+                break;
+            }
+            
+        }
+        case UIGestureRecognizerStateCancelled:
+        case UIGestureRecognizerStateEnded:
+        {
+            self.delegate = self;
+//            SLPlayerViewController * p = (SLPlayerViewController *)self.viewControllers.lastObject;
+//            p.switchView.scrollEnabled = YES;
+            break;
+        }
+        default:
+            break;
+    }
+}
 
 
 /*
@@ -85,3 +127,4 @@
 */
 
 @end
+ 
