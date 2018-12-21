@@ -7,19 +7,5 @@
 //
 
 #import <UIKit/UIKit.h>
-typedef enum
-{
-    VerticalAlignmentTop=0,
-    VerticalAlignmentMiddle,//default
-    VerticalAlignmentBottom,
-    
-}VerticalAlignment;
-@interface SLVerticalAlignLabel : UILabel
-{
-    @private
-    VerticalAlignment _verticalAlignment;
-}
-//对齐方式
-@property(nonatomic)VerticalAlignment verticalAlignment;
 
 @end
