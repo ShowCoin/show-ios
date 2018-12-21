@@ -267,5 +267,22 @@
 }
 
 
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+- (UIView*)descendantOrSelfWithClass:(Class)cls {
+    if ([self isKindOfClass:cls])
+        return self;
+    
+    for (UIView* child in self.subviews) {
+        UIView* it = [child descendantOrSelfWithClass:cls];
+        if (it)
+            return it;
+    }
+    
+    return nil;
+}
+
+
 
 @end
