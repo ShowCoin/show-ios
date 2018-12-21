@@ -142,6 +142,10 @@
 		724D4BC220C9155A0007E4E8 /* HomeHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 724D4BC120C9155A0007E4E8 /* HomeHeader.m */; };
 		724FF37A20E6678D00DD40EB /* SLInfoHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 724FF37920E6678D00DD40EB /* SLInfoHeaderView.m */; };
 		724FF37D20E6680500DD40EB /* SLUserInfoListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 724FF37C20E6680500DD40EB /* SLUserInfoListCell.m */; };
+		72506F5D21CD044500361964 /* SLHeadPortrait.m in Sources */ = {isa = PBXBuildFile; fileRef = 72506F5C21CD044500361964 /* SLHeadPortrait.m */; };
+		72506F6521CD04D500361964 /* SLNavigationControllerTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 72506F5F21CD04D500361964 /* SLNavigationControllerTransition.m */; };
+		72506F6621CD04D500361964 /* SLPushAnimationTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 72506F6121CD04D500361964 /* SLPushAnimationTransition.m */; };
+		72506F6721CD04D500361964 /* SLNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72506F6321CD04D500361964 /* SLNavigationViewController.m */; };
 		725282CC21BB94FC00802C09 /* SLAuthenticationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 725282CB21BB94FC00802C09 /* SLAuthenticationView.m */; };
 		725282E021BB968500802C09 /* SLWalletHomePageHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 725282D521BB968500802C09 /* SLWalletHomePageHeader.m */; };
 		725282E221BB971900802C09 /* ShowAccountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 725282E121BB971900802C09 /* ShowAccountCell.m */; };
@@ -503,6 +507,14 @@
 		724FF37920E6678D00DD40EB /* SLInfoHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLInfoHeaderView.m; sourceTree = "<group>"; };
 		724FF37B20E667E200DD40EB /* SLUserInfoListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLUserInfoListCell.h; sourceTree = "<group>"; };
 		724FF37C20E6680500DD40EB /* SLUserInfoListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLUserInfoListCell.m; sourceTree = "<group>"; };
+		72506F5B21CD040900361964 /* SLHeadPortrait.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLHeadPortrait.h; sourceTree = "<group>"; };
+		72506F5C21CD044500361964 /* SLHeadPortrait.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLHeadPortrait.m; sourceTree = "<group>"; };
+		72506F5F21CD04D500361964 /* SLNavigationControllerTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLNavigationControllerTransition.m; sourceTree = "<group>"; };
+		72506F6021CD04D500361964 /* SLNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLNavigationViewController.h; sourceTree = "<group>"; };
+		72506F6121CD04D500361964 /* SLPushAnimationTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLPushAnimationTransition.m; sourceTree = "<group>"; };
+		72506F6221CD04D500361964 /* SLNavigationControllerTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLNavigationControllerTransition.h; sourceTree = "<group>"; };
+		72506F6321CD04D500361964 /* SLNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLNavigationViewController.m; sourceTree = "<group>"; };
+		72506F6421CD04D500361964 /* SLPushAnimationTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLPushAnimationTransition.h; sourceTree = "<group>"; };
 		725282CA21BB94FC00802C09 /* SLAuthenticationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLAuthenticationView.h; sourceTree = "<group>"; };
 		725282CB21BB94FC00802C09 /* SLAuthenticationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLAuthenticationView.m; sourceTree = "<group>"; };
 		725282D221BB968400802C09 /* ShowAccountExchangeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowAccountExchangeView.h; sourceTree = "<group>"; };
@@ -966,6 +978,28 @@
 				72A0088B20FCA1820051C643 /* SLUserViewHeader+SLMinCard.m */,
 			);
 			path = setting;
+			sourceTree = "<group>";
+		};
+		72506F5A21CD03E200361964 /* headPortrait */ = {
+			isa = PBXGroup;
+			children = (
+				72506F5B21CD040900361964 /* SLHeadPortrait.h */,
+				72506F5C21CD044500361964 /* SLHeadPortrait.m */,
+			);
+			path = headPortrait;
+			sourceTree = "<group>";
+		};
+		72506F5E21CD04D500361964 /* SLNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				72506F5F21CD04D500361964 /* SLNavigationControllerTransition.m */,
+				72506F6021CD04D500361964 /* SLNavigationViewController.h */,
+				72506F6321CD04D500361964 /* SLNavigationViewController.m */,
+				72506F6121CD04D500361964 /* SLPushAnimationTransition.m */,
+				72506F6221CD04D500361964 /* SLNavigationControllerTransition.h */,
+				72506F6421CD04D500361964 /* SLPushAnimationTransition.h */,
+			);
+			path = SLNavigationController;
 			sourceTree = "<group>";
 		};
 		725282C921BB94FC00802C09 /* Auth */ = {
@@ -1441,6 +1475,8 @@
 		9391AA7F20BF06EB00D520F1 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				72506F5E21CD04D500361964 /* SLNavigationController */,
+				72506F5A21CD03E200361964 /* headPortrait */,
 				723816B820C6ABFE00C3885E /* SLLinkLabel */,
 				723816BA20C6ABFF00C3885E /* SLVerticalAlignLabel */,
 				723816B520C68A6E00C3885E /* userHeader */,
@@ -1739,6 +1775,7 @@
 				431CB4CC20F499070043B0AC /* NSObject+JKKVOBlocks.m in Sources */,
 				43993EC520E23F7A0017F1C3 /* UITableView+FDTemplateLayoutCell.m in Sources */,
 				9343E47721C7D02D0001B9C1 /* UILabel+Additional.m in Sources */,
+				72506F6521CD04D500361964 /* SLNavigationControllerTransition.m in Sources */,
 				431CB4C620F498860043B0AC /* NSObject+JKEasyCopy.m in Sources */,
 				435D4C6E20EF406600C8DC85 /* NSDictionary+JKXML.m in Sources */,
 				431C076C20FC8EB900479559 /* NSURL+JKQueryDictionary.m in Sources */,
@@ -1824,6 +1861,7 @@
 				431C078920FE291700479559 /* NSUserDefaults+JKSafeAccess.m in Sources */,
 				43205DDD20DD267E00AD6952 /* UITextView+JKSelect.m in Sources */,
 				725282F021BE660A00802C09 /* ShowAccountHead.m in Sources */,
+				72506F5D21CD044500361964 /* SLHeadPortrait.m in Sources */,
 				723816BE20C6ABFF00C3885E /* UIColor+Equalable.m in Sources */,
 				724FF37D20E6680500DD40EB /* SLUserInfoListCell.m in Sources */,
 				723816B720C68B3C00C3885E /* SLHeadPortrait.m in Sources */,
@@ -1837,6 +1875,7 @@
 				435D4C9820F0931100C8DC85 /* NSNotificationCenter+JKMainThread.m in Sources */,
 				435D4C8F20F092B000C8DC85 /* NSManagedObjectContext+JKFetchRequestsConstructors.m in Sources */,
 				9391AA9720C03A4300D520F1 /* SLWebViewJSFuncNameConst.m in Sources */,
+				72506F6721CD04D500361964 /* SLNavigationViewController.m in Sources */,
 				435D4C4120EDEA4C00C8DC85 /* NSDate+JKExtension.m in Sources */,
 				43D87B2920EB6D9900E991D6 /* UIScrollView+EmptyDataSet.m in Sources */,
 				437921F020ECC4B100B2EC88 /* NSData+JKHash.m in Sources */,
@@ -1874,6 +1913,7 @@
 				437921ED20ECC49900B2EC88 /* NSData+JKGzip.m in Sources */,
 				435D4C5020EDEAE000C8DC85 /* NSDate+JKUtilities.m in Sources */,
 				724D4BC220C9155A0007E4E8 /* HomeHeader.m in Sources */,
+				72506F6621CD04D500361964 /* SLPushAnimationTransition.m in Sources */,
 				431F64B020F794160087DB8E /* UIResponder+JKFirstResponder.m in Sources */,
 				724FF37A20E6678D00DD40EB /* SLInfoHeaderView.m in Sources */,
 				431C077720FE279700479559 /* NSURLConnection+JKSelfSigned.m in Sources */,
