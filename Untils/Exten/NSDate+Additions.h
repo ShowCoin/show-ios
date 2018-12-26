@@ -19,6 +19,5 @@
 - (NSString *)longDateFormattedString;
 //上次更新
 - (NSString *)lastUpdateDateFormattedString;
-
-
-@end
+//长字符串
+- (NSString *)longStringValue;
