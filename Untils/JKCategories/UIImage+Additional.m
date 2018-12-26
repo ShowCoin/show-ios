@@ -241,4 +241,8 @@ CGRect swapWidthAndHeight(CGRect rect)
     return [UIImage imageWithData:data];
 }
 
+- (UIImage *)imageWithWithRect:(CGRect)rect{
+    return [self imageWithWithRect:rect size:rect.size];
+}
+
 @end
