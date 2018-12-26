@@ -415,7 +415,7 @@
 		437921F120ECC4C000B2EC88 /* NSData+JKPCM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+JKPCM.m"; sourceTree = "<group>"; };
 		437921F220ECC4C000B2EC88 /* NSData+JKPCM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+JKPCM.h"; sourceTree = "<group>"; };
 		437921F420ECC4E100B2EC88 /* NSData+JKzlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+JKzlib.h"; sourceTree = "<group>"; };
-		437921F520ECC4E100B2EC88 /* NSData+JKzlib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+JKzlib.m"; sourceTree = "<group>"; };
+		437921F520ECC4E100B2EC88 /* NSData+JKzlib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+JKzlib.m"; path = "../JKCategories/NSData+JKzlib.m"; sourceTree = "<group>"; };
 		437B0A4F20F35F9C00E93844 /* NSNotificationCenterDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSNotificationCenterDemoViewController.m; sourceTree = "<group>"; };
 		437B0A5020F35F9C00E93844 /* NSNotificationCenterDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSNotificationCenterDemoViewController.h; sourceTree = "<group>"; };
 		437B0A5220F35FB600E93844 /* NSNumber+JKCGFloat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+JKCGFloat.m"; sourceTree = "<group>"; };
@@ -752,8 +752,6 @@
 				4318BC7921BB962E008FD7F3 /* UIScrollView+EmptyDataSet.m */,
 				934AE46320FC6C1000B60AD4 /* NSString+Additions.m */,
 				9309C73D21BB91B900AAFE87 /* NSString+Json.h */,
-				437921F420ECC4E100B2EC88 /* NSData+JKzlib.h */,
-				437921F520ECC4E100B2EC88 /* NSData+JKzlib.m */,
 				437921F220ECC4C000B2EC88 /* NSData+JKPCM.h */,
 				437921F120ECC4C000B2EC88 /* NSData+JKPCM.m */,
 				437921EF20ECC4B100B2EC88 /* NSData+JKHash.m */,
@@ -762,7 +760,6 @@
 				435D4C3C20EDEA2800C8DC85 /* NSDate+JKCupertinoYankee.h */,
 				435D4C3D20EDEA2800C8DC85 /* NSDate+JKCupertinoYankee.m */,
 				435D4C6920EF3FF200C8DC85 /* NSDictionary+JKSafeAccess.h */,
-				43291F4620E51FED000C3C15 /* UITableViewCell+JKDelaysContentTouches.h */,
 				43291F4520E51FED000C3C15 /* UITableViewCell+JKDelaysContentTouches.m */,
 				43205DE120DD26C400AD6952 /* UITextView+JKPinchZoom.h */,
 				43291F4020E51F6F000C3C15 /* UITableViewDemoViewController.h */,
@@ -788,7 +785,6 @@
 				431F64E220F8F2300087DB8E /* NSString+JKRemoveEmoji.h */,
 				431F64E120F8F2300087DB8E /* NSString+JKRemoveEmoji.m */,
 				431CB4DA20F499D00043B0AC /* NSRunLoop+JKPerformBlock.m */,
-				431CB4DC20F49A4F0043B0AC /* NSSet+JKBlock.h */,
 				431CB4DD20F49A4F0043B0AC /* NSSet+JKBlock.m */,
 				431C078720FE291700479559 /* NSUserDefaults+JKSafeAccess.h */,
 				431CB4D120F499380043B0AC /* NSObject+JKRuntime.h */,
@@ -1343,11 +1339,15 @@
 				934AE46220FC6BE400B60AD4 /* NSString+Additions.h */,
 				9309C73A21BB917200AAFE87 /* UIWindow+SLMotion.h */,
 				9309C73B21BB919B00AAFE87 /* UIWindow+SLMotion.m */,
+				437921F420ECC4E100B2EC88 /* NSData+JKzlib.h */,
+				437921F520ECC4E100B2EC88 /* NSData+JKzlib.m */,
 				437921EE20ECC4B100B2EC88 /* NSData+JKHash.h */,
 				435D4C6A20EF3FF200C8DC85 /* NSDictionary+JKSafeAccess.m */,
+				43291F4620E51FED000C3C15 /* UITableViewCell+JKDelaysContentTouches.h */,
 				435D4C9420F092D600C8DC85 /* NSMutableURLRequest+JKUpload.m */,
 				435D4C9120F092C000C8DC85 /* NSManagedObjectContext+JKObjectClear.m */,
 				435D4C8D20F092B000C8DC85 /* NSManagedObjectContext+JKFetchRequestsConstructors.h */,
+				431CB4DC20F49A4F0043B0AC /* NSSet+JKBlock.h */,
 				431C078820FE291700479559 /* NSUserDefaults+JKSafeAccess.m */,
 				4355A4DA20FF11000020B7DE /* UINavigationController+JKStackManager.m */,
 				437B0A5020F35F9C00E93844 /* NSNotificationCenterDemoViewController.h */,
