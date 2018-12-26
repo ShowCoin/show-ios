@@ -123,56 +123,6 @@
         [self.view removeGestureRecognizer:self.singleTap];
     }
 }
-- (UILabel*)nameLabel
-{
-    if (!_nameLabel) {
-        _nameLabel = [UILabel labelWithFrame:CGRectMake(0, _headerImage.bottom+5*Proportion375,  kMainScreenWidth, 17*Proportion375) text:AccountUserInfoModel.nickname textColor:kThemeWhiteColor font:Font_Regular(15*Proportion375)  backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentCenter];
-    }
-    return _nameLabel;
-}
 
-- (SLHeadPortrait*)headerImage{
-    if (!_headerImage) {
-        _headerImage = [[SLHeadPortrait alloc]initWithFrame:CGRectMake(kMainScreenWidth/2-58*Proportion375/2, 30*Proportion375, 58*Proportion375, 58*Proportion375)];
-        [_headerImage setRoundStyle:YES imageUrl:AccountUserInfoModel.avatar imageHeight:45 vip:NO attestation:NO];
-        _headerImage.backgroundColor = [UIColor clearColor];
-    }
-    return _headerImage;
-}
-
-- (UIImageView*)QRImage{
-    if (!_QRImage) {
-        _QRImage = [[UIImageView alloc]initWithFrame:CGRectMake(55*Proportion375, _backView.bottom+120*Proportion375, 266*Proportion375, 266*Proportion375)];
-        _QRImage.backgroundColor = kSeparationColor;
-        [_QRImage cornerRadiusStyleWithValue:6];
-         NSArray *colors = @[[UIColor colorWithRed:1/255.0 green:1/255.0 blue:1/255.0 alpha:1], [UIColor colorWithRed:1/255.0 green:1/255.0 blue:1/255.0 alpha:1]];
-         UIImage *img = [SLQRTool generateCodeForString:self.walletModel.address withCorrectionLevel:kQRCodeCorrectionLevelHight SizeType:kQRCodeSizeTypeCustom customSizeDelta:50 drawType:kQRCodeDrawTypeSquare gradientType:kQRCodeGradientTypeDiagonal gradientColors:colors];
-        _QRImage.image = img;//[UIImage createNonInterpolatedUIImageFormStr:self.walletModel.address];
-    }
-    return _QRImage;
-}
-
-- (UIButton *)copyButton
-{
-    if (!_copyButton) {
-        _copyButton = [[UIButton alloc] init];
-        _copyButton.frame = CGRectMake(55*Proportion375, _QRImage.bottom+15* Proportion375, kMainScreenWidth-110*Proportion375, 45*Proportion375);
-        [_copyButton setBackgroundImage:[UIImage imageNamed:@"wallet_home_save"] forState:UIControlStateNormal];
-        [_copyButton setBackgroundImage:[UIImage imageNamed:@"wallet_home_save"] forState:UIControlStateHighlighted];
-        [_copyButton setTitle:@"复制收款地址" forState:UIControlStateNormal];
-        [_copyButton setTitleColor:kBlackWith27 forState:UIControlStateNormal];
-        _copyButton.titleLabel.font = Font_Regular(19*Proportion375);
-        _copyButton.backgroundColor = [UIColor redColor];
-//        _copyButton.backgroundColor = kGrayBGColor;
-//        [_copyButton cornerRadiusStyle];
-    }
-    @weakify(self);
-    [[_copyButton rac_signalForControlEvents:UIControlEventTouchUpInside]subscribeNext:^(id x) {
-        @strongify(self);
-        [UIPasteboard generalPasteboard].string = self.walletModel.address;
-        [HDHud showMessageInView:self.view title:@"已复制到剪切板"];
-    }];
-    return _copyButton;
-}
 
 @end
