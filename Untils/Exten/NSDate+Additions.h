@@ -29,5 +29,7 @@
 - (NSInteger)season;
 //年龄
 - (NSInteger)age;
+- (NSString *)constellation;
+
 
 @end
