@@ -236,4 +236,9 @@ CGRect swapWidthAndHeight(CGRect rect)
     return uiImage;
 }
 
+- (UIImage *)imageWithQuality:(CGFloat)quality{
+    NSData *data = UIImageJPEGRepresentation(self, quality);
+    return [UIImage imageWithData:data];
+}
+
 @end
