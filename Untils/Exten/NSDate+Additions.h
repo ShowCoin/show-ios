@@ -31,6 +31,6 @@
 - (NSInteger)age;
 - (NSString *)constellation;
 - (NSString *)UMTimeInterval;
-
+- (NSDate *)UMTDate;
 
 @end
