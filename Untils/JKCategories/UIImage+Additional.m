@@ -221,6 +221,12 @@ CGRect swapWidthAndHeight(CGRect rect)
     
     return outputImage;
 }
+- (UIImage *)blurred
+{
+    return [self applyBlurWithRadius:8 tintColor:[UIColor colorWithWhite:0.5 alpha:0.63] saturationDeltaFactor:1.8 maskImage:nil];
+    
+}
+
 
 
 @end
