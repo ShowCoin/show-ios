@@ -228,5 +228,12 @@ CGRect swapWidthAndHeight(CGRect rect)
 }
 
 
++ (UIImage *)createImageFromView:(UIView *)view{
+    UIGraphicsBeginImageContextWithOptions(view.bounds.size, NO, 0.0);
+    [view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *uiImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return uiImage;
+}
 
 @end
