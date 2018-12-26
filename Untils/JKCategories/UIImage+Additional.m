@@ -46,6 +46,16 @@ CGRect swapWidthAndHeight(CGRect rect)
     }
 }
 
+-(UIImage *)resizableImageExtendWithCapInsets:(UIEdgeInsets)capInsets{
+    UIImage *newImage = nil;
+    if ([self respondsToSelector:@selector(resizableImageWithCapInsets:)]) {
+        newImage = [self resizableImageWithCapInsets:capInsets];
+    } else {
+        newImage = [self stretchableImageWithLeftCapWidth:capInsets.left topCapHeight:capInsets.top];
+    }
+    
+    return newImage;
+}
 
 
 @end
