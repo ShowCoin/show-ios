@@ -295,3 +295,28 @@ CGRect swapWidthAndHeight(CGRect rect)
         return self;
     }
 }
+- (UIImage *)scaleImageToSize:(CGSize)size{
+    CGFloat oldRatio = self.size.width / self.size.height;
+    CGFloat ratio = size.width / size.height;
+    /**
+     *  w/h < w1/h1 裁剪h
+     *  w/h > w1/h1 裁剪w
+     *  oldRatio = w/h
+     *  ration = w1/h1
+     */
+    CGRect newRect = CGRectZero;
+    if(oldRatio < ratio){
+        CGFloat newHeight = self.size.width / ratio;
+        newRect = CGRectMake(0, (self.size.height-newHeight)/2.0, self.size.width, newHeight);
+    }
+    else if(oldRatio > ratio){
+        CGFloat newWidth = self.size.height * ratio;
+        newRect = CGRectMake((self.size.width - newWidth)/2.0, 0, newWidth, self.size.height);
+    }
+    else{
+        newRect = CGRectMake(0, 0, self.size.width, self.size.height);
+    }
+    return [self imageWithWithRect:newRect size:size];
+}
+
+@end
