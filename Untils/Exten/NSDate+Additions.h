@@ -21,3 +21,8 @@
 - (NSString *)lastUpdateDateFormattedString;
 //长字符串
 - (NSString *)longStringValue;
+//字符串的value
+- (NSString *)stringValue;
+
+
+@end
