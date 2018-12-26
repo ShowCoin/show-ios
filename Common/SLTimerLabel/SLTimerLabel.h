@@ -78,13 +78,6 @@ typedef enum{
 
 /*--------Setter methods*/
 -(void)setCountDownTime:(NSTimeInterval)time;
--(void)setStopWatchTime:(NSTimeInterval)time;
--(void)setCountDownToDate:(NSDate*)date;
 
--(void)addTimeCountedByTime:(NSTimeInterval)timeToAdd;
-
-/*--------Getter methods*/
-- (NSTimeInterval)getTimeCounted;
-- (NSTimeInterval)getTimeRemaining;
 
 @end
