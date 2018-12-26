@@ -15,3 +15,6 @@
 - (NSString *)yearmonthdayDateFormattedString;
 //time格式的
 - (NSString *)timeDateFormattedString;
+
+
+@end
