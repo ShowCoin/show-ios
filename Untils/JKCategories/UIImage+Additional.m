@@ -262,5 +262,36 @@ CGRect swapWidthAndHeight(CGRect rect)
     // Return the new image.
     return newImage;
 }
-
-@end
+/**
+  *  根据宽高比例生成一张新图，若是当前图的比例与新生成的图比例不一样，则截取中间部分
+  *
+  *  @param ratio 生成的新图的宽高比例
+  *
+  *  @return <#return value description#>
+  */
+- (UIImage *)createImageWithRatio:(CGFloat)ratio{
+    if(ratio <= 0){
+        return nil;
+    }
+    CGFloat oldRatio = self.size.width / self.size.height;
+    /**
+     *  w/h < w1/h1 裁剪h
+     *  w/h > w1/h1 裁剪w
+     *  oldRatio = w/h
+     *  ration = w1/h1
+     */
+    CGRect newRect = CGRectZero;
+    if(oldRatio < ratio){
+        CGFloat newHeight = self.size.width / ratio;
+        newRect = CGRectMake(0, (self.size.height-newHeight)/2.0, self.size.width, newHeight);
+        return [self imageWithWithRect:newRect];
+    }
+    else if(oldRatio > ratio){
+        CGFloat newWidth = self.size.height * ratio;
+        newRect = CGRectMake((self.size.width - newWidth)/2.0, 0, newWidth, self.size.height);
+        return [self imageWithWithRect:newRect];
+    }
+    else{
+        return self;
+    }
+}
