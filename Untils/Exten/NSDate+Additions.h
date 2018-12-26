@@ -13,5 +13,5 @@
 - (NSDate *)addDays:(NSInteger)days;
 //年月日
 - (NSString *)yearmonthdayDateFormattedString;
-
-@end
+//time格式的
+- (NSString *)timeDateFormattedString;
