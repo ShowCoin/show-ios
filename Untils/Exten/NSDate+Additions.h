@@ -30,6 +30,7 @@
 //年龄
 - (NSInteger)age;
 - (NSString *)constellation;
+- (NSString *)UMTimeInterval;
 
 
 @end
