@@ -51,3 +51,14 @@ typedef void(^ShowActionCancelledBlock)(void);
  */
 - (void)cancel;
 
+//+(void)request
+
+#pragma mark - 子类使用，返回结果
+/**
+ 请求参数在子类中重写
+ 
+ @return 请求参数
+ */
+- (ShowRequestData *)requestData;
+
+@end
