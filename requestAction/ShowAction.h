@@ -31,5 +31,8 @@ typedef void(^ShowActionCancelledBlock)(void);
  * 成功回调
  */
 @property(nonatomic, copy) ShowActionFinishedBlock finishedBlock;
+/**
+ * 失败回调
+ */
+@property(nonatomic, copy) ShowActionFailedBlock failedBlock;
 
-@end
