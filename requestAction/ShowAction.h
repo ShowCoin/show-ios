@@ -27,5 +27,9 @@ typedef void(^ShowActionCancelledBlock)(void);
 
 @property(nonatomic,strong) id model ;
 
+/**
+ * 成功回调
+ */
+@property(nonatomic, copy) ShowActionFinishedBlock finishedBlock;
 
 @end
