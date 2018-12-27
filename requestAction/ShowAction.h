@@ -25,4 +25,7 @@ typedef void(^ShowActionCancelledBlock)(void);
  */
 @property(nonatomic,strong) Class modelClass ;
 
+@property(nonatomic,strong) id model ;
+
+
 @end
