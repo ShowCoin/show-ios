@@ -45,4 +45,9 @@ typedef void(^ShowActionCancelledBlock)(void);
  * @note 子类复写
  */
 - (void)start;
+/**
+ * 取消
+ * @note 子类复写
+ */
+- (void)cancel;
 
