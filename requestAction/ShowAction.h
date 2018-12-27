@@ -10,7 +10,6 @@
 #import "ShowRequest.h"
 #import "BaseModel.h"
 #import "ShowRequestData.h"
-
 typedef void(^ShowActionFinishedBlock)(id result);
 
 @end
