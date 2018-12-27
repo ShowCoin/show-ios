@@ -13,5 +13,6 @@
 
 typedef void(^ShowActionFinishedBlock)(id result);
 typedef void(^ShowActionFailedBlock)(NSError *error);
+typedef void(^ShowActionCancelledBlock)(void);
 
-@end
+
