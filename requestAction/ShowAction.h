@@ -10,6 +10,8 @@
 #import "ShowRequest.h"
 #import "BaseModel.h"
 #import "ShowRequestData.h"
+
 typedef void(^ShowActionFinishedBlock)(id result);
+typedef void(^ShowActionFailedBlock)(NSError *error);
 
 @end
