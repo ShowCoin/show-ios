@@ -352,7 +352,7 @@
 		435D4C7320EF42FB00C8DC85 /* NSFetchRequest+JKExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFetchRequest+JKExtensions.h"; sourceTree = "<group>"; };
 		435D4C7820F0916900C8DC85 /* NSFileManager+JKPaths.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+JKPaths.m"; sourceTree = "<group>"; };
 		435D4C7920F0916900C8DC85 /* NSFileManager+JKPaths.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+JKPaths.h"; sourceTree = "<group>"; };
-		435D4C7B20F0919600C8DC85 /* NSHTTPCookieStorage+JKFreezeDry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSHTTPCookieStorage+JKFreezeDry.h"; path = "../Exten/NSHTTPCookieStorage+JKFreezeDry.h"; sourceTree = "<group>"; };
+		435D4C7B20F0919600C8DC85 /* NSHTTPCookieStorage+JKFreezeDry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSHTTPCookieStorage+JKFreezeDry.h"; sourceTree = "<group>"; };
 		435D4C7C20F0919600C8DC85 /* NSHTTPCookieStorage+JKFreezeDry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSHTTPCookieStorage+JKFreezeDry.m"; sourceTree = "<group>"; };
 		435D4C7E20F091BB00C8DC85 /* NSIndexPath+JKOffset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSIndexPath+JKOffset.m"; sourceTree = "<group>"; };
 		435D4C7F20F091BC00C8DC85 /* NSIndexPath+JKOffset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSIndexPath+JKOffset.h"; sourceTree = "<group>"; };
@@ -740,13 +740,8 @@
 			isa = PBXGroup;
 			children = (
 				9306818921BE648D0021F976 /* NSData+Image.m */,
-				9306818B21BE64B00021F976 /* NSData+ImageContentType.h */,
-				9306818C21BE64C90021F976 /* NSData+ImageContentType.m */,
-				4325535F20D8B49F00FC0258 /* CAShapeLayerDemoViewController.h */,
 				43205DD920DD266600AD6952 /* UIView+FDCollapsibleConstraints.m */,
 				43205DD620DD264B00AD6952 /* UITextViewDemoViewController.m */,
-				435D4C7B20F0919600C8DC85 /* NSHTTPCookieStorage+JKFreezeDry.h */,
-				435D4C7C20F0919600C8DC85 /* NSHTTPCookieStorage+JKFreezeDry.m */,
 				435D4C6620EF3FA500C8DC85 /* NSDictionary+JKMerge.h */,
 				435D4C6320EF3E3B00C8DC85 /* NSDictionary+JKJSONString.h */,
 				435D4C6420EF3E3B00C8DC85 /* NSDictionary+JKJSONString.m */,
@@ -1383,6 +1378,8 @@
 				435D4C3C20EDEA2800C8DC85 /* NSDate+JKCupertinoYankee.h */,
 				435D4C3D20EDEA2800C8DC85 /* NSDate+JKCupertinoYankee.m */,
 				9306818821BE64740021F976 /* NSData+Image.h */,
+				9306818B21BE64B00021F976 /* NSData+ImageContentType.h */,
+				9306818C21BE64C90021F976 /* NSData+ImageContentType.m */,
 				9306818E21BE650F0021F976 /* NSString+MD5.h */,
 				9306818F21BE65840021F976 /* NSString+MD5.m */,
 				9306819121BE65BD0021F976 /* UIButton+Addtional.h */,
@@ -1397,10 +1394,13 @@
 				43205DD220DD263300AD6952 /* UIView+Debug.m */,
 				4325537420D8B59000FC0258 /* NSArray+JKBlock.h */,
 				4325537320D8B58F00FC0258 /* NSArray+JKBlock.m */,
+				4325535F20D8B49F00FC0258 /* CAShapeLayerDemoViewController.h */,
 				43205DD820DD266500AD6952 /* UIView+FDCollapsibleConstraints.h */,
 				43205DD520DD264B00AD6952 /* UITextViewDemoViewController.h */,
 				435D4C7F20F091BC00C8DC85 /* NSIndexPath+JKOffset.h */,
 				435D4C7E20F091BB00C8DC85 /* NSIndexPath+JKOffset.m */,
+				435D4C7B20F0919600C8DC85 /* NSHTTPCookieStorage+JKFreezeDry.h */,
+				435D4C7C20F0919600C8DC85 /* NSHTTPCookieStorage+JKFreezeDry.m */,
 				435D4C6720EF3FA500C8DC85 /* NSDictionary+JKMerge.m */,
 				435D4C6920EF3FF200C8DC85 /* NSDictionary+JKSafeAccess.h */,
 				9314D1E420C53ACE00BB2429 /* SLHelper */,
