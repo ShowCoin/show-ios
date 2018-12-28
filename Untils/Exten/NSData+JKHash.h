@@ -13,5 +13,9 @@
  *  @brief  md5 NSData
  */
 @property (readonly) NSData *jk_md5Data;
+/**
+ *  @brief  sha1Data NSData
+ */
+@property (readonly) NSData *jk_sha1Data;
 
 @end
