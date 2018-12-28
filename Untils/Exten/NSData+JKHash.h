@@ -38,7 +38,8 @@
 /**
  *  @brief  sha1Data NSData
  *
- *  @param key 密钥
+ *  @param key 密钥\
+ 
  *
  *  @return 结果
  */
