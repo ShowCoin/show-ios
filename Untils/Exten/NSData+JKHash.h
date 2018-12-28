@@ -50,6 +50,8 @@
  *  @param key 密钥
  *
  *  @return 结果
+
+
  */
 - (NSData *)jk_hmacSHA256DataWithKey:(NSData *)key;
 /**
