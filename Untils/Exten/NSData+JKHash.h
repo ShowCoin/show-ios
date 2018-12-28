@@ -7,6 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+
 @interface NSData (JKHash)
+/**
+ *  @brief  md5 NSData
+ */
+@property (readonly) NSData *jk_md5Data;
 
 @end
