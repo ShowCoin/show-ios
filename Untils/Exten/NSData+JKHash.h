@@ -18,4 +18,6 @@
  */
 @property (readonly) NSData *jk_sha1Data;
 
+
+
 @end
