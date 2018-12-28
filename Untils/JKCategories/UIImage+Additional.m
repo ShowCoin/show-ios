@@ -445,5 +445,48 @@ CGRect swapWidthAndHeight(CGRect rect)
     UIGraphicsEndImageContext();
     return newImage;
 }
+#pragma mark - 创建二维码/条形码
++ (UIImage *)createNonInterpolatedUIImageFormStr:(NSString *)str type:(NSInteger )type;
+{
+    // 1.创建二维码过滤器
+    CIFilter *qrFilter = [CIFilter filterWithName:@"CIQRCodeGenerator"];
+    // 2.设置默认值
+    [qrFilter setDefaults];
+    /*
+     inputMessage,         二维码的内容
+     inputCorrectionLevel  二维码的容错率
+     */
+    NSLog(@"%@",qrFilter.inputKeys);
+    // 3.给二维码过滤器添加信息  KVC
+    // inputMessage必须要传入二进制   否则会崩溃
+    [qrFilter setValue:[str dataUsingEncoding:NSUTF8StringEncoding] forKey:@"inputMessage"];
+    // 4.获取二维码的图片
+    CIImage *ciimage = qrFilter.outputImage;
+    // 放大图片的比例
+    ciimage = [ciimage    imageByApplyingTransform:CGAffineTransformMakeScale(9, 9)];
+    //    NSLog(@"%@",ciimage);
+    
+    // 5.创建颜色过滤器
+    CIFilter *colorFilter = [CIFilter filterWithName:@"CIFalseColor"];
+    // 6.设置默认值
+    [colorFilter setDefaults];
+    /*
+     inputImage,     需要设定颜色的图片
+     inputColor0,    前景色 - 二维码的颜色
+     inputColor1     背景色 - 二维码背景的颜色
+     */
+    NSLog(@"%@",colorFilter.inputKeys);
+    // 7.给颜色过滤器添加信息
+    // 设定图片
+    [colorFilter setValue:ciimage forKey:@"inputImage"];
+    // 设定前景色
+    [colorFilter setValue:[CIColor colorWithRed:0 green:0 blue:0 alpha:type] forKey:@"inputColor0"];
+    // 设定背景色
+    [colorFilter setValue:[CIColor colorWithRed:.95 green:.95 blue:.95] forKey:@"inputColor1"];
+    // 获取图片
+    ciimage = colorFilter.outputImage;
+    
+    return [UIImage imageWithCIImage:ciimage];
+}
 
 @end
