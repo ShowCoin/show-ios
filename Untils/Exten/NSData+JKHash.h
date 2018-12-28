@@ -26,6 +26,7 @@
  */
 @property (readonly) NSData *jk_sha512Data;
 
+
 /**
  *  @brief  md5 NSData
  *
