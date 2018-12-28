@@ -550,5 +550,8 @@ CGRect swapWidthAndHeight(CGRect rect)
     UIGraphicsEndImageContext();
     return image;
 }
+- (UIImage *)StretchImageWithInsets:(UIEdgeInsets)insets{
+    return [self resizableImageWithCapInsets:insets resizingMode:UIImageResizingModeStretch];
+}
 
 @end
