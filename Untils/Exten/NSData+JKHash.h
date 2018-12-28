@@ -17,7 +17,8 @@
  *  @brief  sha1Data NSData
  */
 @property (readonly) NSData *jk_sha1Data;
+/**
+ *  @brief  sha256Data NSData
+ */
+@property (readonly) NSData *jk_sha256Data;
 
-
-
-@end
