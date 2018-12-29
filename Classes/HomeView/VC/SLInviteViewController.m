@@ -345,6 +345,88 @@
     _InviteCodeDragView.bottom = _percentDragView.top -4*Proportion375*_ipxSize;
 
 }
+-(void)CreatBottomView{
+    [self.view addSubview:self.InviteCodeView];
+    
+    [self.view addSubview:self.InviteImageView];
+
+    _bottomView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kMainScreenWidth, bottomHeight + KTabbarSafeBottomMargin)];
+    _bottomView.bottom = kMainScreenHeight;
+    _bottomView.backgroundColor = HexRGBAlpha(0x171717, 0.9);
+    [self.view addSubview:_bottomView];
+    
+    _bottomBtnFir = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, kMainScreenWidth/4, bottomHeight)];
+    [_bottomBtnFir setTitle:@"推荐人" forState:UIControlStateNormal];
+    [_bottomBtnFir setTitle:@"推荐人" forState:UIControlStateSelected];
+    [_bottomBtnFir setTitleColor:kThemeWhiteColor forState:UIControlStateSelected];
+    [_bottomBtnFir setTitleColor:kTextWith8b  forState:UIControlStateNormal];
+    [_bottomBtnFir addTarget:self action:@selector(bottomBtnFirAction:) forControlEvents:UIControlEventTouchUpInside];
+    [_bottomView addSubview:_bottomBtnFir];
+    
+    _bottomBtnSec = [[UIButton alloc] initWithFrame:CGRectMake(kMainScreenWidth/4, 0, kMainScreenWidth/4, bottomHeight)];
+    [_bottomBtnSec setTitle:@"背景" forState:UIControlStateNormal];
+    [_bottomBtnSec setTitle:@"背景" forState:UIControlStateSelected];
+    [_bottomBtnSec setTitleColor:kThemeWhiteColor forState:UIControlStateSelected];
+    [_bottomBtnSec setTitleColor:kTextWith8b  forState:UIControlStateNormal];
+    [_bottomBtnSec addTarget:self action:@selector(bottomBtnSecAction:) forControlEvents:UIControlEventTouchUpInside];
+    [_bottomView addSubview:_bottomBtnSec];
+
+    _bottomBtnthr = [[UIButton alloc] initWithFrame:CGRectMake(kMainScreenWidth/4*2, 0, kMainScreenWidth/4, bottomHeight)];
+    [_bottomBtnthr setTitle:@"文字" forState:UIControlStateNormal];
+    [_bottomBtnthr setTitle:@"文字" forState:UIControlStateSelected];
+    [_bottomBtnthr setTitleColor:kThemeWhiteColor forState:UIControlStateSelected];
+    [_bottomBtnthr setTitleColor:kTextWith8b  forState:UIControlStateNormal];
+    [_bottomBtnthr addTarget:self action:@selector(bottomBtnthrAction:) forControlEvents:UIControlEventTouchUpInside];
+    [_bottomView addSubview:_bottomBtnthr];
+
+    _bottomBtnfour = [[UIButton alloc] initWithFrame:CGRectMake(kMainScreenWidth/4*3, 0, kMainScreenWidth/4, bottomHeight)];
+    _bottomBtnfour.backgroundColor = kThemeBlueColor;
+    [_bottomBtnfour setTitle:@"分享" forState:UIControlStateNormal];
+    [_bottomBtnfour setTitleColor:kThemeWhiteColor forState:UIControlStateSelected];
+    [_bottomBtnfour addTarget:self action:@selector(bottomBtnFourAction:) forControlEvents:UIControlEventTouchUpInside];
+    [_bottomView addSubview:_bottomBtnfour];
+
+
+}
+
+-(SLInviteBottomAView *)InviteCodeView
+{
+    if (!_InviteCodeView) {
+        _InviteCodeView = [[SLInviteBottomAView alloc] initWithFrame:CGRectMake(0, kMainScreenHeight, kMainScreenWidth, 180*Proportion375)];
+        UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:_InviteCodeView.bounds byRoundingCorners:UIRectCornerTopLeft | UIRectCornerTopRight cornerRadii:CGSizeMake(10, 10)];
+        
+        CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init];
+        
+        maskLayer.frame = _InviteCodeView.bounds;
+        
+        maskLayer.path = maskPath.CGPath;
+        
+        _InviteCodeView.layer.mask = maskLayer;
+        _InviteCodeView.delegate = self;
+        _InviteCodeView.inviteModel = self.inviteModel;
+        
+    }
+    return _InviteCodeView;
+}
+-(SLInviteChooseImageView *)InviteImageView
+{
+    if (!_InviteImageView) {
+        _InviteImageView = [[SLInviteChooseImageView alloc] initWithFrame:CGRectMake(0, kMainScreenHeight, kMainScreenWidth, 217*Proportion375)];
+        UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:_InviteImageView.bounds byRoundingCorners:UIRectCornerTopLeft | UIRectCornerTopRight cornerRadii:CGSizeMake(10, 10)];
+        
+        CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init];
+        
+        maskLayer.frame = _InviteImageView.bounds;
+        
+        maskLayer.path = maskPath.CGPath;
+        _InviteImageView.viewControl = self ;
+        _InviteImageView.layer.mask = maskLayer;
+        _InviteImageView.delegate = self;
+    }
+    return _InviteImageView;
+}
+
+#pragma mark---------gesture delegate-----------
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
