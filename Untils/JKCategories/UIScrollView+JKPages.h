@@ -24,6 +24,7 @@
 - (CGFloat)jk_currentPageY;
 //当前页面的X
 - (CGFloat)jk_currentPageX;
+
 //设置页面的Y
 - (void)jk_setPageY:(CGFloat)page;
 //设置页面的X
