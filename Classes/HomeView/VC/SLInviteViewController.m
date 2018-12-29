@@ -950,6 +950,99 @@
     [self ShowOrHideTopAndBottomView];
 
 }
+#pragma mark ----------- coverimage delegate-----------
+//-(void)selectImage:(SLCoverModel*)model
+//{
+//    if (model.coverimg) {
+//        _BGImgView.image = model.coverimg;
+//    }
+//    else
+//        [_BGImgView yy_setImageWithURL:[NSURL URLWithString:model.coverUrl] placeholder:nil];
+//}
+//
+//-(void)chooseImageEnd
+//{
+////    self.containerView.alpha = 1.0;
+//    if (_bottomBtnSec.selected) {
+//        _bottomBtnSec.selected = NO;
+//    }
+//}
+//
+//-(void)updateCoverButtonState
+//{
+////    self.coverButton.hidden  = ([[AccountModel shared].covers count]==0)?YES:NO;
+//}
+-(void)SLInviteChooseImageViewSelectImageModel:(SLCoverModel *)model
+{
+    if (model) {
+        if (model.coverimg) {
+            _BGImgView.image = model.coverimg;
+        }else{
+            [_BGImgView yy_setImageWithURL:[NSURL URLWithString:model.coverUrl] placeholder:nil];
+        }
+    }else{
+        [_BGImgView setImage:[UIImage imageNamed:@"user_set_inviteCode_bg"]];
+
+    }
+}
+#pragma mark ----------- screen shot-----------
+
+- (UIImage *)snapshotImage {
+//    _textView.layer.borderColor = ClearColor.CGColor;
+    _textView.layer.borderWidth = 0;
+    CGFloat borderWidth = 1;
+    CGFloat cornerRadius = 3;
+    self.BGImgView.layer.borderWidth = 0;
+    self.BGImgView.layer.cornerRadius = 0;
+    UIGraphicsBeginImageContextWithOptions(self.BGImgView.bounds.size, NO, UIScreen.mainScreen.scale);
+    [self.BGImgView.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    self.BGImgView.layer.borderWidth = borderWidth;
+    self.BGImgView.layer.cornerRadius = cornerRadius;
+    return image;
+}
+#pragma mark ----------- request-----------
+-(void)getInviteInfo{
+
+}
+//当键退出
+- (void)keyboardWillHide:(NSNotification *)notification
+{
+    self.Invite_ratio = [NSString stringWithFormat:@"%.4f",_InviteCodeView.textfieldA.text.floatValue/100];
+    self.Invite_code = _InviteCodeView.textfieldB.text;
+    self.Invite_link = _InviteCodeView.linkLab.text;
+    NSLog(@"===%@\n===%@\n===%@",self.Invite_ratio,self.Invite_code,self.Invite_link);
+    self.code_upload_finish = [self.Invite_code isEqualToString:self.inviteModel.invite_code]?YES:NO;
+    self.rate_upload_finish = [self.Invite_code isEqualToString:self.inviteModel.invite_ratio]?YES:NO;
+
+    _inviteCodeLab.text = self.Invite_code;
+    [_inviteCodeLab sizeToFit];
+    _inviteCodeLab.top = 29*Proportion375*_ipxSize;
+    _inviteCodeLab.left = 20*Proportion375*_ipxSize;
+    _InviteCodeDragView.width = _inviteCodeLab.width + 40*Proportion375*_ipxSize;
+    _InviteCodeDragView.width = _InviteCodeDragView.width<_percentDragView.width?_percentDragView.width:_InviteCodeDragView.width;
+
+    _percentLab.text = [NSString stringWithFormat:@"%.2f%@",self.Invite_ratio.floatValue*100,@"%"];
+    [_percentLab sizeToFit];
+    _percentLab.top = 29*Proportion375*_ipxSize;
+    _percentLab.left = 20*Proportion375*_ipxSize;
+
+    UIImage * img = [UIImage createNonInterpolatedUIImageFormStr:self.Invite_link type:1];
+    _codeImageView.image = img;
+    
+    self.code_upload_finish = [self.Invite_code isEqualToString:self.inviteModel.invite_code]?YES:NO;
+    
+    if (![self.Invite_code isValidInviteCode]) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (IsStrEmpty(self.Invite_code)) {
+                [HDHud showMessageInView:self.view title:@"邀请人不能为空"];
+            }else{
+                [HDHud showMessageInView:self.view title:@"邀请人包含非法字符"];
+            }
+        });
+    }
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
