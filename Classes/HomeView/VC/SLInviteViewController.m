@@ -427,6 +427,61 @@
 }
 
 #pragma mark---------gesture delegate-----------
+-(void)backaction{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+-(void)textViewTouchAction{
+    if (!_bottomBtnthr.selected) {
+        [self bottomBtnthrAction:_bottomBtnthr];
+    }else{
+//        [_textView becomeFirstResponder];
+        [self showInputView];
+    }
+    
+        if (_bottomBtnFir.selected) {
+            if (_InviteCodeView.textfieldB.isFirstResponder) {
+                [_InviteCodeView.textfieldB resignFirstResponder];
+            }else if (_InviteCodeView.textfieldA.isFirstResponder){
+                [_InviteCodeView.textfieldA resignFirstResponder];
+            }else{
+                [self bottomBtnFirAction:_bottomBtnFir];
+            }
+        }
+        if (_bottomBtnSec.selected) {
+            [self bottomBtnSecAction:_bottomBtnSec];
+        }
+        if (_bottomBtnfour.selected) {
+            //            [self bottomBtnFourAction:_bottomBtnfour];
+            _bottomBtnfour.selected = NO;
+            [UIView animateWithDuration:0.3 animations:^{
+                self.BGImgView.transform = CGAffineTransformIdentity;
+                
+            } completion:^(BOOL finished) {
+                self.BGImgView.layer.cornerRadius = 0;
+                
+            }];
+            
+        }
+    
+}
+
+- (void) rotateView:(UIRotationGestureRecognizer *)rotationGestureRecognizer{
+    
+    UIView *view = rotationGestureRecognizer.view;
+    
+    if (rotationGestureRecognizer.state == UIGestureRecognizerStateBegan || rotationGestureRecognizer.state == UIGestureRecognizerStateChanged)
+        
+    {
+        
+        view.transform = CGAffineTransformRotate(view.transform, rotationGestureRecognizer.rotation);
+        
+        [rotationGestureRecognizer setRotation:0];
+        
+    }
+    
+}
+// 处理缩放手势
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
