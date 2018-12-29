@@ -19,6 +19,9 @@
 //page的Y坐标
 - (CGFloat)jk_pagesY;
 //page的X坐标
+
+
+
 - (CGFloat)jk_pagesX;
 //当前页面的Y
 - (CGFloat)jk_currentPageY;
