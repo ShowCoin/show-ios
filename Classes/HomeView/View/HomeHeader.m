@@ -135,55 +135,6 @@ static BOOL isHot = NO;
     return _navBtnB;
 }
 
-- (UIButton *)navBtnC
-{
-    if (!_navBtnC) {
-        _navBtnC=[UIButton buttonWithType:UIButtonTypeCustom];
-        _navBtnC.frame=CGRectMake(self.navBtnB.right, KTopHeight + 20, 85*Proportion375, 43);
-        [_navBtnC setTitle:STRING_HOME_TITLENEW_76 forState:UIControlStateNormal];
-        [_navBtnC setTitleColor:kThemeAlphWhiteColor forState:UIControlStateNormal];
-        [_navBtnC.titleLabel setFont:Font_Medium(18*Proportion375)];
-        @weakify(self);
-        [[_navBtnC rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
-            @strongify(self);
-            if (self.delegate && [self.delegate respondsToSelector:@selector(navTabBaction:)]) {
-                [self.delegate navTabCaction:self.navBtnC];
-            }
-            [self rightButtonHidden:YES];
-        }];
-
-    }
-    return _navBtnC;
-}
-
-- (UIButton *)leftBtn
-{
-    if (!_leftBtn) {
-        _leftBtn=[UIButton buttonWithType:UIButtonTypeCustom];
-        _leftBtn.frame = CGRectMake(6, 17+KTopHeight, 50, 50);
-        [ _leftBtn setImage:[UIImage imageNamed:@"home_left_img"] forState:UIControlStateNormal];
-        
-        _leftBtn.alpha = .5f;
-        _leftBtn.hidden = YES ;
-        @weakify(self);
-        [[_leftBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
-            @strongify(self);
-            [HDHud showMessageInView:self.viewController.view title:@"敬请期待"];
-        }];
-    }
-    return _leftBtn;
-}
-
-- (UIView *)lineView
-{
-    if (!_lineView) {
-        _lineView = [[UIView alloc] initWithFrame:CGRectMake(0, KNaviBarHeight-2*Proportion375, 35*Proportion375, 2*Proportion375)];
-        _lineView.backgroundColor = kThemeWhiteColor;
-        _lineView.layer.cornerRadius = 1*Proportion375;
-        _lineView.centerX = _navBtnB.centerX;
-    }
-    return _lineView;
-}
 
 
 
