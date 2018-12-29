@@ -482,6 +482,150 @@
 }
 // 处理缩放手势
 
+- (void) pinchView:(UIPinchGestureRecognizer *)pinchGestureRecognizer
+
+{
+    
+    UIView *view = pinchGestureRecognizer.view;
+    
+    if (pinchGestureRecognizer.state == UIGestureRecognizerStateBegan || pinchGestureRecognizer.state == UIGestureRecognizerStateChanged)
+        
+    {
+        
+    view.transform = CGAffineTransformScale(view.transform, pinchGestureRecognizer.scale, pinchGestureRecognizer.scale);          pinchGestureRecognizer.scale = 1;
+        
+    }
+    
+}
+
+
+-(void)tapAction:(UITapGestureRecognizer *)tapGestureRecognizer{
+    
+    
+    if (_bottomBtnFir.selected || _bottomBtnSec.selected|| _bottomBtnthr.selected || _bottomBtnfour.selected) {
+
+        if (_bottomBtnFir.selected) {
+            if (_InviteCodeView.textfieldB.isFirstResponder) {
+                [_InviteCodeView.textfieldB resignFirstResponder];
+            }else if (_InviteCodeView.textfieldA.isFirstResponder){
+                [_InviteCodeView.textfieldA resignFirstResponder];
+            }else{
+                [self bottomBtnFirAction:_bottomBtnFir];
+            }
+        }
+        if (_bottomBtnSec.selected) {
+            [self bottomBtnSecAction:_bottomBtnSec];
+        }
+        if (_bottomBtnthr.selected) {
+            if ([_textView isFirstResponder]) {
+                [_textView resignFirstResponder];
+
+            }else{
+                
+                [self bottomBtnthrAction:_bottomBtnthr];
+            }
+        }
+        if (_bottomBtnfour.selected) {
+//            [self bottomBtnFourAction:_bottomBtnfour];
+            _bottomBtnfour.selected = NO;
+            [UIView animateWithDuration:0.3 animations:^{
+                self.BGImgView.transform = CGAffineTransformIdentity;
+                
+            } completion:^(BOOL finished) {
+                self.BGImgView.layer.cornerRadius = 0;
+                
+            }];
+
+        }
+    }else{
+        [self ShowOrHideTopAndBottomView];
+//        self.topView.bottom = 0;
+//        self.bottomView.top = kMainScreenHeight;
+
+    }
+}
+
+-(void)InviteCodeDragViewTapAction{
+    [UIView animateWithDuration:0.25 animations:^{
+        self.topView.top = 0;
+        self.bottomView.bottom = kMainScreenHeight;
+    } completion:^(BOOL finished) {
+        self.isTopBottomHide = NO;
+        [self bottomBtnFirAction:self.bottomBtnFir];
+    }];
+}
+-(void)percentDragViewTapAction{
+    [UIView animateWithDuration:0.25 animations:^{
+        self.topView.top = 0;
+        self.bottomView.bottom = kMainScreenHeight;
+    } completion:^(BOOL finished) {
+        self.isTopBottomHide = NO;
+        [self bottomBtnFirAction:self.bottomBtnFir];
+    }];
+
+}
+-(void)ShowOrHideTopAndBottomView{
+    if (!_isTopBottomHide) {
+        [UIView animateWithDuration:0.25 animations:^{
+            self.topView.bottom = 0;
+            self.bottomView.top = kMainScreenHeight;
+        } completion:^(BOOL finished) {
+            self.isTopBottomHide = YES;
+        }];
+    }else{
+        [UIView animateWithDuration:0.25 animations:^{
+            self.topView.top = 0;
+            self.bottomView.bottom = kMainScreenHeight;
+        } completion:^(BOOL finished) {
+            self.isTopBottomHide = NO;
+        }];
+    }
+
+}
+
+
+- (void)pinchAction:(UIPinchGestureRecognizer *)sender {
+
+    if (sender.state == UIGestureRecognizerStateEnded) {
+      
+        CGRect rect = self.textView.frame;
+        
+        self.textView.transform = CGAffineTransformIdentity;//重置坐标
+        
+        self.textView.frame = rect;
+        
+    } else if (sender.state == UIGestureRecognizerStateBegan) {
+        
+        CGPoint pinchCenter = [sender locationInView:sender.view];
+        
+        CGPoint previousAnchorPoint = self.textView.layer.anchorPoint;
+        
+        CGPoint newAnchorPoint = CGPointMake(pinchCenter.x / self.textView.frame.size.width, pinchCenter.y / self.textView.frame.size.height);
+        
+        CGPoint previousPosition = self.textView.layer.position;
+        
+        CGPoint newPosition = CGPointZero;
+        
+        newPosition.x = previousPosition.x + (newAnchorPoint.x - previousAnchorPoint.x) * self.textView.frame.size.width;
+        
+        newPosition.y = previousPosition.y + (newAnchorPoint.y - previousAnchorPoint.y) * self.textView.frame.size.height;
+        
+        self.textView.layer.position = newPosition;
+        
+        self.textView.layer.anchorPoint = newAnchorPoint;
+    } else {
+        self.textView.transform = CGAffineTransformMakeScale(sender.scale, sender.scale);
+    }
+    
+}
+
+-(BOOL) gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
+{
+    return YES;
+}
+
+#pragma mark--------- btn action-----------
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
