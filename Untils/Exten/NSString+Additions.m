@@ -451,5 +451,20 @@
         return NO;
     }
 }
++ (BOOL)isSafePassword:(NSString *)strPwd{
+    NSString *passWordRegex = @"^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,32}$";   // 数字，字符或符号至少两种
+    NSPredicate *regextestcm = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", passWordRegex];
+    
+    if ([regextestcm evaluateWithObject:strPwd] == YES)
+    {
+        return YES;
+    }
+    else
+    {
+        return NO;
+    }
+    
+}
+
 
 @end
