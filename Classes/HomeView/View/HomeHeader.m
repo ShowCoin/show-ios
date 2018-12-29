@@ -185,66 +185,6 @@ static BOOL isHot = NO;
     return _lineView;
 }
 
-- (void)changePageIndex:(NSInteger)index
-{
-    isHot = (index == 1);
-    [[NSNotificationCenter defaultCenter]postNotificationName:SLHomeHideTabbarReleaseTimerNotification object:@(index ==1)];
-    switch (index) {
-        case 0:
-        {
-            @weakify(self);
-            [UIView animateWithDuration:0.25 animations:^{
-                @strongify(self);
-                [self.navBtnA setTitleColor:kThemeWhiteColor forState:UIControlStateNormal];
-                [self.navBtnA.titleLabel setFont:Font_Medium(20*Proportion375)];
-                [self.navBtnB setTitleColor:kThemeAlphWhiteColor forState:UIControlStateNormal];
-                [self.navBtnB.titleLabel setFont:Font_Medium(18*Proportion375)];
-                [self.navBtnC setTitleColor:kThemeAlphWhiteColor forState:UIControlStateNormal];
-                [self.navBtnC.titleLabel setFont:Font_Medium(18*Proportion375)];
-            }];
-            self.lineView.centerX = self.navBtnA.centerX;
-        }
-            break;
-        case 1:
-        {
-            @weakify(self);
-            [UIView animateWithDuration:0.25 animations:^{
-                @strongify(self);
-                [self.navBtnA setTitleColor:kThemeAlphWhiteColor forState:UIControlStateNormal];
-                [self.navBtnA.titleLabel setFont:Font_Medium(18*Proportion375)];
-                [self.navBtnB setTitleColor:kThemeWhiteColor forState:UIControlStateNormal];
-                [self.navBtnB.titleLabel setFont:Font_Medium(20*Proportion375)];
-                [self.navBtnC setTitleColor:kThemeAlphWhiteColor forState:UIControlStateNormal];
-                [self.navBtnC.titleLabel setFont:Font_Medium(18*Proportion375)];
-            }];
-            self.lineView.centerX = self.navBtnB.centerX;
-        }
-            break;
-        case 2:
-        {
-            @weakify(self);
-            [UIView animateWithDuration:0.25 animations:^{
-                @strongify(self);
-                [self.navBtnA setTitleColor:kThemeAlphWhiteColor forState:UIControlStateNormal];
-                [self.navBtnA.titleLabel setFont:Font_Medium(18*Proportion375)];
-                [self.navBtnB setTitleColor:kThemeAlphWhiteColor forState:UIControlStateNormal];
-                [self.navBtnB.titleLabel setFont:Font_Medium(18*Proportion375)];
-                [self.navBtnC setTitleColor:kThemeWhiteColor forState:UIControlStateNormal];
-                [self.navBtnC.titleLabel setFont:Font_Medium(20*Proportion375)];
-            }];
-            self.lineView.centerX = self.navBtnC.centerX;
-        }
-            break;
-            
-        default:
-            break;
-    }
-}
-
-+ (BOOL)isHot{
-    return isHot;
-}
-
 
 
 @end
