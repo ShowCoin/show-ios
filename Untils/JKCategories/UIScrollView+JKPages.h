@@ -10,4 +10,7 @@
 
 @interface UIScrollView (JKPages)
 
+//总的页数
+- (NSInteger)jk_pages;
+
 @end
