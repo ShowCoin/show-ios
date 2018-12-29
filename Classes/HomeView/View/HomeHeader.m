@@ -62,37 +62,6 @@ static BOOL isHot = NO;
     }
 }
 
-- (void)updateTotalUnreadCount:(NSNotification *)notification
-{
-    NSString * count=notification.object;
-    self.rightBtn.hasMessage = (count.integerValue>0)?YES:NO;
-}
-
-- (SLMessageButton *)rightBtn {
-    if (!_rightBtn) {
-        _rightBtn = [SLMessageButton buttonWithType:UIButtonTypeCustom];
-        _rightBtn.frame = CGRectMake(kMainScreenWidth - 50, 17+KTopHeight, 50, 50);
-        [_rightBtn setImage:[UIImage imageNamed:@"live_bottom_more"] forState:UIControlStateNormal];
-        @weakify(self);
-        [[_rightBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
-            @strongify(self);
-            NSLog(@"%s", __func__);
-            if ([self.delegate respondsToSelector:@selector(rightBtnClick:)]) {
-                [self.delegate rightBtnClick:self.rightBtn];
-            }
-        }];
-    }
-    return _rightBtn;
-}
-
-- (UIImageView *)grayBg
-{
-    if (!_grayBg) {
-        _grayBg = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, kMainScreenWidth, KNaviBarHeight)];
-        [_grayBg setImage:[UIImage imageNamed:@"home_header_bg"]];
-    }
-    return _grayBg;
-}
 
 - (UIButton *)navBtnA
 {
