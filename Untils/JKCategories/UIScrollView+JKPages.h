@@ -12,8 +12,6 @@
 
 //总的页数
 - (NSInteger)jk_pages;
-
-
 //当前的野鼠
 - (NSInteger)jk_currentPage;
 //scrollPercent
