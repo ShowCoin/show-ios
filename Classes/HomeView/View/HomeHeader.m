@@ -261,26 +261,7 @@ static BOOL isHot = NO;
     } completion:nil];
 }
 
-- (void)showHeader:(BOOL)show {
-    NSArray *views = @[self.navBtnA, self.navBtnB, self.lineView, self.navBtnC, self.grayBg];
-    
-    UIViewAnimationOptions option = UIViewAnimationOptionCurveEaseOut;
-    if (show) {
-        option = UIViewAnimationOptionCurveEaseIn;
-    }
-    CGFloat delay = kHomeHeaderAniDelay;
-    for (int i = 0; i < views.count; i++) {
-        UIView *view = views[i];
-        [UIView animateWithDuration:0.4 delay:delay usingSpringWithDamping:0.8 initialSpringVelocity:0.9 options:option animations:^{
-            if (show) {
-                view.transform = CGAffineTransformIdentity;
-            } else {
-                view.transform = CGAffineTransformMakeTranslation(0, -KNaviBarHeight);
-            }
-        } completion:nil];
-        delay += 0.07;
-    }
-}
+
 
 
 @end
