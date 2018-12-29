@@ -63,48 +63,4 @@ static BOOL isHot = NO;
 }
 
 
-- (UIButton *)navBtnA
-{
-    if (!_navBtnA) {
-        _navBtnA=[UIButton buttonWithType:UIButtonTypeCustom];
-        _navBtnA.frame=CGRectMake(self.navBtnB.left - 85*Proportion375, KTopHeight + 20, 85*Proportion375, 43);
-        [_navBtnA setTitle:STRING_HOME_TITLECONCER_74 forState:UIControlStateNormal];
-        [_navBtnA setTitleColor:kThemeAlphWhiteColor forState:UIControlStateNormal];
-        [_navBtnA.titleLabel setFont:Font_Medium(18*Proportion375)];
-         @weakify(self);
-        [[_navBtnA rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
-            @strongify(self);
-            if (self.delegate && [self.delegate respondsToSelector:@selector(navTabAaction:)]) {
-                [self.delegate navTabAaction:self.navBtnA];
-            }
-            [self rightButtonHidden:YES];
-        }];
-    }
-    return _navBtnA;
-}
-
-- (UIButton *)navBtnB
-{
-    if (!_navBtnB) {
-        _navBtnB=[UIButton buttonWithType:UIButtonTypeCustom];
-        _navBtnB.frame=CGRectMake(85*Proportion375, KTopHeight + 20, 85*Proportion375, 43);
-        _navBtnB.centerX = kMainScreenWidth/2;
-        [_navBtnB setTitle:STRING_HOME_TITLEHOT_75 forState:UIControlStateNormal];
-        [_navBtnB setTitleColor:kThemeWhiteColor forState:UIControlStateNormal];
-        [_navBtnB.titleLabel setFont:Font_Medium(20*Proportion375)];
-         @weakify(self);
-        [[_navBtnB rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
-            @strongify(self);
-            if (self.delegate && [self.delegate respondsToSelector:@selector(navTabBaction:)]) {
-                [self.delegate navTabBaction:self.navBtnB];
-            }
-            [self rightButtonHidden:NO];
-        }];
-    }
-    return _navBtnB;
-}
-
-
-
-
 @end
