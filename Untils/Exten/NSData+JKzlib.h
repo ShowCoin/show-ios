@@ -18,7 +18,6 @@ typedef NS_ENUM(NSUInteger, JKZlibErrorCode) {
     JKZlibErrorCodeInflationError = 2,
     JKZlibErrorCodeCouldNotCreateFileError = 3,
 };
-
 /**
  Apply zlib compression.
 

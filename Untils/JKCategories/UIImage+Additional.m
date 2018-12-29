@@ -318,5 +318,372 @@ CGRect swapWidthAndHeight(CGRect rect)
     }
     return [self imageWithWithRect:newRect size:size];
 }
+//镜像翻转
+-(UIImage*)rotate:(UIImageOrientation)orient
+{
+    CGRect             bnds = CGRectZero;
+    UIImage*           copy = nil;
+    CGContextRef       ctxt = nil;
+    CGImageRef         imag = self.CGImage;
+    CGRect             rect = CGRectZero;
+    CGAffineTransform  tran = CGAffineTransformIdentity;
+    
+    rect.size.width  = CGImageGetWidth(imag);
+    rect.size.height = CGImageGetHeight(imag);
+    
+    bnds = rect;
+    
+    switch (orient)
+    {
+        case UIImageOrientationUp:
+            // would get you an exact copy of the original
+            assert(false);
+            return nil;
+            
+        case UIImageOrientationUpMirrored:
+            tran = CGAffineTransformMakeTranslation(rect.size.width, 0.0);
+            tran = CGAffineTransformScale(tran, -1.0, 1.0);
+            break;
+            
+        case UIImageOrientationDown:
+            tran = CGAffineTransformMakeTranslation(rect.size.width,
+                                                    rect.size.height);
+            tran = CGAffineTransformRotate(tran, M_PI);
+            break;
+            
+        case UIImageOrientationDownMirrored:
+            tran = CGAffineTransformMakeTranslation(0.0, rect.size.height);
+            tran = CGAffineTransformScale(tran, 1.0, -1.0);
+            break;
+            
+        case UIImageOrientationLeft:
+            bnds = swapWidthAndHeight(bnds);
+            tran = CGAffineTransformMakeTranslation(0.0, rect.size.width);
+            tran = CGAffineTransformRotate(tran, 3.0 * M_PI / 2.0);
+            break;
+            
+        case UIImageOrientationLeftMirrored:
+            bnds = swapWidthAndHeight(bnds);
+            tran = CGAffineTransformMakeTranslation(rect.size.height,
+                                                    rect.size.width);
+            tran = CGAffineTransformScale(tran, -1.0, 1.0);
+            tran = CGAffineTransformRotate(tran, 3.0 * M_PI / 2.0);
+            break;
+            
+        case UIImageOrientationRight:
+            bnds = swapWidthAndHeight(bnds);
+            tran = CGAffineTransformMakeTranslation(rect.size.height, 0.0);
+            tran = CGAffineTransformRotate(tran, M_PI / 2.0);
+            break;
+            
+        case UIImageOrientationRightMirrored:
+            bnds = swapWidthAndHeight(bnds);
+            tran = CGAffineTransformMakeScale(-1.0, 1.0);
+            tran = CGAffineTransformRotate(tran, M_PI / 2.0);
+            break;
+            
+        default:
+            // orientation value supplied is invalid
+            assert(false);
+            return nil;
+    }
+    
+    UIGraphicsBeginImageContext(bnds.size);
+    ctxt = UIGraphicsGetCurrentContext();
+    
+    switch (orient)
+    {
+        case UIImageOrientationLeft:
+        case UIImageOrientationLeftMirrored:
+        case UIImageOrientationRight:
+        case UIImageOrientationRightMirrored:
+            CGContextScaleCTM(ctxt, -1.0, 1.0);
+            CGContextTranslateCTM(ctxt, -rect.size.height, 0.0);
+            break;
+            
+        default:
+            CGContextScaleCTM(ctxt, 1.0, -1.0);
+            CGContextTranslateCTM(ctxt, 0.0, -rect.size.height);
+            break;
+    }
+    
+    CGContextConcatCTM(ctxt, tran);
+    CGContextDrawImage(UIGraphicsGetCurrentContext(), rect, imag);
+    
+    copy = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return copy;
+}
++(UIImage*) OriginImage:(UIImage *)image scaleToSize:(CGSize)size
+{
+    UIGraphicsBeginImageContext(size);  //size 为CGSize类型，即你所需要的图片尺寸
+    [image drawInRect:CGRectMake(0, 0, size.width, size.height)];
+    UIImage* scaledImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return scaledImage;   //返回的就是已经改变的图片
+}
++(UIImage*) createImageWithColor:(UIColor*) color
+{
+    CGRect rect=CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetFillColorWithColor(context, [color CGColor]);
+    CGContextFillRect(context, rect);
+    UIImage *theImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return theImage;
+}
++(UIImage *)imageResize :(UIImage*)img andResizeTo:(CGSize)newSize
+{
+    CGFloat scale = [[UIScreen mainScreen]scale];
+    
+    //UIGraphicsBeginImageContext(newSize);
+    UIGraphicsBeginImageContextWithOptions(newSize, NO, scale);
+    [img drawInRect:CGRectMake(0,0,newSize.width,newSize.height)];
+    UIImage* newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return newImage;
+}
+#pragma mark - 创建二维码/条形码
++ (UIImage *)createNonInterpolatedUIImageFormStr:(NSString *)str type:(NSInteger )type;
+{
+    // 1.创建二维码过滤器
+    CIFilter *qrFilter = [CIFilter filterWithName:@"CIQRCodeGenerator"];
+    // 2.设置默认值
+    [qrFilter setDefaults];
+    /*
+     inputMessage,         二维码的内容
+     inputCorrectionLevel  二维码的容错率
+     */
+    NSLog(@"%@",qrFilter.inputKeys);
+    // 3.给二维码过滤器添加信息  KVC
+    // inputMessage必须要传入二进制   否则会崩溃
+    [qrFilter setValue:[str dataUsingEncoding:NSUTF8StringEncoding] forKey:@"inputMessage"];
+    // 4.获取二维码的图片
+    CIImage *ciimage = qrFilter.outputImage;
+    // 放大图片的比例
+    ciimage = [ciimage    imageByApplyingTransform:CGAffineTransformMakeScale(9, 9)];
+    //    NSLog(@"%@",ciimage);
+    
+    // 5.创建颜色过滤器
+    CIFilter *colorFilter = [CIFilter filterWithName:@"CIFalseColor"];
+    // 6.设置默认值
+    [colorFilter setDefaults];
+    /*
+     inputImage,     需要设定颜色的图片
+     inputColor0,    前景色 - 二维码的颜色
+     inputColor1     背景色 - 二维码背景的颜色
+     */
+    NSLog(@"%@",colorFilter.inputKeys);
+    // 7.给颜色过滤器添加信息
+    // 设定图片
+    [colorFilter setValue:ciimage forKey:@"inputImage"];
+    // 设定前景色
+    [colorFilter setValue:[CIColor colorWithRed:0 green:0 blue:0 alpha:type] forKey:@"inputColor0"];
+    // 设定背景色
+    [colorFilter setValue:[CIColor colorWithRed:.95 green:.95 blue:.95] forKey:@"inputColor1"];
+    // 获取图片
+    ciimage = colorFilter.outputImage;
+    
+    return [UIImage imageWithCIImage:ciimage];
+}
+#pragma mark - 截屏
++ (UIImage *)screenshot {
+    
+    CGSize imageSize = CGSizeZero;
+    UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
+    if (UIInterfaceOrientationIsPortrait(orientation))
+    {
+        imageSize = [UIScreen mainScreen].bounds.size;
+        
+    } else
+    {
+        imageSize = CGSizeMake([UIScreen mainScreen].bounds.size.height, [UIScreen mainScreen].bounds.size.width);
+    }
+    UIGraphicsBeginImageContextWithOptions(imageSize, NO, 0);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    for (UIWindow *window in [[UIApplication sharedApplication] windows])
+    {
+        CGContextSaveGState(context);
+        CGContextTranslateCTM(context, window.center.x, window.center.y);
+        CGContextConcatCTM(context, window.transform);
+        CGContextTranslateCTM(context, -window.bounds.size.width * window.layer.anchorPoint.x, -window.bounds.size.height * window.layer.anchorPoint.y);
+        if (orientation == UIInterfaceOrientationLandscapeLeft)
+        { CGContextRotateCTM(context, M_PI_2);
+            CGContextTranslateCTM(context, 0, -imageSize.width);
+            
+        } else if (orientation == UIInterfaceOrientationLandscapeRight)
+        {
+            CGContextRotateCTM(context, -M_PI_2);
+            CGContextTranslateCTM(context, -imageSize.height, 0);
+            
+        } else if (orientation == UIInterfaceOrientationPortraitUpsideDown)
+        {
+            CGContextRotateCTM(context, M_PI);
+            CGContextTranslateCTM(context, -imageSize.width, -imageSize.height);
+            
+        }
+        if ([window respondsToSelector:@selector(drawViewHierarchyInRect:afterScreenUpdates:)])
+        {
+            [window drawViewHierarchyInRect:window.bounds afterScreenUpdates:YES];
+            
+        } else {
+            [window.layer renderInContext:context];
+            
+        }
+        CGContextRestoreGState(context);
+        
+    }
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext(); return image;
+    
+}
++ (UIImage *)snapshotScreenInView:(UIView *)contentView {
+    CGSize size = contentView.bounds.size;
+    UIGraphicsBeginImageContextWithOptions(size, NO, [UIScreen mainScreen].scale);
+    CGRect rect = contentView.frame;
+    //  自iOS7开始，UIView类提供了一个方法-drawViewHierarchyInRect:afterScreenUpdates: 它允许你截取一个UIView或者其子类中的内容，并且以位图的形式（bitmap）保存到UIImage中
+    [contentView drawViewHierarchyInRect:rect afterScreenUpdates:YES];
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
+}
+- (UIImage *)StretchImageWithInsets:(UIEdgeInsets)insets{
+    return [self resizableImageWithCapInsets:insets resizingMode:UIImageResizingModeStretch];
+}
+//+ (UIImage *) imageFromSampleBuffer:(CMSampleBufferRef) sampleBuffer {
+//    // Get a CMSampleBuffer's Core Video image buffer for the media data
+//    CVImageBufferRef imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer);
+//    // Lock the base address of the pixel buffer
+//    CVPixelBufferLockBaseAddress(imageBuffer, 0);
+//
+//    // Get the number of bytes per row for the pixel buffer
+//    void *baseAddress = CVPixelBufferGetBaseAddress(imageBuffer);
+//
+//    // Get the number of bytes per row for the pixel buffer
+//    size_t bytesPerRow = CVPixelBufferGetBytesPerRow(imageBuffer);
+//    // Get the pixel buffer width and height
+//    size_t width = CVPixelBufferGetWidth(imageBuffer);
+//    size_t height = CVPixelBufferGetHeight(imageBuffer);
+//
+//    // Create a device-dependent RGB color space
+//    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+//
+//    // Create a bitmap graphics context with the sample buffer data
+//    CGContextRef context = CGBitmapContextCreate(baseAddress, width, height, 8,
+//                                                 bytesPerRow, colorSpace, kCGBitmapByteOrder32Little | kCGImageAlphaPremultipliedFirst);
+//    // Create a Quartz image from the pixel data in the bitmap graphics context
+//    CGImageRef quartzImage = CGBitmapContextCreateImage(context);
+//    // Unlock the pixel buffer
+//    CVPixelBufferUnlockBaseAddress(imageBuffer,0);
+//
+//    // Free up the context and color space
+//    CGContextRelease(context);
+//    CGColorSpaceRelease(colorSpace);
+//
+//    // Create an image object from the Quartz image
+//    UIImage *image = [UIImage imageWithCGImage:quartzImage];
+//
+//    // Release the Quartz image
+//    CGImageRelease(quartzImage);
+//
+//    return (image);
+//}
+-(NSData *)compressWithLengthLimit:(NSUInteger)maxLength{
+    // Compress by quality
+    CGFloat compression = 1;
+    NSData *data = UIImageJPEGRepresentation(self, compression);
+    //NSLog(@"Before compressing quality, image size = %ld KB",data.length/1024);
+    if (data.length < maxLength) return data;
+    
+    CGFloat max = 1;
+    CGFloat min = 0;
+    for (int i = 0; i < 6; ++i) {
+        compression = (max + min) / 2;
+        data = UIImageJPEGRepresentation(self, compression);
+        //NSLog(@"Compression = %.1f", compression);
+        //NSLog(@"In compressing quality loop, image size = %ld KB", data.length / 1024);
+        if (data.length < maxLength * 0.9) {
+            min = compression;
+        } else if (data.length > maxLength) {
+            max = compression;
+        } else {
+            break;
+        }
+    }
+    //NSLog(@"After compressing quality, image size = %ld KB", data.length / 1024);
+    if (data.length < maxLength) return data;
+    UIImage *resultImage = [UIImage imageWithData:data];
+    // Compress by size
+    NSUInteger lastDataLength = 0;
+    while (data.length > maxLength && data.length != lastDataLength) {
+        lastDataLength = data.length;
+        CGFloat ratio = (CGFloat)maxLength / data.length;
+        //NSLog(@"Ratio = %.1f", ratio);
+        CGSize size = CGSizeMake((NSUInteger)(resultImage.size.width * sqrtf(ratio)),
+                                 (NSUInteger)(resultImage.size.height * sqrtf(ratio))); // Use NSUInteger to prevent white blank
+        UIGraphicsBeginImageContext(size);
+        [resultImage drawInRect:CGRectMake(0, 0, size.width, size.height)];
+        resultImage = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        data = UIImageJPEGRepresentation(resultImage, compression);
+        //NSLog(@"In compressing size loop, image size = %ld KB", data.length / 1024);
+    }
+    //NSLog(@"After compressing size loop, image size = %ld KB", data.length / 1024);
+    return data;
+}
+
+- (NSData *)compressQualityWithLengthLimit:(NSInteger)maxLength {
+    CGFloat compression = 1;
+    NSData *data = UIImageJPEGRepresentation(self, compression);
+    while (data.length > maxLength && compression > 0) {
+        compression -= 0.02;
+        data = UIImageJPEGRepresentation(self, compression); // When compression less than a value, this code dose not work
+    }
+    return data;
+}
+
+
+-(NSData *)compressMidQualityWithLengthLimit:(NSInteger)maxLength{
+    CGFloat compression = 1;
+    NSData *data = UIImageJPEGRepresentation(self, compression);
+    if (data.length < maxLength) return data;
+    CGFloat max = 1;
+    CGFloat min = 0;
+    for (int i = 0; i < 6; ++i) {
+        compression = (max + min) / 2;
+        data = UIImageJPEGRepresentation(self, compression);
+        if (data.length < maxLength * 0.9) {
+            min = compression;
+        } else if (data.length > maxLength) {
+            max = compression;
+        } else {
+            break;
+        }
+    }
+    return data;
+}
+
+-(NSData *)compressBySizeWithLengthLimit:(NSUInteger)maxLength{
+    UIImage *resultImage = self;
+    NSData *data = UIImageJPEGRepresentation(resultImage, 1);
+    NSUInteger lastDataLength = 0;
+    while (data.length > maxLength && data.length != lastDataLength) {
+        lastDataLength = data.length;
+        CGFloat ratio = (CGFloat)maxLength / data.length;
+        CGSize size = CGSizeMake((NSUInteger)(resultImage.size.width * sqrtf(ratio)),
+                                 (NSUInteger)(resultImage.size.height * sqrtf(ratio))); // Use NSUInteger to prevent white blank
+        UIGraphicsBeginImageContext(size);
+        // Use image to draw (drawInRect:), image is larger but more compression time
+        // Use result image to draw, image is smaller but less compression time
+        [resultImage drawInRect:CGRectMake(0, 0, size.width, size.height)];
+        resultImage = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        data = UIImageJPEGRepresentation(resultImage, 1);
+    }
+    return data;
+}
 
 @end

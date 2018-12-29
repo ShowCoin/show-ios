@@ -26,6 +26,7 @@
  */
 @property (readonly) NSData *jk_sha512Data;
 
+
 /**
  *  @brief  md5 NSData
  *
@@ -37,7 +38,8 @@
 /**
  *  @brief  sha1Data NSData
  *
- *  @param key 密钥
+ *  @param key 密钥\
+ 
  *
  *  @return 结果
  */
@@ -48,6 +50,8 @@
  *  @param key 密钥
  *
  *  @return 结果
+
+
  */
 - (NSData *)jk_hmacSHA256DataWithKey:(NSData *)key;
 /**
