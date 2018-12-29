@@ -135,6 +135,7 @@
 		720F860920B2F59500AD0C54 /* SLGetRyTokenAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 720F860120B2F59500AD0C54 /* SLGetRyTokenAction.m */; };
 		7217AD9A21C536A700D082E9 /* WithdrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7217AD9921C536A700D082E9 /* WithdrawViewController.m */; };
 		722957B120C80779000D0719 /* SLUserViewHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 722957B020C80778000D0719 /* SLUserViewHeader.m */; };
+		722BCF0721D78936004BFC52 /* SLInviteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 722BCF0621D78936004BFC52 /* SLInviteViewController.m */; };
 		723816B420C689AB00C3885E /* SLLevelMarkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 723816B320C689AB00C3885E /* SLLevelMarkView.m */; };
 		723816B720C68B3C00C3885E /* SLHeadPortrait.m in Sources */ = {isa = PBXBuildFile; fileRef = 723816B620C68B3C00C3885E /* SLHeadPortrait.m */; };
 		723816BE20C6ABFF00C3885E /* UIColor+Equalable.m in Sources */ = {isa = PBXBuildFile; fileRef = 723816B920C6ABFE00C3885E /* UIColor+Equalable.m */; };
@@ -473,6 +474,7 @@
 		7217AD9921C536A700D082E9 /* WithdrawViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WithdrawViewController.m; sourceTree = "<group>"; };
 		7217AD9B21C5377D00D082E9 /* SLCoinDetailInfoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLCoinDetailInfoVC.h; sourceTree = "<group>"; };
 		722957B020C80778000D0719 /* SLUserViewHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLUserViewHeader.m; sourceTree = "<group>"; };
+		722BCF0621D78936004BFC52 /* SLInviteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLInviteViewController.m; sourceTree = "<group>"; };
 		723816B220C689AB00C3885E /* SLLevelMarkView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLLevelMarkView.h; sourceTree = "<group>"; };
 		723816B320C689AB00C3885E /* SLLevelMarkView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLLevelMarkView.m; sourceTree = "<group>"; };
 		723816B620C68B3C00C3885E /* SLHeadPortrait.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLHeadPortrait.m; sourceTree = "<group>"; };
@@ -844,6 +846,14 @@
 			path = Untils;
 			sourceTree = "<group>";
 		};
+		722BCF0521D78936004BFC52 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				722BCF0621D78936004BFC52 /* SLInviteViewController.m */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
 		723816B120C688FC00C3885E /* SLLevelView */ = {
 			isa = PBXGroup;
 			children = (
@@ -882,6 +892,7 @@
 		724D4BBD20C914D10007E4E8 /* HomeView */ = {
 			isa = PBXGroup;
 			children = (
+				722BCF0521D78936004BFC52 /* VC */,
 				724D4BBE20C914E70007E4E8 /* View */,
 			);
 			path = HomeView;
@@ -1732,6 +1743,7 @@
 				435D4C3E20EDEA2900C8DC85 /* NSDate+JKCupertinoYankee.m in Sources */,
 				435E3C9220C02BB2002B7A7F /* NSDecimalNumber+JKCalculatingByString.m in Sources */,
 				4325536C20D8B53400FC0258 /* MKMapView+JKBetterMaps.m in Sources */,
+				722BCF0721D78936004BFC52 /* SLInviteViewController.m in Sources */,
 				43D87B3520EB6E7000E991D6 /* UIResponderDemoViewController.m in Sources */,
 				72A0088620FC9FE40051C643 /* SLBlankView.m in Sources */,
 				9309C73C21BB919B00AAFE87 /* UIWindow+SLMotion.m in Sources */,
