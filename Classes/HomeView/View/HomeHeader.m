@@ -245,23 +245,6 @@ static BOOL isHot = NO;
     return isHot;
 }
 
-- (void)resetHomeHeaderView {
-    _navBtnA.transform = CGAffineTransformIdentity;
-    _navBtnB.transform = CGAffineTransformIdentity;
-    _lineView.transform = CGAffineTransformIdentity;
-    _navBtnC.transform = CGAffineTransformIdentity;
-}
-
-- (void)rightButtonHidden:(BOOL)hidden {
-    UIViewAnimationOptions option = hidden ? UIViewAnimationOptionCurveEaseOut : UIViewAnimationOptionCurveEaseIn;
-    CGFloat y = hidden ? -KNaviBarHeight : 17 + KTopHeight;
-    
-    [UIView animateWithDuration:0.4 delay:0 usingSpringWithDamping:0.8 initialSpringVelocity:0.9 options:option animations:^{
-        self.rightBtn.mj_y = y;
-    } completion:nil];
-}
-
-
 
 
 @end
