@@ -626,6 +626,330 @@
 
 #pragma mark--------- btn action-----------
 
+-(void)bottomBtnFirAction:(UIButton *)sender
+{
+    sender.selected = !sender.selected;
+    _bottomBtnSec.selected = NO;
+    _bottomBtnthr.selected = NO;
+    
+    _bottomBtnfour.selected = NO;
+    [UIView animateWithDuration:0.3 animations:^{
+        self.BGImgView.transform = CGAffineTransformIdentity;
+        
+    } completion:^(BOOL finished) {
+        self.BGImgView.layer.cornerRadius = 0;
+        
+    }];
+    
+    if (sender.selected) {
+        //1
+        [UIView animateWithDuration:0.3 animations:^{
+            self.InviteCodeView.bottom = kMainScreenHeight - bottomHeight - KTabbarSafeBottomMargin;
+        }];
+        //2
+        [self.InviteImageView hide];
+        //3
+        _textView.userInteractionEnabled = YES;
+        _textView.backgroundColor = [UIColor clearColor];
+        _textView.layer.borderWidth = 0;
+        _textIcon1.hidden = YES;
+        _textIcon2.hidden = YES;
+
+
+    }else{
+        [UIView animateWithDuration:0.3 animations:^{
+            self.InviteCodeView.top = kMainScreenHeight;
+        }];
+    }
+}
+-(void)bottomBtnSecAction:(UIButton *)sender
+{
+    sender.selected = !sender.selected;
+    _bottomBtnFir.selected = NO;
+    _bottomBtnthr.selected = NO;
+    
+    _bottomBtnfour.selected = NO;
+    [UIView animateWithDuration:0.3 animations:^{
+        self.BGImgView.transform = CGAffineTransformIdentity;
+        
+    } completion:^(BOOL finished) {
+        self.BGImgView.layer.cornerRadius = 0;
+        
+    }];
+    
+    if (sender.selected) {
+        //1
+        [UIView animateWithDuration:0.3 animations:^{
+            self.InviteCodeView.top = kMainScreenHeight;
+        }];
+        //2
+        [self.InviteImageView show];
+        [self.InviteImageView addNotification];
+        //3
+        _textView.userInteractionEnabled = YES;
+        _textView.backgroundColor = [UIColor clearColor];
+        _textView.layer.borderWidth = 0;
+        _textIcon1.hidden = YES;
+        _textIcon2.hidden = YES;
+
+    }else{
+        [self.InviteImageView hide];
+    }
+    
+}
+-(void)bottomBtnthrAction:(UIButton *)sender
+{
+  
+    sender.selected = !sender.selected;
+    _bottomBtnFir.selected = NO;
+    _bottomBtnSec.selected = NO;
+    
+    _bottomBtnfour.selected = NO;
+    [UIView animateWithDuration:0.3 animations:^{
+        self.BGImgView.transform = CGAffineTransformIdentity;
+        
+    } completion:^(BOOL finished) {
+        self.BGImgView.layer.cornerRadius = 0;
+        
+    }];
+
+    if (sender.selected) {
+
+        //1
+        [UIView animateWithDuration:0.3 animations:^{
+            self.InviteCodeView.top = kMainScreenHeight;
+            [self.InviteCodeView.textfieldA resignFirstResponder];
+            [self.InviteCodeView.textfieldB resignFirstResponder];
+        }];
+        //2
+        [self.InviteImageView hide];
+        //3
+        _textView.hidden = NO;
+        _textView.layer.borderColor = kThemeAlph70WhiteColor.CGColor;
+        _textView.userInteractionEnabled = YES;
+        _textView.backgroundColor = kNavigationBGColorALPH10;
+        _textView.layer.borderWidth = 1;
+
+        [self showInputView];
+        _textIcon1.hidden = NO;
+        _textIcon2.hidden = NO;
+
+    }else{
+        _textView.userInteractionEnabled = YES;
+        _textView.backgroundColor = [UIColor clearColor];
+        _textView.layer.borderWidth = 0;
+        _textIcon1.hidden = YES;
+        _textIcon2.hidden = YES;
+
+    }
+}
+-(void)bottomBtnFourAction:(UIButton *)sender
+{
+
+    sender.selected = !sender.selected;
+    _bottomBtnFir.selected = NO;
+    _bottomBtnSec.selected = NO;
+    _bottomBtnthr.selected = NO;
+    
+    //1
+    [UIView animateWithDuration:0.3 animations:^{
+        self.InviteCodeView.top = kMainScreenHeight;
+    }];
+    //2
+    [self.InviteImageView hide];
+    //3
+    _textView.userInteractionEnabled = YES;
+    _textView.backgroundColor = [UIColor clearColor];
+    _textView.layer.borderWidth = 0;
+    _textIcon1.hidden = YES;
+    _textIcon2.hidden = YES;
+
+    if (![self.Invite_code isValidInviteCode]) {
+        if (IsStrEmpty(self.Invite_code)) {
+            [HDHud showMessageInView:self.view title:@"邀请人不能为空"];
+        }else{
+            [HDHud showMessageInView:self.view title:@"邀请人包含非法字符"];
+        }        return;
+    }
+    
+    @weakify(self);
+    if (self.rate_upload_finish && self.code_upload_finish) {
+        if (sender.selected) {
+            _BGImgView.layer.cornerRadius = 5;
+            [UIView animateWithDuration:0.3 animations:^{
+                @strongify(self);
+                self.BGImgView.transform = CGAffineTransformScale(CGAffineTransformIdentity, 0.7, 0.7);
+            }];
+            SLShareView.shared.shareType = SLShareType_Adress;
+            SLShareView.shared.shareLinkUrl = self.Invite_link;
+            SLShareView.shared.userHeader = [self snapshotImage];
+            SLShareView.shared.cancleBlock = ^{
+                @strongify(self);
+                sender.selected = NO;
+                [UIView animateWithDuration:0.3 animations:^{
+                    self.BGImgView.transform = CGAffineTransformIdentity;
+                    
+                } completion:^(BOOL finished) {
+                    self.BGImgView.layer.cornerRadius = 0;
+                    
+                }];
+                
+            };
+            SLShareView.shared.shareSuccessBlock = ^{
+                @strongify(self);
+                sender.selected = NO;
+                [UIView animateWithDuration:0.3 animations:^{
+                    @strongify(self);
+                    self.BGImgView.transform = CGAffineTransformIdentity;
+                    
+                } completion:^(BOOL finished) {
+                    @strongify(self);
+                    self.BGImgView.layer.cornerRadius = 0;
+                    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"分享成功" preferredStyle:UIAlertControllerStyleAlert];
+                    UIAlertAction *sure = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                    }];
+                    [alert addAction:sure];
+                    [self presentViewController:alert animated:YES completion:nil];
+                }];
+            };
+            [SLShareView.shared show];
+            
+        }else{
+            [UIView animateWithDuration:0.3 animations:^{
+                @strongify(self);
+                self.BGImgView.transform = CGAffineTransformIdentity;
+                
+            } completion:^(BOOL finished) {
+                @strongify(self);
+                self.BGImgView.layer.cornerRadius = 0;
+                
+            }];
+        }
+    }else{
+//        [self uploadRateAction];
+
+        if (!self.rate_upload_finish) {
+            [self uploadRateAction];
+        }else if (!self.code_upload_finish) {
+            NSString *message = @"推荐人只能修改一次，是否确认修改";
+            NSString *title = @"提示";
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+            [alert addAction:cancel];
+            UIAlertAction *sure = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                @strongify(self);
+                [self uploadCodeAction];
+            }];
+            [alert addAction:sure];
+            [self presentViewController:alert animated:YES completion:nil];
+        }
+        
+    }
+}
+-(void)showInputView{
+
+    self.definesPresentationContext = YES;
+    SLInviteInputViewController * a =[SLInviteInputViewController new];
+    a.delegate = self;
+    a.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+    @weakify(self);
+    [self presentViewController:a animated:YES completion:^{
+        @strongify(self);
+        a.textView.text = self.textView.text;
+        a.textView.textColor = self.textView.textColor;
+        [self ShowOrHideTopAndBottomView];
+
+    }];
+}
+-(void)uploadRateAction{
+    
+    self.ChangeInviteRateAction = [SLChangeInviteRateAction action];
+    self.ChangeInviteRateAction.ratio = self.Invite_ratio;
+    @weakify(self);
+    self.ChangeInviteRateAction.finishedBlock = ^(NSDictionary * dic) {
+        @strongify(self);
+        self.rate_upload_finish = YES;
+        self.inviteModel.invite_ratio = self.Invite_ratio;
+//        [AccountUserInfoModel save];
+        NSLog(@"sss");
+        if (self.inviteModel.invite_code_status.integerValue == 1 || [self.Invite_code isEqualToString:self.inviteModel.invite_code]) {
+            self.code_upload_finish = YES;
+            self.bottomBtnfour.selected = NO;
+            [self bottomBtnFourAction:self.bottomBtnfour];
+        }else{
+            
+            NSString *message = @"推荐人只能修改一次，是否确认修改";
+            NSString *title = @"提示";
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+            [alert addAction:cancel];
+            UIAlertAction *sure = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                @strongify(self);
+                [self uploadCodeAction];
+            }];
+            [alert addAction:sure];
+            [self presentViewController:alert animated:YES completion:nil];
+        }
+        
+    };
+    self.ChangeInviteRateAction.failedBlock = ^(NSError *err) {
+        @strongify(self);
+        [HDHud showMessageInView:self.view title:err.userInfo[@"msg"]];
+    };
+    [self.ChangeInviteRateAction start];
+}
+-(void)uploadCodeAction{
+    self.ChangeInviteCodeAction = [SLChangeInviteCodeAction action];
+    self.ChangeInviteCodeAction.inviteCode = self.Invite_code;
+    @weakify(self);
+    self.ChangeInviteCodeAction.finishedBlock = ^(NSDictionary * dic) {
+        @strongify(self);
+        self.code_upload_finish = YES;
+        
+        self.Invite_link  = [dic objectForKey:@"inviteLink"];
+        UIImage * img = [UIImage createNonInterpolatedUIImageFormStr:self.Invite_link type:1];
+        self.codeImageView.image = img;
+
+        self.inviteModel.invite_code_status = @"1";
+        self.inviteModel.invite_code = self.Invite_code;
+//        [AccountUserInfoModel save];
+        self.InviteCodeView.textfieldB.enabled = NO;
+        self.bottomBtnfour.selected = NO;
+        [self bottomBtnFourAction:self.bottomBtnfour];
+        NSLog(@"sss");
+    };
+    self.ChangeInviteCodeAction.failedBlock = ^(NSError *err) {
+        @strongify(self);
+        [HDHud showMessageInView:self.view title:err.userInfo[@"msg"]];
+    };
+    [self.ChangeInviteCodeAction start];
+
+}
+#pragma mark ----------- input delegate-----------
+-(void)DidInputText:(NSString *)text withColor:(UIColor *)color
+{
+    _textView.text = text;
+    _textView.textColor = color;
+    _textView.transform = CGAffineTransformIdentity;
+    _textView.width = _ContentView.width - 30*Proportion375*_ipxSize;
+    [_textView sizeToFit];
+    [_textIcon1 mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(self.textView.mas_top).with.offset(0);
+        make.left.equalTo(self.textView).with.offset(self.textView.width - 11);
+        make.size.mas_equalTo(CGSizeMake(22, 22));
+    }];
+        [_textIcon2 mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.textView).with.offset(self.textView.height -11);
+        make.left.equalTo(self.textView).with.offset(self.textView.width - 11);
+        make.size.mas_equalTo(CGSizeMake(22, 22));
+    }];
+
+//    _textView.text = text;
+
+//    _textView.width = _ContentView.width - 40*Proportion375*_ipxSize;
+    [self ShowOrHideTopAndBottomView];
+
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
