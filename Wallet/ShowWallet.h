@@ -33,6 +33,11 @@ extern const NSNotificationName ShowWalletAccountsReorderedNotification;
 // 帐户更改名称。
 extern const NSNotificationName ShowWalletAccountNicknameDidChangeNotification;
 
+// 如果账户余额发生变化。
+extern const NSNotificationName ShowWalletAccountBalanceDidChangeNotification;
+
+// 如果活动帐户事务更改(包括确认计数)
+extern const NSNotificationName ShowWalletTransactionDidChangeNotification;
 
 
 
