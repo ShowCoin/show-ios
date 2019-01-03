@@ -41,6 +41,7 @@ extern const NSNotificationName ShowWalletTransactionDidChangeNotification;
 // 账户历史更新
 extern const NSNotificationName ShowWalletAccountHistoryUpdatedNotification;
 
+
 // 激活账户更新通知
 extern const NSNotificationName ShowWalletActiveAccountDidChangeNotification;
 // 账户同步通知
