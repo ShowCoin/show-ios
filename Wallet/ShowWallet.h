@@ -20,9 +20,7 @@ typedef NSUInteger AccountIndex;
 
 #define AccountNotFound          NSIntegerMax
 
-static NSString *const ShowSessionAccount_token    = @"kSessionAccount_token";
-static NSString *const ShowSessionAccount_pass    = @"kSessionAccount_pass";
-static NSString *const ShowSessionAccount_mn    = @"kSessionAccount_mn";
+static NSString *const ShowSessionAccount_token    = 
 #pragma mark - Notifications
 
 extern const NSNotificationName ShowWalletAccountAddedNotification;
