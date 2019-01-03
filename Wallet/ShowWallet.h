@@ -15,6 +15,7 @@
 #import <ethers/TransactionInfo.h>
 #import <ethers/Account.h>
 
+
 typedef NSUInteger AccountIndex;
 
 #define AccountNotFound          NSIntegerMax
@@ -28,6 +29,7 @@ extern const NSNotificationName ShowWalletAccountAddedNotification;
 extern const NSNotificationName ShowWalletAccountRemovedNotification;
 extern const NSNotificationName ShowWalletAccountsReorderedNotification;
 
+
 // 帐户更改名称。
 extern const NSNotificationName ShowWalletAccountNicknameDidChangeNotification;
 
@@ -40,6 +42,7 @@ extern const NSNotificationName ShowWalletTransactionDidChangeNotification;
 extern const NSNotificationName ShowWalletAccountHistoryUpdatedNotification;
 // 激活账户更新通知
 extern const NSNotificationName ShowWalletActiveAccountDidChangeNotification;
+
 // 账户同步通知
 extern const NSNotificationName ShowWalletDidSyncNotification;
 
