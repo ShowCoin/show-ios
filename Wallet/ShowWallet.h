@@ -27,8 +27,8 @@ static NSString *const ShowSessionAccount_mn    = @"kSessionAccount_mn";
 
 extern const NSNotificationName ShowWalletAccountAddedNotification;
 extern const NSNotificationName ShowWalletAccountRemovedNotification;
-
 extern const NSNotificationName ShowWalletAccountsReorderedNotification;
+
 
 // 帐户更改名称。
 extern const NSNotificationName ShowWalletAccountNicknameDidChangeNotification;
