@@ -169,7 +169,16 @@
             
             chineseNum +=1;
         }
-        
+        else
+        {
+            if (length +1 >index)
+            {
+                return [self substringToIndex:chineseNum + zifuNum];
+            }
+            length+=1;
+            
+            zifuNum +=1;
+        }
     }
     return [self substringToIndex:index];
 }
