@@ -7,12 +7,7 @@
 
 #import "ShowNavigationBar.h"
 
-@interface ShowNavigationBar(){
-    UIButton   *_leftBtn;//左边的按钮
-    UIButton   *_rightBtn;//右边的按钮
-    UILabel    *_titleLabel;//标题
-    UIImageView*_titleImageView ;//标题的图
-}
+
 
 @property (weak, nonatomic)  NSLayoutConstraint *leftViewWidth;//左边视图的宽度
 @property (weak, nonatomic)  NSLayoutConstraint *rightViewWidth;//右边视图的宽度
