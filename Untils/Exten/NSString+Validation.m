@@ -206,10 +206,6 @@
     NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
     return [emailTest evaluateWithObject:self];
 }
-- (BOOL)isMatchesRegularExp:(NSString *)regex {
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
-    return [predicate evaluateWithObject:self];
-}
 + (BOOL)isValidString:(NSString *)value
 {
     return (    ( value ) &&
