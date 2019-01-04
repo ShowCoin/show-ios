@@ -210,5 +210,17 @@
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
     return [predicate evaluateWithObject:self];
 }
++ (BOOL)isValidString:(NSString *)value
+{
+    return (    ( value ) &&
+            ( [value isKindOfClass:[NSString class]] ) &&
+            ( ![@"" isEqualToString:value] ) &&
+            ( value.length > 0 ) &&
+            ( ![value isKindOfClass:[NSNull class]] ) &&
+            ( ![@"(null)" isEqualToString:value] ) &&
+            ( ![@"(null)\n" isEqualToString:value] ) &&
+            ( [[value stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length] > 0 )
+            );
+}
 
 @end
