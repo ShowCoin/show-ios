@@ -182,7 +182,15 @@
     }
     return [self substringToIndex:index];
 }
-
+//检测中文或者中文符号
+- (BOOL)validateChineseChar:(NSString *)string
+{
+    NSString *nameRegEx = @"[\\u0391-\\uFFE5]";
+    if (![string isMatchesRegularExp:nameRegEx]) {
+        return NO;
+    }
+    return YES;
+}
 //检测中文
 - (BOOL)validateChinese:(NSString*)string
 {
