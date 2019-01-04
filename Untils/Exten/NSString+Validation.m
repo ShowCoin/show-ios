@@ -116,7 +116,11 @@
         count++;
         a /= 10;
     }
-   
+    NSMutableString *string = [NSMutableString stringWithString:num];
+    NSMutableString *newstring = [NSMutableString string];
+    while (count > 3) {
+        
+    }
     [newstring insertString:string atIndex:0];
     return newstring;
 }
