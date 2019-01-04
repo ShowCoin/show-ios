@@ -10,6 +10,7 @@
 @interface ShowNavigationBar(){
     UIButton   *_leftBtn;//左边的按钮
     UIButton   *_rightBtn;//右边的按钮
+    UILabel    *_titleLabel;//标题
 }
 
 @property (weak, nonatomic)  NSLayoutConstraint *leftViewWidth;//左边视图的宽度
