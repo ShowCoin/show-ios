@@ -191,7 +191,15 @@
     }
     return YES;
 }
-
+//检测中文
+- (BOOL)validateChinese:(NSString*)string
+{
+    NSString *nameRegEx = @"[\u4e00-\u9fa5]";
+    if (![string isMatchesRegularExp:nameRegEx]) {
+        return NO;
+    }
+    return YES;
+}
 //检测url
 - (BOOL)isUrlString {
     NSString *emailRegex = @"[a-zA-z]+://.*";
