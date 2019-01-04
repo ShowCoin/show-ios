@@ -111,7 +111,13 @@
 {
     int count = 0;
     long long int a = num.longLongValue;
-    
+    while (a != 0)
+    {
+        count++;
+        a /= 10;
+    }
+   
+    [newstring insertString:string atIndex:0];
     return newstring;
 }
 - (NSInteger)getStringLenthOfBytes
