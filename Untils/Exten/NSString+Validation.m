@@ -75,6 +75,13 @@
 }
 
 
+/*判断是否为空字符串*/
+- (BOOL)isEmpty {
+    NSString *stricterFilterString = @"^\[ \t]*$";
+    NSPredicate *emptyTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", stricterFilterString];
+    return [emptyTest evaluateWithObject:self];
+    
+}
 
 /*去除电话号码中的特殊字符*/
 - (NSString*)extractNumber{
