@@ -92,7 +92,20 @@
     return trimmedString;
 }
 
-
+/*隐藏身份证中间的几个数字*/
+- (NSString *)ittemDisposeIdcardNumber:(NSString *)idcardNumber;
+{
+    //星号字符串
+    NSString *xinghaoStr = @"";
+    //动态计算星号的个数
+    for (int i  = 0; i < idcardNumber.length - 7; i++) {
+        xinghaoStr = [xinghaoStr stringByAppendingString:@"*"];
+    }
+    //身份证号取前3后四中间以星号拼接
+    idcardNumber = [NSString stringWithFormat:@"%@%@%@",[idcardNumber substringToIndex:3],xinghaoStr,[idcardNumber substringFromIndex:idcardNumber.length-4]];
+    //返回处理好的身份证号
+    return idcardNumber;
+}
 
 +(NSString *)countNumAndChangeformat:(NSString *)num
 {
