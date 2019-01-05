@@ -134,6 +134,11 @@
 		43D87B3520EB6E7000E991D6 /* UIResponderDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D87B3320EB6E6F00E991D6 /* UIResponderDemoViewController.m */; };
 		720F860920B2F59500AD0C54 /* SLGetRyTokenAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 720F860120B2F59500AD0C54 /* SLGetRyTokenAction.m */; };
 		7217AD9A21C536A700D082E9 /* WithdrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7217AD9921C536A700D082E9 /* WithdrawViewController.m */; };
+		7217BE1D21E0D21B00C1E58F /* NSDate+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7217BE1121E0D21A00C1E58F /* NSDate+Additions.m */; };
+		7217BE1E21E0D21B00C1E58F /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 7217BE1421E0D21A00C1E58F /* NSData+ImageContentType.m */; };
+		7217BE2021E0D21B00C1E58F /* NSString+Binary.m in Sources */ = {isa = PBXBuildFile; fileRef = 7217BE1721E0D21A00C1E58F /* NSString+Binary.m */; };
+		7217BE2121E0D21B00C1E58F /* NSString+Json.m in Sources */ = {isa = PBXBuildFile; fileRef = 7217BE1821E0D21A00C1E58F /* NSString+Json.m */; };
+		7217BE2221E0D21B00C1E58F /* NSData+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 7217BE1C21E0D21A00C1E58F /* NSData+Image.m */; };
 		722957B120C80779000D0719 /* SLUserViewHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 722957B020C80778000D0719 /* SLUserViewHeader.m */; };
 		722BCF0721D78936004BFC52 /* SLInviteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 722BCF0621D78936004BFC52 /* SLInviteViewController.m */; };
 		723816B420C689AB00C3885E /* SLLevelMarkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 723816B320C689AB00C3885E /* SLLevelMarkView.m */; };
@@ -473,6 +478,17 @@
 		7217AD9821C5368100D082E9 /* WithdrawViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WithdrawViewController.h; sourceTree = "<group>"; };
 		7217AD9921C536A700D082E9 /* WithdrawViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WithdrawViewController.m; sourceTree = "<group>"; };
 		7217AD9B21C5377D00D082E9 /* SLCoinDetailInfoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLCoinDetailInfoVC.h; sourceTree = "<group>"; };
+		7217BE1121E0D21A00C1E58F /* NSDate+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Additions.m"; sourceTree = "<group>"; };
+		7217BE1221E0D21A00C1E58F /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
+		7217BE1321E0D21A00C1E58F /* NSString+Binary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Binary.h"; sourceTree = "<group>"; };
+		7217BE1421E0D21A00C1E58F /* NSData+ImageContentType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+ImageContentType.m"; sourceTree = "<group>"; };
+		7217BE1521E0D21A00C1E58F /* NSData+Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Image.h"; sourceTree = "<group>"; };
+		7217BE1721E0D21A00C1E58F /* NSString+Binary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Binary.m"; sourceTree = "<group>"; };
+		7217BE1821E0D21A00C1E58F /* NSString+Json.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Json.m"; sourceTree = "<group>"; };
+		7217BE1921E0D21A00C1E58F /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
+		7217BE1A21E0D21A00C1E58F /* NSString+Json.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Json.h"; sourceTree = "<group>"; };
+		7217BE1B21E0D21A00C1E58F /* NSDate+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Additions.h"; sourceTree = "<group>"; };
+		7217BE1C21E0D21A00C1E58F /* NSData+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Image.m"; sourceTree = "<group>"; };
 		722957B020C80778000D0719 /* SLUserViewHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLUserViewHeader.m; sourceTree = "<group>"; };
 		722BCF0621D78936004BFC52 /* SLInviteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLInviteViewController.m; sourceTree = "<group>"; };
 		723816B220C689AB00C3885E /* SLLevelMarkView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLLevelMarkView.h; sourceTree = "<group>"; };
@@ -761,6 +777,24 @@
 				434DDB4B20C92B4E00191FC1 /* JKCategories */,
 			);
 			path = Untils;
+			sourceTree = "<group>";
+		};
+		7217BE1021E0D20600C1E58F /* exten */ = {
+			isa = PBXGroup;
+			children = (
+				7217BE1521E0D21A00C1E58F /* NSData+Image.h */,
+				7217BE1C21E0D21A00C1E58F /* NSData+Image.m */,
+				7217BE1921E0D21A00C1E58F /* NSData+ImageContentType.h */,
+				7217BE1421E0D21A00C1E58F /* NSData+ImageContentType.m */,
+				7217BE1B21E0D21A00C1E58F /* NSDate+Additions.h */,
+				7217BE1121E0D21A00C1E58F /* NSDate+Additions.m */,
+				7217BE1221E0D21A00C1E58F /* NSString+Additions.h */,
+				7217BE1321E0D21A00C1E58F /* NSString+Binary.h */,
+				7217BE1721E0D21A00C1E58F /* NSString+Binary.m */,
+				7217BE1A21E0D21A00C1E58F /* NSString+Json.h */,
+				7217BE1821E0D21A00C1E58F /* NSString+Json.m */,
+			);
+			path = exten;
 			sourceTree = "<group>";
 		};
 		722BCF0521D78936004BFC52 /* VC */ = {
@@ -1466,6 +1500,7 @@
 		9391AA7F20BF06EB00D520F1 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				7217BE1021E0D20600C1E58F /* exten */,
 				72506F5E21CD04D500361964 /* SLNavigationController */,
 				72506F5A21CD03E200361964 /* headPortrait */,
 				723816B820C6ABFE00C3885E /* SLLinkLabel */,
@@ -1737,12 +1772,14 @@
 				43205DE020DD269D00AD6952 /* UITextView+JKPlaceHolder.m in Sources */,
 				725282F221BE666A00802C09 /* ShowAccountTableHeader.m in Sources */,
 				4355A4DC20FF11000020B7DE /* UINavigationController+JKStackManager.m in Sources */,
+				7217BE1E21E0D21B00C1E58F /* NSData+ImageContentType.m in Sources */,
 				43205DE320DD26C500AD6952 /* UITextView+JKPinchZoom.m in Sources */,
 				9311B42021C107E3009C9A1D /* UIGestureRecognizer+BlocksKit.m in Sources */,
 				43D24A952094B4C500C59AC8 /* ShowNavigationBar.m in Sources */,
 				435D4C3E20EDEA2900C8DC85 /* NSDate+JKCupertinoYankee.m in Sources */,
 				435E3C9220C02BB2002B7A7F /* NSDecimalNumber+JKCalculatingByString.m in Sources */,
 				4325536C20D8B53400FC0258 /* MKMapView+JKBetterMaps.m in Sources */,
+				7217BE1D21E0D21B00C1E58F /* NSDate+Additions.m in Sources */,
 				722BCF0721D78936004BFC52 /* SLInviteViewController.m in Sources */,
 				43D87B3520EB6E7000E991D6 /* UIResponderDemoViewController.m in Sources */,
 				72A0088620FC9FE40051C643 /* SLBlankView.m in Sources */,
@@ -1858,6 +1895,7 @@
 				9309C73F21BB91D600AAFE87 /* NSString+Json.m in Sources */,
 				7217AD9A21C536A700D082E9 /* WithdrawViewController.m in Sources */,
 				4325535A20CFE8B100FC0258 /* UIWebVIew+JKSwipeGesture.m in Sources */,
+				7217BE2221E0D21B00C1E58F /* NSData+Image.m in Sources */,
 				72A0088920FCA0710051C643 /* SLSafeCenterCell.m in Sources */,
 				431CB4C920F498EF0043B0AC /* NSObject+JKGCD.m in Sources */,
 				435D4C9820F0931100C8DC85 /* NSNotificationCenter+JKMainThread.m in Sources */,
@@ -1866,6 +1904,7 @@
 				72506F6721CD04D500361964 /* SLNavigationViewController.m in Sources */,
 				435D4C4120EDEA4C00C8DC85 /* NSDate+JKExtension.m in Sources */,
 				43D87B2920EB6D9900E991D6 /* UIScrollView+EmptyDataSet.m in Sources */,
+				7217BE2121E0D21B00C1E58F /* NSString+Json.m in Sources */,
 				437921F020ECC4B100B2EC88 /* NSData+JKHash.m in Sources */,
 				4325536F20D8B56400FC0258 /* MKMapView+JKMoveLogo.m in Sources */,
 				43205DD420DD263400AD6952 /* UIView+Debug.m in Sources */,
@@ -1880,6 +1919,7 @@
 				725282EE21BE65B300802C09 /* CoinDetailCell.m in Sources */,
 				43291F5020E520E0000C3C15 /* UITableView+FDKeyedHeightCache.m in Sources */,
 				437B0A5D20F3602F00E93844 /* NSObject+JKAddProperty.m in Sources */,
+				7217BE2021E0D21B00C1E58F /* NSString+Binary.m in Sources */,
 				431CB4CF20F4991D0043B0AC /* NSObject+JKReflection.m in Sources */,
 				43D87B2C20EB6DCE00E991D6 /* UIScrollView+APParallaxHeader.m in Sources */,
 				4325536320D8B4CD00FC0258 /* CATransactionDemoViewController.m in Sources */,
