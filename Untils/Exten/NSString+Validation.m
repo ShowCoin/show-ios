@@ -53,6 +53,12 @@
     return [integerTest evaluateWithObject:self];
 }
 
+/*判断是否有效的正整数*/
+-(BOOL)isValidPositiveInteger {
+    NSString *stricterFilterString = @"^[0-9]*[1-9][0-9]*$";
+    NSPredicate *integerTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", stricterFilterString];
+    return [integerTest evaluateWithObject:self];
+}
 /*判断是否有效的浮点数*/
 - (BOOL)isValidFloat {
     NSString *stricterFilterString = @"^(\\d*\\.)?\\d+$";
