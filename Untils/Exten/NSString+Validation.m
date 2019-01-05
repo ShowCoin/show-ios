@@ -59,7 +59,12 @@
     NSPredicate *integerTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", stricterFilterString];
     return [integerTest evaluateWithObject:self];
 }
-
+/*判断是否有效的浮点数*/
+- (BOOL)isValidFloat {
+    NSString *stricterFilterString = @"^(\\d*\\.)?\\d+$";
+    NSPredicate *floatTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", stricterFilterString];
+    return [floatTest evaluateWithObject:self];
+}
 
 /*判断是否有效的正浮点数*/
 - (BOOL)isValidPositiveFloat {
