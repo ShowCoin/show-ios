@@ -411,5 +411,77 @@
     
     return frame.size.height;
 }
+//data转换为十六进制的string
++ (NSString *)hexStringFromData:(NSData *)myD{
+    
+    Byte *bytes = (Byte *)[myD bytes];
+    //下面是Byte 转换为16进制。
+    NSString *hexStr=@"";
+    for(int i=0;i<[myD length];i++)
+        
+    {
+        NSString *newHexStr = [NSString stringWithFormat:@"%x",bytes[i]&0xff];///16进制数
+        
+        if([newHexStr length]==1)
+            
+            hexStr = [NSString stringWithFormat:@"%@0%@",hexStr,newHexStr];
+        
+        else
+            
+            hexStr = [NSString stringWithFormat:@"%@%@",hexStr,newHexStr];
+    }
+    NSLog(@"hex = %@",hexStr);
+    
+    return hexStr;
+}
++ (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString {
+    if (jsonString == nil) {
+        return nil;
+    }
+    
+    NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *err;
+    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:jsonData  options:NSJSONReadingMutableContainers error:&err];
+    if(err) {
+        return nil;
+    }
+    return dic;
+}
+-(NSString *)validNameString{
+    if(self.length >8){
+        NSString *newString = [self substringToIndex:7];
+        return [NSString stringWithFormat:@"%@...",newString];
+    }else{
+        return self;
+    }
+}
 
+
++ (BOOL)isSafePhonePassword:(NSString *)strPwd{
+    NSString *passWordRegex = @"^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{8,32}$";   // 数字，字符或符号至少两种
+    NSPredicate *regextestcm = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", passWordRegex];
+    
+    if ([regextestcm evaluateWithObject:strPwd] == YES)
+    {
+        return YES;
+    }
+    else
+    {
+        return NO;
+    }
+}
++ (BOOL)isSafePassword:(NSString *)strPwd{
+    NSString *passWordRegex = @"^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,32}$";   // 数字，字符或符号至少两种
+    NSPredicate *regextestcm = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", passWordRegex];
+    
+    if ([regextestcm evaluateWithObject:strPwd] == YES)
+    {
+        return YES;
+    }
+    else
+    {
+        return NO;
+    }
+    
+}
 @end
