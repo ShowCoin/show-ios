@@ -38,7 +38,14 @@
     NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
     return [emailTest evaluateWithObject:self];
 }
-
+/*帐号密码格式*/
+-(BOOL)isValidPassword
+{
+    NSString *stricterFilterString = @"^[A-Za-z0-9!@#$%^&*.~/{}|()'\"?><,.`+-=_:;\\\\[]]\\\[]{6,16}$";
+    //    NSLog(@"stricterFilterString = %@",stricterFilterString);
+    NSPredicate *passwordTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", stricterFilterString];
+    return [passwordTest evaluateWithObject:self];
+}
 /*判断是否有效的整数*/
 -(BOOL)isValidInteger {
     NSString *stricterFilterString = @"^\\d+$";
