@@ -83,14 +83,6 @@
     
 }
 
-/*去除电话号码中的特殊字符*/
-- (NSString*)extractNumber{
-    NSCharacterSet *doNotWant = [NSCharacterSet characterSetWithCharactersInString:@" @／：；（）¥「」、[]{}#%-*+=_\\|~＜＞$€^•’@#$%^&*()_+’\\”"];
-    NSString *trimmedString = [[[self componentsSeparatedByCharactersInSet:doNotWant]componentsJoinedByString: @""] stringByReplacingOccurrencesOfString:@" " withString:@""];
-    
-    
-    return trimmedString;
-}
 
 /*隐藏身份证中间的几个数字*/
 - (NSString *)ittemDisposeIdcardNumber:(NSString *)idcardNumber;
