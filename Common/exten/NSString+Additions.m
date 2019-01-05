@@ -347,4 +347,69 @@
 }
 
 
+//设置添加行间距后返回的内容
+- (NSAttributedString *)spacingWithFont:(UIFont *)font LineSpacing:(NSInteger)spacing {
+    
+    //富文本设置文字行间距
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc]init];
+    paragraphStyle.lineSpacing = spacing;
+    
+    NSDictionary *attributes = @{ NSFontAttributeName:font, NSParagraphStyleAttributeName:paragraphStyle};
+    NSAttributedString * attributed = [[NSAttributedString alloc]initWithString:self attributes:attributes];
+    return attributed;
+}
+
+//设置添加行间距后返回的内容
+- (NSAttributedString *)attributedStringWithFontSize:(CGFloat)fontSize {
+    
+    //富文本设置文字行间距
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc]init];
+    paragraphStyle.lineSpacing = TEXT_SPACING_FOR_LINE;
+    
+    NSDictionary *attributes = @{ NSFontAttributeName:[UIFont systemFontOfSize:fontSize], NSParagraphStyleAttributeName:paragraphStyle};
+    NSAttributedString * attributed = [[NSAttributedString alloc]initWithString:self attributes:attributes];
+    return attributed;
+}
+
+//设置添加行间距后返回的内容
+- (NSAttributedString *)attributedStringWithFontSize:(CGFloat)fontSize textColor:(UIColor *)color {
+    
+    //富文本设置文字行间距
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc]init];
+    paragraphStyle.lineSpacing = TEXT_SPACING_FOR_LINE;
+    
+    NSDictionary *attributes = @{ NSFontAttributeName:[UIFont systemFontOfSize:fontSize], NSForegroundColorAttributeName:color, NSParagraphStyleAttributeName:paragraphStyle};
+    NSAttributedString * attributed = [[NSAttributedString alloc]initWithString:self attributes:attributes];
+    return attributed;
+}
+
+//设置内容末尾显示省略号
+- (NSAttributedString *)attributedStringForTruncatingTail:(NSAttributedString *)attributedString {
+    
+    //富文本设置文字行间距
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc]init];
+    paragraphStyle.lineBreakMode = NSLineBreakByTruncatingTail;
+    NSDictionary *attributes = @{ NSParagraphStyleAttributeName:paragraphStyle };
+    NSAttributedString * attributed = [[NSAttributedString alloc]initWithString:self attributes:attributes];
+    return attributed;
+}
+
+//根据添加行间距后的内容计算高度
+- (CGFloat)heightOfAttributedText:(NSAttributedString*)attributed width:(float)width {
+    
+    //获取设置文本间距以后的高度
+    CGRect frame = [attributed boundingRectWithSize:CGSizeMake(width, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading context:nil];
+
+    return frame.size.height;
+}
+
+//根据添加行间距后的内容计算高度
+- (CGFloat)heightOfAttributedText:(NSAttributedString*)attributed width:(float)width limitedHeight:(CGFloat)height {
+    
+    //获取设置文本间距以后的高度
+    CGRect frame = [attributed boundingRectWithSize:CGSizeMake(width, height) options:NSStringDrawingUsesLineFragmentOrigin context:nil];
+    
+    return frame.size.height;
+}
+
 @end
