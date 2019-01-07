@@ -498,10 +498,7 @@ CLLocationAgeFilter const kCLLocationAgeFilterNone = 0.0;
     [(CLLocationManagerBlocks *)self.blocksDelegate setUpdateAccuracyFilter:updateAccuracyFilter];
 }
 
-- (CLLocationAgeFilter)updateLocationAgeFilter
-{
-    return [(CLLocationManagerBlocks *)self.blocksDelegate updateLocationAgeFilter];
-}
+
 
 - (void)setUpdateLocationAgeFilter:(CLLocationAgeFilter)updateLocationAgeFilter
 {
