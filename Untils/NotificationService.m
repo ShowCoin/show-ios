@@ -37,6 +37,8 @@
     NSString * documentsDirectoryPath = [paths firstObject];
     
     NSString * localPath = [self saveImage:imageFromUrl withFileName:@"MyImage" ofType:@"png" inDirectory:documentsDirectoryPath];
+    
+    
     if (localPath && ![localPath isEqualToString:@""]) {
         UNNotificationAttachment * attachment = [UNNotificationAttachment attachmentWithIdentifier:@"photo" URL:[NSURL URLWithString:[@"file://" stringByAppendingString:localPath]] options:nil error:nil];
         if (attachment) {
