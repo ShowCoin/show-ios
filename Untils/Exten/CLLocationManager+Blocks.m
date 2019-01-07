@@ -513,10 +513,7 @@ CLLocationAgeFilter const kCLLocationAgeFilterNone = 0.0;
     return [(CLLocationManagerBlocks *)self.blocksDelegate authorizationDescription];
 }
 
-- (void)setAuthorizationDescription:(CLLocationUpdateAuthorizationDescription)authorizationDescription
-{
-    [(CLLocationManagerBlocks *)self.blocksDelegate setAuthorizationDescription:authorizationDescription];
-}
+
 
 
 #pragma mark - Class Delegate
