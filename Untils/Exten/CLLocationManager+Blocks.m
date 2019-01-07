@@ -521,13 +521,6 @@ CLLocationAgeFilter const kCLLocationAgeFilterNone = 0.0;
 
 #pragma mark - Class Delegate
 
-- (id)setBlocksDelegate
-{
-    id blocksDelegate = [[CLLocationManagerBlocks alloc] init];
-    [self setDelegate:blocksDelegate];
-    
-    objc_setAssociatedObject(self, CLLocationManagerBlocksDelegateKey, blocksDelegate, OBJC_ASSOCIATION_RETAIN);
-    return blocksDelegate;
-}
+
 
 @end
