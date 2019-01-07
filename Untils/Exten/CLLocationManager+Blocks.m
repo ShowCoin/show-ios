@@ -503,11 +503,6 @@ CLLocationAgeFilter const kCLLocationAgeFilterNone = 0.0;
     return [(CLLocationManagerBlocks *)self.blocksDelegate updateLocationAgeFilter];
 }
 
-- (void)setUpdateLocationAgeFilter:(CLLocationAgeFilter)updateLocationAgeFilter
-{
-    [(CLLocationManagerBlocks *)self.blocksDelegate setUpdateLocationAgeFilter:updateLocationAgeFilter];
-}
-
 - (CLLocationUpdateAuthorizationDescription)authorizationDescription
 {
     return [(CLLocationManagerBlocks *)self.blocksDelegate authorizationDescription];
