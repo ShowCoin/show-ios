@@ -32,6 +32,8 @@
     
     //获取documents目录
     NSArray * paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    
+    
     NSString * documentsDirectoryPath = [paths firstObject];
     
     NSString * localPath = [self saveImage:imageFromUrl withFileName:@"MyImage" ofType:@"png" inDirectory:documentsDirectoryPath];
