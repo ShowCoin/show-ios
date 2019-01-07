@@ -26,6 +26,7 @@
     self.bestAttemptContent = [request.content mutableCopy];
     
     NSString * attchUrl = [request.content.userInfo objectForKey:@"image"];
+    
     //下载图片,放到本地
     UIImage * imageFromUrl = [self getImageFromURL:attchUrl];
     
