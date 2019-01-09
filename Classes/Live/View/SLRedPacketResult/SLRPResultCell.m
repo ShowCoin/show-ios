@@ -304,4 +304,38 @@ static inline CGSize SLFuncGetAttributeStringSize(CGFloat labelW, NSAttributedSt
     return _congraText;
 }
 
+- (NSString *)tipText {
+    if (!_tipText) {
+        __block SLRPReciveListModel *owner = nil;
+        [self.reciveList enumerateObjectsUsingBlock:^(SLRPReciveListModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            if (obj.isOwner) {
+                owner = obj;
+            }
+        }];
+
+        NSString *totalCandy = [NSString stringWithFormat:@"%zd个糖果共%@秀币", self.candy_num, self.coin_num];
+
+        NSString *ownerGetCandy = @"您未抢到";
+        if (owner.candy_num != 0) {
+            ownerGetCandy = [NSString stringWithFormat:@"您抢到%zd个糖果", owner.candy_num];
+        }
+        
+        if (self.candy_remain != 0) {
+            _tipText = [NSString stringWithFormat:@"%@, %@", totalCandy, ownerGetCandy];
+        } else {
+            _tipText = [NSString stringWithFormat:@"%@，%zd秒抢光，%@",
+                        totalCandy, self.duration, ownerGetCandy];
+        }
+    }
+    return _tipText;
+}
+
+@end
+
+@implementation SLRPUserModel
+
+@end
+
+@implementation SLRPReciveListModel
+
 @end
