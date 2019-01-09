@@ -200,4 +200,13 @@ static inline CGSize SLFuncGetAttributeStringSize(CGFloat labelW, NSAttributedSt
     return _sexView;
 }
 
+- (UILabel *)nameLabel {
+    if (!_nameLabel) {
+        _nameLabel = [[UILabel alloc] init];
+        _nameLabel.textColor = kBlackThemetextColor;
+        _nameLabel.font = [UIFont systemFontOfSize:12];
+    }
+    return _nameLabel;
+}
+
 @end
