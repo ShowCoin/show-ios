@@ -45,4 +45,19 @@ static inline CGSize SLFuncGetAttributeStringSize(CGFloat labelW, NSAttributedSt
     return self;
 }
 
+- (void)setupUI {
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
+    self.contentView.backgroundColor = [UIColor clearColor];
+    self.backgroundColor = [UIColor clearColor];
+    
+    [self.contentView addSubview:self.userView];
+    [self.contentView addSubview:self.nameLabel];
+    [self.contentView addSubview:self.sexView];
+    [self.contentView addSubview:self.coinLabel];
+    [self.contentView addSubview:self.perfectLabel];
+    [self.contentView addSubview:self.candyLabel];
+    [self.contentView addSubview:self.masterLevelView];
+    [self.contentView addSubview:self.coinLevelView];
+}
+
 @end
