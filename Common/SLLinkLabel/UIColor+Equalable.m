@@ -16,6 +16,7 @@
     
     UIColor *(^convertColorToRGBSpace)(UIColor*) = ^(UIColor *color) {
         if(CGColorSpaceGetModel(CGColorGetColorSpace(color.CGColor)) == kCGColorSpaceModelMonochrome) {
+            const CGFloat *oldComponents = CGColorGetComponents(color.CGColor);
             
     
     return [selfColor isEqual:otherColor];
