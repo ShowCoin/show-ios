@@ -33,4 +33,8 @@ static inline CGSize SLFuncGetAttributeStringSize(CGFloat labelW, NSAttributedSt
 
 @implementation SLRPResultCell
 
++ (NSString *)kCellID {
+    return NSStringFromClass([self class]);
+}
+
 @end
