@@ -43,7 +43,7 @@ CLLocationAgeFilter const kCLLocationAgeFilterNone = 0.0;
 @property (nonatomic, copy) ShouldDisplayHeadingCalibrationBlock shouldDisplayCalibrationBlock;
 @property (nonatomic, copy) DidDetermineStateBlock didDetermineStateBlock;
 @property (nonatomic, copy) DidRangeBeaconsBlock didRangeBeaconsBlock;
-@property (nonatomic, copy) DidEnterRegionBlock didEnterRegionBlock;
+@property (nonatomic, copy) RangingBeaconsDidFailForRegionBlock rangingBeaconsDidFailForRegionBlock;
 @property (nonatomic, copy) DidExitRegionBlock didExitRegionBlock;
 @property (nonatomic, copy) DidFailWithErrorBlock didFailWithErrorBlock;
 @property (nonatomic, copy) MonitoringDidFailForRegionWithBlock monitoringDidFailForRegionWithBlock;
