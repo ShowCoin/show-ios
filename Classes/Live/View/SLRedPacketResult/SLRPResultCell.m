@@ -67,4 +67,19 @@ static inline CGSize SLFuncGetAttributeStringSize(CGFloat labelW, NSAttributedSt
     CGFloat w = CGRectGetWidth(self.frame);
     CGFloat h = CGRectGetHeight(self.frame);
     
+    CGFloat viewX = kRPMargin;
+    CGFloat viewH = kHeaderViewWH;
+    CGFloat viewY = (h - viewH) / 2;
+    CGFloat viewW = viewH;
+    self.userView.frame = CGRectMake(viewX, viewY, viewW, viewH);
+    
+    viewX = CGRectGetMaxX(self.userView.frame) + 12;
+    viewW = w / 2;
+    viewH = self.nameLabel.font.lineHeight;
+    self.nameLabel.frame = CGRectMake(viewX, viewY, viewW, viewH);
+    
+    viewY = CGRectGetMaxY(self.nameLabel.frame) + 2;
+    viewW = viewH = 12;
+    self.sexView.frame = CGRectMake(viewX, viewY, viewW, viewH);
+    
 @end
