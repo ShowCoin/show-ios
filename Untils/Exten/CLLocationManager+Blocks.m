@@ -33,7 +33,6 @@ CLLocationAgeFilter const kCLLocationAgeFilterNone = 0.0;
 
 @property (nonatomic, assign) CLUpdateAccuracyFilter updateAccuracyFilter;
 @property (nonatomic, assign) CLLocationAgeFilter updateLocationAgeFilter;
-@property (nonatomic, assign) CLLocationUpdateAuthorizationDescription authorizationDescription;
 
 @property (nonatomic, copy) LocationManagerUpdateBlock updateBlock;
 @property (nonatomic, copy) HeadingUpdateBlock headingUpdateBlock;
