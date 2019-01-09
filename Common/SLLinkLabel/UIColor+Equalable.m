@@ -32,6 +32,8 @@
     CGColorSpaceRelease(colorSpaceRGB);
     
     return [selfColor isEqual:otherColor];
+    
+  
 }
 
 @end
