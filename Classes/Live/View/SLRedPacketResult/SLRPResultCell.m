@@ -293,4 +293,15 @@ static inline CGSize SLFuncGetAttributeStringSize(CGFloat labelW, NSAttributedSt
     return _coinNameText;
 }
 
+- (NSString *)congraText {
+    if (!_congraText) {
+        if (IsValidString(self.comment)) {
+            _congraText = self.comment;
+        } else {
+            _congraText = @"恭喜发财，大吉大利";
+        }
+    }
+    return _congraText;
+}
+
 @end
