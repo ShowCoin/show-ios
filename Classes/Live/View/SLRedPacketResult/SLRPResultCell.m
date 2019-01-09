@@ -193,4 +193,11 @@ static inline CGSize SLFuncGetAttributeStringSize(CGFloat labelW, NSAttributedSt
     return _coinLabel;
 }
 
+- (UIImageView *)sexView {
+    if (!_sexView) {
+        _sexView = [[UIImageView alloc] init];
+    }
+    return _sexView;
+}
+
 @end
