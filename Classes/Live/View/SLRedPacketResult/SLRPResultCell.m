@@ -159,4 +159,28 @@ static inline CGSize SLFuncGetAttributeStringSize(CGFloat labelW, NSAttributedSt
     return _candyLabel;
 }
 
+- (UILabel *)perfectLabel {
+    if (!_perfectLabel) {
+        _perfectLabel = [[UILabel alloc] init];
+        _perfectLabel.textColor = kThemeOrangeColor;
+        _perfectLabel.textAlignment = NSTextAlignmentRight;
+        _perfectLabel.font = [UIFont systemFontOfSize:10];
+        
+        NSTextAttachment *attachment = [[NSTextAttachment alloc] init];
+        attachment.image = [UIImage imageNamed:@"redpacket_perfect"];
+        CGFloat imgH = _perfectLabel.font.lineHeight;
+        CGFloat imgW = (attachment.image.size.width / attachment.image.size.height) * imgH;
+        // CGFloat textPaddingTop = (_perfectLabel.font.lineHeight - _perfectLabel.font.pointSize) / 2;
+        attachment.bounds = CGRectMake(0, -2, imgW, imgH);
+        NSAttributedString *imageAtt = [NSAttributedString attributedStringWithAttachment:attachment];
+        
+        NSString *text = @" 手气最佳";
+        NSDictionary *dict = @{NSFontAttributeName : _perfectLabel.font};
+        NSMutableAttributedString *attr = [[NSMutableAttributedString alloc] initWithString:text attributes:dict];
+        [attr insertAttributedString:imageAtt atIndex:0];
+        _perfectLabel.attributedText = attr;
+    }
+    return _perfectLabel;
+}
+
 @end
