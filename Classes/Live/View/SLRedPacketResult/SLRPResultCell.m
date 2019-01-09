@@ -253,4 +253,8 @@ static inline CGSize SLFuncGetAttributeStringSize(CGFloat labelW, NSAttributedSt
              };
 }
 
++ (NSArray *)mj_ignoredPropertyNames {
+    return @[@"congraText", @"tipText", @"coinNameText", @"owner", @"rmb_rate"];
+}
+
 @end
