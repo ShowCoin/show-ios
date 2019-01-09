@@ -14,8 +14,7 @@
 - (BOOL)isEqualToColor:(UIColor *)otherColor {
     CGColorSpaceRef colorSpaceRGB = CGColorSpaceCreateDeviceRGB();
     
-    
-    
+    UIColor *(^convertColorToRGBSpace)(UIColor*) = 
   
 }
 
