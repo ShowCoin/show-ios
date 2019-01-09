@@ -146,4 +146,17 @@ static inline CGSize SLFuncGetAttributeStringSize(CGFloat labelW, NSAttributedSt
         self.avatarBlock();
     }
 }
+
+#pragma mark - lazy
+
+- (UILabel *)candyLabel {
+    if (!_candyLabel) {
+        _candyLabel = [[UILabel alloc] init];
+        _candyLabel.textColor = kBlackThemetextColor;
+        _candyLabel.font = [UIFont systemFontOfSize:16];
+        _candyLabel.text = @"糖果";
+    }
+    return _candyLabel;
+}
+
 @end
