@@ -338,4 +338,22 @@ static inline CGSize SLFuncGetAttributeStringSize(CGFloat labelW, NSAttributedSt
 
 @implementation SLRPReciveListModel
 
++ (NSArray *)mj_ignoredPropertyNames {
+    return @[@"perfect", @"owner", @"coinType", @"coinText", @"sexImage", @"candyText"];
+}
+
++ (instancetype)ownerModel {
+    SLRPReciveListModel *model = [[self alloc] init];
+    model.candy_num = 0;
+    model.coin_num = @"0";
+    model.avatar = AccountUserInfoModel.avatar;
+    model.nickname = AccountUserInfoModel.nickname;
+    model.gender = [AccountUserInfoModel.gender integerValue];
+    model.uid = AccountUserInfoModel.uid;
+    model.owner = YES;
+    model.perfect = NO;
+    
+    return model;
+}
+
 @end
