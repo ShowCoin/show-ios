@@ -97,4 +97,20 @@ static inline CGSize SLFuncGetAttributeStringSize(CGFloat labelW, NSAttributedSt
     viewY = (h - viewH) / 2;
     self.candyLabel.frame = CGRectMake(viewX, viewY, viewW, viewH);
     
+    size = SLFuncGetAttributeStringSize(MAXFLOAT, self.coinLabel.attributedText);
+    viewW = size.width;
+    viewH = size.height;
+    viewX = w - viewW - kRPMargin;
+    viewY = (h - viewH) / 2;
+    self.coinLabel.frame = CGRectMake(viewX, viewY, viewW, viewH);
+    
+    if (self.perfectLabel.hidden == NO) {
+        size = SLFuncGetAttributeStringSize(MAXFLOAT, self.perfectLabel.attributedText);
+        viewY = CGRectGetMaxY(self.coinLabel.frame);
+        viewX = w - size.width - kRPMargin;
+        self.perfectLabel.frame = CGRectMake(viewX, viewY, size.width, size.height);
+    }
+}
+
+
 @end
