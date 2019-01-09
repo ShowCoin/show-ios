@@ -275,4 +275,22 @@ static inline CGSize SLFuncGetAttributeStringSize(CGFloat labelW, NSAttributedSt
     }];
 }
 
+#pragma mark - setter
+
+- (NSString *)coinNameText {
+    if (!_coinNameText) {
+        NSDictionary *info =  [SLSystemConfigModel shared].coinTypes;
+        NSDictionary *showInfo = info[self.coin_type];
+        // type 英文
+        // name 中文
+        if ([showInfo.allKeys containsObject:@"type"]) {
+            _coinNameText = showInfo[@"type"];
+        } else {
+            _coinNameText = @"未知";
+        }
+        [self getRMBRate];
+    }
+    return _coinNameText;
+}
+
 @end
