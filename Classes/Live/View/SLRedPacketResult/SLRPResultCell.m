@@ -257,4 +257,22 @@ static inline CGSize SLFuncGetAttributeStringSize(CGFloat labelW, NSAttributedSt
     return @[@"congraText", @"tipText", @"coinNameText", @"owner", @"rmb_rate"];
 }
 
+- (void)getRMBRate {
+    if (coinInfo_ ) {
+        [coinInfo_ cancel];
+        coinInfo_ = nil;
+    }
+    
+    coinInfo_ = [SLGetCoinInfo action];
+    coinInfo_.coin_type = self.coin_type;
+    @weakify(self)
+    [coinInfo_ startRequestSucess:^(id result) {
+        @strongify(self)
+        self.rmb_rate = result[@"rmb_rate"];;
+    } FaildBlock:^(NSError *error) {
+        @strongify(self)
+        self.rmb_rate = @"0";
+    }];
+}
+
 @end
