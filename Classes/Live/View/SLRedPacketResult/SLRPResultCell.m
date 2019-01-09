@@ -356,4 +356,16 @@ static inline CGSize SLFuncGetAttributeStringSize(CGFloat labelW, NSAttributedSt
     return model;
 }
 
+- (NSAttributedString *)candyText {
+    if (!_candyText) {
+        NSString *text = [NSString stringWithFormat:@"糖果 x %zd", self.candy_num];
+        NSDictionary *attrDict = @{NSFontAttributeName : [UIFont systemFontOfSize:12]};
+        NSMutableAttributedString *attr = [[NSMutableAttributedString alloc] initWithString:text attributes:attrDict];
+        [attr addAttributes:@{NSFontAttributeName : [UIFont systemFontOfSize:13]}
+                      range:NSMakeRange(3, text.length - 3)];
+        _candyText = attr;
+    }
+    return _candyText;
+}
+
 @end
