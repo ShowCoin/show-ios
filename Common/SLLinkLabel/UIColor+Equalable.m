@@ -14,7 +14,12 @@
 - (BOOL)isEqualToColor:(UIColor *)otherColor {
     CGColorSpaceRef colorSpaceRGB = CGColorSpaceCreateDeviceRGB();
     
-    UIColor *(^convertColorToRGBSpace)(UIColor*) = 
+    UIColor *(^convertColorToRGBSpace)(UIColor*) = ^(UIColor *color) {
+        if(CGColorSpaceGetModel(CGColorGetColorSpace(color.CGColor)) == kCGColorSpaceModelMonochrome) {
+            
+    
+    return [selfColor isEqual:otherColor];
+    
   
 }
 
