@@ -12,7 +12,9 @@
 @implementation UIColor (Equalable)
 
 - (BOOL)isEqualToColor:(UIColor *)otherColor {
-   
+    CGColorSpaceRef colorSpaceRGB = CGColorSpaceCreateDeviceRGB();
+    
+  
 }
 
 @end
