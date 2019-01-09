@@ -82,4 +82,19 @@ static inline CGSize SLFuncGetAttributeStringSize(CGFloat labelW, NSAttributedSt
     viewW = viewH = 12;
     self.sexView.frame = CGRectMake(viewX, viewY, viewW, viewH);
     
+    CGRect frame = self.masterLevelView.frame;
+    frame.origin.x = CGRectGetMaxX(self.sexView.frame) + 6;
+    frame.origin.y = viewY;
+    self.masterLevelView.frame = frame;
+    
+    frame.origin.x = CGRectGetMaxX(self.masterLevelView.frame) + 6;
+    self.coinLevelView.frame = frame;
+    
+    CGSize size = SLFuncGetAttributeStringSize(MAXFLOAT, self.candyLabel.attributedText);
+    viewH = size.height;
+    viewX = w / 2;
+    viewW = size.width;
+    viewY = (h - viewH) / 2;
+    self.candyLabel.frame = CGRectMake(viewX, viewY, viewW, viewH);
+    
 @end
