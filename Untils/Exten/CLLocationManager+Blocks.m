@@ -31,6 +31,7 @@ CLLocationAgeFilter const kCLLocationAgeFilterNone = 0.0;
 
 @interface CLLocationManagerBlocks ()
 
+@property (nonatomic, assign) CLUpdateAccuracyFilter updateAccuracyFilter;
 @property (nonatomic, assign) CLLocationAgeFilter updateLocationAgeFilter;
 @property (nonatomic, assign) CLLocationUpdateAuthorizationDescription authorizationDescription;
 
