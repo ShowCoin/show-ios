@@ -20,4 +20,17 @@ static inline CGSize SLFuncGetAttributeStringSize(CGFloat labelW, NSAttributedSt
 
 @interface SLRPResultCell ()
 
+@property (nonatomic, strong) SLHeadPortrait *userView;
+@property (nonatomic, strong) UILabel *nameLabel;
+@property (nonatomic, strong) UIImageView *sexView;
+@property (nonatomic, strong) UILabel *coinLabel;
+@property (nonatomic, strong) UILabel *perfectLabel;
+@property (nonatomic, strong) UILabel *candyLabel;
+@property (nonatomic, strong) SLLevelMarkView *masterLevelView;
+@property (nonatomic, strong) SLLevelMarkView *coinLevelView;
+
+@end
+
+@implementation SLRPResultCell
+
 @end
