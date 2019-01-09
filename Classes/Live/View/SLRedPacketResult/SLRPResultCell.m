@@ -379,4 +379,11 @@ static inline CGSize SLFuncGetAttributeStringSize(CGFloat labelW, NSAttributedSt
     return _coinText;
 }
 
+- (NSString *)sexImage {
+    if (!_sexImage) {
+        _sexImage = self.gender == 1 ? @"redpacket_sex_man" : @"redpacket_sex_woman";
+    }
+    return _sexImage;
+}
+
 @end
