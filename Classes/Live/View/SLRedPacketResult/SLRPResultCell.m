@@ -229,4 +229,16 @@ static inline CGSize SLFuncGetAttributeStringSize(CGFloat labelW, NSAttributedSt
     return _masterLevelView;
 }
 
+- (SLLevelMarkView *)coinLevelView {
+    if (!_coinLevelView) {
+        CGRect frame = CGRectMake(0, 0, 24, 12);
+        _coinLevelView = [[SLLevelMarkView alloc] initWithFrame:frame withType:LevelType_ShowCoin];
+    }
+    return _coinLevelView;
+}
+
+@end
+
+
+
 @end
