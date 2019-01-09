@@ -138,4 +138,12 @@ static inline CGSize SLFuncGetAttributeStringSize(CGFloat labelW, NSAttributedSt
     [self layoutSubviews];
 }
 
+
+#pragma mark - Action
+
+- (void)avatarTapAction {
+    if (self.avatarBlock) {
+        self.avatarBlock();
+    }
+}
 @end
