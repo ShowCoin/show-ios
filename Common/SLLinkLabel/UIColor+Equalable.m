@@ -22,7 +22,9 @@
             
             UIColor *color = [UIColor colorWithCGColor:colorRef];
             CGColorRelease(colorRef);
-        
+            return color;
+        } else
+            return color;
     };
     
     UIColor *selfColor = convertColorToRGBSpace(self);
