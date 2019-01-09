@@ -20,7 +20,9 @@
             CGFloat components[4] = {oldComponents[0], oldComponents[0], oldComponents[0], oldComponents[1]};
             CGColorRef colorRef = CGColorCreate( colorSpaceRGB, components );
             
-            
+            UIColor *color = [UIColor colorWithCGColor:colorRef];
+            CGColorRelease(colorRef);
+        
     };
     
     UIColor *selfColor = convertColorToRGBSpace(self);
