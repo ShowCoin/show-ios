@@ -183,4 +183,14 @@ static inline CGSize SLFuncGetAttributeStringSize(CGFloat labelW, NSAttributedSt
     return _perfectLabel;
 }
 
+- (UILabel *)coinLabel {
+    if (!_coinLabel) {
+        _coinLabel = [[UILabel alloc] init];
+        _coinLabel.textColor = kBlackThemetextColor;
+        _coinLabel.textAlignment = NSTextAlignmentRight;
+        _coinLabel.font = [UIFont systemFontOfSize:12];
+    }
+    return _coinLabel;
+}
+
 @end
