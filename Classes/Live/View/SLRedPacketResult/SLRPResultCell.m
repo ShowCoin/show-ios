@@ -241,4 +241,16 @@ static inline CGSize SLFuncGetAttributeStringSize(CGFloat labelW, NSAttributedSt
 
 
 
+#import "SLGetCoinInfo.h"
+
+@implementation SLGetCandyInfoModel {
+    SLGetCoinInfo *coinInfo_;
+}
+
++ (NSDictionary *)mj_objectClassInArray {
+    return @{@"reciveList" : [SLRPReciveListModel class],
+             @"sender" : [SLRPUserModel class]
+             };
+}
+
 @end
