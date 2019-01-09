@@ -221,4 +221,12 @@ static inline CGSize SLFuncGetAttributeStringSize(CGFloat labelW, NSAttributedSt
     return _userView;
 }
 
+- (SLLevelMarkView *)masterLevelView {
+    if (!_masterLevelView) {
+        CGRect frame = CGRectMake(0, 0, 24, 12);
+        _masterLevelView = [[SLLevelMarkView alloc] initWithFrame:frame withType:LevelType_Host];
+    }
+    return _masterLevelView;
+}
+
 @end
