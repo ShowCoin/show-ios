@@ -51,7 +51,6 @@ CLLocationAgeFilter const kCLLocationAgeFilterNone = 0.0;
 @property (nonatomic, copy) DidChangeAuthorizationStatusBlock didChangeAuthorizationStatusBlock;
 @property (nonatomic, copy) DidStartMonitoringForRegionWithBlock didStartMonitoringForRegionWithBlock;
 @property (nonatomic, copy) LocationManagerDidPauseLocationUpdatesBlock locationManagerDidPauseLocationUpdatesBlock;
-@property (nonatomic, copy) LocationManagerDidResumeLocationUpdatesBlock locationManagerDidResumeLocationUpdatesBlock;
 @property (nonatomic, copy) DidFinishDeferredUpdatesWithErrorBlock didFinishDeferredUpdatesWithErrorBlock;
 @property (nonatomic, copy) DidVisitBLock didVisitBlock;
 
