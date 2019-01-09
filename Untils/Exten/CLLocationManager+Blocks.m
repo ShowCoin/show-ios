@@ -38,7 +38,6 @@ CLLocationAgeFilter const kCLLocationAgeFilterNone = 0.0;
 @property (nonatomic, copy) LocationManagerUpdateBlock updateBlock;
 @property (nonatomic, copy) HeadingUpdateBlock headingUpdateBlock;
 
-@property (nonatomic, copy) DidUpdateLocationsBlock didUpdateLocationsBlock;
 @property (nonatomic, copy) DidUpdateHeadingBlock didUpdateHeadingBlock;
 @property (nonatomic, copy) ShouldDisplayHeadingCalibrationBlock shouldDisplayCalibrationBlock;
 @property (nonatomic, copy) DidDetermineStateBlock didDetermineStateBlock;
