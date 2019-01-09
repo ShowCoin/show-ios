@@ -113,4 +113,29 @@ static inline CGSize SLFuncGetAttributeStringSize(CGFloat labelW, NSAttributedSt
 }
 
 
+- (void)setModel:(SLRPReciveListModel *)model {
+    _model = model;
+    
+    self.backgroundColor = model.isOwner ? [UIColor colorWithWhite:0 alpha:0.2] : [UIColor clearColor];
+    
+    self.nameLabel.text = model.nickname;
+    
+    self.sexView.image = [UIImage imageNamed:model.sexImage];
+    
+    self.candyLabel.attributedText = model.candyText;
+    
+    self.coinLabel.attributedText = model.coinText;
+    
+    [self.userView setRoundStyle:YES imageUrl:model.avatar imageHeight:35 vip:NO attestation:NO];
+    self.perfectLabel.hidden = !model.isPerfect;
+    
+    [self.masterLevelView updateLevel:@"2"];
+    [self.coinLevelView updateLevel:@"3"];
+    
+    [self.masterLevelView candyInset];
+    [self.coinLevelView candyInset];
+    
+    [self layoutSubviews];
+}
+
 @end
