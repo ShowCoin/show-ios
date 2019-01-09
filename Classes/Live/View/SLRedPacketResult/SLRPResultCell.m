@@ -368,4 +368,15 @@ static inline CGSize SLFuncGetAttributeStringSize(CGFloat labelW, NSAttributedSt
     return _candyText;
 }
 
+- (NSAttributedString *)coinText {
+    if (!_coinText) {
+        NSString *text = [NSString stringWithFormat:@"%@ %@", self.coin_num, self.coinType];
+        NSDictionary *attrDict = @{NSFontAttributeName : [UIFont systemFontOfSize:12]};
+        NSMutableAttributedString *attr = [[NSMutableAttributedString alloc] initWithString:text attributes:attrDict];
+        [attr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:13] range:NSMakeRange(0, text.length - self.coinType.length)];
+        _coinText = attr;
+    }
+    return _coinText;
+}
+
 @end
