@@ -209,4 +209,16 @@ static inline CGSize SLFuncGetAttributeStringSize(CGFloat labelW, NSAttributedSt
     return _nameLabel;
 }
 
+- (SLHeadPortrait *)userView {
+    if (!_userView) {
+        _userView = [[SLHeadPortrait alloc] initWithFrame:CGRectMake(0, 0, kHeaderViewWH, kHeaderViewWH)];
+        _userView.userInteractionEnabled = YES;
+        [_userView removeTap];
+        
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(avatarTapAction)];
+        [_userView addGestureRecognizer:tap];
+    }
+    return _userView;
+}
+
 @end
