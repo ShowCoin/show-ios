@@ -16,7 +16,5 @@ typedef void(^SLIntBlock)(NSInteger);
 UIKIT_EXTERN NSTimeInterval const kHomeHeaderAniDelay;
 UIKIT_EXTERN NSTimeInterval const kHomeLeftAniDelay;
 UIKIT_EXTERN NSTimeInterval const kHomeRightAniDelay;
-
 UIKIT_EXTERN CGFloat const kTitleViewH;
-
 UIKIT_EXTERN CGFloat const kMargin10;
