@@ -13,3 +13,5 @@ typedef void(^SLSimpleBlock)(void);
 typedef void(^SLOneBlock)(id);
 typedef void(^SLIntBlock)(NSInteger);
 
+UIKIT_EXTERN NSTimeInterval const kHomeHeaderAniDelay;
+
