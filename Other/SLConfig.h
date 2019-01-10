@@ -10,4 +10,5 @@
 #import <UIKit/UIKit.h>
 
 typedef void(^SLSimpleBlock)(void);
+typedef void(^SLOneBlock)(id);
 
