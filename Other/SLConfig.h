@@ -11,4 +11,5 @@
 
 typedef void(^SLSimpleBlock)(void);
 typedef void(^SLOneBlock)(id);
+typedef void(^SLIntBlock)(NSInteger);
 
