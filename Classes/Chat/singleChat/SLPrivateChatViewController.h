@@ -25,6 +25,8 @@ static inline CGFloat _GetChatInputMoreCardHeight(void){
 @property (nonatomic, strong) ShowUserModel *targetUser;
 //是否是活跃聊天室
 @property (nonatomic, assign) BOOL isLiveChatRoom;
+//是否系统消息
+@property (nonatomic, assign) BOOL isSYSTEMMessage;
 
 
 @end
