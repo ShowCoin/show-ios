@@ -18,5 +18,7 @@ static inline CGFloat _GetChatInputMoreCardHeight(void){
 }
 
 
+@interface SLPrivateChatViewController : BaseViewController
+
 
 @end
