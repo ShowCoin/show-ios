@@ -23,6 +23,8 @@ static inline CGFloat _GetChatInputMoreCardHeight(void){
 @property (nonatomic, strong) NSString *targetUid;
 //事件用户
 @property (nonatomic, strong) ShowUserModel *targetUser;
+//是否是活跃聊天室
+@property (nonatomic, assign) BOOL isLiveChatRoom;
 
 
 @end
