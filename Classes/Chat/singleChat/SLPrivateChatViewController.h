@@ -27,6 +27,7 @@ static inline CGFloat _GetChatInputMoreCardHeight(void){
 @property (nonatomic, assign) BOOL isLiveChatRoom;
 //是否系统消息
 @property (nonatomic, assign) BOOL isSYSTEMMessage;
-
+//基类
+@property(nonatomic,strong)BaseViewController * Controller;
 
 @end
