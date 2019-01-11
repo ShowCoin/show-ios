@@ -7,6 +7,7 @@
 //
 
 #import "BaseViewController.h"
+#import "ShowUserModel.h"
 
 
 @end
