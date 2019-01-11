@@ -19,6 +19,8 @@ static inline CGFloat _GetChatInputMoreCardHeight(void){
 
 
 @interface SLPrivateChatViewController : BaseViewController
+/// Public 二者设置一个，即更新了另一个
+@property (nonatomic, strong) NSString *targetUid;
 
 
 @end
