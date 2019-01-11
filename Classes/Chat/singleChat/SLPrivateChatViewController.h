@@ -9,5 +9,9 @@
 #import "BaseViewController.h"
 #import "ShowUserModel.h"
 
+static inline CGFloat _GetChatInputViewHeight(void){
+    return 50;
+}
+
 
 @end
