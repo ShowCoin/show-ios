@@ -13,5 +13,10 @@ static inline CGFloat _GetChatInputViewHeight(void){
     return 50;
 }
 
+static inline CGFloat _GetChatInputMoreCardHeight(void){
+    return 154;
+}
+
+
 
 @end
