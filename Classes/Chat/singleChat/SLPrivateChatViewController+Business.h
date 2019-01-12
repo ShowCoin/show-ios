@@ -17,5 +17,10 @@
  */
 @property (assign, nonatomic) NSInteger priorCount;
 
+/**
+ 自从进入，是否发送过消息，这个用来监控vip隐身状态下，已读回执的显示
+ */
+@property (assign, nonatomic) BOOL neverSendMessageSinceCome;
+@end
 
 @end
