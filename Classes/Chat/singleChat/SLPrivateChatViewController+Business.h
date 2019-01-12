@@ -11,5 +11,6 @@
 
 @interface SLPrivateChatViewController()
 @property (nonatomic, strong) dispatch_queue_t messageWorkQueue;
+@property (strong, nonatomic) SLChatBusiness *business;
 
 @end
