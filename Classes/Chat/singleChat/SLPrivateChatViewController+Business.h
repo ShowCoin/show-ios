@@ -9,4 +9,7 @@
 #import "SLPrivateChatViewController.h"
 #import "SLChatBusiness.h"
 
+@interface SLPrivateChatViewController()
+@property (nonatomic, strong) dispatch_queue_t messageWorkQueue;
+
 @end
