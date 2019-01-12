@@ -12,5 +12,10 @@
 @interface SLPrivateChatViewController()
 @property (nonatomic, strong) dispatch_queue_t messageWorkQueue;
 @property (strong, nonatomic) SLChatBusiness *business;
+/**
+ 标记加载更多的dataArray.count
+ */
+@property (assign, nonatomic) NSInteger priorCount;
+
 
 @end
