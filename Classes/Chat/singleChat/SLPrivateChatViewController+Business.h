@@ -28,9 +28,36 @@
 
 // Load
 - (void)loadMessageData;
-
-
 - (void)loadMoreMessageData;
 
+// Add
+/// Add a new row: will scroll to bottom animated
+- (void)addNewMessageDataAtEndWithMessageId:(long)messageId;
+- (void)addNewMessageDataAtEndWithMessageId:(long)messageId scrollToBottom:(BOOL)scrollToBottom scrollToBottomAnimated:(BOOL)animated;
 
+// Update
+- (void)updateMessageReadStateBeforeLastSentTime:(long)time;
+- (void)updateCurrentDataViewModelTimeHiddenAndGiftTag;
+- (void)updateCellDataWithMessageId:(long)messageId;
+- (void)updateCellDataAtRow:(NSUInteger)row messageId:(long)messageId;
+
+// Find
+- (id)findViewModelInDataArrayWithRCMessageId:(long)messageId;
+- (NSInteger)indexOfDataArrayWithMessageId:(long)messageId;
+- (long)findLastReceivedMessageSentTime;
+
+// Draft
+- (void)saveInputTextToDraft;
+- (NSString *)getInputTextDraft;
+
+// Unread State
+- (void)clearConversationMessageUnreadState;
+- (void)setLastestMessageToReadState;
+- (void)findAndSetUnreadMessageAfterViewDidApperar;
+
+// Delete
+- (void)deleteCellDataAndMessageAtRow:(NSUInteger)row animation:(BOOL)animation;
+
+/// Replace:Delete old with messageId, add new one to the end
+- (void)replaceWithOldMessageId:(NSInteger)oldMessageId ofNewMessageIdAtEnd:(NSInteger)newMessageId scrollToBottom:(BOOL)scrollToBottom scrollToBottomAnimated:(BOOL)animated;
 @end
