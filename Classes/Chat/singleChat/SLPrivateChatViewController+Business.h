@@ -23,4 +23,8 @@
 @property (assign, nonatomic) BOOL neverSendMessageSinceCome;
 @end
 
+@interface SLPrivateChatViewController (Business)
+- (void)setupBusiness;
+
+
 @end
