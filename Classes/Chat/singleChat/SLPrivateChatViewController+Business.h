@@ -26,5 +26,9 @@
 @interface SLPrivateChatViewController (Business)
 - (void)setupBusiness;
 
+// Load
+- (void)loadMessageData;
+- (void)loadMoreMessageData;
+
 
 @end
