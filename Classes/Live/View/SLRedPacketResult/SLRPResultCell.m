@@ -59,7 +59,7 @@ static inline CGSize SLFuncGetAttributeStringSize(CGFloat labelW, NSAttributedSt
  @param style UITableViewCellStyle
  @param reuseIdentifier reuseIdentifier to cell
  
- @return <#return value description#>
+ @return instancetype
  */
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
