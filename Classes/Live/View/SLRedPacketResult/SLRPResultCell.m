@@ -14,6 +14,13 @@ CGFloat const kSLRPResultCellH = 60;
 CGFloat const kRPMargin = 18;
 static CGFloat const kHeaderViewWH = 30;
 
+/**
+ desp
+
+ @param labelW <#labelW description#>
+ @param text <#text description#>
+ @return <#return value description#>
+ */
 static inline CGSize SLFuncGetAttributeStringSize(CGFloat labelW, NSAttributedString *text) {
     return [text boundingRectWithSize:CGSizeMake(labelW, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading context:nil].size;
 }
