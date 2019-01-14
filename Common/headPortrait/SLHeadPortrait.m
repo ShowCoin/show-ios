@@ -63,15 +63,7 @@
 -(void)addloadView
 {
     CGRect frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, self.frame.size.height);
-    aFrame = self.frame;
-    
-    if (!_imageView) {
-        self.imageView = [[UIImageView alloc]init];
-        _imageView.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
-        _imageView.userInteractionEnabled=YES;
-        [self addSubview:_imageView];
-    }
-    //设置图片剧中显示
+  //置图片剧中显示
     [_imageView setImageClipsToBounds];
     
     //添加认证图标
