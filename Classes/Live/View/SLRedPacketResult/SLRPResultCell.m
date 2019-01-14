@@ -52,8 +52,9 @@ static inline CGSize SLFuncGetAttributeStringSize(CGFloat labelW, NSAttributedSt
     return NSStringFromClass([self class]);
 }
 
+
 /**
- <#Description#>
+ initWithStyle
 
  @param style <#style description#>
  @param reuseIdentifier <#reuseIdentifier description#>
