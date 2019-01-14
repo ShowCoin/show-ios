@@ -190,7 +190,7 @@ static inline CGSize SLFuncGetAttributeStringSize(CGFloat labelW, NSAttributedSt
 /**
  candyLabel
 
- @return <#return value description#>
+ @return UILabel
  */
 - (UILabel *)candyLabel {
     if (!_candyLabel) {
