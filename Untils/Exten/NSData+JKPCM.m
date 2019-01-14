@@ -101,6 +101,7 @@
     
     // Subchunk2ID = 'data'
     wavHeader[0x24] = 'd';
+    wavHeader[0x25] = 'a';
     wavHeader[0x26] = 't';
     wavHeader[0x27] = 'a';
     
