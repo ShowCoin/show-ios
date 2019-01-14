@@ -87,6 +87,9 @@ static inline CGSize SLFuncGetAttributeStringSize(CGFloat labelW, NSAttributedSt
     [self.contentView addSubview:self.coinLevelView];
 }
 
+/**
+ <#Description#>
+ */
 - (void)layoutSubviews {
     [super layoutSubviews];
     NSLog(@"%s", __func__);
