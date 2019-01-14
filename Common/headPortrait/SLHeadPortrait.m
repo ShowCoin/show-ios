@@ -21,8 +21,12 @@
         self.backgroundColor = [UIColor clearColor];
         vipWidth = self.size.width *0.45;
         vipHeight = self.size.height * 0.7;
+        
         vipLeft  =self.size.width*0.55;
+        
         vipTop  =self.size.width*0.3;
+        
+        
         [self addloadView];
     }
     return self;
@@ -63,9 +67,7 @@
     
     if (!_imageView) {
         self.imageView = [[UIImageView alloc]init];
-        _imageView.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
-        _imageView.userInteractionEnabled=YES;
-        [self addSubview:_imageView];
+    
     }
     //设置图片剧中显示
     [_imageView setImageClipsToBounds];
@@ -80,9 +82,7 @@
     }
     if (!_vipIcon) {
         _vipIcon = [[UIImageView alloc]init];
-        _vipIcon.contentMode = UIViewContentModeScaleAspectFill;
-        _vipIcon.hidden = YES;
-        [self addSubview:_vipIcon];
+        
     }
     self.frame = frame ;
     
