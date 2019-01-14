@@ -112,7 +112,6 @@
     free(wavHeader);
     
     // Append pcm data
-    [wavData appendData:self];
     return wavData;
 }
 
