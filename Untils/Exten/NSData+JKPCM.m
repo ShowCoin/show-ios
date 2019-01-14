@@ -109,7 +109,6 @@
     *((SInt32 *)(wavHeader + 0x28)) = pcmDataLength;
     
     NSMutableData *wavData = [NSMutableData dataWithBytes:wavHeader length:wavHeaderSize];
-    free(wavHeader);
     
     // Append pcm data
     [wavData appendData:self];
