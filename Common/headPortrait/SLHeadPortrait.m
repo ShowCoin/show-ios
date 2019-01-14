@@ -82,9 +82,7 @@
     }
     if (!_vipIcon) {
         _vipIcon = [[UIImageView alloc]init];
-        _vipIcon.contentMode = UIViewContentModeScaleAspectFill;
-        _vipIcon.hidden = YES;
-        [self addSubview:_vipIcon];
+        
     }
     self.frame = frame ;
     
