@@ -19,7 +19,9 @@
     if (self) {
         // Initialization code
         self.backgroundColor = [UIColor clearColor];
-     
+        vipWidth = self.size.width *0.45;
+      
+        
     }
     return self;
 }
