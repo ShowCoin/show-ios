@@ -69,6 +69,9 @@ static inline CGSize SLFuncGetAttributeStringSize(CGFloat labelW, NSAttributedSt
     return self;
 }
 
+/**
+ setupUI
+ */
 - (void)setupUI {
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     self.contentView.backgroundColor = [UIColor clearColor];
