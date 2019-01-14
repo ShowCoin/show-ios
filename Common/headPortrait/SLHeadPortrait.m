@@ -25,6 +25,8 @@
         vipLeft  =self.size.width*0.55;
         
         vipTop  =self.size.width*0.3;
+        
+        
         [self addloadView];
     }
     return self;
