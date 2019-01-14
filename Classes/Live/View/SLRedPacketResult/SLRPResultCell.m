@@ -17,7 +17,7 @@ static CGFloat const kHeaderViewWH = 30;
 /**
  desp
 
- @param labelW <#labelW description#>
+ @param labelW label width
  @param text <#text description#>
  @return <#return value description#>
  */
