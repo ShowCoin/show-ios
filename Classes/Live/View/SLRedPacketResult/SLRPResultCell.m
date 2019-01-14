@@ -25,6 +25,9 @@ static inline CGSize SLFuncGetAttributeStringSize(CGFloat labelW, NSAttributedSt
     return [text boundingRectWithSize:CGSizeMake(labelW, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading context:nil].size;
 }
 
+/**
+ SLRPResultCell
+ */
 @interface SLRPResultCell ()
 
 @property (nonatomic, strong) SLHeadPortrait *userView;
