@@ -88,7 +88,7 @@ static inline CGSize SLFuncGetAttributeStringSize(CGFloat labelW, NSAttributedSt
 }
 
 /**
- <#Description#>
+ layoutSubviews
  */
 - (void)layoutSubviews {
     [super layoutSubviews];
