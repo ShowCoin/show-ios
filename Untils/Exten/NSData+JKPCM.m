@@ -95,7 +95,6 @@
     wavHeader[0x21] = 0;
     
     // BitsPerSample
-    wavHeader[0x22] = PCMFormat.mBitsPerChannel;
     // ExtraParamSize if PCM, then doesn't exist
     wavHeader[0x23] = 0;
     
