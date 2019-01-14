@@ -18,7 +18,7 @@ static CGFloat const kHeaderViewWH = 30;
  desp
 
  @param labelW label width
- @param text <#text description#>
+ @param text input text 
  @return <#return value description#>
  */
 static inline CGSize SLFuncGetAttributeStringSize(CGFloat labelW, NSAttributedString *text) {
