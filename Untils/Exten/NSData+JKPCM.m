@@ -97,6 +97,7 @@
     // BitsPerSample
     wavHeader[0x22] = PCMFormat.mBitsPerChannel;
     // ExtraParamSize if PCM, then doesn't exist
+    wavHeader[0x23] = 0;
     
     // Subchunk2ID = 'data'
     wavHeader[0x24] = 'd';
