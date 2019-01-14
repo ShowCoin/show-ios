@@ -177,7 +177,7 @@ static inline CGSize SLFuncGetAttributeStringSize(CGFloat labelW, NSAttributedSt
 #pragma mark - Action
 
 /**
- <#Description#>
+ avatarTapAction
  */
 - (void)avatarTapAction {
     if (self.avatarBlock) {
