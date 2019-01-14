@@ -146,7 +146,7 @@ static inline CGSize SLFuncGetAttributeStringSize(CGFloat labelW, NSAttributedSt
 /**
  SLRPReciveListModel
 
- @param model <#model description#>
+ @param model model
  */
 - (void)setModel:(SLRPReciveListModel *)model {
     _model = model;
