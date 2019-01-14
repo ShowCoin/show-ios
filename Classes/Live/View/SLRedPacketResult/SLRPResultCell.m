@@ -187,6 +187,11 @@ static inline CGSize SLFuncGetAttributeStringSize(CGFloat labelW, NSAttributedSt
 
 #pragma mark - lazy
 
+/**
+ candyLabel
+
+ @return <#return value description#>
+ */
 - (UILabel *)candyLabel {
     if (!_candyLabel) {
         _candyLabel = [[UILabel alloc] init];
