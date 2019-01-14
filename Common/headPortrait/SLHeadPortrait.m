@@ -20,8 +20,11 @@
         // Initialization code
         self.backgroundColor = [UIColor clearColor];
         vipWidth = self.size.width *0.45;
-      
+        vipHeight = self.size.height * 0.7;
         
+        vipLeft  =self.size.width*0.55;
+        vipTop  =self.size.width*0.3;
+        [self addloadView];
     }
     return self;
 }
