@@ -196,6 +196,8 @@
         make.centerX.centerY.equalTo(self.middleView);
         make.size.mas_equalTo(customerView.frame.size);
     }];
+    
+    
 }
 //展示左边的视图
 - (void)show_setNavigationLeftView:(UIView *)customerView {
