@@ -16,7 +16,6 @@
 }
 @property (weak, nonatomic)  NSLayoutConstraint *leftViewWidth;//左边视图的宽度
 @property (weak, nonatomic)  NSLayoutConstraint *rightViewWidth;//右边视图的宽度
-
 @property (strong, nonatomic)UIView *linView;//navigation的线
 
 @end
