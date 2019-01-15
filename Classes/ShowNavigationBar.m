@@ -179,6 +179,8 @@
 
 //设置中间的标题
 - (void)show_setNavigationMiddleView:(UIView *)customerView {
+    
+    
     /**
      *  删除 middle View 下面的所有子view
      */
