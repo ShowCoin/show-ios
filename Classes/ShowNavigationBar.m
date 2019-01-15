@@ -56,9 +56,13 @@
  */
 - (void)show_setDefaultStyle {
 
-
-    
-    
+    _leftView = [[UIView alloc]init];
+    [self addSubview:_leftView];
+    [_leftView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self).with.offset(20+KTabbarSafeBottomMargin );
+        make.size.mas_equalTo(CGSizeMake(44, 44));
+        make.left.equalTo(self).with.offset(6);
+    }];
     _rightView = [[UIView alloc]init];
     [self addSubview:_rightView];
     [_rightView mas_makeConstraints:^(MASConstraintMaker *make) {
