@@ -14,10 +14,20 @@ CGFloat const kSLRPResultCellH = 60;
 CGFloat const kRPMargin = 18;
 static CGFloat const kHeaderViewWH = 30;
 
+/**
+ desp
+
+ @param labelW label width
+ @param text input text
+ @return CGSize
+ */
 static inline CGSize SLFuncGetAttributeStringSize(CGFloat labelW, NSAttributedString *text) {
     return [text boundingRectWithSize:CGSizeMake(labelW, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading context:nil].size;
 }
 
+/**
+ SLRPResultCell
+ */
 @interface SLRPResultCell ()
 
 @property (nonatomic, strong) SLHeadPortrait *userView;
@@ -33,10 +43,24 @@ static inline CGSize SLFuncGetAttributeStringSize(CGFloat labelW, NSAttributedSt
 
 @implementation SLRPResultCell
 
+/**
+ cell id
+
+ @return NSString
+ */
 + (NSString *)kCellID {
     return NSStringFromClass([self class]);
 }
 
+
+/**
+ initWithStyle
+
+ @param style UITableViewCellStyle
+ @param reuseIdentifier reuseIdentifier to cell
+ 
+ @return instancetype
+ */
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
@@ -45,6 +69,9 @@ static inline CGSize SLFuncGetAttributeStringSize(CGFloat labelW, NSAttributedSt
     return self;
 }
 
+/**
+ setupUI
+ */
 - (void)setupUI {
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     self.contentView.backgroundColor = [UIColor clearColor];
@@ -60,6 +87,9 @@ static inline CGSize SLFuncGetAttributeStringSize(CGFloat labelW, NSAttributedSt
     [self.contentView addSubview:self.coinLevelView];
 }
 
+/**
+ layoutSubviews
+ */
 - (void)layoutSubviews {
     [super layoutSubviews];
     NSLog(@"%s", __func__);
@@ -113,6 +143,11 @@ static inline CGSize SLFuncGetAttributeStringSize(CGFloat labelW, NSAttributedSt
 }
 
 
+/**
+ SLRPReciveListModel
+
+ @param model model
+ */
 - (void)setModel:(SLRPReciveListModel *)model {
     _model = model;
     
@@ -141,6 +176,9 @@ static inline CGSize SLFuncGetAttributeStringSize(CGFloat labelW, NSAttributedSt
 
 #pragma mark - Action
 
+/**
+ avatarTapAction
+ */
 - (void)avatarTapAction {
     if (self.avatarBlock) {
         self.avatarBlock();
@@ -149,6 +187,11 @@ static inline CGSize SLFuncGetAttributeStringSize(CGFloat labelW, NSAttributedSt
 
 #pragma mark - lazy
 
+/**
+ candyLabel
+
+ @return UILabel
+ */
 - (UILabel *)candyLabel {
     if (!_candyLabel) {
         _candyLabel = [[UILabel alloc] init];
