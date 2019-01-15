@@ -14,12 +14,8 @@
     UIImageView*_titleImageView ;//标题的图
     
 }
-
-
 @property (weak, nonatomic)  NSLayoutConstraint *leftViewWidth;//左边视图的宽度
-
 @property (weak, nonatomic)  NSLayoutConstraint *rightViewWidth;//右边视图的宽度
-
 @property (strong, nonatomic)UIView *linView;//navigation的线
 
 @end
@@ -183,6 +179,8 @@
 
 //设置中间的标题
 - (void)show_setNavigationMiddleView:(UIView *)customerView {
+    
+    
     /**
      *  删除 middle View 下面的所有子view
      */
@@ -198,6 +196,8 @@
         make.centerX.centerY.equalTo(self.middleView);
         make.size.mas_equalTo(customerView.frame.size);
     }];
+    
+    
 }
 //展示左边的视图
 - (void)show_setNavigationLeftView:(UIView *)customerView {
