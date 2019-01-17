@@ -39,6 +39,12 @@
     self.corverView.frame = self.bounds;
 }
 
+
+/**
+ corver alpha
+
+ @param corverAlpha <#corverAlpha description#>
+ */
 - (void)setCorverAlpha:(CGFloat)corverAlpha {
     self.corverView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.4];
 }
