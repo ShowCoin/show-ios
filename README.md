@@ -11,3 +11,10 @@ Overall module division
 
 2.Network module
 
+    The classic and reliable request library AFNetworking is used to realize double seal of it, simplify 
+    the invoke steps and enhance its security.Request to use MD5 to perform data integration checking to
+    prevent tampering by middleman. POST is used to make request, and parameters are put in BODY with encryption,
+    so as to avoid security issue caused by cleartext exposure.
+
+3.Navigation module
+
