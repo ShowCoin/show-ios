@@ -33,4 +33,10 @@ Overall module division
 
 6.Module view
 
-    In view section, autolayout and  frame  are used based 
+    In view section, autolayout and  frame  are used based on different business and scenarios. 
+
+7.Push and pull stream module
+
+    The push and pull stream is designed by senior audio and video experts, which can enhance aesthetic perception
+    and reduce performance consumption at the same time.
+
