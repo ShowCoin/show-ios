@@ -43,7 +43,7 @@
 /**
  corver alpha
 
- @param corverAlpha <#corverAlpha description#>
+ @param corverAlpha set method
  */
 - (void)setCorverAlpha:(CGFloat)corverAlpha {
     self.corverView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.4];
