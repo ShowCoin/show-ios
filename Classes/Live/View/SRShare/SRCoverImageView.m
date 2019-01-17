@@ -32,6 +32,9 @@
     return self;
 }
 
+/**
+ layoutshubviews
+ */
 - (void)layoutSubviews {
     self.corverView.frame = self.bounds;
 }
