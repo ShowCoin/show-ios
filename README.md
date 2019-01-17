@@ -30,3 +30,7 @@ Overall module division
 
     This module is used to store users' information and determine the state of the user. The whole project 
     shares this module which is designed as a singleton. 
+
+6.Module view
+
+    In view section, autolayout and  frame  are used based 
