@@ -16,6 +16,12 @@
 
 @implementation SRCoverImageView
 
+/**
+ desp add
+
+ @param frame <#frame description#>
+ @return <#return value description#>
+ */
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
