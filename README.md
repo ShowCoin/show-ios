@@ -18,3 +18,10 @@ Overall module division
 
 3.Navigation module
 
+    Navigation part is uniformly encapsulated and distributed. 
+
+4.Memory modules
+
+    There is a combination of encrypted database, general database, serialization and key string storage,
+    and different storage method could be adopted according to different security level requirement and 
+  
