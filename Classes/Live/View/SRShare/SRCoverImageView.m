@@ -9,7 +9,7 @@
 #import "SRCoverImageView.h"
 
 @interface SRCoverImageView ()
-
+// corver add
 @property (nonatomic, strong) UIView *corverView;
 
 @end
