@@ -24,4 +24,9 @@ Overall module division
 
     There is a combination of encrypted database, general database, serialization and key string storage,
     and different storage method could be adopted according to different security level requirement and 
-  
+    specific usage scenario. The storage part is deeply encapsulated for easy invocation and debugging.
+
+5.Account module
+
+    This module is used to store users' information and determine the state of the user. The whole project 
+    shares this module which is designed as a singleton. 
