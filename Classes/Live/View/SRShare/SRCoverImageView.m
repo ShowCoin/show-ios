@@ -51,6 +51,11 @@
 
 #pragma mark - lazy
 
+/**
+ desp lazy
+
+ @return <#return value description#>
+ */
 - (UIView *)corverView {
     if (!_corverView) {
         _corverView = [[UIView alloc] init];
