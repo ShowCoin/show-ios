@@ -21,7 +21,7 @@
 
 /**
  initWithFrame
- note 
+ note
  @param frame initWithFrame
  @return instancetype
  */
@@ -45,6 +45,8 @@
 
 -(void)removeMask
 {
+    
+    // methode  add 
     [_gradiedtLayer removeFromSuperlayer];
 }
 
