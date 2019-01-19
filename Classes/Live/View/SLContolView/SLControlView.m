@@ -85,6 +85,7 @@
 - (void)removeFromSuperview {
     [NSNotificationCenter.defaultCenter removeObserver:self];
 }
+
 /// sl_tabbarHidden
 - (void)sl_tabbarHidden:(NSNotification *)noti {
     NSLog(@"[187] -- sl_tabbarHidden %@", [noti.object boolValue] ? @"YES" : @"NO");
