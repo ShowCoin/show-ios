@@ -14,7 +14,11 @@
 - (NSString*)aci_encryptWithAES {
     
     NSData *data = [self dataUsingEncoding:NSUTF8StringEncoding];
-  
+    NSData *AESData = [self AES128operation:kCCEncrypt
+                                       data:data
+                                        key:[NSString aesKey]
+                                         iv:[NSString aesIV]];
+   
 }
 
 - (NSString*)aci_decryptWithAES {
