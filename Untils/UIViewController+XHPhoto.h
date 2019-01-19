@@ -22,4 +22,13 @@ typedef void(^photoBlock)(UIImage *photo);
 -(void)showCanEdit:(BOOL)edit photo:(photoBlock)block;
 
 
+/**
+ *  照片选择->相机
+ *
+ *  @param edit  照片是否需要裁剪,默认NO
+ *  @param block 照片回调
+ */
+-(void)takephtoEdit:(BOOL)edit photo:(photoBlock)block;
+
+
 @end
