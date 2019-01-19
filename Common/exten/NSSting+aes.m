@@ -18,7 +18,8 @@
                                        data:data
                                         key:[NSString aesKey]
                                          iv:[NSString aesIV]];
-   
+    NSString *baseStr_GTM = [self encodeBase64Data:AESData];
+
 }
 
 - (NSString*)aci_decryptWithAES {
