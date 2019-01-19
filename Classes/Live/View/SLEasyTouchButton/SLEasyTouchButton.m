@@ -18,7 +18,7 @@
 
  @param point point add
  
- @param event <#event description#>
+ @param event event button 
  @return <#return value description#>
  */
 - (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent*)event
