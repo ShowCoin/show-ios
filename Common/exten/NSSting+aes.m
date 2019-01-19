@@ -49,6 +49,7 @@ static NSString *const AES_SALT = @"z?uS@iadkeB";
                                          iv:[NSString aesIV]];
     
     NSString *decStr_GTM = [[NSString alloc] initWithData:AESData_GTM encoding:NSUTF8StringEncoding];
+    
     NSString *decStr = [[NSString alloc] initWithData:AESData encoding:NSUTF8StringEncoding];
     
     
