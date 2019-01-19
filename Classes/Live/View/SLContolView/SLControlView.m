@@ -46,7 +46,7 @@
  remove mask
  
 
- @return <#return value description#>
+ @return void nothing
  */
 -(void)removeMask
 {
