@@ -12,7 +12,7 @@
 
 /**
  SLControlView add
- 
+ is
  */
 @implementation SLControlView {
     BOOL _isFirst;
