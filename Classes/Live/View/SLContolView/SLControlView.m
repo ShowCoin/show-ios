@@ -42,11 +42,16 @@
     return self;
     
 }
+/**
+ remove mask
+ 
 
+ @return <#return value description#>
+ */
 -(void)removeMask
 {
     
-    // methode  add 
+    // methode  add
     [_gradiedtLayer removeFromSuperlayer];
 }
 
