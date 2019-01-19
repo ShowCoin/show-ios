@@ -69,6 +69,8 @@
      nil];
     _gradiedtLayer.startPoint = CGPointMake(0,0);
     _gradiedtLayer.endPoint = CGPointMake(0,1);
+    
+    // layer
     [self.layer addSublayer:_gradiedtLayer];
 }
 
