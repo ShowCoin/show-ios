@@ -13,6 +13,13 @@ typedef void(^photoBlock)(UIImage *photo);
 
 @interface UIViewController (XHPhoto)
 
+/**
+ *  照片选择->图库/相机
+ *
+ *  @param edit  照片是否需要裁剪,默认NO
+ *  @param block 照片回调
+ */
+-(void)showCanEdit:(BOOL)edit photo:(photoBlock)block;
 
 
 @end
