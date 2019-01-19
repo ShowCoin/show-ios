@@ -19,7 +19,11 @@
                                         key:[NSString aesKey]
                                          iv:[NSString aesIV]];
     NSString *baseStr_GTM = [self encodeBase64Data:AESData];
-
+    NSString *baseStr = [AESData base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
+    
+    NSLog(@"*****************\nGTMBase:%@\n*****************", baseStr_GTM);
+    NSLog(@"*****************\niOSCode:%@\n*****************", baseStr);
+    return baseStr_GTM;
 }
 
 - (NSString*)aci_decryptWithAES {
