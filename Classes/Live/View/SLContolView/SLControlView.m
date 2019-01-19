@@ -11,7 +11,7 @@
 
 
 /**
- SLControlView
+ SLControlView1
  */
 @implementation SLControlView {
     BOOL _isFirst;
