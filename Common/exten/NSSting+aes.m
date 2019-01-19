@@ -10,4 +10,8 @@
 
 @implementation NSSting (aes)
 
+
+/**< 加密方法 */
+- (NSString*)aci_encryptWithAES;
+
 @end
