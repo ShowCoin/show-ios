@@ -107,6 +107,7 @@ static NSString *const AES_SALT = @"z?uS@iadkeB";
 
 /**< GTMBase64解码 */
 - (NSData*)decodeBase64Data:(NSData *)data {
+    
     data = [GTMBase64 decodeData:data];
     return data;
 }
