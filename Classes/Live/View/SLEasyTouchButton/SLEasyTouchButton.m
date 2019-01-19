@@ -9,10 +9,17 @@
 #import "SLEasyTouchButton.h"
 
 /**
- note add 
+ note add
  */
 @implementation SLEasyTouchButton
 
+/**
+ <#Description#>
+
+ @param point <#point description#>
+ @param event <#event description#>
+ @return <#return value description#>
+ */
 - (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent*)event
 {
     
