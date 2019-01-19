@@ -14,7 +14,7 @@
 @implementation SLEasyTouchButton
 
 /**
- <#Description#>
+ 1	
 
  @param point <#point description#>
  @param event <#event description#>
