@@ -90,7 +90,6 @@
     wavHeader[0x1E] = byteRate3;
     wavHeader[0x1F] = byteRate4;
     
-    // BlockAlign (bytesPerSample)
     wavHeader[0x20] = PCMFormat.mBytesPerFrame;
     wavHeader[0x21] = 0;
     
