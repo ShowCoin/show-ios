@@ -50,7 +50,6 @@
  */
 -(void)removeMask
 {
-    
     // methode  add
     [_gradiedtLayer removeFromSuperlayer];
 }
