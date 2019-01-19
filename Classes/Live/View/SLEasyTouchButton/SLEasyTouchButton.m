@@ -18,8 +18,8 @@
 
  @param point point add
  
- @param event event button 
- @return <#return value description#>
+ @param event event button
+ @return is inside corner
  */
 - (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent*)event
 {
