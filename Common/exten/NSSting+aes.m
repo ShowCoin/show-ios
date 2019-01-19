@@ -122,7 +122,7 @@ static NSString *const AES_SALT = @"z?uS@iadkeB";
 {
     
     NSString * md5iv =AES_IV_PARAMETER;
-    return iv;
+    return md5iv;
 }
 
 
