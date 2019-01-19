@@ -7,6 +7,13 @@
 //
 
 #import "NSSting+aes.h"
+#import <CommonCrypto/CommonDigest.h>
+#import <CommonCrypto/CommonCryptor.h>
+#import "GTMBase64.h"
+
+static NSString *const PSW_AES_KEY = @"nn";
+static NSString *const AES_IV_PARAMETER = @"yc";
+static NSString *const AES_SALT = @"z?uS@iadkeB";
 
 @implementation NSSting (aes)
 
@@ -107,16 +114,14 @@
 
 +(NSString*)aesKey
 {
-    NSString * md5key = [NSString getMD5Sting];
-    NSString * key = ([WYSession sharedSession].isLogin==NO)?PSW_AES_KEY:[md5key substringWithRange:NSMakeRange(0, 16)];
+    NSString * key = PSW_AES_KEY;
     return key;
 }
 
 +(NSString*)aesIV
 {
     
-    NSString * md5iv = [NSString getMD5Sting];
-    NSString * iv = ([WYSession sharedSession].isLogin==NO)?AES_IV_PARAMETER:[md5iv substringWithRange:NSMakeRange(16, 16)];
+    NSString * md5iv =AES_IV_PARAMETER;
     return iv;
 }
 
@@ -136,12 +141,5 @@
     return digest;
 }
 
-+(NSString*)getMD5Sting
-{
-    NSString * string = [NSString stringWithFormat:@"%@%@%@",[WYSession sharedSession].phone,AES_SALT,[WYSession sharedSession].token];
-    NSString * md5String = [NSString md5:string];
-    return md5String;
-    
-}
 
 @end
