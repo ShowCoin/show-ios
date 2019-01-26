@@ -111,7 +111,12 @@
     // 地图打开
     NSString* wxPayPre=[NSString stringWithFormat:@"%@://",WX_APPID];
     NSString* currentURLPre=[url.absoluteString substringToIndex:[wxPayPre length]];
- 
+    if ([currentURLPre isEqualToString:wxPayPre]) {
+        if ([url.absoluteString containsString:@"ret=0"]) {//成功后pop
+        }
+        return  NO;
+    }
+
 }
 
 @end
