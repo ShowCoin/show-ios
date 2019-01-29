@@ -165,6 +165,7 @@
 		72A0088C20FCA1820051C643 /* SLUserViewHeader+SLMinCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A0088B20FCA1820051C643 /* SLUserViewHeader+SLMinCard.m */; };
 		72F9A9662200484600612687 /* NewTopListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F9A9652200484600612687 /* NewTopListCell.m */; };
 		72F9A9692200487B00612687 /* NewTopListHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F9A9682200487B00612687 /* NewTopListHeader.m */; };
+		72F9A96C220048E800612687 /* NewTopListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F9A96B220048E800612687 /* NewTopListViewController.m */; };
 		72FE9B6620621F59008DD3D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72FE9B6420621F59008DD3D5 /* LaunchScreen.storyboard */; };
 		72FE9B6920621F59008DD3D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FE9B6820621F59008DD3D5 /* main.m */; };
 		72FE9B7320621F59008DD3D5 /* ShowLiveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FE9B7220621F59008DD3D5 /* ShowLiveTests.m */; };
@@ -572,6 +573,7 @@
 		72F9A9672200486F00612687 /* NewTopListHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewTopListHeader.h; sourceTree = "<group>"; };
 		72F9A9682200487B00612687 /* NewTopListHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewTopListHeader.m; sourceTree = "<group>"; };
 		72F9A96A220048C900612687 /* NewTopListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewTopListViewController.h; sourceTree = "<group>"; };
+		72F9A96B220048E800612687 /* NewTopListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewTopListViewController.m; sourceTree = "<group>"; };
 		72FE9B5620621F59008DD3D5 /* ShowLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShowLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72FE9B6520621F59008DD3D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		72FE9B6720621F59008DD3D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -1079,6 +1081,7 @@
 				72F9A9672200486F00612687 /* NewTopListHeader.h */,
 				72F9A9682200487B00612687 /* NewTopListHeader.m */,
 				72F9A96A220048C900612687 /* NewTopListViewController.h */,
+				72F9A96B220048E800612687 /* NewTopListViewController.m */,
 			);
 			path = Toplist;
 			sourceTree = "<group>";
@@ -1806,6 +1809,7 @@
 				435E3C8F20C02BB2002B7A7F /* NSDecimalNumber+JKExtensions.m in Sources */,
 				43205DD720DD264B00AD6952 /* UITextViewDemoViewController.m in Sources */,
 				431CB4CC20F499070043B0AC /* NSObject+JKKVOBlocks.m in Sources */,
+				72F9A96C220048E800612687 /* NewTopListViewController.m in Sources */,
 				43993EC520E23F7A0017F1C3 /* UITableView+FDTemplateLayoutCell.m in Sources */,
 				9343E47721C7D02D0001B9C1 /* UILabel+Additional.m in Sources */,
 				72506F6521CD04D500361964 /* SLNavigationControllerTransition.m in Sources */,
