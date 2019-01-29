@@ -393,9 +393,32 @@
 - (void)dealloc{
     
 }
+- (void)resetParameter
+{
+    self.cursor = @"0";
+    self.count = @"20";
+}
 
+- (void)SLUserViewHeaderConcernActionDelegateWithShare
+{
+    [PageMgr.getCurrentWindow addSubview:self.shareview];
+    self.shareview.alpha=1;
+    UIImageView * imageview = [[UIImageView alloc]init];
+    NSURL *url =  [NSURL URLWithString:self.userModel.large_avatar] ;
+    [imageview yy_setImageWithURL:url placeholder:nil];
+    [self.shareview setShareType:SLShareType_User style:SLShareStyle_superBig andInfo:self. IsMe?AccountUserInfoModel.uid:self.userModel.uid  andUID:nil];
+    self.shareview.userName = self.IsMe ? AccountUserInfoModel.nickname : self.userModel.nickname;
+    self.shareview.userHeader = imageview.image;
+    self.shareview.backview.top = kScreenHeight;
+    @weakify(self);
+    [UIView animateWithDuration:0.3f animations:^{
+        @strongify(self);
+        self.shareview.backview.top=self.shareview.height-self.shareview.shareHeight;
+    } completion:^(BOOL finished) {
+        
+    }];
 
-
+}
 
 @end
 
