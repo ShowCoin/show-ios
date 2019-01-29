@@ -221,6 +221,82 @@
     }
     return _TableView;
 }
+- (void)requestWithMore:(BOOL)more
+{
+   
+    if (self.action ) {
+        [self.action cancel];
+        self.action = nil;
+    }
+    SLNewTopListAction *action = [SLNewTopListAction action];
+    action.uid = self.uid;
+    action.site = self.site;
+    action.category = self.category;
+    action.type = self.type;
+    action.cursor = self.cursor;
+    action.count = self.count;
+    @weakify(self);
+    action.finishedBlock = ^(NSDictionary * result)
+    {
+        @strongify(self);
+        self.price = [[result objectForKey:@"object"] objectForKey:@"price"];
+        self.show = [[result objectForKey:@"object"] objectForKey:@"show"];
+        self.time = [[result objectForKey:@"object"] objectForKey:@"time"];
+        
+        self.dataModelList = [ShowUserModel mj_objectArrayWithKeyValuesArray:[result objectForKey:@"list"]];
+        if (more) {
+            [self.dataSource addObjectsFromArray:self.dataModelList];
+        }else{
+            self.dataSource = [NSMutableArray arrayWithArray:self.dataModelList];
+        }
+
+        self.cursor = [result objectForKey:@"cursor"];
+        self.count = [result objectForKey:@"count"];
+        
+        if (more) {
+            if (self.cursor.integerValue == -1) {
+                [self.TableView.mj_footer endRefreshingWithNoMoreData];
+            }else{
+                [self.TableView.mj_footer endRefreshing];
+            }
+        }else{
+            [self.TableView.mj_header endRefreshing];
+        }
+
+        [self.TableView reloadData];
+        if (!more) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.TableView setContentOffset:CGPointZero animated:YES];
+            });
+        }
+    };
+    action.failedBlock = ^(NSError *error) {
+        [HDHud showMessageInView:self.view title:error.userInfo[@"msg"]];
+
+    };
+    action.cancelledBlock = ^{
+        
+    };
+    [action start];
+
+    self.action = action;
+}
+-(void)resetParameter
+{
+    self.site = @"1";
+    self.category = @"1";
+    self.type = @"1";
+    self.cursor = @"0";
+    self.count = @"20";
+}
+-(void)resetOthers
+{
+    self.cursor = @"0";
+    self.count = @"20";
+}
+//uitableView
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
 
 /*
 #pragma mark - Navigation
