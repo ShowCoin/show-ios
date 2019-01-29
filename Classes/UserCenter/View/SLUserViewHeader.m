@@ -282,4 +282,134 @@
     return self;
 }
 
+-(void)setIsMe:(BOOL)isMe
+{
+    //    return;
+    _isMe = isMe;
+    if (!isMe) {
+        
+        [self.toConcerBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.fansBtn.mas_bottom).with.offset(7*Proportion375);
+            make.left.equalTo(self.headPortrait.mas_right).with.offset(10*Proportion375);
+            make.size.mas_equalTo(CGSizeMake(244*Proportion375, 28*Proportion375));
+        }];
+        [self.tosendMessageBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.fansBtn.mas_bottom).with.offset(13*Proportion375);
+            make.left.equalTo(self.toConcerBtn.mas_right).with.offset(10*Proportion375);
+            make.size.mas_equalTo(CGSizeMake(165*Proportion375 , 28*Proportion375));
+        }];
+        [self.shareBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self).with.offset(25*Proportion375 + KTopHeight);
+            make.right.equalTo(self).with.offset(-54*Proportion375);
+            make.size.mas_equalTo(CGSizeMake(32*Proportion375, 32*Proportion375));
+        }];
+        self.leftBtn.hidden = NO;
+        self.settingBtn.hidden = NO;
+        self.userInfoBtn.hidden = YES;
+        self.leftBtn.hidden = NO;
+        self.tosendMessageBtn.hidden = YES;
+        self.toConcerBtn.hidden = NO;
+        self.shareBtn.hidden = NO;
+    }else{
+        self.leftBtn.hidden = YES;
+        self.settingBtn.hidden = NO;
+        self.userInfoBtn.hidden = NO;
+        self.leftBtn.hidden = YES;
+        self.tosendMessageBtn.hidden = YES;
+        self.toConcerBtn.hidden = YES;
+        self.shareBtn.hidden = YES;
+        
+        
+    }
+}
+//刷新ui
+- (void)userinfoChange:(NSNotification *)notif
+{
+    [self setLabelSpace:self.wordsLab withValue:@"" withFont:Font_Regular(14*Proportion375)];
+    [_headPortrait setRoundStyle:YES imageUrl:AccountUserInfoModel.avatar imageHeight:95 vip:AccountUserInfoModel.is_vip attestation:NO];
+    [_nickLab setText:AccountUserInfoModel.nickname];
+    _sexImg .image=[AccountUserInfoModel.gender  isEqualToString:@"1"]?[UIImage imageNamed:@"userhome_sex_man"]:[UIImage imageNamed:@"userhome_sex_women"];
+    
+}
+
+-(UIButton *)leftBtn
+{
+    if (!_leftBtn) {
+        _leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_leftBtn setBackgroundImage:[UIImage imageNamed:@"user_back"] forState:UIControlStateNormal];
+        [[_leftBtn rac_signalForControlEvents:UIControlEventTouchUpInside]subscribeNext:^(id x) {
+            [PageMgr popActionFromViewcontroller:self.Controller?:(BaseViewController *)self.viewController];
+        }];
+    }
+    return _leftBtn;
+}
+-(UIButton *)shareBtn
+{
+    if (!_shareBtn) {
+        _shareBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_shareBtn setBackgroundImage:[UIImage imageNamed:@"user_share"] forState:UIControlStateNormal];
+        [[_shareBtn rac_signalForControlEvents:UIControlEventTouchUpInside]subscribeNext:^(id x) {
+            [HDHud showMessageInView:self title:@"敬请期待"];
+        }];
+        
+    }
+    return _shareBtn;
+}
+
+- (SLHeadPortrait *)headPortrait
+{
+    if (!_headPortrait) {
+        _headPortrait = [[SLHeadPortrait alloc] initWithFrame:CGRectMake(0, 53*Proportion375, 94*Proportion375, 94 *Proportion375)];
+        _headPortrait.centerX = kMainScreenWidth/2;
+        _headPortrait.delegate = self;
+        
+    }
+    return _headPortrait;
+}
+-(UIImageView *)IsLiveImgView
+{
+    if (!_IsLiveImgView) {
+        _IsLiveImgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"user_is_live"]];
+        _IsLiveImgView.hidden = YES;
+        _IsLiveImgView.contentMode = UIViewContentModeScaleAspectFit;
+    }
+    return _IsLiveImgView;
+}
+
+-(UIButton *)settingBtn
+{
+    if (!_settingBtn) {
+        _settingBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        _settingBtn.titleLabel.font = Font_Medium(12*Proportion375);
+        [_settingBtn setBackgroundImage:[UIImage imageNamed:@"user_more"] forState:UIControlStateNormal];
+        [[_settingBtn rac_signalForControlEvents:UIControlEventTouchUpInside]subscribeNext:^(id x) {
+            [SLReportManager reportEvent:kReport_Me andSubEvent:kReport_Me_Setting];
+            if (self.isMe) {
+                [PageMgr pushtoUserMoreVCWithUserModel:self.userModel];
+            } else {
+#ifdef kCYHTestCode
+                UMMoreViewController *vc = [[UMMoreViewController alloc] init];
+                [self.viewController.navigationController pushViewController:vc animated:YES];
+#else
+                [HDHud showMessageInView:self title:@"敬请期待"];
+#endif
+                
+            }
+        }];
+    }
+    return _settingBtn;
+}
+
+-(UILabel *)nickLab
+{
+    if (!_nickLab) {
+        _nickLab = [UILabel labelWithText:AccountUserInfoModel.nickname textColor:kThemeWhiteColor font:Font_Semibold(14*Proportion375) backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentLeft];
+        _nickLab.layer.shadowRadius = 0.0f;
+        _nickLab.layer.shadowOpacity = 0.3;
+        _nickLab.layer.shadowColor = kThemeShadowColor.CGColor;
+        _nickLab.layer.shadowOffset = CGSizeMake(0,1);
+        
+    }
+    return _nickLab;
+}
 @end
