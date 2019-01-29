@@ -106,12 +106,6 @@
     wavHeader[0x27] = 'a';
     @weakify(self)
     @strongify(self)
-    [imgUrl]: 439dcc7518f041c88790cad7e3fe2e59.jpeg
-    [content]: ddddsdsd
-    [imgUrls]: (
-                "4cf6e8b363304e2281a374f6871ee386.jpeg",
-                "1cd2d216767d4f608b72640a2a839c94.jpeg"
-                )
 
     // SubChunkSize = NumSamples * NumChannels * BitsPerSample/8. This is the number of bytes in the data.
     *((SInt32 *)(wavHeader + 0x28)) = pcmDataLength;
