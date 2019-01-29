@@ -294,6 +294,108 @@
 //    } isMe:self.IsMe];
 }
 
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
+{
+    
+    if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
+        SLUserViewHeader * headerView = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"header"forIndexPath:indexPath];
+        headerView.isMe = self.IsMe;
+        headerView.userModel = self.userModel;
+        headerView.delegate = self;
+        headerView.fromController = self.fromController;
+        headerView.layer.shadowOpacity =0.1f;
+        headerView.layer.shadowRadius = 6;
+        headerView.layer.shadowOffset  = CGSizeMake(0, 2);
+        CGMutablePathRef squarePath = CGPathCreateMutable();
+        //让图形的形状为正方形
+        CGPathAddRect(squarePath, NULL, headerView.bounds);
+        //设定阴影图形
+        headerView.layer.shadowPath = squarePath;
+//        headerView.layer.shadowColor = [UIColor redColor].CGColor;
+        CGPathRelease(squarePath);
+
+        return headerView;
+    }
+   return nil;
+}
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
+    return CGSizeMake(kMainScreenWidth, HeaderHeightWithoutWords + self.wordsHeight + KTopHeight);
+}
+
+#pragma mark---------scrollView-----------
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    NSLog(@"%f",scrollView.contentOffset.y);
+    if (scrollView.contentOffset.y > HeaderHeightWithoutWords + _wordsHeight + KTopHeight - KNaviBarHeight) {
+        self.floatView.hidden = NO;
+    }else{
+        self.floatView.hidden = YES;
+    }
+    
+    if (scrollView.contentOffset.y <= 0) {
+        scrollView.contentOffset = CGPointMake(0, 0);
+    }
+}
+#pragma mark---------actions-----------
+
+- (void)walletViewclickAction:(UITapGestureRecognizer *)sender
+{
+    [PageMgr presentLoginViewController];
+}
+
+#pragma mark---------method-----------
+
+- (void)requestWithMore:(BOOL)more
+{
+    SLHistoryWorksAction * action = [SLHistoryWorksAction action];
+    if (!_IsMe) {
+        action.uid = _userModel.uid;
+    }
+    action.cursor = self.cursor;
+    action.count = self.count;
+    @weakify(self);
+    [self startRequestAction:action Sucess:^(id result) {
+        @strongify(self);
+        self.dataModelList = [SLLiveListModel mj_objectArrayWithKeyValuesArray:[result objectForKey:@"list"]];
+        if (more) {
+            [self.dataSource addObjectsFromArray:self.dataModelList];
+        }else{
+            self.dataSource = [NSMutableArray arrayWithArray:self.dataModelList];
+        }
+        self.cursor = [result objectForKey:@"next_cursor"];
+        
+        if (more) {
+            if (self.cursor.integerValue == -1) {
+                [self.mainCollectionView.mj_footer endRefreshingWithNoMoreData];
+            }else{
+                [self.mainCollectionView.mj_footer endRefreshing];
+            }
+        }else{
+            [self.mainCollectionView.mj_header endRefreshing];
+            if (self.dataSource.count == 0) {
+                self.mainCollectionView.contentInset = UIEdgeInsetsMake(0, 0, 200*Proportion375 + KTabBarHeight, 0);
+
+                UIView * nodataview = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kMainScreenWidth, 200)];
+                nodataview.backgroundColor =kBlackWith1e;
+                UILabel * nodataLab =[UILabel labelWithText:@"TA还没有发布过任何作品哦~" textColor:kGrayWith999999 font:Font_Medium(14*Proportion375) backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentCenter];
+                nodataLab.frame = CGRectMake(0, 90*Proportion375, kMainScreenWidth, 20*Proportion375);
+                [nodataview addSubview:nodataLab];
+                [self.mainCollectionView.mj_footer addSubview:nodataview];
+            }
+        }
+        
+        [self.mainCollectionView reloadData];
+    } FaildBlock:^(NSError *error) {
+        
+    }];
+
+}
+- (void)dealloc{
+    
+}
+
+
+
 
 @end
 
