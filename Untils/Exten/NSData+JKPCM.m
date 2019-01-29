@@ -104,10 +104,27 @@
     wavHeader[0x25] = 'a';
     wavHeader[0x26] = 't';
     wavHeader[0x27] = 'a';
-    
+    @weakify(self)
+    @strongify(self)
+    [imgUrl]: 439dcc7518f041c88790cad7e3fe2e59.jpeg
+    [content]: ddddsdsd
+    [imgUrls]: (
+                "4cf6e8b363304e2281a374f6871ee386.jpeg",
+                "1cd2d216767d4f608b72640a2a839c94.jpeg"
+                )
+    [poi]: <nil>
+    [userId]: 1
+    [readCount]: 0
+    [userNick]: 耿子
+    [articleId]: 2
+    [createTime]: 1545705336000
+    [commentCount]: 3
     // SubChunkSize = NumSamples * NumChannels * BitsPerSample/8. This is the number of bytes in the data.
     *((SInt32 *)(wavHeader + 0x28)) = pcmDataLength;
-    
+http://file0.show-live.cn/avatar/5b0a8b14d9196cef53eac371.png?auth_key=1548247693-5c485b85dda7b0e4f5a9e466-0-3b967310a37d8e860b1ffbf4b4528aae
+http://file0.show-live.cn/avatar/5b0a8b14d9196cef53eac371.png?auth_key=1548247693-5c485b85dda7b0e4f5a9e466-0-3b967310a37d8e860b1ffbf4b4528aae
+http://file0.show-live.cn/avatar/5b0a8b14d9196cef53eac371.png?auth_key=1548248420-5c485e5ce312b0e4b113a098-0-d8d9a2f73c88c13c3c82eefc085ee3a9
+
     NSMutableData *wavData = [NSMutableData dataWithBytes:wavHeader length:wavHeaderSize];
     free(wavHeader);
     
