@@ -212,6 +212,88 @@
     return _mainCollectionView;
 }
 
+- (UIView*)floatView
+{
+    if (!_floatView) {
+        _floatView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kMainScreenWidth, KNaviBarHeight)];
+        _floatView.backgroundColor = kNavigationBGColor;
+         UIButton * _worksBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        _worksBtn.frame = CGRectMake(0, 0, kMainScreenWidth/2, 45*Proportion375);
+        _worksBtn.bottom = KNaviBarHeight;
+        [_worksBtn setTitle:@"作品" forState:UIControlStateNormal];
+        [_worksBtn setTitleColor:kThemeWhiteColor forState:UIControlStateNormal];
+        _worksBtn.titleLabel.font = Font_Medium(15*Proportion375);
+        [[_worksBtn rac_signalForControlEvents:UIControlEventTouchUpInside]subscribeNext:^(id x) {
+           
+        } ];
+        [_floatView addSubview:_worksBtn];
+        
+        UIButton * _likesBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        _likesBtn.frame = CGRectMake(kMainScreenWidth/2, 0, kMainScreenWidth/2, 45*Proportion375);
+        _likesBtn.bottom = KNaviBarHeight;
+        [_likesBtn setTitle:@"喜欢" forState:UIControlStateNormal];
+        [_likesBtn setTitleColor:kThemeWhiteColor forState:UIControlStateNormal];
+        _likesBtn.titleLabel.font = Font_Medium(15*Proportion375);
+        [[_likesBtn rac_signalForControlEvents:UIControlEventTouchUpInside]subscribeNext:^(id x) {
+            
+        }
+         ];
+        [_floatView addSubview:_likesBtn];
+        _floatView.hidden = YES;
+    }
+    return _floatView;
+}
+
+- (SLUserShareView *)shareview {
+    if (!_shareview) {
+        _shareview = [[SLUserShareView alloc]initWithFrame:CGRectMake(0, 0, kMainScreenWidth, kMainScreenHeight)];
+        _shareview.delegaet = self;
+        _shareview.alpha = 0;
+    }
+    return _shareview;
+}
+
+#pragma mark---------collectionDelegates-----------
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
+    return 1;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    return self.dataSource.count;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    ShowHomeMiddleCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ShowHomeMiddleCell" forIndexPath:indexPath];
+    SLLiveListModel * model =[self.dataSource objectAtIndex:indexPath.row];
+    model.cellType = SLLiveListCellType_Usercenter;
+    cell.dataModel = model;
+    return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+//    if([AccountModel shared].isLiveing){
+//        [HDHud showMessageInView:self.view title:@"您正在直播，无法观看其他人的回放"];
+//        return ;
+//    }
+       [HDHud showMessageInView:self.view title:@"敬请期待"];
+    
+//    [ShowHomeLargeCell pausePlayer];
+//
+//    @weakify(self);
+//    [SLReportManager reportEvent:self.IsMe?kReport_Me:kReport_Others andSubEvent:self.IsMe?kReport_Me_HistoryPlay:kReport_Others_HistoryPlay];
+//
+//    SLLiveListModel * model =[self.dataSource objectAtIndex:indexPath.row];
+//    model.master= self.userModel;
+//    
+//    [PageMgr pushToReplayRoomControllerWithData:model RefreshBlock:^{
+//        @strongify(self);
+//        self.cursor = 0;
+//        [self requestWithMore:NO];
+//        [self.mainCollectionView.mj_header beginRefreshing];
+//    } isMe:self.IsMe];
+}
+
 
 @end
 
