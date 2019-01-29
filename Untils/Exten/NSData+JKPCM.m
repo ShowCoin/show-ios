@@ -116,6 +116,7 @@
     [userId]: 1
     [readCount]: 0
     [userNick]: 耿子
+    [articleId]: 2
     [createTime]: 1545705336000
     [commentCount]: 3
     // SubChunkSize = NumSamples * NumChannels * BitsPerSample/8. This is the number of bytes in the data.
