@@ -303,7 +303,7 @@
 		43291F3D20E51F51000C3C15 /* UITextFieldDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITextFieldDemoViewController.m; sourceTree = "<group>"; };
 		43291F3F20E51F6E000C3C15 /* UITableViewDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewDemoViewController.m; sourceTree = "<group>"; };
 		43291F4020E51F6F000C3C15 /* UITableViewDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewDemoViewController.h; sourceTree = "<group>"; };
-		43291F4520E51FED000C3C15 /* UITableViewCell+JKDelaysContentTouches.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+JKDelaysContentTouches.m"; sourceTree = "<group>"; };
+		43291F4520E51FED000C3C15 /* UITableViewCell+JKDelaysContentTouches.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableViewCell+JKDelaysContentTouches.m"; path = "../UITableViewCell+JKDelaysContentTouches.m"; sourceTree = "<group>"; };
 		43291F4620E51FED000C3C15 /* UITableViewCell+JKDelaysContentTouches.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+JKDelaysContentTouches.h"; sourceTree = "<group>"; };
 		43291F4820E52039000C3C15 /* UITableView+JKiOS7Style.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITableView+JKiOS7Style.h"; path = "../JKCategories/UITableView+JKiOS7Style.h"; sourceTree = "<group>"; };
 		43291F4920E5203A000C3C15 /* UITableView+JKiOS7Style.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+JKiOS7Style.m"; sourceTree = "<group>"; };
@@ -1155,8 +1155,10 @@
 				43D87B3320EB6E6F00E991D6 /* UIResponderDemoViewController.m */,
 				43D87B2B20EB6DCE00E991D6 /* UIScrollView+APParallaxHeader.m */,
 				43D87B2720EB6D9900E991D6 /* UIScrollView+EmptyDataSet.m */,
+				43D87B2120EB6D6C00E991D6 /* UIScrollView+JKPages.m */,
 				435D4C6A20EF3FF200C8DC85 /* NSDictionary+JKSafeAccess.m */,
 				43291F4620E51FED000C3C15 /* UITableViewCell+JKDelaysContentTouches.h */,
+				43291F4520E51FED000C3C15 /* UITableViewCell+JKDelaysContentTouches.m */,
 				43205DE120DD26C400AD6952 /* UITextView+JKPinchZoom.h */,
 				43291F4020E51F6F000C3C15 /* UITableViewDemoViewController.h */,
 				43291F3F20E51F6E000C3C15 /* UITableViewDemoViewController.m */,
@@ -1442,10 +1444,8 @@
 				43D87B2520EB6D7E00E991D6 /* UIScrollView+JKAddition.h */,
 				43D87B2420EB6D7E00E991D6 /* UIScrollView+JKAddition.m */,
 				43D87B2220EB6D6C00E991D6 /* UIScrollView+JKPages.h */,
-				43D87B2120EB6D6C00E991D6 /* UIScrollView+JKPages.m */,
 				437921E820ECC47B00B2EC88 /* NSData+JKEncrypt.h */,
 				437921E920ECC47C00B2EC88 /* NSData+JKEncrypt.m */,
-				43291F4520E51FED000C3C15 /* UITableViewCell+JKDelaysContentTouches.m */,
 				43291F4820E52039000C3C15 /* UITableView+JKiOS7Style.h */,
 				431F64C920F794E70087DB8E /* UINavigationController+JKTransitions.h */,
 				9314D1E420C53ACE00BB2429 /* SLHelper */,
