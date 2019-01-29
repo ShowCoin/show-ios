@@ -808,5 +808,86 @@
 }
 
 #pragma mark- datas
+-(void)setUserModel:(ShowUserModel *)userModel
+{
+    _userModel = userModel;
+    NSLog(@"avatarheaderModel ----    %@",userModel.avatar);
+    @weakify(self);
+    UIImageView * imag = [[UIImageView alloc] init];
+    [imag yy_setImageWithURL:[NSURL URLWithString:_userModel.avatar] placeholder:nil options:YYWebImageOptionProgressiveBlur | YYWebImageOptionSetImageWithFadeAnimation completion:^(UIImage * _Nullable image, NSURL * _Nonnull url, YYWebImageFromType from, YYWebImageStage stage, NSError * _Nullable error) {
+        @strongify(self);
+        if (!self.isMiniCard) {
+            [self.headImgView yy_setImageWithURL:[NSURL URLWithString:userModel.middle_avatar] placeholder:image ];
+            self.backgroundColor = kBlackWith1c;
+        }else{
+            self.headImgView.backgroundColor = [UIColor clearColor];
+            self.backgroundColor = [UIColor clearColor];
+        }
+        [self.headPortrait setRoundStyle:YES imageUrl:self.userModel.middle_avatar.length>0?self.userModel.middle_avatar:self.userModel.avatar holdImg:image  imageHeight:88 vip:self.isMe?AccountUserInfoModel.is_vip:self.userModel.is_vip  attestation:NO];
+    }];
+    _IsLiveImgView.hidden = userModel.islive.boolValue?NO:YES;
+    
+    [self.masterLevel setLevel:[NSString stringWithFormat:@"%ld",(long)_userModel.masterLevel]];
+    [self.showLevel setLevel:[NSString stringWithFormat:@"%ld",(long)_userModel.showLevel]];
+    
+    [self.nickLab setText:_userModel.nickname];
+    //    [self.nickLab setText:@"sjjjggg"];
+    [self.sexImg setImage:userModel.gender.integerValue == 1?[UIImage imageNamed:@"userhome_sex_man"]:[UIImage imageNamed:@"userhome_sex_women"]];
+    [self.sexlab setText:[NSString stringWithFormat:@"%@岁",_userModel.age.length>0?_userModel.age:@"未知"]];
+    [self.idLab setText:[NSString stringWithFormat:@"秀号: %@",_userModel.popularNo]];
+    
+    [self.constellationLab setText:[NSString stringWithFormat:@"%@",_userModel.constellation.length>0?_userModel.constellation:@"未知"]];
+    [self.cityLab setText:IsStrEmpty(_userModel.city)?@"未知":[NSString stringWithFormat:@"%@    ",_userModel.city]];
+    if (_userModel.isFollowed.boolValue && !_isMe) {
+        self.toConcerBtn.layer.borderWidth = 0.5*Proportion375;
+        self.toConcerBtn.layer.borderColor = kThemeAlph30F7F7F7.CGColor;
+        self.toConcerBtn.backgroundColor = kThemeAlph15Block;
+        if(self.isMiniCard){
+            [self.toConcerBtn setTitle:@"已关注" forState:UIControlStateNormal];
+            [self.toConcerBtn setTitleColor:kThemeAlph70WhiteColor forState:UIControlStateNormal];
+        }else{
+            self.tosendMessageBtn.hidden = NO;
+            [self.toConcerBtn setTitleColor:kThemeWhiteColor forState:UIControlStateNormal];
+            [self.toConcerBtn setTitle:@"" forState:UIControlStateNormal];
+            if (_userModel.isFans) {
+                [self.toConcerBtn setImage:[UIImage imageNamed:@"user_follow_eatch"] forState:UIControlStateNormal];
+            }else{
+                [self.toConcerBtn setImage:[UIImage imageNamed:@"user_friend"] forState:UIControlStateNormal];
+            }
+            [self.tosendMessageBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
+                make.top.equalTo(self.fansBtn.mas_bottom).with.offset(7*Proportion375);
+                make.left.equalTo(self.headPortrait.mas_right).with.offset(10*Proportion375);
+                make.size.mas_equalTo(CGSizeMake(165*Proportion375 , 28*Proportion375));
+            }];
+            
+            [self.toConcerBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
+                make.top.equalTo(self.fansBtn.mas_bottom).with.offset(7*Proportion375);
+                make.left.equalTo(self.tosendMessageBtn.mas_right).with.offset(6*Proportion375);
+                make.size.mas_equalTo(CGSizeMake(75*Proportion375, 28*Proportion375));
+            }];
+        }
+    }else{
+        self.tosendMessageBtn.hidden = YES;
+        [self.toConcerBtn setTitleColor:kGoldWithPoster forState:UIControlStateNormal];
+        self.toConcerBtn.layer.borderWidth = 0.5*Proportion375;
+        self.toConcerBtn.layer.borderColor = kGoldWithAlphPoster.CGColor;
+        self.toConcerBtn.backgroundColor = kThemeShadowColor15;
+        [self.toConcerBtn setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
+        [self.toConcerBtn setTitle:@"加关注" forState:UIControlStateNormal];
+        [self.toConcerBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.fansBtn.mas_bottom).with.offset(7*Proportion375);
+            make.left.equalTo(self.headPortrait.mas_right).with.offset(10*Proportion375);
+            make.size.mas_equalTo(CGSizeMake(244*Proportion375, 28*Proportion375));
+        }];
+    }
+    
+    [self setLabelSpace:self.wordsLab withValue:_userModel.descriptions withFont:Font_Regular(14*Proportion375)];
+    
+    self.walletNum.text = _userModel.showCoinStr;
+    self.concernNum.text = _userModel.followCount;
+    self.fansNum.text = _userModel.fansCount;
+    [self.worksBtn setTitle:[NSString stringWithFormat:@"作品 %@",_userModel.videos?_userModel.videos:@"0"] forState:UIControlStateNormal];
+    
+}
+
 @end
- 
