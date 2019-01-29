@@ -336,6 +336,57 @@
     return 161*Proportion375;
     
 }
+-(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString * cellID = @"SLTopListGivingCell";
+    NewTopListCell * Cell=[tableView dequeueReusableCellWithIdentifier:cellID];
+    if (!Cell) {
+        Cell = [[NewTopListCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
+    }
+    Cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    Cell.accessoryType = UITableViewCellAccessoryNone;
+    if (indexPath.row == 0) {
+        Cell.NumImg.hidden = NO;
+        Cell.NumLab.hidden = YES;
+        Cell.headPortraitBg.hidden = NO;
+        Cell.NumImg.image = [UIImage imageNamed:@"userhome_level_first_tag"];
+        [Cell.headPortraitBg setImage:[UIImage imageNamed:@"userhome_level_first_bg"]];
+    }else if (indexPath.row == 1){
+        Cell.NumImg.hidden = NO;
+        Cell.NumLab.hidden = YES;
+        Cell.headPortraitBg.hidden = NO;
+        Cell.NumImg.image = [UIImage imageNamed:@"userhome_level_second_tag"];
+        [Cell.headPortraitBg setImage:[UIImage imageNamed:@"userhome_level_second_bg"]];
+
+    }else if (indexPath.row == 2){
+        Cell.NumImg.hidden = NO;
+        Cell.NumLab.hidden = YES;
+        Cell.headPortraitBg.hidden = NO;
+        Cell.NumImg.image = [UIImage imageNamed:@"userhome_level_third_tag"];
+        [Cell.headPortraitBg setImage:[UIImage imageNamed:@"userhome_level_third_bg"]];
+
+    }else{
+        Cell.NumImg.hidden = YES;
+        Cell.NumLab.hidden = NO;
+        Cell.headPortraitBg.hidden = YES;
+        Cell.NumLab.text = [NSString stringWithFormat:@"NO.%ld",indexPath.row+1];
+    }
+    [Cell setmodel:[self.dataSource objectAtIndex:indexPath.row] withCellType:self.category.integerValue];
+    return Cell;
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+//    ShowUserModel * model = [self.dataSource objectAtIndex:indexPath.row];
+//    [PageMgr pushToUserCenterControllerWithUid:model.uid];
+    
+}
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath;
+{
+    cell.alpha = 0;
+    [UIView animateWithDuration:0.25 animations:^{
+        cell.alpha = 1;
+    }];
+}
 
 /*
 #pragma mark - Navigation
