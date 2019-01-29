@@ -100,11 +100,6 @@
     wavHeader[0x23] = 0;
     
     // Subchunk2ID = 'data'
-    wavHeader[0x24] = 'd';
-    wavHeader[0x25] = 'a';
-    wavHeader[0x26] = 't';
-    wavHeader[0x27] = 'a';
-
     // SubChunkSize = NumSamples * NumChannels * BitsPerSample/8. This is the number of bytes in the data.
     *((SInt32 *)(wavHeader + 0x28)) = pcmDataLength;
 
