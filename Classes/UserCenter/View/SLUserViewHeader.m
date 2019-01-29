@@ -890,4 +890,163 @@
     
 }
 
+-(void)concerAction{
+    SLFollowUserAction *action  = [SLFollowUserAction action];
+    
+    action.to_uid = self.userModel.uid;
+    if (self.userModel.isFollowed.integerValue == 1) {
+        action.type = FollowTypeDelete;
+    }else{
+        action.type = FollowTypeAdd;
+    }
+    @weakify(self);
+    [self sl_startRequestAction:action Sucess:^(id result) {
+        @strongify(self);
+        if (self.userModel.isFollowed.integerValue == 1) {
+            self.userModel.isFollowed = @"0";
+            self.tosendMessageBtn.hidden = YES;
+            [self.toConcerBtn setTitleColor:kGoldWithPoster forState:UIControlStateNormal];
+            self.toConcerBtn.layer.borderWidth = 0.5*Proportion375;
+            self.toConcerBtn.layer.borderColor = kGoldWithAlphPoster.CGColor;
+            self.toConcerBtn.backgroundColor = kThemeShadowColor15;
+            [self.toConcerBtn setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
+            [self.toConcerBtn setTitle:@"加关注" forState:UIControlStateNormal];
+            [self.toConcerBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
+                make.top.equalTo(self.fansBtn.mas_bottom).with.offset(7*Proportion375);
+                make.left.equalTo(self.headPortrait.mas_right).with.offset(10*Proportion375);
+                make.size.mas_equalTo(CGSizeMake(244*Proportion375, 28*Proportion375));
+            }];
+            if(self.isMiniCard){
+                [[NSNotificationCenter defaultCenter]postNotificationName:SLRefreshListTwoNotification object:@([HomeHeader isHot])];
+                [[NSNotificationCenter defaultCenter]postNotificationName:kFollowUserStatusWithUidNotification object:@{@"type":@"0",@"uid":self.userModel.uid,@"master":@(self.isManager)}];
+            }
+            
+        }else{
+            self.userModel.isFollowed = @"1";
+            self.toConcerBtn.layer.borderWidth = 0.5*Proportion375;
+            self.toConcerBtn.layer.borderColor = kThemeAlph30F7F7F7.CGColor;
+            if(self.isMiniCard){
+                [self.toConcerBtn setTitle:@"已关注" forState:UIControlStateNormal];
+                [self.toConcerBtn setTitleColor:kThemeAlph70WhiteColor forState:UIControlStateNormal];
+            }else{
+                self.tosendMessageBtn.hidden = NO;
+                [self.toConcerBtn setTitleColor:kThemeWhiteColor forState:UIControlStateNormal];
+                self.toConcerBtn.backgroundColor = kThemeAlph15Block;
+                [self.toConcerBtn setTitle:@"" forState:UIControlStateNormal];
+                if (self.userModel.isFans) {
+                    [self.toConcerBtn setImage:[UIImage imageNamed:@"user_follow_eatch"] forState:UIControlStateNormal];
+                    
+                }else{
+                    [self.toConcerBtn setImage:[UIImage imageNamed:@"user_friend"] forState:UIControlStateNormal];
+                    
+                }
+                [self.tosendMessageBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
+                    make.top.equalTo(self.fansBtn.mas_bottom).with.offset(7*Proportion375);
+                    make.left.equalTo(self.headPortrait.mas_right).with.offset(10*Proportion375);
+                    make.size.mas_equalTo(CGSizeMake(165*Proportion375 , 28*Proportion375));
+                }];
+                
+                [self.toConcerBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
+                    make.top.equalTo(self.fansBtn.mas_bottom).with.offset(7*Proportion375);
+                    make.left.equalTo(self.tosendMessageBtn.mas_right).with.offset(6*Proportion375);
+                    make.size.mas_equalTo(CGSizeMake(75*Proportion375, 28*Proportion375));
+                }];
+            }
+            
+            if(self.isMiniCard){
+                [[NSNotificationCenter defaultCenter]postNotificationName:SLRefreshListTwoNotification object:@([HomeHeader isHot])];
+                [[NSNotificationCenter defaultCenter]postNotificationName:kFollowUserStatusWithUidNotification object:@{@"type":@"1",@"uid":self.userModel.uid,@"master":@(self.isManager)}];
+            }
+        }
+        NSMutableDictionary * dic = [NSMutableDictionary dictionary];
+        [dic setObject:self.userModel.isFollowed forKey:@"isFollowed"];
+        [[NSNotificationCenter defaultCenter] postNotificationName:kCorcernNotification object:nil userInfo:dic];
+        
+        NSDictionary * dict = @{@"type":@(action.type),@"uid":self.userModel.uid};
+        [[NSNotificationCenter defaultCenter]postNotificationName:kFollowUserStatusWithUidNotification object:dict];
+        
+    } FaildBlock:^(NSError *error) {
+        [HDHud showMessageInView:KeyWindow title:error.userInfo[@"msg"]];
+        
+    }];
+}
+- (void)headPortraitClickAuthor
+{
+    if ([self.Controller isKindOfClass:[SLLiveViewController class]])
+    {
+        return;
+    }
+    if (_isMe) {
+        [PageMgr pushtoUserInfoVC];
+    }
+    else if(!_isMe&&!_isMiniCard)
+    {
+        if ([self.viewController.navigationController.viewControllers.firstObject isKindOfClass:[UserCenterViewController class]]) {
+            //tabbar个人页
+            if ([self.userModel.islive isEqualToString:@"1"])
+            {
+                //直接弹出该用户直播.单个页面,不需上下滑动
+                [PageMgr popRootFromViewcontroller:self.Controller?:(BaseViewController *)self.viewController uid:self.userModel.uid];
+            }
+            else
+            {
+                CGRect rect=[_headPortrait.imageView convertRect: _headPortrait.imageView.bounds toView:self];
+                SLPhotoBrowserViewController *photo = [[SLPhotoBrowserViewController alloc] initWithImageNameArray:@[@"0"] currentImageIndex:0 imageViewArray:[@[_headPortrait.imageView] mutableCopy] imageViewFrameArray:[@[[NSValue valueWithCGRect:rect]] mutableCopy]];
+                photo.view.backgroundColor = HexRGBAlpha(0x181926, .9);
+                [self.viewController presentViewController:photo animated:YES completion:nil];
+            }
+        }
+        else if ([self.viewController.navigationController.viewControllers.firstObject isKindOfClass:[ShowHomeViewController class]])
+        {
+            NSLog(@"%@-------%@",self.viewController.navigationController.viewControllers.firstObject,self.viewController.navigationController.viewControllers[1]);
+            
+            //首页直播间跳转
+            if ([self.fromController isKindOfClass:[SLPlayerViewController class]]) {
+                SLPlayerViewController * play =self.fromController;
+                if ([play.listModel.master.uid isEqualToString:self.userModel.uid]) {
+                    [PageMgr popActionFromViewcontroller:self.Controller?:(BaseViewController *)self.viewController];
+                }
+                else if ([play.listModel.master.uid isEqualToString:self.userModel.uid]&&[self.userModel.islive isEqualToString:@"1"])
+                {
+                    //关闭当前直播,跳转该用户直播,不做其他处理
+                    [PageMgr popRootFromViewcontroller:self.Controller?:(BaseViewController *)self.viewController uid:self.userModel.uid];
+                }
+                else
+                {
+                    CGRect rect=[_headPortrait.imageView convertRect: _headPortrait.imageView.bounds toView:self];
+                    SLPhotoBrowserViewController *photo = [[SLPhotoBrowserViewController alloc] initWithImageNameArray:@[@"0"] currentImageIndex:0 imageViewArray:[@[_headPortrait.imageView] mutableCopy] imageViewFrameArray:[@[[NSValue valueWithCGRect:rect]] mutableCopy]];
+                    photo.view.backgroundColor = HexRGBAlpha(0x181926, .9);
+                    [self.viewController presentViewController:photo animated:YES completion:nil];
+                }
+            }
+            else if([self.userModel.islive isEqualToString:@"1"])
+            {
+                
+                [PageMgr popRootFromViewcontroller:self.Controller?:(BaseViewController *)self.viewController uid:self.userModel.uid];
+                
+            }
+            else
+            {
+                CGRect rect=[_headPortrait.imageView convertRect: _headPortrait.imageView.bounds toView:self];
+                SLPhotoBrowserViewController *photo = [[SLPhotoBrowserViewController alloc] initWithImageNameArray:@[@"0"] currentImageIndex:0 imageViewArray:[@[_headPortrait.imageView] mutableCopy] imageViewFrameArray:[@[[NSValue valueWithCGRect:rect]] mutableCopy]];
+                photo.view.backgroundColor = HexRGBAlpha(0x181926, .9);
+                [self.viewController presentViewController:photo animated:YES completion:nil];
+            }
+        }
+        else
+        {
+            CGRect rect=[_headPortrait.imageView convertRect: _headPortrait.imageView.bounds toView:self];
+            SLPhotoBrowserViewController *photo = [[SLPhotoBrowserViewController alloc] initWithImageNameArray:@[@"0"] currentImageIndex:0 imageViewArray:[@[_headPortrait.imageView] mutableCopy] imageViewFrameArray:[@[[NSValue valueWithCGRect:rect]] mutableCopy]];
+            photo.view.backgroundColor = HexRGBAlpha(0x181926, .9);
+            [self.viewController presentViewController:photo animated:YES completion:nil];
+        }
+    }
+    else if(_isMiniCard)
+    {
+        if ([self.delegate performSelector:@selector(dismissMasterView)]) {
+            [self.delegate dismissMasterView];
+        }
+        [PageMgr pushToUserCenterControllerWithUserModel:self.userModel viewcontroller:self.Controller?:(BaseViewController *)self.viewController];
+    }
+}
 @end
