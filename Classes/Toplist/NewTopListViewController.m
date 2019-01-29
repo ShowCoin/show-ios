@@ -103,3 +103,85 @@
         btn.frame = CGRectMake(xxx, 10*Proportion375, kMainScreenWidth/5, 44*Proportion375);
         [btn addTarget:self action:@selector(chooseTitle:) forControlEvents:UIControlEventTouchUpInside];
     }
+    _LineSep = [[UIView alloc] initWithFrame:CGRectMake(0, 53*Proportion375, kMainScreenWidth, 1*Proportion375)];
+    _LineSep.backgroundColor = kBlackWith1c;
+    [navFloatView addSubview:_LineSep];
+    _LineOne = [[UIView alloc] initWithFrame:CGRectMake(0, 52*Proportion375, 26*Proportion375, 2*Proportion375)];
+    _LineOne.layer.cornerRadius = 1*Proportion375;
+    _LineOne.backgroundColor = kGoldWithPoster;
+    _LineOne.centerX = kMainScreenWidth/5/2;
+    [navFloatView addSubview:_LineOne];
+
+    UIButton *dayBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [dayBtn setTitle:@"日榜" forState:UIControlStateNormal];
+    [dayBtn setTitleColor:kGoldWithPoster forState:UIControlStateNormal];
+    dayBtn.titleLabel.font = Font_Regular(14*Proportion375);
+    [navFloatView addSubview:dayBtn];
+    dayBtn.frame = CGRectMake(0, 54*Proportion375, kMainScreenWidth/3, 44*Proportion375);
+    
+    UIButton *weekBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [weekBtn setTitle:@"周榜" forState:UIControlStateNormal];
+    [weekBtn setTitleColor:kGrayTextWithb6 forState:UIControlStateNormal];
+    weekBtn.titleLabel.font = Font_Regular(14*Proportion375);
+    [navFloatView addSubview:weekBtn];
+    weekBtn.frame = CGRectMake(kMainScreenWidth/3, 54*Proportion375, kMainScreenWidth/3, 44*Proportion375);
+    
+    UIButton *allBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [allBtn setTitle:@"总榜" forState:UIControlStateNormal];
+    [allBtn setTitleColor:kGrayTextWithb6 forState:UIControlStateNormal];
+    allBtn.titleLabel.font = Font_Regular(14*Proportion375);
+    [navFloatView addSubview:allBtn];
+    allBtn.frame = CGRectMake(kMainScreenWidth/3*2, 54*Proportion375, kMainScreenWidth/3, 44*Proportion375);
+    
+    _LineTwo = [[UIView alloc] initWithFrame:CGRectMake(0, 96*Proportion375, 26*Proportion375, 2*Proportion375)];
+    _LineTwo.backgroundColor = kGoldWithPoster;
+    _LineTwo.layer.cornerRadius = 1*Proportion375;
+    _LineTwo.centerX = dayBtn.centerX;
+    [navFloatView addSubview:_LineTwo];
+    [[dayBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+        @strongify(self)
+        [dayBtn setTitleColor:kGoldWithPoster forState:UIControlStateNormal];
+        [weekBtn setTitleColor:kGrayTextWithb6 forState:UIControlStateNormal];
+        [allBtn setTitleColor:kGrayTextWithb6 forState:UIControlStateNormal];
+        self.type = @"1";
+        [self resetOthers];
+        [self requestWithMore:NO];
+        self.LineTwo.centerX = dayBtn.centerX;
+    }];
+    [[weekBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+        @strongify(self)
+        [dayBtn setTitleColor:kGrayTextWithb6 forState:UIControlStateNormal];
+        [weekBtn setTitleColor:kGoldWithPoster forState:UIControlStateNormal];
+        [allBtn setTitleColor:kGrayTextWithb6 forState:UIControlStateNormal];
+        self.type = @"2";
+        [self resetOthers];
+        [self requestWithMore:NO];
+        self.LineTwo.centerX = weekBtn.centerX;
+
+    }];
+    [[allBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+        @strongify(self)
+        [dayBtn setTitleColor:kGrayTextWithb6 forState:UIControlStateNormal];
+        [weekBtn setTitleColor:kGrayTextWithb6 forState:UIControlStateNormal];
+        [allBtn setTitleColor:kGoldWithPoster forState:UIControlStateNormal];
+        self.type = @"3";
+        [self resetOthers];
+        [self requestWithMore:NO];
+        self.LineTwo.centerX = allBtn.centerX;
+
+    }];
+    
+}
+
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+
+@end
