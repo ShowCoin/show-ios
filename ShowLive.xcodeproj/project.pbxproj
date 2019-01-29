@@ -196,6 +196,7 @@
 		93EF35D521C292950088C2E4 /* UIImage+Additional.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EF35D421C292950088C2E4 /* UIImage+Additional.m */; };
 		A7E2C221F3EC94B44C97ADEE /* libPods-ShowLiveTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C80209C93E46267AFE3ADF2E /* libPods-ShowLiveTests.a */; };
 		A9BBAFBE20CA8E5B001683F8 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9BBAFBD20CA8E5B001683F8 /* Media.xcassets */; };
+		D22E1E6C21F342F4001A3D2A /* NSSting+aes.m in Sources */ = {isa = PBXBuildFile; fileRef = D22E1E6B21F342F4001A3D2A /* NSSting+aes.m */; };
 		EC6B0793D76068920F217137 /* libPods-ShowLiveUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 877A7E42218D8E5D2E688D18 /* libPods-ShowLiveUITests.a */; };
 /* End PBXBuildFile section */
 
@@ -675,6 +676,8 @@
 		B4C105B07A90052BA25F3424 /* Pods-ShowLiveUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShowLiveUITests/Pods-ShowLiveUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C80209C93E46267AFE3ADF2E /* libPods-ShowLiveTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShowLiveTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFCDB8F5C4F35241EF7781C8 /* Pods-ShowLiveTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShowLiveTests/Pods-ShowLiveTests.release.xcconfig"; sourceTree = "<group>"; };
+		D22E1E6A21F342F4001A3D2A /* NSSting+aes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSSting+aes.h"; sourceTree = "<group>"; };
+		D22E1E6B21F342F4001A3D2A /* NSSting+aes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSSting+aes.m"; sourceTree = "<group>"; };
 		D6F34820745ED99EE82E0D41 /* Pods-ShowLiveTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShowLiveTests/Pods-ShowLiveTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -831,6 +834,8 @@
 				7217BE1721E0D21A00C1E58F /* NSString+Binary.m */,
 				7217BE1A21E0D21A00C1E58F /* NSString+Json.h */,
 				7217BE1821E0D21A00C1E58F /* NSString+Json.m */,
+				D22E1E6A21F342F4001A3D2A /* NSSting+aes.h */,
+				D22E1E6B21F342F4001A3D2A /* NSSting+aes.m */,
 			);
 			path = exten;
 			sourceTree = "<group>";
@@ -1867,6 +1872,7 @@
 				435D4C5F20EF3E0500C8DC85 /* NSDecimalNumber+JKExtensions.m in Sources */,
 				436B1EAE20DA300600419AC0 /* UIView+JKFind.m in Sources */,
 				431F64CB20F794E80087DB8E /* UINavigationController+JKTransitions.m in Sources */,
+				D22E1E6C21F342F4001A3D2A /* NSSting+aes.m in Sources */,
 				4325535D20D8B45700FC0258 /* CAAnimationDemoViewController.m in Sources */,
 				437921E720ECC46400B2EC88 /* NSData+JKBase64.m in Sources */,
 				437921DE20ECC3E000B2EC88 /* NSArray+JKSafeAccess.m in Sources */,
