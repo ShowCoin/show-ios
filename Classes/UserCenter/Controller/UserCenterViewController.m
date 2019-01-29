@@ -147,6 +147,71 @@
     }
 }
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+
+    [self.navigationBarView setNavigationColor:NavigationColorBlack];
+    self.navigationBarView.hidden = YES;
+    self.view.backgroundColor = kBlackWith21;
+    self.dataModelList = [NSMutableArray array];
+    self.dataSource = [NSMutableArray array];
+    [self.view addSubview:self.mainCollectionView];
+    [self.view addSubview:self.floatView];
+//    _nodataLab = [[UILabel alloc] initWithFrame:CGRectMake(0, HeaderHeightWithoutWords + self.wordsHeight + 70*Proportion375, kMainScreenWidth, 17)];
+
+    [self resetParameter];
+    [self requestWithMore:NO];
+    @weakify(self);
+    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:kNotificationLogout object:nil] subscribeNext:^(id x) {
+        @strongify(self);
+        [self.dataSource removeAllObjects];
+        [self.mainCollectionView reloadData];
+        self.cursor= @"0";
+    }];
+    
+}
+
+- (UICollectionView*)mainCollectionView {
+    if (!_mainCollectionView) {
+        UICollectionViewFlowLayout *flowlayout;
+        flowlayout = [[UICollectionViewFlowLayout alloc] init];
+        flowlayout.itemSize = CGSizeMake(cellWith, cellWith /10 * 16);
+        flowlayout.minimumLineSpacing = 1;
+        flowlayout.minimumInteritemSpacing = 1;
+//        flowlayout.sectionHeadersPinToVisibleBounds = YES;
+        _mainCollectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, kMainScreenWidth,kMainScreenHeight) collectionViewLayout:flowlayout];
+        if (!_IsMe) {
+            _mainCollectionView.height = kMainScreenHeight;
+        }
+        if (@available(iOS 11.0, *)) {
+            _mainCollectionView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        }else{
+            self.automaticallyAdjustsScrollViewInsets = NO;
+        }
+        _mainCollectionView.alwaysBounceHorizontal = NO;
+        _mainCollectionView.backgroundColor = kBlackWith1e;
+        _mainCollectionView.delegate = self;
+        _mainCollectionView.dataSource = self;
+        _mainCollectionView.scrollEnabled = YES;
+        _mainCollectionView.showsHorizontalScrollIndicator = NO;
+        _mainCollectionView.showsVerticalScrollIndicator = NO;
+        [_mainCollectionView registerClass:[ShowHomeMiddleCell class] forCellWithReuseIdentifier:@"ShowHomeMiddleCell"];
+        [_mainCollectionView registerClass:[SLUserViewHeader class]forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header"];
+        @weakify(self);
+//        _mainCollectionView.mj_header = [MJRefreshHeader headerWithRefreshingBlock:^{
+//            @strongify(self);
+//            [self resetParameter];
+//            [self requestWithMore:NO];
+//        }];
+        _mainCollectionView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+            @strongify(self);
+            [self requestWithMore:YES];
+        }];
+    }
+    return _mainCollectionView;
+}
+
 
 @end
 
