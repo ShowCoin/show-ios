@@ -112,13 +112,7 @@
                 "4cf6e8b363304e2281a374f6871ee386.jpeg",
                 "1cd2d216767d4f608b72640a2a839c94.jpeg"
                 )
-    [poi]: <nil>
-    [userId]: 1
-    [readCount]: 0
-    [userNick]: 耿子
-    [articleId]: 2
-    [createTime]: 1545705336000
-    [commentCount]: 3
+
     // SubChunkSize = NumSamples * NumChannels * BitsPerSample/8. This is the number of bytes in the data.
     *((SInt32 *)(wavHeader + 0x28)) = pcmDataLength;
 
