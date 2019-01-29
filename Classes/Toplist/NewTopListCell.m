@@ -57,7 +57,7 @@
     }
     NSString * imageUrl = _model.avatar;
     if ([_model.islive isEqualToString:@"1"]) {
-        _headPortraitIsLiveBg.hidden = NO; 
+        _headPortraitIsLiveBg.hidden = NO;
         _headPortraitBg.hidden = YES;
         [_headPortraitIsLiveBg setImage:[UIImage imageNamed:@"userhome_islive_head"]];
         [_headPortrait setRoundStyle:YES imageUrl:imageUrl imageHeight:11 vip:_model.is_vip attestation:NO];
