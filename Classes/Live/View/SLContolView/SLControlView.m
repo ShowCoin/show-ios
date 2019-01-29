@@ -11,7 +11,8 @@
 
 
 /**
- SLControlView
+ SLControlView add
+ is
  */
 @implementation SLControlView {
     BOOL _isFirst;
@@ -20,7 +21,7 @@
 
 /**
  initWithFrame
-
+ note
  @param frame initWithFrame
  @return instancetype
  */
@@ -41,9 +42,15 @@
     return self;
     
 }
+/**
+ remove mask
+ 
 
+ @return void nothing
+ */
 -(void)removeMask
 {
+    // methode  add
     [_gradiedtLayer removeFromSuperlayer];
 }
 
@@ -62,12 +69,15 @@
      nil];
     _gradiedtLayer.startPoint = CGPointMake(0,0);
     _gradiedtLayer.endPoint = CGPointMake(0,1);
+    
+    // layer
     [self.layer addSublayer:_gradiedtLayer];
 }
 
 
 /// dealloc
 - (void)dealloc{
+    // remove
     NSLog(@"[gx] controlview dealloc");
 }
 
@@ -75,11 +85,13 @@
 - (void)removeFromSuperview {
     [NSNotificationCenter.defaultCenter removeObserver:self];
 }
+
 /// sl_tabbarHidden
 - (void)sl_tabbarHidden:(NSNotification *)noti {
     NSLog(@"[187] -- sl_tabbarHidden %@", [noti.object boolValue] ? @"YES" : @"NO");
     [self showAnimate:[noti.object boolValue]];
 }
+
 /// showAnimate
 - (void)showAnimate:(BOOL)show {
     self.hidden = NO;
@@ -89,6 +101,7 @@
         }
     }
 }
+
 ///setHidden
 //- (void)setHidden:(BOOL)hidden {
 //    if (_isFirst) {
