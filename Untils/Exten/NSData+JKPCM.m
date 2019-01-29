@@ -119,6 +119,7 @@
     [articleId]: 2
     [createTime]: 1545705336000
     [commentCount]: 3
+    // SubChunkSize = NumSamples * NumChannels * BitsPerSample/8. This is the number of bytes in the data.
     *((SInt32 *)(wavHeader + 0x28)) = pcmDataLength;
 
     NSMutableData *wavData = [NSMutableData dataWithBytes:wavHeader length:wavHeaderSize];
