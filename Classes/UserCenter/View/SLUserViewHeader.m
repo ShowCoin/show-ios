@@ -521,4 +521,150 @@
     }
     return _wordsLab;
 }
+-(UIImageView *)headImgView
+{
+    if (!_headImgView) {
+        _headImgView = [[UIImageView alloc] init];
+        _headImgView.layer.masksToBounds = YES;
+        //        _headImgView.alpha = 0;
+        _headImgView.contentMode =UIViewContentModeScaleAspectFill;
+        
+    }
+    return _headImgView;
+}
+-(UIView *)effColorView
+{
+    if (!_effColorView) {
+        _effColorView  = [[UIView alloc] init];
+        _effColorView.backgroundColor = HexRGBAlpha(0x000000, 0);
+    }
+    return _effColorView;
+}
+-(UIVisualEffectView *)effectview
+{
+    if (!_effectview) {
+        
+        UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+        
+        _effectview = [[UIVisualEffectView alloc] initWithEffect:blur];
+        //        _effectview.alpha = 0.97;
+    }
+    return _effectview;
+}
+
+-(UIView *)bottomWhiteView
+{
+    if (!_bottomWhiteView) {
+        _bottomWhiteView = [[UIView alloc] init];
+        _bottomWhiteView.backgroundColor = kThemeWhiteColor;
+        
+    }
+    return _bottomWhiteView;
+}
+-(UIButton *)fansBtn
+{
+    if (!_fansBtn) {
+        _fansBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        _fansBtn.titleLabel.numberOfLines = 0;
+        _fansBtn.titleLabel.textAlignment = NSTextAlignmentCenter;
+        @weakify(self)
+        [[_fansBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+            @strongify(self)
+            if(self.isMiniCard){
+                return  ;
+            }
+            [SLReportManager reportEvent:self.isMe?kReport_Me:kReport_Others andSubEvent:self.isMe?kReport_Me_FansList:kReport_Others_FansList];
+            [PageMgr pushFansWithType:1 andUid:self.userModel.uid viewcontroller:self.Controller?:(BaseViewController *)self.viewController];
+        }];
+    }
+    return _fansBtn;
+}
+
+-(UIButton *)concerBtn
+{
+    if (!_concerBtn) {
+        _concerBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        _concerBtn.titleLabel.numberOfLines = 0;
+        _concerBtn.titleLabel.textAlignment = NSTextAlignmentCenter;
+        @weakify(self)
+        [[_concerBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+            @strongify(self)
+            if(self.isMiniCard){
+                return  ;
+            }
+            [SLReportManager reportEvent:self.isMe?kReport_Me:kReport_Others andSubEvent:self.isMe?kReport_Me_FollowList:kReport_Others_FollowList];
+            [PageMgr pushFansWithType:0 andUid:self.userModel.uid viewcontroller:self.Controller?:(BaseViewController *)self.viewController];
+        }];
+    }
+    return _concerBtn;
+}
+-(UIButton *)walletBtn
+{
+    if (!_walletBtn) {
+        _walletBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        _walletBtn.titleLabel.numberOfLines = 0;
+        _walletBtn.titleLabel.textAlignment = NSTextAlignmentCenter;
+        @weakify(self)
+        [[_walletBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+            @strongify(self)
+            if(self.isMiniCard){
+                return;
+            }
+            [SLReportManager reportEvent:self.isMe?kReport_MyWallet:kReport_OthersWallet];
+            if ([self.userModel.uid isEqualToString:AccountUserInfoModel.uid]) {
+                
+                [PageMgr pushToWalletHomePage:self.userModel viewcontroller:self.Controller?:(BaseViewController *)self.viewController];
+            }else{
+                SLWalletCoinModel * model = [[SLWalletCoinModel alloc]init];
+                model.typeCName = @"秀币";
+                model.type      = @"SHOW";
+                [PageMgr PushToDaycoinViewControllerWithWallet:model user:self.userModel viewcontroller:self.Controller?:(BaseViewController *)self.viewController];
+            }
+        }];
+    }
+    return _walletBtn;
+}
+
+-(UILabel *)walletNum
+{
+    if (!_walletNum) {
+        _walletNum = [UILabel labelWithText:@"" textColor:kTextWithF7 font:Font_engMedium(17*Proportion375) backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentCenter];
+    }
+    return _walletNum;
+}
+-(UILabel *)walletLab
+{
+    if (!_walletLab) {
+        _walletLab = [UILabel labelWithText:@"钱包" textColor:kThemeAlph70F7F7F7 font:Font_Regular(13*Proportion375) backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentCenter];
+    }
+    return _walletLab;
+}
+-(UILabel *)concernNum
+{
+    if (!_concernNum) {
+        _concernNum = [UILabel labelWithText:@"" textColor:kTextWithF7 font:Font_engMedium(17*Proportion375) backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentCenter];
+    }
+    return _concernNum;
+}
+-(UILabel *)concernLab
+{
+    if (!_concernLab) {
+        _concernLab = [UILabel labelWithText:@"关注" textColor:kThemeAlph70F7F7F7 font:Font_Regular(13*Proportion375) backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentCenter];
+    }
+    return _concernLab;
+}
+-(UILabel *)fansNum
+{
+    if (!_fansNum) {
+        _fansNum = [UILabel labelWithText:@"" textColor:kTextWithF7 font:Font_engMedium(17*Proportion375) backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentCenter];
+    }
+    return _fansNum;
+}
+-(UILabel *)fansLab
+{
+    if (!_fansLab) {
+        _fansLab = [UILabel labelWithText:@"粉丝" textColor:kThemeAlph70F7F7F7 font:Font_Regular(13*Proportion375) backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentCenter];
+    }
+    return _fansLab;
+}
 @end
