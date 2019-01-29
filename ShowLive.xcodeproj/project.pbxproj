@@ -164,7 +164,6 @@
 		72A0088920FCA0710051C643 /* SLSafeCenterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A0088820FCA0710051C643 /* SLSafeCenterCell.m */; };
 		72A0088C20FCA1820051C643 /* SLUserViewHeader+SLMinCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A0088B20FCA1820051C643 /* SLUserViewHeader+SLMinCard.m */; };
 		72AF98DE21CBCA66007C1AEC /* SLTopListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72AF98DD21CBCA66007C1AEC /* SLTopListViewController.m */; };
-		72AF98E121CBCAFC007C1AEC /* SLToplistSubView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72AF98E021CBCAFC007C1AEC /* SLToplistSubView.m */; };
 		72FE9B6620621F59008DD3D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72FE9B6420621F59008DD3D5 /* LaunchScreen.storyboard */; };
 		72FE9B6920621F59008DD3D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FE9B6820621F59008DD3D5 /* main.m */; };
 		72FE9B7320621F59008DD3D5 /* ShowLiveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FE9B7220621F59008DD3D5 /* ShowLiveTests.m */; };
@@ -561,7 +560,6 @@
 		72A0088A20FCA1820051C643 /* SLUserViewHeader+SLMinCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SLUserViewHeader+SLMinCard.h"; path = "Classes/UserCenter/View/SLUserViewHeader+SLMinCard.h"; sourceTree = SOURCE_ROOT; };
 		72A0088B20FCA1820051C643 /* SLUserViewHeader+SLMinCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "SLUserViewHeader+SLMinCard.m"; path = "Classes/UserCenter/View/SLUserViewHeader+SLMinCard.m"; sourceTree = SOURCE_ROOT; };
 		72AF98DD21CBCA66007C1AEC /* SLTopListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLTopListViewController.m; sourceTree = "<group>"; };
-		72AF98E021CBCAFC007C1AEC /* SLToplistSubView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLToplistSubView.m; sourceTree = "<group>"; };
 		72C6166920A0C67500103C44 /* SLUrgeListAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLUrgeListAction.h; sourceTree = "<group>"; };
 		72C686F61D628C8898214FFC /* Pods-ShowLive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowLive.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShowLive/Pods-ShowLive.debug.xcconfig"; sourceTree = "<group>"; };
 		72C7B4F720C3EDE500065BC2 /* SLADView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLADView.h; sourceTree = "<group>"; };
@@ -1072,7 +1070,6 @@
 		72FAE62020BC56FB00E47E09 /* Toplist */ = {
 			isa = PBXGroup;
 			children = (
-				72AF98E021CBCAFC007C1AEC /* SLToplistSubView.m */,
 				7239EB2520BD38D300588BED /* SLTopListViewController.h */,
 				72AF98DD21CBCA66007C1AEC /* SLTopListViewController.m */,
 			);
@@ -1808,7 +1805,6 @@
 				431CB4C620F498860043B0AC /* NSObject+JKEasyCopy.m in Sources */,
 				435D4C6E20EF406600C8DC85 /* NSDictionary+JKXML.m in Sources */,
 				431C076C20FC8EB900479559 /* NSURL+JKQueryDictionary.m in Sources */,
-				72AF98E121CBCAFC007C1AEC /* SLToplistSubView.m in Sources */,
 				4325536920D8B51000FC0258 /* CLLocationManager+Blocks.m in Sources */,
 				431C078320FE28BF00479559 /* NSURLSession+JKSynchronousTask.m in Sources */,
 				434DDB6320C9337A00191FC1 /* UIWindow+JKHierarchy.m in Sources */,
