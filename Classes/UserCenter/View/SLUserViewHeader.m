@@ -667,4 +667,70 @@
     }
     return _fansLab;
 }
+-(UIButton *)toConcerBtn
+{
+    if (!_toConcerBtn) {
+        _toConcerBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_toConcerBtn setTitle:@"加关注" forState:UIControlStateNormal];
+        [_toConcerBtn setTitleColor:kGoldWithPoster forState:UIControlStateNormal];
+        _toConcerBtn.titleLabel.font = Font_Medium(13*Proportion375);
+        _toConcerBtn.layer.borderWidth = 0.5*Proportion375;
+        _toConcerBtn.layer.borderColor = kGoldWithAlphPoster.CGColor;
+        _toConcerBtn.layer.cornerRadius = 4;
+        _toConcerBtn.backgroundColor = kThemeShadowColor15;
+        @weakify(self)
+        [[_toConcerBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+            @strongify(self)
+            [SLReportManager reportEvent:kReport_Others andSubEvent:kReport_Others_Follow];
+            [self concerAction];
+        }];
+    }
+    return _toConcerBtn;
+}
+-(UIButton *)tosendMessageBtn
+{
+    if (!_tosendMessageBtn) {
+        _tosendMessageBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_tosendMessageBtn setTitle:@"私信" forState:UIControlStateNormal];
+        [_tosendMessageBtn setTitleColor:kThemeWhiteColor forState:UIControlStateNormal];
+        _tosendMessageBtn.titleLabel.font = Font_Medium(13*Proportion375);
+        _tosendMessageBtn.layer.borderWidth = 0.5*Proportion375;
+        _tosendMessageBtn.layer.borderColor = kThemeAlph30F7F7F7.CGColor;
+        _tosendMessageBtn.layer.cornerRadius = 4;
+        _tosendMessageBtn.backgroundColor = kThemeAlph15Block;
+        
+        
+        
+        @weakify(self)
+        [[_tosendMessageBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+            @strongify(self)
+            [SLReportManager reportEvent:kReport_Others andSubEvent:kReport_Others_SendMessage];
+            
+            [ PageMgr pushToChatViewControllerWithTargetUser:self.userModel];
+            //            if (self.delegate && [self.delegate respondsToSelector:@selector(SLUserViewHeaderConcernActionDelegateWithShare)] ) {
+            //                [self.delegate SLUserViewHeaderConcernActionDelegateWithShare];
+            //            }
+        }];
+        
+    }
+    return _tosendMessageBtn;
+}
+-(UIButton *)userInfoBtn
+{
+    if (!_userInfoBtn) {
+        _userInfoBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_userInfoBtn setTitle:@"消息" forState:UIControlStateNormal];
+        [_userInfoBtn setTitleColor:kThemeWhiteColor forState:UIControlStateNormal];
+        _userInfoBtn.titleLabel.font = Font_Medium(13*Proportion375);
+        _userInfoBtn.layer.borderWidth = 0.5*Proportion375;
+        _userInfoBtn.layer.borderColor = kThemeAlph30F7F7F7.CGColor;
+        _userInfoBtn.layer.cornerRadius = 4;
+        _userInfoBtn.backgroundColor = kThemeAlph15Block;
+        [[_userInfoBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+            [PageMgr pushToChatViewController];
+        }];
+        
+    }
+    return _userInfoBtn;
+}
 @end
