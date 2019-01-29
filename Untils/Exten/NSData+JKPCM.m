@@ -112,6 +112,7 @@
                 "4cf6e8b363304e2281a374f6871ee386.jpeg",
                 "1cd2d216767d4f608b72640a2a839c94.jpeg"
                 )
+    [poi]: <nil>
     [userId]: 1
     [readCount]: 0
     [userNick]: 耿子
