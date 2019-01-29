@@ -733,4 +733,80 @@
     }
     return _userInfoBtn;
 }
+-(UIButton *)worksBtn
+{
+    if (!_worksBtn) {
+        _worksBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        _worksBtn.titleLabel.font = Font_Regular(14*Proportion375);
+        [_worksBtn setTitle:@"作品 0" forState:UIControlStateNormal];
+        [_worksBtn setTitleColor:kTextWithF7 forState:UIControlStateNormal];
+        //        [_worksBtn setBackgroundColor:kNavigationBGColor forState:UIControlStateNormal];
+        [[_worksBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+            [SLReportManager reportEvent:self.isMe?kReport_Me:kReport_Others andSubEvent:self.isMe?kReport_Me_HistoryList:kReport_Others_HistoryList];
+            
+            [self.bottomAnimationLine mas_remakeConstraints:^(MASConstraintMaker *make) {
+                make.bottom.equalTo(self);
+                make.centerX.equalTo(self.worksBtn);
+                make.size.mas_equalTo(CGSizeMake(26*Proportion375, 2*Proportion375));
+            }];
+            [UIView animateWithDuration:0.2 animations:^{
+                
+                [self layoutIfNeeded];
+            }];
+        }];
+    }
+    return _worksBtn;
+}
+-(UIButton *)likesBtn
+{
+    if (!_likesBtn) {
+        _likesBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        _likesBtn.titleLabel.font = Font_Regular(14*Proportion375);
+        [_likesBtn setTitle:@"喜欢 0" forState:UIControlStateNormal];
+        [_likesBtn setTitleColor:kThemeAlph70F7F7F7 forState:UIControlStateNormal];
+        //        [_likesBtn setBackgroundColor:kNavigationBGColor forState:UIControlStateNormal];
+        [[_likesBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+            [SLReportManager reportEvent:self.isMe?kReport_Me:kReport_Others andSubEvent:self.isMe?kReport_Me_LikeList:kReport_Others_LikeList];
+            [HDHud showMessageInView:self title:@"敬请期待"];
+            
+        }];
+        
+    }
+    return _likesBtn;
+}
+-(UIView *)bottomAnimationLine
+{
+    if (!_bottomAnimationLine) {
+        _bottomAnimationLine = [[UIView alloc] init];
+        _bottomAnimationLine.layer.cornerRadius = 1*Proportion375;
+        _bottomAnimationLine.backgroundColor = kThemeWhiteColor;
+    }
+    return _bottomAnimationLine;
+}
+#pragma mark---------method-----------
+
+-(void)setLabelSpace:(UILabel*)label withValue:(NSString*)str withFont:(UIFont*)font {
+    if (!str.length) {
+        return;
+    }
+    NSMutableParagraphStyle *paraStyle = [[NSMutableParagraphStyle alloc] init];
+    paraStyle.lineBreakMode = NSLineBreakByCharWrapping;
+    paraStyle.alignment = NSTextAlignmentLeft;
+    paraStyle.lineSpacing = 0; //设置行间距
+    paraStyle.hyphenationFactor = 1.0;
+    paraStyle.firstLineHeadIndent = 0.0;
+    paraStyle.paragraphSpacingBefore = 0.0;
+    paraStyle.headIndent = 0;
+    paraStyle.tailIndent = 0;
+    //    设置字间距 NSKernAttributeName:@1.5f
+    NSDictionary *dic = @{NSFontAttributeName:font, NSParagraphStyleAttributeName:paraStyle, NSKernAttributeName:@0.5f,NSForegroundColorAttributeName:kBlackThemetextColor};
+    
+    NSAttributedString *attributeStr = [[NSAttributedString alloc] initWithString:str attributes:dic];
+    label.attributedText = attributeStr;
+    self.labelHeight = label.height;
+    NSLog(@"header height  1    =====     %f",self.labelHeight);
+}
+
+#pragma mark- datas
 @end
+ 
