@@ -173,6 +173,54 @@
     
 }
 
+-(void)chooseTitle:(UIButton *)sender
+{
+    for (int i = 1; i < 6; i++) {
+        UIButton *btn = (UIButton *)[[sender superview]viewWithTag:i];
+        [btn setSelected:NO];
+        if (!btn.selected) {
+            [btn setTitleColor:kGrayTextWithb6 forState:UIControlStateNormal];
+        }
+    }
+    UIButton *button = (UIButton *)sender;
+    self.category = [NSString stringWithFormat:@"%ld",(long)button.tag];
+    [button setSelected:YES];
+    [button setTitleColor:kGoldWithPoster forState:UIControlStateNormal];
+    [self resetOthers];
+    [self requestWithMore:NO];
+    _LineOne.centerX = sender.centerX;
+}
+
+-(UITableView *)TableView
+{
+    if (!_TableView) {
+        _TableView =[[UITableView alloc] initWithFrame:CGRectMake(0, 98*Proportion375 + KNaviBarHeight, kMainScreenWidth, kMainScreenHeight - 98*Proportion375 - KNaviBarHeight) style:UITableViewStyleGrouped];
+        _TableView.delegate = self;
+        _TableView.dataSource = self;
+        if (@available(iOS 11.0, *)) {
+            _TableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+            _TableView.estimatedRowHeight = 0;
+            _TableView.estimatedSectionHeaderHeight = 0;
+            _TableView.estimatedSectionFooterHeight = 0;
+        } else {
+        }
+        [_TableView registerClass:[NewTopListCell class] forCellReuseIdentifier:@"SLTopListGivingCell"];
+        _TableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        _TableView.backgroundColor = kBlackWith17;
+        @weakify(self);
+        _TableView.mj_header = [MJRefreshHeader headerWithRefreshingBlock:^{
+            @strongify(self);
+            [self resetOthers];
+            [self requestWithMore:NO];
+        }];
+        _TableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+            @strongify(self);
+            [self requestWithMore:YES];
+        }];
+//        [_TableView.mj_header beginRefreshing];
+    }
+    return _TableView;
+}
 
 /*
 #pragma mark - Navigation
