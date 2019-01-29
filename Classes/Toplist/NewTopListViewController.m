@@ -297,6 +297,45 @@
 //uitableView
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
+    NewTopListHeader * header = [[NewTopListHeader alloc] initWithFrame:CGRectMake(0, 0, kMainScreenWidth, 145*Proportion375)];
+    if (self.category.integerValue == 1) {
+        header.firstL.text = @"礼物价值";
+        header.secL.text = [NSString stringChangeMoneyWithStr:self.price numberStyle:NSNumberFormatterDecimalStyle];
+        header.thirdL.text = @"CNY";
+        header.fouthL.text = [NSString stringWithFormat:@"合计 %@ SHOW",self.show];
+
+    }else if (self.category.integerValue == 2){
+        header.firstL.text = @"获得";
+        header.secL.text = [NSString stringChangeMoneyWithStr:self.show numberStyle:NSNumberFormatterDecimalStyle];
+        header.thirdL.text = @"SHOW";
+        header.fouthL.text = [NSString stringWithFormat:@"合计 %@ CNY",self.price];
+
+    }else if (self.category.integerValue == 3){
+        header.firstL.text = @"累计观看";
+        header.secL.text = [NSString stringChangeMoneyWithStr:self.time numberStyle:NSNumberFormatterDecimalStyle];
+        header.thirdL.text = @"小时";
+        header.fouthL.text = [NSString stringWithFormat:@"价值 %@ CNY",self.price];
+        header.fouthL.text = [NSString stringWithFormat:@"累计使用 %@ SHOW",self.show];
+    }
+
+    return header;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 145*Proportion375;
+}
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.dataSource.count;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (self.category.integerValue == 1) {
+        return 146*Proportion375;
+    }
+    return 161*Proportion375;
+    
+}
 
 /*
 #pragma mark - Navigation
