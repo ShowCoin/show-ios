@@ -45,6 +45,103 @@
     return self;
 }
 
+-(void)setmodel:(ShowUserModel *)model withCellType:(NSInteger)celltype
+{
+    _type = celltype;
+    _model = model;
+    
+    if ([AccountUserInfoModel.uid isEqualToString:_model.uid]) {
+        self.attentionButton.hidden = YES;
+    }else{
+        self.attentionButton.hidden = NO;
+    }
+    NSString * imageUrl = _model.avatar;
+    if ([_model.islive isEqualToString:@"1"]) {
+        _headPortraitIsLiveBg.hidden = NO; 
+        _headPortraitBg.hidden = YES;
+        [_headPortraitIsLiveBg setImage:[UIImage imageNamed:@"userhome_islive_head"]];
+        [_headPortrait setRoundStyle:YES imageUrl:imageUrl imageHeight:11 vip:_model.is_vip attestation:NO];
+    }else{
+        _headPortraitIsLiveBg.hidden = YES;
+        [_headPortrait setRoundStyle:YES imageUrl:imageUrl imageHeight:35 vip:_model.is_vip attestation:NO];
+    }
+    
+    self.nickNameLabel.text = _model.nickname;
+
+    if (_model.gender.integerValue == 1) {
+        [_sexImg setImage:[UIImage imageNamed:@"redpacket_sex_man"]];
+    }else{
+        [_sexImg setImage:[UIImage imageNamed:@"redpacket_sex_woman"]];
+    }
+//    _detailNameLable.text = [NSString stringWithFormat:@"%@ SHOW / %@ 币天",];
+    _detailNameLable.text = [NSString stringWithFormat:@"%@ SHOW / %@ 币天",_model.showCoinStr,_model.coinDay];
+
+    NSString * follow_state = _model.isFollowed;
+    _isFollow = [follow_state boolValue];
+    if (_isFollow) {
+        if (_model.isFans) {
+            [self.attentionButton setBackgroundImage:[UIImage imageNamed:@"echFowed"] forState:UIControlStateNormal];
+        }else{
+            [self.attentionButton setBackgroundImage:[UIImage imageNamed:@"friendlistfollowed"] forState:UIControlStateNormal];
+        }
+    }else{
+        [self.attentionButton setBackgroundImage:[UIImage imageNamed:@"friendlistfollow"] forState:UIControlStateNormal];
+    }
+    
+    [_showLevel setLevel:[NSString stringWithFormat:@"%ld",(long)_model.showLevel]];
+    [_masterLevel setLevel:[NSString stringWithFormat:@"%ld",(long)_model.masterLevel]];
+    
+    switch (_type) {//区分type  重新布置frame UI
+        case 1:
+            self.LabFir.text = [NSString stringWithFormat:@"礼物价值 %@ CNY",[NSString stringChangeMoneyWithStr:_model.giftShowCnyNum numberStyle:NSNumberFormatterDecimalStyle]];
+            self.LabSec.text = [NSString stringWithFormat:@"合计 %@ SHOW",[NSString stringChangeMoneyWithStr:_model.giftShowCoinStr numberStyle:NSNumberFormatterDecimalStyle]];
+            self.contentLabel.text = _model.descriptions;
+            if ([_model.descriptions isEqualToString:@""] || _model.descriptions == nil) {
+                self.contentLabel.text = @"本宝宝还没有签名~";
+            }
+            self.LabThird.hidden = YES;
+            self.contentLabel.centerY = 119*Proportion375;
+            self.lineView.bottom = 146*Proportion375;
+            break;
+        case 2:
+            self.LabFir.text = [NSString stringWithFormat:@"获得 %@ SHOW",[NSString stringChangeMoneyWithStr:_model.bonusShowCoinStr numberStyle:NSNumberFormatterDecimalStyle]];
+            self.LabSec.text = [NSString stringWithFormat:@"合计 %@ CNY",[NSString stringChangeMoneyWithStr:_model.bonusShowCnyNum numberStyle:NSNumberFormatterDecimalStyle]];
+            self.LabThird.text = [NSString stringWithFormat:@"共推荐 %@ 人",[NSString stringChangeMoneyWithStr:_model.inviteCount numberStyle:NSNumberFormatterDecimalStyle]];
+            self.contentLabel.text = _model.descriptions;
+            if ([_model.descriptions isEqualToString:@""] || _model.descriptions == nil) {
+                self.contentLabel.text = @"本宝宝还没有签名~";
+            }
+            self.LabThird.hidden = NO;
+            self.LabThird.centerY = 119*Proportion375;
+            self.contentLabel.centerY = 134*Proportion375;
+            self.lineView.bottom = 161*Proportion375;
+
+            break;
+        case 3:
+            self.LabFir.text = [NSString stringWithFormat:@"累计观看%@ 小时",[NSString stringChangeMoneyWithStr:_model.totalTime numberStyle:NSNumberFormatterDecimalStyle]];
+            self.LabSec.text = [NSString stringWithFormat:@"价值 %@ CNY",[NSString stringChangeMoneyWithStr:_model.timeShowCnyNum numberStyle:NSNumberFormatterDecimalStyle]];
+            self.LabThird.text = [NSString stringWithFormat:@"累计使用 %@ SHOW",[NSString stringChangeMoneyWithStr:_model.timeShowCoinStr numberStyle:NSNumberFormatterDecimalStyle]];
+            self.contentLabel.text = _model.descriptions;
+            if ([_model.descriptions isEqualToString:@""] || _model.descriptions == nil) {
+                self.contentLabel.text = @"本宝宝还没有签名~";
+            }
+            self.LabThird.hidden = NO;
+            self.LabThird.centerY = 119*Proportion375;
+            self.contentLabel.centerY = 134*Proportion375;
+            self.lineView.bottom = 161*Proportion375;
+
+            break;
+        case 4:
+            NSLog(@"");
+            break;
+        case 5:
+            NSLog(@"");
+            break;
+
+        default:
+            break;
+    }
+}
 
 -(SLHeadPortrait *)headPortrait
 {
