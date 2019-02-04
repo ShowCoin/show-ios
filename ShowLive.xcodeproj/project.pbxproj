@@ -364,7 +364,7 @@
 		435D4C7F20F091BC00C8DC85 /* NSIndexPath+JKOffset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSIndexPath+JKOffset.h"; sourceTree = "<group>"; };
 		435D4C8120F091E500C8DC85 /* NSInvocation+JKBb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSInvocation+JKBb.m"; path = "SLHelper/NSInvocation+JKBb.m"; sourceTree = "<group>"; };
 		435D4C8220F091E600C8DC85 /* NSInvocation+JKBb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSInvocation+JKBb.h"; sourceTree = "<group>"; };
-		435D4C8420F0920900C8DC85 /* NSManagedObject+JKDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSManagedObject+JKDictionary.h"; path = "../NSManagedObject+JKDictionary.h"; sourceTree = "<group>"; };
+		435D4C8420F0920900C8DC85 /* NSManagedObject+JKDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+JKDictionary.h"; sourceTree = "<group>"; };
 		435D4C8520F0920900C8DC85 /* NSManagedObject+JKDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+JKDictionary.m"; sourceTree = "<group>"; };
 		435D4C8720F0924D00C8DC85 /* NSManagedObject+JKExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+JKExtensions.h"; sourceTree = "<group>"; };
 		435D4C8820F0924D00C8DC85 /* NSManagedObject+JKExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+JKExtensions.m"; sourceTree = "<group>"; };
@@ -1199,7 +1199,6 @@
 				435D4C8D20F092B000C8DC85 /* NSManagedObjectContext+JKFetchRequestsConstructors.h */,
 				435D4C8E20F092B000C8DC85 /* NSManagedObjectContext+JKFetchRequestsConstructors.m */,
 				435D4C8220F091E600C8DC85 /* NSInvocation+JKBb.h */,
-				435D4C8420F0920900C8DC85 /* NSManagedObject+JKDictionary.h */,
 				435D4C8520F0920900C8DC85 /* NSManagedObject+JKDictionary.m */,
 				435D4C6120EF3E2400C8DC85 /* NSDictionary+JKBlock.h */,
 				431F64E220F8F2300087DB8E /* NSString+JKRemoveEmoji.h */,
@@ -1214,8 +1213,6 @@
 				437B0A5E20F3607100E93844 /* NSObject+JKAppInfo.m */,
 				431CB4E020F49A800043B0AC /* NSString+JKBase64.m */,
 				4374EB1220F62F9D00BB947F /* NSString+JKEmoji.m */,
-				437B0A5B20F3602E00E93844 /* NSObject+JKAddProperty.h */,
-				437B0A5620F35FDE00E93844 /* NSNumber+JKRomanNumerals.m */,
 				9343E47821C7D17C0001B9C1 /* UIView+Additional.h */,
 				9343E47521C7D0140001B9C1 /* UILabel+Additional.h */,
 				437921E020ECC40900B2EC88 /* NSBundle+JKAppIcon.h */,
@@ -1395,6 +1392,7 @@
 				435D4C9020F092BF00C8DC85 /* NSManagedObjectContext+JKObjectClear.h */,
 				435D4C9120F092C000C8DC85 /* NSManagedObjectContext+JKObjectClear.m */,
 				435D4C7920F0916900C8DC85 /* NSFileManager+JKPaths.h */,
+				435D4C8420F0920900C8DC85 /* NSManagedObject+JKDictionary.h */,
 				435D4C8120F091E500C8DC85 /* NSInvocation+JKBb.m */,
 				435D4C6020EF3E2400C8DC85 /* NSDictionary+JKBlock.m */,
 				431F64E120F8F2300087DB8E /* NSString+JKRemoveEmoji.m */,
@@ -1415,9 +1413,11 @@
 				431CB4C720F498EF0043B0AC /* NSObject+JKGCD.h */,
 				431CB4C820F498EF0043B0AC /* NSObject+JKGCD.m */,
 				4374EB0F20F62F7C00BB947F /* NSString+JKDictionaryValue.m */,
+				437B0A5B20F3602E00E93844 /* NSObject+JKAddProperty.h */,
 				437B0A5C20F3602E00E93844 /* NSObject+JKAddProperty.m */,
 				437B0A5820F3600800E93844 /* NSNumber+JKRound.m */,
 				437B0A5520F35FDE00E93844 /* NSNumber+JKRomanNumerals.h */,
+				437B0A5620F35FDE00E93844 /* NSNumber+JKRomanNumerals.m */,
 				437B0A5920F3600900E93844 /* NSNumber+JKRound.h */,
 				9309C73E21BB91D600AAFE87 /* NSString+Json.m */,
 				9309C74021BB922200AAFE87 /* UIImage+Effects.h */,
