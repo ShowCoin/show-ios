@@ -397,7 +397,7 @@
 		4374EB1120F62F9D00BB947F /* NSString+JKEmoji.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JKEmoji.h"; sourceTree = "<group>"; };
 		4374EB1220F62F9D00BB947F /* NSString+JKEmoji.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JKEmoji.m"; sourceTree = "<group>"; };
 		4374EB2320F6307000BB947F /* NSString+JKNormalRegex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JKNormalRegex.h"; sourceTree = "<group>"; };
-		4374EB2420F6307000BB947F /* NSString+JKNormalRegex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JKNormalRegex.m"; sourceTree = "<group>"; };
+		4374EB2420F6307000BB947F /* NSString+JKNormalRegex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+JKNormalRegex.m"; path = "../NSString+JKNormalRegex.m"; sourceTree = "<group>"; };
 		437864562075FD1E00146B97 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		437921DC20ECC3DF00B2EC88 /* NSArray+JKSafeAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+JKSafeAccess.h"; sourceTree = "<group>"; };
 		437921DD20ECC3E000B2EC88 /* NSArray+JKSafeAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+JKSafeAccess.m"; sourceTree = "<group>"; };
@@ -1177,6 +1177,7 @@
 				4374EB0E20F62F7C00BB947F /* NSString+JKDictionaryValue.h */,
 				4374EB1120F62F9D00BB947F /* NSString+JKEmoji.h */,
 				4374EB2320F6307000BB947F /* NSString+JKNormalRegex.h */,
+				4374EB2420F6307000BB947F /* NSString+JKNormalRegex.m */,
 				93075E1321D3AE90009A1D28 /* UIImage+Additional.h */,
 				93EF35D421C292950088C2E4 /* UIImage+Additional.m */,
 				435D4C3F20EDEA4B00C8DC85 /* NSDate+JKExtension.m */,
@@ -1204,6 +1205,7 @@
 				435D4C8D20F092B000C8DC85 /* NSManagedObjectContext+JKFetchRequestsConstructors.h */,
 				435D4C8120F091E500C8DC85 /* NSInvocation+JKBb.m */,
 				431F64E220F8F2300087DB8E /* NSString+JKRemoveEmoji.h */,
+				431F64E120F8F2300087DB8E /* NSString+JKRemoveEmoji.m */,
 				431CB4DA20F499D00043B0AC /* NSRunLoop+JKPerformBlock.m */,
 				431C078720FE291700479559 /* NSUserDefaults+JKSafeAccess.h */,
 				4355A4DA20FF11000020B7DE /* UINavigationController+JKStackManager.m */,
@@ -1368,7 +1370,6 @@
 				435D4C6D20EF406600C8DC85 /* NSDictionary+JKXML.m */,
 				4355A4DB20FF11000020B7DE /* UINavigationController+JKStackManager.h */,
 				431F64B820F7945C0087DB8E /* UIPopoverController+iPhone.h */,
-				4374EB2420F6307000BB947F /* NSString+JKNormalRegex.m */,
 				431F64C920F794E70087DB8E /* UINavigationController+JKTransitions.h */,
 				431C077620FE279700479559 /* NSURLConnection+JKSelfSigned.h */,
 				431F64CA20F794E70087DB8E /* UINavigationController+JKTransitions.m */,
@@ -1405,7 +1406,6 @@
 				435D4C8520F0920900C8DC85 /* NSManagedObject+JKDictionary.m */,
 				435D4C6120EF3E2400C8DC85 /* NSDictionary+JKBlock.h */,
 				435D4C6020EF3E2400C8DC85 /* NSDictionary+JKBlock.m */,
-				431F64E120F8F2300087DB8E /* NSString+JKRemoveEmoji.m */,
 				431CB4DC20F49A4F0043B0AC /* NSSet+JKBlock.h */,
 				431CB4DD20F49A4F0043B0AC /* NSSet+JKBlock.m */,
 				431C078820FE291700479559 /* NSUserDefaults+JKSafeAccess.m */,
