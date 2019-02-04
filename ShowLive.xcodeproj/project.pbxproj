@@ -269,7 +269,7 @@
 		43205DD320DD263300AD6952 /* UIView+Debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Debug.h"; sourceTree = "<group>"; };
 		43205DD520DD264B00AD6952 /* UITextViewDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UITextViewDemoViewController.h; path = SLHelper/UITextViewDemoViewController.h; sourceTree = "<group>"; };
 		43205DD620DD264B00AD6952 /* UITextViewDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITextViewDemoViewController.m; sourceTree = "<group>"; };
-		43205DD820DD266500AD6952 /* UIView+FDCollapsibleConstraints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+FDCollapsibleConstraints.h"; path = "../../JKCategories/UIView+FDCollapsibleConstraints.h"; sourceTree = "<group>"; };
+		43205DD820DD266500AD6952 /* UIView+FDCollapsibleConstraints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+FDCollapsibleConstraints.h"; path = "../JKCategories/UIView+FDCollapsibleConstraints.h"; sourceTree = "<group>"; };
 		43205DD920DD266600AD6952 /* UIView+FDCollapsibleConstraints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+FDCollapsibleConstraints.m"; path = "../JKCategories/UIView+FDCollapsibleConstraints.m"; sourceTree = "<group>"; };
 		43205DDB20DD267D00AD6952 /* UITextView+JKSelect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+JKSelect.h"; sourceTree = "<group>"; };
 		43205DDC20DD267D00AD6952 /* UITextView+JKSelect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+JKSelect.m"; sourceTree = "<group>"; };
@@ -430,7 +430,7 @@
 		437B0A5E20F3607100E93844 /* NSObject+JKAppInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+JKAppInfo.m"; path = "../JKCategories/NSObject+JKAppInfo.m"; sourceTree = "<group>"; };
 		437B0A5F20F3607100E93844 /* NSObject+JKAppInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JKAppInfo.h"; sourceTree = "<group>"; };
 		437B0A6120F3608A00E93844 /* NSObject+JKAssociatedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JKAssociatedObject.h"; sourceTree = "<group>"; };
-		437B0A6220F3608A00E93844 /* NSObject+JKAssociatedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+JKAssociatedObject.m"; path = "../../JKCategories/NSObject+JKAssociatedObject.m"; sourceTree = "<group>"; };
+		437B0A6220F3608A00E93844 /* NSObject+JKAssociatedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+JKAssociatedObject.m"; path = "../JKCategories/NSObject+JKAssociatedObject.m"; sourceTree = "<group>"; };
 		437B0A6420F360BA00E93844 /* NSObject+JKAutoCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JKAutoCoding.m"; sourceTree = "<group>"; };
 		437B0A6520F360BB00E93844 /* NSObject+JKAutoCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JKAutoCoding.h"; sourceTree = "<group>"; };
 		437B0A6720F360E900E93844 /* NSObject+JKBlockTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+JKBlockTimer.h"; path = "SLHelper/NSObject+JKBlockTimer.h"; sourceTree = "<group>"; };
@@ -1146,8 +1146,6 @@
 				9306818821BE64740021F976 /* NSData+Image.h */,
 				431CB4C520F498850043B0AC /* NSObject+JKEasyCopy.m */,
 				431CB4CE20F4991D0043B0AC /* NSObject+JKReflection.m */,
-				437B0A6220F3608A00E93844 /* NSObject+JKAssociatedObject.m */,
-				43205DD820DD266500AD6952 /* UIView+FDCollapsibleConstraints.h */,
 				9306819121BE65BD0021F976 /* UIButton+Addtional.h */,
 				9311B41621BF89A6009C9A1D /* UIButton+ImageTitleSpacing.m */,
 				4325536820D8B51000FC0258 /* CLLocationManager+Blocks.h */,
@@ -1165,7 +1163,6 @@
 				43D87B1B20EB6CE600E991D6 /* UISplitViewController+JKQuickAccess.h */,
 				43D87B3420EB6E7000E991D6 /* UIResponderDemoViewController.h */,
 				43D87B3320EB6E6F00E991D6 /* UIResponderDemoViewController.m */,
-				43D87B2B20EB6DCE00E991D6 /* UIScrollView+APParallaxHeader.m */,
 				43D87B2720EB6D9900E991D6 /* UIScrollView+EmptyDataSet.m */,
 				43D87B2220EB6D6C00E991D6 /* UIScrollView+JKPages.h */,
 				437921E920ECC47C00B2EC88 /* NSData+JKEncrypt.m */,
@@ -1182,14 +1179,12 @@
 				431C078820FE291700479559 /* NSUserDefaults+JKSafeAccess.m */,
 				4325536520D8B4F100FC0258 /* CLLocation+JKCH1903.m */,
 				435D4C8B20F0929A00C8DC85 /* NSManagedObjectContext+JKFetching.m */,
-				431CB4E020F49A800043B0AC /* NSString+JKBase64.m */,
 				9343E47821C7D17C0001B9C1 /* UIView+Additional.h */,
 				9343E47521C7D0140001B9C1 /* UILabel+Additional.h */,
 				435D4C5720EDEB4B00C8DC85 /* NSDecimalNumber+JKCalculatingByString.h */,
 				437921E220ECC43F00B2EC88 /* NSData+JKAPNSToken.h */,
 				43993EB120E23E390017F1C3 /* UITextView+JKInputLimit.h */,
 				43993EBD20E23EF90017F1C3 /* UITextField+JKBlocks.h */,
-				434DDB5520C932DB00191FC1 /* CAMediaTimingFunction+JKAdditionalEquations.m */,
 				431BBB6320DBCB04006A3D50 /* UIView+JKConstraints.h */,
 				435D4C4920EDEAAD00C8DC85 /* NSDate+JKLunarCalendar.m */,
 			);
@@ -1293,9 +1288,11 @@
 				437B0A6520F360BB00E93844 /* NSObject+JKAutoCoding.h */,
 				437B0A6420F360BA00E93844 /* NSObject+JKAutoCoding.m */,
 				437B0A6120F3608A00E93844 /* NSObject+JKAssociatedObject.h */,
+				437B0A6220F3608A00E93844 /* NSObject+JKAssociatedObject.m */,
 				4325537420D8B59000FC0258 /* NSArray+JKBlock.h */,
 				4325537320D8B58F00FC0258 /* NSArray+JKBlock.m */,
 				4325535F20D8B49F00FC0258 /* CAShapeLayerDemoViewController.h */,
+				43205DD820DD266500AD6952 /* UIView+FDCollapsibleConstraints.h */,
 				43205DD920DD266600AD6952 /* UIView+FDCollapsibleConstraints.m */,
 				43205DD520DD264B00AD6952 /* UITextViewDemoViewController.h */,
 				43205DD620DD264B00AD6952 /* UITextViewDemoViewController.m */,
@@ -1321,6 +1318,7 @@
 				435D4C7220EF42FB00C8DC85 /* NSFetchRequest+JKExtensions.m */,
 				4374EB0C20F62F5600BB947F /* NSString+JKContains.h */,
 				431C078120FE28BF00479559 /* NSURLSession+JKSynchronousTask.m */,
+				43D87B2B20EB6DCE00E991D6 /* UIScrollView+APParallaxHeader.m */,
 				43D87B2820EB6D9900E991D6 /* UIScrollView+EmptyDataSet.h */,
 				4318BC7921BB962E008FD7F3 /* UIScrollView+EmptyDataSet.m */,
 				934AE46220FC6BE400B60AD4 /* NSString+Additions.h */,
@@ -1401,6 +1399,7 @@
 				437B0A5E20F3607100E93844 /* NSObject+JKAppInfo.m */,
 				435D4C4F20EDEADF00C8DC85 /* NSDate+JKUtilities.h */,
 				431CB4DF20F49A800043B0AC /* NSString+JKBase64.h */,
+				431CB4E020F49A800043B0AC /* NSString+JKBase64.m */,
 				4374EB1220F62F9D00BB947F /* NSString+JKEmoji.m */,
 				431CB4C720F498EF0043B0AC /* NSObject+JKGCD.h */,
 				431CB4C820F498EF0043B0AC /* NSObject+JKGCD.m */,
@@ -1426,6 +1425,7 @@
 				43993EB420E23E810017F1C3 /* UITextField+JKSelect.h */,
 				43993EB820E23EAC0017F1C3 /* UITextField+JKHistory.h */,
 				43993EC120E23F530017F1C3 /* UITableViewCell+JKNIB.h */,
+				434DDB5520C932DB00191FC1 /* CAMediaTimingFunction+JKAdditionalEquations.m */,
 				434DDB4F20C9326800191FC1 /* CALayer+JKBorderColor.h */,
 				435D4C4320EDEA6D00C8DC85 /* NSDate+JKFormatter.h */,
 				435D4C4620EDEA8A00C8DC85 /* NSDate+JKInternetDateTime.h */,
@@ -1439,9 +1439,9 @@
 				4325535820CFE8B100FC0258 /* UIWebVIew+JKSwipeGesture.m */,
 				4325536120D8B4CD00FC0258 /* CATransactionDemoViewController.h */,
 				934CBCD72118217800608F2F /* NSDate+Additions.h */,
+				934CBCD8211821A500608F2F /* NSDate+Additions.m */,
 				934A1030211ED7B50021770D /* NSString+Validation.h */,
 				9314D1E420C53ACE00BB2429 /* SLHelper */,
-				934CBCD8211821A500608F2F /* NSDate+Additions.m */,
 				934A1031211ED7BC0021770D /* NSString+Validation.m */,
 			);
 			path = Exten;
