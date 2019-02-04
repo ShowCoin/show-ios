@@ -586,7 +586,7 @@
 		72FE9B7F20621F59008DD3D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		877A7E42218D8E5D2E688D18 /* libPods-ShowLiveUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShowLiveUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9306818821BE64740021F976 /* NSData+Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Image.h"; sourceTree = "<group>"; };
-		9306818921BE648D0021F976 /* NSData+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Image.m"; sourceTree = "<group>"; };
+		9306818921BE648D0021F976 /* NSData+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+Image.m"; path = "../NSData+Image.m"; sourceTree = "<group>"; };
 		9306818B21BE64B00021F976 /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
 		9306818C21BE64C90021F976 /* NSData+ImageContentType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+ImageContentType.m"; sourceTree = "<group>"; };
 		9306818E21BE650F0021F976 /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
@@ -1146,9 +1146,12 @@
 				437921E520ECC46400B2EC88 /* NSData+JKBase64.m */,
 				435D4C3C20EDEA2800C8DC85 /* NSDate+JKCupertinoYankee.h */,
 				9306818821BE64740021F976 /* NSData+Image.h */,
+				9306818921BE648D0021F976 /* NSData+Image.m */,
+				9306818E21BE650F0021F976 /* NSString+MD5.h */,
 				431F64AF20F794160087DB8E /* UIResponder+JKFirstResponder.h */,
 				437B0A6720F360E900E93844 /* NSObject+JKBlockTimer.h */,
 				437B0A6820F360E900E93844 /* NSObject+JKBlockTimer.m */,
+				437B0A6520F360BB00E93844 /* NSObject+JKAutoCoding.h */,
 				9306819221BE65D50021F976 /* UIButton+Addtional.m */,
 				435D4C7F20F091BC00C8DC85 /* NSIndexPath+JKOffset.h */,
 				435D4C7E20F091BB00C8DC85 /* NSIndexPath+JKOffset.m */,
@@ -1273,10 +1276,8 @@
 				437921EE20ECC4B100B2EC88 /* NSData+JKHash.h */,
 				437921E620ECC46400B2EC88 /* NSData+JKBase64.h */,
 				435D4C3D20EDEA2800C8DC85 /* NSDate+JKCupertinoYankee.m */,
-				9306818921BE648D0021F976 /* NSData+Image.m */,
 				9306818B21BE64B00021F976 /* NSData+ImageContentType.h */,
 				9306818C21BE64C90021F976 /* NSData+ImageContentType.m */,
-				9306818E21BE650F0021F976 /* NSString+MD5.h */,
 				9306818F21BE65840021F976 /* NSString+MD5.m */,
 				43205DD320DD263300AD6952 /* UIView+Debug.h */,
 				43205DD220DD263300AD6952 /* UIView+Debug.m */,
@@ -1288,7 +1289,6 @@
 				431CB4CE20F4991D0043B0AC /* NSObject+JKReflection.m */,
 				431CB4CA20F499060043B0AC /* NSObject+JKKVOBlocks.h */,
 				431CB4CB20F499060043B0AC /* NSObject+JKKVOBlocks.m */,
-				437B0A6520F360BB00E93844 /* NSObject+JKAutoCoding.h */,
 				437B0A6420F360BA00E93844 /* NSObject+JKAutoCoding.m */,
 				437B0A6120F3608A00E93844 /* NSObject+JKAssociatedObject.h */,
 				437B0A6220F3608A00E93844 /* NSObject+JKAssociatedObject.m */,
