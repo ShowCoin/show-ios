@@ -297,7 +297,7 @@
 		4325536E20D8B56400FC0258 /* MKMapView+JKMoveLogo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKMapView+JKMoveLogo.m"; sourceTree = "<group>"; };
 		4325537020D8B57B00FC0258 /* MKMapView+JKZoomLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKMapView+JKZoomLevel.h"; sourceTree = "<group>"; };
 		4325537120D8B57B00FC0258 /* MKMapView+JKZoomLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKMapView+JKZoomLevel.m"; sourceTree = "<group>"; };
-		4325537320D8B58F00FC0258 /* NSArray+JKBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+JKBlock.m"; sourceTree = "<group>"; };
+		4325537320D8B58F00FC0258 /* NSArray+JKBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+JKBlock.m"; path = "../NSArray+JKBlock.m"; sourceTree = "<group>"; };
 		4325537420D8B59000FC0258 /* NSArray+JKBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+JKBlock.h"; path = "../JKCategories/NSArray+JKBlock.h"; sourceTree = "<group>"; };
 		43291F3C20E51F50000C3C15 /* UITextFieldDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITextFieldDemoViewController.h; sourceTree = "<group>"; };
 		43291F3D20E51F51000C3C15 /* UITextFieldDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITextFieldDemoViewController.m; sourceTree = "<group>"; };
@@ -1157,6 +1157,7 @@
 				437B0A6820F360E900E93844 /* NSObject+JKBlockTimer.m */,
 				437B0A6520F360BB00E93844 /* NSObject+JKAutoCoding.h */,
 				437B0A6120F3608A00E93844 /* NSObject+JKAssociatedObject.h */,
+				4325537320D8B58F00FC0258 /* NSArray+JKBlock.m */,
 				43205DD620DD264B00AD6952 /* UITextViewDemoViewController.m */,
 				9306819221BE65D50021F976 /* UIButton+Addtional.m */,
 				9311B41521BF8985009C9A1D /* UIButton+ImageTitleSpacing.h */,
@@ -1207,6 +1208,7 @@
 				43291F3F20E51F6E000C3C15 /* UITableViewDemoViewController.m */,
 				43205DE220DD26C400AD6952 /* UITextView+JKPinchZoom.m */,
 				43205DDF20DD269D00AD6952 /* UITextView+JKPlaceHolder.h */,
+				43993EC020E23F520017F1C3 /* UITableViewCell+JKNIB.m */,
 				435D4C9620F0931000C8DC85 /* NSNotificationCenter+JKMainThread.m */,
 				435D4C9320F092D600C8DC85 /* NSMutableURLRequest+JKUpload.h */,
 				435D4C9120F092C000C8DC85 /* NSManagedObjectContext+JKObjectClear.m */,
@@ -1359,7 +1361,6 @@
 				437B0A6420F360BA00E93844 /* NSObject+JKAutoCoding.m */,
 				437B0A6220F3608A00E93844 /* NSObject+JKAssociatedObject.m */,
 				4325537420D8B59000FC0258 /* NSArray+JKBlock.h */,
-				4325537320D8B58F00FC0258 /* NSArray+JKBlock.m */,
 				4325535F20D8B49F00FC0258 /* CAShapeLayerDemoViewController.h */,
 				43205DD820DD266500AD6952 /* UIView+FDCollapsibleConstraints.h */,
 				43205DD920DD266600AD6952 /* UIView+FDCollapsibleConstraints.m */,
@@ -1410,7 +1411,6 @@
 				43291F4820E52039000C3C15 /* UITableView+JKiOS7Style.h */,
 				43291F4920E5203A000C3C15 /* UITableView+JKiOS7Style.m */,
 				43205DDE20DD269D00AD6952 /* UITextView+JKPlaceHolder.m */,
-				43993EC020E23F520017F1C3 /* UITableViewCell+JKNIB.m */,
 				435D4C9420F092D600C8DC85 /* NSMutableURLRequest+JKUpload.m */,
 				435D4C9020F092BF00C8DC85 /* NSManagedObjectContext+JKObjectClear.h */,
 				435D4C8E20F092B000C8DC85 /* NSManagedObjectContext+JKFetchRequestsConstructors.m */,
