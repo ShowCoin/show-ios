@@ -434,7 +434,7 @@
 		437B0A6420F360BA00E93844 /* NSObject+JKAutoCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JKAutoCoding.m"; sourceTree = "<group>"; };
 		437B0A6520F360BB00E93844 /* NSObject+JKAutoCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JKAutoCoding.h"; sourceTree = "<group>"; };
 		437B0A6720F360E900E93844 /* NSObject+JKBlockTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JKBlockTimer.h"; sourceTree = "<group>"; };
-		437B0A6820F360E900E93844 /* NSObject+JKBlockTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+JKBlockTimer.m"; path = "../NSObject+JKBlockTimer.m"; sourceTree = "<group>"; };
+		437B0A6820F360E900E93844 /* NSObject+JKBlockTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JKBlockTimer.m"; sourceTree = "<group>"; };
 		43993EB120E23E390017F1C3 /* UITextView+JKInputLimit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+JKInputLimit.h"; sourceTree = "<group>"; };
 		43993EB220E23E390017F1C3 /* UITextView+JKInputLimit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+JKInputLimit.m"; sourceTree = "<group>"; };
 		43993EB420E23E810017F1C3 /* UITextField+JKSelect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+JKSelect.h"; sourceTree = "<group>"; };
@@ -1168,7 +1168,6 @@
 				431CB4CA20F499060043B0AC /* NSObject+JKKVOBlocks.h */,
 				431CB4CB20F499060043B0AC /* NSObject+JKKVOBlocks.m */,
 				437B0A6720F360E900E93844 /* NSObject+JKBlockTimer.h */,
-				437B0A6820F360E900E93844 /* NSObject+JKBlockTimer.m */,
 				437B0A6420F360BA00E93844 /* NSObject+JKAutoCoding.m */,
 				437B0A6220F3608A00E93844 /* NSObject+JKAssociatedObject.m */,
 				4325537320D8B58F00FC0258 /* NSArray+JKBlock.m */,
@@ -1266,7 +1265,6 @@
 				435D4C9620F0931000C8DC85 /* NSNotificationCenter+JKMainThread.m */,
 				435D4C9320F092D600C8DC85 /* NSMutableURLRequest+JKUpload.h */,
 				435D4C9420F092D600C8DC85 /* NSMutableURLRequest+JKUpload.m */,
-				435D4C9020F092BF00C8DC85 /* NSManagedObjectContext+JKObjectClear.h */,
 				435D4C9120F092C000C8DC85 /* NSManagedObjectContext+JKObjectClear.m */,
 				435D4C7920F0916900C8DC85 /* NSFileManager+JKPaths.h */,
 				435D4C7820F0916900C8DC85 /* NSFileManager+JKPaths.m */,
@@ -1415,6 +1413,7 @@
 			isa = PBXGroup;
 			children = (
 				9306818F21BE65840021F976 /* NSString+MD5.m */,
+				437B0A6820F360E900E93844 /* NSObject+JKBlockTimer.m */,
 				437B0A6520F360BB00E93844 /* NSObject+JKAutoCoding.h */,
 				437B0A6120F3608A00E93844 /* NSObject+JKAssociatedObject.h */,
 				4325537420D8B59000FC0258 /* NSArray+JKBlock.h */,
@@ -1428,6 +1427,7 @@
 				435D4C3F20EDEA4B00C8DC85 /* NSDate+JKExtension.m */,
 				43D87B2A20EB6DCE00E991D6 /* UIScrollView+APParallaxHeader.h */,
 				43D87B2520EB6D7E00E991D6 /* UIScrollView+JKAddition.h */,
+				435D4C9020F092BF00C8DC85 /* NSManagedObjectContext+JKObjectClear.h */,
 				431F64E120F8F2300087DB8E /* NSString+JKRemoveEmoji.m */,
 				431CB4DA20F499D00043B0AC /* NSRunLoop+JKPerformBlock.m */,
 				431CB4DC20F49A4F0043B0AC /* NSSet+JKBlock.h */,
