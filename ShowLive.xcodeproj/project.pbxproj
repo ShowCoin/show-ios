@@ -325,7 +325,7 @@
 		435D4C3C20EDEA2800C8DC85 /* NSDate+JKCupertinoYankee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JKCupertinoYankee.h"; sourceTree = "<group>"; };
 		435D4C3D20EDEA2800C8DC85 /* NSDate+JKCupertinoYankee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JKCupertinoYankee.m"; sourceTree = "<group>"; };
 		435D4C3F20EDEA4B00C8DC85 /* NSDate+JKExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+JKExtension.m"; path = "../NSDate+JKExtension.m"; sourceTree = "<group>"; };
-		435D4C4020EDEA4B00C8DC85 /* NSDate+JKExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+JKExtension.h"; path = "../JKCategories/NSDate+JKExtension.h"; sourceTree = "<group>"; };
+		435D4C4020EDEA4B00C8DC85 /* NSDate+JKExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+JKExtension.h"; path = "../../JKCategories/NSDate+JKExtension.h"; sourceTree = "<group>"; };
 		435D4C4220EDEA6D00C8DC85 /* NSDate+JKFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+JKFormatter.m"; path = "../JKCategories/NSDate+JKFormatter.m"; sourceTree = "<group>"; };
 		435D4C4320EDEA6D00C8DC85 /* NSDate+JKFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+JKFormatter.h"; path = "../../JKCategories/NSDate+JKFormatter.h"; sourceTree = "<group>"; };
 		435D4C4520EDEA8A00C8DC85 /* NSDate+JKInternetDateTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JKInternetDateTime.m"; sourceTree = "<group>"; };
@@ -1181,6 +1181,7 @@
 				4374EB2320F6307000BB947F /* NSString+JKNormalRegex.h */,
 				4374EB2420F6307000BB947F /* NSString+JKNormalRegex.m */,
 				9311B41B21C104EA009C9A1D /* UIControl+BlocksKit.h */,
+				9311B41F21C107E3009C9A1D /* UIGestureRecognizer+BlocksKit.m */,
 				93075E1321D3AE90009A1D28 /* UIImage+Additional.h */,
 				93EF35D421C292950088C2E4 /* UIImage+Additional.m */,
 				435D4C3F20EDEA4B00C8DC85 /* NSDate+JKExtension.m */,
@@ -1246,9 +1247,11 @@
 				43993EBD20E23EF90017F1C3 /* UITextField+JKBlocks.h */,
 				43993EC120E23F530017F1C3 /* UITableViewCell+JKNIB.h */,
 				434DDB5520C932DB00191FC1 /* CAMediaTimingFunction+JKAdditionalEquations.m */,
+				434DDB4F20C9326800191FC1 /* CALayer+JKBorderColor.h */,
 				431BBB6320DBCB04006A3D50 /* UIView+JKConstraints.h */,
 				435D4C4920EDEAAD00C8DC85 /* NSDate+JKLunarCalendar.m */,
 				435D4C4320EDEA6D00C8DC85 /* NSDate+JKFormatter.h */,
+				435D4C4020EDEA4B00C8DC85 /* NSDate+JKExtension.h */,
 				43993EC420E23F790017F1C3 /* UITableView+FDTemplateLayoutCell.h */,
 				43993EC320E23F790017F1C3 /* UITableView+FDTemplateLayoutCell.m */,
 				43993EBE20E23EF90017F1C3 /* UITextField+JKBlocks.m */,
@@ -1388,7 +1391,6 @@
 				435D4C5220EDEB1900C8DC85 /* NSDate+JKZeroDate.m */,
 				9311B41C21C1051C009C9A1D /* UIControl+BlocksKit.m */,
 				9311B41E21C107C4009C9A1D /* UIGestureRecognizer+BlocksKit.h */,
-				9311B41F21C107E3009C9A1D /* UIGestureRecognizer+BlocksKit.m */,
 				435D4C5420EDEB3100C8DC85 /* NSDateFormatter+JKMake.h */,
 				435D4C5520EDEB3100C8DC85 /* NSDateFormatter+JKMake.m */,
 				437921DC20ECC3DF00B2EC88 /* NSArray+JKSafeAccess.h */,
@@ -1435,11 +1437,9 @@
 				435D4C5D20EF3E0500C8DC85 /* NSDecimalNumber+JKExtensions.h */,
 				43993EB220E23E390017F1C3 /* UITextView+JKInputLimit.m */,
 				43993EB420E23E810017F1C3 /* UITextField+JKSelect.h */,
-				434DDB4F20C9326800191FC1 /* CALayer+JKBorderColor.h */,
 				435D4C4620EDEA8A00C8DC85 /* NSDate+JKInternetDateTime.h */,
 				435D4C4520EDEA8A00C8DC85 /* NSDate+JKInternetDateTime.m */,
 				435D4C4220EDEA6D00C8DC85 /* NSDate+JKFormatter.m */,
-				435D4C4020EDEA4B00C8DC85 /* NSDate+JKExtension.h */,
 				4325535920CFE8B100FC0258 /* UIWebVIew+JKSwipeGesture.h */,
 				4325536120D8B4CD00FC0258 /* CATransactionDemoViewController.h */,
 				9314D1E420C53ACE00BB2429 /* SLHelper */,
