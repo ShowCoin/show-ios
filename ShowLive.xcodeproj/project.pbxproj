@@ -531,7 +531,7 @@
 		725282D621BB968500802C09 /* SLPassWordAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLPassWordAlert.h; sourceTree = "<group>"; };
 		725282D721BB968500802C09 /* SLWithdrawAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLWithdrawAlert.h; path = wallet/SLWithdrawAlert.h; sourceTree = "<group>"; };
 		725282D821BB968500802C09 /* SLWalletHomePageHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWalletHomePageHeader.h; sourceTree = "<group>"; };
-		725282D921BB968500802C09 /* SLWithDrawIndentifyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLWithDrawIndentifyCell.h; path = wallet/SLWithDrawIndentifyCell.h; sourceTree = "<group>"; };
+		725282D921BB968500802C09 /* SLWithDrawIndentifyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLWithDrawIndentifyCell.h; path = ../wallet/SLWithDrawIndentifyCell.h; sourceTree = "<group>"; };
 		725282DA21BB968500802C09 /* SLGooglePassWordAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLGooglePassWordAlert.h; sourceTree = "<group>"; };
 		725282DB21BB968500802C09 /* CoinDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoinDetailCell.h; sourceTree = "<group>"; };
 		725282DC21BB968500802C09 /* ShowAccountHead.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowAccountHead.h; sourceTree = "<group>"; };
@@ -939,6 +939,17 @@
 		725282C921BB94FC00802C09 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				725282D821BB968500802C09 /* SLWalletHomePageHeader.h */,
+				7289901A20F795EA0044E74A /* SLWithdrawAlert.h */,
+				7289901820F795E90044E74A /* SLWithdrawAlert.m */,
+				725282DB21BB968500802C09 /* CoinDetailCell.h */,
+				725282D221BB968400802C09 /* ShowAccountExchangeView.h */,
+				725282EB21BE655300802C09 /* ShowAccountExchangeView.m */,
+				725282DD21BB968500802C09 /* ShowAccountTableHeader.h */,
+				725282F121BE666A00802C09 /* ShowAccountTableHeader.m */,
+				725282D621BB968500802C09 /* SLPassWordAlert.h */,
+				725282D921BB968500802C09 /* SLWithDrawIndentifyCell.h */,
+				7289901920F795E90044E74A /* SLWithDrawIndentifyCell.h */,
 				725282CA21BB94FC00802C09 /* SLAuthenticationView.h */,
 				725282CB21BB94FC00802C09 /* SLAuthenticationView.m */,
 			);
@@ -984,29 +995,18 @@
 				725282C921BB94FC00802C09 /* Auth */,
 				724FF37420E666C200DD40EB /* setting */,
 				724DBA3820C0377F00EF6406 /* SLUserViewHeader.h */,
-				725282D821BB968500802C09 /* SLWalletHomePageHeader.h */,
 				725282D521BB968500802C09 /* SLWalletHomePageHeader.m */,
-				7289901A20F795EA0044E74A /* SLWithdrawAlert.h */,
-				7289901820F795E90044E74A /* SLWithdrawAlert.m */,
 				725282DE21BB968500802C09 /* AddressChooseCell.h */,
-				725282DB21BB968500802C09 /* CoinDetailCell.h */,
 				725282ED21BE65B300802C09 /* CoinDetailCell.m */,
 				725282D421BB968400802C09 /* ShowAccountCell.h */,
 				725282E121BB971900802C09 /* ShowAccountCell.m */,
-				725282D221BB968400802C09 /* ShowAccountExchangeView.h */,
-				725282EB21BE655300802C09 /* ShowAccountExchangeView.m */,
 				725282DC21BB968500802C09 /* ShowAccountHead.h */,
 				725282EF21BE660A00802C09 /* ShowAccountHead.m */,
-				725282DD21BB968500802C09 /* ShowAccountTableHeader.h */,
-				725282F121BE666A00802C09 /* ShowAccountTableHeader.m */,
 				725282DF21BB968500802C09 /* ShowAddressTextCell.h */,
 				725282DA21BB968500802C09 /* SLGooglePassWordAlert.h */,
 				725282E521BBE3EE00802C09 /* SLGooglePassWordAlert.m */,
-				725282D621BB968500802C09 /* SLPassWordAlert.h */,
 				725282E721BBE44200802C09 /* SLPassWordAlert.m */,
 				725282D721BB968500802C09 /* SLWithdrawAlert.h */,
-				725282D921BB968500802C09 /* SLWithDrawIndentifyCell.h */,
-				7289901920F795E90044E74A /* SLWithDrawIndentifyCell.h */,
 			);
 			path = View;
 			sourceTree = "<group>";
