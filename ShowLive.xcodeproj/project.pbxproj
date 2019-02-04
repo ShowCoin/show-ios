@@ -325,7 +325,7 @@
 		435D4C3C20EDEA2800C8DC85 /* NSDate+JKCupertinoYankee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JKCupertinoYankee.h"; sourceTree = "<group>"; };
 		435D4C3D20EDEA2800C8DC85 /* NSDate+JKCupertinoYankee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JKCupertinoYankee.m"; sourceTree = "<group>"; };
 		435D4C3F20EDEA4B00C8DC85 /* NSDate+JKExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JKExtension.m"; sourceTree = "<group>"; };
-		435D4C4020EDEA4B00C8DC85 /* NSDate+JKExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+JKExtension.h"; path = "../../JKCategories/NSDate+JKExtension.h"; sourceTree = "<group>"; };
+		435D4C4020EDEA4B00C8DC85 /* NSDate+JKExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+JKExtension.h"; path = "../JKCategories/NSDate+JKExtension.h"; sourceTree = "<group>"; };
 		435D4C4220EDEA6D00C8DC85 /* NSDate+JKFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+JKFormatter.m"; path = "../JKCategories/NSDate+JKFormatter.m"; sourceTree = "<group>"; };
 		435D4C4320EDEA6D00C8DC85 /* NSDate+JKFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+JKFormatter.h"; path = "../JKCategories/NSDate+JKFormatter.h"; sourceTree = "<group>"; };
 		435D4C4520EDEA8A00C8DC85 /* NSDate+JKInternetDateTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JKInternetDateTime.m"; sourceTree = "<group>"; };
@@ -375,7 +375,7 @@
 		435D4C9020F092BF00C8DC85 /* NSManagedObjectContext+JKObjectClear.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+JKObjectClear.h"; sourceTree = "<group>"; };
 		435D4C9120F092C000C8DC85 /* NSManagedObjectContext+JKObjectClear.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObjectContext+JKObjectClear.m"; path = "../JKCategories/NSManagedObjectContext+JKObjectClear.m"; sourceTree = "<group>"; };
 		435D4C9320F092D600C8DC85 /* NSMutableURLRequest+JKUpload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableURLRequest+JKUpload.h"; sourceTree = "<group>"; };
-		435D4C9420F092D600C8DC85 /* NSMutableURLRequest+JKUpload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableURLRequest+JKUpload.m"; path = "../../JKCategories/NSMutableURLRequest+JKUpload.m"; sourceTree = "<group>"; };
+		435D4C9420F092D600C8DC85 /* NSMutableURLRequest+JKUpload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableURLRequest+JKUpload.m"; path = "../JKCategories/NSMutableURLRequest+JKUpload.m"; sourceTree = "<group>"; };
 		435D4C9620F0931000C8DC85 /* NSNotificationCenter+JKMainThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSNotificationCenter+JKMainThread.m"; path = "../JKCategories/NSNotificationCenter+JKMainThread.m"; sourceTree = "<group>"; };
 		435D4C9720F0931000C8DC85 /* NSNotificationCenter+JKMainThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+JKMainThread.h"; sourceTree = "<group>"; };
 		435E3AB420C02BB1002B7A7F /* NSDecimalNumber+JKExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDecimalNumber+JKExtensions.m"; sourceTree = "<group>"; };
@@ -1143,7 +1143,6 @@
 			children = (
 				437921F520ECC4E100B2EC88 /* NSData+JKzlib.m */,
 				437921F220ECC4C000B2EC88 /* NSData+JKPCM.h */,
-				435D4C3C20EDEA2800C8DC85 /* NSDate+JKCupertinoYankee.h */,
 				9306818821BE64740021F976 /* NSData+Image.h */,
 				9306818B21BE64B00021F976 /* NSData+ImageContentType.h */,
 				431CB4C520F498850043B0AC /* NSObject+JKEasyCopy.m */,
@@ -1158,15 +1157,12 @@
 				435D4C6C20EF406600C8DC85 /* NSDictionary+JKXML.h */,
 				9309C73A21BB917200AAFE87 /* UIWindow+SLMotion.h */,
 				4355A4DB20FF11000020B7DE /* UINavigationController+JKStackManager.h */,
-				431F64B720F7945C0087DB8E /* UIPopoverController+iPhone.m */,
-				4374EB1120F62F9D00BB947F /* NSString+JKEmoji.h */,
 				431F64CA20F794E70087DB8E /* UINavigationController+JKTransitions.m */,
 				435D4C5520EDEB3100C8DC85 /* NSDateFormatter+JKMake.m */,
 				43291F4C20E520CA000C3C15 /* UITableView+FDTemplateLayoutCellDebug.m */,
 				436B1EAD20DA300600419AC0 /* UIView+JKFind.h */,
 				436B1EB320DA303F00419AC0 /* UIView+JKScreenshot.h */,
 				436B1EAC20DA300600419AC0 /* UIView+JKFind.m */,
-				434DDB5820C932FC00191FC1 /* CAShapeLayer+JKUIBezierPath.h */,
 				43D87B1B20EB6CE600E991D6 /* UISplitViewController+JKQuickAccess.h */,
 				43D87B3420EB6E7000E991D6 /* UIResponderDemoViewController.h */,
 				43D87B3320EB6E6F00E991D6 /* UIResponderDemoViewController.m */,
@@ -1179,7 +1175,6 @@
 				43291F4020E51F6F000C3C15 /* UITableViewDemoViewController.h */,
 				43205DE220DD26C400AD6952 /* UITextView+JKPinchZoom.m */,
 				43205DDE20DD269D00AD6952 /* UITextView+JKPlaceHolder.m */,
-				435D4C9420F092D600C8DC85 /* NSMutableURLRequest+JKUpload.m */,
 				435D4C7820F0916900C8DC85 /* NSFileManager+JKPaths.m */,
 				435D4C8D20F092B000C8DC85 /* NSManagedObjectContext+JKFetchRequestsConstructors.h */,
 				435D4C8E20F092B000C8DC85 /* NSManagedObjectContext+JKFetchRequestsConstructors.m */,
@@ -1202,7 +1197,6 @@
 				434DDB4F20C9326800191FC1 /* CALayer+JKBorderColor.h */,
 				431BBB6320DBCB04006A3D50 /* UIView+JKConstraints.h */,
 				435D4C4920EDEAAD00C8DC85 /* NSDate+JKLunarCalendar.m */,
-				435D4C4020EDEA4B00C8DC85 /* NSDate+JKExtension.h */,
 			);
 			path = SLHelper;
 			sourceTree = "<group>";
@@ -1283,6 +1277,7 @@
 				437921EF20ECC4B100B2EC88 /* NSData+JKHash.m */,
 				437921E620ECC46400B2EC88 /* NSData+JKBase64.h */,
 				437921E520ECC46400B2EC88 /* NSData+JKBase64.m */,
+				435D4C3C20EDEA2800C8DC85 /* NSDate+JKCupertinoYankee.h */,
 				435D4C3D20EDEA2800C8DC85 /* NSDate+JKCupertinoYankee.m */,
 				9306818921BE648D0021F976 /* NSData+Image.m */,
 				9306818C21BE64C90021F976 /* NSData+ImageContentType.m */,
@@ -1342,7 +1337,9 @@
 				435D4C6D20EF406600C8DC85 /* NSDictionary+JKXML.m */,
 				431F64AE20F794150087DB8E /* UIResponder+JKFirstResponder.m */,
 				431F64B820F7945C0087DB8E /* UIPopoverController+iPhone.h */,
+				431F64B720F7945C0087DB8E /* UIPopoverController+iPhone.m */,
 				4374EB0E20F62F7C00BB947F /* NSString+JKDictionaryValue.h */,
+				4374EB1120F62F9D00BB947F /* NSString+JKEmoji.h */,
 				4374EB2320F6307000BB947F /* NSString+JKNormalRegex.h */,
 				4374EB2420F6307000BB947F /* NSString+JKNormalRegex.m */,
 				431F64C920F794E70087DB8E /* UINavigationController+JKTransitions.h */,
@@ -1360,6 +1357,7 @@
 				437921DC20ECC3DF00B2EC88 /* NSArray+JKSafeAccess.h */,
 				437921DD20ECC3E000B2EC88 /* NSArray+JKSafeAccess.m */,
 				436B1EB520DA306200419AC0 /* UIView+JKFrame.h */,
+				434DDB5820C932FC00191FC1 /* CAShapeLayer+JKUIBezierPath.h */,
 				434DDB5920C932FC00191FC1 /* CAShapeLayer+JKUIBezierPath.m */,
 				434DDB5C20C9332700191FC1 /* CATransaction+JKAnimateWithDuration.h */,
 				43D87B1C20EB6CE600E991D6 /* UISplitViewController+JKQuickAccess.m */,
@@ -1377,6 +1375,7 @@
 				43993EC020E23F520017F1C3 /* UITableViewCell+JKNIB.m */,
 				435D4C9620F0931000C8DC85 /* NSNotificationCenter+JKMainThread.m */,
 				435D4C9320F092D600C8DC85 /* NSMutableURLRequest+JKUpload.h */,
+				435D4C9420F092D600C8DC85 /* NSMutableURLRequest+JKUpload.m */,
 				435D4C9020F092BF00C8DC85 /* NSManagedObjectContext+JKObjectClear.h */,
 				435D4C9120F092C000C8DC85 /* NSManagedObjectContext+JKObjectClear.m */,
 				435D4C7920F0916900C8DC85 /* NSFileManager+JKPaths.h */,
@@ -1432,6 +1431,7 @@
 				435D4C4620EDEA8A00C8DC85 /* NSDate+JKInternetDateTime.h */,
 				435D4C4520EDEA8A00C8DC85 /* NSDate+JKInternetDateTime.m */,
 				435D4C4220EDEA6D00C8DC85 /* NSDate+JKFormatter.m */,
+				435D4C4020EDEA4B00C8DC85 /* NSDate+JKExtension.h */,
 				43993EC420E23F790017F1C3 /* UITableView+FDTemplateLayoutCell.h */,
 				43993EC320E23F790017F1C3 /* UITableView+FDTemplateLayoutCell.m */,
 				43993EBE20E23EF90017F1C3 /* UITextField+JKBlocks.m */,
