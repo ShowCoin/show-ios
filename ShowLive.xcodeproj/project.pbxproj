@@ -664,7 +664,7 @@
 		9391AA8C20C0369100D520F1 /* SLBlankView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLBlankView.h; sourceTree = "<group>"; };
 		9391AA8D20C036DC00D520F1 /* SLChatBusiness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLChatBusiness.h; sourceTree = "<group>"; };
 		9391AA8E20C0376B00D520F1 /* SLPureColorImageGenerate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLPureColorImageGenerate.h; sourceTree = "<group>"; };
-		9391AA9020C0380800D520F1 /* SLStringSizeCalculation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLStringSizeCalculation.h; path = ../FriendList/SLStringSizeCalculation.h; sourceTree = "<group>"; };
+		9391AA9020C0380800D520F1 /* SLStringSizeCalculation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLStringSizeCalculation.h; path = ../../FriendList/SLStringSizeCalculation.h; sourceTree = "<group>"; };
 		9391AA9220C038C000D520F1 /* SLWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWebViewController.h; sourceTree = "<group>"; };
 		9391AA9520C039BB00D520F1 /* SLWebViewJSFuncNameConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWebViewJSFuncNameConst.h; sourceTree = "<group>"; };
 		9391AA9620C03A4300D520F1 /* SLWebViewJSFuncNameConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWebViewJSFuncNameConst.m; sourceTree = "<group>"; };
@@ -1458,8 +1458,14 @@
 		93615AE720C142C9000D5658 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				9391AA8C20C0369100D520F1 /* SLBlankView.h */,
+				9391AA8D20C036DC00D520F1 /* SLChatBusiness.h */,
+				9391AA9020C0380800D520F1 /* SLStringSizeCalculation.h */,
+				43D24A942094B4C500C59AC8 /* ShowNavigationBar.m */,
 				43D24A8E2094A43600C59AC8 /* ShowAppDelegate.h */,
 				43D24A8F2094A43600C59AC8 /* ShowAppDelegate.m */,
+				43D24A8D2094A43600C59AC8 /* AppDelegate+ShowRegisterService.m */,
+				72F9A9642200483100612687 /* NewTopListCell.h */,
 				72F9A9672200486F00612687 /* NewTopListHeader.h */,
 				72F9A9682200487B00612687 /* NewTopListHeader.m */,
 				93615AE820C142D7000D5658 /* SLBaseWebViewController.h */,
@@ -1515,19 +1521,13 @@
 		9391AA9120C038A000D520F1 /* WebView */ = {
 			isa = PBXGroup;
 			children = (
-				9391AA8C20C0369100D520F1 /* SLBlankView.h */,
 				72A0088520FC9FE40051C643 /* SLBlankView.m */,
-				9391AA8D20C036DC00D520F1 /* SLChatBusiness.h */,
 				9391AA8E20C0376B00D520F1 /* SLPureColorImageGenerate.h */,
-				9391AA9020C0380800D520F1 /* SLStringSizeCalculation.h */,
 				934E1B9720AC39D900A0B080 /* SLChatViewController.h */,
 				934E1B9820AC3A1E00A0B080 /* SLChatViewController+BlankView.h */,
 				931DAAC820B5A7A6003A0B38 /* SLConvListSystemTableViewCell.h */,
 				43D24A932094B4C500C59AC8 /* ShowNavigationBar.h */,
-				43D24A942094B4C500C59AC8 /* ShowNavigationBar.m */,
 				43D24A902094A43600C59AC8 /* AppDelegate+ShowRegisterService.h */,
-				43D24A8D2094A43600C59AC8 /* AppDelegate+ShowRegisterService.m */,
-				72F9A9642200483100612687 /* NewTopListCell.h */,
 				72F9A9652200484600612687 /* NewTopListCell.m */,
 				72F9A96A220048C900612687 /* NewTopListViewController.h */,
 				72F9A96B220048E800612687 /* NewTopListViewController.m */,
