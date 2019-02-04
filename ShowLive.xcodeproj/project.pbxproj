@@ -444,7 +444,7 @@
 		43993EC020E23F520017F1C3 /* UITableViewCell+JKNIB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+JKNIB.m"; sourceTree = "<group>"; };
 		43993EC120E23F530017F1C3 /* UITableViewCell+JKNIB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITableViewCell+JKNIB.h"; path = "../Exten/UITableViewCell+JKNIB.h"; sourceTree = "<group>"; };
 		43993EC320E23F790017F1C3 /* UITableView+FDTemplateLayoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDTemplateLayoutCell.m"; sourceTree = "<group>"; };
-		43993EC420E23F790017F1C3 /* UITableView+FDTemplateLayoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDTemplateLayoutCell.h"; sourceTree = "<group>"; };
+		43993EC420E23F790017F1C3 /* UITableView+FDTemplateLayoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITableView+FDTemplateLayoutCell.h"; path = "../Exten/SLHelper/UITableView+FDTemplateLayoutCell.h"; sourceTree = "<group>"; };
 		43D24A8D2094A43600C59AC8 /* AppDelegate+ShowRegisterService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+ShowRegisterService.m"; sourceTree = "<group>"; };
 		43D24A8E2094A43600C59AC8 /* ShowAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowAppDelegate.h; sourceTree = "<group>"; };
 		43D24A8F2094A43600C59AC8 /* ShowAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowAppDelegate.m; sourceTree = "<group>"; };
@@ -844,6 +844,7 @@
 				4374EB1220F62F9D00BB947F /* NSString+JKEmoji.m */,
 				431CB4C720F498EF0043B0AC /* NSObject+JKGCD.h */,
 				4374EB0F20F62F7C00BB947F /* NSString+JKDictionaryValue.m */,
+				437B0A5B20F3602E00E93844 /* NSObject+JKAddProperty.h */,
 				9309C73E21BB91D600AAFE87 /* NSString+Json.m */,
 				9309C74021BB922200AAFE87 /* UIImage+Effects.h */,
 				9309C74121BB924700AAFE87 /* UIImage+Effects.m */,
@@ -862,6 +863,7 @@
 				435D4C4620EDEA8A00C8DC85 /* NSDate+JKInternetDateTime.h */,
 				435D4C4520EDEA8A00C8DC85 /* NSDate+JKInternetDateTime.m */,
 				435D4C4020EDEA4B00C8DC85 /* NSDate+JKExtension.h */,
+				43993EC420E23F790017F1C3 /* UITableView+FDTemplateLayoutCell.h */,
 				4325536120D8B4CD00FC0258 /* CATransactionDemoViewController.h */,
 				934A1030211ED7B50021770D /* NSString+Validation.h */,
 				4325537020D8B57B00FC0258 /* MKMapView+JKZoomLevel.h */,
@@ -1342,7 +1344,6 @@
 				437B0A4F20F35F9C00E93844 /* NSNotificationCenterDemoViewController.m */,
 				435D4C8B20F0929A00C8DC85 /* NSManagedObjectContext+JKFetching.m */,
 				431CB4C820F498EF0043B0AC /* NSObject+JKGCD.m */,
-				437B0A5B20F3602E00E93844 /* NSObject+JKAddProperty.h */,
 				437B0A5C20F3602E00E93844 /* NSObject+JKAddProperty.m */,
 				437B0A5820F3600800E93844 /* NSNumber+JKRound.m */,
 				437B0A5520F35FDE00E93844 /* NSNumber+JKRomanNumerals.h */,
@@ -1360,7 +1361,6 @@
 				431BBB6320DBCB04006A3D50 /* UIView+JKConstraints.h */,
 				435D4C4320EDEA6D00C8DC85 /* NSDate+JKFormatter.h */,
 				435D4C4220EDEA6D00C8DC85 /* NSDate+JKFormatter.m */,
-				43993EC420E23F790017F1C3 /* UITableView+FDTemplateLayoutCell.h */,
 				43993EC320E23F790017F1C3 /* UITableView+FDTemplateLayoutCell.m */,
 				43993EBE20E23EF90017F1C3 /* UITextField+JKBlocks.m */,
 				4325535920CFE8B100FC0258 /* UIWebVIew+JKSwipeGesture.h */,
