@@ -367,7 +367,7 @@
 		435D4C8420F0920900C8DC85 /* NSManagedObject+JKDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSManagedObject+JKDictionary.h"; path = "../Exten/NSManagedObject+JKDictionary.h"; sourceTree = "<group>"; };
 		435D4C8520F0920900C8DC85 /* NSManagedObject+JKDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+JKDictionary.m"; sourceTree = "<group>"; };
 		435D4C8720F0924D00C8DC85 /* NSManagedObject+JKExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSManagedObject+JKExtensions.h"; path = "Untils/Exten/NSManagedObject+JKExtensions.h"; sourceTree = "<group>"; };
-		435D4C8820F0924D00C8DC85 /* NSManagedObject+JKExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObject+JKExtensions.m"; path = "../Exten/SLHelper/NSManagedObject+JKExtensions.m"; sourceTree = "<group>"; };
+		435D4C8820F0924D00C8DC85 /* NSManagedObject+JKExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObject+JKExtensions.m"; path = "Untils/Exten/SLHelper/NSManagedObject+JKExtensions.m"; sourceTree = "<group>"; };
 		435D4C8A20F0929900C8DC85 /* NSManagedObjectContext+JKFetching.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSManagedObjectContext+JKFetching.h"; path = "../Exten/NSManagedObjectContext+JKFetching.h"; sourceTree = "<group>"; };
 		435D4C8B20F0929A00C8DC85 /* NSManagedObjectContext+JKFetching.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObjectContext+JKFetching.m"; path = "Untils/Exten/NSManagedObjectContext+JKFetching.m"; sourceTree = "<group>"; };
 		435D4C8D20F092B000C8DC85 /* NSManagedObjectContext+JKFetchRequestsConstructors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSManagedObjectContext+JKFetchRequestsConstructors.h"; path = "Untils/Exten/NSManagedObjectContext+JKFetchRequestsConstructors.h"; sourceTree = "<group>"; };
@@ -824,7 +824,6 @@
 				431CB4DA20F499D00043B0AC /* NSRunLoop+JKPerformBlock.m */,
 				431CB4DD20F49A4F0043B0AC /* NSSet+JKBlock.m */,
 				431C075E20FC8D9000479559 /* NSString+JKXMLDictionary.h */,
-				435D4C8820F0924D00C8DC85 /* NSManagedObject+JKExtensions.m */,
 				437B0A5E20F3607100E93844 /* NSObject+JKAppInfo.m */,
 				431CB4C820F498EF0043B0AC /* NSObject+JKGCD.m */,
 				437B0A5B20F3602E00E93844 /* NSObject+JKAddProperty.h */,
@@ -857,9 +856,7 @@
 				436B1EAF20DA302100419AC0 /* UIView+JKNib.h */,
 				4325535620CFE88D00FC0258 /* UIWebView+JKWebStorage.m */,
 				434DDB6120C9337900191FC1 /* UIWindow+JKHierarchy.h */,
-				43291F3C20E51F50000C3C15 /* UITextFieldDemoViewController.h */,
 				43291F3D20E51F51000C3C15 /* UITextFieldDemoViewController.m */,
-				434DDB6220C9337900191FC1 /* UIWindow+JKHierarchy.m */,
 				437921E320ECC43F00B2EC88 /* NSData+JKAPNSToken.m */,
 				43D87B3020EB6E0400E991D6 /* UIScreen+JKFrame.h */,
 				9309C73D21BB91B900AAFE87 /* NSString+Json.h */,
@@ -1262,6 +1259,7 @@
 				435D4C9720F0931000C8DC85 /* NSNotificationCenter+JKMainThread.h */,
 				435D4C8B20F0929A00C8DC85 /* NSManagedObjectContext+JKFetching.m */,
 				435D4C8720F0924D00C8DC85 /* NSManagedObject+JKExtensions.h */,
+				435D4C8820F0924D00C8DC85 /* NSManagedObject+JKExtensions.m */,
 				437B0A5F20F3607100E93844 /* NSObject+JKAppInfo.h */,
 				435D4C4F20EDEADF00C8DC85 /* NSDate+JKUtilities.h */,
 				431CB4DF20F49A800043B0AC /* NSString+JKBase64.h */,
@@ -1298,6 +1296,8 @@
 				4325535B20D8B45600FC0258 /* CAAnimationDemoViewController.h */,
 				4325535C20D8B45600FC0258 /* CAAnimationDemoViewController.m */,
 				4325535520CFE88C00FC0258 /* UIWebView+JKWebStorage.h */,
+				43291F3C20E51F50000C3C15 /* UITextFieldDemoViewController.h */,
+				434DDB6220C9337900191FC1 /* UIWindow+JKHierarchy.m */,
 				436B1EA920DA2FF000419AC0 /* UIView+JKShake.h */,
 				436B1EA420DA2FB000419AC0 /* UIView+JKVisuals.h */,
 				43D87B3120EB6E0400E991D6 /* UIScreen+JKFrame.m */,
