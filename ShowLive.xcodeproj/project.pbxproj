@@ -593,7 +593,7 @@
 		9306818F21BE65840021F976 /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
 		9306819121BE65BD0021F976 /* UIButton+Addtional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Addtional.h"; sourceTree = "<group>"; };
 		9306819221BE65D50021F976 /* UIButton+Addtional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Addtional.m"; sourceTree = "<group>"; };
-		93075E1321D3AE90009A1D28 /* UIImage+Additional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Additional.h"; path = "../Exten/UIImage+Additional.h"; sourceTree = "<group>"; };
+		93075E1321D3AE90009A1D28 /* UIImage+Additional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Additional.h"; path = "Untils/Exten/UIImage+Additional.h"; sourceTree = "<group>"; };
 		9309C73A21BB917200AAFE87 /* UIWindow+SLMotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIWindow+SLMotion.h"; path = "../Exten/UIWindow+SLMotion.h"; sourceTree = "<group>"; };
 		9309C73B21BB919B00AAFE87 /* UIWindow+SLMotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+SLMotion.m"; sourceTree = "<group>"; };
 		9309C73D21BB91B900AAFE87 /* NSString+Json.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Json.h"; sourceTree = "<group>"; };
@@ -841,7 +841,6 @@
 				9311B41C21C1051C009C9A1D /* UIControl+BlocksKit.m */,
 				9311B41E21C107C4009C9A1D /* UIGestureRecognizer+BlocksKit.h */,
 				9311B41F21C107E3009C9A1D /* UIGestureRecognizer+BlocksKit.m */,
-				93075E1321D3AE90009A1D28 /* UIImage+Additional.h */,
 				93EF35D421C292950088C2E4 /* UIImage+Additional.m */,
 				435D4C3F20EDEA4B00C8DC85 /* NSDate+JKExtension.m */,
 				435D4C5420EDEB3100C8DC85 /* NSDateFormatter+JKMake.h */,
@@ -937,7 +936,6 @@
 				437921E220ECC43F00B2EC88 /* NSData+JKAPNSToken.h */,
 				43993EB120E23E390017F1C3 /* UITextView+JKInputLimit.h */,
 				43993EB220E23E390017F1C3 /* UITextView+JKInputLimit.m */,
-				43993EB420E23E810017F1C3 /* UITextField+JKSelect.h */,
 				43993EB820E23EAC0017F1C3 /* UITextField+JKHistory.h */,
 				43993EBD20E23EF90017F1C3 /* UITextField+JKBlocks.h */,
 				43993EC120E23F530017F1C3 /* UITableViewCell+JKNIB.h */,
@@ -1293,6 +1291,7 @@
 				4325536720D8B50F00FC0258 /* CLLocationManager+Blocks.m */,
 				435D4C6920EF3FF200C8DC85 /* NSDictionary+JKSafeAccess.h */,
 				43D87B2720EB6D9900E991D6 /* UIScrollView+EmptyDataSet.m */,
+				93075E1321D3AE90009A1D28 /* UIImage+Additional.h */,
 				43291F4C20E520CA000C3C15 /* UITableView+FDTemplateLayoutCellDebug.m */,
 				437921E820ECC47B00B2EC88 /* NSData+JKEncrypt.h */,
 				435D4C9420F092D600C8DC85 /* NSMutableURLRequest+JKUpload.m */,
@@ -1303,6 +1302,7 @@
 				431CB4DF20F49A800043B0AC /* NSString+JKBase64.h */,
 				431CB4C720F498EF0043B0AC /* NSObject+JKGCD.h */,
 				9343E47921C7D1A80001B9C1 /* UIView+Additional.m */,
+				43993EB420E23E810017F1C3 /* UITextField+JKSelect.h */,
 				435D4C4620EDEA8A00C8DC85 /* NSDate+JKInternetDateTime.h */,
 				435D4C4220EDEA6D00C8DC85 /* NSDate+JKFormatter.m */,
 				43993EC420E23F790017F1C3 /* UITableView+FDTemplateLayoutCell.h */,
