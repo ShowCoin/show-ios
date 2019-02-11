@@ -373,7 +373,7 @@
 		435D4C8D20F092B000C8DC85 /* NSManagedObjectContext+JKFetchRequestsConstructors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+JKFetchRequestsConstructors.h"; sourceTree = "<group>"; };
 		435D4C8E20F092B000C8DC85 /* NSManagedObjectContext+JKFetchRequestsConstructors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObjectContext+JKFetchRequestsConstructors.m"; path = "../JKCategories/NSManagedObjectContext+JKFetchRequestsConstructors.m"; sourceTree = "<group>"; };
 		435D4C9020F092BF00C8DC85 /* NSManagedObjectContext+JKObjectClear.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+JKObjectClear.h"; sourceTree = "<group>"; };
-		435D4C9120F092C000C8DC85 /* NSManagedObjectContext+JKObjectClear.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObjectContext+JKObjectClear.m"; path = "Untils/JKCategories/NSManagedObjectContext+JKObjectClear.m"; sourceTree = "<group>"; };
+		435D4C9120F092C000C8DC85 /* NSManagedObjectContext+JKObjectClear.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObjectContext+JKObjectClear.m"; path = "../JKCategories/NSManagedObjectContext+JKObjectClear.m"; sourceTree = "<group>"; };
 		435D4C9320F092D600C8DC85 /* NSMutableURLRequest+JKUpload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableURLRequest+JKUpload.h"; sourceTree = "<group>"; };
 		435D4C9420F092D600C8DC85 /* NSMutableURLRequest+JKUpload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableURLRequest+JKUpload.m"; path = "Untils/JKCategories/NSMutableURLRequest+JKUpload.m"; sourceTree = "<group>"; };
 		435D4C9620F0931000C8DC85 /* NSNotificationCenter+JKMainThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSNotificationCenter+JKMainThread.m"; path = "Untils/JKCategories/NSNotificationCenter+JKMainThread.m"; sourceTree = "<group>"; };
@@ -611,7 +611,7 @@
 		9314D1DF20C5394500BB2429 /* SLAttentionListAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLAttentionListAction.h; sourceTree = "<group>"; };
 		9314D1E120C539D400BB2429 /* SLShutUpAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLShutUpAction.h; sourceTree = "<group>"; };
 		9314D1E220C53A3B00BB2429 /* SLHistoryWorksAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLHistoryWorksAction.h; sourceTree = "<group>"; };
-		9314D1E520C53AE900BB2429 /* SLHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLHelper.h; sourceTree = "<group>"; };
+		9314D1E520C53AE900BB2429 /* SLHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLHelper.h; path = ../../SLHelper.h; sourceTree = "<group>"; };
 		9314D1E720C57AEF00BB2429 /* SLPrivateChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLPrivateChatViewController.h; sourceTree = "<group>"; };
 		9314D1E820C57B1F00BB2429 /* SLPrivateChatViewController+Business.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SLPrivateChatViewController+Business.h"; sourceTree = "<group>"; };
 		9314D1E920C57B7800BB2429 /* SLPrivateChatViewController+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SLPrivateChatViewController+Common.h"; sourceTree = "<group>"; };
@@ -1042,7 +1042,6 @@
 			children = (
 				43968A6720AC397000149DCC /* Untils */,
 				72C6166720A0C65200103C44 /* requestAction */,
-				4314391F209497E70059D373 /* README.md */,
 				93398ECE20D93370004376FB /* SLHelper.m */,
 				437921E520ECC46400B2EC88 /* NSData+JKBase64.m */,
 				9306818B21BE64B00021F976 /* NSData+ImageContentType.h */,
@@ -1086,7 +1085,6 @@
 				43993EC020E23F520017F1C3 /* UITableViewCell+JKNIB.m */,
 				435D4C9620F0931000C8DC85 /* NSNotificationCenter+JKMainThread.m */,
 				435D4C9420F092D600C8DC85 /* NSMutableURLRequest+JKUpload.m */,
-				435D4C9120F092C000C8DC85 /* NSManagedObjectContext+JKObjectClear.m */,
 				435D4C7920F0916900C8DC85 /* NSFileManager+JKPaths.h */,
 				435D4C8220F091E600C8DC85 /* NSInvocation+JKBb.h */,
 				435D4C6120EF3E2400C8DC85 /* NSDictionary+JKBlock.h */,
@@ -1123,7 +1121,6 @@
 				437921EC20ECC49800B2EC88 /* NSData+JKGzip.h */,
 				431C075F20FC8D9000479559 /* NSString+JKXMLDictionary.m */,
 				934AE46020FC6BB400B60AD4 /* UIImage+Avatar.m */,
-				9314D1E520C53AE900BB2429 /* SLHelper.h */,
 				43143922209497E80059D373 /* UNLICENSE */,
 				431438AC209432E30059D373 /* Base.lproj */,
 				431438A8209432D50059D373 /* zh-Hans.lproj */,
@@ -1258,6 +1255,7 @@
 			children = (
 				43143921209497E80059D373 /* .gitignore */,
 				43143923209497E80059D373 /* Cartfile */,
+				4314391F209497E70059D373 /* README.md */,
 				437921F220ECC4C000B2EC88 /* NSData+JKPCM.h */,
 				437921F120ECC4C000B2EC88 /* NSData+JKPCM.m */,
 				437921EE20ECC4B100B2EC88 /* NSData+JKHash.h */,
@@ -1356,6 +1354,7 @@
 				43205DDE20DD269D00AD6952 /* UITextView+JKPlaceHolder.m */,
 				435D4C9320F092D600C8DC85 /* NSMutableURLRequest+JKUpload.h */,
 				435D4C9020F092BF00C8DC85 /* NSManagedObjectContext+JKObjectClear.h */,
+				435D4C9120F092C000C8DC85 /* NSManagedObjectContext+JKObjectClear.m */,
 				435D4C7820F0916900C8DC85 /* NSFileManager+JKPaths.m */,
 				435D4C8D20F092B000C8DC85 /* NSManagedObjectContext+JKFetchRequestsConstructors.h */,
 				435D4C8E20F092B000C8DC85 /* NSManagedObjectContext+JKFetchRequestsConstructors.m */,
@@ -1441,6 +1440,7 @@
 				43205DDB20DD267D00AD6952 /* UITextView+JKSelect.h */,
 				437921EB20ECC49800B2EC88 /* NSData+JKGzip.m */,
 				934AE45F20FC6B8900B60AD4 /* UIImage+Avatar.h */,
+				9314D1E520C53AE900BB2429 /* SLHelper.h */,
 				43143920209497E70059D373 /* TODO.md */,
 				9314D1E420C53ACE00BB2429 /* SLHelper */,
 			);
