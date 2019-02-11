@@ -393,7 +393,7 @@
 		4374EB0B20F62F5600BB947F /* NSString+JKContains.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+JKContains.m"; path = "Untils/JKCategories/NSString+JKContains.m"; sourceTree = "<group>"; };
 		4374EB0C20F62F5600BB947F /* NSString+JKContains.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JKContains.h"; sourceTree = "<group>"; };
 		4374EB0E20F62F7C00BB947F /* NSString+JKDictionaryValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JKDictionaryValue.h"; sourceTree = "<group>"; };
-		4374EB0F20F62F7C00BB947F /* NSString+JKDictionaryValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+JKDictionaryValue.m"; path = "../Exten/SLHelper/NSString+JKDictionaryValue.m"; sourceTree = "<group>"; };
+		4374EB0F20F62F7C00BB947F /* NSString+JKDictionaryValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+JKDictionaryValue.m"; path = "Untils/Exten/SLHelper/NSString+JKDictionaryValue.m"; sourceTree = "<group>"; };
 		4374EB1120F62F9D00BB947F /* NSString+JKEmoji.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JKEmoji.h"; sourceTree = "<group>"; };
 		4374EB1220F62F9D00BB947F /* NSString+JKEmoji.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JKEmoji.m"; sourceTree = "<group>"; };
 		4374EB2320F6307000BB947F /* NSString+JKNormalRegex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+JKNormalRegex.h"; path = "Untils/Exten/SLHelper/NSString+JKNormalRegex.h"; sourceTree = "<group>"; };
@@ -761,7 +761,6 @@
 				9306818921BE648D0021F976 /* NSData+Image.m */,
 				9306818E21BE650F0021F976 /* NSString+MD5.h */,
 				9306818F21BE65840021F976 /* NSString+MD5.m */,
-				431CB4C520F498850043B0AC /* NSObject+JKEasyCopy.m */,
 				431F64AF20F794160087DB8E /* UIResponder+JKFirstResponder.h */,
 				431C078220FE28BF00479559 /* NSURLSession+JKSynchronousTask.h */,
 				431CB4CE20F4991D0043B0AC /* NSObject+JKReflection.m */,
@@ -852,7 +851,6 @@
 				437B0A5E20F3607100E93844 /* NSObject+JKAppInfo.m */,
 				4374EB1220F62F9D00BB947F /* NSString+JKEmoji.m */,
 				431CB4C820F498EF0043B0AC /* NSObject+JKGCD.m */,
-				4374EB0F20F62F7C00BB947F /* NSString+JKDictionaryValue.m */,
 				437B0A5B20F3602E00E93844 /* NSObject+JKAddProperty.h */,
 				437B0A5C20F3602E00E93844 /* NSObject+JKAddProperty.m */,
 				437B0A5820F3600800E93844 /* NSNumber+JKRound.m */,
@@ -884,7 +882,6 @@
 				4325536A20D8B53300FC0258 /* MKMapView+JKBetterMaps.h */,
 				4325536B20D8B53300FC0258 /* MKMapView+JKBetterMaps.m */,
 				436B1EAF20DA302100419AC0 /* UIView+JKNib.h */,
-				4325535E20D8B49F00FC0258 /* CAShapeLayerDemoViewController.m */,
 				4325535B20D8B45600FC0258 /* CAAnimationDemoViewController.h */,
 				4325535C20D8B45600FC0258 /* CAAnimationDemoViewController.m */,
 				4325535620CFE88D00FC0258 /* UIWebView+JKWebStorage.m */,
@@ -1209,6 +1206,7 @@
 				43205DD320DD263300AD6952 /* UIView+Debug.h */,
 				43205DD220DD263300AD6952 /* UIView+Debug.m */,
 				431CB4C420F498850043B0AC /* NSObject+JKEasyCopy.h */,
+				431CB4C520F498850043B0AC /* NSObject+JKEasyCopy.m */,
 				431CB4D920F499D00043B0AC /* NSRunLoop+JKPerformBlock.h */,
 				431CB4CD20F4991D0043B0AC /* NSObject+JKReflection.h */,
 				431CB4CB20F499060043B0AC /* NSObject+JKKVOBlocks.m */,
@@ -1279,6 +1277,7 @@
 				431CB4DF20F49A800043B0AC /* NSString+JKBase64.h */,
 				431CB4E020F49A800043B0AC /* NSString+JKBase64.m */,
 				431CB4C720F498EF0043B0AC /* NSObject+JKGCD.h */,
+				4374EB0F20F62F7C00BB947F /* NSString+JKDictionaryValue.m */,
 				9309C73E21BB91D600AAFE87 /* NSString+Json.m */,
 				9343E47821C7D17C0001B9C1 /* UIView+Additional.h */,
 				9343E47921C7D1A80001B9C1 /* UIView+Additional.m */,
@@ -1301,6 +1300,7 @@
 				934A1030211ED7B50021770D /* NSString+Validation.h */,
 				934A1031211ED7BC0021770D /* NSString+Validation.m */,
 				4325537020D8B57B00FC0258 /* MKMapView+JKZoomLevel.h */,
+				4325535E20D8B49F00FC0258 /* CAShapeLayerDemoViewController.m */,
 				4325535520CFE88C00FC0258 /* UIWebView+JKWebStorage.h */,
 				436B1EA920DA2FF000419AC0 /* UIView+JKShake.h */,
 				436B1EA420DA2FB000419AC0 /* UIView+JKVisuals.h */,
