@@ -396,7 +396,7 @@
 		4374EB0F20F62F7C00BB947F /* NSString+JKDictionaryValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+JKDictionaryValue.m"; path = "Untils/Exten/SLHelper/NSString+JKDictionaryValue.m"; sourceTree = "<group>"; };
 		4374EB1120F62F9D00BB947F /* NSString+JKEmoji.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JKEmoji.h"; sourceTree = "<group>"; };
 		4374EB1220F62F9D00BB947F /* NSString+JKEmoji.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JKEmoji.m"; sourceTree = "<group>"; };
-		4374EB2320F6307000BB947F /* NSString+JKNormalRegex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+JKNormalRegex.h"; path = "Untils/Exten/SLHelper/NSString+JKNormalRegex.h"; sourceTree = "<group>"; };
+		4374EB2320F6307000BB947F /* NSString+JKNormalRegex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+JKNormalRegex.h"; path = "SLHelper/NSString+JKNormalRegex.h"; sourceTree = "<group>"; };
 		4374EB2420F6307000BB947F /* NSString+JKNormalRegex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JKNormalRegex.m"; sourceTree = "<group>"; };
 		437864562075FD1E00146B97 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		437921DC20ECC3DF00B2EC88 /* NSArray+JKSafeAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+JKSafeAccess.h"; sourceTree = "<group>"; };
@@ -1042,7 +1042,6 @@
 			children = (
 				43968A6720AC397000149DCC /* Untils */,
 				72C6166720A0C65200103C44 /* requestAction */,
-				43143923209497E80059D373 /* Cartfile */,
 				4314391F209497E70059D373 /* README.md */,
 				93398ECE20D93370004376FB /* SLHelper.m */,
 				437921EE20ECC4B100B2EC88 /* NSData+JKHash.h */,
@@ -1088,7 +1087,6 @@
 				431F64AE20F794150087DB8E /* UIResponder+JKFirstResponder.m */,
 				431F64B820F7945C0087DB8E /* UIPopoverController+iPhone.h */,
 				4374EB1120F62F9D00BB947F /* NSString+JKEmoji.h */,
-				4374EB2320F6307000BB947F /* NSString+JKNormalRegex.h */,
 				431F64C920F794E70087DB8E /* UINavigationController+JKTransitions.h */,
 				431C077620FE279700479559 /* NSURLConnection+JKSelfSigned.h */,
 				431F64CA20F794E70087DB8E /* UINavigationController+JKTransitions.m */,
@@ -1310,6 +1308,7 @@
 			isa = PBXGroup;
 			children = (
 				43143921209497E80059D373 /* .gitignore */,
+				43143923209497E80059D373 /* Cartfile */,
 				437921F220ECC4C000B2EC88 /* NSData+JKPCM.h */,
 				437921F120ECC4C000B2EC88 /* NSData+JKPCM.m */,
 				437921EF20ECC4B100B2EC88 /* NSData+JKHash.m */,
@@ -1354,6 +1353,7 @@
 				435D4C6D20EF406600C8DC85 /* NSDictionary+JKXML.m */,
 				431F64B720F7945C0087DB8E /* UIPopoverController+iPhone.m */,
 				4374EB0E20F62F7C00BB947F /* NSString+JKDictionaryValue.h */,
+				4374EB2320F6307000BB947F /* NSString+JKNormalRegex.h */,
 				4374EB2420F6307000BB947F /* NSString+JKNormalRegex.m */,
 				435D4C5120EDEB1800C8DC85 /* NSDate+JKZeroDate.h */,
 				9311B41B21C104EA009C9A1D /* UIControl+BlocksKit.h */,
