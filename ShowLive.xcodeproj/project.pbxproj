@@ -258,7 +258,7 @@
 		431F64AE20F794150087DB8E /* UIResponder+JKFirstResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIResponder+JKFirstResponder.m"; path = "Untils/JKCategories/UIResponder+JKFirstResponder.m"; sourceTree = "<group>"; };
 		431F64AF20F794160087DB8E /* UIResponder+JKFirstResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+JKFirstResponder.h"; sourceTree = "<group>"; };
 		431F64B720F7945C0087DB8E /* UIPopoverController+iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIPopoverController+iPhone.m"; sourceTree = "<group>"; };
-		431F64B820F7945C0087DB8E /* UIPopoverController+iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIPopoverController+iPhone.h"; path = "Untils/Exten/UIPopoverController+iPhone.h"; sourceTree = "<group>"; };
+		431F64B820F7945C0087DB8E /* UIPopoverController+iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIPopoverController+iPhone.h"; sourceTree = "<group>"; };
 		431F64C920F794E70087DB8E /* UINavigationController+JKTransitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+JKTransitions.h"; sourceTree = "<group>"; };
 		431F64CA20F794E70087DB8E /* UINavigationController+JKTransitions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+JKTransitions.m"; sourceTree = "<group>"; };
 		431F64E120F8F2300087DB8E /* NSString+JKRemoveEmoji.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JKRemoveEmoji.m"; sourceTree = "<group>"; };
@@ -1084,7 +1084,6 @@
 				437B0A5220F35FB600E93844 /* NSNumber+JKCGFloat.m */,
 				4355A4DB20FF11000020B7DE /* UINavigationController+JKStackManager.h */,
 				431F64AE20F794150087DB8E /* UIResponder+JKFirstResponder.m */,
-				431F64B820F7945C0087DB8E /* UIPopoverController+iPhone.h */,
 				4374EB1120F62F9D00BB947F /* NSString+JKEmoji.h */,
 				431F64C920F794E70087DB8E /* UINavigationController+JKTransitions.h */,
 				431C077620FE279700479559 /* NSURLConnection+JKSelfSigned.h */,
@@ -1120,7 +1119,6 @@
 				435D4C8220F091E600C8DC85 /* NSInvocation+JKBb.h */,
 				435D4C6120EF3E2400C8DC85 /* NSDictionary+JKBlock.h */,
 				431F64E220F8F2300087DB8E /* NSString+JKRemoveEmoji.h */,
-				431CB4DA20F499D00043B0AC /* NSRunLoop+JKPerformBlock.m */,
 				4355A4DA20FF11000020B7DE /* UINavigationController+JKStackManager.m */,
 				4325536420D8B4F100FC0258 /* CLLocation+JKCH1903.h */,
 				431C076B20FC8EB900479559 /* NSURL+JKQueryDictionary.m */,
@@ -1347,6 +1345,7 @@
 				4374EB0B20F62F5600BB947F /* NSString+JKContains.m */,
 				431CB4D020F499370043B0AC /* NSObject+JKRuntime.m */,
 				435D4C6D20EF406600C8DC85 /* NSDictionary+JKXML.m */,
+				431F64B820F7945C0087DB8E /* UIPopoverController+iPhone.h */,
 				431F64B720F7945C0087DB8E /* UIPopoverController+iPhone.m */,
 				4374EB0E20F62F7C00BB947F /* NSString+JKDictionaryValue.h */,
 				4374EB2320F6307000BB947F /* NSString+JKNormalRegex.h */,
@@ -1381,6 +1380,7 @@
 				435D4C8120F091E500C8DC85 /* NSInvocation+JKBb.m */,
 				435D4C6020EF3E2400C8DC85 /* NSDictionary+JKBlock.m */,
 				431F64E120F8F2300087DB8E /* NSString+JKRemoveEmoji.m */,
+				431CB4DA20F499D00043B0AC /* NSRunLoop+JKPerformBlock.m */,
 				431CB4DC20F49A4F0043B0AC /* NSSet+JKBlock.h */,
 				431CB4DD20F49A4F0043B0AC /* NSSet+JKBlock.m */,
 				431C078720FE291700479559 /* NSUserDefaults+JKSafeAccess.h */,
