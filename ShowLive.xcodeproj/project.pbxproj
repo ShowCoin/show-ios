@@ -752,9 +752,9 @@
 		434DDB4B20C92B4E00191FC1 /* JKCategories */ = {
 			isa = PBXGroup;
 			children = (
-				437921F420ECC4E100B2EC88 /* NSData+JKzlib.h */,
 				437921F520ECC4E100B2EC88 /* NSData+JKzlib.m */,
 				437921F220ECC4C000B2EC88 /* NSData+JKPCM.h */,
+				93398ECE20D93370004376FB /* SLHelper.m */,
 				437921F120ECC4C000B2EC88 /* NSData+JKPCM.m */,
 				437921EE20ECC4B100B2EC88 /* NSData+JKHash.h */,
 				437921EF20ECC4B100B2EC88 /* NSData+JKHash.m */,
@@ -914,7 +914,6 @@
 				431CB4D120F499380043B0AC /* NSObject+JKRuntime.h */,
 				4325536420D8B4F100FC0258 /* CLLocation+JKCH1903.h */,
 				4325536520D8B4F100FC0258 /* CLLocation+JKCH1903.m */,
-				431C077520FE279600479559 /* NSURLConnection+JKSelfSigned.m */,
 				431C076B20FC8EB900479559 /* NSURL+JKQueryDictionary.m */,
 				431C075E20FC8D9000479559 /* NSString+JKXMLDictionary.h */,
 				435D4C4E20EDEADF00C8DC85 /* NSDate+JKUtilities.m */,
@@ -1004,7 +1003,6 @@
 				43291F4F20E520E0000C3C15 /* UITableView+FDKeyedHeightCache.h */,
 				43291F4E20E520E0000C3C15 /* UITableView+FDKeyedHeightCache.m */,
 				43291F4B20E520CA000C3C15 /* UITableView+FDTemplateLayoutCellDebug.h */,
-				4325536220D8B4CD00FC0258 /* CATransactionDemoViewController.m */,
 				434DDB5B20C9332700191FC1 /* CATransaction+JKAnimateWithDuration.m */,
 				434DDB5620C932DB00191FC1 /* CAMediaTimingFunction+JKAdditionalEquations.h */,
 				43205DDB20DD267D00AD6952 /* UITextView+JKSelect.h */,
@@ -1014,9 +1012,9 @@
 				431C075F20FC8D9000479559 /* NSString+JKXMLDictionary.m */,
 				934AE45F20FC6B8900B60AD4 /* UIImage+Avatar.h */,
 				934AE46020FC6BB400B60AD4 /* UIImage+Avatar.m */,
+				437921F420ECC4E100B2EC88 /* NSData+JKzlib.h */,
 				4318BC7A21BB962E008FD7F3 /* UIScrollView+EmptyDataSet.h */,
 				9314D1E520C53AE900BB2429 /* SLHelper.h */,
-				93398ECE20D93370004376FB /* SLHelper.m */,
 			);
 			path = JKCategories;
 			sourceTree = "<group>";
@@ -1309,6 +1307,8 @@
 				43143921209497E80059D373 /* .gitignore */,
 				43143923209497E80059D373 /* Cartfile */,
 				4314391F209497E70059D373 /* README.md */,
+				431C077520FE279600479559 /* NSURLConnection+JKSelfSigned.m */,
+				4325536220D8B4CD00FC0258 /* CATransactionDemoViewController.m */,
 				43143920209497E70059D373 /* TODO.md */,
 				43143922209497E80059D373 /* UNLICENSE */,
 				431438AC209432E30059D373 /* Base.lproj */,
