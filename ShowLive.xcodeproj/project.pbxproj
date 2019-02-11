@@ -444,7 +444,7 @@
 		43993EC020E23F520017F1C3 /* UITableViewCell+JKNIB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+JKNIB.m"; sourceTree = "<group>"; };
 		43993EC120E23F530017F1C3 /* UITableViewCell+JKNIB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITableViewCell+JKNIB.h"; path = "Untils/Exten/UITableViewCell+JKNIB.h"; sourceTree = "<group>"; };
 		43993EC320E23F790017F1C3 /* UITableView+FDTemplateLayoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDTemplateLayoutCell.m"; sourceTree = "<group>"; };
-		43993EC420E23F790017F1C3 /* UITableView+FDTemplateLayoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITableView+FDTemplateLayoutCell.h"; path = "Untils/Exten/SLHelper/UITableView+FDTemplateLayoutCell.h"; sourceTree = "<group>"; };
+		43993EC420E23F790017F1C3 /* UITableView+FDTemplateLayoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITableView+FDTemplateLayoutCell.h"; path = "SLHelper/UITableView+FDTemplateLayoutCell.h"; sourceTree = "<group>"; };
 		43D24A8D2094A43600C59AC8 /* AppDelegate+ShowRegisterService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+ShowRegisterService.m"; sourceTree = "<group>"; };
 		43D24A8E2094A43600C59AC8 /* ShowAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowAppDelegate.h; sourceTree = "<group>"; };
 		43D24A8F2094A43600C59AC8 /* ShowAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowAppDelegate.m; sourceTree = "<group>"; };
@@ -1263,7 +1263,6 @@
 				435D4C4520EDEA8A00C8DC85 /* NSDate+JKInternetDateTime.m */,
 				435D4C4220EDEA6D00C8DC85 /* NSDate+JKFormatter.m */,
 				435D4C4020EDEA4B00C8DC85 /* NSDate+JKExtension.h */,
-				43993EC420E23F790017F1C3 /* UITableView+FDTemplateLayoutCell.h */,
 				43993EC320E23F790017F1C3 /* UITableView+FDTemplateLayoutCell.m */,
 				43993EBE20E23EF90017F1C3 /* UITextField+JKBlocks.m */,
 				4325535920CFE8B100FC0258 /* UIWebVIew+JKSwipeGesture.h */,
@@ -1442,6 +1441,7 @@
 		934AE45E20FC6B7B00B60AD4 /* Exten */ = {
 			isa = PBXGroup;
 			children = (
+				43993EC420E23F790017F1C3 /* UITableView+FDTemplateLayoutCell.h */,
 				9314D1E420C53ACE00BB2429 /* SLHelper */,
 			);
 			path = Exten;
