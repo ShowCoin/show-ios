@@ -298,7 +298,7 @@
 		4325537020D8B57B00FC0258 /* MKMapView+JKZoomLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKMapView+JKZoomLevel.h"; sourceTree = "<group>"; };
 		4325537120D8B57B00FC0258 /* MKMapView+JKZoomLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKMapView+JKZoomLevel.m"; sourceTree = "<group>"; };
 		4325537320D8B58F00FC0258 /* NSArray+JKBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+JKBlock.m"; path = "Untils/Exten/NSArray+JKBlock.m"; sourceTree = "<group>"; };
-		4325537420D8B59000FC0258 /* NSArray+JKBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+JKBlock.h"; path = "Untils/JKCategories/NSArray+JKBlock.h"; sourceTree = "<group>"; };
+		4325537420D8B59000FC0258 /* NSArray+JKBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+JKBlock.h"; path = "../JKCategories/NSArray+JKBlock.h"; sourceTree = "<group>"; };
 		43291F3C20E51F50000C3C15 /* UITextFieldDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITextFieldDemoViewController.h; sourceTree = "<group>"; };
 		43291F3D20E51F51000C3C15 /* UITextFieldDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITextFieldDemoViewController.m; sourceTree = "<group>"; };
 		43291F3F20E51F6E000C3C15 /* UITableViewDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewDemoViewController.m; sourceTree = "<group>"; };
@@ -1047,7 +1047,6 @@
 				431CB4CA20F499060043B0AC /* NSObject+JKKVOBlocks.h */,
 				437B0A6820F360E900E93844 /* NSObject+JKBlockTimer.m */,
 				437B0A6420F360BA00E93844 /* NSObject+JKAutoCoding.m */,
-				4325537420D8B59000FC0258 /* NSArray+JKBlock.h */,
 				4325537320D8B58F00FC0258 /* NSArray+JKBlock.m */,
 				43205DD620DD264B00AD6952 /* UITextViewDemoViewController.m */,
 				9306819221BE65D50021F976 /* UIButton+Addtional.m */,
@@ -1055,7 +1054,6 @@
 				9311B41921BF8A16009C9A1D /* UIColor+HexString.m */,
 				4325536820D8B51000FC0258 /* CLLocationManager+Blocks.h */,
 				435D4C7F20F091BC00C8DC85 /* NSIndexPath+JKOffset.h */,
-				435D4C6C20EF406600C8DC85 /* NSDictionary+JKXML.h */,
 				4374EB0C20F62F5600BB947F /* NSString+JKContains.h */,
 				431C078120FE28BF00479559 /* NSURLSession+JKSynchronousTask.m */,
 				43D87B2720EB6D9900E991D6 /* UIScrollView+EmptyDataSet.m */,
@@ -1082,7 +1080,6 @@
 				437921E220ECC43F00B2EC88 /* NSData+JKAPNSToken.h */,
 				43993EB820E23EAC0017F1C3 /* UITextField+JKHistory.h */,
 				434DDB5520C932DB00191FC1 /* CAMediaTimingFunction+JKAdditionalEquations.m */,
-				934CBCD72118217800608F2F /* NSDate+Additions.h */,
 				4325537020D8B57B00FC0258 /* MKMapView+JKZoomLevel.h */,
 				4325537120D8B57B00FC0258 /* MKMapView+JKZoomLevel.m */,
 				4325536B20D8B53300FC0258 /* MKMapView+JKBetterMaps.m */,
@@ -1252,6 +1249,7 @@
 				437B0A6520F360BB00E93844 /* NSObject+JKAutoCoding.h */,
 				437B0A6120F3608A00E93844 /* NSObject+JKAssociatedObject.h */,
 				437B0A6220F3608A00E93844 /* NSObject+JKAssociatedObject.m */,
+				4325537420D8B59000FC0258 /* NSArray+JKBlock.h */,
 				4325535F20D8B49F00FC0258 /* CAShapeLayerDemoViewController.h */,
 				43205DD820DD266500AD6952 /* UIView+FDCollapsibleConstraints.h */,
 				43205DD920DD266600AD6952 /* UIView+FDCollapsibleConstraints.m */,
@@ -1276,6 +1274,7 @@
 				431F64EB20F8F2610087DB8E /* NSString+JKStringPages.m */,
 				435D4C7320EF42FB00C8DC85 /* NSFetchRequest+JKExtensions.h */,
 				435D4C7220EF42FB00C8DC85 /* NSFetchRequest+JKExtensions.m */,
+				435D4C6C20EF406600C8DC85 /* NSDictionary+JKXML.h */,
 				43D87B2B20EB6DCE00E991D6 /* UIScrollView+APParallaxHeader.m */,
 				437921F420ECC4E100B2EC88 /* NSData+JKzlib.h */,
 				43D87B2820EB6D9900E991D6 /* UIScrollView+EmptyDataSet.h */,
@@ -1409,6 +1408,7 @@
 				4325535920CFE8B100FC0258 /* UIWebVIew+JKSwipeGesture.h */,
 				4325535820CFE8B100FC0258 /* UIWebVIew+JKSwipeGesture.m */,
 				4325536120D8B4CD00FC0258 /* CATransactionDemoViewController.h */,
+				934CBCD72118217800608F2F /* NSDate+Additions.h */,
 				934CBCD8211821A500608F2F /* NSDate+Additions.m */,
 				934A1030211ED7B50021770D /* NSString+Validation.h */,
 				934A1031211ED7BC0021770D /* NSString+Validation.m */,
