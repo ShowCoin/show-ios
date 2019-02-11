@@ -305,7 +305,7 @@
 		43291F4020E51F6F000C3C15 /* UITableViewDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewDemoViewController.h; sourceTree = "<group>"; };
 		43291F4520E51FED000C3C15 /* UITableViewCell+JKDelaysContentTouches.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableViewCell+JKDelaysContentTouches.m"; path = "Untils/Exten/UITableViewCell+JKDelaysContentTouches.m"; sourceTree = "<group>"; };
 		43291F4620E51FED000C3C15 /* UITableViewCell+JKDelaysContentTouches.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITableViewCell+JKDelaysContentTouches.h"; path = "Untils/Exten/UITableViewCell+JKDelaysContentTouches.h"; sourceTree = "<group>"; };
-		43291F4820E52039000C3C15 /* UITableView+JKiOS7Style.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITableView+JKiOS7Style.h"; path = "Untils/JKCategories/UITableView+JKiOS7Style.h"; sourceTree = "<group>"; };
+		43291F4820E52039000C3C15 /* UITableView+JKiOS7Style.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITableView+JKiOS7Style.h"; path = "../JKCategories/UITableView+JKiOS7Style.h"; sourceTree = "<group>"; };
 		43291F4920E5203A000C3C15 /* UITableView+JKiOS7Style.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+JKiOS7Style.m"; sourceTree = "<group>"; };
 		43291F4B20E520CA000C3C15 /* UITableView+FDTemplateLayoutCellDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDTemplateLayoutCellDebug.h"; sourceTree = "<group>"; };
 		43291F4C20E520CA000C3C15 /* UITableView+FDTemplateLayoutCellDebug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDTemplateLayoutCellDebug.m"; sourceTree = "<group>"; };
@@ -1064,7 +1064,6 @@
 				431CB4CA20F499060043B0AC /* NSObject+JKKVOBlocks.h */,
 				437B0A6720F360E900E93844 /* NSObject+JKBlockTimer.h */,
 				437B0A6820F360E900E93844 /* NSObject+JKBlockTimer.m */,
-				437B0A6520F360BB00E93844 /* NSObject+JKAutoCoding.h */,
 				437B0A6420F360BA00E93844 /* NSObject+JKAutoCoding.m */,
 				437B0A6120F3608A00E93844 /* NSObject+JKAssociatedObject.h */,
 				4325537420D8B59000FC0258 /* NSArray+JKBlock.h */,
@@ -1109,7 +1108,6 @@
 				431C077620FE279700479559 /* NSURLConnection+JKSelfSigned.h */,
 				431F64CA20F794E70087DB8E /* UINavigationController+JKTransitions.m */,
 				435D4C5220EDEB1900C8DC85 /* NSDate+JKZeroDate.m */,
-				9311B41B21C104EA009C9A1D /* UIControl+BlocksKit.h */,
 				9311B41E21C107C4009C9A1D /* UIGestureRecognizer+BlocksKit.h */,
 				9311B41F21C107E3009C9A1D /* UIGestureRecognizer+BlocksKit.m */,
 				93EF35D421C292950088C2E4 /* UIImage+Additional.m */,
@@ -1135,7 +1133,6 @@
 				43291F4520E51FED000C3C15 /* UITableViewCell+JKDelaysContentTouches.m */,
 				43205DE120DD26C400AD6952 /* UITextView+JKPinchZoom.h */,
 				43291F4020E51F6F000C3C15 /* UITableViewDemoViewController.h */,
-				43291F4820E52039000C3C15 /* UITableView+JKiOS7Style.h */,
 				43291F4920E5203A000C3C15 /* UITableView+JKiOS7Style.m */,
 				43205DE220DD26C400AD6952 /* UITextView+JKPinchZoom.m */,
 				43993EC020E23F520017F1C3 /* UITableViewCell+JKNIB.m */,
@@ -1361,6 +1358,7 @@
 				431CB4D920F499D00043B0AC /* NSRunLoop+JKPerformBlock.h */,
 				431CB4CD20F4991D0043B0AC /* NSObject+JKReflection.h */,
 				431CB4CB20F499060043B0AC /* NSObject+JKKVOBlocks.m */,
+				437B0A6520F360BB00E93844 /* NSObject+JKAutoCoding.h */,
 				437B0A6220F3608A00E93844 /* NSObject+JKAssociatedObject.m */,
 				4325535F20D8B49F00FC0258 /* CAShapeLayerDemoViewController.h */,
 				43205DD520DD264B00AD6952 /* UITextViewDemoViewController.h */,
@@ -1383,6 +1381,7 @@
 				435D4C6D20EF406600C8DC85 /* NSDictionary+JKXML.m */,
 				431F64B720F7945C0087DB8E /* UIPopoverController+iPhone.m */,
 				435D4C5120EDEB1800C8DC85 /* NSDate+JKZeroDate.h */,
+				9311B41B21C104EA009C9A1D /* UIControl+BlocksKit.h */,
 				9311B41C21C1051C009C9A1D /* UIControl+BlocksKit.m */,
 				93075E1321D3AE90009A1D28 /* UIImage+Additional.h */,
 				43291F4C20E520CA000C3C15 /* UITableView+FDTemplateLayoutCellDebug.m */,
@@ -1393,6 +1392,7 @@
 				43D87B2120EB6D6C00E991D6 /* UIScrollView+JKPages.m */,
 				437921E820ECC47B00B2EC88 /* NSData+JKEncrypt.h */,
 				43291F3F20E51F6E000C3C15 /* UITableViewDemoViewController.m */,
+				43291F4820E52039000C3C15 /* UITableView+JKiOS7Style.h */,
 				43205DDF20DD269D00AD6952 /* UITextView+JKPlaceHolder.h */,
 				43205DDE20DD269D00AD6952 /* UITextView+JKPlaceHolder.m */,
 				435D4C9320F092D600C8DC85 /* NSMutableURLRequest+JKUpload.h */,
