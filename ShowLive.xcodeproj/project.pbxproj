@@ -358,7 +358,7 @@
 		435D4C7320EF42FB00C8DC85 /* NSFetchRequest+JKExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSFetchRequest+JKExtensions.h"; path = "SLHelper/NSFetchRequest+JKExtensions.h"; sourceTree = "<group>"; };
 		435D4C7820F0916900C8DC85 /* NSFileManager+JKPaths.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+JKPaths.m"; sourceTree = "<group>"; };
 		435D4C7920F0916900C8DC85 /* NSFileManager+JKPaths.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+JKPaths.h"; sourceTree = "<group>"; };
-		435D4C7B20F0919600C8DC85 /* NSHTTPCookieStorage+JKFreezeDry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSHTTPCookieStorage+JKFreezeDry.h"; path = "Untils/Exten/NSHTTPCookieStorage+JKFreezeDry.h"; sourceTree = "<group>"; };
+		435D4C7B20F0919600C8DC85 /* NSHTTPCookieStorage+JKFreezeDry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSHTTPCookieStorage+JKFreezeDry.h"; sourceTree = "<group>"; };
 		435D4C7C20F0919600C8DC85 /* NSHTTPCookieStorage+JKFreezeDry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSHTTPCookieStorage+JKFreezeDry.m"; sourceTree = "<group>"; };
 		435D4C7E20F091BB00C8DC85 /* NSIndexPath+JKOffset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSIndexPath+JKOffset.m"; sourceTree = "<group>"; };
 		435D4C7F20F091BC00C8DC85 /* NSIndexPath+JKOffset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSIndexPath+JKOffset.h"; sourceTree = "<group>"; };
@@ -600,7 +600,7 @@
 		9309C73E21BB91D600AAFE87 /* NSString+Json.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Json.m"; sourceTree = "<group>"; };
 		9309C74021BB922200AAFE87 /* UIImage+Effects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Effects.h"; sourceTree = "<group>"; };
 		9309C74121BB924700AAFE87 /* UIImage+Effects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Effects.m"; sourceTree = "<group>"; };
-		9311B41521BF8985009C9A1D /* UIButton+ImageTitleSpacing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIButton+ImageTitleSpacing.h"; path = "Untils/Exten/SLHelper/UIButton+ImageTitleSpacing.h"; sourceTree = "<group>"; };
+		9311B41521BF8985009C9A1D /* UIButton+ImageTitleSpacing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIButton+ImageTitleSpacing.h"; path = "SLHelper/UIButton+ImageTitleSpacing.h"; sourceTree = "<group>"; };
 		9311B41621BF89A6009C9A1D /* UIButton+ImageTitleSpacing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ImageTitleSpacing.m"; sourceTree = "<group>"; };
 		9311B41821BF89EF009C9A1D /* UIColor+HexString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HexString.h"; sourceTree = "<group>"; };
 		9311B41921BF8A16009C9A1D /* UIColor+HexString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HexString.m"; sourceTree = "<group>"; };
@@ -1079,7 +1079,6 @@
 				43205DD620DD264B00AD6952 /* UITextViewDemoViewController.m */,
 				9306819121BE65BD0021F976 /* UIButton+Addtional.h */,
 				9306819221BE65D50021F976 /* UIButton+Addtional.m */,
-				9311B41521BF8985009C9A1D /* UIButton+ImageTitleSpacing.h */,
 				9311B41621BF89A6009C9A1D /* UIButton+ImageTitleSpacing.m */,
 				9311B41821BF89EF009C9A1D /* UIColor+HexString.h */,
 				9311B41921BF8A16009C9A1D /* UIColor+HexString.m */,
@@ -1087,7 +1086,6 @@
 				4325536720D8B50F00FC0258 /* CLLocationManager+Blocks.m */,
 				435D4C7F20F091BC00C8DC85 /* NSIndexPath+JKOffset.h */,
 				435D4C7E20F091BB00C8DC85 /* NSIndexPath+JKOffset.m */,
-				435D4C7B20F0919600C8DC85 /* NSHTTPCookieStorage+JKFreezeDry.h */,
 				435D4C7C20F0919600C8DC85 /* NSHTTPCookieStorage+JKFreezeDry.m */,
 				435D4C6620EF3FA500C8DC85 /* NSDictionary+JKMerge.h */,
 				435D4C6920EF3FF200C8DC85 /* NSDictionary+JKSafeAccess.h */,
@@ -1401,6 +1399,8 @@
 				431CB4D920F499D00043B0AC /* NSRunLoop+JKPerformBlock.h */,
 				431CB4CD20F4991D0043B0AC /* NSObject+JKReflection.h */,
 				431CB4CB20F499060043B0AC /* NSObject+JKKVOBlocks.m */,
+				9311B41521BF8985009C9A1D /* UIButton+ImageTitleSpacing.h */,
+				435D4C7B20F0919600C8DC85 /* NSHTTPCookieStorage+JKFreezeDry.h */,
 				435D4C6720EF3FA500C8DC85 /* NSDictionary+JKMerge.m */,
 				435D4C4B20EDEAC500C8DC85 /* NSDate+JKReporting.h */,
 				435D4C4C20EDEAC500C8DC85 /* NSDate+JKReporting.m */,
