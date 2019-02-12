@@ -682,21 +682,6 @@
 }
 
 //资金密码验证alert
-- (void)sureActionWithAlertPasswordView:(SLPassWordAlert *)alertPasswordView password:(NSString *)password {
-    self.moneyKey = password;
-    [alertPasswordView removeFromSuperview];
-    [self withdrawActionWithMoneyKey:self.moneyKey googleKey:self.googleKey];
-//    self.passwordLabel.text = [NSString stringWithFormat:@"输入的密码为:%@", password];
-}
-//资金密码验证alert
-- (void)sureActionWithAlertGooglePasswordView:(SLGooglePassWordAlert *)alertPasswordView password:(NSString *)password {
-    self.googleKey = password;
-
-    [alertPasswordView removeFromSuperview];
-    [self withdrawActionWithMoneyKey:self.moneyKey googleKey:self.googleKey];
-
-    //    self.passwordLabel.text = [NSString stringWithFormat:@"输入的密码为:%@", password];
-}
 
 /*
 #pragma mark - Navigation
