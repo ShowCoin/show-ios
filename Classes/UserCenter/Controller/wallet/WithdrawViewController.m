@@ -79,76 +79,7 @@
     }
 }
 
-#pragma mark - Views
--(void)creatTopView
-{
-    _topView =[[UIView alloc] init];
-    _topView.backgroundColor = kBlackWith1c;
-    [self.view addSubview:_topView];
-    [_topView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.navigationBarView.mas_bottom);
-        make.left.equalTo(self.view);
-        make.size.mas_equalTo(CGSizeMake(kMainScreenWidth, 242*Proportion375));
-    }];
-//    UIView * topLine = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kMainScreenWidth, 1)];
-//    topLine.backgroundColor = kSeparationColor;
-//    [_topView addSubview:topLine];
-    
-    UILabel *coinTypeL = [[UILabel alloc]initWithFrame:CGRectMake(16*Proportion375, 0, 50, 44*Proportion375)];
-    coinTypeL.text = STRING_WITHDRAW_COINTYPE_44;
-    coinTypeL.font = [UIFont systemFontOfSize:16];
-    coinTypeL.textColor = kTextWith8b;
-    [_topView addSubview:coinTypeL];
-    
-    UILabel *detailTypeL = [[UILabel alloc]initWithFrame:CGRectMake(145*Proportion375, 0, 50, 44*Proportion375)];
-    detailTypeL.textAlignment = NSTextAlignmentLeft;
-    detailTypeL.text =self.walletModel.typeCName;
-    detailTypeL.font = [UIFont systemFontOfSize:15];
-    detailTypeL.textColor = kTextWithF7;
-    [_topView addSubview:detailTypeL];
-    
-    UIView * whiteBG1 = [[UIView alloc] initWithFrame:CGRectMake(0, 44 *Proportion375, kMainScreenWidth, 60*Proportion375)];
-    whiteBG1.backgroundColor = kBlackWith1c;
-    [_topView addSubview:whiteBG1];
-    UITapGestureRecognizer * whiteTap1 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(whiteTopClick)];
-    [whiteBG1 addGestureRecognizer:whiteTap1];
-    
-    UILabel *AccountL = [[UILabel alloc]initWithFrame:CGRectMake(16*Proportion375, 0, 150, 60*Proportion375)];
-    AccountL.textAlignment = NSTextAlignmentLeft;
-    AccountL.text = STRING_WITHDRAW_ADRESS_46;
-    AccountL.font = [UIFont systemFontOfSize:16];
-    AccountL.textColor = kTextWith8b;
-    [whiteBG1 addSubview:AccountL];
-    
-    _addressNameL = [[UILabel alloc]initWithFrame:CGRectMake(detailTypeL.left, 15*Proportion375, 95, 14*Proportion375)];
-    _addressNameL.textAlignment = NSTextAlignmentLeft;
-//    addressNameL.text = @"Binantt Jia";
-    _addressNameL.font = [UIFont systemFontOfSize:14*Proportion375];
-    _addressNameL.textColor = kTextWithF7;
-    [whiteBG1 addSubview:_addressNameL];
-    
-    _addressStrL = [[UILabel alloc]initWithFrame:CGRectMake(detailTypeL.left, 0, 95, 11*Proportion375)];
-    _addressStrL.bottom = 60*Proportion375 - 15*Proportion375;
-    _addressStrL.textAlignment = NSTextAlignmentLeft;
-//    addressStrL.text = @"0xjsksjskskakjs.....................";
-    _addressStrL.font = [UIFont systemFontOfSize:11*Proportion375];
-    _addressStrL.textColor = kTextWithF7;
-    [whiteBG1 addSubview:_addressStrL];
-    
-    UIButton * codeBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 34*Proportion375, 34*Proportion375)];
-    codeBtn.right = kMainScreenWidth - 38*Proportion375;
-    codeBtn.centerY = 30*Proportion375;
-    [codeBtn setBackgroundImage:[UIImage imageNamed:@"account_WD_scan"] forState:UIControlStateNormal];
-    [codeBtn addTarget:self action:@selector(scanAction:) forControlEvents:UIControlEventTouchUpInside];
-    codeBtn.hidden = YES;
-    [whiteBG1 addSubview:codeBtn];
-    
-    UIImageView * arrowImg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"userhome_arrow_right"]];
-    arrowImg.centerY = codeBtn.centerY;
-    arrowImg.right = kMainScreenWidth - 14*Proportion375;
-    [whiteBG1 addSubview:arrowImg];
-    
-    
+#pragma mark - Views    
     
     UIView * whiteBG2 = [[UIView alloc] initWithFrame:CGRectMake(0, whiteBG1.bottom, kMainScreenWidth, 60*Proportion375)];
     whiteBG2.backgroundColor = kBlackWith1c;
@@ -203,7 +134,7 @@
 
     UILabel *withdrawAlltip = [[UILabel alloc]initWithFrame:CGRectMake(kMainScreenWidth - 126*Proportion375, 0, 110*Proportion375, 13)];
     withdrawAlltip.centerY  = openNumLab2.centerY;
-    withdraw 
+    withdraw
 
 -(void)sliderChangeAction:(UISlider *)slider{
     NSLog(@"------%f",slider.value);
