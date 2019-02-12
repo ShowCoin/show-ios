@@ -203,63 +203,7 @@
 
     UILabel *withdrawAlltip = [[UILabel alloc]initWithFrame:CGRectMake(kMainScreenWidth - 126*Proportion375, 0, 110*Proportion375, 13)];
     withdrawAlltip.centerY  = openNumLab2.centerY;
-    withdrawAlltip.right  = kMainScreenWidth - 15*Proportion375;
-    withdrawAlltip.textAlignment = NSTextAlignmentRight;
-    withdrawAlltip.text = STRING_WITHDRAW_ALL_49;
-    withdrawAlltip.font = [UIFont systemFontOfSize:12];
-    withdrawAlltip.textColor = kTextWithF7;
-    withdrawAlltip.userInteractionEnabled = YES;
-    [_topView addSubview:withdrawAlltip];
-    
-    UIButton * withdrawAllBtn = [[UIButton alloc] initWithFrame:CGRectMake(kMainScreenWidth - 126*Proportion375, 0, 110*Proportion375, 13)];
-    withdrawAllBtn.centerY  = openNumLab2.centerY;
-    withdrawAllBtn.backgroundColor = [UIColor clearColor];
-    //    [withdrawAllBtn setTitle:STRING_WITHDRAW_ALL_49 forState:UIControlStateNormal];
-    //    [withdrawAllBtn setTitleColor:HexRGBAlpha(0x664996, 1) forState:UIControlStateNormal];
-    //    withdrawAllBtn.titleLabel.textAlignment = NSTextAlignmentRight;
-    withdrawAllBtn.titleLabel.font = Font_Regular(12);
-    [[withdrawAllBtn rac_signalForControlEvents:UIControlEventTouchUpInside]subscribeNext:^(id x) {
-        self.numField.text = openNumLab2.text;
-    }];
-    [_topView addSubview:withdrawAllBtn];
-    
-}
-
--(void)creatbottomViews
-{
-    _slider = [[UISlider alloc] init];
-    _slider.minimumValue = 0;
-    _slider.maximumValue = 1;
-    _slider.value = 0.500;
-    [_slider setThumbImage:[UIImage imageNamed:@"wallet_slider_img"] forState:UIControlStateNormal];
-    _slider.maximumTrackTintColor = kGrayWith474747;
-    _slider.minimumTrackTintColor = kTextWithF7;
-    _slider.frame = (CGRect){35,242*Proportion375 + KNaviBarHeight + 30*Proportion375,kScreenWidth - 70,20};
-//    [_slider addTarget:self action:@selector(sliderChangeAction:) forControlEvents:UIControlEventTouchUpInside | UIControlEventValueChanged];
-    [_slider addTarget:self action:@selector(sliderChangeAction:) forControlEvents:UIControlEventTouchUpInside|UIControlEventTouchUpOutside|UIControlEventTouchCancel];
-    [self.view addSubview:_slider];
-    
-    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(actionTapGesture:)];
-    tapGesture.delegate = self;
-    [_slider addGestureRecognizer:tapGesture];
-    
-    UILabel * tag1 = [UILabel labelWithText:STRING_WITHDRAW_LOW_50 textColor:kTextWith8b font:Font_Regular(11) backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentLeft];
-    tag1.frame = CGRectMake(35, _slider.bottom+ 10*Proportion375, 50, 11*Proportion375);
-    [self.view addSubview:tag1];
-    
-    UILabel * tag2 = [UILabel labelWithText:STRING_WITHDRAW_NORMAL_51 textColor:kTextWith8b font:Font_Regular(11) backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentCenter];
-    tag2.frame = CGRectMake(35, _slider.bottom+ 10*Proportion375, 50, 11*Proportion375);
-    tag2.centerX = kMainScreenWidth/2;
-    [self.view addSubview:tag2];
-
-    UILabel * tag3 = [UILabel labelWithText:STRING_WITHDRAW_HEIGH_52 textColor:kTextWith8b font:Font_Regular(11) backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentRight];
-    tag3.frame = CGRectMake(35, _slider.bottom+ 10*Proportion375, 50, 11*Proportion375);
-    tag3.right = kMainScreenWidth - 35;
-    [self.view addSubview:tag3];
-
-    _numalertL = [UILabel labelWithText:@"" textColor:kTextWith8b font:Font_Regular(15*Proportion375) backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentCenter];
-    [self.view addSubview:_numalertL];
-
+    withdraw 
 
 -(void)sliderChangeAction:(UISlider *)slider{
     NSLog(@"------%f",slider.value);
