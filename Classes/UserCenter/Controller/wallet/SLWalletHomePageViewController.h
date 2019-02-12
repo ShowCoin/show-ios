@@ -14,6 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) ShowUserModel *user;
 @property (nonatomic, strong) UIView *naviView;
 
+
+
+
 @end
 
 NS_ASSUME_NONNULL_END
