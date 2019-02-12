@@ -385,54 +385,6 @@
 }
 #pragma mark - Action
 
--(void)getCoinInfo{
-    if (self.getCoinInfoAction ) {
-        [self.getCoinInfoAction cancel];
-        self.getCoinInfoAction = nil;
-    }
-    [HDHud showHUDInView:self.view title:@""];
-    
-    self.getCoinInfoAction = [SLGetCoinInfo action];
-    self.getCoinInfoAction.coin_type = self.walletModel.type;
-    @weakify(self)
-    self.getCoinInfoAction.finishedBlock = ^(NSDictionary * dic)
-            }
-        }else if (error.code == 11015){//需要google验证码
-             [self showGooglePasswordAlert];
-        }else{
-//            NSString *msg = error.userInfo[@"msg"];
-//            UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:@"提示"message:msg delegate:self cancelButtonTitle:@"确认" otherButtonTitles:nil];
-//            [errorAlert show];
-            NSString *message = error.userInfo[@"msg"];
-            NSString *title = @"提示";
-            UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
-            UIAlertAction *sure = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            }];
-            [alert addAction:sure];
-            [self presentViewController:alert animated:YES completion:nil];
-
-        }
-    };
-    [self.withdrawAction start];
-
-}
-
-- (void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    if (alertView.tag == 1001) {
-        
-        if (buttonIndex == 1) {
-            [self showPassWordAlert];
-        }
-    }else if (alertView.tag == 1002){
-        if (buttonIndex == 1) {
-            [self showGooglePasswordAlert];
-        }
-
-    }else{
-        
-    }
-}
 - (void)clickRightButton:(UIButton *)sender{
     [PageMgr pushToSLwithdrawListViewControllerFromViewcontroller:self wallCoinModel:self.walletModel];
 }
