@@ -530,35 +530,7 @@
                 NSString *message = @"5次机会已经用尽,请2小时候重试";
                 NSString *title = @"提示";
                 UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
-                UIAlertAction *sure = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-                }];
-                [alert addAction:sure];
-                [self presentViewController:alert animated:YES completion:nil];
-            }
-        }else if (error.code == 11007){
-            //google 错误
-            NSString *msg = error.userInfo[@"msg"];
-            if (msg.integerValue>0) {
-//                UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:@"提示"message:[NSString stringWithFormat:@"google验证码不正确，还有%@次机会，否则将冻结2小时",msg] delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"重试",nil];
-//                errorAlert.tag = 1002;
-//                [errorAlert show];
-                
-                NSString *message = [NSString stringWithFormat:@"google验证码不正确，还有%@次机会，否则将冻结2小时",msg];
-                NSString *title = @"提示";
-                UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
-                UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
-                [alert addAction:cancel];
-                UIAlertAction *sure = [UIAlertAction actionWithTitle:@"重试" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-                    [self showGooglePasswordAlert];
-                }];
-                [alert addAction:sure];
-                [self presentViewController:alert animated:YES completion:nil];
-            }else{
-//                UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:@"提示"message:@"5次机会已经用尽,请2小时候重试" delegate:self cancelButtonTitle:@"确认" otherButtonTitles:nil];
-//                [errorAlert show];
-                NSString *message = @"5次机会已经用尽,请2小时候重试";
-                NSString *title = @"提示";
-                UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+                UIAlertAction *sure = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) preferredStyle:UIAlertControllerStyleAlert];
                 UIAlertAction *sure = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                 }];
                 [alert addAction:sure];
