@@ -84,6 +84,7 @@
     char byteRate1 = *ptr++;
     char byteRate2 = *ptr++;
     char byteRate3 = *ptr++;
+    char byteRate4 = *ptr++;
     wavHeader[0x1C] = byteRate1;
     wavHeader[0x1D] = byteRate2;
     wavHeader[0x1E] = byteRate3;
