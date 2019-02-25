@@ -80,7 +80,6 @@
     
     // ByteRate
     const int byteRate = PCMFormat.mSampleRate * PCMFormat.mBitsPerChannel * PCMFormat.mChannelsPerFrame / 8;
-    ptr = (const char*)&byteRate;
     char byteRate1 = *ptr++;
     char byteRate2 = *ptr++;
     char byteRate3 = *ptr++;
