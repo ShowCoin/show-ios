@@ -246,7 +246,7 @@
 		434DDB5620C932DB00191FC1 /* CAMediaTimingFunction+JKAdditionalEquations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAMediaTimingFunction+JKAdditionalEquations.h"; sourceTree = "<group>"; };
 		434DDB5820C932FC00191FC1 /* CAShapeLayer+JKUIBezierPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAShapeLayer+JKUIBezierPath.h"; sourceTree = "<group>"; };
 		434DDB5B20C9332700191FC1 /* CATransaction+JKAnimateWithDuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CATransaction+JKAnimateWithDuration.m"; sourceTree = "<group>"; };
-		434DDB6120C9337900191FC1 /* UIWindow+JKHierarchy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+JKHierarchy.h"; sourceTree = "<group>"; };
+		434DDB6120C9337900191FC1 /* UIWindow+JKHierarchy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIWindow+JKHierarchy.h"; path = "../Exten/SLHelper/UIWindow+JKHierarchy.h"; sourceTree = "<group>"; };
 		434DDB6220C9337900191FC1 /* UIWindow+JKHierarchy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+JKHierarchy.m"; sourceTree = "<group>"; };
 		4355A4DA20FF11000020B7DE /* UINavigationController+JKStackManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+JKStackManager.m"; sourceTree = "<group>"; };
 		4355A4DB20FF11000020B7DE /* UINavigationController+JKStackManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+JKStackManager.h"; sourceTree = "<group>"; };
@@ -626,6 +626,7 @@
 			isa = PBXGroup;
 			children = (
 				4325535520CFE88C00FC0258 /* UIWebView+JKWebStorage.h */,
+				434DDB6120C9337900191FC1 /* UIWindow+JKHierarchy.h */,
 				43291F3D20E51F51000C3C15 /* UITextFieldDemoViewController.m */,
 				434DDB6220C9337900191FC1 /* UIWindow+JKHierarchy.m */,
 				436B1EA920DA2FF000419AC0 /* UIView+JKShake.h */,
@@ -642,6 +643,7 @@
 				435D4C4C20EDEAC500C8DC85 /* NSDate+JKReporting.m */,
 				934AE46320FC6C1000B60AD4 /* NSString+Additions.m */,
 				4374EB0E20F62F7C00BB947F /* NSString+JKDictionaryValue.h */,
+				431C077620FE279700479559 /* NSURLConnection+JKSelfSigned.h */,
 				435D4C6020EF3E2400C8DC85 /* NSDictionary+JKBlock.m */,
 				435D4C9720F0931000C8DC85 /* NSNotificationCenter+JKMainThread.h */,
 				436B1EA420DA2FB000419AC0 /* UIView+JKVisuals.h */,
@@ -1075,7 +1077,6 @@
 				4325535E20D8B49F00FC0258 /* CAShapeLayerDemoViewController.m */,
 				4325535B20D8B45600FC0258 /* CAAnimationDemoViewController.h */,
 				4325535620CFE88D00FC0258 /* UIWebView+JKWebStorage.m */,
-				434DDB6120C9337900191FC1 /* UIWindow+JKHierarchy.h */,
 				43291F3C20E51F50000C3C15 /* UITextFieldDemoViewController.h */,
 				437921E320ECC43F00B2EC88 /* NSData+JKAPNSToken.m */,
 				43291F4F20E520E0000C3C15 /* UITableView+FDKeyedHeightCache.h */,
@@ -1084,7 +1085,6 @@
 				437921EC20ECC49800B2EC88 /* NSData+JKGzip.h */,
 				934AE46020FC6BB400B60AD4 /* UIImage+Avatar.m */,
 				43205DE120DD26C400AD6952 /* UITextView+JKPinchZoom.h */,
-				431C077620FE279700479559 /* NSURLConnection+JKSelfSigned.h */,
 				431F64E120F8F2300087DB8E /* NSString+JKRemoveEmoji.m */,
 				431C077520FE279600479559 /* NSURLConnection+JKSelfSigned.m */,
 				437B0A4F20F35F9C00E93844 /* NSNotificationCenterDemoViewController.m */,
