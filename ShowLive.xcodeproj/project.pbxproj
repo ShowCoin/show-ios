@@ -294,7 +294,7 @@
 		436B1EB520DA306200419AC0 /* UIView+JKFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JKFrame.h"; sourceTree = "<group>"; };
 		4374EB0C20F62F5600BB947F /* NSString+JKContains.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JKContains.h"; sourceTree = "<group>"; };
 		4374EB0E20F62F7C00BB947F /* NSString+JKDictionaryValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JKDictionaryValue.h"; sourceTree = "<group>"; };
-		4374EB1120F62F9D00BB947F /* NSString+JKEmoji.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+JKEmoji.h"; path = "../NSString+JKEmoji.h"; sourceTree = "<group>"; };
+		4374EB1120F62F9D00BB947F /* NSString+JKEmoji.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JKEmoji.h"; sourceTree = "<group>"; };
 		4374EB1220F62F9D00BB947F /* NSString+JKEmoji.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JKEmoji.m"; sourceTree = "<group>"; };
 		437864562075FD1E00146B97 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		437921DC20ECC3DF00B2EC88 /* NSArray+JKSafeAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+JKSafeAccess.h"; sourceTree = "<group>"; };
@@ -1077,7 +1077,6 @@
 				435D4C6D20EF406600C8DC85 /* NSDictionary+JKXML.m */,
 				4355A4DB20FF11000020B7DE /* UINavigationController+JKStackManager.h */,
 				431F64B720F7945C0087DB8E /* UIPopoverController+iPhone.m */,
-				4374EB1120F62F9D00BB947F /* NSString+JKEmoji.h */,
 				9311B41B21C104EA009C9A1D /* UIControl+BlocksKit.h */,
 				9311B41C21C1051C009C9A1D /* UIControl+BlocksKit.m */,
 				9311B41E21C107C4009C9A1D /* UIGestureRecognizer+BlocksKit.h */,
@@ -1127,14 +1126,12 @@
 				437B0A5520F35FDE00E93844 /* NSNumber+JKRomanNumerals.h */,
 				437B0A5920F3600900E93844 /* NSNumber+JKRound.h */,
 				9309C74021BB922200AAFE87 /* UIImage+Effects.h */,
-				9309C74121BB924700AAFE87 /* UIImage+Effects.m */,
 				9343E47821C7D17C0001B9C1 /* UIView+Additional.h */,
 				9343E47921C7D1A80001B9C1 /* UIView+Additional.m */,
 				9343E47521C7D0140001B9C1 /* UILabel+Additional.h */,
 				437921E020ECC40900B2EC88 /* NSBundle+JKAppIcon.h */,
 				437921DF20ECC40900B2EC88 /* NSBundle+JKAppIcon.m */,
 				437921E220ECC43F00B2EC88 /* NSData+JKAPNSToken.h */,
-				43143920209497E70059D373 /* TODO.md */,
 			);
 			path = SLHelper;
 			sourceTree = "<group>";
@@ -1215,6 +1212,7 @@
 				435D4C3D20EDEA2800C8DC85 /* NSDate+JKCupertinoYankee.m */,
 				431CB4C520F498850043B0AC /* NSObject+JKEasyCopy.m */,
 				431F64AF20F794160087DB8E /* UIResponder+JKFirstResponder.h */,
+				4374EB1120F62F9D00BB947F /* NSString+JKEmoji.h */,
 				435D4C5220EDEB1900C8DC85 /* NSDate+JKZeroDate.m */,
 				437921DD20ECC3E000B2EC88 /* NSArray+JKSafeAccess.m */,
 				436B1EB320DA303F00419AC0 /* UIView+JKScreenshot.h */,
@@ -1226,10 +1224,12 @@
 				435D4C7820F0916900C8DC85 /* NSFileManager+JKPaths.m */,
 				435D4C8220F091E600C8DC85 /* NSInvocation+JKBb.h */,
 				431CB4E020F49A800043B0AC /* NSString+JKBase64.m */,
+				9309C74121BB924700AAFE87 /* UIImage+Effects.m */,
 				435D4C5D20EF3E0500C8DC85 /* NSDecimalNumber+JKExtensions.h */,
 				435D4C5E20EF3E0500C8DC85 /* NSDecimalNumber+JKExtensions.m */,
 				435D4C5820EDEB4B00C8DC85 /* NSDecimalNumber+JKCalculatingByString.m */,
 				43993EB120E23E390017F1C3 /* UITextView+JKInputLimit.h */,
+				43143920209497E70059D373 /* TODO.md */,
 				9314D1E420C53ACE00BB2429 /* SLHelper */,
 			);
 			path = Exten;
