@@ -199,7 +199,7 @@
 		431CB4C420F498850043B0AC /* NSObject+JKEasyCopy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JKEasyCopy.h"; sourceTree = "<group>"; };
 		431CB4C520F498850043B0AC /* NSObject+JKEasyCopy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JKEasyCopy.m"; sourceTree = "<group>"; };
 		431CB4C720F498EF0043B0AC /* NSObject+JKGCD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JKGCD.h"; sourceTree = "<group>"; };
-		431CB4CA20F499060043B0AC /* NSObject+JKKVOBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JKKVOBlocks.h"; sourceTree = "<group>"; };
+		431CB4CA20F499060043B0AC /* NSObject+JKKVOBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+JKKVOBlocks.h"; path = "SLHelper/NSObject+JKKVOBlocks.h"; sourceTree = "<group>"; };
 		431CB4CE20F4991D0043B0AC /* NSObject+JKReflection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JKReflection.m"; sourceTree = "<group>"; };
 		431CB4D020F499370043B0AC /* NSObject+JKRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JKRuntime.m"; sourceTree = "<group>"; };
 		431CB4DA20F499D00043B0AC /* NSRunLoop+JKPerformBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSRunLoop+JKPerformBlock.m"; sourceTree = "<group>"; };
@@ -1042,7 +1042,6 @@
 				437921E520ECC46400B2EC88 /* NSData+JKBase64.m */,
 				9306818F21BE65840021F976 /* NSString+MD5.m */,
 				431C078220FE28BF00479559 /* NSURLSession+JKSynchronousTask.h */,
-				431CB4CA20F499060043B0AC /* NSObject+JKKVOBlocks.h */,
 				9306819221BE65D50021F976 /* UIButton+Addtional.m */,
 				9311B41821BF89EF009C9A1D /* UIColor+HexString.h */,
 				4325536720D8B50F00FC0258 /* CLLocationManager+Blocks.m */,
@@ -1053,7 +1052,6 @@
 				435D4C6320EF3E3B00C8DC85 /* NSDictionary+JKJSONString.h */,
 				431C076A20FC8EB900479559 /* NSURL+JKQueryDictionary.h */,
 				437B0A5320F35FB600E93844 /* NSNumber+JKCGFloat.h */,
-				435D4C6D20EF406600C8DC85 /* NSDictionary+JKXML.m */,
 				431F64B720F7945C0087DB8E /* UIPopoverController+iPhone.m */,
 				93EF35D421C292950088C2E4 /* UIImage+Additional.m */,
 				435D4C5520EDEB3100C8DC85 /* NSDateFormatter+JKMake.m */,
@@ -1173,6 +1171,7 @@
 				431CB4C520F498850043B0AC /* NSObject+JKEasyCopy.m */,
 				431F64AF20F794160087DB8E /* UIResponder+JKFirstResponder.h */,
 				431CB4CE20F4991D0043B0AC /* NSObject+JKReflection.m */,
+				431CB4CA20F499060043B0AC /* NSObject+JKKVOBlocks.h */,
 				437B0A6520F360BB00E93844 /* NSObject+JKAutoCoding.h */,
 				437B0A6420F360BA00E93844 /* NSObject+JKAutoCoding.m */,
 				9306819121BE65BD0021F976 /* UIButton+Addtional.h */,
@@ -1184,6 +1183,7 @@
 				934AE46220FC6BE400B60AD4 /* NSString+Additions.h */,
 				9309C73B21BB919B00AAFE87 /* UIWindow+SLMotion.m */,
 				431CB4D020F499370043B0AC /* NSObject+JKRuntime.m */,
+				435D4C6D20EF406600C8DC85 /* NSDictionary+JKXML.m */,
 				4355A4DB20FF11000020B7DE /* UINavigationController+JKStackManager.h */,
 				4374EB1120F62F9D00BB947F /* NSString+JKEmoji.h */,
 				435D4C5220EDEB1900C8DC85 /* NSDate+JKZeroDate.m */,
