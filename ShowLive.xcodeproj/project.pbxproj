@@ -304,7 +304,7 @@
 		437921E220ECC43F00B2EC88 /* NSData+JKAPNSToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+JKAPNSToken.h"; sourceTree = "<group>"; };
 		437921E320ECC43F00B2EC88 /* NSData+JKAPNSToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+JKAPNSToken.m"; sourceTree = "<group>"; };
 		437921E520ECC46400B2EC88 /* NSData+JKBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+JKBase64.m"; sourceTree = "<group>"; };
-		437921E620ECC46400B2EC88 /* NSData+JKBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+JKBase64.h"; path = "../NSData+JKBase64.h"; sourceTree = "<group>"; };
+		437921E620ECC46400B2EC88 /* NSData+JKBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+JKBase64.h"; sourceTree = "<group>"; };
 		437921E820ECC47B00B2EC88 /* NSData+JKEncrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+JKEncrypt.h"; sourceTree = "<group>"; };
 		437921E920ECC47C00B2EC88 /* NSData+JKEncrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+JKEncrypt.m"; sourceTree = "<group>"; };
 		437921EB20ECC49800B2EC88 /* NSData+JKGzip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+JKGzip.m"; path = "../Exten/SLHelper/NSData+JKGzip.m"; sourceTree = "<group>"; };
@@ -1039,7 +1039,6 @@
 				4314391F209497E70059D373 /* README.md */,
 				437921F220ECC4C000B2EC88 /* NSData+JKPCM.h */,
 				437921F120ECC4C000B2EC88 /* NSData+JKPCM.m */,
-				437921E620ECC46400B2EC88 /* NSData+JKBase64.h */,
 				437921E520ECC46400B2EC88 /* NSData+JKBase64.m */,
 				9306818F21BE65840021F976 /* NSString+MD5.m */,
 				431C078220FE28BF00479559 /* NSURLSession+JKSynchronousTask.h */,
@@ -1067,7 +1066,6 @@
 				43D87B1B20EB6CE600E991D6 /* UISplitViewController+JKQuickAccess.h */,
 				43D87B3320EB6E6F00E991D6 /* UIResponderDemoViewController.m */,
 				437921E820ECC47B00B2EC88 /* NSData+JKEncrypt.h */,
-				43291F4020E51F6F000C3C15 /* UITableViewDemoViewController.h */,
 				43291F4920E5203A000C3C15 /* UITableView+JKiOS7Style.m */,
 				43205DDE20DD269D00AD6952 /* UITextView+JKPlaceHolder.m */,
 				43993EC020E23F520017F1C3 /* UITableViewCell+JKNIB.m */,
@@ -1087,7 +1085,6 @@
 				431CB4C720F498EF0043B0AC /* NSObject+JKGCD.h */,
 				437B0A5C20F3602E00E93844 /* NSObject+JKAddProperty.m */,
 				437B0A5520F35FDE00E93844 /* NSNumber+JKRomanNumerals.h */,
-				437B0A5920F3600900E93844 /* NSNumber+JKRound.h */,
 				9309C74021BB922200AAFE87 /* UIImage+Effects.h */,
 				9343E47921C7D1A80001B9C1 /* UIView+Additional.m */,
 				9343E47521C7D0140001B9C1 /* UILabel+Additional.h */,
@@ -1175,6 +1172,7 @@
 				93398ECE20D93370004376FB /* SLHelper.m */,
 				437921EE20ECC4B100B2EC88 /* NSData+JKHash.h */,
 				437921EF20ECC4B100B2EC88 /* NSData+JKHash.m */,
+				437921E620ECC46400B2EC88 /* NSData+JKBase64.h */,
 				435D4C3D20EDEA2800C8DC85 /* NSDate+JKCupertinoYankee.m */,
 				9306818821BE64740021F976 /* NSData+Image.h */,
 				9306818C21BE64C90021F976 /* NSData+ImageContentType.m */,
@@ -1210,6 +1208,7 @@
 				43D87B2220EB6D6C00E991D6 /* UIScrollView+JKPages.h */,
 				43D87B2120EB6D6C00E991D6 /* UIScrollView+JKPages.m */,
 				437921E920ECC47C00B2EC88 /* NSData+JKEncrypt.m */,
+				43291F4020E51F6F000C3C15 /* UITableViewDemoViewController.h */,
 				43291F3F20E51F6E000C3C15 /* UITableViewDemoViewController.m */,
 				43205DE220DD26C400AD6952 /* UITextView+JKPinchZoom.m */,
 				43205DDF20DD269D00AD6952 /* UITextView+JKPlaceHolder.h */,
@@ -1223,6 +1222,7 @@
 				435D4C4F20EDEADF00C8DC85 /* NSDate+JKUtilities.h */,
 				431CB4E020F49A800043B0AC /* NSString+JKBase64.m */,
 				437B0A5B20F3602E00E93844 /* NSObject+JKAddProperty.h */,
+				437B0A5920F3600900E93844 /* NSNumber+JKRound.h */,
 				9309C74121BB924700AAFE87 /* UIImage+Effects.m */,
 				9343E47821C7D17C0001B9C1 /* UIView+Additional.h */,
 				435D4C5D20EF3E0500C8DC85 /* NSDecimalNumber+JKExtensions.h */,
