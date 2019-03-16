@@ -186,7 +186,7 @@
 		43143923209497E80059D373 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Cartfile; path = SLHelper/Cartfile; sourceTree = "<group>"; };
 		4318BC7921BB962E008FD7F3 /* UIScrollView+EmptyDataSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+EmptyDataSet.m"; path = "SLHelper/UIScrollView+EmptyDataSet.m"; sourceTree = "<group>"; };
 		431BBB6320DBCB04006A3D50 /* UIView+JKConstraints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+JKConstraints.h"; path = "../../JKCategories/SLHelper/UIView+JKConstraints.h"; sourceTree = "<group>"; };
-		431C075E20FC8D9000479559 /* NSString+JKXMLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JKXMLDictionary.h"; sourceTree = "<group>"; };
+		431C075E20FC8D9000479559 /* NSString+JKXMLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+JKXMLDictionary.h"; path = "../NSString+JKXMLDictionary.h"; sourceTree = "<group>"; };
 		431C075F20FC8D9000479559 /* NSString+JKXMLDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JKXMLDictionary.m"; sourceTree = "<group>"; };
 		431C076A20FC8EB900479559 /* NSURL+JKQueryDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+JKQueryDictionary.h"; sourceTree = "<group>"; };
 		431C076B20FC8EB900479559 /* NSURL+JKQueryDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSURL+JKQueryDictionary.m"; path = "../NSURL+JKQueryDictionary.m"; sourceTree = "<group>"; };
@@ -1008,6 +1008,7 @@
 				431CB4DA20F499D00043B0AC /* NSRunLoop+JKPerformBlock.m */,
 				431C078820FE291700479559 /* NSUserDefaults+JKSafeAccess.m */,
 				431C076B20FC8EB900479559 /* NSURL+JKQueryDictionary.m */,
+				431C075E20FC8D9000479559 /* NSString+JKXMLDictionary.h */,
 				437B0A5020F35F9C00E93844 /* NSNotificationCenterDemoViewController.h */,
 				435D4C4F20EDEADF00C8DC85 /* NSDate+JKUtilities.h */,
 				431CB4DF20F49A800043B0AC /* NSString+JKBase64.h */,
@@ -1025,6 +1026,7 @@
 				4374EB1120F62F9D00BB947F /* NSString+JKEmoji.h */,
 				93EF35D421C292950088C2E4 /* UIImage+Additional.m */,
 				435D4C5520EDEB3100C8DC85 /* NSDateFormatter+JKMake.m */,
+				437921DD20ECC3E000B2EC88 /* NSArray+JKSafeAccess.m */,
 			);
 			path = SLHelper;
 			sourceTree = "<group>";
@@ -1199,7 +1201,6 @@
 				4355A4DA20FF11000020B7DE /* UINavigationController+JKStackManager.m */,
 				4325536420D8B4F100FC0258 /* CLLocation+JKCH1903.h */,
 				4325536520D8B4F100FC0258 /* CLLocation+JKCH1903.m */,
-				431C075E20FC8D9000479559 /* NSString+JKXMLDictionary.h */,
 				435D4C4E20EDEADF00C8DC85 /* NSDate+JKUtilities.m */,
 				437B0A5F20F3607100E93844 /* NSObject+JKAppInfo.h */,
 				4374EB1220F62F9D00BB947F /* NSString+JKEmoji.m */,
@@ -1228,7 +1229,6 @@
 				9311B41E21C107C4009C9A1D /* UIGestureRecognizer+BlocksKit.h */,
 				435D4C5420EDEB3100C8DC85 /* NSDateFormatter+JKMake.h */,
 				437921DC20ECC3DF00B2EC88 /* NSArray+JKSafeAccess.h */,
-				437921DD20ECC3E000B2EC88 /* NSArray+JKSafeAccess.m */,
 				43291F4C20E520CA000C3C15 /* UITableView+FDTemplateLayoutCellDebug.m */,
 				9314D1E420C53ACE00BB2429 /* SLHelper */,
 			);
