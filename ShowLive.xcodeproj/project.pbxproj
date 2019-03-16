@@ -216,7 +216,7 @@
 		43205DDE20DD269D00AD6952 /* UITextView+JKPlaceHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+JKPlaceHolder.m"; sourceTree = "<group>"; };
 		43205DDF20DD269D00AD6952 /* UITextView+JKPlaceHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+JKPlaceHolder.h"; sourceTree = "<group>"; };
 		43205DE120DD26C400AD6952 /* UITextView+JKPinchZoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+JKPinchZoom.h"; sourceTree = "<group>"; };
-		43205DE220DD26C400AD6952 /* UITextView+JKPinchZoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITextView+JKPinchZoom.m"; path = "../../UITextView+JKPinchZoom.m"; sourceTree = "<group>"; };
+		43205DE220DD26C400AD6952 /* UITextView+JKPinchZoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITextView+JKPinchZoom.m"; path = "../UITextView+JKPinchZoom.m"; sourceTree = "<group>"; };
 		4325535520CFE88C00FC0258 /* UIWebView+JKWebStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+JKWebStorage.h"; sourceTree = "<group>"; };
 		4325535620CFE88D00FC0258 /* UIWebView+JKWebStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+JKWebStorage.m"; sourceTree = "<group>"; };
 		4325535820CFE8B100FC0258 /* UIWebVIew+JKSwipeGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebVIew+JKSwipeGesture.m"; sourceTree = "<group>"; };
@@ -1043,7 +1043,6 @@
 		9314D1E420C53ACE00BB2429 /* SLHelper */ = {
 			isa = PBXGroup;
 			children = (
-				43205DE220DD26C400AD6952 /* UITextView+JKPinchZoom.m */,
 			);
 			path = SLHelper;
 			sourceTree = "<group>";
@@ -1165,6 +1164,7 @@
 				43291F4020E51F6F000C3C15 /* UITableViewDemoViewController.h */,
 				43291F3F20E51F6E000C3C15 /* UITableViewDemoViewController.m */,
 				43291F4920E5203A000C3C15 /* UITableView+JKiOS7Style.m */,
+				43205DE220DD26C400AD6952 /* UITextView+JKPinchZoom.m */,
 				43205DDF20DD269D00AD6952 /* UITextView+JKPlaceHolder.h */,
 				43205DDE20DD269D00AD6952 /* UITextView+JKPlaceHolder.m */,
 				43993EC020E23F520017F1C3 /* UITableViewCell+JKNIB.m */,
