@@ -188,7 +188,7 @@
 		43143920209497E70059D373 /* TODO.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = TODO.md; sourceTree = "<group>"; };
 		43143921209497E80059D373 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		43143922209497E80059D373 /* UNLICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UNLICENSE; sourceTree = "<group>"; };
-		43143923209497E80059D373 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		43143923209497E80059D373 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Cartfile; path = ../Exten/SLHelper/Cartfile; sourceTree = "<group>"; };
 		4318BC7921BB962E008FD7F3 /* UIScrollView+EmptyDataSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+EmptyDataSet.m"; sourceTree = "<group>"; };
 		431C075F20FC8D9000479559 /* NSString+JKXMLDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JKXMLDictionary.m"; sourceTree = "<group>"; };
 		431C077520FE279600479559 /* NSURLConnection+JKSelfSigned.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLConnection+JKSelfSigned.m"; sourceTree = "<group>"; };
@@ -640,6 +640,7 @@
 				43993EBE20E23EF90017F1C3 /* UITextField+JKBlocks.m */,
 				4325536D20D8B56400FC0258 /* MKMapView+JKMoveLogo.h */,
 				4325536E20D8B56400FC0258 /* MKMapView+JKMoveLogo.m */,
+				4325535E20D8B49F00FC0258 /* CAShapeLayerDemoViewController.m */,
 				4325535520CFE88C00FC0258 /* UIWebView+JKWebStorage.h */,
 				43291F3C20E51F50000C3C15 /* UITextFieldDemoViewController.h */,
 				437921E320ECC43F00B2EC88 /* NSData+JKAPNSToken.m */,
@@ -661,9 +662,11 @@
 				434DDB5B20C9332700191FC1 /* CATransaction+JKAnimateWithDuration.m */,
 				43D87B2720EB6D9900E991D6 /* UIScrollView+EmptyDataSet.m */,
 				4318BC7921BB962E008FD7F3 /* UIScrollView+EmptyDataSet.m */,
+				43143923209497E80059D373 /* Cartfile */,
 				437921F120ECC4C000B2EC88 /* NSData+JKPCM.m */,
 				437921EE20ECC4B100B2EC88 /* NSData+JKHash.h */,
 				437921EF20ECC4B100B2EC88 /* NSData+JKHash.m */,
+				9306818C21BE64C90021F976 /* NSData+ImageContentType.m */,
 				9306818F21BE65840021F976 /* NSString+MD5.m */,
 				431CB4C420F498850043B0AC /* NSObject+JKEasyCopy.h */,
 				431CB4C520F498850043B0AC /* NSObject+JKEasyCopy.m */,
@@ -1138,7 +1141,6 @@
 				934CBCD8211821A500608F2F /* NSDate+Additions.m */,
 				934A1031211ED7BC0021770D /* NSString+Validation.m */,
 				4325536B20D8B53300FC0258 /* MKMapView+JKBetterMaps.m */,
-				4325535E20D8B49F00FC0258 /* CAShapeLayerDemoViewController.m */,
 				4325535B20D8B45600FC0258 /* CAAnimationDemoViewController.h */,
 				4325535620CFE88D00FC0258 /* UIWebView+JKWebStorage.m */,
 				434DDB6220C9337900191FC1 /* UIWindow+JKHierarchy.m */,
@@ -1155,12 +1157,10 @@
 				43D87B2B20EB6DCE00E991D6 /* UIScrollView+APParallaxHeader.m */,
 				4374EB0C20F62F5600BB947F /* NSString+JKContains.h */,
 				43143921209497E80059D373 /* .gitignore */,
-				43143923209497E80059D373 /* Cartfile */,
 				4314391F209497E70059D373 /* README.md */,
 				437921F220ECC4C000B2EC88 /* NSData+JKPCM.h */,
 				93398ECE20D93370004376FB /* SLHelper.m */,
 				9306818821BE64740021F976 /* NSData+Image.h */,
-				9306818C21BE64C90021F976 /* NSData+ImageContentType.m */,
 				43205DD320DD263300AD6952 /* UIView+Debug.h */,
 				431CB4CE20F4991D0043B0AC /* NSObject+JKReflection.m */,
 				43143922209497E80059D373 /* UNLICENSE */,
