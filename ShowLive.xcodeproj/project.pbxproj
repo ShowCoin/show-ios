@@ -290,7 +290,7 @@
 		436B1EAC20DA300600419AC0 /* UIView+JKFind.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JKFind.m"; sourceTree = "<group>"; };
 		436B1EAD20DA300600419AC0 /* UIView+JKFind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+JKFind.h"; path = "../UIView+JKFind.h"; sourceTree = "<group>"; };
 		436B1EAF20DA302100419AC0 /* UIView+JKNib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+JKNib.h"; path = "../Exten/SLHelper/UIView+JKNib.h"; sourceTree = "<group>"; };
-		436B1EB320DA303F00419AC0 /* UIView+JKScreenshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+JKScreenshot.h"; path = "../UIView+JKScreenshot.h"; sourceTree = "<group>"; };
+		436B1EB320DA303F00419AC0 /* UIView+JKScreenshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+JKScreenshot.h"; path = "../../UIView+JKScreenshot.h"; sourceTree = "<group>"; };
 		436B1EB520DA306200419AC0 /* UIView+JKFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+JKFrame.h"; path = "../UIView+JKFrame.h"; sourceTree = "<group>"; };
 		4374EB0C20F62F5600BB947F /* NSString+JKContains.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JKContains.h"; sourceTree = "<group>"; };
 		4374EB0E20F62F7C00BB947F /* NSString+JKDictionaryValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JKDictionaryValue.h"; sourceTree = "<group>"; };
@@ -1059,6 +1059,7 @@
 				437921EF20ECC4B100B2EC88 /* NSData+JKHash.m */,
 				437921E520ECC46400B2EC88 /* NSData+JKBase64.m */,
 				435D4C3D20EDEA2800C8DC85 /* NSDate+JKCupertinoYankee.m */,
+				9306818821BE64740021F976 /* NSData+Image.h */,
 				9306818C21BE64C90021F976 /* NSData+ImageContentType.m */,
 				9306818F21BE65840021F976 /* NSString+MD5.m */,
 				43205DD320DD263300AD6952 /* UIView+Debug.h */,
@@ -1073,6 +1074,7 @@
 				43143922209497E80059D373 /* UNLICENSE */,
 				436B1EAD20DA300600419AC0 /* UIView+JKFind.h */,
 				436B1EB520DA306200419AC0 /* UIView+JKFrame.h */,
+				436B1EB320DA303F00419AC0 /* UIView+JKScreenshot.h */,
 				436B1EAC20DA300600419AC0 /* UIView+JKFind.m */,
 				434DDB5820C932FC00191FC1 /* CAShapeLayer+JKUIBezierPath.h */,
 				43D87B1B20EB6CE600E991D6 /* UISplitViewController+JKQuickAccess.h */,
@@ -1222,8 +1224,6 @@
 			isa = PBXGroup;
 			children = (
 				437921E620ECC46400B2EC88 /* NSData+JKBase64.h */,
-				9306818821BE64740021F976 /* NSData+Image.h */,
-				436B1EB320DA303F00419AC0 /* UIView+JKScreenshot.h */,
 				43205DDF20DD269D00AD6952 /* UITextView+JKPlaceHolder.h */,
 				435D4C9020F092BF00C8DC85 /* NSManagedObjectContext+JKObjectClear.h */,
 				435D4C7920F0916900C8DC85 /* NSFileManager+JKPaths.h */,
