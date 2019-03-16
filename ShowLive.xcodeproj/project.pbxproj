@@ -300,9 +300,9 @@
 		43291F4C20E520CA000C3C15 /* UITableView+FDTemplateLayoutCellDebug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDTemplateLayoutCellDebug.m"; sourceTree = "<group>"; };
 		43291F4F20E520E0000C3C15 /* UITableView+FDKeyedHeightCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDKeyedHeightCache.h"; sourceTree = "<group>"; };
 		434DDB4F20C9326800191FC1 /* CALayer+JKBorderColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+JKBorderColor.h"; sourceTree = "<group>"; };
-		434DDB5620C932DB00191FC1 /* CAMediaTimingFunction+JKAdditionalEquations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAMediaTimingFunction+JKAdditionalEquations.h"; sourceTree = "<group>"; };
+		434DDB5620C932DB00191FC1 /* CAMediaTimingFunction+JKAdditionalEquations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CAMediaTimingFunction+JKAdditionalEquations.h"; path = "../Exten/SLHelper/CAMediaTimingFunction+JKAdditionalEquations.h"; sourceTree = "<group>"; };
 		434DDB5820C932FC00191FC1 /* CAShapeLayer+JKUIBezierPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CAShapeLayer+JKUIBezierPath.h"; path = "../../CAShapeLayer+JKUIBezierPath.h"; sourceTree = "<group>"; };
-		434DDB5B20C9332700191FC1 /* CATransaction+JKAnimateWithDuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CATransaction+JKAnimateWithDuration.m"; sourceTree = "<group>"; };
+		434DDB5B20C9332700191FC1 /* CATransaction+JKAnimateWithDuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CATransaction+JKAnimateWithDuration.m"; path = "../Exten/SLHelper/CATransaction+JKAnimateWithDuration.m"; sourceTree = "<group>"; };
 		434DDB6220C9337900191FC1 /* UIWindow+JKHierarchy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+JKHierarchy.m"; sourceTree = "<group>"; };
 		4355A4DB20FF11000020B7DE /* UINavigationController+JKStackManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+JKStackManager.h"; sourceTree = "<group>"; };
 		435D4C3C20EDEA2800C8DC85 /* NSDate+JKCupertinoYankee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JKCupertinoYankee.h"; sourceTree = "<group>"; };
@@ -636,12 +636,15 @@
 				43993EBE20E23EF90017F1C3 /* UITextField+JKBlocks.m */,
 				4325535520CFE88C00FC0258 /* UIWebView+JKWebStorage.h */,
 				43291F3C20E51F50000C3C15 /* UITextFieldDemoViewController.h */,
+				434DDB5620C932DB00191FC1 /* CAMediaTimingFunction+JKAdditionalEquations.h */,
 				4374EB0E20F62F7C00BB947F /* NSString+JKDictionaryValue.h */,
 				43205DE120DD26C400AD6952 /* UITextView+JKPinchZoom.h */,
 				431F64E120F8F2300087DB8E /* NSString+JKRemoveEmoji.m */,
 				435D4C9720F0931000C8DC85 /* NSNotificationCenter+JKMainThread.h */,
 				4325536A20D8B53300FC0258 /* MKMapView+JKBetterMaps.h */,
+				434DDB5B20C9332700191FC1 /* CATransaction+JKAnimateWithDuration.m */,
 				4318BC7921BB962E008FD7F3 /* UIScrollView+EmptyDataSet.m */,
+				437921EE20ECC4B100B2EC88 /* NSData+JKHash.h */,
 				437B0A6420F360BA00E93844 /* NSObject+JKAutoCoding.m */,
 				436B1EAC20DA300600419AC0 /* UIView+JKFind.m */,
 				435D4C7920F0916900C8DC85 /* NSFileManager+JKPaths.h */,
@@ -1126,7 +1129,6 @@
 				43D87B3020EB6E0400E991D6 /* UIScreen+JKFrame.h */,
 				9309C73D21BB91B900AAFE87 /* NSString+Json.h */,
 				43291F4F20E520E0000C3C15 /* UITableView+FDKeyedHeightCache.h */,
-				434DDB5620C932DB00191FC1 /* CAMediaTimingFunction+JKAdditionalEquations.h */,
 				43205DDB20DD267D00AD6952 /* UITextView+JKSelect.h */,
 				43205DDC20DD267D00AD6952 /* UITextView+JKSelect.m */,
 				437921EC20ECC49800B2EC88 /* NSData+JKGzip.h */,
@@ -1142,7 +1144,6 @@
 				43993EC320E23F790017F1C3 /* UITableView+FDTemplateLayoutCell.m */,
 				436B1EA420DA2FB000419AC0 /* UIView+JKVisuals.h */,
 				43D87B3120EB6E0400E991D6 /* UIScreen+JKFrame.m */,
-				434DDB5B20C9332700191FC1 /* CATransaction+JKAnimateWithDuration.m */,
 				431C075F20FC8D9000479559 /* NSString+JKXMLDictionary.m */,
 				43D87B2B20EB6DCE00E991D6 /* UIScrollView+APParallaxHeader.m */,
 				4374EB0C20F62F5600BB947F /* NSString+JKContains.h */,
@@ -1153,7 +1154,6 @@
 				437921F220ECC4C000B2EC88 /* NSData+JKPCM.h */,
 				93398ECE20D93370004376FB /* SLHelper.m */,
 				437921F120ECC4C000B2EC88 /* NSData+JKPCM.m */,
-				437921EE20ECC4B100B2EC88 /* NSData+JKHash.h */,
 				437921EF20ECC4B100B2EC88 /* NSData+JKHash.m */,
 				9306818821BE64740021F976 /* NSData+Image.h */,
 				9306818C21BE64C90021F976 /* NSData+ImageContentType.m */,
