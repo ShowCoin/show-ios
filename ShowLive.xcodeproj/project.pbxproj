@@ -510,7 +510,7 @@
 		931DAAC520B571C5003A0B38 /* SLGiftAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLGiftAction.h; sourceTree = "<group>"; };
 		931DAAC820B5A7A6003A0B38 /* SLConvListSystemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLConvListSystemTableViewCell.h; sourceTree = "<group>"; };
 		93398ECE20D93370004376FB /* SLHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLHelper.m; sourceTree = "<group>"; };
-		9343E47521C7D0140001B9C1 /* UILabel+Additional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UILabel+Additional.h"; path = "../JKCategories/UILabel+Additional.h"; sourceTree = "<group>"; };
+		9343E47521C7D0140001B9C1 /* UILabel+Additional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Additional.h"; sourceTree = "<group>"; };
 		9343E47821C7D17C0001B9C1 /* UIView+Additional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Additional.h"; sourceTree = "<group>"; };
 		9343E47921C7D1A80001B9C1 /* UIView+Additional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Additional.m"; path = "../JKCategories/SLHelper/UIView+Additional.m"; sourceTree = "<group>"; };
 		934A1030211ED7B50021770D /* NSString+Validation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Validation.h"; path = "../../JKCategories/NSString+Validation.h"; sourceTree = "<group>"; };
@@ -970,6 +970,7 @@
 			isa = PBXGroup;
 			children = (
 				9343E47821C7D17C0001B9C1 /* UIView+Additional.h */,
+				9343E47521C7D0140001B9C1 /* UILabel+Additional.h */,
 				437921E020ECC40900B2EC88 /* NSBundle+JKAppIcon.h */,
 				435D4C5D20EF3E0500C8DC85 /* NSDecimalNumber+JKExtensions.h */,
 				435D4C5820EDEB4B00C8DC85 /* NSDecimalNumber+JKCalculatingByString.m */,
@@ -1077,6 +1078,7 @@
 				9309C74121BB924700AAFE87 /* UIImage+Effects.m */,
 				9306819121BE65BD0021F976 /* UIButton+Addtional.h */,
 				4325536820D8B51000FC0258 /* CLLocationManager+Blocks.h */,
+				4325536720D8B50F00FC0258 /* CLLocationManager+Blocks.m */,
 				435D4C7F20F091BC00C8DC85 /* NSIndexPath+JKOffset.h */,
 				435D4C7E20F091BB00C8DC85 /* NSIndexPath+JKOffset.m */,
 				435D4C7C20F0919600C8DC85 /* NSHTTPCookieStorage+JKFreezeDry.m */,
@@ -1171,7 +1173,6 @@
 			children = (
 				4325537020D8B57B00FC0258 /* MKMapView+JKZoomLevel.h */,
 				9343E47921C7D1A80001B9C1 /* UIView+Additional.m */,
-				9343E47521C7D0140001B9C1 /* UILabel+Additional.h */,
 				437921DF20ECC40900B2EC88 /* NSBundle+JKAppIcon.m */,
 				435D4C5E20EF3E0500C8DC85 /* NSDecimalNumber+JKExtensions.m */,
 				43993EB420E23E810017F1C3 /* UITextField+JKSelect.h */,
@@ -1224,7 +1225,6 @@
 				9311B41621BF89A6009C9A1D /* UIButton+ImageTitleSpacing.m */,
 				9311B41821BF89EF009C9A1D /* UIColor+HexString.h */,
 				9311B41921BF8A16009C9A1D /* UIColor+HexString.m */,
-				4325536720D8B50F00FC0258 /* CLLocationManager+Blocks.m */,
 				437B0A5320F35FB600E93844 /* NSNumber+JKCGFloat.h */,
 				431CB4D020F499370043B0AC /* NSObject+JKRuntime.m */,
 				4355A4DB20FF11000020B7DE /* UINavigationController+JKStackManager.h */,
