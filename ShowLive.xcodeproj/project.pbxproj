@@ -299,7 +299,7 @@
 		43291F3C20E51F50000C3C15 /* UITextFieldDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITextFieldDemoViewController.h; sourceTree = "<group>"; };
 		43291F4C20E520CA000C3C15 /* UITableView+FDTemplateLayoutCellDebug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDTemplateLayoutCellDebug.m"; sourceTree = "<group>"; };
 		43291F4F20E520E0000C3C15 /* UITableView+FDKeyedHeightCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDKeyedHeightCache.h"; sourceTree = "<group>"; };
-		434DDB4F20C9326800191FC1 /* CALayer+JKBorderColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+JKBorderColor.h"; sourceTree = "<group>"; };
+		434DDB4F20C9326800191FC1 /* CALayer+JKBorderColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CALayer+JKBorderColor.h"; path = "../Exten/SLHelper/CALayer+JKBorderColor.h"; sourceTree = "<group>"; };
 		434DDB5620C932DB00191FC1 /* CAMediaTimingFunction+JKAdditionalEquations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CAMediaTimingFunction+JKAdditionalEquations.h"; path = "../Exten/SLHelper/CAMediaTimingFunction+JKAdditionalEquations.h"; sourceTree = "<group>"; };
 		434DDB5820C932FC00191FC1 /* CAShapeLayer+JKUIBezierPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CAShapeLayer+JKUIBezierPath.h"; path = "../../CAShapeLayer+JKUIBezierPath.h"; sourceTree = "<group>"; };
 		434DDB5B20C9332700191FC1 /* CATransaction+JKAnimateWithDuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CATransaction+JKAnimateWithDuration.m"; path = "../Exten/SLHelper/CATransaction+JKAnimateWithDuration.m"; sourceTree = "<group>"; };
@@ -637,6 +637,7 @@
 				43993EB120E23E390017F1C3 /* UITextView+JKInputLimit.h */,
 				43143920209497E70059D373 /* TODO.md */,
 				43993EBD20E23EF90017F1C3 /* UITextField+JKBlocks.h */,
+				434DDB4F20C9326800191FC1 /* CALayer+JKBorderColor.h */,
 				43993EBE20E23EF90017F1C3 /* UITextField+JKBlocks.m */,
 				4325536D20D8B56400FC0258 /* MKMapView+JKMoveLogo.h */,
 				4325536E20D8B56400FC0258 /* MKMapView+JKMoveLogo.m */,
@@ -668,10 +669,12 @@
 				437921EF20ECC4B100B2EC88 /* NSData+JKHash.m */,
 				9306818C21BE64C90021F976 /* NSData+ImageContentType.m */,
 				9306818F21BE65840021F976 /* NSString+MD5.m */,
+				43205DD320DD263300AD6952 /* UIView+Debug.h */,
 				431CB4C420F498850043B0AC /* NSObject+JKEasyCopy.h */,
 				431CB4C520F498850043B0AC /* NSObject+JKEasyCopy.m */,
 				431C078220FE28BF00479559 /* NSURLSession+JKSynchronousTask.h */,
 				437B0A6420F360BA00E93844 /* NSObject+JKAutoCoding.m */,
+				43143922209497E80059D373 /* UNLICENSE */,
 				436B1EAC20DA300600419AC0 /* UIView+JKFind.m */,
 				435D4C7920F0916900C8DC85 /* NSFileManager+JKPaths.h */,
 				431C078820FE291700479559 /* NSUserDefaults+JKSafeAccess.m */,
@@ -1132,7 +1135,6 @@
 				437921E020ECC40900B2EC88 /* NSBundle+JKAppIcon.h */,
 				435D4C5820EDEB4B00C8DC85 /* NSDecimalNumber+JKCalculatingByString.m */,
 				43993EB420E23E810017F1C3 /* UITextField+JKSelect.h */,
-				434DDB4F20C9326800191FC1 /* CALayer+JKBorderColor.h */,
 				435D4C4920EDEAAD00C8DC85 /* NSDate+JKLunarCalendar.m */,
 				435D4C4620EDEA8A00C8DC85 /* NSDate+JKInternetDateTime.h */,
 				435D4C4520EDEA8A00C8DC85 /* NSDate+JKInternetDateTime.m */,
@@ -1161,9 +1163,7 @@
 				437921F220ECC4C000B2EC88 /* NSData+JKPCM.h */,
 				93398ECE20D93370004376FB /* SLHelper.m */,
 				9306818821BE64740021F976 /* NSData+Image.h */,
-				43205DD320DD263300AD6952 /* UIView+Debug.h */,
 				431CB4CE20F4991D0043B0AC /* NSObject+JKReflection.m */,
-				43143922209497E80059D373 /* UNLICENSE */,
 				434DDB5820C932FC00191FC1 /* CAShapeLayer+JKUIBezierPath.h */,
 			);
 			path = SLHelper;
