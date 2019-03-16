@@ -338,7 +338,7 @@
 		43D24A902094A43600C59AC8 /* AppDelegate+ShowRegisterService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+ShowRegisterService.h"; sourceTree = "<group>"; };
 		43D24A932094B4C500C59AC8 /* ShowNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowNavigationBar.h; sourceTree = "<group>"; };
 		43D24A942094B4C500C59AC8 /* ShowNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowNavigationBar.m; sourceTree = "<group>"; };
-		43D87B1B20EB6CE600E991D6 /* UISplitViewController+JKQuickAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISplitViewController+JKQuickAccess.h"; sourceTree = "<group>"; };
+		43D87B1B20EB6CE600E991D6 /* UISplitViewController+JKQuickAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UISplitViewController+JKQuickAccess.h"; path = "../UISplitViewController+JKQuickAccess.h"; sourceTree = "<group>"; };
 		43D87B1C20EB6CE600E991D6 /* UISplitViewController+JKQuickAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UISplitViewController+JKQuickAccess.m"; path = "../UISplitViewController+JKQuickAccess.m"; sourceTree = "<group>"; };
 		43D87B2120EB6D6C00E991D6 /* UIScrollView+JKPages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+JKPages.m"; path = "../UIScrollView+JKPages.m"; sourceTree = "<group>"; };
 		43D87B2220EB6D6C00E991D6 /* UIScrollView+JKPages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+JKPages.h"; path = "../UIScrollView+JKPages.h"; sourceTree = "<group>"; };
@@ -997,6 +997,7 @@
 				4325536D20D8B56400FC0258 /* MKMapView+JKMoveLogo.h */,
 				4325536E20D8B56400FC0258 /* MKMapView+JKMoveLogo.m */,
 				436B1EAF20DA302100419AC0 /* UIView+JKNib.h */,
+				4325535E20D8B49F00FC0258 /* CAShapeLayerDemoViewController.m */,
 				4325535520CFE88C00FC0258 /* UIWebView+JKWebStorage.h */,
 				4325535620CFE88D00FC0258 /* UIWebView+JKWebStorage.m */,
 				434DDB6120C9337900191FC1 /* UIWindow+JKHierarchy.h */,
@@ -1056,6 +1057,7 @@
 				436B1EB320DA303F00419AC0 /* UIView+JKScreenshot.h */,
 				436B1EAC20DA300600419AC0 /* UIView+JKFind.m */,
 				434DDB5820C932FC00191FC1 /* CAShapeLayer+JKUIBezierPath.h */,
+				43D87B1B20EB6CE600E991D6 /* UISplitViewController+JKQuickAccess.h */,
 				43D87B1C20EB6CE600E991D6 /* UISplitViewController+JKQuickAccess.m */,
 				43D87B3420EB6E7000E991D6 /* UIResponderDemoViewController.h */,
 				43D87B3320EB6E6F00E991D6 /* UIResponderDemoViewController.m */,
@@ -1071,6 +1073,7 @@
 				43205DDE20DD269D00AD6952 /* UITextView+JKPlaceHolder.m */,
 				43993EC020E23F520017F1C3 /* UITableViewCell+JKNIB.m */,
 				435D4C9020F092BF00C8DC85 /* NSManagedObjectContext+JKObjectClear.h */,
+				435D4C7920F0916900C8DC85 /* NSFileManager+JKPaths.h */,
 				435D4C7820F0916900C8DC85 /* NSFileManager+JKPaths.m */,
 				435D4C8220F091E600C8DC85 /* NSInvocation+JKBb.h */,
 				435D4C8520F0920900C8DC85 /* NSManagedObject+JKDictionary.m */,
@@ -1093,6 +1096,7 @@
 				431F64EA20F8F2610087DB8E /* NSString+JKStringPages.h */,
 				934AE46220FC6BE400B60AD4 /* NSString+Additions.h */,
 				431CB4C720F498EF0043B0AC /* NSObject+JKGCD.h */,
+				437B0A5B20F3602E00E93844 /* NSObject+JKAddProperty.h */,
 				437B0A5C20F3602E00E93844 /* NSObject+JKAddProperty.m */,
 				437B0A5520F35FDE00E93844 /* NSNumber+JKRomanNumerals.h */,
 				437B0A5920F3600900E93844 /* NSNumber+JKRound.h */,
@@ -1204,7 +1208,6 @@
 				435D4C4920EDEAAD00C8DC85 /* NSDate+JKLunarCalendar.m */,
 				934CBCD8211821A500608F2F /* NSDate+Additions.m */,
 				4325536B20D8B53300FC0258 /* MKMapView+JKBetterMaps.m */,
-				4325535E20D8B49F00FC0258 /* CAShapeLayerDemoViewController.m */,
 				4325535B20D8B45600FC0258 /* CAAnimationDemoViewController.h */,
 				434DDB6220C9337900191FC1 /* UIWindow+JKHierarchy.m */,
 				437921E320ECC43F00B2EC88 /* NSData+JKAPNSToken.m */,
@@ -1222,12 +1225,9 @@
 				431CB4C520F498850043B0AC /* NSObject+JKEasyCopy.m */,
 				431CB4CA20F499060043B0AC /* NSObject+JKKVOBlocks.h */,
 				436B1EAD20DA300600419AC0 /* UIView+JKFind.h */,
-				43D87B1B20EB6CE600E991D6 /* UISplitViewController+JKQuickAccess.h */,
 				437921E820ECC47B00B2EC88 /* NSData+JKEncrypt.h */,
-				435D4C7920F0916900C8DC85 /* NSFileManager+JKPaths.h */,
 				431C078720FE291700479559 /* NSUserDefaults+JKSafeAccess.h */,
 				4325536520D8B4F100FC0258 /* CLLocation+JKCH1903.m */,
-				437B0A5B20F3602E00E93844 /* NSObject+JKAddProperty.h */,
 				9306819221BE65D50021F976 /* UIButton+Addtional.m */,
 				437B0A5320F35FB600E93844 /* NSNumber+JKCGFloat.h */,
 				9314D1E420C53ACE00BB2429 /* SLHelper */,
