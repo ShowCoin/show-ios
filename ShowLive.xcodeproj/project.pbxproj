@@ -258,7 +258,7 @@
 		435D4C4C20EDEAC500C8DC85 /* NSDate+JKReporting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JKReporting.m"; sourceTree = "<group>"; };
 		435D4C4E20EDEADF00C8DC85 /* NSDate+JKUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JKUtilities.m"; sourceTree = "<group>"; };
 		435D4C4F20EDEADF00C8DC85 /* NSDate+JKUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JKUtilities.h"; sourceTree = "<group>"; };
-		435D4C5220EDEB1900C8DC85 /* NSDate+JKZeroDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+JKZeroDate.m"; path = "../NSDate+JKZeroDate.m"; sourceTree = "<group>"; };
+		435D4C5220EDEB1900C8DC85 /* NSDate+JKZeroDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JKZeroDate.m"; sourceTree = "<group>"; };
 		435D4C5420EDEB3100C8DC85 /* NSDateFormatter+JKMake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+JKMake.h"; sourceTree = "<group>"; };
 		435D4C5520EDEB3100C8DC85 /* NSDateFormatter+JKMake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+JKMake.m"; sourceTree = "<group>"; };
 		435D4C5820EDEB4B00C8DC85 /* NSDecimalNumber+JKCalculatingByString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDecimalNumber+JKCalculatingByString.m"; sourceTree = "<group>"; };
@@ -1044,7 +1044,6 @@
 			isa = PBXGroup;
 			children = (
 				435D4C6C20EF406600C8DC85 /* NSDictionary+JKXML.h */,
-				43D87B2B20EB6DCE00E991D6 /* UIScrollView+APParallaxHeader.m */,
 				437921F120ECC4C000B2EC88 /* NSData+JKPCM.m */,
 				437921EE20ECC4B100B2EC88 /* NSData+JKHash.h */,
 				43205DD320DD263300AD6952 /* UIView+Debug.h */,
@@ -1058,8 +1057,6 @@
 				437B0A5B20F3602E00E93844 /* NSObject+JKAddProperty.h */,
 				4325536720D8B50F00FC0258 /* CLLocationManager+Blocks.m */,
 				431CB4D020F499370043B0AC /* NSObject+JKRuntime.m */,
-				435D4C5220EDEB1900C8DC85 /* NSDate+JKZeroDate.m */,
-				9311B41E21C107C4009C9A1D /* UIGestureRecognizer+BlocksKit.h */,
 				435D4C5420EDEB3100C8DC85 /* NSDateFormatter+JKMake.h */,
 			);
 			path = SLHelper;
@@ -1135,6 +1132,7 @@
 		934AE45E20FC6B7B00B60AD4 /* Exten */ = {
 			isa = PBXGroup;
 			children = (
+				43D87B2B20EB6DCE00E991D6 /* UIScrollView+APParallaxHeader.m */,
 				4374EB0C20F62F5600BB947F /* NSString+JKContains.h */,
 				431C078120FE28BF00479559 /* NSURLSession+JKSynchronousTask.m */,
 				4318BC7921BB962E008FD7F3 /* UIScrollView+EmptyDataSet.m */,
@@ -1223,8 +1221,10 @@
 				4355A4DB20FF11000020B7DE /* UINavigationController+JKStackManager.h */,
 				431F64B720F7945C0087DB8E /* UIPopoverController+iPhone.m */,
 				4374EB1120F62F9D00BB947F /* NSString+JKEmoji.h */,
+				435D4C5220EDEB1900C8DC85 /* NSDate+JKZeroDate.m */,
 				9311B41B21C104EA009C9A1D /* UIControl+BlocksKit.h */,
 				9311B41C21C1051C009C9A1D /* UIControl+BlocksKit.m */,
+				9311B41E21C107C4009C9A1D /* UIGestureRecognizer+BlocksKit.h */,
 				93EF35D421C292950088C2E4 /* UIImage+Additional.m */,
 				435D4C5520EDEB3100C8DC85 /* NSDateFormatter+JKMake.m */,
 				437921DC20ECC3DF00B2EC88 /* NSArray+JKSafeAccess.h */,
