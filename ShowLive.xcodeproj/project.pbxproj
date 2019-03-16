@@ -517,7 +517,7 @@
 		934A1031211ED7BC0021770D /* NSString+Validation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Validation.m"; sourceTree = "<group>"; };
 		934AE45F20FC6B8900B60AD4 /* UIImage+Avatar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Avatar.h"; sourceTree = "<group>"; };
 		934AE46020FC6BB400B60AD4 /* UIImage+Avatar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Avatar.m"; sourceTree = "<group>"; };
-		934AE46220FC6BE400B60AD4 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
+		934AE46220FC6BE400B60AD4 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Additions.h"; path = "../NSString+Additions.h"; sourceTree = "<group>"; };
 		934AE46320FC6C1000B60AD4 /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
 		934CBCD72118217800608F2F /* NSDate+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Additions.h"; sourceTree = "<group>"; };
 		934CBCD8211821A500608F2F /* NSDate+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Additions.m"; sourceTree = "<group>"; };
@@ -1043,6 +1043,7 @@
 		9314D1E420C53ACE00BB2429 /* SLHelper */ = {
 			isa = PBXGroup;
 			children = (
+				435D4C6C20EF406600C8DC85 /* NSDictionary+JKXML.h */,
 				43D87B2B20EB6DCE00E991D6 /* UIScrollView+APParallaxHeader.m */,
 				4374EB0C20F62F5600BB947F /* NSString+JKContains.h */,
 				431C078120FE28BF00479559 /* NSURLSession+JKSynchronousTask.m */,
@@ -1105,6 +1106,7 @@
 				431CB4E020F49A800043B0AC /* NSString+JKBase64.m */,
 				4374EB1220F62F9D00BB947F /* NSString+JKEmoji.m */,
 				431C076A20FC8EB900479559 /* NSURL+JKQueryDictionary.h */,
+				934AE46220FC6BE400B60AD4 /* NSString+Additions.h */,
 				431CB4C720F498EF0043B0AC /* NSObject+JKGCD.h */,
 				437B0A5B20F3602E00E93844 /* NSObject+JKAddProperty.h */,
 				437B0A5C20F3602E00E93844 /* NSObject+JKAddProperty.m */,
@@ -1215,7 +1217,6 @@
 		934AE45E20FC6B7B00B60AD4 /* Exten */ = {
 			isa = PBXGroup;
 			children = (
-				435D4C6C20EF406600C8DC85 /* NSDictionary+JKXML.h */,
 				437921E620ECC46400B2EC88 /* NSData+JKBase64.h */,
 				9306818821BE64740021F976 /* NSData+Image.h */,
 				431CB4CA20F499060043B0AC /* NSObject+JKKVOBlocks.h */,
@@ -1228,7 +1229,6 @@
 				4325536420D8B4F100FC0258 /* CLLocation+JKCH1903.h */,
 				435D4C4F20EDEADF00C8DC85 /* NSDate+JKUtilities.h */,
 				431F64EA20F8F2610087DB8E /* NSString+JKStringPages.h */,
-				934AE46220FC6BE400B60AD4 /* NSString+Additions.h */,
 				9309C74121BB924700AAFE87 /* UIImage+Effects.m */,
 				9314D1E420C53ACE00BB2429 /* SLHelper */,
 			);
