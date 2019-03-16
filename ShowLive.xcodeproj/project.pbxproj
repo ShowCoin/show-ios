@@ -340,7 +340,7 @@
 		43D24A942094B4C500C59AC8 /* ShowNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowNavigationBar.m; sourceTree = "<group>"; };
 		43D87B1B20EB6CE600E991D6 /* UISplitViewController+JKQuickAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UISplitViewController+JKQuickAccess.h"; path = "../UISplitViewController+JKQuickAccess.h"; sourceTree = "<group>"; };
 		43D87B1C20EB6CE600E991D6 /* UISplitViewController+JKQuickAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UISplitViewController+JKQuickAccess.m"; path = "../UISplitViewController+JKQuickAccess.m"; sourceTree = "<group>"; };
-		43D87B2120EB6D6C00E991D6 /* UIScrollView+JKPages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+JKPages.m"; path = "../UIScrollView+JKPages.m"; sourceTree = "<group>"; };
+		43D87B2120EB6D6C00E991D6 /* UIScrollView+JKPages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+JKPages.m"; sourceTree = "<group>"; };
 		43D87B2220EB6D6C00E991D6 /* UIScrollView+JKPages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+JKPages.h"; path = "../UIScrollView+JKPages.h"; sourceTree = "<group>"; };
 		43D87B2420EB6D7E00E991D6 /* UIScrollView+JKAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+JKAddition.m"; sourceTree = "<group>"; };
 		43D87B2720EB6D9900E991D6 /* UIScrollView+EmptyDataSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+EmptyDataSet.m"; sourceTree = "<group>"; };
@@ -1068,7 +1068,6 @@
 				43D87B1C20EB6CE600E991D6 /* UISplitViewController+JKQuickAccess.m */,
 				43D87B3320EB6E6F00E991D6 /* UIResponderDemoViewController.m */,
 				43D87B2220EB6D6C00E991D6 /* UIScrollView+JKPages.h */,
-				43D87B2120EB6D6C00E991D6 /* UIScrollView+JKPages.m */,
 				437921E820ECC47B00B2EC88 /* NSData+JKEncrypt.h */,
 				43291F4020E51F6F000C3C15 /* UITableViewDemoViewController.h */,
 				43291F4920E5203A000C3C15 /* UITableView+JKiOS7Style.m */,
@@ -1104,7 +1103,6 @@
 				435D4C7F20F091BC00C8DC85 /* NSIndexPath+JKOffset.h */,
 				435D4C7E20F091BB00C8DC85 /* NSIndexPath+JKOffset.m */,
 				435D4C7C20F0919600C8DC85 /* NSHTTPCookieStorage+JKFreezeDry.m */,
-				435D4C6920EF3FF200C8DC85 /* NSDictionary+JKSafeAccess.h */,
 				435D4C6320EF3E3B00C8DC85 /* NSDictionary+JKJSONString.h */,
 				435D4C6420EF3E3B00C8DC85 /* NSDictionary+JKJSONString.m */,
 				9309C73B21BB919B00AAFE87 /* UIWindow+SLMotion.m */,
@@ -1118,7 +1116,6 @@
 				93EF35D421C292950088C2E4 /* UIImage+Additional.m */,
 				435D4C5420EDEB3100C8DC85 /* NSDateFormatter+JKMake.h */,
 				435D4C5520EDEB3100C8DC85 /* NSDateFormatter+JKMake.m */,
-				437921DD20ECC3E000B2EC88 /* NSArray+JKSafeAccess.m */,
 			);
 			path = SLHelper;
 			sourceTree = "<group>";
@@ -1209,6 +1206,7 @@
 				434DDB5820C932FC00191FC1 /* CAShapeLayer+JKUIBezierPath.h */,
 				43D87B3420EB6E7000E991D6 /* UIResponderDemoViewController.h */,
 				43D87B2420EB6D7E00E991D6 /* UIScrollView+JKAddition.m */,
+				43D87B2120EB6D6C00E991D6 /* UIScrollView+JKPages.m */,
 				437921E920ECC47C00B2EC88 /* NSData+JKEncrypt.m */,
 				43291F3F20E51F6E000C3C15 /* UITableViewDemoViewController.m */,
 				435D4C8520F0920900C8DC85 /* NSManagedObject+JKDictionary.m */,
@@ -1225,10 +1223,12 @@
 				437B0A5920F3600900E93844 /* NSNumber+JKRound.h */,
 				9309C74021BB922200AAFE87 /* UIImage+Effects.h */,
 				9311B41621BF89A6009C9A1D /* UIButton+ImageTitleSpacing.m */,
+				435D4C6920EF3FF200C8DC85 /* NSDictionary+JKSafeAccess.h */,
 				435D4C6D20EF406600C8DC85 /* NSDictionary+JKXML.m */,
 				4355A4DB20FF11000020B7DE /* UINavigationController+JKStackManager.h */,
 				431F64B720F7945C0087DB8E /* UIPopoverController+iPhone.m */,
 				437921DC20ECC3DF00B2EC88 /* NSArray+JKSafeAccess.h */,
+				437921DD20ECC3E000B2EC88 /* NSArray+JKSafeAccess.m */,
 				43291F4C20E520CA000C3C15 /* UITableView+FDTemplateLayoutCellDebug.m */,
 				9314D1E420C53ACE00BB2429 /* SLHelper */,
 			);
