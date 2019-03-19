@@ -308,7 +308,7 @@
 		435D4C3C20EDEA2800C8DC85 /* NSDate+JKCupertinoYankee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JKCupertinoYankee.h"; sourceTree = "<group>"; };
 		435D4C4520EDEA8A00C8DC85 /* NSDate+JKInternetDateTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+JKInternetDateTime.m"; path = "SLHelper/NSDate+JKInternetDateTime.m"; sourceTree = "<group>"; };
 		435D4C4620EDEA8A00C8DC85 /* NSDate+JKInternetDateTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+JKInternetDateTime.h"; path = "../JKCategories/NSDate+JKInternetDateTime.h"; sourceTree = "<group>"; };
-		435D4C4920EDEAAD00C8DC85 /* NSDate+JKLunarCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+JKLunarCalendar.m"; path = "SLHelper/NSDate+JKLunarCalendar.m"; sourceTree = "<group>"; };
+		435D4C4920EDEAAD00C8DC85 /* NSDate+JKLunarCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JKLunarCalendar.m"; sourceTree = "<group>"; };
 		435D4C4C20EDEAC500C8DC85 /* NSDate+JKReporting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JKReporting.m"; sourceTree = "<group>"; };
 		435D4C5420EDEB3100C8DC85 /* NSDateFormatter+JKMake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+JKMake.h"; sourceTree = "<group>"; };
 		435D4C5520EDEB3100C8DC85 /* NSDateFormatter+JKMake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+JKMake.m"; sourceTree = "<group>"; };
@@ -980,6 +980,8 @@
 				4323FA2E223CC1F600AC3959 /* UIColor+HexString.h */,
 				4323F9F9223CC1F000AC3959 /* UINavigationController+JKStackManager.m */,
 				4323FA2A223CC1F600AC3959 /* UIScrollView+JKPages.h */,
+				435D4C4920EDEAAD00C8DC85 /* NSDate+JKLunarCalendar.m */,
+				4323FA11223CC1F300AC3959 /* UISplitViewController+JKQuickAccess.m */,
 				9343E47521C7D0140001B9C1 /* UILabel+Additional.h */,
 				437921E020ECC40900B2EC88 /* NSBundle+JKAppIcon.h */,
 				435D4C5820EDEB4B00C8DC85 /* NSDecimalNumber+JKCalculatingByString.m */,
@@ -1117,7 +1119,6 @@
 				4323FA0A223CC1F200AC3959 /* UIScrollView+JKPages.m */,
 				43993EBD20E23EF90017F1C3 /* UITextField+JKBlocks.h */,
 				434DDB4F20C9326800191FC1 /* CALayer+JKBorderColor.h */,
-				435D4C4920EDEAAD00C8DC85 /* NSDate+JKLunarCalendar.m */,
 				435D4C4620EDEA8A00C8DC85 /* NSDate+JKInternetDateTime.h */,
 				435D4C4520EDEA8A00C8DC85 /* NSDate+JKInternetDateTime.m */,
 				43993EBE20E23EF90017F1C3 /* UITextField+JKBlocks.m */,
@@ -1127,7 +1128,6 @@
 				934A1031211ED7BC0021770D /* NSString+Validation.m */,
 				43291F3C20E51F50000C3C15 /* UITextFieldDemoViewController.h */,
 				4323FA23223CC1F500AC3959 /* UISplitViewController+JKQuickAccess.h */,
-				4323FA11223CC1F300AC3959 /* UISplitViewController+JKQuickAccess.m */,
 				4325536B20D8B53300FC0258 /* MKMapView+JKBetterMaps.m */,
 				4325535E20D8B49F00FC0258 /* CAShapeLayerDemoViewController.m */,
 				4325535B20D8B45600FC0258 /* CAAnimationDemoViewController.h */,
