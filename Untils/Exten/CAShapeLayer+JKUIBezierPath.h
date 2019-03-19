@@ -1,8 +1,9 @@
 //
-//  UIResponder+JKFirstResponder.h
+//  CAShapeLayer+JKUIBezierPath.h
+//  Shapes
 //
-//  Created by Thad McDowell
-//  Copyright (c) 2015 Roaming Logic LLC
+//  Created by Denys Telezhkin on 19.08.14.
+//  Copyright (c) 2014 Denys Telezhkin. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -11,6 +12,9 @@
 //  copies of the Software, and to permit persons to whom the Software is
 //  furnished to do so, subject to the following conditions:
 //
+
+
+
 //  The above copyright notice and this permission notice shall be included in
 //  all copies or substantial portions of the Software.
 //
@@ -21,18 +25,33 @@
 //  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
-//  https://github.com/thad/ExampleFindFirstResponder
-//   This is an example project using a UIResponder category to find the current first responder.
-
 
 #import <UIKit/UIKit.h>
 
-@interface UIResponder (JKFirstResponder)
+#if __has_feature(nullability) // Xcode 6.3+
+#pragma clang assume_nonnull begin
+#else
+#define nullable
+#define __nullable
+#endif
+
 /**
- *  @brief  当前第一响应者
- *
- *  @return 当前第一响应者
+ Category on `CAShapeLayer`, that allows setting and getting UIBezierPath on CAShapeLayer.
  */
-+ (id)jk_currentFirstResponder;
+@interface CAShapeLayer (JKUIBezierPath)
+
+/**
+ Update CAShapeLayer with UIBezierPath.
+ */
+- (void)jk_updateWithBezierPath:(UIBezierPath *)path;
+
+/**
+ Get UIBezierPath object, constructed from CAShapeLayer.
+ */
+- (UIBezierPath*)jk_bezierPath;
 
 @end
+
+#if __has_feature(nullability)
+#pragma clang assume_nonnull end
+#endif
