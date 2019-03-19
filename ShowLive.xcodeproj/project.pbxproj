@@ -197,7 +197,7 @@
 		431CB4C420F498850043B0AC /* NSObject+JKEasyCopy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JKEasyCopy.h"; sourceTree = "<group>"; };
 		431CB4C520F498850043B0AC /* NSObject+JKEasyCopy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+JKEasyCopy.m"; path = "../JKCategories/NSObject+JKEasyCopy.m"; sourceTree = "<group>"; };
 		431CB4CE20F4991D0043B0AC /* NSObject+JKReflection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JKReflection.m"; sourceTree = "<group>"; };
-		431CB4D020F499370043B0AC /* NSObject+JKRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+JKRuntime.m"; path = "SLHelper/NSObject+JKRuntime.m"; sourceTree = "<group>"; };
+		431CB4D020F499370043B0AC /* NSObject+JKRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JKRuntime.m"; sourceTree = "<group>"; };
 		431CB4DF20F49A800043B0AC /* NSString+JKBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+JKBase64.h"; path = "SLHelper/NSString+JKBase64.h"; sourceTree = "<group>"; };
 		431F64B720F7945C0087DB8E /* UIPopoverController+iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIPopoverController+iPhone.m"; sourceTree = "<group>"; };
 		431F64E120F8F2300087DB8E /* NSString+JKRemoveEmoji.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+JKRemoveEmoji.m"; path = "../JKCategories/NSString+JKRemoveEmoji.m"; sourceTree = "<group>"; };
@@ -988,7 +988,9 @@
 				435D4C4520EDEA8A00C8DC85 /* NSDate+JKInternetDateTime.m */,
 				4323FA11223CC1F300AC3959 /* UISplitViewController+JKQuickAccess.m */,
 				4325535B20D8B45600FC0258 /* CAAnimationDemoViewController.h */,
+				4323FA34223CC1F700AC3959 /* UITextView+JKPlaceHolder.h */,
 				9343E47521C7D0140001B9C1 /* UILabel+Additional.h */,
+				4323F9FB223CC1F100AC3959 /* NSString+JKEmoji.m */,
 				437921E020ECC40900B2EC88 /* NSBundle+JKAppIcon.h */,
 				435D4C5820EDEB4B00C8DC85 /* NSDecimalNumber+JKCalculatingByString.m */,
 				434DDB6220C9337900191FC1 /* UIWindow+JKHierarchy.m */,
@@ -1004,6 +1006,7 @@
 				431CB4C420F498850043B0AC /* NSObject+JKEasyCopy.h */,
 				437B0A5520F35FDE00E93844 /* NSNumber+JKRomanNumerals.h */,
 				4325536720D8B50F00FC0258 /* CLLocationManager+Blocks.m */,
+				431CB4D020F499370043B0AC /* NSObject+JKRuntime.m */,
 				431F64B720F7945C0087DB8E /* UIPopoverController+iPhone.m */,
 				93EF35D421C292950088C2E4 /* UIImage+Additional.m */,
 			);
@@ -1154,7 +1157,6 @@
 				4323FA04223CC1F200AC3959 /* UITableViewDemoViewController.h */,
 				4323FA05223CC1F200AC3959 /* UITableViewDemoViewController.m */,
 				4323FA27223CC1F500AC3959 /* UITextView+JKPinchZoom.m */,
-				4323FA34223CC1F700AC3959 /* UITextView+JKPlaceHolder.h */,
 				4323FA12223CC1F300AC3959 /* UIView+JKFind.h */,
 				4323FA32223CC1F600AC3959 /* UIView+JKFrame.h */,
 				4325536D20D8B56400FC0258 /* MKMapView+JKMoveLogo.h */,
@@ -1163,7 +1165,6 @@
 				4323F9F0223CC1F000AC3959 /* UIWindow+SLMotion.h */,
 				4325537020D8B57B00FC0258 /* MKMapView+JKZoomLevel.h */,
 				9343E47821C7D17C0001B9C1 /* UIView+Additional.h */,
-				4323F9FB223CC1F100AC3959 /* NSString+JKEmoji.m */,
 				4323FA31223CC1F600AC3959 /* NSString+JKNormalRegex.m */,
 				4323FA26223CC1F500AC3959 /* NSString+JKStringPages.h */,
 				4323F9ED223CC1EF00AC3959 /* NSString+JKXMLDictionary.h */,
@@ -1229,7 +1230,6 @@
 				435D4C6420EF3E3B00C8DC85 /* NSDictionary+JKJSONString.m */,
 				9309C73B21BB919B00AAFE87 /* UIWindow+SLMotion.m */,
 				437B0A5320F35FB600E93844 /* NSNumber+JKCGFloat.h */,
-				431CB4D020F499370043B0AC /* NSObject+JKRuntime.m */,
 				4355A4DB20FF11000020B7DE /* UINavigationController+JKStackManager.h */,
 				9311B41B21C104EA009C9A1D /* UIControl+BlocksKit.h */,
 				9311B41C21C1051C009C9A1D /* UIControl+BlocksKit.m */,
