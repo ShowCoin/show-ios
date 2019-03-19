@@ -285,7 +285,7 @@
 		4323FA34223CC1F700AC3959 /* UITextView+JKPlaceHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+JKPlaceHolder.h"; sourceTree = "<group>"; };
 		4325535520CFE88C00FC0258 /* UIWebView+JKWebStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+JKWebStorage.h"; sourceTree = "<group>"; };
 		4325535620CFE88D00FC0258 /* UIWebView+JKWebStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+JKWebStorage.m"; sourceTree = "<group>"; };
-		4325535820CFE8B100FC0258 /* UIWebVIew+JKSwipeGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIWebVIew+JKSwipeGesture.m"; path = "../JKCategories/UIWebVIew+JKSwipeGesture.m"; sourceTree = "<group>"; };
+		4325535820CFE8B100FC0258 /* UIWebVIew+JKSwipeGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebVIew+JKSwipeGesture.m"; sourceTree = "<group>"; };
 		4325535B20D8B45600FC0258 /* CAAnimationDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAAnimationDemoViewController.h; sourceTree = "<group>"; };
 		4325535E20D8B49F00FC0258 /* CAShapeLayerDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAShapeLayerDemoViewController.m; sourceTree = "<group>"; };
 		4325535F20D8B49F00FC0258 /* CAShapeLayerDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAShapeLayerDemoViewController.h; sourceTree = "<group>"; };
@@ -1042,6 +1042,7 @@
 				435D4C4620EDEA8A00C8DC85 /* NSDate+JKInternetDateTime.h */,
 				435D4C4520EDEA8A00C8DC85 /* NSDate+JKInternetDateTime.m */,
 				43993EBE20E23EF90017F1C3 /* UITextField+JKBlocks.m */,
+				4325535820CFE8B100FC0258 /* UIWebVIew+JKSwipeGesture.m */,
 				934CBCD72118217800608F2F /* NSDate+Additions.h */,
 				934CBCD8211821A500608F2F /* NSDate+Additions.m */,
 				934A1031211ED7BC0021770D /* NSString+Validation.m */,
@@ -1142,10 +1143,12 @@
 				9306819121BE65BD0021F976 /* UIButton+Addtional.h */,
 				9306819221BE65D50021F976 /* UIButton+Addtional.m */,
 				9311B41621BF89A6009C9A1D /* UIButton+ImageTitleSpacing.m */,
+				9311B41921BF8A16009C9A1D /* UIColor+HexString.m */,
 				4325536820D8B51000FC0258 /* CLLocationManager+Blocks.h */,
 				4325536720D8B50F00FC0258 /* CLLocationManager+Blocks.m */,
 				435D4C7E20F091BB00C8DC85 /* NSIndexPath+JKOffset.m */,
 				435D4C7C20F0919600C8DC85 /* NSHTTPCookieStorage+JKFreezeDry.m */,
+				435D4C6920EF3FF200C8DC85 /* NSDictionary+JKSafeAccess.h */,
 				435D4C6320EF3E3B00C8DC85 /* NSDictionary+JKJSONString.h */,
 				435D4C6420EF3E3B00C8DC85 /* NSDictionary+JKJSONString.m */,
 				9309C73B21BB919B00AAFE87 /* UIWindow+SLMotion.m */,
@@ -1236,9 +1239,6 @@
 		934AE45E20FC6B7B00B60AD4 /* Exten */ = {
 			isa = PBXGroup;
 			children = (
-				4325535820CFE8B100FC0258 /* UIWebVIew+JKSwipeGesture.m */,
-				9311B41921BF8A16009C9A1D /* UIColor+HexString.m */,
-				435D4C6920EF3FF200C8DC85 /* NSDictionary+JKSafeAccess.h */,
 				9314D1E420C53ACE00BB2429 /* SLHelper */,
 			);
 			path = Exten;
