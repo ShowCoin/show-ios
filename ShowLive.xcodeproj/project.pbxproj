@@ -482,7 +482,7 @@
 		72FE9B7F20621F59008DD3D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		877A7E42218D8E5D2E688D18 /* libPods-ShowLiveUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShowLiveUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9306818821BE64740021F976 /* NSData+Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Image.h"; sourceTree = "<group>"; };
-		9306818C21BE64C90021F976 /* NSData+ImageContentType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+ImageContentType.m"; path = "../NSData+ImageContentType.m"; sourceTree = "<group>"; };
+		9306818C21BE64C90021F976 /* NSData+ImageContentType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+ImageContentType.m"; sourceTree = "<group>"; };
 		9306818F21BE65840021F976 /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
 		9306819121BE65BD0021F976 /* UIButton+Addtional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Addtional.h"; sourceTree = "<group>"; };
 		9306819221BE65D50021F976 /* UIButton+Addtional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIButton+Addtional.m"; path = "SLHelper/UIButton+Addtional.m"; sourceTree = "<group>"; };
@@ -991,19 +991,15 @@
 				4323FA0C223CC1F200AC3959 /* NSString+JKContains.m */,
 				4323FA03223CC1F200AC3959 /* NSString+JKEmoji.h */,
 				4323F9F9223CC1F000AC3959 /* UINavigationController+JKStackManager.m */,
-				4323F9F2223CC1F000AC3959 /* UIResponderDemoViewController.m */,
 				43993EBE20E23EF90017F1C3 /* UITextField+JKBlocks.m */,
 				934A1031211ED7BC0021770D /* NSString+Validation.m */,
 				4323F9EC223CC1EF00AC3959 /* UITableViewCell+JKDelaysContentTouches.h */,
 				4323FA13223CC1F300AC3959 /* UIView+JKScreenshot.h */,
 				9343E47821C7D17C0001B9C1 /* UIView+Additional.h */,
 				4323F9FB223CC1F100AC3959 /* NSString+JKEmoji.m */,
-				43D87B3120EB6E0400E991D6 /* UIScreen+JKFrame.m */,
 				4314391F209497E70059D373 /* README.md */,
 				437921F220ECC4C000B2EC88 /* NSData+JKPCM.h */,
 				437921F120ECC4C000B2EC88 /* NSData+JKPCM.m */,
-				437921EE20ECC4B100B2EC88 /* NSData+JKHash.h */,
-				9306818C21BE64C90021F976 /* NSData+ImageContentType.m */,
 				431CB4C420F498850043B0AC /* NSObject+JKEasyCopy.h */,
 				437B0A6420F360BA00E93844 /* NSObject+JKAutoCoding.m */,
 				436B1EAC20DA300600419AC0 /* UIView+JKFind.m */,
@@ -1129,6 +1125,7 @@
 				4323FA02223CC1F100AC3959 /* UINavigationController+JKTransitions.m */,
 				4323F9FC223CC1F100AC3959 /* UIResponder+JKFirstResponder.h */,
 				4323F9FF223CC1F100AC3959 /* UIResponderDemoViewController.h */,
+				4323F9F2223CC1F000AC3959 /* UIResponderDemoViewController.m */,
 				4323FA00223CC1F100AC3959 /* UIScrollView+JKAddition.h */,
 				4323FA07223CC1F200AC3959 /* UIScrollView+JKAddition.m */,
 				4323FA2A223CC1F600AC3959 /* UIScrollView+JKPages.h */,
@@ -1200,6 +1197,7 @@
 				43993EC320E23F790017F1C3 /* UITableView+FDTemplateLayoutCell.m */,
 				4325536A20D8B53300FC0258 /* MKMapView+JKBetterMaps.h */,
 				436B1EA420DA2FB000419AC0 /* UIView+JKVisuals.h */,
+				43D87B3120EB6E0400E991D6 /* UIScreen+JKFrame.m */,
 				434DDB5B20C9332700191FC1 /* CATransaction+JKAnimateWithDuration.m */,
 				431C075F20FC8D9000479559 /* NSString+JKXMLDictionary.m */,
 				43D87B2B20EB6DCE00E991D6 /* UIScrollView+APParallaxHeader.m */,
@@ -1207,8 +1205,10 @@
 				43143921209497E80059D373 /* .gitignore */,
 				43143923209497E80059D373 /* Cartfile */,
 				93398ECE20D93370004376FB /* SLHelper.m */,
+				437921EE20ECC4B100B2EC88 /* NSData+JKHash.h */,
 				437921EF20ECC4B100B2EC88 /* NSData+JKHash.m */,
 				9306818821BE64740021F976 /* NSData+Image.h */,
+				9306818C21BE64C90021F976 /* NSData+ImageContentType.m */,
 				9306818F21BE65840021F976 /* NSString+MD5.m */,
 				43205DD320DD263300AD6952 /* UIView+Debug.h */,
 				431CB4C520F498850043B0AC /* NSObject+JKEasyCopy.m */,
