@@ -525,7 +525,7 @@
 		934A1031211ED7BC0021770D /* NSString+Validation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Validation.m"; path = "../JKCategories/NSString+Validation.m"; sourceTree = "<group>"; };
 		934AE45F20FC6B8900B60AD4 /* UIImage+Avatar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Avatar.h"; sourceTree = "<group>"; };
 		934AE46020FC6BB400B60AD4 /* UIImage+Avatar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Avatar.m"; sourceTree = "<group>"; };
-		934AE46320FC6C1000B60AD4 /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Additions.m"; path = "../JKCategories/NSString+Additions.m"; sourceTree = "<group>"; };
+		934AE46320FC6C1000B60AD4 /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Additions.m"; path = "../../JKCategories/NSString+Additions.m"; sourceTree = "<group>"; };
 		934CBCD72118217800608F2F /* NSDate+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+Additions.h"; path = "../JKCategories/NSDate+Additions.h"; sourceTree = "<group>"; };
 		934CBCD8211821A500608F2F /* NSDate+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+Additions.m"; path = "../JKCategories/NSDate+Additions.m"; sourceTree = "<group>"; };
 		934E1B9720AC39D900A0B080 /* SLChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLChatViewController.h; sourceTree = "<group>"; };
@@ -1010,14 +1010,18 @@
 				4323F9FB223CC1F100AC3959 /* NSString+JKEmoji.m */,
 				4323FA31223CC1F600AC3959 /* NSString+JKNormalRegex.m */,
 				437921E020ECC40900B2EC88 /* NSBundle+JKAppIcon.h */,
+				43205DDE20DD269D00AD6952 /* UITextView+JKPlaceHolder.m */,
 				435D4C5D20EF3E0500C8DC85 /* NSDecimalNumber+JKExtensions.h */,
 				435D4C5820EDEB4B00C8DC85 /* NSDecimalNumber+JKCalculatingByString.m */,
 				434DDB6220C9337900191FC1 /* UIWindow+JKHierarchy.m */,
 				43D87B3020EB6E0400E991D6 /* UIScreen+JKFrame.h */,
 				9309C73D21BB91B900AAFE87 /* NSString+Json.h */,
+				43291F4F20E520E0000C3C15 /* UITableView+FDKeyedHeightCache.h */,
 				43205DDC20DD267D00AD6952 /* UITextView+JKSelect.m */,
 				435D4C3C20EDEA2800C8DC85 /* NSDate+JKCupertinoYankee.h */,
+				4325535F20D8B49F00FC0258 /* CAShapeLayerDemoViewController.h */,
 				435D4C4C20EDEAC500C8DC85 /* NSDate+JKReporting.m */,
+				934AE46320FC6C1000B60AD4 /* NSString+Additions.m */,
 				4374EB0E20F62F7C00BB947F /* NSString+JKDictionaryValue.h */,
 				431C075F20FC8D9000479559 /* NSString+JKXMLDictionary.m */,
 				43143921209497E80059D373 /* .gitignore */,
@@ -1178,20 +1182,16 @@
 				4325537020D8B57B00FC0258 /* MKMapView+JKZoomLevel.h */,
 				4323FA26223CC1F500AC3959 /* NSString+JKStringPages.h */,
 				4323F9ED223CC1EF00AC3959 /* NSString+JKXMLDictionary.h */,
-				43205DDE20DD269D00AD6952 /* UITextView+JKPlaceHolder.m */,
 				43993EB120E23E390017F1C3 /* UITextView+JKInputLimit.h */,
 				43143920209497E70059D373 /* TODO.md */,
 				43993EB420E23E810017F1C3 /* UITextField+JKSelect.h */,
 				437921E320ECC43F00B2EC88 /* NSData+JKAPNSToken.m */,
-				43291F4F20E520E0000C3C15 /* UITableView+FDKeyedHeightCache.h */,
 				434DDB5620C932DB00191FC1 /* CAMediaTimingFunction+JKAdditionalEquations.h */,
 				43205DDB20DD267D00AD6952 /* UITextView+JKSelect.h */,
 				437921EC20ECC49800B2EC88 /* NSData+JKGzip.h */,
 				934AE45F20FC6B8900B60AD4 /* UIImage+Avatar.h */,
 				934AE46020FC6BB400B60AD4 /* UIImage+Avatar.m */,
 				437B0A6120F3608A00E93844 /* NSObject+JKAssociatedObject.h */,
-				4325535F20D8B49F00FC0258 /* CAShapeLayerDemoViewController.h */,
-				934AE46320FC6C1000B60AD4 /* NSString+Additions.m */,
 				43205DE120DD26C400AD6952 /* UITextView+JKPinchZoom.h */,
 				431F64E120F8F2300087DB8E /* NSString+JKRemoveEmoji.m */,
 				431C077520FE279600479559 /* NSURLConnection+JKSelfSigned.m */,
