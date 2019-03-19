@@ -312,7 +312,7 @@
 		435D4C4C20EDEAC500C8DC85 /* NSDate+JKReporting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JKReporting.m"; sourceTree = "<group>"; };
 		435D4C5420EDEB3100C8DC85 /* NSDateFormatter+JKMake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+JKMake.h"; sourceTree = "<group>"; };
 		435D4C5520EDEB3100C8DC85 /* NSDateFormatter+JKMake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+JKMake.m"; sourceTree = "<group>"; };
-		435D4C5820EDEB4B00C8DC85 /* NSDecimalNumber+JKCalculatingByString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDecimalNumber+JKCalculatingByString.m"; path = "../JKCategories/NSDecimalNumber+JKCalculatingByString.m"; sourceTree = "<group>"; };
+		435D4C5820EDEB4B00C8DC85 /* NSDecimalNumber+JKCalculatingByString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDecimalNumber+JKCalculatingByString.m"; sourceTree = "<group>"; };
 		435D4C5D20EF3E0500C8DC85 /* NSDecimalNumber+JKExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDecimalNumber+JKExtensions.h"; path = "../JKCategories/NSDecimalNumber+JKExtensions.h"; sourceTree = "<group>"; };
 		435D4C6320EF3E3B00C8DC85 /* NSDictionary+JKJSONString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+JKJSONString.h"; sourceTree = "<group>"; };
 		435D4C6420EF3E3B00C8DC85 /* NSDictionary+JKJSONString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+JKJSONString.m"; path = "SLHelper/NSDictionary+JKJSONString.m"; sourceTree = "<group>"; };
@@ -976,10 +976,13 @@
 		9314D1E420C53ACE00BB2429 /* SLHelper */ = {
 			isa = PBXGroup;
 			children = (
+				4323FA2D223CC1F600AC3959 /* CAShapeLayer+JKUIBezierPath.m */,
 				4323FA2E223CC1F600AC3959 /* UIColor+HexString.h */,
 				4323F9F9223CC1F000AC3959 /* UINavigationController+JKStackManager.m */,
+				4323FA2A223CC1F600AC3959 /* UIScrollView+JKPages.h */,
 				9343E47521C7D0140001B9C1 /* UILabel+Additional.h */,
 				437921E020ECC40900B2EC88 /* NSBundle+JKAppIcon.h */,
+				435D4C5820EDEB4B00C8DC85 /* NSDecimalNumber+JKCalculatingByString.m */,
 				43143921209497E80059D373 /* .gitignore */,
 				93398ECE20D93370004376FB /* SLHelper.m */,
 				437B0A5520F35FDE00E93844 /* NSNumber+JKRomanNumerals.h */,
@@ -1061,7 +1064,6 @@
 				4318BC7921BB962E008FD7F3 /* UIScrollView+EmptyDataSet.m */,
 				4323FA16223CC1F400AC3959 /* CAAnimationDemoViewController.m */,
 				434DDB5820C932FC00191FC1 /* CAShapeLayer+JKUIBezierPath.h */,
-				4323FA2D223CC1F600AC3959 /* CAShapeLayer+JKUIBezierPath.m */,
 				4323FA1C223CC1F400AC3959 /* CATransactionDemoViewController.m */,
 				4323FA2F223CC1F600AC3959 /* CLLocation+JKCH1903.h */,
 				4323FA0E223CC1F300AC3959 /* CLLocation+JKCH1903.m */,
@@ -1112,7 +1114,6 @@
 				4323F9F2223CC1F000AC3959 /* UIResponderDemoViewController.m */,
 				4323FA00223CC1F100AC3959 /* UIScrollView+JKAddition.h */,
 				4323FA07223CC1F200AC3959 /* UIScrollView+JKAddition.m */,
-				4323FA2A223CC1F600AC3959 /* UIScrollView+JKPages.h */,
 				4323FA0A223CC1F200AC3959 /* UIScrollView+JKPages.m */,
 				43993EBD20E23EF90017F1C3 /* UITextField+JKBlocks.h */,
 				434DDB4F20C9326800191FC1 /* CALayer+JKBorderColor.h */,
@@ -1156,7 +1157,6 @@
 				4323F9ED223CC1EF00AC3959 /* NSString+JKXMLDictionary.h */,
 				43205DDE20DD269D00AD6952 /* UITextView+JKPlaceHolder.m */,
 				435D4C5D20EF3E0500C8DC85 /* NSDecimalNumber+JKExtensions.h */,
-				435D4C5820EDEB4B00C8DC85 /* NSDecimalNumber+JKCalculatingByString.m */,
 				43993EB120E23E390017F1C3 /* UITextView+JKInputLimit.h */,
 				43143920209497E70059D373 /* TODO.md */,
 				43993EB420E23E810017F1C3 /* UITextField+JKSelect.h */,
