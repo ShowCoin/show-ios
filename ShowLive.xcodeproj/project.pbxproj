@@ -191,7 +191,7 @@
 		43143923209497E80059D373 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		4318BC7921BB962E008FD7F3 /* UIScrollView+EmptyDataSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+EmptyDataSet.m"; path = "SLHelper/UIScrollView+EmptyDataSet.m"; sourceTree = "<group>"; };
 		431C075F20FC8D9000479559 /* NSString+JKXMLDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JKXMLDictionary.m"; sourceTree = "<group>"; };
-		431C077520FE279600479559 /* NSURLConnection+JKSelfSigned.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSURLConnection+JKSelfSigned.m"; path = "SLHelper/NSURLConnection+JKSelfSigned.m"; sourceTree = "<group>"; };
+		431C077520FE279600479559 /* NSURLConnection+JKSelfSigned.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLConnection+JKSelfSigned.m"; sourceTree = "<group>"; };
 		431C078220FE28BF00479559 /* NSURLSession+JKSynchronousTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLSession+JKSynchronousTask.h"; sourceTree = "<group>"; };
 		431C078820FE291700479559 /* NSUserDefaults+JKSafeAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+JKSafeAccess.m"; sourceTree = "<group>"; };
 		431CB4C420F498850043B0AC /* NSObject+JKEasyCopy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JKEasyCopy.h"; sourceTree = "<group>"; };
@@ -987,6 +987,7 @@
 				435D4C4C20EDEAC500C8DC85 /* NSDate+JKReporting.m */,
 				4374EB0E20F62F7C00BB947F /* NSString+JKDictionaryValue.h */,
 				431F64E120F8F2300087DB8E /* NSString+JKRemoveEmoji.m */,
+				431C077520FE279600479559 /* NSURLConnection+JKSelfSigned.m */,
 				437B0A4F20F35F9C00E93844 /* NSNotificationCenterDemoViewController.m */,
 				435D4C9720F0931000C8DC85 /* NSNotificationCenter+JKMainThread.h */,
 				43993EC320E23F790017F1C3 /* UITableView+FDTemplateLayoutCell.m */,
@@ -1022,6 +1023,7 @@
 				9309C74121BB924700AAFE87 /* UIImage+Effects.m */,
 				9306819221BE65D50021F976 /* UIButton+Addtional.m */,
 				9311B41621BF89A6009C9A1D /* UIButton+ImageTitleSpacing.m */,
+				9311B41921BF8A16009C9A1D /* UIColor+HexString.m */,
 				4325536720D8B50F00FC0258 /* CLLocationManager+Blocks.m */,
 				435D4C7E20F091BB00C8DC85 /* NSIndexPath+JKOffset.m */,
 				435D4C7C20F0919600C8DC85 /* NSHTTPCookieStorage+JKFreezeDry.m */,
@@ -1227,12 +1229,10 @@
 				434DDB5620C932DB00191FC1 /* CAMediaTimingFunction+JKAdditionalEquations.h */,
 				934AE46320FC6C1000B60AD4 /* NSString+Additions.m */,
 				43205DE120DD26C400AD6952 /* UITextView+JKPinchZoom.h */,
-				431C077520FE279600479559 /* NSURLConnection+JKSelfSigned.m */,
 				4314391F209497E70059D373 /* README.md */,
 				437921F220ECC4C000B2EC88 /* NSData+JKPCM.h */,
 				437921EE20ECC4B100B2EC88 /* NSData+JKHash.h */,
 				9306819121BE65BD0021F976 /* UIButton+Addtional.h */,
-				9311B41921BF8A16009C9A1D /* UIColor+HexString.m */,
 				4325536820D8B51000FC0258 /* CLLocationManager+Blocks.h */,
 				435D4C6920EF3FF200C8DC85 /* NSDictionary+JKSafeAccess.h */,
 				431CB4D020F499370043B0AC /* NSObject+JKRuntime.m */,
