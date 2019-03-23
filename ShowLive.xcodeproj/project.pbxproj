@@ -312,7 +312,7 @@
 		435D4C4C20EDEAC500C8DC85 /* NSDate+JKReporting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JKReporting.m"; sourceTree = "<group>"; };
 		435D4C5420EDEB3100C8DC85 /* NSDateFormatter+JKMake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+JKMake.h"; sourceTree = "<group>"; };
 		435D4C5520EDEB3100C8DC85 /* NSDateFormatter+JKMake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+JKMake.m"; sourceTree = "<group>"; };
-		435D4C5820EDEB4B00C8DC85 /* NSDecimalNumber+JKCalculatingByString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDecimalNumber+JKCalculatingByString.m"; sourceTree = "<group>"; };
+		435D4C5820EDEB4B00C8DC85 /* NSDecimalNumber+JKCalculatingByString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDecimalNumber+JKCalculatingByString.m"; path = "SLHelper/NSDecimalNumber+JKCalculatingByString.m"; sourceTree = "<group>"; };
 		435D4C5D20EF3E0500C8DC85 /* NSDecimalNumber+JKExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDecimalNumber+JKExtensions.h"; path = "SLHelper/NSDecimalNumber+JKExtensions.h"; sourceTree = "<group>"; };
 		435D4C6320EF3E3B00C8DC85 /* NSDictionary+JKJSONString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+JKJSONString.h"; sourceTree = "<group>"; };
 		435D4C6420EF3E3B00C8DC85 /* NSDictionary+JKJSONString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+JKJSONString.m"; sourceTree = "<group>"; };
@@ -992,7 +992,6 @@
 				4323F9E9223CC1EF00AC3959 /* NSObject+JKKVOBlocks.m */,
 				4323F9EE223CC1EF00AC3959 /* NSObject+JKReflection.h */,
 				4323FA1A223CC1F400AC3959 /* NSRunLoop+JKPerformBlock.m */,
-				4323FA20223CC1F500AC3959 /* NSSet+JKBlock.h */,
 				4323FA0C223CC1F200AC3959 /* NSString+JKContains.m */,
 				4323FA03223CC1F200AC3959 /* NSString+JKEmoji.h */,
 				4323FA01223CC1F100AC3959 /* NSURLSession+JKSynchronousTask.m */,
@@ -1011,7 +1010,6 @@
 				4325536B20D8B53300FC0258 /* MKMapView+JKBetterMaps.m */,
 				4323F9FD223CC1F100AC3959 /* UITableView+JKiOS7Style.m */,
 				4323F9FE223CC1F100AC3959 /* UITableViewCell+JKNIB.h */,
-				4323FA04223CC1F200AC3959 /* UITableViewDemoViewController.h */,
 				4323FA27223CC1F500AC3959 /* UITextView+JKPinchZoom.m */,
 				4323FA34223CC1F700AC3959 /* UITextView+JKPlaceHolder.h */,
 				4323FA12223CC1F300AC3959 /* UIView+JKFind.h */,
@@ -1022,7 +1020,6 @@
 				4323FA31223CC1F600AC3959 /* NSString+JKNormalRegex.m */,
 				437921E020ECC40900B2EC88 /* NSBundle+JKAppIcon.h */,
 				43205DDE20DD269D00AD6952 /* UITextView+JKPlaceHolder.m */,
-				435D4C5820EDEB4B00C8DC85 /* NSDecimalNumber+JKCalculatingByString.m */,
 				434DDB6220C9337900191FC1 /* UIWindow+JKHierarchy.m */,
 				437921E320ECC43F00B2EC88 /* NSData+JKAPNSToken.m */,
 				9309C73D21BB91B900AAFE87 /* NSString+Json.h */,
@@ -1198,6 +1195,7 @@
 				4323FA2B223CC1F600AC3959 /* NSNumber+JKRound.m */,
 				4323FA22223CC1F500AC3959 /* NSObject+JKAppInfo.h */,
 				4323FA29223CC1F500AC3959 /* NSObject+JKAutoCoding.h */,
+				4323FA20223CC1F500AC3959 /* NSSet+JKBlock.h */,
 				4323F9FA223CC1F100AC3959 /* NSString+Additions.h */,
 				4323FA0F223CC1F300AC3959 /* NSString+JKBase64.m */,
 				4323F9F4223CC1F000AC3959 /* NSURL+JKQueryDictionary.h */,
@@ -1223,6 +1221,7 @@
 				4323F9EB223CC1EF00AC3959 /* UITableView+FDKeyedHeightCache.m */,
 				4323F9EC223CC1EF00AC3959 /* UITableViewCell+JKDelaysContentTouches.h */,
 				4323F9EA223CC1EF00AC3959 /* UITableViewCell+JKNIB.m */,
+				4323FA04223CC1F200AC3959 /* UITableViewDemoViewController.h */,
 				4323FA05223CC1F200AC3959 /* UITableViewDemoViewController.m */,
 				4323FA32223CC1F600AC3959 /* UIView+JKFrame.h */,
 				4325536E20D8B56400FC0258 /* MKMapView+JKMoveLogo.m */,
@@ -1232,6 +1231,7 @@
 				4323FA26223CC1F500AC3959 /* NSString+JKStringPages.h */,
 				4323F9ED223CC1EF00AC3959 /* NSString+JKXMLDictionary.h */,
 				435D4C5D20EF3E0500C8DC85 /* NSDecimalNumber+JKExtensions.h */,
+				435D4C5820EDEB4B00C8DC85 /* NSDecimalNumber+JKCalculatingByString.m */,
 				43993EB120E23E390017F1C3 /* UITextView+JKInputLimit.h */,
 				43143920209497E70059D373 /* TODO.md */,
 				43993EB420E23E810017F1C3 /* UITextField+JKSelect.h */,
