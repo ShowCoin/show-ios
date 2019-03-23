@@ -300,7 +300,7 @@
 		43291F4C20E520CA000C3C15 /* UITableView+FDTemplateLayoutCellDebug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableView+FDTemplateLayoutCellDebug.m"; path = "../UITableView+FDTemplateLayoutCellDebug.m"; sourceTree = "<group>"; };
 		43291F4F20E520E0000C3C15 /* UITableView+FDKeyedHeightCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDKeyedHeightCache.h"; sourceTree = "<group>"; };
 		434DDB4F20C9326800191FC1 /* CALayer+JKBorderColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CALayer+JKBorderColor.h"; path = "SLHelper/CALayer+JKBorderColor.h"; sourceTree = "<group>"; };
-		434DDB5620C932DB00191FC1 /* CAMediaTimingFunction+JKAdditionalEquations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAMediaTimingFunction+JKAdditionalEquations.h"; sourceTree = "<group>"; };
+		434DDB5620C932DB00191FC1 /* CAMediaTimingFunction+JKAdditionalEquations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CAMediaTimingFunction+JKAdditionalEquations.h"; path = "SLHelper/CAMediaTimingFunction+JKAdditionalEquations.h"; sourceTree = "<group>"; };
 		434DDB5820C932FC00191FC1 /* CAShapeLayer+JKUIBezierPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CAShapeLayer+JKUIBezierPath.h"; path = "../CAShapeLayer+JKUIBezierPath.h"; sourceTree = "<group>"; };
 		434DDB5B20C9332700191FC1 /* CATransaction+JKAnimateWithDuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CATransaction+JKAnimateWithDuration.m"; sourceTree = "<group>"; };
 		434DDB6220C9337900191FC1 /* UIWindow+JKHierarchy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+JKHierarchy.m"; sourceTree = "<group>"; };
@@ -991,8 +991,6 @@
 				4323F9F1223CC1F000AC3959 /* NSManagedObject+JKDictionary.h */,
 				4323FA14223CC1F300AC3959 /* NSManagedObjectContext+JKFetching.h */,
 				4323F9F6223CC1F000AC3959 /* NSManagedObjectContext+JKFetchRequestsConstructors.h */,
-				4323FA25223CC1F500AC3959 /* NSManagedObjectContext+JKObjectClear.h */,
-				4323F9E8223CC1EF00AC3959 /* NSMutableURLRequest+JKUpload.h */,
 				4323FA22223CC1F500AC3959 /* NSObject+JKAppInfo.h */,
 				4323F9F3223CC1F000AC3959 /* NSObject+JKAssociatedObject.m */,
 				4323FA0D223CC1F300AC3959 /* NSObject+JKGCD.m */,
@@ -1043,7 +1041,6 @@
 				437921E320ECC43F00B2EC88 /* NSData+JKAPNSToken.m */,
 				9309C73D21BB91B900AAFE87 /* NSString+Json.h */,
 				43291F4F20E520E0000C3C15 /* UITableView+FDKeyedHeightCache.h */,
-				434DDB5620C932DB00191FC1 /* CAMediaTimingFunction+JKAdditionalEquations.h */,
 				43205DDB20DD267D00AD6952 /* UITextView+JKSelect.h */,
 				43205DDC20DD267D00AD6952 /* UITextView+JKSelect.m */,
 				437921EC20ECC49800B2EC88 /* NSData+JKGzip.h */,
@@ -1205,6 +1202,8 @@
 				4323FA24223CC1F500AC3959 /* NSArray+JKBlock.m */,
 				4323FA08223CC1F200AC3959 /* NSDate+JKUtilities.m */,
 				4323FA28223CC1F500AC3959 /* NSManagedObject+JKDictionary.m */,
+				4323FA25223CC1F500AC3959 /* NSManagedObjectContext+JKObjectClear.h */,
+				4323F9E8223CC1EF00AC3959 /* NSMutableURLRequest+JKUpload.h */,
 				4323FA1E223CC1F400AC3959 /* NSNotificationCenterDemoViewController.h */,
 				4323FA2B223CC1F600AC3959 /* NSNumber+JKRound.m */,
 				4323FA29223CC1F500AC3959 /* NSObject+JKAutoCoding.h */,
@@ -1237,6 +1236,7 @@
 				43143920209497E70059D373 /* TODO.md */,
 				43993EB420E23E810017F1C3 /* UITextField+JKSelect.h */,
 				43D87B3020EB6E0400E991D6 /* UIScreen+JKFrame.h */,
+				434DDB5620C932DB00191FC1 /* CAMediaTimingFunction+JKAdditionalEquations.h */,
 				4323FA18223CC1F400AC3959 /* NSData+Image.m */,
 				4323FA09223CC1F200AC3959 /* NSData+JKBase64.h */,
 				9314D1E420C53ACE00BB2429 /* SLHelper */,
