@@ -209,7 +209,7 @@
 		4323F9E8223CC1EF00AC3959 /* NSMutableURLRequest+JKUpload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableURLRequest+JKUpload.h"; sourceTree = "<group>"; };
 		4323F9E9223CC1EF00AC3959 /* NSObject+JKKVOBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JKKVOBlocks.m"; sourceTree = "<group>"; };
 		4323F9EA223CC1EF00AC3959 /* UITableViewCell+JKNIB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+JKNIB.m"; sourceTree = "<group>"; };
-		4323F9EB223CC1EF00AC3959 /* UITableView+FDKeyedHeightCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableView+FDKeyedHeightCache.m"; path = "../Exten/UITableView+FDKeyedHeightCache.m"; sourceTree = "<group>"; };
+		4323F9EB223CC1EF00AC3959 /* UITableView+FDKeyedHeightCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableView+FDKeyedHeightCache.m"; path = "../UITableView+FDKeyedHeightCache.m"; sourceTree = "<group>"; };
 		4323F9EC223CC1EF00AC3959 /* UITableViewCell+JKDelaysContentTouches.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITableViewCell+JKDelaysContentTouches.h"; path = "../../JKCategories/UITableViewCell+JKDelaysContentTouches.h"; sourceTree = "<group>"; };
 		4323F9ED223CC1EF00AC3959 /* NSString+JKXMLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JKXMLDictionary.h"; sourceTree = "<group>"; };
 		4323F9EE223CC1EF00AC3959 /* NSObject+JKReflection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JKReflection.h"; sourceTree = "<group>"; };
@@ -650,9 +650,6 @@
 				434DDB4F20C9326800191FC1 /* CALayer+JKBorderColor.h */,
 				934CBCD8211821A500608F2F /* NSDate+Additions.m */,
 				4325535B20D8B45600FC0258 /* CAAnimationDemoViewController.h */,
-				4323F9EB223CC1EF00AC3959 /* UITableView+FDKeyedHeightCache.m */,
-				4323F9FE223CC1F100AC3959 /* UITableViewCell+JKNIB.h */,
-				4325536D20D8B56400FC0258 /* MKMapView+JKMoveLogo.h */,
 				43993EB420E23E810017F1C3 /* UITextField+JKSelect.h */,
 				43D87B3020EB6E0400E991D6 /* UIScreen+JKFrame.h */,
 				9309C73D21BB91B900AAFE87 /* NSString+Json.h */,
@@ -673,7 +670,6 @@
 				9306818F21BE65840021F976 /* NSString+MD5.m */,
 				43205DD320DD263300AD6952 /* UIView+Debug.h */,
 				431CB4CE20F4991D0043B0AC /* NSObject+JKReflection.m */,
-				43143922209497E80059D373 /* UNLICENSE */,
 				436B1EAC20DA300600419AC0 /* UIView+JKFind.m */,
 				431CB4DF20F49A800043B0AC /* NSString+JKBase64.h */,
 				9306819221BE65D50021F976 /* UIButton+Addtional.m */,
@@ -1086,8 +1082,10 @@
 				4325535520CFE88C00FC0258 /* UIWebView+JKWebStorage.h */,
 				4325535620CFE88D00FC0258 /* UIWebView+JKWebStorage.m */,
 				4323F9F7223CC1F000AC3959 /* NSString+Json.m */,
+				4323F9EB223CC1EF00AC3959 /* UITableView+FDKeyedHeightCache.m */,
 				4323F9FD223CC1F100AC3959 /* UITableView+JKiOS7Style.m */,
 				4323F9EC223CC1EF00AC3959 /* UITableViewCell+JKDelaysContentTouches.h */,
+				4323F9FE223CC1F100AC3959 /* UITableViewCell+JKNIB.h */,
 				4323F9EA223CC1EF00AC3959 /* UITableViewCell+JKNIB.m */,
 				4323FA04223CC1F200AC3959 /* UITableViewDemoViewController.h */,
 				4323FA05223CC1F200AC3959 /* UITableViewDemoViewController.m */,
@@ -1095,6 +1093,7 @@
 				4323FA34223CC1F700AC3959 /* UITextView+JKPlaceHolder.h */,
 				4323FA12223CC1F300AC3959 /* UIView+JKFind.h */,
 				4323FA32223CC1F600AC3959 /* UIView+JKFrame.h */,
+				4325536D20D8B56400FC0258 /* MKMapView+JKMoveLogo.h */,
 				4325536E20D8B56400FC0258 /* MKMapView+JKMoveLogo.m */,
 				4323FA13223CC1F300AC3959 /* UIView+JKScreenshot.h */,
 				4323F9F0223CC1F000AC3959 /* UIWindow+SLMotion.h */,
@@ -1141,6 +1140,7 @@
 				431CB4C520F498850043B0AC /* NSObject+JKEasyCopy.m */,
 				431C078220FE28BF00479559 /* NSURLSession+JKSynchronousTask.h */,
 				437B0A6420F360BA00E93844 /* NSObject+JKAutoCoding.m */,
+				43143922209497E80059D373 /* UNLICENSE */,
 				435D4C7920F0916900C8DC85 /* NSFileManager+JKPaths.h */,
 				431C078820FE291700479559 /* NSUserDefaults+JKSafeAccess.m */,
 				437B0A5B20F3602E00E93844 /* NSObject+JKAddProperty.h */,
