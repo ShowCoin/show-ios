@@ -294,7 +294,7 @@
 		4325536A20D8B53300FC0258 /* MKMapView+JKBetterMaps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKMapView+JKBetterMaps.h"; sourceTree = "<group>"; };
 		4325536B20D8B53300FC0258 /* MKMapView+JKBetterMaps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKMapView+JKBetterMaps.m"; sourceTree = "<group>"; };
 		4325536D20D8B56400FC0258 /* MKMapView+JKMoveLogo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKMapView+JKMoveLogo.h"; sourceTree = "<group>"; };
-		4325536E20D8B56400FC0258 /* MKMapView+JKMoveLogo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MKMapView+JKMoveLogo.m"; path = "../MKMapView+JKMoveLogo.m"; sourceTree = "<group>"; };
+		4325536E20D8B56400FC0258 /* MKMapView+JKMoveLogo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MKMapView+JKMoveLogo.m"; path = "../Exten/MKMapView+JKMoveLogo.m"; sourceTree = "<group>"; };
 		4325537020D8B57B00FC0258 /* MKMapView+JKZoomLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKMapView+JKZoomLevel.h"; sourceTree = "<group>"; };
 		43291F3C20E51F50000C3C15 /* UITextFieldDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITextFieldDemoViewController.h; sourceTree = "<group>"; };
 		43291F4C20E520CA000C3C15 /* UITableView+FDTemplateLayoutCellDebug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableView+FDTemplateLayoutCellDebug.m"; path = "../Exten/UITableView+FDTemplateLayoutCellDebug.m"; sourceTree = "<group>"; };
@@ -665,8 +665,10 @@
 				4323FA23223CC1F500AC3959 /* UISplitViewController+JKQuickAccess.h */,
 				4323F9FD223CC1F100AC3959 /* UITableView+JKiOS7Style.m */,
 				4323FA04223CC1F200AC3959 /* UITableViewDemoViewController.h */,
+				4323FA05223CC1F200AC3959 /* UITableViewDemoViewController.m */,
 				4323FA34223CC1F700AC3959 /* UITextView+JKPlaceHolder.h */,
 				4323FA32223CC1F600AC3959 /* UIView+JKFrame.h */,
+				4325536E20D8B56400FC0258 /* MKMapView+JKMoveLogo.m */,
 				4323FA13223CC1F300AC3959 /* UIView+JKScreenshot.h */,
 				4323F9FB223CC1F100AC3959 /* NSString+JKEmoji.m */,
 				4323F9ED223CC1EF00AC3959 /* NSString+JKXMLDictionary.h */,
@@ -698,6 +700,7 @@
 				431CB4DF20F49A800043B0AC /* NSString+JKBase64.h */,
 				437B0A5520F35FDE00E93844 /* NSNumber+JKRomanNumerals.h */,
 				9309C74121BB924700AAFE87 /* UIImage+Effects.m */,
+				9306819121BE65BD0021F976 /* UIButton+Addtional.h */,
 				9306819221BE65D50021F976 /* UIButton+Addtional.m */,
 				9311B41921BF8A16009C9A1D /* UIColor+HexString.m */,
 				4325536820D8B51000FC0258 /* CLLocationManager+Blocks.h */,
@@ -1108,11 +1111,9 @@
 				4323F9EC223CC1EF00AC3959 /* UITableViewCell+JKDelaysContentTouches.h */,
 				4323F9FE223CC1F100AC3959 /* UITableViewCell+JKNIB.h */,
 				4323F9EA223CC1EF00AC3959 /* UITableViewCell+JKNIB.m */,
-				4323FA05223CC1F200AC3959 /* UITableViewDemoViewController.m */,
 				4323FA27223CC1F500AC3959 /* UITextView+JKPinchZoom.m */,
 				4323FA12223CC1F300AC3959 /* UIView+JKFind.h */,
 				4325536D20D8B56400FC0258 /* MKMapView+JKMoveLogo.h */,
-				4325536E20D8B56400FC0258 /* MKMapView+JKMoveLogo.m */,
 				4323F9F0223CC1F000AC3959 /* UIWindow+SLMotion.h */,
 				4325537020D8B57B00FC0258 /* MKMapView+JKZoomLevel.h */,
 				9343E47821C7D17C0001B9C1 /* UIView+Additional.h */,
@@ -1156,7 +1157,6 @@
 				435D4C7920F0916900C8DC85 /* NSFileManager+JKPaths.h */,
 				437B0A5B20F3602E00E93844 /* NSObject+JKAddProperty.h */,
 				437B0A5920F3600900E93844 /* NSNumber+JKRound.h */,
-				9306819121BE65BD0021F976 /* UIButton+Addtional.h */,
 				9311B41621BF89A6009C9A1D /* UIButton+ImageTitleSpacing.m */,
 				4325536720D8B50F00FC0258 /* CLLocationManager+Blocks.m */,
 				435D4C7C20F0919600C8DC85 /* NSHTTPCookieStorage+JKFreezeDry.m */,
