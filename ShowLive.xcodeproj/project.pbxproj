@@ -298,8 +298,8 @@
 		4325537020D8B57B00FC0258 /* MKMapView+JKZoomLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKMapView+JKZoomLevel.h"; sourceTree = "<group>"; };
 		43291F3C20E51F50000C3C15 /* UITextFieldDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITextFieldDemoViewController.h; sourceTree = "<group>"; };
 		43291F4C20E520CA000C3C15 /* UITableView+FDTemplateLayoutCellDebug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableView+FDTemplateLayoutCellDebug.m"; path = "../UITableView+FDTemplateLayoutCellDebug.m"; sourceTree = "<group>"; };
-		43291F4F20E520E0000C3C15 /* UITableView+FDKeyedHeightCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITableView+FDKeyedHeightCache.h"; path = "../Exten/SLHelper/UITableView+FDKeyedHeightCache.h"; sourceTree = "<group>"; };
-		434DDB4F20C9326800191FC1 /* CALayer+JKBorderColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CALayer+JKBorderColor.h"; path = "../Exten/SLHelper/CALayer+JKBorderColor.h"; sourceTree = "<group>"; };
+		43291F4F20E520E0000C3C15 /* UITableView+FDKeyedHeightCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDKeyedHeightCache.h"; sourceTree = "<group>"; };
+		434DDB4F20C9326800191FC1 /* CALayer+JKBorderColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+JKBorderColor.h"; sourceTree = "<group>"; };
 		434DDB5620C932DB00191FC1 /* CAMediaTimingFunction+JKAdditionalEquations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAMediaTimingFunction+JKAdditionalEquations.h"; sourceTree = "<group>"; };
 		434DDB5820C932FC00191FC1 /* CAShapeLayer+JKUIBezierPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CAShapeLayer+JKUIBezierPath.h"; path = "../../CAShapeLayer+JKUIBezierPath.h"; sourceTree = "<group>"; };
 		434DDB5B20C9332700191FC1 /* CATransaction+JKAnimateWithDuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CATransaction+JKAnimateWithDuration.m"; sourceTree = "<group>"; };
@@ -633,9 +633,6 @@
 			isa = PBXGroup;
 			children = (
 				4323FA0B223CC1F200AC3959 /* NSIndexPath+JKOffset.h */,
-				434DDB4F20C9326800191FC1 /* CALayer+JKBorderColor.h */,
-				4325535B20D8B45600FC0258 /* CAAnimationDemoViewController.h */,
-				43291F4F20E520E0000C3C15 /* UITableView+FDKeyedHeightCache.h */,
 				431F64E120F8F2300087DB8E /* NSString+JKRemoveEmoji.m */,
 				431F64B720F7945C0087DB8E /* UIPopoverController+iPhone.m */,
 			);
@@ -1040,6 +1037,7 @@
 				4323FA2A223CC1F600AC3959 /* UIScrollView+JKPages.h */,
 				4323FA0A223CC1F200AC3959 /* UIScrollView+JKPages.m */,
 				43993EBD20E23EF90017F1C3 /* UITextField+JKBlocks.h */,
+				434DDB4F20C9326800191FC1 /* CALayer+JKBorderColor.h */,
 				435D4C4920EDEAAD00C8DC85 /* NSDate+JKLunarCalendar.m */,
 				435D4C4620EDEA8A00C8DC85 /* NSDate+JKInternetDateTime.h */,
 				435D4C4520EDEA8A00C8DC85 /* NSDate+JKInternetDateTime.m */,
@@ -1053,6 +1051,7 @@
 				4323FA11223CC1F300AC3959 /* UISplitViewController+JKQuickAccess.m */,
 				4325536B20D8B53300FC0258 /* MKMapView+JKBetterMaps.m */,
 				4325535E20D8B49F00FC0258 /* CAShapeLayerDemoViewController.m */,
+				4325535B20D8B45600FC0258 /* CAAnimationDemoViewController.h */,
 				4325535520CFE88C00FC0258 /* UIWebView+JKWebStorage.h */,
 				4325535620CFE88D00FC0258 /* UIWebView+JKWebStorage.m */,
 				4323F9F7223CC1F000AC3959 /* NSString+Json.m */,
@@ -1089,6 +1088,7 @@
 				437921E320ECC43F00B2EC88 /* NSData+JKAPNSToken.m */,
 				43D87B3020EB6E0400E991D6 /* UIScreen+JKFrame.h */,
 				9309C73D21BB91B900AAFE87 /* NSString+Json.h */,
+				43291F4F20E520E0000C3C15 /* UITableView+FDKeyedHeightCache.h */,
 				434DDB5620C932DB00191FC1 /* CAMediaTimingFunction+JKAdditionalEquations.h */,
 				43205DDB20DD267D00AD6952 /* UITextView+JKSelect.h */,
 				43205DDC20DD267D00AD6952 /* UITextView+JKSelect.m */,
