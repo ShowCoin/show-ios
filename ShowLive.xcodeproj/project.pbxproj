@@ -224,7 +224,7 @@
 		4323F9F7223CC1F000AC3959 /* NSString+Json.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Json.m"; path = "../Exten/NSString+Json.m"; sourceTree = "<group>"; };
 		4323F9F8223CC1F000AC3959 /* NSData+JKEncrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+JKEncrypt.h"; sourceTree = "<group>"; };
 		4323F9F9223CC1F000AC3959 /* UINavigationController+JKStackManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+JKStackManager.m"; path = "../Exten/SLHelper/UINavigationController+JKStackManager.m"; sourceTree = "<group>"; };
-		4323F9FA223CC1F100AC3959 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Additions.h"; path = "../Exten/SLHelper/NSString+Additions.h"; sourceTree = "<group>"; };
+		4323F9FA223CC1F100AC3959 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Additions.h"; path = "SLHelper/NSString+Additions.h"; sourceTree = "<group>"; };
 		4323F9FB223CC1F100AC3959 /* NSString+JKEmoji.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+JKEmoji.m"; path = "../Exten/SLHelper/NSString+JKEmoji.m"; sourceTree = "<group>"; };
 		4323F9FC223CC1F100AC3959 /* UIResponder+JKFirstResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+JKFirstResponder.h"; sourceTree = "<group>"; };
 		4323F9FD223CC1F100AC3959 /* UITableView+JKiOS7Style.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+JKiOS7Style.m"; sourceTree = "<group>"; };
@@ -256,7 +256,7 @@
 		4323FA17223CC1F400AC3959 /* NSDate+JKUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+JKUtilities.h"; path = "../NSDate+JKUtilities.h"; sourceTree = "<group>"; };
 		4323FA18223CC1F400AC3959 /* NSData+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Image.m"; sourceTree = "<group>"; };
 		4323FA19223CC1F400AC3959 /* NSDate+JKExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JKExtension.m"; sourceTree = "<group>"; };
-		4323FA1A223CC1F400AC3959 /* NSRunLoop+JKPerformBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSRunLoop+JKPerformBlock.m"; path = "../Exten/SLHelper/NSRunLoop+JKPerformBlock.m"; sourceTree = "<group>"; };
+		4323FA1A223CC1F400AC3959 /* NSRunLoop+JKPerformBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSRunLoop+JKPerformBlock.m"; path = "SLHelper/NSRunLoop+JKPerformBlock.m"; sourceTree = "<group>"; };
 		4323FA1B223CC1F400AC3959 /* CAShapeLayer+JKUIBezierPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAShapeLayer+JKUIBezierPath.h"; sourceTree = "<group>"; };
 		4323FA1C223CC1F400AC3959 /* CATransactionDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CATransactionDemoViewController.m; sourceTree = "<group>"; };
 		4323FA1D223CC1F400AC3959 /* NSURL+JKQueryDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSURL+JKQueryDictionary.m"; path = "../Exten/SLHelper/NSURL+JKQueryDictionary.m"; sourceTree = "<group>"; };
@@ -648,12 +648,9 @@
 				4323FA2B223CC1F600AC3959 /* NSNumber+JKRound.m */,
 				4323FA22223CC1F500AC3959 /* NSObject+JKAppInfo.h */,
 				4323F9F3223CC1F000AC3959 /* NSObject+JKAssociatedObject.m */,
-				4323FA29223CC1F500AC3959 /* NSObject+JKAutoCoding.h */,
 				4323FA0D223CC1F300AC3959 /* NSObject+JKGCD.m */,
 				4323F9EE223CC1EF00AC3959 /* NSObject+JKReflection.h */,
-				4323FA1A223CC1F400AC3959 /* NSRunLoop+JKPerformBlock.m */,
 				4323FA20223CC1F500AC3959 /* NSSet+JKBlock.h */,
-				4323F9FA223CC1F100AC3959 /* NSString+Additions.h */,
 				4323FA0F223CC1F300AC3959 /* NSString+JKBase64.m */,
 				4323FA0C223CC1F200AC3959 /* NSString+JKContains.m */,
 				4323FA03223CC1F200AC3959 /* NSString+JKEmoji.h */,
@@ -691,7 +688,6 @@
 				4323F9EC223CC1EF00AC3959 /* UITableViewCell+JKDelaysContentTouches.h */,
 				4323F9FE223CC1F100AC3959 /* UITableViewCell+JKNIB.h */,
 				4323F9EA223CC1EF00AC3959 /* UITableViewCell+JKNIB.m */,
-				4323FA04223CC1F200AC3959 /* UITableViewDemoViewController.h */,
 				4323FA05223CC1F200AC3959 /* UITableViewDemoViewController.m */,
 				4323FA27223CC1F500AC3959 /* UITextView+JKPinchZoom.m */,
 				4323FA34223CC1F700AC3959 /* UITextView+JKPlaceHolder.h */,
@@ -730,8 +726,6 @@
 				4325535F20D8B49F00FC0258 /* CAShapeLayerDemoViewController.h */,
 				435D4C4C20EDEAC500C8DC85 /* NSDate+JKReporting.m */,
 				934AE46320FC6C1000B60AD4 /* NSString+Additions.m */,
-				4374EB0E20F62F7C00BB947F /* NSString+JKDictionaryValue.h */,
-				43205DE120DD26C400AD6952 /* UITextView+JKPinchZoom.h */,
 				431F64E120F8F2300087DB8E /* NSString+JKRemoveEmoji.m */,
 				431C077520FE279600479559 /* NSURLConnection+JKSelfSigned.m */,
 				437B0A4F20F35F9C00E93844 /* NSNotificationCenterDemoViewController.m */,
@@ -1239,6 +1233,12 @@
 		934AE45E20FC6B7B00B60AD4 /* Exten */ = {
 			isa = PBXGroup;
 			children = (
+				4323FA29223CC1F500AC3959 /* NSObject+JKAutoCoding.h */,
+				4323FA1A223CC1F400AC3959 /* NSRunLoop+JKPerformBlock.m */,
+				4323F9FA223CC1F100AC3959 /* NSString+Additions.h */,
+				4323FA04223CC1F200AC3959 /* UITableViewDemoViewController.h */,
+				4374EB0E20F62F7C00BB947F /* NSString+JKDictionaryValue.h */,
+				43205DE120DD26C400AD6952 /* UITextView+JKPinchZoom.h */,
 				9314D1E420C53ACE00BB2429 /* SLHelper */,
 			);
 			path = Exten;
