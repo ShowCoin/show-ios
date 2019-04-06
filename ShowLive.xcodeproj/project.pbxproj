@@ -210,7 +210,7 @@
 		4323F9E9223CC1EF00AC3959 /* NSObject+JKKVOBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JKKVOBlocks.m"; sourceTree = "<group>"; };
 		4323F9EA223CC1EF00AC3959 /* UITableViewCell+JKNIB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+JKNIB.m"; sourceTree = "<group>"; };
 		4323F9EB223CC1EF00AC3959 /* UITableView+FDKeyedHeightCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableView+FDKeyedHeightCache.m"; path = "../../UITableView+FDKeyedHeightCache.m"; sourceTree = "<group>"; };
-		4323F9EC223CC1EF00AC3959 /* UITableViewCell+JKDelaysContentTouches.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITableViewCell+JKDelaysContentTouches.h"; path = "../../JKCategories/UITableViewCell+JKDelaysContentTouches.h"; sourceTree = "<group>"; };
+		4323F9EC223CC1EF00AC3959 /* UITableViewCell+JKDelaysContentTouches.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+JKDelaysContentTouches.h"; sourceTree = "<group>"; };
 		4323F9ED223CC1EF00AC3959 /* NSString+JKXMLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JKXMLDictionary.h"; sourceTree = "<group>"; };
 		4323F9EE223CC1EF00AC3959 /* NSObject+JKReflection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JKReflection.h"; sourceTree = "<group>"; };
 		4323F9EF223CC1EF00AC3959 /* UINavigationController+JKTransitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+JKTransitions.h"; sourceTree = "<group>"; };
@@ -246,7 +246,7 @@
 		4323FA0D223CC1F300AC3959 /* NSObject+JKGCD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JKGCD.m"; sourceTree = "<group>"; };
 		4323FA0E223CC1F300AC3959 /* CLLocation+JKCH1903.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLLocation+JKCH1903.m"; sourceTree = "<group>"; };
 		4323FA0F223CC1F300AC3959 /* NSString+JKBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+JKBase64.m"; path = "../../JKCategories/NSString+JKBase64.m"; sourceTree = "<group>"; };
-		4323FA10223CC1F300AC3959 /* NSInvocation+JKBb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSInvocation+JKBb.h"; path = "../../JKCategories/NSInvocation+JKBb.h"; sourceTree = "<group>"; };
+		4323FA10223CC1F300AC3959 /* NSInvocation+JKBb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSInvocation+JKBb.h"; sourceTree = "<group>"; };
 		4323FA11223CC1F300AC3959 /* UISplitViewController+JKQuickAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISplitViewController+JKQuickAccess.m"; sourceTree = "<group>"; };
 		4323FA12223CC1F300AC3959 /* UIView+JKFind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+JKFind.h"; path = "../../JKCategories/UIView+JKFind.h"; sourceTree = "<group>"; };
 		4323FA13223CC1F300AC3959 /* UIView+JKScreenshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+JKScreenshot.h"; path = "../UIView+JKScreenshot.h"; sourceTree = "<group>"; };
@@ -635,6 +635,7 @@
 				431CB4CE20F4991D0043B0AC /* NSObject+JKReflection.m */,
 				43D87B2720EB6D9900E991D6 /* UIScrollView+EmptyDataSet.m */,
 				4323FA16223CC1F400AC3959 /* CAAnimationDemoViewController.m */,
+				4323FA1B223CC1F400AC3959 /* CAShapeLayer+JKUIBezierPath.h */,
 				4323FA1C223CC1F400AC3959 /* CATransactionDemoViewController.m */,
 				4323FA2F223CC1F600AC3959 /* CLLocation+JKCH1903.h */,
 				4323FA0E223CC1F300AC3959 /* CLLocation+JKCH1903.m */,
@@ -647,6 +648,7 @@
 				4323FA15223CC1F300AC3959 /* NSDictionary+JKBlock.h */,
 				4323FA06223CC1F200AC3959 /* NSFileManager+JKPaths.m */,
 				4323FA0B223CC1F200AC3959 /* NSIndexPath+JKOffset.h */,
+				4323FA10223CC1F300AC3959 /* NSInvocation+JKBb.h */,
 				4323F9F1223CC1F000AC3959 /* NSManagedObject+JKDictionary.h */,
 				4323FA28223CC1F500AC3959 /* NSManagedObject+JKDictionary.m */,
 				4323FA14223CC1F300AC3959 /* NSManagedObjectContext+JKFetching.h */,
@@ -690,6 +692,7 @@
 				4325535B20D8B45600FC0258 /* CAAnimationDemoViewController.h */,
 				4325535620CFE88D00FC0258 /* UIWebView+JKWebStorage.m */,
 				4323F9FD223CC1F100AC3959 /* UITableView+JKiOS7Style.m */,
+				4323F9EC223CC1EF00AC3959 /* UITableViewCell+JKDelaysContentTouches.h */,
 				4323F9FE223CC1F100AC3959 /* UITableViewCell+JKNIB.h */,
 				4323F9EA223CC1EF00AC3959 /* UITableViewCell+JKNIB.m */,
 				4323FA04223CC1F200AC3959 /* UITableViewDemoViewController.h */,
@@ -1131,12 +1134,10 @@
 			isa = PBXGroup;
 			children = (
 				4318BC7921BB962E008FD7F3 /* UIScrollView+EmptyDataSet.m */,
-				4323FA1B223CC1F400AC3959 /* CAShapeLayer+JKUIBezierPath.h */,
 				434DDB5820C932FC00191FC1 /* CAShapeLayer+JKUIBezierPath.h */,
 				4323FA2D223CC1F600AC3959 /* CAShapeLayer+JKUIBezierPath.m */,
 				4323FA19223CC1F400AC3959 /* NSDate+JKExtension.m */,
 				4323FA2C223CC1F600AC3959 /* NSFetchRequest+JKExtensions.m */,
-				4323FA10223CC1F300AC3959 /* NSInvocation+JKBb.h */,
 				4323FA25223CC1F500AC3959 /* NSManagedObjectContext+JKObjectClear.h */,
 				4323FA22223CC1F500AC3959 /* NSObject+JKAppInfo.h */,
 				4323FA1A223CC1F400AC3959 /* NSRunLoop+JKPerformBlock.m */,
@@ -1150,7 +1151,6 @@
 				4325535520CFE88C00FC0258 /* UIWebView+JKWebStorage.h */,
 				4323F9F7223CC1F000AC3959 /* NSString+Json.m */,
 				4323F9EB223CC1EF00AC3959 /* UITableView+FDKeyedHeightCache.m */,
-				4323F9EC223CC1EF00AC3959 /* UITableViewCell+JKDelaysContentTouches.h */,
 				4325536E20D8B56400FC0258 /* MKMapView+JKMoveLogo.m */,
 				434DDB6220C9337900191FC1 /* UIWindow+JKHierarchy.m */,
 				9309C73D21BB91B900AAFE87 /* NSString+Json.h */,
