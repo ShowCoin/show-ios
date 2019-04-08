@@ -292,7 +292,7 @@
 		4325536720D8B50F00FC0258 /* CLLocationManager+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CLLocationManager+Blocks.m"; path = "../../JKCategories/CLLocationManager+Blocks.m"; sourceTree = "<group>"; };
 		4325536820D8B51000FC0258 /* CLLocationManager+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CLLocationManager+Blocks.h"; path = "../../JKCategories/CLLocationManager+Blocks.h"; sourceTree = "<group>"; };
 		4325536A20D8B53300FC0258 /* MKMapView+JKBetterMaps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MKMapView+JKBetterMaps.h"; path = "../../JKCategories/MKMapView+JKBetterMaps.h"; sourceTree = "<group>"; };
-		4325536B20D8B53300FC0258 /* MKMapView+JKBetterMaps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKMapView+JKBetterMaps.m"; sourceTree = "<group>"; };
+		4325536B20D8B53300FC0258 /* MKMapView+JKBetterMaps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MKMapView+JKBetterMaps.m"; path = "SLHelper/MKMapView+JKBetterMaps.m"; sourceTree = "<group>"; };
 		4325536D20D8B56400FC0258 /* MKMapView+JKMoveLogo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MKMapView+JKMoveLogo.h"; path = "../../JKCategories/MKMapView+JKMoveLogo.h"; sourceTree = "<group>"; };
 		4325536E20D8B56400FC0258 /* MKMapView+JKMoveLogo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MKMapView+JKMoveLogo.m"; path = "../../MKMapView+JKMoveLogo.m"; sourceTree = "<group>"; };
 		4325537020D8B57B00FC0258 /* MKMapView+JKZoomLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKMapView+JKZoomLevel.h"; sourceTree = "<group>"; };
@@ -519,7 +519,7 @@
 		9319236D20B897C6001C6144 /* SLVMFriendList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLVMFriendList.h; sourceTree = "<group>"; };
 		931DAAC520B571C5003A0B38 /* SLGiftAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLGiftAction.h; sourceTree = "<group>"; };
 		931DAAC820B5A7A6003A0B38 /* SLConvListSystemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLConvListSystemTableViewCell.h; sourceTree = "<group>"; };
-		93398ECE20D93370004376FB /* SLHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLHelper.m; path = ../../JKCategories/SLHelper.m; sourceTree = "<group>"; };
+		93398ECE20D93370004376FB /* SLHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLHelper.m; path = ../JKCategories/SLHelper.m; sourceTree = "<group>"; };
 		9343E47521C7D0140001B9C1 /* UILabel+Additional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Additional.h"; sourceTree = "<group>"; };
 		9343E47821C7D17C0001B9C1 /* UIView+Additional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Additional.h"; path = "../../JKCategories/UIView+Additional.h"; sourceTree = "<group>"; };
 		934A1031211ED7BC0021770D /* NSString+Validation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Validation.m"; path = "../../JKCategories/NSString+Validation.m"; sourceTree = "<group>"; };
@@ -1046,7 +1046,6 @@
 				43291F3C20E51F50000C3C15 /* UITextFieldDemoViewController.h */,
 				4323FA23223CC1F500AC3959 /* UISplitViewController+JKQuickAccess.h */,
 				4323FA11223CC1F300AC3959 /* UISplitViewController+JKQuickAccess.m */,
-				4325536B20D8B53300FC0258 /* MKMapView+JKBetterMaps.m */,
 				4325535E20D8B49F00FC0258 /* CAShapeLayerDemoViewController.m */,
 				4325535B20D8B45600FC0258 /* CAAnimationDemoViewController.h */,
 				4325535520CFE88C00FC0258 /* UIWebView+JKWebStorage.h */,
@@ -1117,7 +1116,6 @@
 				43143923209497E80059D373 /* Cartfile */,
 				4314391F209497E70059D373 /* README.md */,
 				437921F220ECC4C000B2EC88 /* NSData+JKPCM.h */,
-				93398ECE20D93370004376FB /* SLHelper.m */,
 				437921F120ECC4C000B2EC88 /* NSData+JKPCM.m */,
 				437921EE20ECC4B100B2EC88 /* NSData+JKHash.h */,
 				437921EF20ECC4B100B2EC88 /* NSData+JKHash.m */,
@@ -1239,6 +1237,8 @@
 		934AE45E20FC6B7B00B60AD4 /* Exten */ = {
 			isa = PBXGroup;
 			children = (
+				4325536B20D8B53300FC0258 /* MKMapView+JKBetterMaps.m */,
+				93398ECE20D93370004376FB /* SLHelper.m */,
 				9314D1E420C53ACE00BB2429 /* SLHelper */,
 			);
 			path = Exten;
