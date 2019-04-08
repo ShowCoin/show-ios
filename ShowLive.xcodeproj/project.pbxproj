@@ -226,11 +226,11 @@
 		4323F9F9223CC1F000AC3959 /* UINavigationController+JKStackManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+JKStackManager.m"; sourceTree = "<group>"; };
 		4323F9FA223CC1F100AC3959 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
 		4323F9FB223CC1F100AC3959 /* NSString+JKEmoji.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JKEmoji.m"; sourceTree = "<group>"; };
-		4323F9FC223CC1F100AC3959 /* UIResponder+JKFirstResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIResponder+JKFirstResponder.h"; path = "../../JKCategories/UIResponder+JKFirstResponder.h"; sourceTree = "<group>"; };
+		4323F9FC223CC1F100AC3959 /* UIResponder+JKFirstResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIResponder+JKFirstResponder.h"; path = "../JKCategories/UIResponder+JKFirstResponder.h"; sourceTree = "<group>"; };
 		4323F9FD223CC1F100AC3959 /* UITableView+JKiOS7Style.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableView+JKiOS7Style.m"; path = "../../JKCategories/UITableView+JKiOS7Style.m"; sourceTree = "<group>"; };
 		4323F9FE223CC1F100AC3959 /* UITableViewCell+JKNIB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITableViewCell+JKNIB.h"; path = "../../JKCategories/UITableViewCell+JKNIB.h"; sourceTree = "<group>"; };
 		4323F9FF223CC1F100AC3959 /* UIResponderDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIResponderDemoViewController.h; path = ../../JKCategories/UIResponderDemoViewController.h; sourceTree = "<group>"; };
-		4323FA00223CC1F100AC3959 /* UIScrollView+JKAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+JKAddition.h"; path = "../../JKCategories/UIScrollView+JKAddition.h"; sourceTree = "<group>"; };
+		4323FA00223CC1F100AC3959 /* UIScrollView+JKAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+JKAddition.h"; path = "../JKCategories/UIScrollView+JKAddition.h"; sourceTree = "<group>"; };
 		4323FA01223CC1F100AC3959 /* NSURLSession+JKSynchronousTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSURLSession+JKSynchronousTask.m"; path = "../../JKCategories/NSURLSession+JKSynchronousTask.m"; sourceTree = "<group>"; };
 		4323FA02223CC1F100AC3959 /* UINavigationController+JKTransitions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+JKTransitions.m"; path = "../../JKCategories/UINavigationController+JKTransitions.m"; sourceTree = "<group>"; };
 		4323FA03223CC1F200AC3959 /* NSString+JKEmoji.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+JKEmoji.h"; path = "../../NSString+JKEmoji.h"; sourceTree = "<group>"; };
@@ -1025,10 +1025,8 @@
 				4323F9F9223CC1F000AC3959 /* UINavigationController+JKStackManager.m */,
 				4323F9EF223CC1EF00AC3959 /* UINavigationController+JKTransitions.h */,
 				4323FA02223CC1F100AC3959 /* UINavigationController+JKTransitions.m */,
-				4323F9FC223CC1F100AC3959 /* UIResponder+JKFirstResponder.h */,
 				4323F9FF223CC1F100AC3959 /* UIResponderDemoViewController.h */,
 				4323F9F2223CC1F000AC3959 /* UIResponderDemoViewController.m */,
-				4323FA00223CC1F100AC3959 /* UIScrollView+JKAddition.h */,
 				4323FA07223CC1F200AC3959 /* UIScrollView+JKAddition.m */,
 				4323FA2A223CC1F600AC3959 /* UIScrollView+JKPages.h */,
 				4323FA0A223CC1F200AC3959 /* UIScrollView+JKPages.m */,
@@ -1228,6 +1226,8 @@
 			isa = PBXGroup;
 			children = (
 				4323FA0D223CC1F300AC3959 /* NSObject+JKGCD.m */,
+				4323F9FC223CC1F100AC3959 /* UIResponder+JKFirstResponder.h */,
+				4323FA00223CC1F100AC3959 /* UIScrollView+JKAddition.h */,
 				43291F3C20E51F50000C3C15 /* UITextFieldDemoViewController.h */,
 				4325536B20D8B53300FC0258 /* MKMapView+JKBetterMaps.m */,
 				4325535B20D8B45600FC0258 /* CAAnimationDemoViewController.h */,
