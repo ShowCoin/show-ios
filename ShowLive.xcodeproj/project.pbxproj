@@ -302,7 +302,7 @@
 		434DDB4F20C9326800191FC1 /* CALayer+JKBorderColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CALayer+JKBorderColor.h"; path = "../../JKCategories/CALayer+JKBorderColor.h"; sourceTree = "<group>"; };
 		434DDB5620C932DB00191FC1 /* CAMediaTimingFunction+JKAdditionalEquations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CAMediaTimingFunction+JKAdditionalEquations.h"; path = "../../JKCategories/CAMediaTimingFunction+JKAdditionalEquations.h"; sourceTree = "<group>"; };
 		434DDB5820C932FC00191FC1 /* CAShapeLayer+JKUIBezierPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CAShapeLayer+JKUIBezierPath.h"; path = "../CAShapeLayer+JKUIBezierPath.h"; sourceTree = "<group>"; };
-		434DDB5B20C9332700191FC1 /* CATransaction+JKAnimateWithDuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CATransaction+JKAnimateWithDuration.m"; path = "../../JKCategories/CATransaction+JKAnimateWithDuration.m"; sourceTree = "<group>"; };
+		434DDB5B20C9332700191FC1 /* CATransaction+JKAnimateWithDuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CATransaction+JKAnimateWithDuration.m"; sourceTree = "<group>"; };
 		434DDB6220C9337900191FC1 /* UIWindow+JKHierarchy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIWindow+JKHierarchy.m"; path = "../../../JKCategories/UIWindow+JKHierarchy.m"; sourceTree = "<group>"; };
 		43517CE9226B4AF6000B33F3 /* UITextField+JKSelect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UITextField+JKSelect.h"; path = "../../../../JKCategories/UITextField+JKSelect.h"; sourceTree = "<group>"; };
 		43517CEA226B4AFE000B33F3 /* NSString+Additions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSString+Additions.m"; path = "../../../../JKCategories/NSString+Additions.m"; sourceTree = "<group>"; };
@@ -645,6 +645,7 @@
 				43517CED226B4B3A000B33F3 /* NSData+JKBase64.h */,
 				437B0A6120F3608A00E93844 /* NSObject+JKAssociatedObject.h */,
 				436B1EA420DA2FB000419AC0 /* UIView+JKVisuals.h */,
+				434DDB5B20C9332700191FC1 /* CATransaction+JKAnimateWithDuration.m */,
 				431C075F20FC8D9000479559 /* NSString+JKXMLDictionary.m */,
 				43D87B2B20EB6DCE00E991D6 /* UIScrollView+APParallaxHeader.m */,
 				437921F220ECC4C000B2EC88 /* NSData+JKPCM.h */,
@@ -1156,7 +1157,6 @@
 				43993EC320E23F790017F1C3 /* UITableView+FDTemplateLayoutCell.m */,
 				4325536A20D8B53300FC0258 /* MKMapView+JKBetterMaps.h */,
 				43D87B3120EB6E0400E991D6 /* UIScreen+JKFrame.m */,
-				434DDB5B20C9332700191FC1 /* CATransaction+JKAnimateWithDuration.m */,
 				4374EB0C20F62F5600BB947F /* NSString+JKContains.h */,
 				43143921209497E80059D373 /* .gitignore */,
 				43143923209497E80059D373 /* Cartfile */,
