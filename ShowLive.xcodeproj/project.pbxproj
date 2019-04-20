@@ -235,7 +235,7 @@
 		4323FA02223CC1F100AC3959 /* UINavigationController+JKTransitions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+JKTransitions.m"; path = "../../JKCategories/UINavigationController+JKTransitions.m"; sourceTree = "<group>"; };
 		4323FA03223CC1F200AC3959 /* NSString+JKEmoji.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+JKEmoji.h"; path = "../NSString+JKEmoji.h"; sourceTree = "<group>"; };
 		4323FA04223CC1F200AC3959 /* UITableViewDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UITableViewDemoViewController.h; path = ../../../JKCategories/UITableViewDemoViewController.h; sourceTree = "<group>"; };
-		4323FA05223CC1F200AC3959 /* UITableViewDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UITableViewDemoViewController.m; path = ../../JKCategories/UITableViewDemoViewController.m; sourceTree = "<group>"; };
+		4323FA05223CC1F200AC3959 /* UITableViewDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UITableViewDemoViewController.m; path = ../../../JKCategories/UITableViewDemoViewController.m; sourceTree = "<group>"; };
 		4323FA06223CC1F200AC3959 /* NSFileManager+JKPaths.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSFileManager+JKPaths.m"; path = "../../JKCategories/NSFileManager+JKPaths.m"; sourceTree = "<group>"; };
 		4323FA07223CC1F200AC3959 /* UIScrollView+JKAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+JKAddition.m"; path = "../../JKCategories/UIScrollView+JKAddition.m"; sourceTree = "<group>"; };
 		4323FA08223CC1F200AC3959 /* NSDate+JKUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+JKUtilities.m"; path = "../../JKCategories/NSDate+JKUtilities.m"; sourceTree = "<group>"; };
@@ -353,7 +353,7 @@
 		437B0A6420F360BA00E93844 /* NSObject+JKAutoCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JKAutoCoding.m"; sourceTree = "<group>"; };
 		43993EB120E23E390017F1C3 /* UITextView+JKInputLimit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITextView+JKInputLimit.h"; path = "../../JKCategories/UITextView+JKInputLimit.h"; sourceTree = "<group>"; };
 		43993EB420E23E810017F1C3 /* UITextField+JKSelect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITextField+JKSelect.h"; path = "../../../JKCategories/UITextField+JKSelect.h"; sourceTree = "<group>"; };
-		43993EBD20E23EF90017F1C3 /* UITextField+JKBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITextField+JKBlocks.h"; path = "SLHelper/UITextField+JKBlocks.h"; sourceTree = "<group>"; };
+		43993EBD20E23EF90017F1C3 /* UITextField+JKBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITextField+JKBlocks.h"; path = "../../JKCategories/SLHelper/UITextField+JKBlocks.h"; sourceTree = "<group>"; };
 		43993EBE20E23EF90017F1C3 /* UITextField+JKBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITextField+JKBlocks.m"; path = "../JKCategories/UITextField+JKBlocks.m"; sourceTree = "<group>"; };
 		43993EC320E23F790017F1C3 /* UITableView+FDTemplateLayoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableView+FDTemplateLayoutCell.m"; path = "../../JKCategories/UITableView+FDTemplateLayoutCell.m"; sourceTree = "<group>"; };
 		43D24A8D2094A43600C59AC8 /* AppDelegate+ShowRegisterService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+ShowRegisterService.m"; sourceTree = "<group>"; };
@@ -655,11 +655,9 @@
 				4323FA03223CC1F200AC3959 /* NSString+JKEmoji.h */,
 				4323FA30223CC1F600AC3959 /* NSUserDefaults+JKSafeAccess.h */,
 				4323F9FF223CC1F100AC3959 /* UIResponderDemoViewController.h */,
-				43993EBD20E23EF90017F1C3 /* UITextField+JKBlocks.h */,
 				43993EBE20E23EF90017F1C3 /* UITextField+JKBlocks.m */,
 				4325535E20D8B49F00FC0258 /* CAShapeLayerDemoViewController.m */,
 				4323F9EA223CC1EF00AC3959 /* UITableViewCell+JKNIB.m */,
-				4323FA05223CC1F200AC3959 /* UITableViewDemoViewController.m */,
 				4323FA12223CC1F300AC3959 /* UIView+JKFind.h */,
 				4323FA13223CC1F300AC3959 /* UIView+JKScreenshot.h */,
 				4323FA31223CC1F600AC3959 /* NSString+JKNormalRegex.m */,
@@ -1060,6 +1058,7 @@
 				4323FA07223CC1F200AC3959 /* UIScrollView+JKAddition.m */,
 				4323FA2A223CC1F600AC3959 /* UIScrollView+JKPages.h */,
 				4323FA0A223CC1F200AC3959 /* UIScrollView+JKPages.m */,
+				43993EBD20E23EF90017F1C3 /* UITextField+JKBlocks.h */,
 				434DDB4F20C9326800191FC1 /* CALayer+JKBorderColor.h */,
 				435D4C4920EDEAAD00C8DC85 /* NSDate+JKLunarCalendar.m */,
 				435D4C4620EDEA8A00C8DC85 /* NSDate+JKInternetDateTime.h */,
@@ -1081,6 +1080,7 @@
 				4323F9EC223CC1EF00AC3959 /* UITableViewCell+JKDelaysContentTouches.h */,
 				4323F9FE223CC1F100AC3959 /* UITableViewCell+JKNIB.h */,
 				4323FA04223CC1F200AC3959 /* UITableViewDemoViewController.h */,
+				4323FA05223CC1F200AC3959 /* UITableViewDemoViewController.m */,
 				4323FA27223CC1F500AC3959 /* UITextView+JKPinchZoom.m */,
 				4323FA34223CC1F700AC3959 /* UITextView+JKPlaceHolder.h */,
 				43517CEB226B4AFF000B33F3 /* UIView+JKFind.h */,
