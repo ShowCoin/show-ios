@@ -637,6 +637,7 @@
 				7217BE1421E0D21A00C1E58F /* NSData+ImageContentType.m */,
 				7217BE1B21E0D21A00C1E58F /* NSDate+Additions.h */,
 				7217BE1121E0D21A00C1E58F /* NSDate+Additions.m */,
+				7217BE1221E0D21A00C1E58F /* NSString+Additions.h */,
 				7217BE1321E0D21A00C1E58F /* NSString+Binary.h */,
 				7217BE1721E0D21A00C1E58F /* NSString+Binary.m */,
 				7217BE1A21E0D21A00C1E58F /* NSString+Json.h */,
@@ -645,10 +646,12 @@
 				D22E1E6B21F342F4001A3D2A /* NSSting+aes.m */,
 				938D2FFD20A0C821006A0CDE /* ShowAction.h */,
 				931DAAC520B571C5003A0B38 /* SLGiftAction.h */,
+				720C304820A35ACC00207500 /* SLGetWithdrawAddressAction.h */,
 				72C6166920A0C67500103C44 /* SLUrgeListAction.h */,
 				938D302020A35B0A006A0CDE /* ShowLoginAction.h */,
 				72F17B6720AB18F50039E916 /* ShowVerifycodeAction.h */,
 				720F85F720B2F59400AD0C54 /* SLChatStatisticsAction.h */,
+				93155E5120D4B9CE00E1B61F /* SLDefenderListAction.h */,
 				9314D1E220C53A3B00BB2429 /* SLHistoryWorksAction.h */,
 				9314D1E120C539D400BB2429 /* SLShutUpAction.h */,
 				9314D1DF20C5394500BB2429 /* SLAttentionListAction.h */,
@@ -659,6 +662,7 @@
 				720F85F920B2F59400AD0C54 /* SLMeConcernListAction.h */,
 				720F85FF20B2F59500AD0C54 /* SLMeFansListAction.h */,
 				720F85FC20B2F59400AD0C54 /* SLRelationAction.h */,
+				93155E4E20D4B88500E1B61F /* SLGetWithdrawListAction.h */,
 				93155E4F20D4B8D300E1B61F /* SLIsFollowAction.h */,
 				431438AD209432E30059D373 /* LaunchScreen.storyboard */,
 			);
@@ -1124,10 +1128,6 @@
 		72C6166720A0C65200103C44 /* requestAction */ = {
 			isa = PBXGroup;
 			children = (
-				7217BE1221E0D21A00C1E58F /* NSString+Additions.h */,
-				720C304820A35ACC00207500 /* SLGetWithdrawAddressAction.h */,
-				93155E5120D4B9CE00E1B61F /* SLDefenderListAction.h */,
-				93155E4E20D4B88500E1B61F /* SLGetWithdrawListAction.h */,
 			);
 			path = requestAction;
 			sourceTree = "<group>";
