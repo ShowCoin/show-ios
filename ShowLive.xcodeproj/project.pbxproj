@@ -220,7 +220,7 @@
 		4323F9F3223CC1F000AC3959 /* NSObject+JKAssociatedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JKAssociatedObject.m"; sourceTree = "<group>"; };
 		4323F9F4223CC1F000AC3959 /* NSURL+JKQueryDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSURL+JKQueryDictionary.h"; path = "../../JKCategories/NSURL+JKQueryDictionary.h"; sourceTree = "<group>"; };
 		4323F9F5223CC1F000AC3959 /* NSDecimalNumber+JKExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDecimalNumber+JKExtensions.m"; path = "../../JKCategories/NSDecimalNumber+JKExtensions.m"; sourceTree = "<group>"; };
-		4323F9F6223CC1F000AC3959 /* NSManagedObjectContext+JKFetchRequestsConstructors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+JKFetchRequestsConstructors.h"; sourceTree = "<group>"; };
+		4323F9F6223CC1F000AC3959 /* NSManagedObjectContext+JKFetchRequestsConstructors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSManagedObjectContext+JKFetchRequestsConstructors.h"; path = "../../JKCategories/NSManagedObjectContext+JKFetchRequestsConstructors.h"; sourceTree = "<group>"; };
 		4323F9F7223CC1F000AC3959 /* NSString+Json.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Json.m"; path = "../../../NSString+Json.m"; sourceTree = "<group>"; };
 		4323F9F8223CC1F000AC3959 /* NSData+JKEncrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+JKEncrypt.h"; sourceTree = "<group>"; };
 		4323F9F9223CC1F000AC3959 /* UINavigationController+JKStackManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+JKStackManager.m"; sourceTree = "<group>"; };
@@ -249,7 +249,7 @@
 		4323FA10223CC1F300AC3959 /* NSInvocation+JKBb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSInvocation+JKBb.h"; path = "../../JKCategories/NSInvocation+JKBb.h"; sourceTree = "<group>"; };
 		4323FA11223CC1F300AC3959 /* UISplitViewController+JKQuickAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UISplitViewController+JKQuickAccess.m"; path = "../../../JKCategories/UISplitViewController+JKQuickAccess.m"; sourceTree = "<group>"; };
 		4323FA12223CC1F300AC3959 /* UIView+JKFind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+JKFind.h"; path = "../../../JKCategories/UIView+JKFind.h"; sourceTree = "<group>"; };
-		4323FA13223CC1F300AC3959 /* UIView+JKScreenshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+JKScreenshot.h"; path = "../../UIView+JKScreenshot.h"; sourceTree = "<group>"; };
+		4323FA13223CC1F300AC3959 /* UIView+JKScreenshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+JKScreenshot.h"; path = "../../../UIView+JKScreenshot.h"; sourceTree = "<group>"; };
 		4323FA14223CC1F300AC3959 /* NSManagedObjectContext+JKFetching.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+JKFetching.h"; sourceTree = "<group>"; };
 		4323FA15223CC1F300AC3959 /* NSDictionary+JKBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+JKBlock.h"; sourceTree = "<group>"; };
 		4323FA16223CC1F400AC3959 /* CAAnimationDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CAAnimationDemoViewController.m; path = ../../JKCategories/SLHelper/CAAnimationDemoViewController.m; sourceTree = "<group>"; };
@@ -695,7 +695,6 @@
 				4323FA2C223CC1F600AC3959 /* NSFetchRequest+JKExtensions.m */,
 				4323F9F1223CC1F000AC3959 /* NSManagedObject+JKDictionary.h */,
 				4323FA14223CC1F300AC3959 /* NSManagedObjectContext+JKFetching.h */,
-				4323F9F6223CC1F000AC3959 /* NSManagedObjectContext+JKFetchRequestsConstructors.h */,
 				4323FA25223CC1F500AC3959 /* NSManagedObjectContext+JKObjectClear.h */,
 				4323F9E8223CC1EF00AC3959 /* NSMutableURLRequest+JKUpload.h */,
 				4323FA2B223CC1F600AC3959 /* NSNumber+JKRound.m */,
@@ -741,7 +740,6 @@
 				D23A140B2271776C00A6BD98 /* UIView+JKFind.h */,
 				D23A140A2271776B00A6BD98 /* UIView+JKFind.h */,
 				4323FA32223CC1F600AC3959 /* UIView+JKFrame.h */,
-				4323FA13223CC1F300AC3959 /* UIView+JKScreenshot.h */,
 				4323F9F0223CC1F000AC3959 /* UIWindow+SLMotion.h */,
 				4325537020D8B57B00FC0258 /* MKMapView+JKZoomLevel.h */,
 				43D87B2720EB6D9900E991D6 /* UIScrollView+EmptyDataSet.m */,
@@ -1168,6 +1166,7 @@
 				4323FA0B223CC1F200AC3959 /* NSIndexPath+JKOffset.h */,
 				4323FA10223CC1F300AC3959 /* NSInvocation+JKBb.h */,
 				4323FA28223CC1F500AC3959 /* NSManagedObject+JKDictionary.m */,
+				4323F9F6223CC1F000AC3959 /* NSManagedObjectContext+JKFetchRequestsConstructors.h */,
 				4323FA1E223CC1F400AC3959 /* NSNotificationCenterDemoViewController.h */,
 				4323FA22223CC1F500AC3959 /* NSObject+JKAppInfo.h */,
 				4323FA29223CC1F500AC3959 /* NSObject+JKAutoCoding.h */,
@@ -1211,6 +1210,7 @@
 				4375AAC622747F3E00A0BC73 /* UIView+JKFind.h */,
 				4325536D20D8B56400FC0258 /* MKMapView+JKMoveLogo.h */,
 				4325536E20D8B56400FC0258 /* MKMapView+JKMoveLogo.m */,
+				4323FA13223CC1F300AC3959 /* UIView+JKScreenshot.h */,
 				43291F4C20E520CA000C3C15 /* UITableView+FDTemplateLayoutCellDebug.m */,
 				431CB4CE20F4991D0043B0AC /* NSObject+JKReflection.m */,
 			);
