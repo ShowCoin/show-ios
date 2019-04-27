@@ -358,6 +358,7 @@
 		4375AADC22747F7C00A0BC73 /* NSString+Additions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSString+Additions.m"; path = "../../../../JKCategories/NSString+Additions.m"; sourceTree = "<group>"; };
 		4375AADD22747F7C00A0BC73 /* UIView+JKFind.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UIView+JKFind.h"; path = "../../../../JKCategories/UIView+JKFind.h"; sourceTree = "<group>"; };
 		4375AADE22747F7C00A0BC73 /* NSString+Additions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSString+Additions.m"; path = "../../../../JKCategories/NSString+Additions.m"; sourceTree = "<group>"; };
+		4375AADF22747F7E00A0BC73 /* NSData+JKBase64.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSData+JKBase64.h"; path = "../../../../JKCategories/NSData+JKBase64.h"; sourceTree = "<group>"; };
 		437864562075FD1E00146B97 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		437921DC20ECC3DF00B2EC88 /* NSArray+JKSafeAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+JKSafeAccess.h"; path = "../../../JKCategories/NSArray+JKSafeAccess.h"; sourceTree = "<group>"; };
 		437921DD20ECC3E000B2EC88 /* NSArray+JKSafeAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+JKSafeAccess.m"; path = "../../JKCategories/NSArray+JKSafeAccess.m"; sourceTree = "<group>"; };
@@ -551,7 +552,7 @@
 		9343E47521C7D0140001B9C1 /* UILabel+Additional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Additional.h"; sourceTree = "<group>"; };
 		9343E47821C7D17C0001B9C1 /* UIView+Additional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Additional.h"; path = "../../../JKCategories/UIView+Additional.h"; sourceTree = "<group>"; };
 		934A1031211ED7BC0021770D /* NSString+Validation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Validation.m"; path = "../../../JKCategories/NSString+Validation.m"; sourceTree = "<group>"; };
-		934AE45F20FC6B8900B60AD4 /* UIImage+Avatar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Avatar.h"; path = "../../JKCategories/UIImage+Avatar.h"; sourceTree = "<group>"; };
+		934AE45F20FC6B8900B60AD4 /* UIImage+Avatar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Avatar.h"; path = "../../../JKCategories/UIImage+Avatar.h"; sourceTree = "<group>"; };
 		934AE46020FC6BB400B60AD4 /* UIImage+Avatar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Avatar.m"; path = "../../../JKCategories/UIImage+Avatar.m"; sourceTree = "<group>"; };
 		934AE46320FC6C1000B60AD4 /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Additions.m"; path = "../../../JKCategories/NSString+Additions.m"; sourceTree = "<group>"; };
 		934CBCD72118217800608F2F /* NSDate+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+Additions.h"; path = "../../JKCategories/NSDate+Additions.h"; sourceTree = "<group>"; };
@@ -728,7 +729,6 @@
 				D23A140D2271776F00A6BD98 /* NSString+Additions.m */,
 				D23A14092271776A00A6BD98 /* NSString+Additions.m */,
 				43205DDC20DD267D00AD6952 /* UITextView+JKSelect.m */,
-				934AE45F20FC6B8900B60AD4 /* UIImage+Avatar.h */,
 				435D4C3C20EDEA2800C8DC85 /* NSDate+JKCupertinoYankee.h */,
 				4374EB0E20F62F7C00BB947F /* NSString+JKDictionaryValue.h */,
 				431C077520FE279600479559 /* NSURLConnection+JKSelfSigned.m */,
@@ -1218,6 +1218,7 @@
 				4375AAD222747F7100A0BC73 /* UITextField+JKSelect.h */,
 				4375AACB22747F6F00A0BC73 /* UITextField+JKSelect.h */,
 				4375AAC922747F6E00A0BC73 /* UITextField+JKSelect.h */,
+				4375AADF22747F7E00A0BC73 /* NSData+JKBase64.h */,
 				4375AAD722747F7200A0BC73 /* NSData+JKBase64.h */,
 				4375AAD622747F7200A0BC73 /* NSData+JKBase64.h */,
 				4375AAD022747F7100A0BC73 /* NSData+JKBase64.h */,
@@ -1246,6 +1247,7 @@
 				43205DDB20DD267D00AD6952 /* UITextView+JKSelect.h */,
 				4323FA18223CC1F400AC3959 /* NSData+Image.m */,
 				437921EC20ECC49800B2EC88 /* NSData+JKGzip.h */,
+				934AE45F20FC6B8900B60AD4 /* UIImage+Avatar.h */,
 				934AE46020FC6BB400B60AD4 /* UIImage+Avatar.m */,
 				437B0A6120F3608A00E93844 /* NSObject+JKAssociatedObject.h */,
 				43205DE120DD26C400AD6952 /* UITextView+JKPinchZoom.h */,
