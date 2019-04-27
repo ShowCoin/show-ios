@@ -274,7 +274,7 @@
 		4323FA29223CC1F500AC3959 /* NSObject+JKAutoCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+JKAutoCoding.h"; path = "../../JKCategories/NSObject+JKAutoCoding.h"; sourceTree = "<group>"; };
 		4323FA2A223CC1F600AC3959 /* UIScrollView+JKPages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+JKPages.h"; path = "../../../JKCategories/UIScrollView+JKPages.h"; sourceTree = "<group>"; };
 		4323FA2B223CC1F600AC3959 /* NSNumber+JKRound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+JKRound.m"; path = "../../JKCategories/NSNumber+JKRound.m"; sourceTree = "<group>"; };
-		4323FA2C223CC1F600AC3959 /* NSFetchRequest+JKExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFetchRequest+JKExtensions.m"; sourceTree = "<group>"; };
+		4323FA2C223CC1F600AC3959 /* NSFetchRequest+JKExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSFetchRequest+JKExtensions.m"; path = "../../JKCategories/NSFetchRequest+JKExtensions.m"; sourceTree = "<group>"; };
 		4323FA2D223CC1F600AC3959 /* CAShapeLayer+JKUIBezierPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CAShapeLayer+JKUIBezierPath.m"; path = "../../JKCategories/CAShapeLayer+JKUIBezierPath.m"; sourceTree = "<group>"; };
 		4323FA2E223CC1F600AC3959 /* UIColor+HexString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HexString.h"; sourceTree = "<group>"; };
 		4323FA2F223CC1F600AC3959 /* CLLocation+JKCH1903.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CLLocation+JKCH1903.h"; path = "../../JKCategories/SLHelper/CLLocation+JKCH1903.h"; sourceTree = "<group>"; };
@@ -691,7 +691,6 @@
 			isa = PBXGroup;
 			children = (
 				4323FA15223CC1F300AC3959 /* NSDictionary+JKBlock.h */,
-				4323FA2C223CC1F600AC3959 /* NSFetchRequest+JKExtensions.m */,
 				4323F9F1223CC1F000AC3959 /* NSManagedObject+JKDictionary.h */,
 				4323FA25223CC1F500AC3959 /* NSManagedObjectContext+JKObjectClear.h */,
 				934CBCD8211821A500608F2F /* NSDate+Additions.m */,
@@ -1120,6 +1119,7 @@
 				4323FA08223CC1F200AC3959 /* NSDate+JKUtilities.m */,
 				4323FA1F223CC1F400AC3959 /* NSDate+JKZeroDate.m */,
 				4323F9F5223CC1F000AC3959 /* NSDecimalNumber+JKExtensions.m */,
+				4323FA2C223CC1F600AC3959 /* NSFetchRequest+JKExtensions.m */,
 				4323FA06223CC1F200AC3959 /* NSFileManager+JKPaths.m */,
 				4323FA0B223CC1F200AC3959 /* NSIndexPath+JKOffset.h */,
 				4323FA10223CC1F300AC3959 /* NSInvocation+JKBb.h */,
