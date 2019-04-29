@@ -402,7 +402,7 @@
 		53B07B4395D318342B414DD2 /* Pods-ShowLiveUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShowLiveUITests/Pods-ShowLiveUITests.release.xcconfig"; sourceTree = "<group>"; };
 		720C304820A35ACC00207500 /* SLGetWithdrawAddressAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLGetWithdrawAddressAction.h; sourceTree = "<group>"; };
 		720F85F720B2F59400AD0C54 /* SLChatStatisticsAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLChatStatisticsAction.h; sourceTree = "<group>"; };
-		720F85F820B2F59400AD0C54 /* SLConfigAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLConfigAction.h; path = ../requestAction/SLConfigAction.h; sourceTree = "<group>"; };
+		720F85F820B2F59400AD0C54 /* SLConfigAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLConfigAction.h; path = ../../../requestAction/SLConfigAction.h; sourceTree = "<group>"; };
 		720F85F920B2F59400AD0C54 /* SLMeConcernListAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLMeConcernListAction.h; sourceTree = "<group>"; };
 		720F85FC20B2F59400AD0C54 /* SLRelationAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLRelationAction.h; sourceTree = "<group>"; };
 		720F85FD20B2F59500AD0C54 /* SLFollowUserAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLFollowUserAction.h; sourceTree = "<group>"; };
@@ -413,10 +413,10 @@
 		7217AD9921C536A700D082E9 /* WithdrawViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WithdrawViewController.m; sourceTree = "<group>"; };
 		7217AD9B21C5377D00D082E9 /* SLCoinDetailInfoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLCoinDetailInfoVC.h; sourceTree = "<group>"; };
 		7217BE1121E0D21A00C1E58F /* NSDate+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+Additions.m"; path = "../../../zh-Hans.lproj/NSDate+Additions.m"; sourceTree = "<group>"; };
-		7217BE1221E0D21A00C1E58F /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
+		7217BE1221E0D21A00C1E58F /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Additions.h"; path = "../../../zh-Hans.lproj/NSString+Additions.h"; sourceTree = "<group>"; };
 		7217BE1321E0D21A00C1E58F /* NSString+Binary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Binary.h"; sourceTree = "<group>"; };
 		7217BE1421E0D21A00C1E58F /* NSData+ImageContentType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+ImageContentType.m"; path = "../../../zh-Hans.lproj/NSData+ImageContentType.m"; sourceTree = "<group>"; };
-		7217BE1521E0D21A00C1E58F /* NSData+Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Image.h"; sourceTree = "<group>"; };
+		7217BE1521E0D21A00C1E58F /* NSData+Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+Image.h"; path = "../../../zh-Hans.lproj/NSData+Image.h"; sourceTree = "<group>"; };
 		7217BE1721E0D21A00C1E58F /* NSString+Binary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Binary.m"; sourceTree = "<group>"; };
 		7217BE1821E0D21A00C1E58F /* NSString+Json.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Json.m"; path = "../../../zh-Hans.lproj/NSString+Json.m"; sourceTree = "<group>"; };
 		7217BE1921E0D21A00C1E58F /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
@@ -656,15 +656,6 @@
 		431438A8209432D50059D373 /* zh-Hans.lproj */ = {
 			isa = PBXGroup;
 			children = (
-				7217BE1521E0D21A00C1E58F /* NSData+Image.h */,
-				7217BE1221E0D21A00C1E58F /* NSString+Additions.h */,
-				7217BE1321E0D21A00C1E58F /* NSString+Binary.h */,
-				D22E1E6B21F342F4001A3D2A /* NSSting+aes.m */,
-				938D2FFD20A0C821006A0CDE /* ShowAction.h */,
-				720F85F720B2F59400AD0C54 /* SLChatStatisticsAction.h */,
-				720F85F820B2F59400AD0C54 /* SLConfigAction.h */,
-				720F85FF20B2F59500AD0C54 /* SLMeFansListAction.h */,
-				720F85FC20B2F59400AD0C54 /* SLRelationAction.h */,
 			);
 			path = "zh-Hans.lproj";
 			sourceTree = "<group>";
@@ -1127,6 +1118,7 @@
 				43993EBE20E23EF90017F1C3 /* UITextField+JKBlocks.m */,
 				4325535820CFE8B100FC0258 /* UIWebVIew+JKSwipeGesture.m */,
 				934CBCD72118217800608F2F /* NSDate+Additions.h */,
+				7217BE1521E0D21A00C1E58F /* NSData+Image.h */,
 				7217BE1C21E0D21A00C1E58F /* NSData+Image.m */,
 				7217BE1921E0D21A00C1E58F /* NSData+ImageContentType.h */,
 				7217BE1421E0D21A00C1E58F /* NSData+ImageContentType.m */,
@@ -1224,6 +1216,8 @@
 				434DDB6220C9337900191FC1 /* UIWindow+JKHierarchy.m */,
 				437921E320ECC43F00B2EC88 /* NSData+JKAPNSToken.m */,
 				43D87B3020EB6E0400E991D6 /* UIScreen+JKFrame.h */,
+				7217BE1221E0D21A00C1E58F /* NSString+Additions.h */,
+				7217BE1321E0D21A00C1E58F /* NSString+Binary.h */,
 				7217BE1721E0D21A00C1E58F /* NSString+Binary.m */,
 				9309C73D21BB91B900AAFE87 /* NSString+Json.h */,
 				43291F4F20E520E0000C3C15 /* UITableView+FDKeyedHeightCache.h */,
@@ -1252,19 +1246,25 @@
 				7217BE1A21E0D21A00C1E58F /* NSString+Json.h */,
 				7217BE1821E0D21A00C1E58F /* NSString+Json.m */,
 				D22E1E6A21F342F4001A3D2A /* NSSting+aes.h */,
+				D22E1E6B21F342F4001A3D2A /* NSSting+aes.m */,
+				938D2FFD20A0C821006A0CDE /* ShowAction.h */,
 				931DAAC520B571C5003A0B38 /* SLGiftAction.h */,
 				720C304820A35ACC00207500 /* SLGetWithdrawAddressAction.h */,
 				72C6166920A0C67500103C44 /* SLUrgeListAction.h */,
 				938D302020A35B0A006A0CDE /* ShowLoginAction.h */,
 				72F17B6720AB18F50039E916 /* ShowVerifycodeAction.h */,
+				720F85F720B2F59400AD0C54 /* SLChatStatisticsAction.h */,
 				93155E5120D4B9CE00E1B61F /* SLDefenderListAction.h */,
 				9314D1E220C53A3B00BB2429 /* SLHistoryWorksAction.h */,
 				9314D1E120C539D400BB2429 /* SLShutUpAction.h */,
 				9314D1DF20C5394500BB2429 /* SLAttentionListAction.h */,
+				720F85F820B2F59400AD0C54 /* SLConfigAction.h */,
 				720F85FD20B2F59500AD0C54 /* SLFollowUserAction.h */,
 				720F860320B2F59500AD0C54 /* SLGetRyTokenAction.h */,
 				720F860120B2F59500AD0C54 /* SLGetRyTokenAction.m */,
 				720F85F920B2F59400AD0C54 /* SLMeConcernListAction.h */,
+				720F85FF20B2F59500AD0C54 /* SLMeFansListAction.h */,
+				720F85FC20B2F59400AD0C54 /* SLRelationAction.h */,
 				93155E4E20D4B88500E1B61F /* SLGetWithdrawListAction.h */,
 				93155E4F20D4B8D300E1B61F /* SLIsFollowAction.h */,
 				431438A9209432D50059D373 /* LaunchScreen.strings */,
