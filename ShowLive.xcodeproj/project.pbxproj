@@ -424,6 +424,7 @@
 		43EC2F3922783EF900DA7072 /* NSString+Additions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSString+Additions.m"; path = "../../../../JKCategories/NSString+Additions.m"; sourceTree = "<group>"; };
 		43EC2F3A22783EF900DA7072 /* UIView+JKFind.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UIView+JKFind.h"; path = "../../../../JKCategories/UIView+JKFind.h"; sourceTree = "<group>"; };
 		43EC2F3B22783EFA00DA7072 /* NSString+Additions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSString+Additions.m"; path = "../../../../JKCategories/NSString+Additions.m"; sourceTree = "<group>"; };
+		43EC2F3C22783EFA00DA7072 /* UIView+JKFind.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UIView+JKFind.h"; path = "../../../../JKCategories/UIView+JKFind.h"; sourceTree = "<group>"; };
 		4537B7EFEE31B0E75BBC7D5B /* libPods-ShowLive.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShowLive.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		53B07B4395D318342B414DD2 /* Pods-ShowLiveUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShowLiveUITests/Pods-ShowLiveUITests.release.xcconfig"; sourceTree = "<group>"; };
 		720C304820A35ACC00207500 /* SLGetWithdrawAddressAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLGetWithdrawAddressAction.h; sourceTree = "<group>"; };
@@ -934,7 +935,6 @@
 		434DDB4B20C92B4E00191FC1 /* JKCategories */ = {
 			isa = PBXGroup;
 			children = (
-				4323FA21223CC1F500AC3959 /* NSData+JKEncrypt.m */,
 				4323FA19223CC1F400AC3959 /* NSDate+JKExtension.m */,
 				4323FA08223CC1F200AC3959 /* NSDate+JKUtilities.m */,
 				D22B86342276ADFE00646F06 /* UIView+JKFind.h */,
@@ -1646,6 +1646,8 @@
 			isa = PBXGroup;
 			children = (
 				4323F9F8223CC1F000AC3959 /* NSData+JKEncrypt.h */,
+				4323FA21223CC1F500AC3959 /* NSData+JKEncrypt.m */,
+				43EC2F3C22783EFA00DA7072 /* UIView+JKFind.h */,
 				43EC2F3A22783EF900DA7072 /* UIView+JKFind.h */,
 				43EC2F3822783EF900DA7072 /* UIView+JKFind.h */,
 				43EC2F3522783EF800DA7072 /* UIView+JKFind.h */,
