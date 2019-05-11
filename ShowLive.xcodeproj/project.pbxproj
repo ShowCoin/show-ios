@@ -141,7 +141,7 @@
 		4325536E20D8B56400FC0258 /* MKMapView+JKMoveLogo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MKMapView+JKMoveLogo.m"; path = "../../MKMapView+JKMoveLogo.m"; sourceTree = "<group>"; };
 		43291F3C20E51F50000C3C15 /* UITextFieldDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UITextFieldDemoViewController.h; path = ../../JKCategories/UITextFieldDemoViewController.h; sourceTree = "<group>"; };
 		434DDB4F20C9326800191FC1 /* CALayer+JKBorderColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CALayer+JKBorderColor.h"; path = "../../JKCategories/CALayer+JKBorderColor.h"; sourceTree = "<group>"; };
-		434DDB5620C932DB00191FC1 /* CAMediaTimingFunction+JKAdditionalEquations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAMediaTimingFunction+JKAdditionalEquations.h"; sourceTree = "<group>"; };
+		434DDB5620C932DB00191FC1 /* CAMediaTimingFunction+JKAdditionalEquations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CAMediaTimingFunction+JKAdditionalEquations.h"; path = "../../JKCategories/CAMediaTimingFunction+JKAdditionalEquations.h"; sourceTree = "<group>"; };
 		434DDB5B20C9332700191FC1 /* CATransaction+JKAnimateWithDuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CATransaction+JKAnimateWithDuration.m"; sourceTree = "<group>"; };
 		43517CED226B4B3A000B33F3 /* NSData+JKBase64.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSData+JKBase64.h"; path = "../../../JKCategories/NSData+JKBase64.h"; sourceTree = "<group>"; };
 		43517CEE226B4B3E000B33F3 /* NSString+Additions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSString+Additions.m"; path = "../../../JKCategories/NSString+Additions.m"; sourceTree = "<group>"; };
@@ -507,9 +507,6 @@
 				93EF35D421C292950088C2E4 /* UIImage+Additional.m */,
 				437B0A6420F360BA00E93844 /* NSObject+JKAutoCoding.m */,
 				431CB4DF20F49A800043B0AC /* NSString+JKBase64.h */,
-				435D4C9720F0931000C8DC85 /* NSNotificationCenter+JKMainThread.h */,
-				434DDB5620C932DB00191FC1 /* CAMediaTimingFunction+JKAdditionalEquations.h */,
-				931DAAC520B571C5003A0B38 /* SLGiftAction.h */,
 				720F85F720B2F59400AD0C54 /* SLChatStatisticsAction.h */,
 				9309C73D21BB91B900AAFE87 /* NSString+Json.h */,
 				D23B87DC2276ADA500D0190A /* NSData+JKBase64.h */,
@@ -924,14 +921,17 @@
 				437B0A5920F3600900E93844 /* NSNumber+JKRound.h */,
 				437B0A6120F3608A00E93844 /* NSObject+JKAssociatedObject.h */,
 				437B0A4F20F35F9C00E93844 /* NSNotificationCenterDemoViewController.m */,
+				435D4C9720F0931000C8DC85 /* NSNotificationCenter+JKMainThread.h */,
 				D22E1E6A21F342F4001A3D2A /* NSSting+aes.h */,
 				D22E1E6B21F342F4001A3D2A /* NSSting+aes.m */,
 				938D2FFD20A0C821006A0CDE /* ShowAction.h */,
 				43D87B3020EB6E0400E991D6 /* UIScreen+JKFrame.h */,
 				7217BE1321E0D21A00C1E58F /* NSString+Binary.h */,
 				7217BE1721E0D21A00C1E58F /* NSString+Binary.m */,
+				434DDB5620C932DB00191FC1 /* CAMediaTimingFunction+JKAdditionalEquations.h */,
 				93155E5120D4B9CE00E1B61F /* SLDefenderListAction.h */,
 				9314D1E220C53A3B00BB2429 /* SLHistoryWorksAction.h */,
+				931DAAC520B571C5003A0B38 /* SLGiftAction.h */,
 				720C304820A35ACC00207500 /* SLGetWithdrawAddressAction.h */,
 				72C6166920A0C67500103C44 /* SLUrgeListAction.h */,
 				72F17B6720AB18F50039E916 /* ShowVerifycodeAction.h */,
