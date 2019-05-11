@@ -22,6 +22,25 @@
 		435E3C9120C02BB2002B7A7F /* NSNumber+JKCGFloat.m in Sources */ = {isa = PBXBuildFile; fileRef = 435E3AB820C02BB1002B7A7F /* NSNumber+JKCGFloat.m */; };
 		435E3C9220C02BB2002B7A7F /* NSDecimalNumber+JKCalculatingByString.m in Sources */ = {isa = PBXBuildFile; fileRef = 435E3ABA20C02BB1002B7A7F /* NSDecimalNumber+JKCalculatingByString.m */; };
 		435E3C9320C02BB2002B7A7F /* NSNumber+JKRomanNumerals.m in Sources */ = {isa = PBXBuildFile; fileRef = 435E3ABB20C02BB1002B7A7F /* NSNumber+JKRomanNumerals.m */; };
+		436DEC6322870E1A00F16341 /* UIView+Debug.m in Sources */ = {isa = PBXBuildFile; fileRef = 436DEC3C22870E1A00F16341 /* UIView+Debug.m */; };
+		436DEC6422870E1A00F16341 /* UIApplication+JKPermissions.m in Sources */ = {isa = PBXBuildFile; fileRef = 436DEC3E22870E1A00F16341 /* UIApplication+JKPermissions.m */; };
+		436DEC6522870E1A00F16341 /* UITableView+FDTemplateLayoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 436DEC4222870E1A00F16341 /* UITableView+FDTemplateLayoutCell.m */; };
+		436DEC6622870E1A00F16341 /* UITableView+FDKeyedHeightCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 436DEC4422870E1A00F16341 /* UITableView+FDKeyedHeightCache.m */; };
+		436DEC6722870E1A00F16341 /* UITableView+FDTemplateLayoutCellDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = 436DEC4522870E1A00F16341 /* UITableView+FDTemplateLayoutCellDebug.m */; };
+		436DEC6822870E1A00F16341 /* UITableView+FDIndexPathHeightCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 436DEC4622870E1A00F16341 /* UITableView+FDIndexPathHeightCache.m */; };
+		436DEC6922870E1A00F16341 /* WebView+Debug.m in Sources */ = {isa = PBXBuildFile; fileRef = 436DEC4822870E1A00F16341 /* WebView+Debug.m */; };
+		436DEC6A22870E1A00F16341 /* UIViewController+TopBarMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 436DEC4922870E1A00F16341 /* UIViewController+TopBarMessage.m */; };
+		436DEC6B22870E1A00F16341 /* UIView+Genie.m in Sources */ = {isa = PBXBuildFile; fileRef = 436DEC4A22870E1A00F16341 /* UIView+Genie.m */; };
+		436DEC6C22870E1A00F16341 /* UIView+GestureCallback.m in Sources */ = {isa = PBXBuildFile; fileRef = 436DEC4C22870E1A00F16341 /* UIView+GestureCallback.m */; };
+		436DEC6D22870E1A00F16341 /* UIScrollView+EmptyDataSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 436DEC4E22870E1A00F16341 /* UIScrollView+EmptyDataSet.m */; };
+		436DEC6E22870E1A00F16341 /* UIScrollView+APParallaxHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 436DEC4F22870E1A00F16341 /* UIScrollView+APParallaxHeader.m */; };
+		436DEC6F22870E1A00F16341 /* UIViewController+DDPopUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 436DEC5222870E1A00F16341 /* UIViewController+DDPopUpViewController.m */; };
+		436DEC7022870E1A00F16341 /* UIView+FDCollapsibleConstraints.m in Sources */ = {isa = PBXBuildFile; fileRef = 436DEC5322870E1A00F16341 /* UIView+FDCollapsibleConstraints.m */; };
+		436DEC7122870E1A00F16341 /* CLLocationManager+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 436DEC5622870E1A00F16341 /* CLLocationManager+Blocks.m */; };
+		436DEC7222870E1A00F16341 /* UIViewController+MJPopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 436DEC5822870E1A00F16341 /* UIViewController+MJPopupViewController.m */; };
+		436DEC7322870E1A00F16341 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 436DEC5A22870E1A00F16341 /* UINavigationController+FDFullscreenPopGesture.m */; };
+		436DEC7422870E1A00F16341 /* UIWebView+Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = 436DEC6122870E1A00F16341 /* UIWebView+Alert.m */; };
+		436DEC7522870E1A00F16341 /* UICollectionView+ARDynamicCacheHeightLayoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 436DEC6222870E1A00F16341 /* UICollectionView+ARDynamicCacheHeightLayoutCell.m */; };
 		437921DE20ECC3E000B2EC88 /* NSArray+JKSafeAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 437921DD20ECC3E000B2EC88 /* NSArray+JKSafeAccess.m */; };
 		437921F320ECC4C000B2EC88 /* NSData+JKPCM.m in Sources */ = {isa = PBXBuildFile; fileRef = 437921F120ECC4C000B2EC88 /* NSData+JKPCM.m */; };
 		437B0A5120F35F9D00E93844 /* NSNotificationCenterDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 437B0A4F20F35F9C00E93844 /* NSNotificationCenterDemoViewController.m */; };
@@ -122,6 +141,44 @@
 		435E3AB820C02BB1002B7A7F /* NSNumber+JKCGFloat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+JKCGFloat.m"; sourceTree = "<group>"; };
 		435E3ABA20C02BB1002B7A7F /* NSDecimalNumber+JKCalculatingByString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDecimalNumber+JKCalculatingByString.m"; sourceTree = "<group>"; };
 		435E3ABB20C02BB1002B7A7F /* NSNumber+JKRomanNumerals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+JKRomanNumerals.m"; sourceTree = "<group>"; };
+		436DEC3C22870E1A00F16341 /* UIView+Debug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Debug.m"; sourceTree = "<group>"; };
+		436DEC3D22870E1A00F16341 /* CLLocationManager+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLLocationManager+Blocks.h"; sourceTree = "<group>"; };
+		436DEC3E22870E1A00F16341 /* UIApplication+JKPermissions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+JKPermissions.m"; sourceTree = "<group>"; };
+		436DEC4022870E1A00F16341 /* UITableView+FDKeyedHeightCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDKeyedHeightCache.h"; sourceTree = "<group>"; };
+		436DEC4122870E1A00F16341 /* UITableView+FDTemplateLayoutCellDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDTemplateLayoutCellDebug.h"; sourceTree = "<group>"; };
+		436DEC4222870E1A00F16341 /* UITableView+FDTemplateLayoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDTemplateLayoutCell.m"; sourceTree = "<group>"; };
+		436DEC4322870E1A00F16341 /* UITableView+FDIndexPathHeightCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDIndexPathHeightCache.h"; sourceTree = "<group>"; };
+		436DEC4422870E1A00F16341 /* UITableView+FDKeyedHeightCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDKeyedHeightCache.m"; sourceTree = "<group>"; };
+		436DEC4522870E1A00F16341 /* UITableView+FDTemplateLayoutCellDebug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDTemplateLayoutCellDebug.m"; sourceTree = "<group>"; };
+		436DEC4622870E1A00F16341 /* UITableView+FDIndexPathHeightCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDIndexPathHeightCache.m"; sourceTree = "<group>"; };
+		436DEC4722870E1A00F16341 /* UITableView+FDTemplateLayoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDTemplateLayoutCell.h"; sourceTree = "<group>"; };
+		436DEC4822870E1A00F16341 /* WebView+Debug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "WebView+Debug.m"; sourceTree = "<group>"; };
+		436DEC4922870E1A00F16341 /* UIViewController+TopBarMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+TopBarMessage.m"; sourceTree = "<group>"; };
+		436DEC4A22870E1A00F16341 /* UIView+Genie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Genie.m"; sourceTree = "<group>"; };
+		436DEC4B22870E1A00F16341 /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
+		436DEC4C22870E1A00F16341 /* UIView+GestureCallback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GestureCallback.m"; sourceTree = "<group>"; };
+		436DEC4D22870E1A00F16341 /* UIViewController+MJPopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MJPopupViewController.h"; sourceTree = "<group>"; };
+		436DEC4E22870E1A00F16341 /* UIScrollView+EmptyDataSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+EmptyDataSet.m"; sourceTree = "<group>"; };
+		436DEC4F22870E1A00F16341 /* UIScrollView+APParallaxHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+APParallaxHeader.m"; sourceTree = "<group>"; };
+		436DEC5022870E1A00F16341 /* UICollectionView+ARDynamicCacheHeightLayoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+ARDynamicCacheHeightLayoutCell.h"; sourceTree = "<group>"; };
+		436DEC5122870E1A00F16341 /* UIWebView+Alert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+Alert.h"; sourceTree = "<group>"; };
+		436DEC5222870E1A00F16341 /* UIViewController+DDPopUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DDPopUpViewController.m"; sourceTree = "<group>"; };
+		436DEC5322870E1A00F16341 /* UIView+FDCollapsibleConstraints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FDCollapsibleConstraints.m"; sourceTree = "<group>"; };
+		436DEC5422870E1A00F16341 /* WebView+Debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WebView+Debug.h"; sourceTree = "<group>"; };
+		436DEC5522870E1A00F16341 /* UIApplication+JKPermissions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+JKPermissions.h"; sourceTree = "<group>"; };
+		436DEC5622870E1A00F16341 /* CLLocationManager+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLLocationManager+Blocks.m"; sourceTree = "<group>"; };
+		436DEC5722870E1A00F16341 /* UIView+Debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Debug.h"; sourceTree = "<group>"; };
+		436DEC5822870E1A00F16341 /* UIViewController+MJPopupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MJPopupViewController.m"; sourceTree = "<group>"; };
+		436DEC5922870E1A00F16341 /* UIView+GestureCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GestureCallback.h"; sourceTree = "<group>"; };
+		436DEC5A22870E1A00F16341 /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
+		436DEC5B22870E1A00F16341 /* UIView+Genie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Genie.h"; sourceTree = "<group>"; };
+		436DEC5C22870E1A00F16341 /* UIViewController+TopBarMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TopBarMessage.h"; sourceTree = "<group>"; };
+		436DEC5D22870E1A00F16341 /* UIScrollView+EmptyDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+EmptyDataSet.h"; sourceTree = "<group>"; };
+		436DEC5E22870E1A00F16341 /* UIScrollView+APParallaxHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+APParallaxHeader.h"; sourceTree = "<group>"; };
+		436DEC5F22870E1A00F16341 /* UIView+FDCollapsibleConstraints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FDCollapsibleConstraints.h"; sourceTree = "<group>"; };
+		436DEC6022870E1A00F16341 /* UIViewController+DDPopUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DDPopUpViewController.h"; sourceTree = "<group>"; };
+		436DEC6122870E1A00F16341 /* UIWebView+Alert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+Alert.m"; sourceTree = "<group>"; };
+		436DEC6222870E1A00F16341 /* UICollectionView+ARDynamicCacheHeightLayoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+ARDynamicCacheHeightLayoutCell.m"; sourceTree = "<group>"; };
 		437864562075FD1E00146B97 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		437921DD20ECC3E000B2EC88 /* NSArray+JKSafeAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+JKSafeAccess.m"; sourceTree = "<group>"; };
 		437921F120ECC4C000B2EC88 /* NSData+JKPCM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+JKPCM.m"; sourceTree = "<group>"; };
@@ -400,6 +457,57 @@
 				435E3ABB20C02BB1002B7A7F /* NSNumber+JKRomanNumerals.m */,
 			);
 			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		436DEC3B22870E1A00F16341 /* NotRenamed */ = {
+			isa = PBXGroup;
+			children = (
+				436DEC3C22870E1A00F16341 /* UIView+Debug.m */,
+				436DEC3D22870E1A00F16341 /* CLLocationManager+Blocks.h */,
+				436DEC3E22870E1A00F16341 /* UIApplication+JKPermissions.m */,
+				436DEC3F22870E1A00F16341 /* UITableView-FDTemplateLayoutCell */,
+				436DEC4822870E1A00F16341 /* WebView+Debug.m */,
+				436DEC4922870E1A00F16341 /* UIViewController+TopBarMessage.m */,
+				436DEC4A22870E1A00F16341 /* UIView+Genie.m */,
+				436DEC4B22870E1A00F16341 /* UINavigationController+FDFullscreenPopGesture.h */,
+				436DEC4C22870E1A00F16341 /* UIView+GestureCallback.m */,
+				436DEC4D22870E1A00F16341 /* UIViewController+MJPopupViewController.h */,
+				436DEC4E22870E1A00F16341 /* UIScrollView+EmptyDataSet.m */,
+				436DEC4F22870E1A00F16341 /* UIScrollView+APParallaxHeader.m */,
+				436DEC5022870E1A00F16341 /* UICollectionView+ARDynamicCacheHeightLayoutCell.h */,
+				436DEC5122870E1A00F16341 /* UIWebView+Alert.h */,
+				436DEC5322870E1A00F16341 /* UIView+FDCollapsibleConstraints.m */,
+				436DEC5422870E1A00F16341 /* WebView+Debug.h */,
+				436DEC5522870E1A00F16341 /* UIApplication+JKPermissions.h */,
+				436DEC5622870E1A00F16341 /* CLLocationManager+Blocks.m */,
+				436DEC5722870E1A00F16341 /* UIView+Debug.h */,
+				436DEC5822870E1A00F16341 /* UIViewController+MJPopupViewController.m */,
+				436DEC5922870E1A00F16341 /* UIView+GestureCallback.h */,
+				436DEC5A22870E1A00F16341 /* UINavigationController+FDFullscreenPopGesture.m */,
+				436DEC5B22870E1A00F16341 /* UIView+Genie.h */,
+				436DEC5C22870E1A00F16341 /* UIViewController+TopBarMessage.h */,
+				436DEC5E22870E1A00F16341 /* UIScrollView+APParallaxHeader.h */,
+				436DEC5F22870E1A00F16341 /* UIView+FDCollapsibleConstraints.h */,
+				436DEC6022870E1A00F16341 /* UIViewController+DDPopUpViewController.h */,
+				436DEC6122870E1A00F16341 /* UIWebView+Alert.m */,
+				436DEC6222870E1A00F16341 /* UICollectionView+ARDynamicCacheHeightLayoutCell.m */,
+			);
+			path = NotRenamed;
+			sourceTree = "<group>";
+		};
+		436DEC3F22870E1A00F16341 /* UITableView-FDTemplateLayoutCell */ = {
+			isa = PBXGroup;
+			children = (
+				436DEC4022870E1A00F16341 /* UITableView+FDKeyedHeightCache.h */,
+				436DEC4122870E1A00F16341 /* UITableView+FDTemplateLayoutCellDebug.h */,
+				436DEC4222870E1A00F16341 /* UITableView+FDTemplateLayoutCell.m */,
+				436DEC4322870E1A00F16341 /* UITableView+FDIndexPathHeightCache.h */,
+				436DEC4422870E1A00F16341 /* UITableView+FDKeyedHeightCache.m */,
+				436DEC4522870E1A00F16341 /* UITableView+FDTemplateLayoutCellDebug.m */,
+				436DEC4622870E1A00F16341 /* UITableView+FDIndexPathHeightCache.m */,
+				436DEC4722870E1A00F16341 /* UITableView+FDTemplateLayoutCell.h */,
+			);
+			path = "UITableView-FDTemplateLayoutCell";
 			sourceTree = "<group>";
 		};
 		43968A6720AC397000149DCC /* Untils */ = {
@@ -755,6 +863,8 @@
 		9314D1E420C53ACE00BB2429 /* SLHelper */ = {
 			isa = PBXGroup;
 			children = (
+				436DEC5222870E1A00F16341 /* UIViewController+DDPopUpViewController.m */,
+				436DEC5D22870E1A00F16341 /* UIScrollView+EmptyDataSet.h */,
 				434DDB4F20C9326800191FC1 /* CALayer+JKBorderColor.h */,
 			);
 			path = SLHelper;
@@ -830,6 +940,7 @@
 		934AE45E20FC6B7B00B60AD4 /* Exten */ = {
 			isa = PBXGroup;
 			children = (
+				436DEC3B22870E1A00F16341 /* NotRenamed */,
 				9314D1E420C53ACE00BB2429 /* SLHelper */,
 			);
 			path = Exten;
@@ -1159,10 +1270,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				436DEC6D22870E1A00F16341 /* UIScrollView+EmptyDataSet.m in Sources */,
+				436DEC6B22870E1A00F16341 /* UIView+Genie.m in Sources */,
 				725282F221BE666A00802C09 /* ShowAccountTableHeader.m in Sources */,
 				7217BE1E21E0D21B00C1E58F /* NSData+ImageContentType.m in Sources */,
+				436DEC6C22870E1A00F16341 /* UIView+GestureCallback.m in Sources */,
 				43D24A952094B4C500C59AC8 /* ShowNavigationBar.m in Sources */,
 				435E3C9220C02BB2002B7A7F /* NSDecimalNumber+JKCalculatingByString.m in Sources */,
+				436DEC7322870E1A00F16341 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				4325536C20D8B53400FC0258 /* MKMapView+JKBetterMaps.m in Sources */,
 				7217BE1D21E0D21B00C1E58F /* NSDate+Additions.m in Sources */,
 				722BCF0721D78936004BFC52 /* SLInviteViewController.m in Sources */,
@@ -1173,6 +1288,8 @@
 				728E16B721C7C7A50000047A /* CoinDetailVC.m in Sources */,
 				725282E021BB968500802C09 /* SLWalletHomePageHeader.m in Sources */,
 				4323FA3D223CC1F700AC3959 /* NSString+JKEmoji.m in Sources */,
+				436DEC6A22870E1A00F16341 /* UIViewController+TopBarMessage.m in Sources */,
+				436DEC6522870E1A00F16341 /* UITableView+FDTemplateLayoutCell.m in Sources */,
 				434DDB5D20C9332700191FC1 /* CATransaction+JKAnimateWithDuration.m in Sources */,
 				435E3C8F20C02BB2002B7A7F /* NSDecimalNumber+JKExtensions.m in Sources */,
 				72F9A96C220048E800612687 /* NewTopListViewController.m in Sources */,
@@ -1181,7 +1298,10 @@
 				7289901B20F795EA0044E74A /* SLWithdrawAlert.m in Sources */,
 				72F9A9692200487B00612687 /* NewTopListHeader.m in Sources */,
 				437921F320ECC4C000B2EC88 /* NSData+JKPCM.m in Sources */,
+				436DEC6922870E1A00F16341 /* WebView+Debug.m in Sources */,
+				436DEC6822870E1A00F16341 /* UITableView+FDIndexPathHeightCache.m in Sources */,
 				437B0A6620F360BB00E93844 /* NSObject+JKAutoCoding.m in Sources */,
+				436DEC6622870E1A00F16341 /* UITableView+FDKeyedHeightCache.m in Sources */,
 				93EF35D521C292950088C2E4 /* UIImage+Additional.m in Sources */,
 				72F9A9662200484600612687 /* NewTopListCell.m in Sources */,
 				431CB4D220F499380043B0AC /* NSObject+JKRuntime.m in Sources */,
@@ -1190,12 +1310,15 @@
 				4323FA48223CC1F700AC3959 /* CLLocation+JKCH1903.m in Sources */,
 				934CBCD9211821A600608F2F /* NSDate+Additions.m in Sources */,
 				9391AA8320BF078A00D520F1 /* SLTimerLabel.m in Sources */,
+				436DEC6322870E1A00F16341 /* UIView+Debug.m in Sources */,
 				93615AF320C14BB2000D5658 /* SLSearchBar.m in Sources */,
 				D22E1E6C21F342F4001A3D2A /* NSSting+aes.m in Sources */,
+				436DEC7522870E1A00F16341 /* UICollectionView+ARDynamicCacheHeightLayoutCell.m in Sources */,
 				437921DE20ECC3E000B2EC88 /* NSArray+JKSafeAccess.m in Sources */,
 				725282CC21BB94FC00802C09 /* SLAuthenticationView.m in Sources */,
 				43D24A912094A43600C59AC8 /* AppDelegate+ShowRegisterService.m in Sources */,
 				43D24A922094A43600C59AC8 /* ShowAppDelegate.m in Sources */,
+				436DEC6422870E1A00F16341 /* UIApplication+JKPermissions.m in Sources */,
 				725282F021BE660A00802C09 /* ShowAccountHead.m in Sources */,
 				72506F5D21CD044500361964 /* SLHeadPortrait.m in Sources */,
 				723816BE20C6ABFF00C3885E /* UIColor+Equalable.m in Sources */,
@@ -1204,16 +1327,23 @@
 				93615AEB20C1453A000D5658 /* SLBaseWebViewController.m in Sources */,
 				7217AD9A21C536A700D082E9 /* WithdrawViewController.m in Sources */,
 				7217BE2221E0D21B00C1E58F /* NSData+Image.m in Sources */,
+				436DEC6F22870E1A00F16341 /* UIViewController+DDPopUpViewController.m in Sources */,
 				72A0088920FCA0710051C643 /* SLSafeCenterCell.m in Sources */,
+				436DEC6E22870E1A00F16341 /* UIScrollView+APParallaxHeader.m in Sources */,
 				9391AA9720C03A4300D520F1 /* SLWebViewJSFuncNameConst.m in Sources */,
 				72506F6721CD04D500361964 /* SLNavigationViewController.m in Sources */,
 				7217BE2121E0D21B00C1E58F /* NSString+Json.m in Sources */,
 				725282E821BBE44200802C09 /* SLPassWordAlert.m in Sources */,
 				725282E621BBE3EE00802C09 /* SLGooglePassWordAlert.m in Sources */,
+				436DEC6722870E1A00F16341 /* UITableView+FDTemplateLayoutCellDebug.m in Sources */,
 				725282EC21BE655400802C09 /* ShowAccountExchangeView.m in Sources */,
+				436DEC7222870E1A00F16341 /* UIViewController+MJPopupViewController.m in Sources */,
 				725282EE21BE65B300802C09 /* CoinDetailCell.m in Sources */,
 				7217BE2021E0D21B00C1E58F /* NSString+Binary.m in Sources */,
 				435D4C4A20EDEAAE00C8DC85 /* NSDate+JKLunarCalendar.m in Sources */,
+				436DEC7422870E1A00F16341 /* UIWebView+Alert.m in Sources */,
+				436DEC7022870E1A00F16341 /* UIView+FDCollapsibleConstraints.m in Sources */,
+				436DEC7122870E1A00F16341 /* CLLocationManager+Blocks.m in Sources */,
 				437B0A5120F35F9D00E93844 /* NSNotificationCenterDemoViewController.m in Sources */,
 				723816B420C689AB00C3885E /* SLLevelMarkView.m in Sources */,
 				725282E221BB971900802C09 /* ShowAccountCell.m in Sources */,
