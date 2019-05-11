@@ -124,7 +124,7 @@
 		435E3ABB20C02BB1002B7A7F /* NSNumber+JKRomanNumerals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+JKRomanNumerals.m"; sourceTree = "<group>"; };
 		437864562075FD1E00146B97 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		437921DD20ECC3E000B2EC88 /* NSArray+JKSafeAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+JKSafeAccess.m"; sourceTree = "<group>"; };
-		437921F120ECC4C000B2EC88 /* NSData+JKPCM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+JKPCM.m"; sourceTree = "<group>"; };
+		437921F120ECC4C000B2EC88 /* NSData+JKPCM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+JKPCM.m"; path = "../../JKCategories/NSData+JKPCM.m"; sourceTree = "<group>"; };
 		437B0A4F20F35F9C00E93844 /* NSNotificationCenterDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSNotificationCenterDemoViewController.m; sourceTree = "<group>"; };
 		437B0A5520F35FDE00E93844 /* NSNumber+JKRomanNumerals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+JKRomanNumerals.h"; sourceTree = "<group>"; };
 		437B0A5920F3600900E93844 /* NSNumber+JKRound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+JKRound.h"; sourceTree = "<group>"; };
@@ -142,7 +142,7 @@
 		53B07B4395D318342B414DD2 /* Pods-ShowLiveUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShowLiveUITests/Pods-ShowLiveUITests.release.xcconfig"; sourceTree = "<group>"; };
 		720C304820A35ACC00207500 /* SLGetWithdrawAddressAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLGetWithdrawAddressAction.h; sourceTree = "<group>"; };
 		720F85F720B2F59400AD0C54 /* SLChatStatisticsAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLChatStatisticsAction.h; path = ../Exten/SLHelper/SLChatStatisticsAction.h; sourceTree = "<group>"; };
-		720F85F920B2F59400AD0C54 /* SLMeConcernListAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLMeConcernListAction.h; path = ../Exten/SLHelper/SLMeConcernListAction.h; sourceTree = "<group>"; };
+		720F85F920B2F59400AD0C54 /* SLMeConcernListAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLMeConcernListAction.h; sourceTree = "<group>"; };
 		720F85FC20B2F59400AD0C54 /* SLRelationAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLRelationAction.h; sourceTree = "<group>"; };
 		720F85FD20B2F59500AD0C54 /* SLFollowUserAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLFollowUserAction.h; sourceTree = "<group>"; };
 		720F85FF20B2F59500AD0C54 /* SLMeFansListAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLMeFansListAction.h; sourceTree = "<group>"; };
@@ -403,7 +403,6 @@
 				93EF35D421C292950088C2E4 /* UIImage+Additional.m */,
 				437921DD20ECC3E000B2EC88 /* NSArray+JKSafeAccess.m */,
 				4323FA1C223CC1F400AC3959 /* CATransactionDemoViewController.m */,
-				437921F120ECC4C000B2EC88 /* NSData+JKPCM.m */,
 				437B0A6420F360BA00E93844 /* NSObject+JKAutoCoding.m */,
 				431CB4DF20F49A800043B0AC /* NSString+JKBase64.h */,
 				437B0A5B20F3602E00E93844 /* NSObject+JKAddProperty.h */,
@@ -431,7 +430,6 @@
 				720F85FD20B2F59500AD0C54 /* SLFollowUserAction.h */,
 				720F860320B2F59500AD0C54 /* SLGetRyTokenAction.h */,
 				720F860120B2F59500AD0C54 /* SLGetRyTokenAction.m */,
-				720F85F920B2F59400AD0C54 /* SLMeConcernListAction.h */,
 				720F85FF20B2F59500AD0C54 /* SLMeFansListAction.h */,
 				720F85FC20B2F59400AD0C54 /* SLRelationAction.h */,
 				93155E4E20D4B88500E1B61F /* SLGetWithdrawListAction.h */,
@@ -753,8 +751,10 @@
 		9314D1E420C53ACE00BB2429 /* SLHelper */ = {
 			isa = PBXGroup;
 			children = (
+				437921F120ECC4C000B2EC88 /* NSData+JKPCM.m */,
 				D22E1E6A21F342F4001A3D2A /* NSSting+aes.h */,
 				938D2FFD20A0C821006A0CDE /* ShowAction.h */,
+				720F85F920B2F59400AD0C54 /* SLMeConcernListAction.h */,
 				431438A9209432D50059D373 /* LaunchScreen.strings */,
 			);
 			path = SLHelper;
