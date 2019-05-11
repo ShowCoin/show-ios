@@ -203,7 +203,7 @@
 		436DEC7722870E8700F16341 /* POPMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPMath.h; sourceTree = "<group>"; };
 		436DEC7822870E8700F16341 /* POPDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPDefines.h; sourceTree = "<group>"; };
 		436DEC7922870E8700F16341 /* POPAnimationInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAnimationInternal.h; sourceTree = "<group>"; };
-		436DEC7A22870E8700F16341 /* POPAnimationExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAnimationExtras.h; sourceTree = "<group>"; };
+		436DEC7A22870E8700F16341 /* POPAnimationExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POPAnimationExtras.h; path = pop/POPAnimationExtras.h; sourceTree = "<group>"; };
 		436DEC7B22870E8700F16341 /* POPAnimationEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAnimationEvent.h; sourceTree = "<group>"; };
 		436DEC7C22870E8700F16341 /* POPBasicAnimationInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPBasicAnimationInternal.h; sourceTree = "<group>"; };
 		436DEC7D22870E8700F16341 /* POPCGUtils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = POPCGUtils.mm; sourceTree = "<group>"; };
@@ -565,9 +565,7 @@
 		436DEC7622870E8700F16341 /* pop */ = {
 			isa = PBXGroup;
 			children = (
-				436DEC7A22870E8700F16341 /* POPAnimationExtras.h */,
 				436DEC8722870E8700F16341 /* POPCustomAnimation.mm */,
-				436DEC9222870E8700F16341 /* POPDecayAnimation.h */,
 				436DEC9E22870E8700F16341 /* WebCore */,
 				436DECA322870E8700F16341 /* POPAnimationTracerInternal.h */,
 				436DECA422870E8700F16341 /* POPAnimationEventInternal.h */,
@@ -971,6 +969,7 @@
 				436DEC7722870E8700F16341 /* POPMath.h */,
 				436DEC7822870E8700F16341 /* POPDefines.h */,
 				436DEC7922870E8700F16341 /* POPAnimationInternal.h */,
+				436DEC7A22870E8700F16341 /* POPAnimationExtras.h */,
 				436DEC7B22870E8700F16341 /* POPAnimationEvent.h */,
 				436DEC7C22870E8700F16341 /* POPBasicAnimationInternal.h */,
 				436DEC7D22870E8700F16341 /* POPCGUtils.mm */,
@@ -993,6 +992,7 @@
 				436DEC8F22870E8700F16341 /* POPDecayAnimation.mm */,
 				436DEC9022870E8700F16341 /* POPSpringAnimationInternal.h */,
 				436DEC9122870E8700F16341 /* pop-osx-Info.plist */,
+				436DEC9222870E8700F16341 /* POPDecayAnimation.h */,
 				436DEC9322870E8700F16341 /* POPSpringSolver.h */,
 				436DEC9422870E8700F16341 /* POPAnimatableProperty.h */,
 				436DEC9522870E8700F16341 /* POPAnimator.h */,
