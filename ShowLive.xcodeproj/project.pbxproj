@@ -151,7 +151,7 @@
 		7217AD9821C5368100D082E9 /* WithdrawViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WithdrawViewController.h; sourceTree = "<group>"; };
 		7217AD9921C536A700D082E9 /* WithdrawViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WithdrawViewController.m; sourceTree = "<group>"; };
 		7217AD9B21C5377D00D082E9 /* SLCoinDetailInfoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLCoinDetailInfoVC.h; sourceTree = "<group>"; };
-		7217BE1121E0D21A00C1E58F /* NSDate+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+Additions.m"; path = "../../JKCategories/NSDate+Additions.m"; sourceTree = "<group>"; };
+		7217BE1121E0D21A00C1E58F /* NSDate+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Additions.m"; sourceTree = "<group>"; };
 		7217BE1221E0D21A00C1E58F /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Additions.h"; path = "../../zh-Hans.lproj/NSString+Additions.h"; sourceTree = "<group>"; };
 		7217BE1321E0D21A00C1E58F /* NSString+Binary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Binary.h"; sourceTree = "<group>"; };
 		7217BE1421E0D21A00C1E58F /* NSData+ImageContentType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+ImageContentType.m"; sourceTree = "<group>"; };
@@ -390,6 +390,7 @@
 				7217BE1421E0D21A00C1E58F /* NSData+ImageContentType.m */,
 				934CBCD72118217800608F2F /* NSDate+Additions.h */,
 				43291F3C20E51F50000C3C15 /* UITextFieldDemoViewController.h */,
+				7217BE1121E0D21A00C1E58F /* NSDate+Additions.m */,
 				934CBCD8211821A500608F2F /* NSDate+Additions.m */,
 				4325536B20D8B53300FC0258 /* MKMapView+JKBetterMaps.m */,
 				7217BE1821E0D21A00C1E58F /* NSString+Json.m */,
@@ -416,11 +417,13 @@
 				72F17B6720AB18F50039E916 /* ShowVerifycodeAction.h */,
 				720F85F720B2F59400AD0C54 /* SLChatStatisticsAction.h */,
 				9343E47521C7D0140001B9C1 /* UILabel+Additional.h */,
+				9314D1E120C539D400BB2429 /* SLShutUpAction.h */,
 				9314D1DF20C5394500BB2429 /* SLAttentionListAction.h */,
 				720F85FD20B2F59500AD0C54 /* SLFollowUserAction.h */,
 				720F860320B2F59500AD0C54 /* SLGetRyTokenAction.h */,
 				720F860120B2F59500AD0C54 /* SLGetRyTokenAction.m */,
 				720F85FF20B2F59500AD0C54 /* SLMeFansListAction.h */,
+				93155E4E20D4B88500E1B61F /* SLGetWithdrawListAction.h */,
 				93155E4F20D4B8D300E1B61F /* SLIsFollowAction.h */,
 				431438A9209432D50059D373 /* LaunchScreen.strings */,
 				434DDB5B20C9332700191FC1 /* CATransaction+JKAnimateWithDuration.m */,
@@ -743,7 +746,6 @@
 				7217BE1921E0D21A00C1E58F /* NSData+ImageContentType.h */,
 				7217BE1521E0D21A00C1E58F /* NSData+Image.h */,
 				7217BE1B21E0D21A00C1E58F /* NSDate+Additions.h */,
-				7217BE1121E0D21A00C1E58F /* NSDate+Additions.m */,
 				93EF35D421C292950088C2E4 /* UIImage+Additional.m */,
 				437921F120ECC4C000B2EC88 /* NSData+JKPCM.m */,
 				43D87B3020EB6E0400E991D6 /* UIScreen+JKFrame.h */,
@@ -751,10 +753,8 @@
 				93155E5120D4B9CE00E1B61F /* SLDefenderListAction.h */,
 				72C6166920A0C67500103C44 /* SLUrgeListAction.h */,
 				4323F9FB223CC1F100AC3959 /* NSString+JKEmoji.m */,
-				9314D1E120C539D400BB2429 /* SLShutUpAction.h */,
 				720F85F920B2F59400AD0C54 /* SLMeConcernListAction.h */,
 				720F85FC20B2F59400AD0C54 /* SLRelationAction.h */,
-				93155E4E20D4B88500E1B61F /* SLGetWithdrawListAction.h */,
 				4323F9ED223CC1EF00AC3959 /* NSString+JKXMLDictionary.h */,
 			);
 			path = SLHelper;
