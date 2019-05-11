@@ -185,7 +185,7 @@
 		436DEC5122870E1A00F16341 /* UIWebView+Alert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+Alert.h"; sourceTree = "<group>"; };
 		436DEC5222870E1A00F16341 /* UIViewController+DDPopUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DDPopUpViewController.m"; sourceTree = "<group>"; };
 		436DEC5322870E1A00F16341 /* UIView+FDCollapsibleConstraints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FDCollapsibleConstraints.m"; sourceTree = "<group>"; };
-		436DEC5422870E1A00F16341 /* WebView+Debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WebView+Debug.h"; sourceTree = "<group>"; };
+		436DEC5422870E1A00F16341 /* WebView+Debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "WebView+Debug.h"; path = "../WebView+Debug.h"; sourceTree = "<group>"; };
 		436DEC5522870E1A00F16341 /* UIApplication+JKPermissions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+JKPermissions.h"; sourceTree = "<group>"; };
 		436DEC5622870E1A00F16341 /* CLLocationManager+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLLocationManager+Blocks.m"; sourceTree = "<group>"; };
 		436DEC5722870E1A00F16341 /* UIView+Debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Debug.h"; path = "../NotRenamed/UIView+Debug.h"; sourceTree = "<group>"; };
@@ -577,6 +577,7 @@
 				436DEC5022870E1A00F16341 /* UICollectionView+ARDynamicCacheHeightLayoutCell.h */,
 				436DEC5122870E1A00F16341 /* UIWebView+Alert.h */,
 				436DEC5322870E1A00F16341 /* UIView+FDCollapsibleConstraints.m */,
+				436DEC5422870E1A00F16341 /* WebView+Debug.h */,
 				436DEC5522870E1A00F16341 /* UIApplication+JKPermissions.h */,
 				436DEC5622870E1A00F16341 /* CLLocationManager+Blocks.m */,
 				436DEC5922870E1A00F16341 /* UIView+GestureCallback.h */,
@@ -586,12 +587,14 @@
 				436DEC7A22870E8700F16341 /* POPAnimationExtras.h */,
 				436DEC7B22870E8700F16341 /* POPAnimationEvent.h */,
 				436DEC7D22870E8700F16341 /* POPCGUtils.mm */,
+				436DEC7E22870E8700F16341 /* POPPropertyAnimationInternal.h */,
 				436DEC7F22870E8700F16341 /* pop-ios-Info.plist */,
 				436DEC8022870E8700F16341 /* POPDecayAnimationInternal.h */,
 				436DEC8122870E8700F16341 /* POPSpringAnimation.h */,
 				436DEC8222870E8700F16341 /* POPBasicAnimation.h */,
 				436DEC8322870E8700F16341 /* POPMath.mm */,
 				436DEC8422870E8700F16341 /* POPAnimationPrivate.h */,
+				436DEC8522870E8700F16341 /* POPAction.h */,
 				436DEC8622870E8700F16341 /* POPSpringAnimation.mm */,
 				436DEC8822870E8700F16341 /* POPCustomAnimation.h */,
 				436DEC8922870E8700F16341 /* POPPropertyAnimation.h */,
@@ -995,12 +998,9 @@
 			children = (
 				436DEC4F22870E1A00F16341 /* UIScrollView+APParallaxHeader.m */,
 				436DEC5222870E1A00F16341 /* UIViewController+DDPopUpViewController.m */,
-				436DEC5422870E1A00F16341 /* WebView+Debug.h */,
 				436DEC5722870E1A00F16341 /* UIView+Debug.h */,
 				436DEC5822870E1A00F16341 /* UIViewController+MJPopupViewController.m */,
 				436DEC7C22870E8700F16341 /* POPBasicAnimationInternal.h */,
-				436DEC7E22870E8700F16341 /* POPPropertyAnimationInternal.h */,
-				436DEC8522870E8700F16341 /* POPAction.h */,
 				436DEC8722870E8700F16341 /* POPCustomAnimation.mm */,
 				436DEC8A22870E8700F16341 /* POPAnimationTracer.mm */,
 				436DEC8E22870E8700F16341 /* POPGeometry.h */,
