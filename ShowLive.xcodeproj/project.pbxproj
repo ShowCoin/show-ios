@@ -101,7 +101,7 @@
 		43143749209432BE0059D373 /* ShowWallet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowWallet.h; sourceTree = "<group>"; };
 		431438AA209432D50059D373 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = LaunchScreen.strings; sourceTree = "<group>"; };
 		431438AE209432E30059D373 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		431CB4D020F499370043B0AC /* NSObject+JKRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JKRuntime.m"; sourceTree = "<group>"; };
+		431CB4D020F499370043B0AC /* NSObject+JKRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+JKRuntime.m"; path = "../../JKCategories/NSObject+JKRuntime.m"; sourceTree = "<group>"; };
 		431CB4DF20F49A800043B0AC /* NSString+JKBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+JKBase64.h"; path = "../../JKCategories/NSString+JKBase64.h"; sourceTree = "<group>"; };
 		4323F9ED223CC1EF00AC3959 /* NSString+JKXMLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JKXMLDictionary.h"; sourceTree = "<group>"; };
 		4323F9FA223CC1F100AC3959 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
@@ -144,7 +144,7 @@
 		720F85F720B2F59400AD0C54 /* SLChatStatisticsAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLChatStatisticsAction.h; sourceTree = "<group>"; };
 		720F85F920B2F59400AD0C54 /* SLMeConcernListAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLMeConcernListAction.h; sourceTree = "<group>"; };
 		720F85FC20B2F59400AD0C54 /* SLRelationAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLRelationAction.h; sourceTree = "<group>"; };
-		720F85FD20B2F59500AD0C54 /* SLFollowUserAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLFollowUserAction.h; sourceTree = "<group>"; };
+		720F85FD20B2F59500AD0C54 /* SLFollowUserAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLFollowUserAction.h; path = ../../JKCategories/SLFollowUserAction.h; sourceTree = "<group>"; };
 		720F85FF20B2F59500AD0C54 /* SLMeFansListAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLMeFansListAction.h; sourceTree = "<group>"; };
 		720F860120B2F59500AD0C54 /* SLGetRyTokenAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLGetRyTokenAction.m; sourceTree = "<group>"; };
 		720F860320B2F59500AD0C54 /* SLGetRyTokenAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLGetRyTokenAction.h; sourceTree = "<group>"; };
@@ -158,7 +158,7 @@
 		7217BE1521E0D21A00C1E58F /* NSData+Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Image.h"; sourceTree = "<group>"; };
 		7217BE1721E0D21A00C1E58F /* NSString+Binary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Binary.m"; sourceTree = "<group>"; };
 		7217BE1821E0D21A00C1E58F /* NSString+Json.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Json.m"; sourceTree = "<group>"; };
-		7217BE1921E0D21A00C1E58F /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+ImageContentType.h"; path = "../Exten/SLHelper/NSData+ImageContentType.h"; sourceTree = "<group>"; };
+		7217BE1921E0D21A00C1E58F /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
 		7217BE1B21E0D21A00C1E58F /* NSDate+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Additions.h"; sourceTree = "<group>"; };
 		7217BE1C21E0D21A00C1E58F /* NSData+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Image.m"; sourceTree = "<group>"; };
 		722BCF0621D78936004BFC52 /* SLInviteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLInviteViewController.m; sourceTree = "<group>"; };
@@ -386,7 +386,6 @@
 			isa = PBXGroup;
 			children = (
 				7217BE1C21E0D21A00C1E58F /* NSData+Image.m */,
-				7217BE1921E0D21A00C1E58F /* NSData+ImageContentType.h */,
 				7217BE1421E0D21A00C1E58F /* NSData+ImageContentType.m */,
 				7217BE1521E0D21A00C1E58F /* NSData+Image.h */,
 				7217BE1B21E0D21A00C1E58F /* NSDate+Additions.h */,
@@ -394,7 +393,6 @@
 				7217BE1121E0D21A00C1E58F /* NSDate+Additions.m */,
 				7217BE1821E0D21A00C1E58F /* NSString+Json.m */,
 				4323FA0E223CC1F300AC3959 /* CLLocation+JKCH1903.m */,
-				431CB4D020F499370043B0AC /* NSObject+JKRuntime.m */,
 				93EF35D421C292950088C2E4 /* UIImage+Additional.m */,
 				437921DD20ECC3E000B2EC88 /* NSArray+JKSafeAccess.m */,
 				4323FA1C223CC1F400AC3959 /* CATransactionDemoViewController.m */,
@@ -403,12 +401,10 @@
 				435D4C9720F0931000C8DC85 /* NSNotificationCenter+JKMainThread.h */,
 				D22E1E6B21F342F4001A3D2A /* NSSting+aes.m */,
 				43D87B3020EB6E0400E991D6 /* UIScreen+JKFrame.h */,
-				7217BE1321E0D21A00C1E58F /* NSString+Binary.h */,
 				9314D1E220C53A3B00BB2429 /* SLHistoryWorksAction.h */,
 				931DAAC520B571C5003A0B38 /* SLGiftAction.h */,
 				72F17B6720AB18F50039E916 /* ShowVerifycodeAction.h */,
 				9314D1E120C539D400BB2429 /* SLShutUpAction.h */,
-				720F85FD20B2F59500AD0C54 /* SLFollowUserAction.h */,
 				720F860120B2F59500AD0C54 /* SLGetRyTokenAction.m */,
 				720F85FF20B2F59500AD0C54 /* SLMeFansListAction.h */,
 				93155E4E20D4B88500E1B61F /* SLGetWithdrawListAction.h */,
@@ -729,9 +725,11 @@
 			children = (
 				4323FA15223CC1F300AC3959 /* NSDictionary+JKBlock.h */,
 				435D4C4920EDEAAD00C8DC85 /* NSDate+JKLunarCalendar.m */,
+				7217BE1921E0D21A00C1E58F /* NSData+ImageContentType.h */,
 				43291F3C20E51F50000C3C15 /* UITextFieldDemoViewController.h */,
 				934CBCD8211821A500608F2F /* NSDate+Additions.m */,
 				4325536B20D8B53300FC0258 /* MKMapView+JKBetterMaps.m */,
+				431CB4D020F499370043B0AC /* NSObject+JKRuntime.m */,
 				437921F120ECC4C000B2EC88 /* NSData+JKPCM.m */,
 				437B0A6420F360BA00E93844 /* NSObject+JKAutoCoding.m */,
 				431CB4DF20F49A800043B0AC /* NSString+JKBase64.h */,
@@ -740,6 +738,7 @@
 				437B0A4F20F35F9C00E93844 /* NSNotificationCenterDemoViewController.m */,
 				D22E1E6A21F342F4001A3D2A /* NSSting+aes.h */,
 				938D2FFD20A0C821006A0CDE /* ShowAction.h */,
+				7217BE1321E0D21A00C1E58F /* NSString+Binary.h */,
 				7217BE1721E0D21A00C1E58F /* NSString+Binary.m */,
 				434DDB5620C932DB00191FC1 /* CAMediaTimingFunction+JKAdditionalEquations.h */,
 				93155E5120D4B9CE00E1B61F /* SLDefenderListAction.h */,
@@ -749,6 +748,7 @@
 				9343E47521C7D0140001B9C1 /* UILabel+Additional.h */,
 				4323F9FB223CC1F100AC3959 /* NSString+JKEmoji.m */,
 				9314D1DF20C5394500BB2429 /* SLAttentionListAction.h */,
+				720F85FD20B2F59500AD0C54 /* SLFollowUserAction.h */,
 				720F860320B2F59500AD0C54 /* SLGetRyTokenAction.h */,
 				720F85F920B2F59400AD0C54 /* SLMeConcernListAction.h */,
 				720F85FC20B2F59400AD0C54 /* SLRelationAction.h */,
