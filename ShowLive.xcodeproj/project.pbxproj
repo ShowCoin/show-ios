@@ -181,7 +181,7 @@
 		436DEC4D22870E1A00F16341 /* UIViewController+MJPopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MJPopupViewController.h"; sourceTree = "<group>"; };
 		436DEC4E22870E1A00F16341 /* UIScrollView+EmptyDataSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+EmptyDataSet.m"; path = "../NotRenamed/UIScrollView+EmptyDataSet.m"; sourceTree = "<group>"; };
 		436DEC4F22870E1A00F16341 /* UIScrollView+APParallaxHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+APParallaxHeader.m"; path = "../NotRenamed/UIScrollView+APParallaxHeader.m"; sourceTree = "<group>"; };
-		436DEC5022870E1A00F16341 /* UICollectionView+ARDynamicCacheHeightLayoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UICollectionView+ARDynamicCacheHeightLayoutCell.h"; path = "../NotRenamed/UICollectionView+ARDynamicCacheHeightLayoutCell.h"; sourceTree = "<group>"; };
+		436DEC5022870E1A00F16341 /* UICollectionView+ARDynamicCacheHeightLayoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UICollectionView+ARDynamicCacheHeightLayoutCell.h"; path = "../../NotRenamed/UICollectionView+ARDynamicCacheHeightLayoutCell.h"; sourceTree = "<group>"; };
 		436DEC5122870E1A00F16341 /* UIWebView+Alert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+Alert.h"; sourceTree = "<group>"; };
 		436DEC5222870E1A00F16341 /* UIViewController+DDPopUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DDPopUpViewController.m"; sourceTree = "<group>"; };
 		436DEC5322870E1A00F16341 /* UIView+FDCollapsibleConstraints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FDCollapsibleConstraints.m"; sourceTree = "<group>"; };
@@ -567,6 +567,11 @@
 			children = (
 				436DEC9E22870E8700F16341 /* WebCore */,
 				436DECA322870E8700F16341 /* POPAnimationTracerInternal.h */,
+				436DEC4822870E1A00F16341 /* WebView+Debug.m */,
+				436DEC4C22870E1A00F16341 /* UIView+GestureCallback.m */,
+				436DEC5022870E1A00F16341 /* UICollectionView+ARDynamicCacheHeightLayoutCell.h */,
+				436DEC5322870E1A00F16341 /* UIView+FDCollapsibleConstraints.m */,
+				436DEC8322870E8700F16341 /* POPMath.mm */,
 				436DECA422870E8700F16341 /* POPAnimationEventInternal.h */,
 				436DECA522870E8700F16341 /* POPAnimator.mm */,
 				436DECA622870E8700F16341 /* POPAnimatableProperty.mm */,
@@ -947,18 +952,14 @@
 		9314D1E420C53ACE00BB2429 /* SLHelper */ = {
 			isa = PBXGroup;
 			children = (
-				436DEC4822870E1A00F16341 /* WebView+Debug.m */,
 				436DEC4922870E1A00F16341 /* UIViewController+TopBarMessage.m */,
 				436DEC4A22870E1A00F16341 /* UIView+Genie.m */,
 				436DEC4B22870E1A00F16341 /* UINavigationController+FDFullscreenPopGesture.h */,
-				436DEC4C22870E1A00F16341 /* UIView+GestureCallback.m */,
 				436DEC4D22870E1A00F16341 /* UIViewController+MJPopupViewController.h */,
 				436DEC4E22870E1A00F16341 /* UIScrollView+EmptyDataSet.m */,
 				436DEC4F22870E1A00F16341 /* UIScrollView+APParallaxHeader.m */,
-				436DEC5022870E1A00F16341 /* UICollectionView+ARDynamicCacheHeightLayoutCell.h */,
 				436DEC5122870E1A00F16341 /* UIWebView+Alert.h */,
 				436DEC5222870E1A00F16341 /* UIViewController+DDPopUpViewController.m */,
-				436DEC5322870E1A00F16341 /* UIView+FDCollapsibleConstraints.m */,
 				436DEC5422870E1A00F16341 /* WebView+Debug.h */,
 				436DEC5522870E1A00F16341 /* UIApplication+JKPermissions.h */,
 				436DEC5622870E1A00F16341 /* CLLocationManager+Blocks.m */,
@@ -977,7 +978,6 @@
 				436DEC8022870E8700F16341 /* POPDecayAnimationInternal.h */,
 				436DEC8122870E8700F16341 /* POPSpringAnimation.h */,
 				436DEC8222870E8700F16341 /* POPBasicAnimation.h */,
-				436DEC8322870E8700F16341 /* POPMath.mm */,
 				436DEC8422870E8700F16341 /* POPAnimationPrivate.h */,
 				436DEC8522870E8700F16341 /* POPAction.h */,
 				436DEC8622870E8700F16341 /* POPSpringAnimation.mm */,
