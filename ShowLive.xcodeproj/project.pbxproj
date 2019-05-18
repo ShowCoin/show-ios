@@ -292,7 +292,7 @@
 		7217BE1521E0D21A00C1E58F /* NSData+Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Image.h"; sourceTree = "<group>"; };
 		7217BE1721E0D21A00C1E58F /* NSString+Binary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Binary.m"; path = "../NSString+Binary.m"; sourceTree = "<group>"; };
 		7217BE1821E0D21A00C1E58F /* NSString+Json.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Json.m"; path = "../../../../Common/exten/NSString+Json.m"; sourceTree = "<group>"; };
-		7217BE1921E0D21A00C1E58F /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+ImageContentType.h"; path = "../../../../Common/SLNavigationController/NSData+ImageContentType.h"; sourceTree = "<group>"; };
+		7217BE1921E0D21A00C1E58F /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+ImageContentType.h"; path = "../../../Common/SLNavigationController/NSData+ImageContentType.h"; sourceTree = "<group>"; };
 		7217BE1B21E0D21A00C1E58F /* NSDate+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+Additions.h"; path = "../../../Common/SLNavigationController/NSDate+Additions.h"; sourceTree = "<group>"; };
 		7217BE1C21E0D21A00C1E58F /* NSData+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Image.m"; sourceTree = "<group>"; };
 		722BCF0621D78936004BFC52 /* SLInviteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLInviteViewController.m; sourceTree = "<group>"; };
@@ -540,6 +540,8 @@
 			isa = PBXGroup;
 			children = (
 				436DEC5D22870E1A00F16341 /* UIScrollView+EmptyDataSet.h */,
+				435D4C4920EDEAAD00C8DC85 /* NSDate+JKLunarCalendar.m */,
+				7217BE1921E0D21A00C1E58F /* NSData+ImageContentType.h */,
 				7217BE1521E0D21A00C1E58F /* NSData+Image.h */,
 				7217BE1B21E0D21A00C1E58F /* NSDate+Additions.h */,
 				7217BE1121E0D21A00C1E58F /* NSDate+Additions.m */,
@@ -566,6 +568,7 @@
 				434DDB5B20C9332700191FC1 /* CATransaction+JKAnimateWithDuration.m */,
 				4323FA25223CC1F500AC3959 /* NSManagedObjectContext+JKObjectClear.h */,
 				436DEC5E22870E1A00F16341 /* UIScrollView+APParallaxHeader.h */,
+				436DEC5F22870E1A00F16341 /* UIView+FDCollapsibleConstraints.h */,
 				436DEC6022870E1A00F16341 /* UIViewController+DDPopUpViewController.h */,
 				436DECA322870E8700F16341 /* POPAnimationTracerInternal.h */,
 				436DEC4822870E1A00F16341 /* WebView+Debug.m */,
@@ -600,6 +603,7 @@
 				436DEC5C22870E1A00F16341 /* UIViewController+TopBarMessage.h */,
 				436DECA422870E8700F16341 /* POPAnimationEventInternal.h */,
 				436DECA622870E8700F16341 /* POPAnimatableProperty.mm */,
+				436DECAD22870E8700F16341 /* POPVector.h */,
 				436DECAF22870E8700F16341 /* POPAnimationTracer.h */,
 				72506F6221CD04D500361964 /* SLNavigationControllerTransition.h */,
 				72506F6421CD04D500361964 /* SLPushAnimationTransition.h */,
@@ -631,9 +635,7 @@
 			children = (
 				72506F5F21CD04D500361964 /* SLNavigationControllerTransition.m */,
 				4323FA15223CC1F300AC3959 /* NSDictionary+JKBlock.h */,
-				435D4C4920EDEAAD00C8DC85 /* NSDate+JKLunarCalendar.m */,
 				7217BE1C21E0D21A00C1E58F /* NSData+Image.m */,
-				7217BE1921E0D21A00C1E58F /* NSData+ImageContentType.h */,
 				7217BE1421E0D21A00C1E58F /* NSData+ImageContentType.m */,
 				934CBCD72118217800608F2F /* NSDate+Additions.h */,
 				43291F3C20E51F50000C3C15 /* UITextFieldDemoViewController.h */,
@@ -664,7 +666,6 @@
 				4323F9ED223CC1EF00AC3959 /* NSString+JKXMLDictionary.h */,
 				7217BE1221E0D21A00C1E58F /* NSString+Additions.h */,
 				4323F9FA223CC1F100AC3959 /* NSString+Additions.h */,
-				436DEC5F22870E1A00F16341 /* UIView+FDCollapsibleConstraints.h */,
 				436DEC6122870E1A00F16341 /* UIWebView+Alert.m */,
 				436DEC6222870E1A00F16341 /* UICollectionView+ARDynamicCacheHeightLayoutCell.m */,
 				436DEC4922870E1A00F16341 /* UIViewController+TopBarMessage.m */,
@@ -704,7 +705,6 @@
 				436DECAA22870E8700F16341 /* POPAnimationEvent.mm */,
 				436DECAB22870E8700F16341 /* POPLayerExtras.mm */,
 				436DECAC22870E8700F16341 /* POPVector.mm */,
-				436DECAD22870E8700F16341 /* POPVector.h */,
 				436DECAE22870E8700F16341 /* POPAnimatorPrivate.h */,
 				434DDB4F20C9326800191FC1 /* CALayer+JKBorderColor.h */,
 				72506F6021CD04D500361964 /* SLNavigationViewController.h */,
