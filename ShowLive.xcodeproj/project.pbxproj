@@ -237,7 +237,7 @@
 		436DEC9922870E8700F16341 /* POPLayerExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POPLayerExtras.h; path = ../SLHelper/pop/WebCore/POPLayerExtras.h; sourceTree = "<group>"; };
 		436DEC9A22870E8700F16341 /* POPAnimation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = POPAnimation.mm; path = ../SLHelper/POPAnimation.mm; sourceTree = "<group>"; };
 		436DEC9B22870E8700F16341 /* POPGeometry.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = POPGeometry.mm; sourceTree = "<group>"; };
-		436DEC9C22870E8700F16341 /* POPBasicAnimation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = POPBasicAnimation.mm; path = ../../POPBasicAnimation.mm; sourceTree = "<group>"; };
+		436DEC9C22870E8700F16341 /* POPBasicAnimation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = POPBasicAnimation.mm; path = ../SLHelper/POPBasicAnimation.mm; sourceTree = "<group>"; };
 		436DEC9D22870E8700F16341 /* POPAnimatablePropertyTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POPAnimatablePropertyTypes.h; path = ../SLHelper/pop/WebCore/POPAnimatablePropertyTypes.h; sourceTree = "<group>"; };
 		436DEC9F22870E8700F16341 /* TransformationMatrix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TransformationMatrix.cpp; sourceTree = "<group>"; };
 		436DECA022870E8700F16341 /* TransformationMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransformationMatrix.h; sourceTree = "<group>"; };
@@ -659,13 +659,16 @@
 				436DEC9922870E8700F16341 /* POPLayerExtras.h */,
 				436DEC9A22870E8700F16341 /* POPAnimation.mm */,
 				436DEC9B22870E8700F16341 /* POPGeometry.mm */,
+				436DEC9C22870E8700F16341 /* POPBasicAnimation.mm */,
 				436DEC9D22870E8700F16341 /* POPAnimatablePropertyTypes.h */,
+				436DEC5B22870E1A00F16341 /* UIView+Genie.h */,
 				436DEC5C22870E1A00F16341 /* UIViewController+TopBarMessage.h */,
 				436DECA522870E8700F16341 /* POPAnimator.mm */,
 				436DECA822870E8700F16341 /* module.modulemap */,
 				436DECA922870E8700F16341 /* POPAnimationRuntime.mm */,
 				436DECAA22870E8700F16341 /* POPAnimationEvent.mm */,
 				436DECAC22870E8700F16341 /* POPVector.mm */,
+				436DECAE22870E8700F16341 /* POPAnimatorPrivate.h */,
 				436DECAF22870E8700F16341 /* POPAnimationTracer.h */,
 				72506F6021CD04D500361964 /* SLNavigationViewController.h */,
 				72506F6321CD04D500361964 /* SLNavigationViewController.m */,
@@ -710,15 +713,12 @@
 			children = (
 				436DEC9622870E8700F16341 /* POPAnimationRuntime.h */,
 				436DEC9722870E8700F16341 /* POP.h */,
-				436DEC9C22870E8700F16341 /* POPBasicAnimation.mm */,
 				436DEC5A22870E1A00F16341 /* UINavigationController+FDFullscreenPopGesture.m */,
-				436DEC5B22870E1A00F16341 /* UIView+Genie.h */,
 				436DECA422870E8700F16341 /* POPAnimationEventInternal.h */,
 				436DECA622870E8700F16341 /* POPAnimatableProperty.mm */,
 				436DECA722870E8700F16341 /* POPAnimation.h */,
 				436DECAB22870E8700F16341 /* POPLayerExtras.mm */,
 				436DECAD22870E8700F16341 /* POPVector.h */,
-				436DECAE22870E8700F16341 /* POPAnimatorPrivate.h */,
 				434DDB4F20C9326800191FC1 /* CALayer+JKBorderColor.h */,
 				72506F6421CD04D500361964 /* SLPushAnimationTransition.h */,
 				436DEC3C22870E1A00F16341 /* UIView+Debug.m */,
