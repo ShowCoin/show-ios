@@ -415,7 +415,7 @@
 		931DAAC520B571C5003A0B38 /* SLGiftAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLGiftAction.h; sourceTree = "<group>"; };
 		931DAAC820B5A7A6003A0B38 /* SLConvListSystemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLConvListSystemTableViewCell.h; sourceTree = "<group>"; };
 		9343E47521C7D0140001B9C1 /* UILabel+Additional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UILabel+Additional.h"; path = "../SLHelper/UILabel+Additional.h"; sourceTree = "<group>"; };
-		934CBCD72118217800608F2F /* NSDate+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+Additions.h"; path = "../../JKCategories/NSDate+Additions.h"; sourceTree = "<group>"; };
+		934CBCD72118217800608F2F /* NSDate+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+Additions.h"; path = "../../../JKCategories/NSDate+Additions.h"; sourceTree = "<group>"; };
 		934CBCD8211821A500608F2F /* NSDate+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Additions.m"; sourceTree = "<group>"; };
 		934E1B9720AC39D900A0B080 /* SLChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLChatViewController.h; sourceTree = "<group>"; };
 		934E1B9820AC3A1E00A0B080 /* SLChatViewController+BlankView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SLChatViewController+BlankView.h"; sourceTree = "<group>"; };
@@ -543,7 +543,6 @@
 				72506F5F21CD04D500361964 /* SLNavigationControllerTransition.m */,
 				7217BE1421E0D21A00C1E58F /* NSData+ImageContentType.m */,
 				7217BE1B21E0D21A00C1E58F /* NSDate+Additions.h */,
-				934CBCD72118217800608F2F /* NSDate+Additions.h */,
 				43291F3C20E51F50000C3C15 /* UITextFieldDemoViewController.h */,
 				7217BE1121E0D21A00C1E58F /* NSDate+Additions.m */,
 				934CBCD8211821A500608F2F /* NSDate+Additions.m */,
@@ -616,7 +615,6 @@
 				436DEC7A22870E8700F16341 /* POPAnimationExtras.h */,
 				436DEC7B22870E8700F16341 /* POPAnimationEvent.h */,
 				436DEC7C22870E8700F16341 /* POPBasicAnimationInternal.h */,
-				436DEC7D22870E8700F16341 /* POPCGUtils.mm */,
 				436DEC7E22870E8700F16341 /* POPPropertyAnimationInternal.h */,
 				436DEC7F22870E8700F16341 /* pop-ios-Info.plist */,
 				436DEC8022870E8700F16341 /* POPDecayAnimationInternal.h */,
@@ -685,6 +683,7 @@
 			isa = PBXGroup;
 			children = (
 				7217BE1521E0D21A00C1E58F /* NSData+Image.h */,
+				934CBCD72118217800608F2F /* NSDate+Additions.h */,
 				D22E1E6A21F342F4001A3D2A /* NSSting+aes.h */,
 				72F17B6720AB18F50039E916 /* ShowVerifycodeAction.h */,
 				9314D1E120C539D400BB2429 /* SLShutUpAction.h */,
@@ -694,6 +693,7 @@
 				436DEC4822870E1A00F16341 /* WebView+Debug.m */,
 				436DEC4D22870E1A00F16341 /* UIViewController+MJPopupViewController.h */,
 				436DEC5922870E1A00F16341 /* UIView+GestureCallback.h */,
+				436DEC7D22870E8700F16341 /* POPCGUtils.mm */,
 				436DEC8E22870E8700F16341 /* POPGeometry.h */,
 				436DEC9222870E8700F16341 /* POPDecayAnimation.h */,
 				436DEC9422870E8700F16341 /* POPAnimatableProperty.h */,
