@@ -191,7 +191,7 @@
 		436DEC5722870E1A00F16341 /* UIView+Debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Debug.h"; path = "../../SLHelper/pop/WebCore/UIView+Debug.h"; sourceTree = "<group>"; };
 		436DEC5822870E1A00F16341 /* UIViewController+MJPopupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MJPopupViewController.m"; sourceTree = "<group>"; };
 		436DEC5922870E1A00F16341 /* UIView+GestureCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GestureCallback.h"; sourceTree = "<group>"; };
-		436DEC5A22870E1A00F16341 /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+FDFullscreenPopGesture.m"; path = "../../../NotRenamed/UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
+		436DEC5A22870E1A00F16341 /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+FDFullscreenPopGesture.m"; path = "../UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
 		436DEC5B22870E1A00F16341 /* UIView+Genie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Genie.h"; sourceTree = "<group>"; };
 		436DEC5C22870E1A00F16341 /* UIViewController+TopBarMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+TopBarMessage.h"; path = "../UIViewController+TopBarMessage.h"; sourceTree = "<group>"; };
 		436DEC5D22870E1A00F16341 /* UIScrollView+EmptyDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+EmptyDataSet.h"; sourceTree = "<group>"; };
@@ -414,7 +414,7 @@
 		9319236D20B897C6001C6144 /* SLVMFriendList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLVMFriendList.h; sourceTree = "<group>"; };
 		931DAAC520B571C5003A0B38 /* SLGiftAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLGiftAction.h; sourceTree = "<group>"; };
 		931DAAC820B5A7A6003A0B38 /* SLConvListSystemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLConvListSystemTableViewCell.h; sourceTree = "<group>"; };
-		9343E47521C7D0140001B9C1 /* UILabel+Additional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UILabel+Additional.h"; path = "../../UILabel+Additional.h"; sourceTree = "<group>"; };
+		9343E47521C7D0140001B9C1 /* UILabel+Additional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UILabel+Additional.h"; path = "../../SLHelper/UILabel+Additional.h"; sourceTree = "<group>"; };
 		934CBCD72118217800608F2F /* NSDate+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+Additions.h"; path = "../../../JKCategories/NSDate+Additions.h"; sourceTree = "<group>"; };
 		934CBCD8211821A500608F2F /* NSDate+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+Additions.m"; path = "../NSDate+Additions.m"; sourceTree = "<group>"; };
 		934E1B9720AC39D900A0B080 /* SLChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLChatViewController.h; sourceTree = "<group>"; };
@@ -572,6 +572,7 @@
 				9314D1E220C53A3B00BB2429 /* SLHistoryWorksAction.h */,
 				720C304820A35ACC00207500 /* SLGetWithdrawAddressAction.h */,
 				72C6166920A0C67500103C44 /* SLUrgeListAction.h */,
+				9343E47521C7D0140001B9C1 /* UILabel+Additional.h */,
 				9314D1E120C539D400BB2429 /* SLShutUpAction.h */,
 				720F85FD20B2F59500AD0C54 /* SLFollowUserAction.h */,
 				720F860120B2F59500AD0C54 /* SLGetRyTokenAction.m */,
@@ -608,6 +609,7 @@
 				436DEC8822870E8700F16341 /* POPCustomAnimation.h */,
 				436DEC8A22870E8700F16341 /* POPAnimationTracer.mm */,
 				436DEC8B22870E8700F16341 /* POPCGUtils.h */,
+				436DEC8C22870E8700F16341 /* POPAnimationExtras.mm */,
 				436DEC8E22870E8700F16341 /* POPGeometry.h */,
 				436DEC9022870E8700F16341 /* POPSpringAnimationInternal.h */,
 				436DEC9122870E8700F16341 /* pop-osx-Info.plist */,
@@ -619,6 +621,7 @@
 				436DEC9822870E8700F16341 /* POPPropertyAnimation.mm */,
 				436DEC9922870E8700F16341 /* POPLayerExtras.h */,
 				436DEC9B22870E8700F16341 /* POPGeometry.mm */,
+				436DEC5A22870E1A00F16341 /* UINavigationController+FDFullscreenPopGesture.m */,
 				436DEC5B22870E1A00F16341 /* UIView+Genie.h */,
 				436DEC5C22870E1A00F16341 /* UIViewController+TopBarMessage.h */,
 				436DECA522870E8700F16341 /* POPAnimator.mm */,
@@ -651,7 +654,6 @@
 				931DAAC520B571C5003A0B38 /* SLGiftAction.h */,
 				72F17B6720AB18F50039E916 /* ShowVerifycodeAction.h */,
 				720F85F720B2F59400AD0C54 /* SLChatStatisticsAction.h */,
-				9343E47521C7D0140001B9C1 /* UILabel+Additional.h */,
 				4323F9FB223CC1F100AC3959 /* NSString+JKEmoji.m */,
 				9314D1DF20C5394500BB2429 /* SLAttentionListAction.h */,
 				720F860320B2F59500AD0C54 /* SLGetRyTokenAction.h */,
@@ -678,7 +680,6 @@
 				436DEC8522870E8700F16341 /* POPAction.h */,
 				436DEC8622870E8700F16341 /* POPSpringAnimation.mm */,
 				436DEC8922870E8700F16341 /* POPPropertyAnimation.h */,
-				436DEC8C22870E8700F16341 /* POPAnimationExtras.mm */,
 				436DEC8D22870E8700F16341 /* pop-tvos-Info.plist */,
 				436DEC8F22870E8700F16341 /* POPDecayAnimation.mm */,
 				436DEC9322870E8700F16341 /* POPSpringSolver.h */,
@@ -687,7 +688,6 @@
 				436DEC9A22870E8700F16341 /* POPAnimation.mm */,
 				436DEC9C22870E8700F16341 /* POPBasicAnimation.mm */,
 				436DEC9D22870E8700F16341 /* POPAnimatablePropertyTypes.h */,
-				436DEC5A22870E1A00F16341 /* UINavigationController+FDFullscreenPopGesture.m */,
 				436DECA422870E8700F16341 /* POPAnimationEventInternal.h */,
 				436DECA622870E8700F16341 /* POPAnimatableProperty.mm */,
 				436DECA722870E8700F16341 /* POPAnimation.h */,
