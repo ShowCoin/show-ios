@@ -324,7 +324,7 @@
 		72506F5C21CD044500361964 /* SLHeadPortrait.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLHeadPortrait.m; sourceTree = "<group>"; };
 		72506F5F21CD04D500361964 /* SLNavigationControllerTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLNavigationControllerTransition.m; path = ../../../../Common/SLNavigationController/SLNavigationControllerTransition.m; sourceTree = "<group>"; };
 		72506F6021CD04D500361964 /* SLNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLNavigationViewController.h; sourceTree = "<group>"; };
-		72506F6121CD04D500361964 /* SLPushAnimationTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLPushAnimationTransition.m; path = ../../../../Common/SLNavigationController/SLPushAnimationTransition.m; sourceTree = "<group>"; };
+		72506F6121CD04D500361964 /* SLPushAnimationTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLPushAnimationTransition.m; path = ../../../../../Common/SLNavigationController/SLPushAnimationTransition.m; sourceTree = "<group>"; };
 		72506F6221CD04D500361964 /* SLNavigationControllerTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLNavigationControllerTransition.h; sourceTree = "<group>"; };
 		72506F6321CD04D500361964 /* SLNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLNavigationViewController.m; path = ../SLNavigationViewController.m; sourceTree = "<group>"; };
 		72506F6421CD04D500361964 /* SLPushAnimationTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLPushAnimationTransition.h; path = ../../../../Common/SLNavigationController/SLPushAnimationTransition.h; sourceTree = "<group>"; };
@@ -598,7 +598,6 @@
 				720F85FC20B2F59400AD0C54 /* SLRelationAction.h */,
 				93155E4E20D4B88500E1B61F /* SLGetWithdrawListAction.h */,
 				93155E4F20D4B8D300E1B61F /* SLIsFollowAction.h */,
-				431438A9209432D50059D373 /* LaunchScreen.strings */,
 				4323F9ED223CC1EF00AC3959 /* NSString+JKXMLDictionary.h */,
 				434DDB5B20C9332700191FC1 /* CATransaction+JKAnimateWithDuration.m */,
 				4323FA25223CC1F500AC3959 /* NSManagedObjectContext+JKObjectClear.h */,
@@ -689,7 +688,6 @@
 				72506F6321CD04D500361964 /* SLNavigationViewController.m */,
 				72506F5B21CD040900361964 /* SLHeadPortrait.h */,
 				72506F5C21CD044500361964 /* SLHeadPortrait.m */,
-				72506F6121CD04D500361964 /* SLPushAnimationTransition.m */,
 				72506F6221CD04D500361964 /* SLNavigationControllerTransition.h */,
 				72506F6421CD04D500361964 /* SLPushAnimationTransition.h */,
 				436DEC3C22870E1A00F16341 /* UIView+Debug.m */,
@@ -722,6 +720,8 @@
 		436DEC9E22870E8700F16341 /* WebCore */ = {
 			isa = PBXGroup;
 			children = (
+				431438A9209432D50059D373 /* LaunchScreen.strings */,
+				72506F6121CD04D500361964 /* SLPushAnimationTransition.m */,
 				436DEC9622870E8700F16341 /* POPAnimationRuntime.h */,
 				436DEC9722870E8700F16341 /* POP.h */,
 			);
