@@ -237,7 +237,7 @@
 		436DEC9922870E8700F16341 /* POPLayerExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPLayerExtras.h; sourceTree = "<group>"; };
 		436DEC9A22870E8700F16341 /* POPAnimation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = POPAnimation.mm; path = ../../POPAnimation.mm; sourceTree = "<group>"; };
 		436DEC9B22870E8700F16341 /* POPGeometry.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = POPGeometry.mm; sourceTree = "<group>"; };
-		436DEC9C22870E8700F16341 /* POPBasicAnimation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = POPBasicAnimation.mm; path = ../../SLHelper/POPBasicAnimation.mm; sourceTree = "<group>"; };
+		436DEC9C22870E8700F16341 /* POPBasicAnimation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = POPBasicAnimation.mm; path = ../../POPBasicAnimation.mm; sourceTree = "<group>"; };
 		436DEC9D22870E8700F16341 /* POPAnimatablePropertyTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAnimatablePropertyTypes.h; sourceTree = "<group>"; };
 		436DEC9F22870E8700F16341 /* TransformationMatrix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TransformationMatrix.cpp; sourceTree = "<group>"; };
 		436DECA022870E8700F16341 /* TransformationMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransformationMatrix.h; sourceTree = "<group>"; };
@@ -290,7 +290,7 @@
 		7217BE1321E0D21A00C1E58F /* NSString+Binary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Binary.h"; sourceTree = "<group>"; };
 		7217BE1421E0D21A00C1E58F /* NSData+ImageContentType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+ImageContentType.m"; sourceTree = "<group>"; };
 		7217BE1521E0D21A00C1E58F /* NSData+Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Image.h"; sourceTree = "<group>"; };
-		7217BE1721E0D21A00C1E58F /* NSString+Binary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Binary.m"; path = "../../SLHelper/NSString+Binary.m"; sourceTree = "<group>"; };
+		7217BE1721E0D21A00C1E58F /* NSString+Binary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Binary.m"; path = "../../NSString+Binary.m"; sourceTree = "<group>"; };
 		7217BE1821E0D21A00C1E58F /* NSString+Json.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Json.m"; path = "../../../../../Common/exten/NSString+Json.m"; sourceTree = "<group>"; };
 		7217BE1921E0D21A00C1E58F /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+ImageContentType.h"; path = "../../../../../Common/SLNavigationController/NSData+ImageContentType.h"; sourceTree = "<group>"; };
 		7217BE1B21E0D21A00C1E58F /* NSDate+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+Additions.h"; path = "../../../../../Common/SLNavigationController/NSDate+Additions.h"; sourceTree = "<group>"; };
@@ -550,7 +550,6 @@
 				934CBCD72118217800608F2F /* NSDate+Additions.h */,
 				7217BE1121E0D21A00C1E58F /* NSDate+Additions.m */,
 				D22E1E6B21F342F4001A3D2A /* NSSting+aes.m */,
-				7217BE1721E0D21A00C1E58F /* NSString+Binary.m */,
 				720F85FC20B2F59400AD0C54 /* SLRelationAction.h */,
 				7217BE1221E0D21A00C1E58F /* NSString+Additions.h */,
 				436DEC6122870E1A00F16341 /* UIWebView+Alert.m */,
@@ -559,7 +558,6 @@
 				436DEC5922870E1A00F16341 /* UIView+GestureCallback.h */,
 				436DEC7822870E8700F16341 /* POPDefines.h */,
 				436DEC8622870E8700F16341 /* POPSpringAnimation.mm */,
-				436DEC9C22870E8700F16341 /* POPBasicAnimation.mm */,
 			);
 			path = "UITableView-FDTemplateLayoutCell";
 			sourceTree = "<group>";
@@ -597,6 +595,7 @@
 				938D2FFD20A0C821006A0CDE /* ShowAction.h */,
 				43D87B3020EB6E0400E991D6 /* UIScreen+JKFrame.h */,
 				7217BE1321E0D21A00C1E58F /* NSString+Binary.h */,
+				7217BE1721E0D21A00C1E58F /* NSString+Binary.m */,
 				434DDB5620C932DB00191FC1 /* CAMediaTimingFunction+JKAdditionalEquations.h */,
 				93155E5120D4B9CE00E1B61F /* SLDefenderListAction.h */,
 				9314D1E220C53A3B00BB2429 /* SLHistoryWorksAction.h */,
@@ -678,6 +677,7 @@
 				436DEC9922870E8700F16341 /* POPLayerExtras.h */,
 				436DEC9A22870E8700F16341 /* POPAnimation.mm */,
 				436DEC9B22870E8700F16341 /* POPGeometry.mm */,
+				436DEC9C22870E8700F16341 /* POPBasicAnimation.mm */,
 				436DEC9D22870E8700F16341 /* POPAnimatablePropertyTypes.h */,
 				436DEC5A22870E1A00F16341 /* UINavigationController+FDFullscreenPopGesture.m */,
 				436DEC5B22870E1A00F16341 /* UIView+Genie.h */,
