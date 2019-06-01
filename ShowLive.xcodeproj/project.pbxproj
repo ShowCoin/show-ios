@@ -246,7 +246,7 @@
 		436DECA322870E8700F16341 /* POPAnimationTracerInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAnimationTracerInternal.h; sourceTree = "<group>"; };
 		436DECA422870E8700F16341 /* POPAnimationEventInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAnimationEventInternal.h; sourceTree = "<group>"; };
 		436DECA522870E8700F16341 /* POPAnimator.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = POPAnimator.mm; sourceTree = "<group>"; };
-		436DECA622870E8700F16341 /* POPAnimatableProperty.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = POPAnimatableProperty.mm; path = ../POPAnimatableProperty.mm; sourceTree = "<group>"; };
+		436DECA622870E8700F16341 /* POPAnimatableProperty.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = POPAnimatableProperty.mm; sourceTree = "<group>"; };
 		436DECA722870E8700F16341 /* POPAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAnimation.h; sourceTree = "<group>"; };
 		436DECA822870E8700F16341 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		436DECA922870E8700F16341 /* POPAnimationRuntime.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = POPAnimationRuntime.mm; sourceTree = "<group>"; };
@@ -445,7 +445,7 @@
 		B4C105B07A90052BA25F3424 /* Pods-ShowLiveUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShowLiveUITests/Pods-ShowLiveUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C80209C93E46267AFE3ADF2E /* libPods-ShowLiveTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShowLiveTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFCDB8F5C4F35241EF7781C8 /* Pods-ShowLiveTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShowLiveTests/Pods-ShowLiveTests.release.xcconfig"; sourceTree = "<group>"; };
-		D22E1E6A21F342F4001A3D2A /* NSSting+aes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSSting+aes.h"; path = "../../SLHelper/pop/WebCore/NSSting+aes.h"; sourceTree = "<group>"; };
+		D22E1E6A21F342F4001A3D2A /* NSSting+aes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSSting+aes.h"; path = "../SLHelper/pop/WebCore/NSSting+aes.h"; sourceTree = "<group>"; };
 		D22E1E6B21F342F4001A3D2A /* NSSting+aes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSSting+aes.m"; sourceTree = "<group>"; };
 		D6F34820745ED99EE82E0D41 /* Pods-ShowLiveTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShowLiveTests/Pods-ShowLiveTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -546,6 +546,7 @@
 				934CBCD8211821A500608F2F /* NSDate+Additions.m */,
 				4323FA1C223CC1F400AC3959 /* CATransactionDemoViewController.m */,
 				431CB4DF20F49A800043B0AC /* NSString+JKBase64.h */,
+				D22E1E6A21F342F4001A3D2A /* NSSting+aes.h */,
 				7217BE1721E0D21A00C1E58F /* NSString+Binary.m */,
 				93155E5120D4B9CE00E1B61F /* SLDefenderListAction.h */,
 				720C304820A35ACC00207500 /* SLGetWithdrawAddressAction.h */,
@@ -576,6 +577,8 @@
 				436DEC9D22870E8700F16341 /* POPAnimatablePropertyTypes.h */,
 				436DEC5A22870E1A00F16341 /* UINavigationController+FDFullscreenPopGesture.m */,
 				436DEC5C22870E1A00F16341 /* UIViewController+TopBarMessage.h */,
+				436DECA622870E8700F16341 /* POPAnimatableProperty.mm */,
+				435D4C9720F0931000C8DC85 /* NSNotificationCenter+JKMainThread.h */,
 				436DECA822870E8700F16341 /* module.modulemap */,
 				436DECAA22870E8700F16341 /* POPAnimationEvent.mm */,
 				434DDB4F20C9326800191FC1 /* CALayer+JKBorderColor.h */,
@@ -602,7 +605,6 @@
 				437921F120ECC4C000B2EC88 /* NSData+JKPCM.m */,
 				437B0A6420F360BA00E93844 /* NSObject+JKAutoCoding.m */,
 				437B0A5B20F3602E00E93844 /* NSObject+JKAddProperty.h */,
-				D22E1E6A21F342F4001A3D2A /* NSSting+aes.h */,
 				D22E1E6B21F342F4001A3D2A /* NSSting+aes.m */,
 				938D2FFD20A0C821006A0CDE /* ShowAction.h */,
 				43D87B3020EB6E0400E991D6 /* UIScreen+JKFrame.h */,
@@ -673,12 +675,10 @@
 				436DEC5B22870E1A00F16341 /* UIView+Genie.h */,
 				436DECA422870E8700F16341 /* POPAnimationEventInternal.h */,
 				436DECA522870E8700F16341 /* POPAnimator.mm */,
-				436DECA622870E8700F16341 /* POPAnimatableProperty.mm */,
 				437B0A5520F35FDE00E93844 /* NSNumber+JKRomanNumerals.h */,
 				437B0A5920F3600900E93844 /* NSNumber+JKRound.h */,
 				437B0A6120F3608A00E93844 /* NSObject+JKAssociatedObject.h */,
 				437B0A4F20F35F9C00E93844 /* NSNotificationCenterDemoViewController.m */,
-				435D4C9720F0931000C8DC85 /* NSNotificationCenter+JKMainThread.h */,
 				436DECA722870E8700F16341 /* POPAnimation.h */,
 				436DECA922870E8700F16341 /* POPAnimationRuntime.mm */,
 				436DECAB22870E8700F16341 /* POPLayerExtras.mm */,
