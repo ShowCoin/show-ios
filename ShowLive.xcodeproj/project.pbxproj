@@ -215,7 +215,7 @@
 		436DEC8322870E8700F16341 /* POPMath.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = POPMath.mm; sourceTree = "<group>"; };
 		436DEC8422870E8700F16341 /* POPAnimationPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POPAnimationPrivate.h; path = ../../SLHelper/pop/POPAnimationPrivate.h; sourceTree = "<group>"; };
 		436DEC8522870E8700F16341 /* POPAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POPAction.h; path = ../POPAction.h; sourceTree = "<group>"; };
-		436DEC8622870E8700F16341 /* POPSpringAnimation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = POPSpringAnimation.mm; path = ../../SLHelper/POPSpringAnimation.mm; sourceTree = "<group>"; };
+		436DEC8622870E8700F16341 /* POPSpringAnimation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = POPSpringAnimation.mm; path = ../SLHelper/POPSpringAnimation.mm; sourceTree = "<group>"; };
 		436DEC8722870E8700F16341 /* POPCustomAnimation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = POPCustomAnimation.mm; sourceTree = "<group>"; };
 		436DEC8822870E8700F16341 /* POPCustomAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POPCustomAnimation.h; path = ../../SLHelper/pop/POPCustomAnimation.h; sourceTree = "<group>"; };
 		436DEC8922870E8700F16341 /* POPPropertyAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPPropertyAnimation.h; sourceTree = "<group>"; };
@@ -564,6 +564,7 @@
 				436DEC5622870E1A00F16341 /* CLLocationManager+Blocks.m */,
 				436DEC7A22870E8700F16341 /* POPAnimationExtras.h */,
 				436DEC7C22870E8700F16341 /* POPBasicAnimationInternal.h */,
+				436DEC8622870E8700F16341 /* POPSpringAnimation.mm */,
 				436DEC8722870E8700F16341 /* POPCustomAnimation.mm */,
 				436DEC8A22870E8700F16341 /* POPAnimationTracer.mm */,
 				436DEC8D22870E8700F16341 /* pop-tvos-Info.plist */,
@@ -573,6 +574,7 @@
 				436DEC5A22870E1A00F16341 /* UINavigationController+FDFullscreenPopGesture.m */,
 				436DEC5C22870E1A00F16341 /* UIViewController+TopBarMessage.h */,
 				436DECA822870E8700F16341 /* module.modulemap */,
+				436DECAA22870E8700F16341 /* POPAnimationEvent.mm */,
 				434DDB4F20C9326800191FC1 /* CALayer+JKBorderColor.h */,
 				72506F6321CD04D500361964 /* SLNavigationViewController.m */,
 				72506F6121CD04D500361964 /* SLPushAnimationTransition.m */,
@@ -649,7 +651,6 @@
 				436DEC8322870E8700F16341 /* POPMath.mm */,
 				436DEC8422870E8700F16341 /* POPAnimationPrivate.h */,
 				436DEC8522870E8700F16341 /* POPAction.h */,
-				436DEC8622870E8700F16341 /* POPSpringAnimation.mm */,
 				436DEC8822870E8700F16341 /* POPCustomAnimation.h */,
 				436DEC8922870E8700F16341 /* POPPropertyAnimation.h */,
 				436DEC8B22870E8700F16341 /* POPCGUtils.h */,
@@ -680,7 +681,6 @@
 				435D4C9720F0931000C8DC85 /* NSNotificationCenter+JKMainThread.h */,
 				436DECA722870E8700F16341 /* POPAnimation.h */,
 				436DECA922870E8700F16341 /* POPAnimationRuntime.mm */,
-				436DECAA22870E8700F16341 /* POPAnimationEvent.mm */,
 				436DECAB22870E8700F16341 /* POPLayerExtras.mm */,
 				436DECAC22870E8700F16341 /* POPVector.mm */,
 				436DECAD22870E8700F16341 /* POPVector.h */,
