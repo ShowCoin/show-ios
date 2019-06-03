@@ -416,7 +416,7 @@
 		931DAAC820B5A7A6003A0B38 /* SLConvListSystemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLConvListSystemTableViewCell.h; sourceTree = "<group>"; };
 		9343E47521C7D0140001B9C1 /* UILabel+Additional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UILabel+Additional.h"; path = "SLHelper/UILabel+Additional.h"; sourceTree = "<group>"; };
 		934CBCD72118217800608F2F /* NSDate+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+Additions.h"; path = "../JKCategories/NSDate+Additions.h"; sourceTree = "<group>"; };
-		934CBCD8211821A500608F2F /* NSDate+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Additions.m"; sourceTree = "<group>"; };
+		934CBCD8211821A500608F2F /* NSDate+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+Additions.m"; path = "NotRenamed/NSDate+Additions.m"; sourceTree = "<group>"; };
 		934E1B9720AC39D900A0B080 /* SLChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLChatViewController.h; sourceTree = "<group>"; };
 		934E1B9820AC3A1E00A0B080 /* SLChatViewController+BlankView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SLChatViewController+BlankView.h"; sourceTree = "<group>"; };
 		93615AE820C142D7000D5658 /* SLBaseWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLBaseWebViewController.h; sourceTree = "<group>"; };
@@ -542,8 +542,6 @@
 				436DEC4022870E1A00F16341 /* UITableView+FDKeyedHeightCache.h */,
 				436DEC4722870E1A00F16341 /* UITableView+FDTemplateLayoutCell.h */,
 				436DEC9622870E8700F16341 /* POPAnimationRuntime.h */,
-				934CBCD8211821A500608F2F /* NSDate+Additions.m */,
-				D22E1E6B21F342F4001A3D2A /* NSSting+aes.m */,
 				7217BE1321E0D21A00C1E58F /* NSString+Binary.h */,
 				720F860120B2F59500AD0C54 /* SLGetRyTokenAction.m */,
 				93155E4E20D4B88500E1B61F /* SLGetWithdrawListAction.h */,
@@ -555,7 +553,6 @@
 				436DEC8022870E8700F16341 /* POPDecayAnimationInternal.h */,
 				436DEC8222870E8700F16341 /* POPBasicAnimation.h */,
 				436DEC8322870E8700F16341 /* POPMath.mm */,
-				436DEC9222870E8700F16341 /* POPDecayAnimation.h */,
 				436DECAC22870E8700F16341 /* POPVector.mm */,
 				436DEC9F22870E8700F16341 /* TransformationMatrix.cpp */,
 				436DECA222870E8700F16341 /* UnitBezier.h */,
@@ -960,6 +957,7 @@
 				934CBCD72118217800608F2F /* NSDate+Additions.h */,
 				7217BE1B21E0D21A00C1E58F /* NSDate+Additions.h */,
 				43291F3C20E51F50000C3C15 /* UITextFieldDemoViewController.h */,
+				934CBCD8211821A500608F2F /* NSDate+Additions.m */,
 				7217BE1121E0D21A00C1E58F /* NSDate+Additions.m */,
 				4325536B20D8B53300FC0258 /* MKMapView+JKBetterMaps.m */,
 				7217BE1821E0D21A00C1E58F /* NSString+Json.m */,
@@ -973,6 +971,7 @@
 				431CB4DF20F49A800043B0AC /* NSString+JKBase64.h */,
 				437B0A5B20F3602E00E93844 /* NSObject+JKAddProperty.h */,
 				D22E1E6A21F342F4001A3D2A /* NSSting+aes.h */,
+				D22E1E6B21F342F4001A3D2A /* NSSting+aes.m */,
 				938D2FFD20A0C821006A0CDE /* ShowAction.h */,
 				43D87B3020EB6E0400E991D6 /* UIScreen+JKFrame.h */,
 				7217BE1721E0D21A00C1E58F /* NSString+Binary.m */,
@@ -1043,6 +1042,7 @@
 				436DEC8F22870E8700F16341 /* POPDecayAnimation.mm */,
 				436DEC9022870E8700F16341 /* POPSpringAnimationInternal.h */,
 				436DEC9122870E8700F16341 /* pop-osx-Info.plist */,
+				436DEC9222870E8700F16341 /* POPDecayAnimation.h */,
 				436DEC9322870E8700F16341 /* POPSpringSolver.h */,
 				436DEC9422870E8700F16341 /* POPAnimatableProperty.h */,
 				436DEC9522870E8700F16341 /* POPAnimator.h */,
