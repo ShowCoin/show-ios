@@ -172,7 +172,7 @@
 		436DEC4422870E1A00F16341 /* UITableView+FDKeyedHeightCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDKeyedHeightCache.m"; sourceTree = "<group>"; };
 		436DEC4522870E1A00F16341 /* UITableView+FDTemplateLayoutCellDebug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDTemplateLayoutCellDebug.m"; sourceTree = "<group>"; };
 		436DEC4622870E1A00F16341 /* UITableView+FDIndexPathHeightCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDIndexPathHeightCache.m"; sourceTree = "<group>"; };
-		436DEC4722870E1A00F16341 /* UITableView+FDTemplateLayoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITableView+FDTemplateLayoutCell.h"; path = "NotRenamed/UITableView-FDTemplateLayoutCell/UITableView+FDTemplateLayoutCell.h"; sourceTree = "<group>"; };
+		436DEC4722870E1A00F16341 /* UITableView+FDTemplateLayoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDTemplateLayoutCell.h"; sourceTree = "<group>"; };
 		436DEC4822870E1A00F16341 /* WebView+Debug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "WebView+Debug.m"; path = "../WebView+Debug.m"; sourceTree = "<group>"; };
 		436DEC4922870E1A00F16341 /* UIViewController+TopBarMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+TopBarMessage.m"; path = "../../SLHelper/UIViewController+TopBarMessage.m"; sourceTree = "<group>"; };
 		436DEC4A22870E1A00F16341 /* UIView+Genie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Genie.m"; sourceTree = "<group>"; };
@@ -556,6 +556,7 @@
 				436DEC4422870E1A00F16341 /* UITableView+FDKeyedHeightCache.m */,
 				436DEC4522870E1A00F16341 /* UITableView+FDTemplateLayoutCellDebug.m */,
 				436DEC4622870E1A00F16341 /* UITableView+FDIndexPathHeightCache.m */,
+				436DEC4722870E1A00F16341 /* UITableView+FDTemplateLayoutCell.h */,
 				436DEC9622870E8700F16341 /* POPAnimationRuntime.h */,
 				7217BE1521E0D21A00C1E58F /* NSData+Image.h */,
 				436DEC9722870E8700F16341 /* POP.h */,
@@ -631,6 +632,8 @@
 				436DEC5822870E1A00F16341 /* UIViewController+MJPopupViewController.m */,
 				436DEC5922870E1A00F16341 /* UIView+GestureCallback.h */,
 				436DEC7722870E8700F16341 /* POPMath.h */,
+				436DEC7822870E8700F16341 /* POPDefines.h */,
+				436DEC7922870E8700F16341 /* POPAnimationInternal.h */,
 				436DEC7A22870E8700F16341 /* POPAnimationExtras.h */,
 				436DEC7B22870E8700F16341 /* POPAnimationEvent.h */,
 				436DEC7C22870E8700F16341 /* POPBasicAnimationInternal.h */,
@@ -1085,10 +1088,7 @@
 		934AE45E20FC6B7B00B60AD4 /* Exten */ = {
 			isa = PBXGroup;
 			children = (
-				436DEC4722870E1A00F16341 /* UITableView+FDTemplateLayoutCell.h */,
 				437921F120ECC4C000B2EC88 /* NSData+JKPCM.m */,
-				436DEC7822870E8700F16341 /* POPDefines.h */,
-				436DEC7922870E8700F16341 /* POPAnimationInternal.h */,
 				436DEC3B22870E1A00F16341 /* NotRenamed */,
 				9314D1E420C53ACE00BB2429 /* SLHelper */,
 			);
