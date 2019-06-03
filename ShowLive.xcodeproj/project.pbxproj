@@ -255,7 +255,7 @@
 		436DECAC22870E8700F16341 /* POPVector.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = POPVector.mm; sourceTree = "<group>"; };
 		436DECAD22870E8700F16341 /* POPVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPVector.h; sourceTree = "<group>"; };
 		436DECAE22870E8700F16341 /* POPAnimatorPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAnimatorPrivate.h; sourceTree = "<group>"; };
-		436DECAF22870E8700F16341 /* POPAnimationTracer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POPAnimationTracer.h; path = "UITableView-FDTemplateLayoutCell/POPAnimationTracer.h"; sourceTree = "<group>"; };
+		436DECAF22870E8700F16341 /* POPAnimationTracer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POPAnimationTracer.h; path = "NotRenamed/UITableView-FDTemplateLayoutCell/POPAnimationTracer.h"; sourceTree = "<group>"; };
 		437864562075FD1E00146B97 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		437921DD20ECC3E000B2EC88 /* NSArray+JKSafeAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+JKSafeAccess.m"; sourceTree = "<group>"; };
 		437921F120ECC4C000B2EC88 /* NSData+JKPCM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+JKPCM.m"; sourceTree = "<group>"; };
@@ -540,7 +540,6 @@
 			isa = PBXGroup;
 			children = (
 				72506F5F21CD04D500361964 /* SLNavigationControllerTransition.m */,
-				7217BE1421E0D21A00C1E58F /* NSData+ImageContentType.m */,
 				436DEC4022870E1A00F16341 /* UITableView+FDKeyedHeightCache.h */,
 				436DEC4122870E1A00F16341 /* UITableView+FDTemplateLayoutCellDebug.h */,
 				436DEC4722870E1A00F16341 /* UITableView+FDTemplateLayoutCell.h */,
@@ -604,11 +603,9 @@
 				436DEC8222870E8700F16341 /* POPBasicAnimation.h */,
 				436DEC8322870E8700F16341 /* POPMath.mm */,
 				436DEC8622870E8700F16341 /* POPSpringAnimation.mm */,
-				436DEC8A22870E8700F16341 /* POPAnimationTracer.mm */,
 				436DEC8D22870E8700F16341 /* pop-tvos-Info.plist */,
 				436DEC8E22870E8700F16341 /* POPGeometry.h */,
 				436DEC8F22870E8700F16341 /* POPDecayAnimation.mm */,
-				436DEC9022870E8700F16341 /* POPSpringAnimationInternal.h */,
 				436DEC9122870E8700F16341 /* pop-osx-Info.plist */,
 				436DEC9222870E8700F16341 /* POPDecayAnimation.h */,
 				436DEC9322870E8700F16341 /* POPSpringSolver.h */,
@@ -630,7 +627,6 @@
 				436DECAA22870E8700F16341 /* POPAnimationEvent.mm */,
 				436DECAB22870E8700F16341 /* POPLayerExtras.mm */,
 				436DECAC22870E8700F16341 /* POPVector.mm */,
-				436DECAF22870E8700F16341 /* POPAnimationTracer.h */,
 				434DDB4F20C9326800191FC1 /* CALayer+JKBorderColor.h */,
 				72506F6021CD04D500361964 /* SLNavigationViewController.h */,
 				72506F6321CD04D500361964 /* SLNavigationViewController.m */,
@@ -1031,6 +1027,7 @@
 		934AE45E20FC6B7B00B60AD4 /* Exten */ = {
 			isa = PBXGroup;
 			children = (
+				7217BE1421E0D21A00C1E58F /* NSData+ImageContentType.m */,
 				436DEC4222870E1A00F16341 /* UITableView+FDTemplateLayoutCell.m */,
 				436DEC4322870E1A00F16341 /* UITableView+FDIndexPathHeightCache.h */,
 				436DEC4422870E1A00F16341 /* UITableView+FDKeyedHeightCache.m */,
@@ -1070,8 +1067,10 @@
 				436DEC8722870E8700F16341 /* POPCustomAnimation.mm */,
 				436DEC8822870E8700F16341 /* POPCustomAnimation.h */,
 				436DEC8922870E8700F16341 /* POPPropertyAnimation.h */,
+				436DEC8A22870E8700F16341 /* POPAnimationTracer.mm */,
 				436DEC8B22870E8700F16341 /* POPCGUtils.h */,
 				436DEC8C22870E8700F16341 /* POPAnimationExtras.mm */,
+				436DEC9022870E8700F16341 /* POPSpringAnimationInternal.h */,
 				436DEC9422870E8700F16341 /* POPAnimatableProperty.h */,
 				435D4C4920EDEAAD00C8DC85 /* NSDate+JKLunarCalendar.m */,
 				436DEC9922870E8700F16341 /* POPLayerExtras.h */,
@@ -1085,6 +1084,7 @@
 				436DECA722870E8700F16341 /* POPAnimation.h */,
 				436DECAD22870E8700F16341 /* POPVector.h */,
 				436DECAE22870E8700F16341 /* POPAnimatorPrivate.h */,
+				436DECAF22870E8700F16341 /* POPAnimationTracer.h */,
 				72506F5B21CD040900361964 /* SLHeadPortrait.h */,
 				72506F5C21CD044500361964 /* SLHeadPortrait.m */,
 				436DEC3E22870E1A00F16341 /* UIApplication+JKPermissions.m */,
