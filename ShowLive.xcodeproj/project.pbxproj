@@ -153,7 +153,7 @@
 		4325536B20D8B53300FC0258 /* MKMapView+JKBetterMaps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MKMapView+JKBetterMaps.m"; path = "NotRenamed/MKMapView+JKBetterMaps.m"; sourceTree = "<group>"; };
 		43291F3C20E51F50000C3C15 /* UITextFieldDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UITextFieldDemoViewController.h; path = ../../SLHelper/pop/UITextFieldDemoViewController.h; sourceTree = "<group>"; };
 		434DDB4F20C9326800191FC1 /* CALayer+JKBorderColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+JKBorderColor.h"; sourceTree = "<group>"; };
-		434DDB5620C932DB00191FC1 /* CAMediaTimingFunction+JKAdditionalEquations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CAMediaTimingFunction+JKAdditionalEquations.h"; path = "NotRenamed/UITableView-FDTemplateLayoutCell/CAMediaTimingFunction+JKAdditionalEquations.h"; sourceTree = "<group>"; };
+		434DDB5620C932DB00191FC1 /* CAMediaTimingFunction+JKAdditionalEquations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAMediaTimingFunction+JKAdditionalEquations.h"; sourceTree = "<group>"; };
 		434DDB5B20C9332700191FC1 /* CATransaction+JKAnimateWithDuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CATransaction+JKAnimateWithDuration.m"; path = "SLHelper/pop/WebCore/CATransaction+JKAnimateWithDuration.m"; sourceTree = "<group>"; };
 		435D4C4920EDEAAD00C8DC85 /* NSDate+JKLunarCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+JKLunarCalendar.m"; path = "../NSDate+JKLunarCalendar.m"; sourceTree = "<group>"; };
 		435D4C9720F0931000C8DC85 /* NSNotificationCenter+JKMainThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSNotificationCenter+JKMainThread.h"; path = "NotRenamed/NSNotificationCenter+JKMainThread.h"; sourceTree = "<group>"; };
@@ -185,7 +185,7 @@
 		436DEC5122870E1A00F16341 /* UIWebView+Alert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+Alert.h"; sourceTree = "<group>"; };
 		436DEC5222870E1A00F16341 /* UIViewController+DDPopUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DDPopUpViewController.m"; sourceTree = "<group>"; };
 		436DEC5322870E1A00F16341 /* UIView+FDCollapsibleConstraints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FDCollapsibleConstraints.m"; sourceTree = "<group>"; };
-		436DEC5422870E1A00F16341 /* WebView+Debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "WebView+Debug.h"; path = "SLHelper/WebView+Debug.h"; sourceTree = "<group>"; };
+		436DEC5422870E1A00F16341 /* WebView+Debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "WebView+Debug.h"; path = "../../SLHelper/WebView+Debug.h"; sourceTree = "<group>"; };
 		436DEC5522870E1A00F16341 /* UIApplication+JKPermissions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+JKPermissions.h"; sourceTree = "<group>"; };
 		436DEC5622870E1A00F16341 /* CLLocationManager+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLLocationManager+Blocks.m"; sourceTree = "<group>"; };
 		436DEC5722870E1A00F16341 /* UIView+Debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Debug.h"; path = "SLHelper/pop/WebCore/UIView+Debug.h"; sourceTree = "<group>"; };
@@ -566,6 +566,7 @@
 				43D87B3020EB6E0400E991D6 /* UIScreen+JKFrame.h */,
 				7217BE1321E0D21A00C1E58F /* NSString+Binary.h */,
 				7217BE1721E0D21A00C1E58F /* NSString+Binary.m */,
+				434DDB5620C932DB00191FC1 /* CAMediaTimingFunction+JKAdditionalEquations.h */,
 				9314D1E220C53A3B00BB2429 /* SLHistoryWorksAction.h */,
 				931DAAC520B571C5003A0B38 /* SLGiftAction.h */,
 				720C304820A35ACC00207500 /* SLGetWithdrawAddressAction.h */,
@@ -595,6 +596,7 @@
 				436DEC5022870E1A00F16341 /* UICollectionView+ARDynamicCacheHeightLayoutCell.h */,
 				436DEC5122870E1A00F16341 /* UIWebView+Alert.h */,
 				436DEC5322870E1A00F16341 /* UIView+FDCollapsibleConstraints.m */,
+				436DEC5422870E1A00F16341 /* WebView+Debug.h */,
 				436DEC5522870E1A00F16341 /* UIApplication+JKPermissions.h */,
 				436DEC5622870E1A00F16341 /* CLLocationManager+Blocks.m */,
 				436DEC7722870E8700F16341 /* POPMath.h */,
@@ -629,6 +631,7 @@
 				436DECA922870E8700F16341 /* POPAnimationRuntime.mm */,
 				436DECAB22870E8700F16341 /* POPLayerExtras.mm */,
 				436DECAC22870E8700F16341 /* POPVector.mm */,
+				436DECAD22870E8700F16341 /* POPVector.h */,
 				436DECAE22870E8700F16341 /* POPAnimatorPrivate.h */,
 				436DECAF22870E8700F16341 /* POPAnimationTracer.h */,
 				434DDB4F20C9326800191FC1 /* CALayer+JKBorderColor.h */,
@@ -1038,7 +1041,6 @@
 				437921F120ECC4C000B2EC88 /* NSData+JKPCM.m */,
 				431CB4DF20F49A800043B0AC /* NSString+JKBase64.h */,
 				437B0A5B20F3602E00E93844 /* NSObject+JKAddProperty.h */,
-				434DDB5620C932DB00191FC1 /* CAMediaTimingFunction+JKAdditionalEquations.h */,
 				93155E5120D4B9CE00E1B61F /* SLDefenderListAction.h */,
 				72F17B6720AB18F50039E916 /* ShowVerifycodeAction.h */,
 				9314D1DF20C5394500BB2429 /* SLAttentionListAction.h */,
@@ -1053,7 +1055,6 @@
 				436DEC4C22870E1A00F16341 /* UIView+GestureCallback.m */,
 				436DEC4E22870E1A00F16341 /* UIScrollView+EmptyDataSet.m */,
 				436DEC5222870E1A00F16341 /* UIViewController+DDPopUpViewController.m */,
-				436DEC5422870E1A00F16341 /* WebView+Debug.h */,
 				436DEC5722870E1A00F16341 /* UIView+Debug.h */,
 				436DEC5822870E1A00F16341 /* UIViewController+MJPopupViewController.m */,
 				436DEC5922870E1A00F16341 /* UIView+GestureCallback.h */,
@@ -1083,7 +1084,6 @@
 				436DECA722870E8700F16341 /* POPAnimation.h */,
 				436DECA822870E8700F16341 /* module.modulemap */,
 				436DECAA22870E8700F16341 /* POPAnimationEvent.mm */,
-				436DECAD22870E8700F16341 /* POPVector.h */,
 				72506F6021CD04D500361964 /* SLNavigationViewController.h */,
 				436DEC3C22870E1A00F16341 /* UIView+Debug.m */,
 				436DECA122870E8700F16341 /* FloatConversion.h */,
