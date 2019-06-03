@@ -293,7 +293,7 @@
 		7217BE1721E0D21A00C1E58F /* NSString+Binary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Binary.m"; path = "../../SLHelper/NSString+Binary.m"; sourceTree = "<group>"; };
 		7217BE1821E0D21A00C1E58F /* NSString+Json.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Json.m"; path = "../../../../Common/exten/NSString+Json.m"; sourceTree = "<group>"; };
 		7217BE1921E0D21A00C1E58F /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+ImageContentType.h"; path = "../../../../Common/SLNavigationController/NSData+ImageContentType.h"; sourceTree = "<group>"; };
-		7217BE1B21E0D21A00C1E58F /* NSDate+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+Additions.h"; path = "../../Common/SLNavigationController/NSDate+Additions.h"; sourceTree = "<group>"; };
+		7217BE1B21E0D21A00C1E58F /* NSDate+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+Additions.h"; path = "../../../../Common/SLNavigationController/NSDate+Additions.h"; sourceTree = "<group>"; };
 		7217BE1C21E0D21A00C1E58F /* NSData+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+Image.m"; path = "SLHelper/pop/WebCore/NSData+Image.m"; sourceTree = "<group>"; };
 		722BCF0621D78936004BFC52 /* SLInviteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLInviteViewController.m; sourceTree = "<group>"; };
 		723816B220C689AB00C3885E /* SLLevelMarkView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLLevelMarkView.h; sourceTree = "<group>"; };
@@ -445,7 +445,7 @@
 		B4C105B07A90052BA25F3424 /* Pods-ShowLiveUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShowLiveUITests/Pods-ShowLiveUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C80209C93E46267AFE3ADF2E /* libPods-ShowLiveTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShowLiveTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFCDB8F5C4F35241EF7781C8 /* Pods-ShowLiveTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShowLiveTests/Pods-ShowLiveTests.release.xcconfig"; sourceTree = "<group>"; };
-		D22E1E6A21F342F4001A3D2A /* NSSting+aes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSSting+aes.h"; path = "SLHelper/pop/WebCore/NSSting+aes.h"; sourceTree = "<group>"; };
+		D22E1E6A21F342F4001A3D2A /* NSSting+aes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSSting+aes.h"; path = "../../SLHelper/pop/WebCore/NSSting+aes.h"; sourceTree = "<group>"; };
 		D22E1E6B21F342F4001A3D2A /* NSSting+aes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSSting+aes.m"; sourceTree = "<group>"; };
 		D6F34820745ED99EE82E0D41 /* Pods-ShowLiveTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShowLiveTests/Pods-ShowLiveTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -549,9 +549,11 @@
 			children = (
 				7217BE1421E0D21A00C1E58F /* NSData+ImageContentType.m */,
 				436DEC4322870E1A00F16341 /* UITableView+FDIndexPathHeightCache.h */,
+				7217BE1B21E0D21A00C1E58F /* NSDate+Additions.h */,
 				7217BE1821E0D21A00C1E58F /* NSString+Json.m */,
 				431CB4D020F499370043B0AC /* NSObject+JKRuntime.m */,
 				93EF35D421C292950088C2E4 /* UIImage+Additional.m */,
+				D22E1E6A21F342F4001A3D2A /* NSSting+aes.h */,
 				7217BE1721E0D21A00C1E58F /* NSString+Binary.m */,
 				9314D1E220C53A3B00BB2429 /* SLHistoryWorksAction.h */,
 				931DAAC520B571C5003A0B38 /* SLGiftAction.h */,
@@ -975,7 +977,6 @@
 				7217BE1521E0D21A00C1E58F /* NSData+Image.h */,
 				436DEC9722870E8700F16341 /* POP.h */,
 				934CBCD72118217800608F2F /* NSDate+Additions.h */,
-				7217BE1B21E0D21A00C1E58F /* NSDate+Additions.h */,
 				43291F3C20E51F50000C3C15 /* UITextFieldDemoViewController.h */,
 				934CBCD8211821A500608F2F /* NSDate+Additions.m */,
 				7217BE1121E0D21A00C1E58F /* NSDate+Additions.m */,
@@ -987,7 +988,6 @@
 				437B0A6420F360BA00E93844 /* NSObject+JKAutoCoding.m */,
 				431CB4DF20F49A800043B0AC /* NSString+JKBase64.h */,
 				437B0A5B20F3602E00E93844 /* NSObject+JKAddProperty.h */,
-				D22E1E6A21F342F4001A3D2A /* NSSting+aes.h */,
 				D22E1E6B21F342F4001A3D2A /* NSSting+aes.m */,
 				938D2FFD20A0C821006A0CDE /* ShowAction.h */,
 				43D87B3020EB6E0400E991D6 /* UIScreen+JKFrame.h */,
