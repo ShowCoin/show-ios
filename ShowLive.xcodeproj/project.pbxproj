@@ -198,7 +198,7 @@
 		436DEC5E22870E1A00F16341 /* UIScrollView+APParallaxHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+APParallaxHeader.h"; sourceTree = "<group>"; };
 		436DEC5F22870E1A00F16341 /* UIView+FDCollapsibleConstraints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+FDCollapsibleConstraints.h"; path = "../../SLHelper/pop/WebCore/UIView+FDCollapsibleConstraints.h"; sourceTree = "<group>"; };
 		436DEC6022870E1A00F16341 /* UIViewController+DDPopUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DDPopUpViewController.h"; sourceTree = "<group>"; };
-		436DEC6122870E1A00F16341 /* UIWebView+Alert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIWebView+Alert.m"; path = "NotRenamed/UITableView-FDTemplateLayoutCell/UIWebView+Alert.m"; sourceTree = "<group>"; };
+		436DEC6122870E1A00F16341 /* UIWebView+Alert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+Alert.m"; sourceTree = "<group>"; };
 		436DEC6222870E1A00F16341 /* UICollectionView+ARDynamicCacheHeightLayoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+ARDynamicCacheHeightLayoutCell.m"; sourceTree = "<group>"; };
 		436DEC7722870E8700F16341 /* POPMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPMath.h; sourceTree = "<group>"; };
 		436DEC7822870E8700F16341 /* POPDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPDefines.h; sourceTree = "<group>"; };
@@ -601,6 +601,7 @@
 				436DEC5E22870E1A00F16341 /* UIScrollView+APParallaxHeader.h */,
 				436DEC5F22870E1A00F16341 /* UIView+FDCollapsibleConstraints.h */,
 				436DEC6022870E1A00F16341 /* UIViewController+DDPopUpViewController.h */,
+				436DEC6122870E1A00F16341 /* UIWebView+Alert.m */,
 				436DEC6222870E1A00F16341 /* UICollectionView+ARDynamicCacheHeightLayoutCell.m */,
 				436DECA322870E8700F16341 /* POPAnimationTracerInternal.h */,
 				436DEC4822870E1A00F16341 /* WebView+Debug.m */,
@@ -653,6 +654,7 @@
 				436DEC9822870E8700F16341 /* POPPropertyAnimation.mm */,
 				436DEC9922870E8700F16341 /* POPLayerExtras.h */,
 				436DEC9A22870E8700F16341 /* POPAnimation.mm */,
+				436DEC9B22870E8700F16341 /* POPGeometry.mm */,
 				436DEC9C22870E8700F16341 /* POPBasicAnimation.mm */,
 				436DEC9D22870E8700F16341 /* POPAnimatablePropertyTypes.h */,
 				436DEC5A22870E1A00F16341 /* UINavigationController+FDFullscreenPopGesture.m */,
@@ -688,6 +690,7 @@
 				436DEC3E22870E1A00F16341 /* UIApplication+JKPermissions.m */,
 				436DEC9F22870E8700F16341 /* TransformationMatrix.cpp */,
 				436DECA022870E8700F16341 /* TransformationMatrix.h */,
+				436DECA222870E8700F16341 /* UnitBezier.h */,
 				436DEC5D22870E1A00F16341 /* UIScrollView+EmptyDataSet.h */,
 			);
 			path = "UITableView-FDTemplateLayoutCell";
@@ -1079,16 +1082,13 @@
 				434DDB5B20C9332700191FC1 /* CATransaction+JKAnimateWithDuration.m */,
 				4323FA25223CC1F500AC3959 /* NSManagedObjectContext+JKObjectClear.h */,
 				4323F9FA223CC1F100AC3959 /* NSString+Additions.h */,
-				436DEC6122870E1A00F16341 /* UIWebView+Alert.m */,
 				436DEC5722870E1A00F16341 /* UIView+Debug.h */,
 				436DEC7822870E8700F16341 /* POPDefines.h */,
 				436DEC7922870E8700F16341 /* POPAnimationInternal.h */,
 				436DEC8D22870E8700F16341 /* pop-tvos-Info.plist */,
 				436DEC8E22870E8700F16341 /* POPGeometry.h */,
 				436DEC9222870E8700F16341 /* POPDecayAnimation.h */,
-				436DEC9B22870E8700F16341 /* POPGeometry.mm */,
 				436DECA122870E8700F16341 /* FloatConversion.h */,
-				436DECA222870E8700F16341 /* UnitBezier.h */,
 				436DEC3B22870E1A00F16341 /* NotRenamed */,
 				9314D1E420C53ACE00BB2429 /* SLHelper */,
 			);
