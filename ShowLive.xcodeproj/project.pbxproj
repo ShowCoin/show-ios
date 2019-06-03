@@ -414,7 +414,7 @@
 		9319236D20B897C6001C6144 /* SLVMFriendList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLVMFriendList.h; sourceTree = "<group>"; };
 		931DAAC520B571C5003A0B38 /* SLGiftAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLGiftAction.h; sourceTree = "<group>"; };
 		931DAAC820B5A7A6003A0B38 /* SLConvListSystemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLConvListSystemTableViewCell.h; sourceTree = "<group>"; };
-		9343E47521C7D0140001B9C1 /* UILabel+Additional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UILabel+Additional.h"; path = "../SLHelper/UILabel+Additional.h"; sourceTree = "<group>"; };
+		9343E47521C7D0140001B9C1 /* UILabel+Additional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UILabel+Additional.h"; path = "SLHelper/UILabel+Additional.h"; sourceTree = "<group>"; };
 		934CBCD72118217800608F2F /* NSDate+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+Additions.h"; path = "../JKCategories/NSDate+Additions.h"; sourceTree = "<group>"; };
 		934CBCD8211821A500608F2F /* NSDate+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Additions.m"; sourceTree = "<group>"; };
 		934E1B9720AC39D900A0B080 /* SLChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLChatViewController.h; sourceTree = "<group>"; };
@@ -550,7 +550,6 @@
 				9314D1E220C53A3B00BB2429 /* SLHistoryWorksAction.h */,
 				72F17B6720AB18F50039E916 /* ShowVerifycodeAction.h */,
 				720F85F720B2F59400AD0C54 /* SLChatStatisticsAction.h */,
-				9343E47521C7D0140001B9C1 /* UILabel+Additional.h */,
 				720F860120B2F59500AD0C54 /* SLGetRyTokenAction.m */,
 				720F85FC20B2F59400AD0C54 /* SLRelationAction.h */,
 				93155E4E20D4B88500E1B61F /* SLGetWithdrawListAction.h */,
@@ -568,12 +567,10 @@
 				436DEC8022870E8700F16341 /* POPDecayAnimationInternal.h */,
 				436DEC8222870E8700F16341 /* POPBasicAnimation.h */,
 				436DEC8322870E8700F16341 /* POPMath.mm */,
-				436DEC8D22870E8700F16341 /* pop-tvos-Info.plist */,
 				436DEC9222870E8700F16341 /* POPDecayAnimation.h */,
 				7217BE1921E0D21A00C1E58F /* NSData+ImageContentType.h */,
 				436DEC9822870E8700F16341 /* POPPropertyAnimation.mm */,
 				436DECAC22870E8700F16341 /* POPVector.mm */,
-				72506F6021CD04D500361964 /* SLNavigationViewController.h */,
 				436DEC9F22870E8700F16341 /* TransformationMatrix.cpp */,
 				436DECA222870E8700F16341 /* UnitBezier.h */,
 				436DEC3F22870E1A00F16341 /* UITableView-FDTemplateLayoutCell */,
@@ -996,6 +993,7 @@
 				931DAAC520B571C5003A0B38 /* SLGiftAction.h */,
 				720C304820A35ACC00207500 /* SLGetWithdrawAddressAction.h */,
 				72C6166920A0C67500103C44 /* SLUrgeListAction.h */,
+				9343E47521C7D0140001B9C1 /* UILabel+Additional.h */,
 				4323F9FB223CC1F100AC3959 /* NSString+JKEmoji.m */,
 				9314D1E120C539D400BB2429 /* SLShutUpAction.h */,
 				9314D1DF20C5394500BB2429 /* SLAttentionListAction.h */,
@@ -1042,6 +1040,7 @@
 				436DEC8A22870E8700F16341 /* POPAnimationTracer.mm */,
 				436DEC8B22870E8700F16341 /* POPCGUtils.h */,
 				436DEC8C22870E8700F16341 /* POPAnimationExtras.mm */,
+				436DEC8D22870E8700F16341 /* pop-tvos-Info.plist */,
 				436DEC8E22870E8700F16341 /* POPGeometry.h */,
 				436DEC8F22870E8700F16341 /* POPDecayAnimation.mm */,
 				436DEC9022870E8700F16341 /* POPSpringAnimationInternal.h */,
@@ -1077,6 +1076,7 @@
 				436DECAE22870E8700F16341 /* POPAnimatorPrivate.h */,
 				436DECAF22870E8700F16341 /* POPAnimationTracer.h */,
 				434DDB4F20C9326800191FC1 /* CALayer+JKBorderColor.h */,
+				72506F6021CD04D500361964 /* SLNavigationViewController.h */,
 				72506F6321CD04D500361964 /* SLNavigationViewController.m */,
 				72506F5B21CD040900361964 /* SLHeadPortrait.h */,
 				72506F5C21CD044500361964 /* SLHeadPortrait.m */,
