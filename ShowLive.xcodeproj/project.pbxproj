@@ -415,7 +415,7 @@
 		931DAAC520B571C5003A0B38 /* SLGiftAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLGiftAction.h; sourceTree = "<group>"; };
 		931DAAC820B5A7A6003A0B38 /* SLConvListSystemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLConvListSystemTableViewCell.h; sourceTree = "<group>"; };
 		9343E47521C7D0140001B9C1 /* UILabel+Additional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UILabel+Additional.h"; path = "../SLHelper/UILabel+Additional.h"; sourceTree = "<group>"; };
-		934CBCD72118217800608F2F /* NSDate+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+Additions.h"; path = "../../JKCategories/NSDate+Additions.h"; sourceTree = "<group>"; };
+		934CBCD72118217800608F2F /* NSDate+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+Additions.h"; path = "../JKCategories/NSDate+Additions.h"; sourceTree = "<group>"; };
 		934CBCD8211821A500608F2F /* NSDate+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Additions.m"; sourceTree = "<group>"; };
 		934E1B9720AC39D900A0B080 /* SLChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLChatViewController.h; sourceTree = "<group>"; };
 		934E1B9820AC3A1E00A0B080 /* SLChatViewController+BlankView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SLChatViewController+BlankView.h"; sourceTree = "<group>"; };
@@ -544,7 +544,6 @@
 				436DEC4722870E1A00F16341 /* UITableView+FDTemplateLayoutCell.h */,
 				436DEC9622870E8700F16341 /* POPAnimationRuntime.h */,
 				436DEC9722870E8700F16341 /* POP.h */,
-				934CBCD72118217800608F2F /* NSDate+Additions.h */,
 				43291F3C20E51F50000C3C15 /* UITextFieldDemoViewController.h */,
 				934CBCD8211821A500608F2F /* NSDate+Additions.m */,
 				4323FA0E223CC1F300AC3959 /* CLLocation+JKCH1903.m */,
@@ -588,12 +587,10 @@
 				436DEC8F22870E8700F16341 /* POPDecayAnimation.mm */,
 				436DEC9122870E8700F16341 /* pop-osx-Info.plist */,
 				436DEC9222870E8700F16341 /* POPDecayAnimation.h */,
-				436DEC9322870E8700F16341 /* POPSpringSolver.h */,
 				7217BE1C21E0D21A00C1E58F /* NSData+Image.m */,
 				7217BE1921E0D21A00C1E58F /* NSData+ImageContentType.h */,
 				436DEC9822870E8700F16341 /* POPPropertyAnimation.mm */,
 				436DEC9A22870E8700F16341 /* POPAnimation.mm */,
-				436DECA422870E8700F16341 /* POPAnimationEventInternal.h */,
 				436DECA522870E8700F16341 /* POPAnimator.mm */,
 				437B0A4F20F35F9C00E93844 /* NSNotificationCenterDemoViewController.m */,
 				436DECA922870E8700F16341 /* POPAnimationRuntime.mm */,
@@ -602,7 +599,6 @@
 				72506F6121CD04D500361964 /* SLPushAnimationTransition.m */,
 				436DEC3C22870E1A00F16341 /* UIView+Debug.m */,
 				436DEC9F22870E8700F16341 /* TransformationMatrix.cpp */,
-				436DECA022870E8700F16341 /* TransformationMatrix.h */,
 				436DECA222870E8700F16341 /* UnitBezier.h */,
 				436DEC3F22870E1A00F16341 /* UITableView-FDTemplateLayoutCell */,
 			);
@@ -1000,6 +996,7 @@
 				436DEC4522870E1A00F16341 /* UITableView+FDTemplateLayoutCellDebug.m */,
 				436DEC4622870E1A00F16341 /* UITableView+FDIndexPathHeightCache.m */,
 				7217BE1521E0D21A00C1E58F /* NSData+Image.h */,
+				934CBCD72118217800608F2F /* NSDate+Additions.h */,
 				7217BE1B21E0D21A00C1E58F /* NSDate+Additions.h */,
 				7217BE1121E0D21A00C1E58F /* NSDate+Additions.m */,
 				4325536B20D8B53300FC0258 /* MKMapView+JKBetterMaps.m */,
@@ -1056,6 +1053,7 @@
 				436DEC8C22870E8700F16341 /* POPAnimationExtras.mm */,
 				436DEC8E22870E8700F16341 /* POPGeometry.h */,
 				436DEC9022870E8700F16341 /* POPSpringAnimationInternal.h */,
+				436DEC9322870E8700F16341 /* POPSpringSolver.h */,
 				436DEC9422870E8700F16341 /* POPAnimatableProperty.h */,
 				436DEC9522870E8700F16341 /* POPAnimator.h */,
 				4323FA15223CC1F300AC3959 /* NSDictionary+JKBlock.h */,
@@ -1067,6 +1065,7 @@
 				436DEC5A22870E1A00F16341 /* UINavigationController+FDFullscreenPopGesture.m */,
 				436DEC5B22870E1A00F16341 /* UIView+Genie.h */,
 				436DEC5C22870E1A00F16341 /* UIViewController+TopBarMessage.h */,
+				436DECA422870E8700F16341 /* POPAnimationEventInternal.h */,
 				436DECA622870E8700F16341 /* POPAnimatableProperty.mm */,
 				437B0A5520F35FDE00E93844 /* NSNumber+JKRomanNumerals.h */,
 				437B0A5920F3600900E93844 /* NSNumber+JKRound.h */,
@@ -1087,6 +1086,7 @@
 				72506F6421CD04D500361964 /* SLPushAnimationTransition.h */,
 				436DEC3D22870E1A00F16341 /* CLLocationManager+Blocks.h */,
 				436DEC3E22870E1A00F16341 /* UIApplication+JKPermissions.m */,
+				436DECA022870E8700F16341 /* TransformationMatrix.h */,
 				436DECA122870E8700F16341 /* FloatConversion.h */,
 				436DEC5D22870E1A00F16341 /* UIScrollView+EmptyDataSet.h */,
 				436DEC3B22870E1A00F16341 /* NotRenamed */,
