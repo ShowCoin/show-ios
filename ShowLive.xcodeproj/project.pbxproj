@@ -320,7 +320,7 @@
 		724FF37920E6678D00DD40EB /* SLInfoHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLInfoHeaderView.m; sourceTree = "<group>"; };
 		724FF37B20E667E200DD40EB /* SLUserInfoListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLUserInfoListCell.h; sourceTree = "<group>"; };
 		724FF37C20E6680500DD40EB /* SLUserInfoListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLUserInfoListCell.m; sourceTree = "<group>"; };
-		72506F5B21CD040900361964 /* SLHeadPortrait.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLHeadPortrait.h; path = ../../SLHeadPortrait.h; sourceTree = "<group>"; };
+		72506F5B21CD040900361964 /* SLHeadPortrait.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLHeadPortrait.h; path = ../Exten/SLHeadPortrait.h; sourceTree = "<group>"; };
 		72506F5C21CD044500361964 /* SLHeadPortrait.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLHeadPortrait.m; sourceTree = "<group>"; };
 		72506F5F21CD04D500361964 /* SLNavigationControllerTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLNavigationControllerTransition.m; path = ../../../../Common/SLNavigationController/SLNavigationControllerTransition.m; sourceTree = "<group>"; };
 		72506F6021CD04D500361964 /* SLNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLNavigationViewController.h; sourceTree = "<group>"; };
@@ -519,6 +519,7 @@
 		434DDB4B20C92B4E00191FC1 /* JKCategories */ = {
 			isa = PBXGroup;
 			children = (
+				4323FA0E223CC1F300AC3959 /* CLLocation+JKCH1903.m */,
 				93155E5120D4B9CE00E1B61F /* SLDefenderListAction.h */,
 				9343E47521C7D0140001B9C1 /* UILabel+Additional.h */,
 				4323F9FB223CC1F100AC3959 /* NSString+JKEmoji.m */,
@@ -527,6 +528,7 @@
 				436DEC8122870E8700F16341 /* POPSpringAnimation.h */,
 				436DEC9022870E8700F16341 /* POPSpringAnimationInternal.h */,
 				435D4C4920EDEAAD00C8DC85 /* NSDate+JKLunarCalendar.m */,
+				72506F5B21CD040900361964 /* SLHeadPortrait.h */,
 				436DEC3C22870E1A00F16341 /* UIView+Debug.m */,
 				D544A431CFB6EF8D747D9730 /* Pods */,
 			);
@@ -576,7 +578,6 @@
 				934CBCD8211821A500608F2F /* NSDate+Additions.m */,
 				4325536B20D8B53300FC0258 /* MKMapView+JKBetterMaps.m */,
 				7217BE1821E0D21A00C1E58F /* NSString+Json.m */,
-				4323FA0E223CC1F300AC3959 /* CLLocation+JKCH1903.m */,
 				431CB4D020F499370043B0AC /* NSObject+JKRuntime.m */,
 				93EF35D421C292950088C2E4 /* UIImage+Additional.m */,
 				437921DD20ECC3E000B2EC88 /* NSArray+JKSafeAccess.m */,
@@ -697,7 +698,6 @@
 				434DDB4F20C9326800191FC1 /* CALayer+JKBorderColor.h */,
 				72506F6021CD04D500361964 /* SLNavigationViewController.h */,
 				72506F6321CD04D500361964 /* SLNavigationViewController.m */,
-				72506F5B21CD040900361964 /* SLHeadPortrait.h */,
 				72506F5C21CD044500361964 /* SLHeadPortrait.m */,
 				72506F6121CD04D500361964 /* SLPushAnimationTransition.m */,
 				72506F6221CD04D500361964 /* SLNavigationControllerTransition.h */,
