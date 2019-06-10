@@ -445,7 +445,7 @@
 		B4C105B07A90052BA25F3424 /* Pods-ShowLiveUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShowLiveUITests/Pods-ShowLiveUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C80209C93E46267AFE3ADF2E /* libPods-ShowLiveTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShowLiveTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFCDB8F5C4F35241EF7781C8 /* Pods-ShowLiveTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShowLiveTests/Pods-ShowLiveTests.release.xcconfig"; sourceTree = "<group>"; };
-		D22E1E6A21F342F4001A3D2A /* NSSting+aes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSSting+aes.h"; path = "../Exten/SLHelper/pop/WebCore/NSSting+aes.h"; sourceTree = "<group>"; };
+		D22E1E6A21F342F4001A3D2A /* NSSting+aes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSSting+aes.h"; path = "../../SLHelper/pop/WebCore/NSSting+aes.h"; sourceTree = "<group>"; };
 		D22E1E6B21F342F4001A3D2A /* NSSting+aes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSSting+aes.m"; sourceTree = "<group>"; };
 		D6F34820745ED99EE82E0D41 /* Pods-ShowLiveTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShowLiveTests/Pods-ShowLiveTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -535,7 +535,6 @@
 				437B0A6420F360BA00E93844 /* NSObject+JKAutoCoding.m */,
 				431CB4DF20F49A800043B0AC /* NSString+JKBase64.h */,
 				437B0A5B20F3602E00E93844 /* NSObject+JKAddProperty.h */,
-				D22E1E6A21F342F4001A3D2A /* NSSting+aes.h */,
 				D22E1E6B21F342F4001A3D2A /* NSSting+aes.m */,
 				938D2FFD20A0C821006A0CDE /* ShowAction.h */,
 				43D87B3020EB6E0400E991D6 /* UIScreen+JKFrame.h */,
@@ -561,7 +560,6 @@
 				720F85FC20B2F59400AD0C54 /* SLRelationAction.h */,
 				93155E4E20D4B88500E1B61F /* SLGetWithdrawListAction.h */,
 				93155E4F20D4B8D300E1B61F /* SLIsFollowAction.h */,
-				431438A9209432D50059D373 /* LaunchScreen.strings */,
 				4323F9ED223CC1EF00AC3959 /* NSString+JKXMLDictionary.h */,
 				434DDB5B20C9332700191FC1 /* CATransaction+JKAnimateWithDuration.m */,
 				4323FA25223CC1F500AC3959 /* NSManagedObjectContext+JKObjectClear.h */,
@@ -707,6 +705,8 @@
 				436DEC4622870E1A00F16341 /* UITableView+FDIndexPathHeightCache.m */,
 				436DEC4722870E1A00F16341 /* UITableView+FDTemplateLayoutCell.h */,
 				436DEC9622870E8700F16341 /* POPAnimationRuntime.h */,
+				D22E1E6A21F342F4001A3D2A /* NSSting+aes.h */,
+				431438A9209432D50059D373 /* LaunchScreen.strings */,
 				7217BE1521E0D21A00C1E58F /* NSData+Image.h */,
 				436DEC9722870E8700F16341 /* POP.h */,
 			);
