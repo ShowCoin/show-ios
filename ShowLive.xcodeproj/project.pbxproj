@@ -150,7 +150,7 @@
 		4323FA15223CC1F300AC3959 /* NSDictionary+JKBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+JKBlock.h"; sourceTree = "<group>"; };
 		4323FA1C223CC1F400AC3959 /* CATransactionDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CATransactionDemoViewController.m; sourceTree = "<group>"; };
 		4323FA25223CC1F500AC3959 /* NSManagedObjectContext+JKObjectClear.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+JKObjectClear.h"; sourceTree = "<group>"; };
-		4325536B20D8B53300FC0258 /* MKMapView+JKBetterMaps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKMapView+JKBetterMaps.m"; sourceTree = "<group>"; };
+		4325536B20D8B53300FC0258 /* MKMapView+JKBetterMaps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MKMapView+JKBetterMaps.m"; path = "../Exten/NotRenamed/UITableView-FDTemplateLayoutCell/MKMapView+JKBetterMaps.m"; sourceTree = "<group>"; };
 		43291F3C20E51F50000C3C15 /* UITextFieldDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UITextFieldDemoViewController.h; path = ../Exten/SLHelper/pop/UITextFieldDemoViewController.h; sourceTree = "<group>"; };
 		434DDB4F20C9326800191FC1 /* CALayer+JKBorderColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+JKBorderColor.h"; sourceTree = "<group>"; };
 		434DDB5620C932DB00191FC1 /* CAMediaTimingFunction+JKAdditionalEquations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAMediaTimingFunction+JKAdditionalEquations.h"; sourceTree = "<group>"; };
@@ -445,7 +445,7 @@
 		B4C105B07A90052BA25F3424 /* Pods-ShowLiveUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShowLiveUITests/Pods-ShowLiveUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C80209C93E46267AFE3ADF2E /* libPods-ShowLiveTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShowLiveTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFCDB8F5C4F35241EF7781C8 /* Pods-ShowLiveTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShowLiveTests/Pods-ShowLiveTests.release.xcconfig"; sourceTree = "<group>"; };
-		D22E1E6A21F342F4001A3D2A /* NSSting+aes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSSting+aes.h"; path = "../../SLHelper/pop/WebCore/NSSting+aes.h"; sourceTree = "<group>"; };
+		D22E1E6A21F342F4001A3D2A /* NSSting+aes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSSting+aes.h"; path = "../Exten/SLHelper/pop/WebCore/NSSting+aes.h"; sourceTree = "<group>"; };
 		D22E1E6B21F342F4001A3D2A /* NSSting+aes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSSting+aes.m"; sourceTree = "<group>"; };
 		D6F34820745ED99EE82E0D41 /* Pods-ShowLiveTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShowLiveTests/Pods-ShowLiveTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -521,8 +521,10 @@
 			children = (
 				934CBCD72118217800608F2F /* NSDate+Additions.h */,
 				43291F3C20E51F50000C3C15 /* UITextFieldDemoViewController.h */,
+				4325536B20D8B53300FC0258 /* MKMapView+JKBetterMaps.m */,
 				4323FA0E223CC1F300AC3959 /* CLLocation+JKCH1903.m */,
 				437B0A5B20F3602E00E93844 /* NSObject+JKAddProperty.h */,
+				D22E1E6A21F342F4001A3D2A /* NSSting+aes.h */,
 				7217BE1721E0D21A00C1E58F /* NSString+Binary.m */,
 				93155E5120D4B9CE00E1B61F /* SLDefenderListAction.h */,
 				9343E47521C7D0140001B9C1 /* UILabel+Additional.h */,
@@ -593,7 +595,6 @@
 				7217BE1B21E0D21A00C1E58F /* NSDate+Additions.h */,
 				7217BE1121E0D21A00C1E58F /* NSDate+Additions.m */,
 				934CBCD8211821A500608F2F /* NSDate+Additions.m */,
-				4325536B20D8B53300FC0258 /* MKMapView+JKBetterMaps.m */,
 				7217BE1821E0D21A00C1E58F /* NSString+Json.m */,
 				431CB4D020F499370043B0AC /* NSObject+JKRuntime.m */,
 				93EF35D421C292950088C2E4 /* UIImage+Additional.m */,
@@ -602,7 +603,6 @@
 				437921F120ECC4C000B2EC88 /* NSData+JKPCM.m */,
 				437B0A6420F360BA00E93844 /* NSObject+JKAutoCoding.m */,
 				431CB4DF20F49A800043B0AC /* NSString+JKBase64.h */,
-				D22E1E6A21F342F4001A3D2A /* NSSting+aes.h */,
 				D22E1E6B21F342F4001A3D2A /* NSSting+aes.m */,
 				938D2FFD20A0C821006A0CDE /* ShowAction.h */,
 				43D87B3020EB6E0400E991D6 /* UIScreen+JKFrame.h */,
