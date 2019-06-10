@@ -275,7 +275,7 @@
 		4537B7EFEE31B0E75BBC7D5B /* libPods-ShowLive.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShowLive.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		53B07B4395D318342B414DD2 /* Pods-ShowLiveUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShowLiveUITests/Pods-ShowLiveUITests.release.xcconfig"; sourceTree = "<group>"; };
 		720C304820A35ACC00207500 /* SLGetWithdrawAddressAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLGetWithdrawAddressAction.h; sourceTree = "<group>"; };
-		720F85F720B2F59400AD0C54 /* SLChatStatisticsAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLChatStatisticsAction.h; path = ../Exten/SLHelper/SLChatStatisticsAction.h; sourceTree = "<group>"; };
+		720F85F720B2F59400AD0C54 /* SLChatStatisticsAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLChatStatisticsAction.h; path = ../../SLHelper/SLChatStatisticsAction.h; sourceTree = "<group>"; };
 		720F85F920B2F59400AD0C54 /* SLMeConcernListAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLMeConcernListAction.h; path = ../Exten/SLHelper/SLMeConcernListAction.h; sourceTree = "<group>"; };
 		720F85FC20B2F59400AD0C54 /* SLRelationAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLRelationAction.h; path = "../Exten/NotRenamed/UITableView-FDTemplateLayoutCell/SLRelationAction.h"; sourceTree = "<group>"; };
 		720F85FD20B2F59500AD0C54 /* SLFollowUserAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLFollowUserAction.h; path = ../../../JKCategories/SLFollowUserAction.h; sourceTree = "<group>"; };
@@ -414,7 +414,7 @@
 		9319236D20B897C6001C6144 /* SLVMFriendList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLVMFriendList.h; sourceTree = "<group>"; };
 		931DAAC520B571C5003A0B38 /* SLGiftAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLGiftAction.h; sourceTree = "<group>"; };
 		931DAAC820B5A7A6003A0B38 /* SLConvListSystemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLConvListSystemTableViewCell.h; sourceTree = "<group>"; };
-		9343E47521C7D0140001B9C1 /* UILabel+Additional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UILabel+Additional.h"; path = "../Exten/SLHelper/UILabel+Additional.h"; sourceTree = "<group>"; };
+		9343E47521C7D0140001B9C1 /* UILabel+Additional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UILabel+Additional.h"; path = "../../SLHelper/UILabel+Additional.h"; sourceTree = "<group>"; };
 		934CBCD72118217800608F2F /* NSDate+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+Additions.h"; path = "../../../JKCategories/NSDate+Additions.h"; sourceTree = "<group>"; };
 		934CBCD8211821A500608F2F /* NSDate+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+Additions.m"; path = "../NSDate+Additions.m"; sourceTree = "<group>"; };
 		934E1B9720AC39D900A0B080 /* SLChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLChatViewController.h; sourceTree = "<group>"; };
@@ -531,7 +531,6 @@
 				437B0A5B20F3602E00E93844 /* NSObject+JKAddProperty.h */,
 				D22E1E6B21F342F4001A3D2A /* NSSting+aes.m */,
 				938D2FFD20A0C821006A0CDE /* ShowAction.h */,
-				7217BE1321E0D21A00C1E58F /* NSString+Binary.h */,
 				7217BE1721E0D21A00C1E58F /* NSString+Binary.m */,
 				434DDB5620C932DB00191FC1 /* CAMediaTimingFunction+JKAdditionalEquations.h */,
 				93155E5120D4B9CE00E1B61F /* SLDefenderListAction.h */,
@@ -539,8 +538,6 @@
 				931DAAC520B571C5003A0B38 /* SLGiftAction.h */,
 				720C304820A35ACC00207500 /* SLGetWithdrawAddressAction.h */,
 				72C6166920A0C67500103C44 /* SLUrgeListAction.h */,
-				720F85F720B2F59400AD0C54 /* SLChatStatisticsAction.h */,
-				9343E47521C7D0140001B9C1 /* UILabel+Additional.h */,
 				4323F9FB223CC1F100AC3959 /* NSString+JKEmoji.m */,
 				9314D1E120C539D400BB2429 /* SLShutUpAction.h */,
 				720F860320B2F59500AD0C54 /* SLGetRyTokenAction.h */,
@@ -701,7 +698,10 @@
 				4323FA1C223CC1F400AC3959 /* CATransactionDemoViewController.m */,
 				D22E1E6A21F342F4001A3D2A /* NSSting+aes.h */,
 				43D87B3020EB6E0400E991D6 /* UIScreen+JKFrame.h */,
+				7217BE1321E0D21A00C1E58F /* NSString+Binary.h */,
 				72F17B6720AB18F50039E916 /* ShowVerifycodeAction.h */,
+				720F85F720B2F59400AD0C54 /* SLChatStatisticsAction.h */,
+				9343E47521C7D0140001B9C1 /* UILabel+Additional.h */,
 				9314D1DF20C5394500BB2429 /* SLAttentionListAction.h */,
 				720F85FD20B2F59500AD0C54 /* SLFollowUserAction.h */,
 				93155E4E20D4B88500E1B61F /* SLGetWithdrawListAction.h */,
