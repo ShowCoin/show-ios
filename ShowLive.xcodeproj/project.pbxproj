@@ -365,7 +365,7 @@
 		72A0088820FCA0710051C643 /* SLSafeCenterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLSafeCenterCell.m; path = Classes/UserCenter/View/SLSafeCenterCell.m; sourceTree = SOURCE_ROOT; };
 		72A0088A20FCA1820051C643 /* SLUserViewHeader+SLMinCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SLUserViewHeader+SLMinCard.h"; path = "Classes/UserCenter/View/SLUserViewHeader+SLMinCard.h"; sourceTree = SOURCE_ROOT; };
 		72A0088B20FCA1820051C643 /* SLUserViewHeader+SLMinCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "SLUserViewHeader+SLMinCard.m"; path = "Classes/UserCenter/View/SLUserViewHeader+SLMinCard.m"; sourceTree = SOURCE_ROOT; };
-		72C6166920A0C67500103C44 /* SLUrgeListAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLUrgeListAction.h; path = ../../Common/SLNavigationController/SLUrgeListAction.h; sourceTree = "<group>"; };
+		72C6166920A0C67500103C44 /* SLUrgeListAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLUrgeListAction.h; path = ../../../../Common/SLNavigationController/SLUrgeListAction.h; sourceTree = "<group>"; };
 		72C686F61D628C8898214FFC /* Pods-ShowLive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowLive.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShowLive/Pods-ShowLive.debug.xcconfig"; sourceTree = "<group>"; };
 		72C7B4F720C3EDE500065BC2 /* SLADView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLADView.h; sourceTree = "<group>"; };
 		72CA648B20EE4A4C0052E107 /* SLFansViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLFansViewController.h; sourceTree = "<group>"; };
@@ -408,7 +408,7 @@
 		93154D6820623EFE00BF088F /* ShowLive.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowLive.pch; sourceTree = "<group>"; };
 		93155E4E20D4B88500E1B61F /* SLGetWithdrawListAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLGetWithdrawListAction.h; path = ../../Common/SLNavigationController/SLGetWithdrawListAction.h; sourceTree = "<group>"; };
 		93155E4F20D4B8D300E1B61F /* SLIsFollowAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLIsFollowAction.h; sourceTree = "<group>"; };
-		93155E5120D4B9CE00E1B61F /* SLDefenderListAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLDefenderListAction.h; path = "../Exten/NotRenamed/UITableView-FDTemplateLayoutCell/SLDefenderListAction.h"; sourceTree = "<group>"; };
+		93155E5120D4B9CE00E1B61F /* SLDefenderListAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLDefenderListAction.h; sourceTree = "<group>"; };
 		9319236920B7FF1C001C6144 /* SLFriendListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLFriendListViewController.h; sourceTree = "<group>"; };
 		9319236B20B7FF37001C6144 /* SLFriendListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLFriendListCell.h; sourceTree = "<group>"; };
 		9319236D20B897C6001C6144 /* SLVMFriendList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLVMFriendList.h; sourceTree = "<group>"; };
@@ -520,10 +520,8 @@
 			isa = PBXGroup;
 			children = (
 				7217BE1321E0D21A00C1E58F /* NSString+Binary.h */,
-				93155E5120D4B9CE00E1B61F /* SLDefenderListAction.h */,
 				931DAAC520B571C5003A0B38 /* SLGiftAction.h */,
 				720C304820A35ACC00207500 /* SLGetWithdrawAddressAction.h */,
-				72C6166920A0C67500103C44 /* SLUrgeListAction.h */,
 				720F85F720B2F59400AD0C54 /* SLChatStatisticsAction.h */,
 				9314D1E120C539D400BB2429 /* SLShutUpAction.h */,
 				720F860320B2F59500AD0C54 /* SLGetRyTokenAction.h */,
@@ -601,7 +599,9 @@
 				43D87B3020EB6E0400E991D6 /* UIScreen+JKFrame.h */,
 				7217BE1721E0D21A00C1E58F /* NSString+Binary.m */,
 				434DDB5620C932DB00191FC1 /* CAMediaTimingFunction+JKAdditionalEquations.h */,
+				93155E5120D4B9CE00E1B61F /* SLDefenderListAction.h */,
 				9314D1E220C53A3B00BB2429 /* SLHistoryWorksAction.h */,
+				72C6166920A0C67500103C44 /* SLUrgeListAction.h */,
 				72F17B6720AB18F50039E916 /* ShowVerifycodeAction.h */,
 				9343E47521C7D0140001B9C1 /* UILabel+Additional.h */,
 				4323F9FB223CC1F100AC3959 /* NSString+JKEmoji.m */,
