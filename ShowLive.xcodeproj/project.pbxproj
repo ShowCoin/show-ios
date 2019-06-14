@@ -142,10 +142,10 @@
 		431438AA209432D50059D373 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = LaunchScreen.strings; sourceTree = "<group>"; };
 		431438AE209432E30059D373 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		431CB4D020F499370043B0AC /* NSObject+JKRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JKRuntime.m"; sourceTree = "<group>"; };
-		431CB4DF20F49A800043B0AC /* NSString+JKBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+JKBase64.h"; path = "../NSString+JKBase64.h"; sourceTree = "<group>"; };
+		431CB4DF20F49A800043B0AC /* NSString+JKBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+JKBase64.h"; path = "../../NotRenamed/NSString+JKBase64.h"; sourceTree = "<group>"; };
 		4323F9ED223CC1EF00AC3959 /* NSString+JKXMLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+JKXMLDictionary.h"; path = "../../SLHelper/pop/WebCore/NSString+JKXMLDictionary.h"; sourceTree = "<group>"; };
 		4323F9FA223CC1F100AC3959 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Additions.h"; path = "../NSString+Additions.h"; sourceTree = "<group>"; };
-		4323F9FB223CC1F100AC3959 /* NSString+JKEmoji.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+JKEmoji.m"; path = "../NSString+JKEmoji.m"; sourceTree = "<group>"; };
+		4323F9FB223CC1F100AC3959 /* NSString+JKEmoji.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+JKEmoji.m"; path = "../../NotRenamed/NSString+JKEmoji.m"; sourceTree = "<group>"; };
 		4323FA0E223CC1F300AC3959 /* CLLocation+JKCH1903.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLLocation+JKCH1903.m"; sourceTree = "<group>"; };
 		4323FA15223CC1F300AC3959 /* NSDictionary+JKBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+JKBlock.h"; sourceTree = "<group>"; };
 		4323FA1C223CC1F400AC3959 /* CATransactionDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CATransactionDemoViewController.m; path = ../../../JKCategories/CATransactionDemoViewController.m; sourceTree = "<group>"; };
@@ -563,7 +563,6 @@
 				437921DD20ECC3E000B2EC88 /* NSArray+JKSafeAccess.m */,
 				4323FA1C223CC1F400AC3959 /* CATransactionDemoViewController.m */,
 				437B0A6420F360BA00E93844 /* NSObject+JKAutoCoding.m */,
-				431CB4DF20F49A800043B0AC /* NSString+JKBase64.h */,
 				437B0A5B20F3602E00E93844 /* NSObject+JKAddProperty.h */,
 				D22E1E6A21F342F4001A3D2A /* NSSting+aes.h */,
 				D22E1E6B21F342F4001A3D2A /* NSSting+aes.m */,
@@ -576,7 +575,6 @@
 				93155E5120D4B9CE00E1B61F /* SLDefenderListAction.h */,
 				9314D1E220C53A3B00BB2429 /* SLHistoryWorksAction.h */,
 				720F85F720B2F59400AD0C54 /* SLChatStatisticsAction.h */,
-				4323F9FB223CC1F100AC3959 /* NSString+JKEmoji.m */,
 				9314D1E120C539D400BB2429 /* SLShutUpAction.h */,
 				9314D1DF20C5394500BB2429 /* SLAttentionListAction.h */,
 				720F85FD20B2F59500AD0C54 /* SLFollowUserAction.h */,
@@ -664,11 +662,13 @@
 				4323FA0E223CC1F300AC3959 /* CLLocation+JKCH1903.m */,
 				93EF35D421C292950088C2E4 /* UIImage+Additional.m */,
 				437921F120ECC4C000B2EC88 /* NSData+JKPCM.m */,
+				431CB4DF20F49A800043B0AC /* NSString+JKBase64.h */,
 				931DAAC520B571C5003A0B38 /* SLGiftAction.h */,
 				720C304820A35ACC00207500 /* SLGetWithdrawAddressAction.h */,
 				72C6166920A0C67500103C44 /* SLUrgeListAction.h */,
 				72F17B6720AB18F50039E916 /* ShowVerifycodeAction.h */,
 				9343E47521C7D0140001B9C1 /* UILabel+Additional.h */,
+				4323F9FB223CC1F100AC3959 /* NSString+JKEmoji.m */,
 				720F860320B2F59500AD0C54 /* SLGetRyTokenAction.h */,
 				720F85F920B2F59400AD0C54 /* SLMeConcernListAction.h */,
 				720F85FC20B2F59400AD0C54 /* SLRelationAction.h */,
