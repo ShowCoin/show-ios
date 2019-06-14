@@ -246,7 +246,7 @@
 		436DECA322870E8700F16341 /* POPAnimationTracerInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAnimationTracerInternal.h; sourceTree = "<group>"; };
 		436DECA422870E8700F16341 /* POPAnimationEventInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAnimationEventInternal.h; sourceTree = "<group>"; };
 		436DECA522870E8700F16341 /* POPAnimator.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = POPAnimator.mm; sourceTree = "<group>"; };
-		436DECA622870E8700F16341 /* POPAnimatableProperty.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = POPAnimatableProperty.mm; path = ../Exten/NotRenamed/POPAnimatableProperty.mm; sourceTree = "<group>"; };
+		436DECA622870E8700F16341 /* POPAnimatableProperty.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = POPAnimatableProperty.mm; path = ../POPAnimatableProperty.mm; sourceTree = "<group>"; };
 		436DECA722870E8700F16341 /* POPAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAnimation.h; sourceTree = "<group>"; };
 		436DECA822870E8700F16341 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		436DECA922870E8700F16341 /* POPAnimationRuntime.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = POPAnimationRuntime.mm; sourceTree = "<group>"; };
@@ -609,7 +609,6 @@
 				436DEC5A22870E1A00F16341 /* UINavigationController+FDFullscreenPopGesture.m */,
 				436DEC5B22870E1A00F16341 /* UIView+Genie.h */,
 				436DECA522870E8700F16341 /* POPAnimator.mm */,
-				436DECA622870E8700F16341 /* POPAnimatableProperty.mm */,
 				437B0A5520F35FDE00E93844 /* NSNumber+JKRomanNumerals.h */,
 				437B0A5920F3600900E93844 /* NSNumber+JKRound.h */,
 				437B0A6120F3608A00E93844 /* NSObject+JKAssociatedObject.h */,
@@ -636,7 +635,6 @@
 				436DECA022870E8700F16341 /* TransformationMatrix.h */,
 				436DECA122870E8700F16341 /* FloatConversion.h */,
 				436DECA222870E8700F16341 /* UnitBezier.h */,
-				436DEC5D22870E1A00F16341 /* UIScrollView+EmptyDataSet.h */,
 				D544A431CFB6EF8D747D9730 /* Pods */,
 			);
 			path = JKCategories;
@@ -706,9 +704,11 @@
 				436DEC9D22870E8700F16341 /* POPAnimatablePropertyTypes.h */,
 				436DEC5C22870E1A00F16341 /* UIViewController+TopBarMessage.h */,
 				436DECA422870E8700F16341 /* POPAnimationEventInternal.h */,
+				436DECA622870E8700F16341 /* POPAnimatableProperty.mm */,
 				436DECA922870E8700F16341 /* POPAnimationRuntime.mm */,
 				434DDB4F20C9326800191FC1 /* CALayer+JKBorderColor.h */,
 				72506F6221CD04D500361964 /* SLNavigationControllerTransition.h */,
+				436DEC5D22870E1A00F16341 /* UIScrollView+EmptyDataSet.h */,
 			);
 			path = "UITableView-FDTemplateLayoutCell";
 			sourceTree = "<group>";
