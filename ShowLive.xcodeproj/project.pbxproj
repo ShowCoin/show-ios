@@ -241,7 +241,7 @@
 		436DEC9D22870E8700F16341 /* POPAnimatablePropertyTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POPAnimatablePropertyTypes.h; path = ../../SLHelper/pop/WebCore/POPAnimatablePropertyTypes.h; sourceTree = "<group>"; };
 		436DEC9F22870E8700F16341 /* TransformationMatrix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TransformationMatrix.cpp; sourceTree = "<group>"; };
 		436DECA022870E8700F16341 /* TransformationMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransformationMatrix.h; sourceTree = "<group>"; };
-		436DECA122870E8700F16341 /* FloatConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FloatConversion.h; sourceTree = "<group>"; };
+		436DECA122870E8700F16341 /* FloatConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FloatConversion.h; path = ../../../JKCategories/FloatConversion.h; sourceTree = "<group>"; };
 		436DECA222870E8700F16341 /* UnitBezier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitBezier.h; sourceTree = "<group>"; };
 		436DECA322870E8700F16341 /* POPAnimationTracerInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAnimationTracerInternal.h; sourceTree = "<group>"; };
 		436DECA422870E8700F16341 /* POPAnimationEventInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAnimationEventInternal.h; sourceTree = "<group>"; };
@@ -539,10 +539,8 @@
 				437B0A5520F35FDE00E93844 /* NSNumber+JKRomanNumerals.h */,
 				437B0A6120F3608A00E93844 /* NSObject+JKAssociatedObject.h */,
 				435D4C9720F0931000C8DC85 /* NSNotificationCenter+JKMainThread.h */,
-				436DECAA22870E8700F16341 /* POPAnimationEvent.mm */,
 				72506F6121CD04D500361964 /* SLPushAnimationTransition.m */,
 				436DEC9F22870E8700F16341 /* TransformationMatrix.cpp */,
-				436DECA122870E8700F16341 /* FloatConversion.h */,
 				D544A431CFB6EF8D747D9730 /* Pods */,
 			);
 			path = JKCategories;
@@ -691,6 +689,7 @@
 				436DECA722870E8700F16341 /* POPAnimation.h */,
 				436DECA822870E8700F16341 /* module.modulemap */,
 				436DECA922870E8700F16341 /* POPAnimationRuntime.mm */,
+				436DECAA22870E8700F16341 /* POPAnimationEvent.mm */,
 				436DECAB22870E8700F16341 /* POPLayerExtras.mm */,
 				436DECAC22870E8700F16341 /* POPVector.mm */,
 				436DECAD22870E8700F16341 /* POPVector.h */,
@@ -707,6 +706,7 @@
 				436DEC3D22870E1A00F16341 /* CLLocationManager+Blocks.h */,
 				436DEC3E22870E1A00F16341 /* UIApplication+JKPermissions.m */,
 				436DECA022870E8700F16341 /* TransformationMatrix.h */,
+				436DECA122870E8700F16341 /* FloatConversion.h */,
 				436DECA222870E8700F16341 /* UnitBezier.h */,
 				436DEC5D22870E1A00F16341 /* UIScrollView+EmptyDataSet.h */,
 			);
