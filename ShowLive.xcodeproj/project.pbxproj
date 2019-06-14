@@ -181,7 +181,7 @@
 		436DEC4D22870E1A00F16341 /* UIViewController+MJPopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+MJPopupViewController.h"; path = "../../../JKCategories/UIViewController+MJPopupViewController.h"; sourceTree = "<group>"; };
 		436DEC4E22870E1A00F16341 /* UIScrollView+EmptyDataSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+EmptyDataSet.m"; path = "../UIScrollView+EmptyDataSet.m"; sourceTree = "<group>"; };
 		436DEC4F22870E1A00F16341 /* UIScrollView+APParallaxHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+APParallaxHeader.m"; path = "../../NotRenamed/UITableView-FDTemplateLayoutCell/UIScrollView+APParallaxHeader.m"; sourceTree = "<group>"; };
-		436DEC5022870E1A00F16341 /* UICollectionView+ARDynamicCacheHeightLayoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UICollectionView+ARDynamicCacheHeightLayoutCell.h"; path = "../UICollectionView+ARDynamicCacheHeightLayoutCell.h"; sourceTree = "<group>"; };
+		436DEC5022870E1A00F16341 /* UICollectionView+ARDynamicCacheHeightLayoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UICollectionView+ARDynamicCacheHeightLayoutCell.h"; path = "../../NotRenamed/UICollectionView+ARDynamicCacheHeightLayoutCell.h"; sourceTree = "<group>"; };
 		436DEC5122870E1A00F16341 /* UIWebView+Alert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+Alert.h"; sourceTree = "<group>"; };
 		436DEC5222870E1A00F16341 /* UIViewController+DDPopUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DDPopUpViewController.m"; sourceTree = "<group>"; };
 		436DEC5322870E1A00F16341 /* UIView+FDCollapsibleConstraints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+FDCollapsibleConstraints.m"; path = "../../../JKCategories/UIView+FDCollapsibleConstraints.m"; sourceTree = "<group>"; };
@@ -294,7 +294,7 @@
 		7217BE1821E0D21A00C1E58F /* NSString+Json.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Json.m"; path = "../../../../Common/exten/NSString+Json.m"; sourceTree = "<group>"; };
 		7217BE1921E0D21A00C1E58F /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+ImageContentType.h"; path = "../../../../Common/SLNavigationController/NSData+ImageContentType.h"; sourceTree = "<group>"; };
 		7217BE1B21E0D21A00C1E58F /* NSDate+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+Additions.h"; path = "../../../../Common/SLNavigationController/NSDate+Additions.h"; sourceTree = "<group>"; };
-		7217BE1C21E0D21A00C1E58F /* NSData+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+Image.m"; path = "../../SLHelper/pop/WebCore/NSData+Image.m"; sourceTree = "<group>"; };
+		7217BE1C21E0D21A00C1E58F /* NSData+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+Image.m"; path = "WebCore/NSData+Image.m"; sourceTree = "<group>"; };
 		722BCF0621D78936004BFC52 /* SLInviteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLInviteViewController.m; sourceTree = "<group>"; };
 		723816B220C689AB00C3885E /* SLLevelMarkView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLLevelMarkView.h; sourceTree = "<group>"; };
 		723816B320C689AB00C3885E /* SLLevelMarkView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLLevelMarkView.m; sourceTree = "<group>"; };
@@ -576,7 +576,6 @@
 				436DEC4C22870E1A00F16341 /* UIView+GestureCallback.m */,
 				436DEC4D22870E1A00F16341 /* UIViewController+MJPopupViewController.h */,
 				436DEC4E22870E1A00F16341 /* UIScrollView+EmptyDataSet.m */,
-				436DEC5022870E1A00F16341 /* UICollectionView+ARDynamicCacheHeightLayoutCell.h */,
 				436DEC5322870E1A00F16341 /* UIView+FDCollapsibleConstraints.m */,
 				436DEC5722870E1A00F16341 /* UIView+Debug.h */,
 				436DEC7722870E8700F16341 /* POPMath.h */,
@@ -589,7 +588,6 @@
 				436DEC8B22870E8700F16341 /* POPCGUtils.h */,
 				436DEC8F22870E8700F16341 /* POPDecayAnimation.mm */,
 				436DEC9322870E8700F16341 /* POPSpringSolver.h */,
-				7217BE1C21E0D21A00C1E58F /* NSData+Image.m */,
 				436DEC9B22870E8700F16341 /* POPGeometry.mm */,
 				436DEC9C22870E8700F16341 /* POPBasicAnimation.mm */,
 				436DEC5B22870E1A00F16341 /* UIView+Genie.h */,
@@ -662,6 +660,7 @@
 				436DEC4A22870E1A00F16341 /* UIView+Genie.m */,
 				436DEC4B22870E1A00F16341 /* UINavigationController+FDFullscreenPopGesture.h */,
 				436DEC4F22870E1A00F16341 /* UIScrollView+APParallaxHeader.m */,
+				436DEC5022870E1A00F16341 /* UICollectionView+ARDynamicCacheHeightLayoutCell.h */,
 				436DEC5122870E1A00F16341 /* UIWebView+Alert.h */,
 				436DEC5222870E1A00F16341 /* UIViewController+DDPopUpViewController.m */,
 				436DEC5422870E1A00F16341 /* WebView+Debug.h */,
@@ -692,6 +691,7 @@
 				436DEC9522870E8700F16341 /* POPAnimator.h */,
 				4323FA15223CC1F300AC3959 /* NSDictionary+JKBlock.h */,
 				435D4C4920EDEAAD00C8DC85 /* NSDate+JKLunarCalendar.m */,
+				7217BE1C21E0D21A00C1E58F /* NSData+Image.m */,
 				7217BE1921E0D21A00C1E58F /* NSData+ImageContentType.h */,
 				436DEC9822870E8700F16341 /* POPPropertyAnimation.mm */,
 				436DEC9922870E8700F16341 /* POPLayerExtras.h */,
