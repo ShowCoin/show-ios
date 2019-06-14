@@ -281,7 +281,7 @@
 		720F85FD20B2F59500AD0C54 /* SLFollowUserAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLFollowUserAction.h; path = ../../../JKCategories/SLFollowUserAction.h; sourceTree = "<group>"; };
 		720F85FF20B2F59500AD0C54 /* SLMeFansListAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLMeFansListAction.h; sourceTree = "<group>"; };
 		720F860120B2F59500AD0C54 /* SLGetRyTokenAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLGetRyTokenAction.m; sourceTree = "<group>"; };
-		720F860320B2F59500AD0C54 /* SLGetRyTokenAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLGetRyTokenAction.h; path = ../../SLHelper/pop/WebCore/SLGetRyTokenAction.h; sourceTree = "<group>"; };
+		720F860320B2F59500AD0C54 /* SLGetRyTokenAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLGetRyTokenAction.h; path = WebCore/SLGetRyTokenAction.h; sourceTree = "<group>"; };
 		7217AD9821C5368100D082E9 /* WithdrawViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WithdrawViewController.h; sourceTree = "<group>"; };
 		7217AD9921C536A700D082E9 /* WithdrawViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WithdrawViewController.m; sourceTree = "<group>"; };
 		7217AD9B21C5377D00D082E9 /* SLCoinDetailInfoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLCoinDetailInfoVC.h; sourceTree = "<group>"; };
@@ -548,7 +548,6 @@
 			isa = PBXGroup;
 			children = (
 				72506F5F21CD04D500361964 /* SLNavigationControllerTransition.m */,
-				7217BE1421E0D21A00C1E58F /* NSData+ImageContentType.m */,
 				436DEC4022870E1A00F16341 /* UITableView+FDKeyedHeightCache.h */,
 				436DEC4122870E1A00F16341 /* UITableView+FDTemplateLayoutCellDebug.h */,
 				436DEC4222870E1A00F16341 /* UITableView+FDTemplateLayoutCell.m */,
@@ -586,7 +585,6 @@
 				9314D1E120C539D400BB2429 /* SLShutUpAction.h */,
 				9314D1DF20C5394500BB2429 /* SLAttentionListAction.h */,
 				720F85FD20B2F59500AD0C54 /* SLFollowUserAction.h */,
-				720F860320B2F59500AD0C54 /* SLGetRyTokenAction.h */,
 				720F860120B2F59500AD0C54 /* SLGetRyTokenAction.m */,
 				720F85FF20B2F59500AD0C54 /* SLMeFansListAction.h */,
 				93155E4E20D4B88500E1B61F /* SLGetWithdrawListAction.h */,
@@ -677,6 +675,7 @@
 		436DEC7622870E8700F16341 /* pop */ = {
 			isa = PBXGroup;
 			children = (
+				7217BE1421E0D21A00C1E58F /* NSData+ImageContentType.m */,
 				436DEC4422870E1A00F16341 /* UITableView+FDKeyedHeightCache.m */,
 				7217BE1B21E0D21A00C1E58F /* NSDate+Additions.h */,
 				7217BE1121E0D21A00C1E58F /* NSDate+Additions.m */,
@@ -685,6 +684,7 @@
 				437921F120ECC4C000B2EC88 /* NSData+JKPCM.m */,
 				931DAAC520B571C5003A0B38 /* SLGiftAction.h */,
 				9343E47521C7D0140001B9C1 /* UILabel+Additional.h */,
+				720F860320B2F59500AD0C54 /* SLGetRyTokenAction.h */,
 				720F85F920B2F59400AD0C54 /* SLMeConcernListAction.h */,
 				720F85FC20B2F59400AD0C54 /* SLRelationAction.h */,
 				431438A9209432D50059D373 /* LaunchScreen.strings */,
