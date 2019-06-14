@@ -238,7 +238,7 @@
 		436DEC9A22870E8700F16341 /* POPAnimation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = POPAnimation.mm; path = ../POPAnimation.mm; sourceTree = "<group>"; };
 		436DEC9B22870E8700F16341 /* POPGeometry.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = POPGeometry.mm; path = ../../../JKCategories/POPGeometry.mm; sourceTree = "<group>"; };
 		436DEC9C22870E8700F16341 /* POPBasicAnimation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = POPBasicAnimation.mm; path = ../../SLHelper/POPBasicAnimation.mm; sourceTree = "<group>"; };
-		436DEC9D22870E8700F16341 /* POPAnimatablePropertyTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POPAnimatablePropertyTypes.h; path = ../../SLHelper/pop/WebCore/POPAnimatablePropertyTypes.h; sourceTree = "<group>"; };
+		436DEC9D22870E8700F16341 /* POPAnimatablePropertyTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POPAnimatablePropertyTypes.h; path = WebCore/POPAnimatablePropertyTypes.h; sourceTree = "<group>"; };
 		436DEC9F22870E8700F16341 /* TransformationMatrix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TransformationMatrix.cpp; sourceTree = "<group>"; };
 		436DECA022870E8700F16341 /* TransformationMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransformationMatrix.h; sourceTree = "<group>"; };
 		436DECA122870E8700F16341 /* FloatConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FloatConversion.h; path = ../../../JKCategories/FloatConversion.h; sourceTree = "<group>"; };
@@ -255,7 +255,7 @@
 		436DECAC22870E8700F16341 /* POPVector.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = POPVector.mm; path = ../../POPVector.mm; sourceTree = "<group>"; };
 		436DECAD22870E8700F16341 /* POPVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPVector.h; sourceTree = "<group>"; };
 		436DECAE22870E8700F16341 /* POPAnimatorPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAnimatorPrivate.h; sourceTree = "<group>"; };
-		436DECAF22870E8700F16341 /* POPAnimationTracer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAnimationTracer.h; sourceTree = "<group>"; };
+		436DECAF22870E8700F16341 /* POPAnimationTracer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POPAnimationTracer.h; path = "../../NotRenamed/UITableView-FDTemplateLayoutCell/POPAnimationTracer.h"; sourceTree = "<group>"; };
 		437864562075FD1E00146B97 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		437921DD20ECC3E000B2EC88 /* NSArray+JKSafeAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+JKSafeAccess.m"; path = "../NSArray+JKSafeAccess.m"; sourceTree = "<group>"; };
 		437921F120ECC4C000B2EC88 /* NSData+JKPCM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+JKPCM.m"; sourceTree = "<group>"; };
@@ -646,7 +646,6 @@
 				436DEC9922870E8700F16341 /* POPLayerExtras.h */,
 				436DEC9B22870E8700F16341 /* POPGeometry.mm */,
 				436DEC9C22870E8700F16341 /* POPBasicAnimation.mm */,
-				436DEC9D22870E8700F16341 /* POPAnimatablePropertyTypes.h */,
 				436DEC5B22870E1A00F16341 /* UIView+Genie.h */,
 				436DEC5C22870E1A00F16341 /* UIViewController+TopBarMessage.h */,
 				436DECA422870E8700F16341 /* POPAnimationEventInternal.h */,
@@ -663,7 +662,6 @@
 				436DECAB22870E8700F16341 /* POPLayerExtras.mm */,
 				436DECAC22870E8700F16341 /* POPVector.mm */,
 				436DECAD22870E8700F16341 /* POPVector.h */,
-				436DECAF22870E8700F16341 /* POPAnimationTracer.h */,
 				434DDB4F20C9326800191FC1 /* CALayer+JKBorderColor.h */,
 				72506F6021CD04D500361964 /* SLNavigationViewController.h */,
 				72506F6321CD04D500361964 /* SLNavigationViewController.m */,
@@ -712,9 +710,11 @@
 				435D4C4920EDEAAD00C8DC85 /* NSDate+JKLunarCalendar.m */,
 				436DEC9822870E8700F16341 /* POPPropertyAnimation.mm */,
 				436DEC9A22870E8700F16341 /* POPAnimation.mm */,
+				436DEC9D22870E8700F16341 /* POPAnimatablePropertyTypes.h */,
 				436DEC5A22870E1A00F16341 /* UINavigationController+FDFullscreenPopGesture.m */,
 				436DECA522870E8700F16341 /* POPAnimator.mm */,
 				436DECAE22870E8700F16341 /* POPAnimatorPrivate.h */,
+				436DECAF22870E8700F16341 /* POPAnimationTracer.h */,
 				72506F6421CD04D500361964 /* SLPushAnimationTransition.h */,
 				436DEC9E22870E8700F16341 /* WebCore */,
 			);
