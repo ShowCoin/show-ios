@@ -279,7 +279,7 @@
 		720F85F920B2F59400AD0C54 /* SLMeConcernListAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLMeConcernListAction.h; path = ../SLMeConcernListAction.h; sourceTree = "<group>"; };
 		720F85FC20B2F59400AD0C54 /* SLRelationAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLRelationAction.h; path = "../../NotRenamed/UITableView-FDTemplateLayoutCell/SLRelationAction.h"; sourceTree = "<group>"; };
 		720F85FD20B2F59500AD0C54 /* SLFollowUserAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLFollowUserAction.h; path = ../../../JKCategories/SLFollowUserAction.h; sourceTree = "<group>"; };
-		720F85FF20B2F59500AD0C54 /* SLMeFansListAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLMeFansListAction.h; sourceTree = "<group>"; };
+		720F85FF20B2F59500AD0C54 /* SLMeFansListAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLMeFansListAction.h; path = "../../NotRenamed/UITableView-FDTemplateLayoutCell/SLMeFansListAction.h"; sourceTree = "<group>"; };
 		720F860120B2F59500AD0C54 /* SLGetRyTokenAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLGetRyTokenAction.m; sourceTree = "<group>"; };
 		720F860320B2F59500AD0C54 /* SLGetRyTokenAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLGetRyTokenAction.h; path = WebCore/SLGetRyTokenAction.h; sourceTree = "<group>"; };
 		7217AD9821C5368100D082E9 /* WithdrawViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WithdrawViewController.h; sourceTree = "<group>"; };
@@ -547,8 +547,6 @@
 		436DEC3F22870E1A00F16341 /* UITableView-FDTemplateLayoutCell */ = {
 			isa = PBXGroup;
 			children = (
-				437B0A6420F360BA00E93844 /* NSObject+JKAutoCoding.m */,
-				720F85FF20B2F59500AD0C54 /* SLMeFansListAction.h */,
 				93155E4E20D4B88500E1B61F /* SLGetWithdrawListAction.h */,
 				436DEC5322870E1A00F16341 /* UIView+FDCollapsibleConstraints.m */,
 				436DEC7B22870E8700F16341 /* POPAnimationEvent.h */,
@@ -585,6 +583,7 @@
 				437921DD20ECC3E000B2EC88 /* NSArray+JKSafeAccess.m */,
 				4323FA1C223CC1F400AC3959 /* CATransactionDemoViewController.m */,
 				437921F120ECC4C000B2EC88 /* NSData+JKPCM.m */,
+				437B0A6420F360BA00E93844 /* NSObject+JKAutoCoding.m */,
 				431CB4DF20F49A800043B0AC /* NSString+JKBase64.h */,
 				437B0A5B20F3602E00E93844 /* NSObject+JKAddProperty.h */,
 				D22E1E6A21F342F4001A3D2A /* NSSting+aes.h */,
@@ -610,6 +609,7 @@
 				720F860320B2F59500AD0C54 /* SLGetRyTokenAction.h */,
 				720F860120B2F59500AD0C54 /* SLGetRyTokenAction.m */,
 				720F85F920B2F59400AD0C54 /* SLMeConcernListAction.h */,
+				720F85FF20B2F59500AD0C54 /* SLMeFansListAction.h */,
 				720F85FC20B2F59400AD0C54 /* SLRelationAction.h */,
 				93155E4F20D4B8D300E1B61F /* SLIsFollowAction.h */,
 				431438A9209432D50059D373 /* LaunchScreen.strings */,
