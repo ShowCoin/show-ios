@@ -214,7 +214,7 @@
 		436DEC8222870E8700F16341 /* POPBasicAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POPBasicAnimation.h; path = "Untils/Exten/NotRenamed/UITableView-FDTemplateLayoutCell/POPBasicAnimation.h"; sourceTree = "<group>"; };
 		436DEC8322870E8700F16341 /* POPMath.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = POPMath.mm; path = "Untils/Exten/NotRenamed/UITableView-FDTemplateLayoutCell/POPMath.mm"; sourceTree = "<group>"; };
 		436DEC8422870E8700F16341 /* POPAnimationPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POPAnimationPrivate.h; path = Untils/Exten/SLHelper/pop/POPAnimationPrivate.h; sourceTree = "<group>"; };
-		436DEC8522870E8700F16341 /* POPAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POPAction.h; path = Untils/Exten/NotRenamed/POPAction.h; sourceTree = "<group>"; };
+		436DEC8522870E8700F16341 /* POPAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POPAction.h; path = ../Untils/Exten/NotRenamed/POPAction.h; sourceTree = "<group>"; };
 		436DEC8622870E8700F16341 /* POPSpringAnimation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = POPSpringAnimation.mm; path = ../Untils/Exten/SLHelper/POPSpringAnimation.mm; sourceTree = "<group>"; };
 		436DEC8722870E8700F16341 /* POPCustomAnimation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = POPCustomAnimation.mm; path = Untils/Exten/NotRenamed/POPCustomAnimation.mm; sourceTree = "<group>"; };
 		436DEC8822870E8700F16341 /* POPCustomAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POPCustomAnimation.h; path = ../Untils/Exten/SLHelper/pop/POPCustomAnimation.h; sourceTree = "<group>"; };
@@ -774,6 +774,7 @@
 			children = (
 				436DEC4222870E1A00F16341 /* UITableView+FDTemplateLayoutCell.m */,
 				436DEC4322870E1A00F16341 /* UITableView+FDIndexPathHeightCache.h */,
+				436DEC4522870E1A00F16341 /* UITableView+FDTemplateLayoutCellDebug.m */,
 				436DEC4622870E1A00F16341 /* UITableView+FDIndexPathHeightCache.m */,
 				7217BE1B21E0D21A00C1E58F /* NSDate+Additions.h */,
 				43291F3C20E51F50000C3C15 /* UITextFieldDemoViewController.h */,
@@ -802,6 +803,7 @@
 				4323FA25223CC1F500AC3959 /* NSManagedObjectContext+JKObjectClear.h */,
 				4323F9FA223CC1F100AC3959 /* NSString+Additions.h */,
 				7217BE1221E0D21A00C1E58F /* NSString+Additions.h */,
+				436DEC5E22870E1A00F16341 /* UIScrollView+APParallaxHeader.h */,
 				436DEC9722870E8700F16341 /* POP.h */,
 				436DEC4822870E1A00F16341 /* WebView+Debug.m */,
 				436DEC4922870E1A00F16341 /* UIViewController+TopBarMessage.m */,
@@ -821,6 +823,7 @@
 				436DEC7F22870E8700F16341 /* pop-ios-Info.plist */,
 				436DEC8022870E8700F16341 /* POPDecayAnimationInternal.h */,
 				436DEC8122870E8700F16341 /* POPSpringAnimation.h */,
+				436DEC8522870E8700F16341 /* POPAction.h */,
 				436DEC8622870E8700F16341 /* POPSpringAnimation.mm */,
 				436DEC8822870E8700F16341 /* POPCustomAnimation.h */,
 				436DEC8922870E8700F16341 /* POPPropertyAnimation.h */,
@@ -1115,7 +1118,6 @@
 				436DEC4022870E1A00F16341 /* UITableView+FDKeyedHeightCache.h */,
 				436DEC4122870E1A00F16341 /* UITableView+FDTemplateLayoutCellDebug.h */,
 				436DEC4422870E1A00F16341 /* UITableView+FDKeyedHeightCache.m */,
-				436DEC4522870E1A00F16341 /* UITableView+FDTemplateLayoutCellDebug.m */,
 				436DEC4722870E1A00F16341 /* UITableView+FDTemplateLayoutCell.h */,
 				436DEC9622870E8700F16341 /* POPAnimationRuntime.h */,
 				934CBCD72118217800608F2F /* NSDate+Additions.h */,
@@ -1140,7 +1142,6 @@
 				720F860120B2F59500AD0C54 /* SLGetRyTokenAction.m */,
 				720F85F920B2F59400AD0C54 /* SLMeConcernListAction.h */,
 				4323F9ED223CC1EF00AC3959 /* NSString+JKXMLDictionary.h */,
-				436DEC5E22870E1A00F16341 /* UIScrollView+APParallaxHeader.h */,
 				436DEC5F22870E1A00F16341 /* UIView+FDCollapsibleConstraints.h */,
 				7217BE1521E0D21A00C1E58F /* NSData+Image.h */,
 				436DEC6122870E1A00F16341 /* UIWebView+Alert.m */,
@@ -1160,7 +1161,6 @@
 				436DEC8222870E8700F16341 /* POPBasicAnimation.h */,
 				436DEC8322870E8700F16341 /* POPMath.mm */,
 				436DEC8422870E8700F16341 /* POPAnimationPrivate.h */,
-				436DEC8522870E8700F16341 /* POPAction.h */,
 				436DEC8722870E8700F16341 /* POPCustomAnimation.mm */,
 				436DEC8A22870E8700F16341 /* POPAnimationTracer.mm */,
 				436DEC8C22870E8700F16341 /* POPAnimationExtras.mm */,
