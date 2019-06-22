@@ -371,7 +371,7 @@
 		72CA648B20EE4A4C0052E107 /* SLFansViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLFansViewController.h; sourceTree = "<group>"; };
 		72DFDE7820D9308600EA3AA1 /* ShowHomeMiddleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowHomeMiddleCell.h; sourceTree = "<group>"; };
 		72DFDE7C20D9328000EA3AA1 /* ShowHomeSamallCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowHomeSamallCell.h; sourceTree = "<group>"; };
-		72F17B6720AB18F50039E916 /* ShowVerifycodeAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShowVerifycodeAction.h; path = Untils/Exten/NotRenamed/ShowVerifycodeAction.h; sourceTree = "<group>"; };
+		72F17B6720AB18F50039E916 /* ShowVerifycodeAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShowVerifycodeAction.h; path = ../Untils/Exten/NotRenamed/ShowVerifycodeAction.h; sourceTree = "<group>"; };
 		72F9A9642200483100612687 /* NewTopListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewTopListCell.h; sourceTree = "<group>"; };
 		72F9A9652200484600612687 /* NewTopListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewTopListCell.m; sourceTree = "<group>"; };
 		72F9A9672200486F00612687 /* NewTopListHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewTopListHeader.h; sourceTree = "<group>"; };
@@ -390,7 +390,7 @@
 		72FE9B7F20621F59008DD3D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		877A7E42218D8E5D2E688D18 /* libPods-ShowLiveUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShowLiveUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9314D1DF20C5394500BB2429 /* SLAttentionListAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLAttentionListAction.h; path = Untils/Exten/SLHelper/pop/SLAttentionListAction.h; sourceTree = "<group>"; };
-		9314D1E120C539D400BB2429 /* SLShutUpAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLShutUpAction.h; path = Untils/JKCategories/SLShutUpAction.h; sourceTree = "<group>"; };
+		9314D1E120C539D400BB2429 /* SLShutUpAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLShutUpAction.h; path = ../Untils/JKCategories/SLShutUpAction.h; sourceTree = "<group>"; };
 		9314D1E220C53A3B00BB2429 /* SLHistoryWorksAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLHistoryWorksAction.h; path = Untils/Exten/SLHelper/pop/SLHistoryWorksAction.h; sourceTree = "<group>"; };
 		9314D1E720C57AEF00BB2429 /* SLPrivateChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLPrivateChatViewController.h; sourceTree = "<group>"; };
 		9314D1E820C57B1F00BB2429 /* SLPrivateChatViewController+Business.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SLPrivateChatViewController+Business.h"; sourceTree = "<group>"; };
@@ -781,7 +781,9 @@
 				D22E1E6B21F342F4001A3D2A /* NSSting+aes.m */,
 				436DEC6022870E1A00F16341 /* UIViewController+DDPopUpViewController.h */,
 				720C304820A35ACC00207500 /* SLGetWithdrawAddressAction.h */,
+				72F17B6720AB18F50039E916 /* ShowVerifycodeAction.h */,
 				4323F9FB223CC1F100AC3959 /* NSString+JKEmoji.m */,
+				9314D1E120C539D400BB2429 /* SLShutUpAction.h */,
 				720F860320B2F59500AD0C54 /* SLGetRyTokenAction.h */,
 				720F85FC20B2F59400AD0C54 /* SLRelationAction.h */,
 				93155E4F20D4B8D300E1B61F /* SLIsFollowAction.h */,
@@ -814,6 +816,7 @@
 				72506F6021CD04D500361964 /* SLNavigationViewController.h */,
 				72506F5B21CD040900361964 /* SLHeadPortrait.h */,
 				436DEC3C22870E1A00F16341 /* UIView+Debug.m */,
+				436DEC3E22870E1A00F16341 /* UIApplication+JKPermissions.m */,
 			);
 			path = requestAction;
 			sourceTree = "<group>";
@@ -1110,10 +1113,8 @@
 				9314D1E220C53A3B00BB2429 /* SLHistoryWorksAction.h */,
 				931DAAC520B571C5003A0B38 /* SLGiftAction.h */,
 				72C6166920A0C67500103C44 /* SLUrgeListAction.h */,
-				72F17B6720AB18F50039E916 /* ShowVerifycodeAction.h */,
 				720F85F720B2F59400AD0C54 /* SLChatStatisticsAction.h */,
 				9343E47521C7D0140001B9C1 /* UILabel+Additional.h */,
-				9314D1E120C539D400BB2429 /* SLShutUpAction.h */,
 				9314D1DF20C5394500BB2429 /* SLAttentionListAction.h */,
 				720F85FD20B2F59500AD0C54 /* SLFollowUserAction.h */,
 				720F860120B2F59500AD0C54 /* SLGetRyTokenAction.m */,
@@ -1193,7 +1194,6 @@
 				72506F6221CD04D500361964 /* SLNavigationControllerTransition.h */,
 				72506F6421CD04D500361964 /* SLPushAnimationTransition.h */,
 				436DEC3D22870E1A00F16341 /* CLLocationManager+Blocks.h */,
-				436DEC3E22870E1A00F16341 /* UIApplication+JKPermissions.m */,
 				436DEC9F22870E8700F16341 /* TransformationMatrix.cpp */,
 				436DECA022870E8700F16341 /* TransformationMatrix.h */,
 				436DECA122870E8700F16341 /* FloatConversion.h */,
