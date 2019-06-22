@@ -163,7 +163,7 @@
 		435E3ABA20C02BB1002B7A7F /* NSDecimalNumber+JKCalculatingByString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDecimalNumber+JKCalculatingByString.m"; sourceTree = "<group>"; };
 		435E3ABB20C02BB1002B7A7F /* NSNumber+JKRomanNumerals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+JKRomanNumerals.m"; sourceTree = "<group>"; };
 		436DEC3C22870E1A00F16341 /* UIView+Debug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Debug.m"; sourceTree = "<group>"; };
-		436DEC3D22870E1A00F16341 /* CLLocationManager+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CLLocationManager+Blocks.h"; path = "../../../JKCategories/CLLocationManager+Blocks.h"; sourceTree = "<group>"; };
+		436DEC3D22870E1A00F16341 /* CLLocationManager+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CLLocationManager+Blocks.h"; path = "Untils/JKCategories/CLLocationManager+Blocks.h"; sourceTree = "<group>"; };
 		436DEC3E22870E1A00F16341 /* UIApplication+JKPermissions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+JKPermissions.m"; sourceTree = "<group>"; };
 		436DEC4022870E1A00F16341 /* UITableView+FDKeyedHeightCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDKeyedHeightCache.h"; sourceTree = "<group>"; };
 		436DEC4122870E1A00F16341 /* UITableView+FDTemplateLayoutCellDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDTemplateLayoutCellDebug.h"; sourceTree = "<group>"; };
@@ -547,10 +547,8 @@
 		436DEC3F22870E1A00F16341 /* UITableView-FDTemplateLayoutCell */ = {
 			isa = PBXGroup;
 			children = (
-				436DEC5622870E1A00F16341 /* CLLocationManager+Blocks.m */,
 				436DEC8122870E8700F16341 /* POPSpringAnimation.h */,
 				436DECAA22870E8700F16341 /* POPAnimationEvent.mm */,
-				436DEC3D22870E1A00F16341 /* CLLocationManager+Blocks.h */,
 			);
 			path = "UITableView-FDTemplateLayoutCell";
 			sourceTree = "<group>";
@@ -1122,6 +1120,7 @@
 				436DEC5322870E1A00F16341 /* UIView+FDCollapsibleConstraints.m */,
 				436DEC5422870E1A00F16341 /* WebView+Debug.h */,
 				436DEC5522870E1A00F16341 /* UIApplication+JKPermissions.h */,
+				436DEC5622870E1A00F16341 /* CLLocationManager+Blocks.m */,
 				436DEC5722870E1A00F16341 /* UIView+Debug.h */,
 				436DEC5822870E1A00F16341 /* UIViewController+MJPopupViewController.m */,
 				436DEC5922870E1A00F16341 /* UIView+GestureCallback.h */,
@@ -1193,6 +1192,7 @@
 				72506F6221CD04D500361964 /* SLNavigationControllerTransition.h */,
 				72506F6421CD04D500361964 /* SLPushAnimationTransition.h */,
 				436DEC3C22870E1A00F16341 /* UIView+Debug.m */,
+				436DEC3D22870E1A00F16341 /* CLLocationManager+Blocks.h */,
 				436DEC3E22870E1A00F16341 /* UIApplication+JKPermissions.m */,
 				436DEC9F22870E8700F16341 /* TransformationMatrix.cpp */,
 				436DECA022870E8700F16341 /* TransformationMatrix.h */,
