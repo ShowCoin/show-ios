@@ -186,7 +186,7 @@
 		436DEC5222870E1A00F16341 /* UIViewController+DDPopUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DDPopUpViewController.m"; sourceTree = "<group>"; };
 		436DEC5322870E1A00F16341 /* UIView+FDCollapsibleConstraints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+FDCollapsibleConstraints.m"; path = "../../../JKCategories/UIView+FDCollapsibleConstraints.m"; sourceTree = "<group>"; };
 		436DEC5422870E1A00F16341 /* WebView+Debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "WebView+Debug.h"; path = "../../SLHelper/WebView+Debug.h"; sourceTree = "<group>"; };
-		436DEC5522870E1A00F16341 /* UIApplication+JKPermissions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIApplication+JKPermissions.h"; path = "../../NotRenamed/UITableView-FDTemplateLayoutCell/UIApplication+JKPermissions.h"; sourceTree = "<group>"; };
+		436DEC5522870E1A00F16341 /* UIApplication+JKPermissions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+JKPermissions.h"; sourceTree = "<group>"; };
 		436DEC5622870E1A00F16341 /* CLLocationManager+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLLocationManager+Blocks.m"; sourceTree = "<group>"; };
 		436DEC5722870E1A00F16341 /* UIView+Debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Debug.h"; path = "../../SLHelper/pop/WebCore/UIView+Debug.h"; sourceTree = "<group>"; };
 		436DEC5822870E1A00F16341 /* UIViewController+MJPopupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MJPopupViewController.m"; sourceTree = "<group>"; };
@@ -259,7 +259,7 @@
 		437864562075FD1E00146B97 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		437921DD20ECC3E000B2EC88 /* NSArray+JKSafeAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+JKSafeAccess.m"; path = "../NSArray+JKSafeAccess.m"; sourceTree = "<group>"; };
 		437921F120ECC4C000B2EC88 /* NSData+JKPCM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+JKPCM.m"; sourceTree = "<group>"; };
-		437B0A4F20F35F9C00E93844 /* NSNotificationCenterDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSNotificationCenterDemoViewController.m; path = WebCore/NSNotificationCenterDemoViewController.m; sourceTree = "<group>"; };
+		437B0A4F20F35F9C00E93844 /* NSNotificationCenterDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSNotificationCenterDemoViewController.m; path = ../../SLHelper/pop/WebCore/NSNotificationCenterDemoViewController.m; sourceTree = "<group>"; };
 		437B0A5520F35FDE00E93844 /* NSNumber+JKRomanNumerals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSNumber+JKRomanNumerals.h"; path = "../../SLHelper/pop/NSNumber+JKRomanNumerals.h"; sourceTree = "<group>"; };
 		437B0A5920F3600900E93844 /* NSNumber+JKRound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+JKRound.h"; sourceTree = "<group>"; };
 		437B0A5B20F3602E00E93844 /* NSObject+JKAddProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JKAddProperty.h"; sourceTree = "<group>"; };
@@ -555,6 +555,7 @@
 				436DEC4322870E1A00F16341 /* UITableView+FDIndexPathHeightCache.h */,
 				436DEC4422870E1A00F16341 /* UITableView+FDKeyedHeightCache.m */,
 				436DEC4522870E1A00F16341 /* UITableView+FDTemplateLayoutCellDebug.m */,
+				436DEC4622870E1A00F16341 /* UITableView+FDIndexPathHeightCache.m */,
 				436DEC4722870E1A00F16341 /* UITableView+FDTemplateLayoutCell.h */,
 				436DEC9622870E8700F16341 /* POPAnimationRuntime.h */,
 				934CBCD72118217800608F2F /* NSDate+Additions.h */,
@@ -598,6 +599,7 @@
 				720F85F920B2F59400AD0C54 /* SLMeConcernListAction.h */,
 				720F85FF20B2F59500AD0C54 /* SLMeFansListAction.h */,
 				720F85FC20B2F59400AD0C54 /* SLRelationAction.h */,
+				93155E4E20D4B88500E1B61F /* SLGetWithdrawListAction.h */,
 				93155E4F20D4B8D300E1B61F /* SLIsFollowAction.h */,
 				431438A9209432D50059D373 /* LaunchScreen.strings */,
 				4323F9ED223CC1EF00AC3959 /* NSString+JKXMLDictionary.h */,
@@ -625,6 +627,7 @@
 				436DEC5222870E1A00F16341 /* UIViewController+DDPopUpViewController.m */,
 				436DEC5322870E1A00F16341 /* UIView+FDCollapsibleConstraints.m */,
 				436DEC5422870E1A00F16341 /* WebView+Debug.h */,
+				436DEC5522870E1A00F16341 /* UIApplication+JKPermissions.h */,
 				436DEC5622870E1A00F16341 /* CLLocationManager+Blocks.m */,
 				436DEC5722870E1A00F16341 /* UIView+Debug.h */,
 				436DEC5822870E1A00F16341 /* UIViewController+MJPopupViewController.m */,
@@ -636,6 +639,7 @@
 				436DEC7B22870E8700F16341 /* POPAnimationEvent.h */,
 				436DEC7C22870E8700F16341 /* POPBasicAnimationInternal.h */,
 				436DEC7D22870E8700F16341 /* POPCGUtils.mm */,
+				436DEC7E22870E8700F16341 /* POPPropertyAnimationInternal.h */,
 				436DEC7F22870E8700F16341 /* pop-ios-Info.plist */,
 				436DEC8022870E8700F16341 /* POPDecayAnimationInternal.h */,
 				436DEC8122870E8700F16341 /* POPSpringAnimation.h */,
@@ -678,6 +682,7 @@
 				437B0A5520F35FDE00E93844 /* NSNumber+JKRomanNumerals.h */,
 				437B0A5920F3600900E93844 /* NSNumber+JKRound.h */,
 				437B0A6120F3608A00E93844 /* NSObject+JKAssociatedObject.h */,
+				437B0A4F20F35F9C00E93844 /* NSNotificationCenterDemoViewController.m */,
 				435D4C9720F0931000C8DC85 /* NSNotificationCenter+JKMainThread.h */,
 				436DECA722870E8700F16341 /* POPAnimation.h */,
 				436DECA822870E8700F16341 /* module.modulemap */,
@@ -710,11 +715,6 @@
 		436DEC7622870E8700F16341 /* pop */ = {
 			isa = PBXGroup;
 			children = (
-				436DEC4622870E1A00F16341 /* UITableView+FDIndexPathHeightCache.m */,
-				93155E4E20D4B88500E1B61F /* SLGetWithdrawListAction.h */,
-				436DEC5522870E1A00F16341 /* UIApplication+JKPermissions.h */,
-				436DEC7E22870E8700F16341 /* POPPropertyAnimationInternal.h */,
-				437B0A4F20F35F9C00E93844 /* NSNotificationCenterDemoViewController.m */,
 				72506F6221CD04D500361964 /* SLNavigationControllerTransition.h */,
 				436DEC9E22870E8700F16341 /* WebCore */,
 			);
