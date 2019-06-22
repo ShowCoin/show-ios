@@ -188,7 +188,7 @@
 		436DEC5422870E1A00F16341 /* WebView+Debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "WebView+Debug.h"; path = "Untils/Exten/SLHelper/WebView+Debug.h"; sourceTree = "<group>"; };
 		436DEC5522870E1A00F16341 /* UIApplication+JKPermissions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIApplication+JKPermissions.h"; path = "Untils/Exten/NotRenamed/UITableView-FDTemplateLayoutCell/UIApplication+JKPermissions.h"; sourceTree = "<group>"; };
 		436DEC5622870E1A00F16341 /* CLLocationManager+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLLocationManager+Blocks.m"; sourceTree = "<group>"; };
-		436DEC5722870E1A00F16341 /* UIView+Debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Debug.h"; path = "Untils/Exten/SLHelper/pop/WebCore/UIView+Debug.h"; sourceTree = "<group>"; };
+		436DEC5722870E1A00F16341 /* UIView+Debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Debug.h"; path = "../Untils/Exten/SLHelper/pop/WebCore/UIView+Debug.h"; sourceTree = "<group>"; };
 		436DEC5822870E1A00F16341 /* UIViewController+MJPopupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+MJPopupViewController.m"; path = "Untils/Exten/NotRenamed/UITableView-FDTemplateLayoutCell/UIViewController+MJPopupViewController.m"; sourceTree = "<group>"; };
 		436DEC5922870E1A00F16341 /* UIView+GestureCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+GestureCallback.h"; path = "Untils/Exten/SLHelper/pop/WebCore/UIView+GestureCallback.h"; sourceTree = "<group>"; };
 		436DEC5A22870E1A00F16341 /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+FDFullscreenPopGesture.m"; path = "Untils/Exten/NotRenamed/UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
@@ -210,7 +210,7 @@
 		436DEC7E22870E8700F16341 /* POPPropertyAnimationInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPPropertyAnimationInternal.h; sourceTree = "<group>"; };
 		436DEC7F22870E8700F16341 /* pop-ios-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; name = "pop-ios-Info.plist"; path = "Untils/Exten/NotRenamed/pop-ios-Info.plist"; sourceTree = "<group>"; };
 		436DEC8022870E8700F16341 /* POPDecayAnimationInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POPDecayAnimationInternal.h; path = Untils/Exten/SLHelper/pop/POPDecayAnimationInternal.h; sourceTree = "<group>"; };
-		436DEC8122870E8700F16341 /* POPSpringAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POPSpringAnimation.h; path = "Untils/Exten/NotRenamed/UITableView-FDTemplateLayoutCell/POPSpringAnimation.h"; sourceTree = "<group>"; };
+		436DEC8122870E8700F16341 /* POPSpringAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POPSpringAnimation.h; path = "../Untils/Exten/NotRenamed/UITableView-FDTemplateLayoutCell/POPSpringAnimation.h"; sourceTree = "<group>"; };
 		436DEC8222870E8700F16341 /* POPBasicAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POPBasicAnimation.h; path = "Untils/Exten/NotRenamed/UITableView-FDTemplateLayoutCell/POPBasicAnimation.h"; sourceTree = "<group>"; };
 		436DEC8322870E8700F16341 /* POPMath.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = POPMath.mm; path = "Untils/Exten/NotRenamed/UITableView-FDTemplateLayoutCell/POPMath.mm"; sourceTree = "<group>"; };
 		436DEC8422870E8700F16341 /* POPAnimationPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POPAnimationPrivate.h; path = Untils/Exten/SLHelper/pop/POPAnimationPrivate.h; sourceTree = "<group>"; };
@@ -773,12 +773,15 @@
 			isa = PBXGroup;
 			children = (
 				4325536B20D8B53300FC0258 /* MKMapView+JKBetterMaps.m */,
+				D22E1E6B21F342F4001A3D2A /* NSSting+aes.m */,
 				436DEC6022870E1A00F16341 /* UIViewController+DDPopUpViewController.h */,
 				93155E4F20D4B8D300E1B61F /* SLIsFollowAction.h */,
 				431438A9209432D50059D373 /* LaunchScreen.strings */,
 				7217BE1221E0D21A00C1E58F /* NSString+Additions.h */,
 				436DEC5022870E1A00F16341 /* UICollectionView+ARDynamicCacheHeightLayoutCell.h */,
+				436DEC5722870E1A00F16341 /* UIView+Debug.h */,
 				436DEC7E22870E8700F16341 /* POPPropertyAnimationInternal.h */,
+				436DEC8122870E8700F16341 /* POPSpringAnimation.h */,
 				436DEC9B22870E8700F16341 /* POPGeometry.mm */,
 				436DEC9D22870E8700F16341 /* POPAnimatablePropertyTypes.h */,
 				72506F6021CD04D500361964 /* SLNavigationViewController.h */,
@@ -1074,7 +1077,6 @@
 				431CB4DF20F49A800043B0AC /* NSString+JKBase64.h */,
 				437B0A5B20F3602E00E93844 /* NSObject+JKAddProperty.h */,
 				D22E1E6A21F342F4001A3D2A /* NSSting+aes.h */,
-				D22E1E6B21F342F4001A3D2A /* NSSting+aes.m */,
 				938D2FFD20A0C821006A0CDE /* ShowAction.h */,
 				43D87B3020EB6E0400E991D6 /* UIScreen+JKFrame.h */,
 				7217BE1321E0D21A00C1E58F /* NSString+Binary.h */,
@@ -1123,7 +1125,6 @@
 				436DEC5422870E1A00F16341 /* WebView+Debug.h */,
 				436DEC5522870E1A00F16341 /* UIApplication+JKPermissions.h */,
 				436DEC5622870E1A00F16341 /* CLLocationManager+Blocks.m */,
-				436DEC5722870E1A00F16341 /* UIView+Debug.h */,
 				436DEC5822870E1A00F16341 /* UIViewController+MJPopupViewController.m */,
 				436DEC5922870E1A00F16341 /* UIView+GestureCallback.h */,
 				436DEC7722870E8700F16341 /* POPMath.h */,
@@ -1135,7 +1136,6 @@
 				436DEC7D22870E8700F16341 /* POPCGUtils.mm */,
 				436DEC7F22870E8700F16341 /* pop-ios-Info.plist */,
 				436DEC8022870E8700F16341 /* POPDecayAnimationInternal.h */,
-				436DEC8122870E8700F16341 /* POPSpringAnimation.h */,
 				436DEC8222870E8700F16341 /* POPBasicAnimation.h */,
 				436DEC8322870E8700F16341 /* POPMath.mm */,
 				436DEC8422870E8700F16341 /* POPAnimationPrivate.h */,
