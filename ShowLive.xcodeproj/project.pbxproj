@@ -197,7 +197,7 @@
 		436DEC5D22870E1A00F16341 /* UIScrollView+EmptyDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+EmptyDataSet.h"; sourceTree = "<group>"; };
 		436DEC5E22870E1A00F16341 /* UIScrollView+APParallaxHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+APParallaxHeader.h"; sourceTree = "<group>"; };
 		436DEC5F22870E1A00F16341 /* UIView+FDCollapsibleConstraints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+FDCollapsibleConstraints.h"; path = "Untils/Exten/SLHelper/pop/WebCore/UIView+FDCollapsibleConstraints.h"; sourceTree = "<group>"; };
-		436DEC6022870E1A00F16341 /* UIViewController+DDPopUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+DDPopUpViewController.h"; path = "Untils/Exten/NotRenamed/UITableView-FDTemplateLayoutCell/UIViewController+DDPopUpViewController.h"; sourceTree = "<group>"; };
+		436DEC6022870E1A00F16341 /* UIViewController+DDPopUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+DDPopUpViewController.h"; path = "../Untils/Exten/NotRenamed/UITableView-FDTemplateLayoutCell/UIViewController+DDPopUpViewController.h"; sourceTree = "<group>"; };
 		436DEC6122870E1A00F16341 /* UIWebView+Alert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIWebView+Alert.m"; path = "Untils/Exten/NotRenamed/UITableView-FDTemplateLayoutCell/UIWebView+Alert.m"; sourceTree = "<group>"; };
 		436DEC6222870E1A00F16341 /* UICollectionView+ARDynamicCacheHeightLayoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+ARDynamicCacheHeightLayoutCell.m"; sourceTree = "<group>"; };
 		436DEC7722870E8700F16341 /* POPMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPMath.h; sourceTree = "<group>"; };
@@ -773,10 +773,13 @@
 			isa = PBXGroup;
 			children = (
 				4325536B20D8B53300FC0258 /* MKMapView+JKBetterMaps.m */,
+				436DEC6022870E1A00F16341 /* UIViewController+DDPopUpViewController.h */,
 				431438A9209432D50059D373 /* LaunchScreen.strings */,
+				7217BE1221E0D21A00C1E58F /* NSString+Additions.h */,
 				436DEC5022870E1A00F16341 /* UICollectionView+ARDynamicCacheHeightLayoutCell.h */,
 				436DEC9B22870E8700F16341 /* POPGeometry.mm */,
 				436DEC9D22870E8700F16341 /* POPAnimatablePropertyTypes.h */,
+				72506F6021CD04D500361964 /* SLNavigationViewController.h */,
 			);
 			path = requestAction;
 			sourceTree = "<group>";
@@ -1070,7 +1073,6 @@
 				437B0A5B20F3602E00E93844 /* NSObject+JKAddProperty.h */,
 				D22E1E6A21F342F4001A3D2A /* NSSting+aes.h */,
 				D22E1E6B21F342F4001A3D2A /* NSSting+aes.m */,
-				436DEC6022870E1A00F16341 /* UIViewController+DDPopUpViewController.h */,
 				938D2FFD20A0C821006A0CDE /* ShowAction.h */,
 				43D87B3020EB6E0400E991D6 /* UIScreen+JKFrame.h */,
 				7217BE1321E0D21A00C1E58F /* NSString+Binary.h */,
@@ -1099,7 +1101,6 @@
 				434DDB5B20C9332700191FC1 /* CATransaction+JKAnimateWithDuration.m */,
 				4323FA25223CC1F500AC3959 /* NSManagedObjectContext+JKObjectClear.h */,
 				4323F9FA223CC1F100AC3959 /* NSString+Additions.h */,
-				7217BE1221E0D21A00C1E58F /* NSString+Additions.h */,
 				436DEC5E22870E1A00F16341 /* UIScrollView+APParallaxHeader.h */,
 				436DEC5F22870E1A00F16341 /* UIView+FDCollapsibleConstraints.h */,
 				7217BE1521E0D21A00C1E58F /* NSData+Image.h */,
@@ -1184,7 +1185,6 @@
 				436DECAE22870E8700F16341 /* POPAnimatorPrivate.h */,
 				436DECAF22870E8700F16341 /* POPAnimationTracer.h */,
 				434DDB4F20C9326800191FC1 /* CALayer+JKBorderColor.h */,
-				72506F6021CD04D500361964 /* SLNavigationViewController.h */,
 				72506F6321CD04D500361964 /* SLNavigationViewController.m */,
 				72506F5B21CD040900361964 /* SLHeadPortrait.h */,
 				72506F5C21CD044500361964 /* SLHeadPortrait.m */,
