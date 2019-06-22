@@ -186,7 +186,7 @@
 		436DEC5222870E1A00F16341 /* UIViewController+DDPopUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DDPopUpViewController.m"; sourceTree = "<group>"; };
 		436DEC5322870E1A00F16341 /* UIView+FDCollapsibleConstraints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+FDCollapsibleConstraints.m"; path = "../Untils/JKCategories/UIView+FDCollapsibleConstraints.m"; sourceTree = "<group>"; };
 		436DEC5422870E1A00F16341 /* WebView+Debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "WebView+Debug.h"; path = "../Untils/Exten/SLHelper/WebView+Debug.h"; sourceTree = "<group>"; };
-		436DEC5522870E1A00F16341 /* UIApplication+JKPermissions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIApplication+JKPermissions.h"; path = "Untils/Exten/NotRenamed/UITableView-FDTemplateLayoutCell/UIApplication+JKPermissions.h"; sourceTree = "<group>"; };
+		436DEC5522870E1A00F16341 /* UIApplication+JKPermissions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIApplication+JKPermissions.h"; path = "../Untils/Exten/NotRenamed/UITableView-FDTemplateLayoutCell/UIApplication+JKPermissions.h"; sourceTree = "<group>"; };
 		436DEC5622870E1A00F16341 /* CLLocationManager+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CLLocationManager+Blocks.m"; path = "../CLLocationManager+Blocks.m"; sourceTree = "<group>"; };
 		436DEC5722870E1A00F16341 /* UIView+Debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Debug.h"; path = "../Untils/Exten/SLHelper/pop/WebCore/UIView+Debug.h"; sourceTree = "<group>"; };
 		436DEC5822870E1A00F16341 /* UIViewController+MJPopupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+MJPopupViewController.m"; path = "Untils/Exten/NotRenamed/UITableView-FDTemplateLayoutCell/UIViewController+MJPopupViewController.m"; sourceTree = "<group>"; };
@@ -773,6 +773,7 @@
 			isa = PBXGroup;
 			children = (
 				7217BE1421E0D21A00C1E58F /* NSData+ImageContentType.m */,
+				436DEC4022870E1A00F16341 /* UITableView+FDKeyedHeightCache.h */,
 				436DEC4122870E1A00F16341 /* UITableView+FDTemplateLayoutCellDebug.h */,
 				436DEC4222870E1A00F16341 /* UITableView+FDTemplateLayoutCell.m */,
 				436DEC4322870E1A00F16341 /* UITableView+FDIndexPathHeightCache.h */,
@@ -838,6 +839,7 @@
 				436DEC5222870E1A00F16341 /* UIViewController+DDPopUpViewController.m */,
 				436DEC5322870E1A00F16341 /* UIView+FDCollapsibleConstraints.m */,
 				436DEC5422870E1A00F16341 /* WebView+Debug.h */,
+				436DEC5522870E1A00F16341 /* UIApplication+JKPermissions.h */,
 				436DEC5622870E1A00F16341 /* CLLocationManager+Blocks.m */,
 				436DEC5722870E1A00F16341 /* UIView+Debug.h */,
 				436DEC5922870E1A00F16341 /* UIView+GestureCallback.h */,
@@ -904,6 +906,7 @@
 				436DEC3C22870E1A00F16341 /* UIView+Debug.m */,
 				436DEC3D22870E1A00F16341 /* CLLocationManager+Blocks.h */,
 				436DEC3E22870E1A00F16341 /* UIApplication+JKPermissions.m */,
+				436DEC9F22870E8700F16341 /* TransformationMatrix.cpp */,
 				436DECA022870E8700F16341 /* TransformationMatrix.h */,
 				436DECA222870E8700F16341 /* UnitBezier.h */,
 				436DEC5D22870E1A00F16341 /* UIScrollView+EmptyDataSet.h */,
@@ -1173,7 +1176,6 @@
 			isa = PBXGroup;
 			children = (
 				72506F5F21CD04D500361964 /* SLNavigationControllerTransition.m */,
-				436DEC4022870E1A00F16341 /* UITableView+FDKeyedHeightCache.h */,
 				436DEC4722870E1A00F16341 /* UITableView+FDTemplateLayoutCell.h */,
 				437921DD20ECC3E000B2EC88 /* NSArray+JKSafeAccess.m */,
 				D22E1E6A21F342F4001A3D2A /* NSSting+aes.h */,
@@ -1186,7 +1188,6 @@
 				436DEC5F22870E1A00F16341 /* UIView+FDCollapsibleConstraints.h */,
 				7217BE1521E0D21A00C1E58F /* NSData+Image.h */,
 				436DEC4E22870E1A00F16341 /* UIScrollView+EmptyDataSet.m */,
-				436DEC5522870E1A00F16341 /* UIApplication+JKPermissions.h */,
 				436DEC5822870E1A00F16341 /* UIViewController+MJPopupViewController.m */,
 				436DEC7C22870E8700F16341 /* POPBasicAnimationInternal.h */,
 				436DEC8322870E8700F16341 /* POPMath.mm */,
@@ -1197,7 +1198,6 @@
 				437B0A5520F35FDE00E93844 /* NSNumber+JKRomanNumerals.h */,
 				435D4C9720F0931000C8DC85 /* NSNotificationCenter+JKMainThread.h */,
 				72506F6121CD04D500361964 /* SLPushAnimationTransition.m */,
-				436DEC9F22870E8700F16341 /* TransformationMatrix.cpp */,
 				436DECA122870E8700F16341 /* FloatConversion.h */,
 				72C686F61D628C8898214FFC /* Pods-ShowLive.debug.xcconfig */,
 				AA2350AAA436CDCBB1E93DCE /* Pods-ShowLive.release.xcconfig */,
