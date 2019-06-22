@@ -178,7 +178,7 @@
 		436DEC4A22870E1A00F16341 /* UIView+Genie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Genie.m"; path = "Untils/Exten/NotRenamed/UITableView-FDTemplateLayoutCell/UIView+Genie.m"; sourceTree = "<group>"; };
 		436DEC4B22870E1A00F16341 /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+FDFullscreenPopGesture.h"; path = "Untils/Exten/NotRenamed/UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
 		436DEC4C22870E1A00F16341 /* UIView+GestureCallback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GestureCallback.m"; sourceTree = "<group>"; };
-		436DEC4D22870E1A00F16341 /* UIViewController+MJPopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+MJPopupViewController.h"; path = "Untils/JKCategories/UIViewController+MJPopupViewController.h"; sourceTree = "<group>"; };
+		436DEC4D22870E1A00F16341 /* UIViewController+MJPopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+MJPopupViewController.h"; path = "../Untils/JKCategories/UIViewController+MJPopupViewController.h"; sourceTree = "<group>"; };
 		436DEC4E22870E1A00F16341 /* UIScrollView+EmptyDataSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+EmptyDataSet.m"; path = "Untils/Exten/NotRenamed/UIScrollView+EmptyDataSet.m"; sourceTree = "<group>"; };
 		436DEC4F22870E1A00F16341 /* UIScrollView+APParallaxHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+APParallaxHeader.m"; path = "Untils/Exten/NotRenamed/UITableView-FDTemplateLayoutCell/UIScrollView+APParallaxHeader.m"; sourceTree = "<group>"; };
 		436DEC5022870E1A00F16341 /* UICollectionView+ARDynamicCacheHeightLayoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UICollectionView+ARDynamicCacheHeightLayoutCell.h"; path = "../Untils/Exten/NotRenamed/UICollectionView+ARDynamicCacheHeightLayoutCell.h"; sourceTree = "<group>"; };
@@ -774,6 +774,7 @@
 			children = (
 				7217BE1B21E0D21A00C1E58F /* NSDate+Additions.h */,
 				4325536B20D8B53300FC0258 /* MKMapView+JKBetterMaps.m */,
+				437B0A5B20F3602E00E93844 /* NSObject+JKAddProperty.h */,
 				D22E1E6B21F342F4001A3D2A /* NSSting+aes.m */,
 				436DEC6022870E1A00F16341 /* UIViewController+DDPopUpViewController.h */,
 				720C304820A35ACC00207500 /* SLGetWithdrawAddressAction.h */,
@@ -785,6 +786,7 @@
 				7217BE1221E0D21A00C1E58F /* NSString+Additions.h */,
 				436DEC4822870E1A00F16341 /* WebView+Debug.m */,
 				436DEC4C22870E1A00F16341 /* UIView+GestureCallback.m */,
+				436DEC4D22870E1A00F16341 /* UIViewController+MJPopupViewController.h */,
 				436DEC5022870E1A00F16341 /* UICollectionView+ARDynamicCacheHeightLayoutCell.h */,
 				436DEC5722870E1A00F16341 /* UIView+Debug.h */,
 				436DEC5922870E1A00F16341 /* UIView+GestureCallback.h */,
@@ -797,6 +799,7 @@
 				437B0A5920F3600900E93844 /* NSNumber+JKRound.h */,
 				436DECA722870E8700F16341 /* POPAnimation.h */,
 				436DECA822870E8700F16341 /* module.modulemap */,
+				436DECA922870E8700F16341 /* POPAnimationRuntime.mm */,
 				436DECAA22870E8700F16341 /* POPAnimationEvent.mm */,
 				72506F6021CD04D500361964 /* SLNavigationViewController.h */,
 				72506F5B21CD040900361964 /* SLHeadPortrait.h */,
@@ -1089,7 +1092,6 @@
 				437921F120ECC4C000B2EC88 /* NSData+JKPCM.m */,
 				437B0A6420F360BA00E93844 /* NSObject+JKAutoCoding.m */,
 				431CB4DF20F49A800043B0AC /* NSString+JKBase64.h */,
-				437B0A5B20F3602E00E93844 /* NSObject+JKAddProperty.h */,
 				D22E1E6A21F342F4001A3D2A /* NSSting+aes.h */,
 				938D2FFD20A0C821006A0CDE /* ShowAction.h */,
 				43D87B3020EB6E0400E991D6 /* UIScreen+JKFrame.h */,
@@ -1124,7 +1126,6 @@
 				436DEC4922870E1A00F16341 /* UIViewController+TopBarMessage.m */,
 				436DEC4A22870E1A00F16341 /* UIView+Genie.m */,
 				436DEC4B22870E1A00F16341 /* UINavigationController+FDFullscreenPopGesture.h */,
-				436DEC4D22870E1A00F16341 /* UIViewController+MJPopupViewController.h */,
 				436DEC4E22870E1A00F16341 /* UIScrollView+EmptyDataSet.m */,
 				436DEC4F22870E1A00F16341 /* UIScrollView+APParallaxHeader.m */,
 				436DEC5122870E1A00F16341 /* UIWebView+Alert.h */,
@@ -1179,7 +1180,6 @@
 				437B0A6120F3608A00E93844 /* NSObject+JKAssociatedObject.h */,
 				437B0A4F20F35F9C00E93844 /* NSNotificationCenterDemoViewController.m */,
 				435D4C9720F0931000C8DC85 /* NSNotificationCenter+JKMainThread.h */,
-				436DECA922870E8700F16341 /* POPAnimationRuntime.mm */,
 				436DECAB22870E8700F16341 /* POPLayerExtras.mm */,
 				436DECAC22870E8700F16341 /* POPVector.mm */,
 				436DECAD22870E8700F16341 /* POPVector.h */,
