@@ -271,7 +271,7 @@
 		43D24A902094A43600C59AC8 /* AppDelegate+ShowRegisterService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+ShowRegisterService.h"; sourceTree = "<group>"; };
 		43D24A932094B4C500C59AC8 /* ShowNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowNavigationBar.h; sourceTree = "<group>"; };
 		43D24A942094B4C500C59AC8 /* ShowNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowNavigationBar.m; sourceTree = "<group>"; };
-		43D87B3020EB6E0400E991D6 /* UIScreen+JKFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+JKFrame.h"; sourceTree = "<group>"; };
+		43D87B3020EB6E0400E991D6 /* UIScreen+JKFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIScreen+JKFrame.h"; path = "../UIScreen+JKFrame.h"; sourceTree = "<group>"; };
 		4537B7EFEE31B0E75BBC7D5B /* libPods-ShowLive.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShowLive.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		53B07B4395D318342B414DD2 /* Pods-ShowLiveUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShowLiveUITests/Pods-ShowLiveUITests.release.xcconfig"; sourceTree = "<group>"; };
 		720C304820A35ACC00207500 /* SLGetWithdrawAddressAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLGetWithdrawAddressAction.h; sourceTree = "<group>"; };
@@ -795,6 +795,8 @@
 				437B0A5B20F3602E00E93844 /* NSObject+JKAddProperty.h */,
 				D22E1E6B21F342F4001A3D2A /* NSSting+aes.m */,
 				436DEC6022870E1A00F16341 /* UIViewController+DDPopUpViewController.h */,
+				43D87B3020EB6E0400E991D6 /* UIScreen+JKFrame.h */,
+				7217BE1321E0D21A00C1E58F /* NSString+Binary.h */,
 				434DDB5620C932DB00191FC1 /* CAMediaTimingFunction+JKAdditionalEquations.h */,
 				720C304820A35ACC00207500 /* SLGetWithdrawAddressAction.h */,
 				72F17B6720AB18F50039E916 /* ShowVerifycodeAction.h */,
@@ -841,6 +843,7 @@
 				436DEC8822870E8700F16341 /* POPCustomAnimation.h */,
 				436DEC8922870E8700F16341 /* POPPropertyAnimation.h */,
 				436DEC8B22870E8700F16341 /* POPCGUtils.h */,
+				436DEC8C22870E8700F16341 /* POPAnimationExtras.mm */,
 				436DEC8E22870E8700F16341 /* POPGeometry.h */,
 				436DEC9022870E8700F16341 /* POPSpringAnimationInternal.h */,
 				436DEC9122870E8700F16341 /* pop-osx-Info.plist */,
@@ -1152,8 +1155,6 @@
 				437B0A6420F360BA00E93844 /* NSObject+JKAutoCoding.m */,
 				D22E1E6A21F342F4001A3D2A /* NSSting+aes.h */,
 				938D2FFD20A0C821006A0CDE /* ShowAction.h */,
-				43D87B3020EB6E0400E991D6 /* UIScreen+JKFrame.h */,
-				7217BE1321E0D21A00C1E58F /* NSString+Binary.h */,
 				7217BE1721E0D21A00C1E58F /* NSString+Binary.m */,
 				93155E5120D4B9CE00E1B61F /* SLDefenderListAction.h */,
 				9314D1E220C53A3B00BB2429 /* SLHistoryWorksAction.h */,
@@ -1181,7 +1182,6 @@
 				436DEC8422870E8700F16341 /* POPAnimationPrivate.h */,
 				436DEC8722870E8700F16341 /* POPCustomAnimation.mm */,
 				436DEC8A22870E8700F16341 /* POPAnimationTracer.mm */,
-				436DEC8C22870E8700F16341 /* POPAnimationExtras.mm */,
 				436DEC8D22870E8700F16341 /* pop-tvos-Info.plist */,
 				436DEC8F22870E8700F16341 /* POPDecayAnimation.mm */,
 				436DEC9222870E8700F16341 /* POPDecayAnimation.h */,
