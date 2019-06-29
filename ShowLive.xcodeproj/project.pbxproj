@@ -489,7 +489,7 @@
 		436B763122C760580029DD3E /* UITextField+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITextField+Category.m"; path = "Untils/Exten/SLHelper/pop/UITextField+Category.m"; sourceTree = SOURCE_ROOT; };
 		436B763222C760580029DD3E /* UIView+Gradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Gradient.m"; path = "Untils/UIView+Gradient.m"; sourceTree = SOURCE_ROOT; };
 		436B763322C760580029DD3E /* NSDictionary+SLKeyValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+SLKeyValue.m"; path = "Untils/NSDictionary+SLKeyValue.m"; sourceTree = SOURCE_ROOT; };
-		436B763422C760590029DD3E /* NotificationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NotificationService.m; path = Untils/NotificationService.m; sourceTree = SOURCE_ROOT; };
+		436B763422C760590029DD3E /* NotificationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NotificationService.m; path = Untils/Exten/SLHelper/pop/NotificationService.m; sourceTree = SOURCE_ROOT; };
 		436B763522C760590029DD3E /* UITextView+Rect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITextView+Rect.h"; path = "Untils/Exten/SLHelper/pop/UITextView+Rect.h"; sourceTree = SOURCE_ROOT; };
 		436B763622C760590029DD3E /* UIImage+Compress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Compress.m"; path = "Untils/UIImage+Compress.m"; sourceTree = SOURCE_ROOT; };
 		436B763722C760590029DD3E /* UIView + SoftBodyAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView + SoftBodyAnimation.m"; path = "Untils/UIView + SoftBodyAnimation.m"; sourceTree = SOURCE_ROOT; };
@@ -1202,7 +1202,6 @@
 				436B764622C7605A0029DD3E /* Exten */,
 				436B75E622C760570029DD3E /* JKCategories */,
 				436B762222C760570029DD3E /* NotificationService.h */,
-				436B763422C760590029DD3E /* NotificationService.m */,
 				436B763D22C760590029DD3E /* NSDate+SLStringFormat.h */,
 				436B764522C7605A0029DD3E /* NSDictionary+SLKeyValue.h */,
 				436B763322C760580029DD3E /* NSDictionary+SLKeyValue.m */,
@@ -1725,6 +1724,7 @@
 		436DEC7622870E8700F16341 /* pop */ = {
 			isa = PBXGroup;
 			children = (
+				436B763422C760590029DD3E /* NotificationService.m */,
 				436B75E222C760560029DD3E /* NSAttributedString+React.h */,
 				436B75CC22C760550029DD3E /* NSAttributedString+React.m */,
 				436B762E22C760580029DD3E /* NSBundle+MainBundleBuildDate.h */,
