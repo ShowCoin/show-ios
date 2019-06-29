@@ -466,7 +466,7 @@
 		436B761A22C760570029DD3E /* UIView+JKConstraints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JKConstraints.h"; sourceTree = "<group>"; };
 		436B761B22C760570029DD3E /* UIWindow+JKHierarchy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+JKHierarchy.h"; sourceTree = "<group>"; };
 		436B761C22C760570029DD3E /* UITableView+NIMScrollToBottom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITableView+NIMScrollToBottom.h"; path = "Untils/UITableView+NIMScrollToBottom.h"; sourceTree = SOURCE_ROOT; };
-		436B761D22C760570029DD3E /* UIImage+Gradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Gradient.h"; path = "Untils/UIImage+Gradient.h"; sourceTree = SOURCE_ROOT; };
+		436B761D22C760570029DD3E /* UIImage+Gradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Gradient.h"; path = "Untils/Exten/SLHelper/pop/UIImage+Gradient.h"; sourceTree = SOURCE_ROOT; };
 		436B761E22C760570029DD3E /* UIImageView+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+Category.m"; path = "Untils/UIImageView+Category.m"; sourceTree = SOURCE_ROOT; };
 		436B761F22C760570029DD3E /* SLJPushUntils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLJPushUntils.h; path = Untils/SLJPushUntils.h; sourceTree = SOURCE_ROOT; };
 		436B762022C760570029DD3E /* UIColor+color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+color.m"; path = "Untils/UIColor+color.m"; sourceTree = SOURCE_ROOT; };
@@ -1244,7 +1244,6 @@
 				436B762022C760570029DD3E /* UIColor+color.m */,
 				436B762622C760570029DD3E /* UIColor+SLExtend.h */,
 				436B763622C760590029DD3E /* UIImage+Compress.m */,
-				436B761D22C760570029DD3E /* UIImage+Gradient.h */,
 				436B75CD22C760550029DD3E /* UIImage+Gradient.m */,
 				436B75E022C760560029DD3E /* UIImage+MSVagueEffect.h */,
 				436B763922C760590029DD3E /* UIImage+SLCompress.h */,
@@ -1771,6 +1770,7 @@
 		436DEC7622870E8700F16341 /* pop */ = {
 			isa = PBXGroup;
 			children = (
+				436B761D22C760570029DD3E /* UIImage+Gradient.h */,
 				436DEC9E22870E8700F16341 /* WebCore */,
 			);
 			path = pop;
