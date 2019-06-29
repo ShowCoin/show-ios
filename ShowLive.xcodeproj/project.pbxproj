@@ -483,7 +483,7 @@
 		436B762B22C760580029DD3E /* UIView+SLComOpenThreadOTScreenshotHelperStatusBarReference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+SLComOpenThreadOTScreenshotHelperStatusBarReference.m"; path = "Untils/UIView+SLComOpenThreadOTScreenshotHelperStatusBarReference.m"; sourceTree = SOURCE_ROOT; };
 		436B762C22C760580029DD3E /* NSObject+NSInteger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+NSInteger.h"; path = "Untils/NSObject+NSInteger.h"; sourceTree = SOURCE_ROOT; };
 		436B762D22C760580029DD3E /* UIView+Gradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Gradient.h"; path = "Untils/UIView+Gradient.h"; sourceTree = SOURCE_ROOT; };
-		436B762E22C760580029DD3E /* NSBundle+MainBundleBuildDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSBundle+MainBundleBuildDate.h"; path = "Untils/NSBundle+MainBundleBuildDate.h"; sourceTree = SOURCE_ROOT; };
+		436B762E22C760580029DD3E /* NSBundle+MainBundleBuildDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSBundle+MainBundleBuildDate.h"; path = "Untils/Exten/SLHelper/pop/NSBundle+MainBundleBuildDate.h"; sourceTree = SOURCE_ROOT; };
 		436B762F22C760580029DD3E /* UIView+Constraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Constraint.h"; path = "Untils/UIView+Constraint.h"; sourceTree = SOURCE_ROOT; };
 		436B763022C760580029DD3E /* UIWindow+SLMotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIWindow+SLMotion.h"; path = "Untils/UIWindow+SLMotion.h"; sourceTree = SOURCE_ROOT; };
 		436B763122C760580029DD3E /* UITextField+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITextField+Category.m"; path = "Untils/UITextField+Category.m"; sourceTree = SOURCE_ROOT; };
@@ -1204,7 +1204,6 @@
 				436B762222C760570029DD3E /* NotificationService.h */,
 				436B763422C760590029DD3E /* NotificationService.m */,
 				436B75CC22C760550029DD3E /* NSAttributedString+React.m */,
-				436B762E22C760580029DD3E /* NSBundle+MainBundleBuildDate.h */,
 				436B75DE22C760560029DD3E /* NSBundle+MainBundleBuildDate.m */,
 				436B763D22C760590029DD3E /* NSDate+SLStringFormat.h */,
 				436B764522C7605A0029DD3E /* NSDictionary+SLKeyValue.h */,
@@ -1759,6 +1758,7 @@
 			isa = PBXGroup;
 			children = (
 				436B75E222C760560029DD3E /* NSAttributedString+React.h */,
+				436B762E22C760580029DD3E /* NSBundle+MainBundleBuildDate.h */,
 				436B75C622C760550029DD3E /* NSDate+SLStringFormat.m */,
 				436B763C22C760590029DD3E /* NSString+Replace.m */,
 				436B762122C760570029DD3E /* NSString+Trim.m */,
