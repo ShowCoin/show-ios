@@ -408,7 +408,7 @@
 		436B75DF22C760560029DD3E /* ShowForgetPwdAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShowForgetPwdAction.h; path = Untils/ShowForgetPwdAction.h; sourceTree = SOURCE_ROOT; };
 		436B75E022C760560029DD3E /* UIImage+MSVagueEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+MSVagueEffect.h"; path = "Untils/UIImage+MSVagueEffect.h"; sourceTree = SOURCE_ROOT; };
 		436B75E122C760560029DD3E /* NSTimer+MSBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSTimer+MSBlock.h"; path = "Untils/NSTimer+MSBlock.h"; sourceTree = SOURCE_ROOT; };
-		436B75E222C760560029DD3E /* NSAttributedString+React.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSAttributedString+React.h"; path = "Untils/NSAttributedString+React.h"; sourceTree = SOURCE_ROOT; };
+		436B75E222C760560029DD3E /* NSAttributedString+React.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSAttributedString+React.h"; path = "Untils/Exten/SLHelper/pop/NSAttributedString+React.h"; sourceTree = SOURCE_ROOT; };
 		436B75E322C760560029DD3E /* UIImage+SLCompress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+SLCompress.m"; path = "Untils/UIImage+SLCompress.m"; sourceTree = SOURCE_ROOT; };
 		436B75E422C760560029DD3E /* UIViewController+XHPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+XHPhoto.h"; path = "Untils/UIViewController+XHPhoto.h"; sourceTree = SOURCE_ROOT; };
 		436B75E522C760560029DD3E /* UIViewController+XHPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+XHPhoto.m"; path = "Untils/UIViewController+XHPhoto.m"; sourceTree = SOURCE_ROOT; };
@@ -1203,7 +1203,6 @@
 				436B75E622C760570029DD3E /* JKCategories */,
 				436B762222C760570029DD3E /* NotificationService.h */,
 				436B763422C760590029DD3E /* NotificationService.m */,
-				436B75E222C760560029DD3E /* NSAttributedString+React.h */,
 				436B75CC22C760550029DD3E /* NSAttributedString+React.m */,
 				436B762E22C760580029DD3E /* NSBundle+MainBundleBuildDate.h */,
 				436B75DE22C760560029DD3E /* NSBundle+MainBundleBuildDate.m */,
@@ -1770,6 +1769,7 @@
 		436DEC7622870E8700F16341 /* pop */ = {
 			isa = PBXGroup;
 			children = (
+				436B75E222C760560029DD3E /* NSAttributedString+React.h */,
 				436B761D22C760570029DD3E /* UIImage+Gradient.h */,
 				436DEC9E22870E8700F16341 /* WebCore */,
 			);
