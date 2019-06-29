@@ -320,13 +320,13 @@
 		724FF37920E6678D00DD40EB /* SLInfoHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLInfoHeaderView.m; sourceTree = "<group>"; };
 		724FF37B20E667E200DD40EB /* SLUserInfoListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLUserInfoListCell.h; sourceTree = "<group>"; };
 		724FF37C20E6680500DD40EB /* SLUserInfoListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLUserInfoListCell.m; sourceTree = "<group>"; };
-		72506F5B21CD040900361964 /* SLHeadPortrait.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLHeadPortrait.h; path = ../Untils/Exten/SLHeadPortrait.h; sourceTree = "<group>"; };
+		72506F5B21CD040900361964 /* SLHeadPortrait.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLHeadPortrait.h; path = Untils/Exten/SLHeadPortrait.h; sourceTree = "<group>"; };
 		72506F5C21CD044500361964 /* SLHeadPortrait.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLHeadPortrait.m; sourceTree = "<group>"; };
 		72506F5F21CD04D500361964 /* SLNavigationControllerTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLNavigationControllerTransition.m; path = ../Common/SLNavigationController/SLNavigationControllerTransition.m; sourceTree = "<group>"; };
 		72506F6021CD04D500361964 /* SLNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLNavigationViewController.h; sourceTree = "<group>"; };
-		72506F6121CD04D500361964 /* SLPushAnimationTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLPushAnimationTransition.m; path = ../Common/SLNavigationController/SLPushAnimationTransition.m; sourceTree = "<group>"; };
+		72506F6121CD04D500361964 /* SLPushAnimationTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLPushAnimationTransition.m; path = Common/SLNavigationController/SLPushAnimationTransition.m; sourceTree = "<group>"; };
 		72506F6221CD04D500361964 /* SLNavigationControllerTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLNavigationControllerTransition.h; sourceTree = "<group>"; };
-		72506F6321CD04D500361964 /* SLNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLNavigationViewController.m; path = ../Untils/Exten/NotRenamed/SLNavigationViewController.m; sourceTree = "<group>"; };
+		72506F6321CD04D500361964 /* SLNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLNavigationViewController.m; path = Untils/Exten/NotRenamed/SLNavigationViewController.m; sourceTree = "<group>"; };
 		72506F6421CD04D500361964 /* SLPushAnimationTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLPushAnimationTransition.h; path = ../Common/SLNavigationController/SLPushAnimationTransition.h; sourceTree = "<group>"; };
 		725282CA21BB94FC00802C09 /* SLAuthenticationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLAuthenticationView.h; sourceTree = "<group>"; };
 		725282CB21BB94FC00802C09 /* SLAuthenticationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLAuthenticationView.m; sourceTree = "<group>"; };
@@ -902,10 +902,7 @@
 				436DECAF22870E8700F16341 /* POPAnimationTracer.h */,
 				434DDB4F20C9326800191FC1 /* CALayer+JKBorderColor.h */,
 				72506F6021CD04D500361964 /* SLNavigationViewController.h */,
-				72506F6321CD04D500361964 /* SLNavigationViewController.m */,
-				72506F5B21CD040900361964 /* SLHeadPortrait.h */,
 				72506F5C21CD044500361964 /* SLHeadPortrait.m */,
-				72506F6121CD04D500361964 /* SLPushAnimationTransition.m */,
 				72506F6221CD04D500361964 /* SLNavigationControllerTransition.h */,
 				72506F6421CD04D500361964 /* SLPushAnimationTransition.h */,
 				436DEC3C22870E1A00F16341 /* UIView+Debug.m */,
@@ -1199,6 +1196,9 @@
 				436DEC9222870E8700F16341 /* POPDecayAnimation.h */,
 				436DEC9522870E8700F16341 /* POPAnimator.h */,
 				437B0A6120F3608A00E93844 /* NSObject+JKAssociatedObject.h */,
+				72506F6321CD04D500361964 /* SLNavigationViewController.m */,
+				72506F5B21CD040900361964 /* SLHeadPortrait.h */,
+				72506F6121CD04D500361964 /* SLPushAnimationTransition.m */,
 				72C686F61D628C8898214FFC /* Pods-ShowLive.debug.xcconfig */,
 				AA2350AAA436CDCBB1E93DCE /* Pods-ShowLive.release.xcconfig */,
 				D6F34820745ED99EE82E0D41 /* Pods-ShowLiveTests.debug.xcconfig */,
