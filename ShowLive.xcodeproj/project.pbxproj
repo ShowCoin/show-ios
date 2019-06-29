@@ -141,7 +141,7 @@
 		43143749209432BE0059D373 /* ShowWallet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowWallet.h; sourceTree = "<group>"; };
 		431438AA209432D50059D373 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = LaunchScreen.strings; sourceTree = "<group>"; };
 		431438AE209432E30059D373 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		431CB4D020F499370043B0AC /* NSObject+JKRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JKRuntime.m"; sourceTree = "<group>"; };
+		431CB4D020F499370043B0AC /* NSObject+JKRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+JKRuntime.m"; path = "requestAction/NSObject+JKRuntime.m"; sourceTree = "<group>"; };
 		431CB4DF20F49A800043B0AC /* NSString+JKBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+JKBase64.h"; path = "../Untils/Exten/NotRenamed/NSString+JKBase64.h"; sourceTree = "<group>"; };
 		4323F9ED223CC1EF00AC3959 /* NSString+JKXMLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+JKXMLDictionary.h"; path = "../Untils/Exten/SLHelper/pop/WebCore/NSString+JKXMLDictionary.h"; sourceTree = "<group>"; };
 		4323F9FA223CC1F100AC3959 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Additions.h"; path = "../Untils/Exten/NotRenamed/NSString+Additions.h"; sourceTree = "<group>"; };
@@ -790,7 +790,6 @@
 				4325536B20D8B53300FC0258 /* MKMapView+JKBetterMaps.m */,
 				7217BE1821E0D21A00C1E58F /* NSString+Json.m */,
 				4323FA0E223CC1F300AC3959 /* CLLocation+JKCH1903.m */,
-				431CB4D020F499370043B0AC /* NSObject+JKRuntime.m */,
 				93EF35D421C292950088C2E4 /* UIImage+Additional.m */,
 				4323FA1C223CC1F400AC3959 /* CATransactionDemoViewController.m */,
 				437921F120ECC4C000B2EC88 /* NSData+JKPCM.m */,
@@ -864,7 +863,6 @@
 				436DEC8D22870E8700F16341 /* pop-tvos-Info.plist */,
 				436DEC8E22870E8700F16341 /* POPGeometry.h */,
 				436DEC8F22870E8700F16341 /* POPDecayAnimation.mm */,
-				436DEC9122870E8700F16341 /* pop-osx-Info.plist */,
 				436DEC9322870E8700F16341 /* POPSpringSolver.h */,
 				436DEC9422870E8700F16341 /* POPAnimatableProperty.h */,
 				4323FA15223CC1F300AC3959 /* NSDictionary+JKBlock.h */,
@@ -1173,6 +1171,7 @@
 			isa = PBXGroup;
 			children = (
 				934CBCD72118217800608F2F /* NSDate+Additions.h */,
+				431CB4D020F499370043B0AC /* NSObject+JKRuntime.m */,
 				437921DD20ECC3E000B2EC88 /* NSArray+JKSafeAccess.m */,
 				43D87B3020EB6E0400E991D6 /* UIScreen+JKFrame.h */,
 				7217BE1321E0D21A00C1E58F /* NSString+Binary.h */,
@@ -1191,6 +1190,7 @@
 				436DEC8022870E8700F16341 /* POPDecayAnimationInternal.h */,
 				436DEC8622870E8700F16341 /* POPSpringAnimation.mm */,
 				436DEC9022870E8700F16341 /* POPSpringAnimationInternal.h */,
+				436DEC9122870E8700F16341 /* pop-osx-Info.plist */,
 				436DEC9222870E8700F16341 /* POPDecayAnimation.h */,
 				436DEC9522870E8700F16341 /* POPAnimator.h */,
 				436DEC9B22870E8700F16341 /* POPGeometry.mm */,
