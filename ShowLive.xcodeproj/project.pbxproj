@@ -327,7 +327,7 @@
 		72506F6121CD04D500361964 /* SLPushAnimationTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLPushAnimationTransition.m; path = ../Common/SLNavigationController/SLPushAnimationTransition.m; sourceTree = "<group>"; };
 		72506F6221CD04D500361964 /* SLNavigationControllerTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLNavigationControllerTransition.h; sourceTree = "<group>"; };
 		72506F6321CD04D500361964 /* SLNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLNavigationViewController.m; path = Untils/Exten/NotRenamed/SLNavigationViewController.m; sourceTree = "<group>"; };
-		72506F6421CD04D500361964 /* SLPushAnimationTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLPushAnimationTransition.h; path = Common/SLNavigationController/SLPushAnimationTransition.h; sourceTree = "<group>"; };
+		72506F6421CD04D500361964 /* SLPushAnimationTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLPushAnimationTransition.h; path = ../Common/SLNavigationController/SLPushAnimationTransition.h; sourceTree = "<group>"; };
 		725282CA21BB94FC00802C09 /* SLAuthenticationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLAuthenticationView.h; sourceTree = "<group>"; };
 		725282CB21BB94FC00802C09 /* SLAuthenticationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLAuthenticationView.m; sourceTree = "<group>"; };
 		725282D221BB968400802C09 /* ShowAccountExchangeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowAccountExchangeView.h; sourceTree = "<group>"; };
@@ -788,6 +788,7 @@
 				7217BE1521E0D21A00C1E58F /* NSData+Image.h */,
 				436DEC4922870E1A00F16341 /* UIViewController+TopBarMessage.m */,
 				436DEC4F22870E1A00F16341 /* UIScrollView+APParallaxHeader.m */,
+				436DEC5222870E1A00F16341 /* UIViewController+DDPopUpViewController.m */,
 				436DEC7C22870E8700F16341 /* POPBasicAnimationInternal.h */,
 				436DEC8722870E8700F16341 /* POPCustomAnimation.mm */,
 				436DEC8A22870E8700F16341 /* POPAnimationTracer.mm */,
@@ -799,6 +800,7 @@
 				436DECA722870E8700F16341 /* POPAnimation.h */,
 				72506F5B21CD040900361964 /* SLHeadPortrait.h */,
 				72506F6121CD04D500361964 /* SLPushAnimationTransition.m */,
+				72506F6421CD04D500361964 /* SLPushAnimationTransition.h */,
 				436DEC3D22870E1A00F16341 /* CLLocationManager+Blocks.h */,
 				436DECA222870E8700F16341 /* UnitBezier.h */,
 				B4C105B07A90052BA25F3424 /* Pods-ShowLiveUITests.debug.xcconfig */,
@@ -1128,7 +1130,6 @@
 				436DEC4E22870E1A00F16341 /* UIScrollView+EmptyDataSet.m */,
 				436DEC5022870E1A00F16341 /* UICollectionView+ARDynamicCacheHeightLayoutCell.h */,
 				436DEC5122870E1A00F16341 /* UIWebView+Alert.h */,
-				436DEC5222870E1A00F16341 /* UIViewController+DDPopUpViewController.m */,
 				436DEC5322870E1A00F16341 /* UIView+FDCollapsibleConstraints.m */,
 				436DEC5422870E1A00F16341 /* WebView+Debug.h */,
 				436DEC5522870E1A00F16341 /* UIApplication+JKPermissions.h */,
@@ -1193,7 +1194,6 @@
 				72506F6321CD04D500361964 /* SLNavigationViewController.m */,
 				72506F5C21CD044500361964 /* SLHeadPortrait.m */,
 				72506F6221CD04D500361964 /* SLNavigationControllerTransition.h */,
-				72506F6421CD04D500361964 /* SLPushAnimationTransition.h */,
 				436DEC3C22870E1A00F16341 /* UIView+Debug.m */,
 				436DEC3E22870E1A00F16341 /* UIApplication+JKPermissions.m */,
 				436DEC9F22870E8700F16341 /* TransformationMatrix.cpp */,
