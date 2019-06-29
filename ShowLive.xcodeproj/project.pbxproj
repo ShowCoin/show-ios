@@ -496,7 +496,7 @@
 		436B763822C760590029DD3E /* NSString+Replace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Replace.h"; path = "Untils/NSString+Replace.h"; sourceTree = SOURCE_ROOT; };
 		436B763922C760590029DD3E /* UIImage+SLCompress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+SLCompress.h"; path = "Untils/UIImage+SLCompress.h"; sourceTree = SOURCE_ROOT; };
 		436B763A22C760590029DD3E /* UIView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Additions.h"; path = "Untils/UIView+Additions.h"; sourceTree = SOURCE_ROOT; };
-		436B763B22C760590029DD3E /* UIView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Additions.m"; path = "Untils/UIView+Additions.m"; sourceTree = SOURCE_ROOT; };
+		436B763B22C760590029DD3E /* UIView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Additions.m"; path = "Untils/Exten/SLHelper/pop/UIView+Additions.m"; sourceTree = SOURCE_ROOT; };
 		436B763C22C760590029DD3E /* NSString+Replace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Replace.m"; path = "Untils/NSString+Replace.m"; sourceTree = SOURCE_ROOT; };
 		436B763D22C760590029DD3E /* NSDate+SLStringFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+SLStringFormat.h"; path = "Untils/NSDate+SLStringFormat.h"; sourceTree = SOURCE_ROOT; };
 		436B763E22C760590029DD3E /* NSObject+NSInteger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+NSInteger.m"; path = "Untils/NSObject+NSInteger.m"; sourceTree = SOURCE_ROOT; };
@@ -1261,7 +1261,6 @@
 				436B75CB22C760550029DD3E /* UIView + SoftBodyAnimation.h */,
 				436B763722C760590029DD3E /* UIView + SoftBodyAnimation.m */,
 				436B763A22C760590029DD3E /* UIView+Additions.h */,
-				436B763B22C760590029DD3E /* UIView+Additions.m */,
 				436B762F22C760580029DD3E /* UIView+Constraint.h */,
 				436B762822C760580029DD3E /* UIView+Constraint.m */,
 				436B762D22C760580029DD3E /* UIView+Gradient.h */,
@@ -1771,6 +1770,7 @@
 			children = (
 				436B75E222C760560029DD3E /* NSAttributedString+React.h */,
 				436B761D22C760570029DD3E /* UIImage+Gradient.h */,
+				436B763B22C760590029DD3E /* UIView+Additions.m */,
 				436DEC9E22870E8700F16341 /* WebCore */,
 			);
 			path = pop;
