@@ -180,7 +180,7 @@
 		436DEC4C22870E1A00F16341 /* UIView+GestureCallback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GestureCallback.m"; sourceTree = "<group>"; };
 		436DEC4D22870E1A00F16341 /* UIViewController+MJPopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+MJPopupViewController.h"; path = "Untils/JKCategories/UIViewController+MJPopupViewController.h"; sourceTree = "<group>"; };
 		436DEC4E22870E1A00F16341 /* UIScrollView+EmptyDataSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+EmptyDataSet.m"; path = "Untils/Exten/NotRenamed/UIScrollView+EmptyDataSet.m"; sourceTree = "<group>"; };
-		436DEC4F22870E1A00F16341 /* UIScrollView+APParallaxHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+APParallaxHeader.m"; path = "Untils/Exten/NotRenamed/UITableView-FDTemplateLayoutCell/UIScrollView+APParallaxHeader.m"; sourceTree = "<group>"; };
+		436DEC4F22870E1A00F16341 /* UIScrollView+APParallaxHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+APParallaxHeader.m"; path = "../Untils/Exten/NotRenamed/UITableView-FDTemplateLayoutCell/UIScrollView+APParallaxHeader.m"; sourceTree = "<group>"; };
 		436DEC5022870E1A00F16341 /* UICollectionView+ARDynamicCacheHeightLayoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UICollectionView+ARDynamicCacheHeightLayoutCell.h"; path = "Untils/Exten/NotRenamed/UICollectionView+ARDynamicCacheHeightLayoutCell.h"; sourceTree = "<group>"; };
 		436DEC5122870E1A00F16341 /* UIWebView+Alert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+Alert.h"; sourceTree = "<group>"; };
 		436DEC5222870E1A00F16341 /* UIViewController+DDPopUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DDPopUpViewController.m"; sourceTree = "<group>"; };
@@ -775,6 +775,7 @@
 				436DEC4222870E1A00F16341 /* UITableView+FDTemplateLayoutCell.m */,
 				436DEC4522870E1A00F16341 /* UITableView+FDTemplateLayoutCellDebug.m */,
 				4323FA0E223CC1F300AC3959 /* CLLocation+JKCH1903.m */,
+				437B0A6420F360BA00E93844 /* NSObject+JKAutoCoding.m */,
 				D22E1E6A21F342F4001A3D2A /* NSSting+aes.h */,
 				43D87B3020EB6E0400E991D6 /* UIScreen+JKFrame.h */,
 				7217BE1321E0D21A00C1E58F /* NSString+Binary.h */,
@@ -785,6 +786,7 @@
 				720F85FC20B2F59400AD0C54 /* SLRelationAction.h */,
 				431438A9209432D50059D373 /* LaunchScreen.strings */,
 				7217BE1521E0D21A00C1E58F /* NSData+Image.h */,
+				436DEC4F22870E1A00F16341 /* UIScrollView+APParallaxHeader.m */,
 				436DEC7C22870E8700F16341 /* POPBasicAnimationInternal.h */,
 				436DEC8722870E8700F16341 /* POPCustomAnimation.mm */,
 				436DEC8A22870E8700F16341 /* POPAnimationTracer.mm */,
@@ -1082,7 +1084,6 @@
 				437921DD20ECC3E000B2EC88 /* NSArray+JKSafeAccess.m */,
 				4323FA1C223CC1F400AC3959 /* CATransactionDemoViewController.m */,
 				437921F120ECC4C000B2EC88 /* NSData+JKPCM.m */,
-				437B0A6420F360BA00E93844 /* NSObject+JKAutoCoding.m */,
 				431CB4DF20F49A800043B0AC /* NSString+JKBase64.h */,
 				437B0A5B20F3602E00E93844 /* NSObject+JKAddProperty.h */,
 				D22E1E6B21F342F4001A3D2A /* NSSting+aes.m */,
@@ -1122,7 +1123,6 @@
 				436DEC4C22870E1A00F16341 /* UIView+GestureCallback.m */,
 				436DEC4D22870E1A00F16341 /* UIViewController+MJPopupViewController.h */,
 				436DEC4E22870E1A00F16341 /* UIScrollView+EmptyDataSet.m */,
-				436DEC4F22870E1A00F16341 /* UIScrollView+APParallaxHeader.m */,
 				436DEC5022870E1A00F16341 /* UICollectionView+ARDynamicCacheHeightLayoutCell.h */,
 				436DEC5122870E1A00F16341 /* UIWebView+Alert.h */,
 				436DEC5222870E1A00F16341 /* UIViewController+DDPopUpViewController.m */,
