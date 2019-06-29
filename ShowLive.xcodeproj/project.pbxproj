@@ -382,7 +382,7 @@
 		435E3ABB20C02BB1002B7A7F /* NSNumber+JKRomanNumerals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+JKRomanNumerals.m"; sourceTree = "<group>"; };
 		436B75C422C760550029DD3E /* NSTimer+MSBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSTimer+MSBlock.m"; path = "Untils/NSTimer+MSBlock.m"; sourceTree = SOURCE_ROOT; };
 		436B75C522C760550029DD3E /* UIButton+ImageTitleSpacing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIButton+ImageTitleSpacing.h"; path = "Untils/UIButton+ImageTitleSpacing.h"; sourceTree = SOURCE_ROOT; };
-		436B75C622C760550029DD3E /* NSDate+SLStringFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+SLStringFormat.m"; path = "Untils/NSDate+SLStringFormat.m"; sourceTree = SOURCE_ROOT; };
+		436B75C622C760550029DD3E /* NSDate+SLStringFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+SLStringFormat.m"; path = "Untils/Exten/SLHelper/pop/NSDate+SLStringFormat.m"; sourceTree = SOURCE_ROOT; };
 		436B75C722C760550029DD3E /* UIButton+EnlargeTouchArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIButton+EnlargeTouchArea.m"; path = "Untils/UIButton+EnlargeTouchArea.m"; sourceTree = SOURCE_ROOT; };
 		436B75C822C760550029DD3E /* NSString+Validation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Validation.m"; path = "Untils/NSString+Validation.m"; sourceTree = SOURCE_ROOT; };
 		436B75C922C760550029DD3E /* UIImageView+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImageView+Category.h"; path = "Untils/UIImageView+Category.h"; sourceTree = SOURCE_ROOT; };
@@ -1207,7 +1207,6 @@
 				436B762E22C760580029DD3E /* NSBundle+MainBundleBuildDate.h */,
 				436B75DE22C760560029DD3E /* NSBundle+MainBundleBuildDate.m */,
 				436B763D22C760590029DD3E /* NSDate+SLStringFormat.h */,
-				436B75C622C760550029DD3E /* NSDate+SLStringFormat.m */,
 				436B764522C7605A0029DD3E /* NSDictionary+SLKeyValue.h */,
 				436B763322C760580029DD3E /* NSDictionary+SLKeyValue.m */,
 				436B762C22C760580029DD3E /* NSObject+NSInteger.h */,
@@ -1765,6 +1764,7 @@
 			isa = PBXGroup;
 			children = (
 				436B75E222C760560029DD3E /* NSAttributedString+React.h */,
+				436B75C622C760550029DD3E /* NSDate+SLStringFormat.m */,
 				436B763C22C760590029DD3E /* NSString+Replace.m */,
 				436B761D22C760570029DD3E /* UIImage+Gradient.h */,
 				436B75D922C760560029DD3E /* UILabel+Category.h */,
