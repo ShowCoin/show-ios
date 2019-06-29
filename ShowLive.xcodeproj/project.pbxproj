@@ -184,7 +184,7 @@
 		436DEC5022870E1A00F16341 /* UICollectionView+ARDynamicCacheHeightLayoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UICollectionView+ARDynamicCacheHeightLayoutCell.h"; path = "../Untils/Exten/NotRenamed/UICollectionView+ARDynamicCacheHeightLayoutCell.h"; sourceTree = "<group>"; };
 		436DEC5122870E1A00F16341 /* UIWebView+Alert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+Alert.h"; sourceTree = "<group>"; };
 		436DEC5222870E1A00F16341 /* UIViewController+DDPopUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DDPopUpViewController.m"; sourceTree = "<group>"; };
-		436DEC5322870E1A00F16341 /* UIView+FDCollapsibleConstraints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+FDCollapsibleConstraints.m"; path = "../Untils/JKCategories/UIView+FDCollapsibleConstraints.m"; sourceTree = "<group>"; };
+		436DEC5322870E1A00F16341 /* UIView+FDCollapsibleConstraints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+FDCollapsibleConstraints.m"; path = "Untils/JKCategories/UIView+FDCollapsibleConstraints.m"; sourceTree = "<group>"; };
 		436DEC5422870E1A00F16341 /* WebView+Debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "WebView+Debug.h"; path = "../Untils/Exten/SLHelper/WebView+Debug.h"; sourceTree = "<group>"; };
 		436DEC5522870E1A00F16341 /* UIApplication+JKPermissions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIApplication+JKPermissions.h"; path = "../Untils/Exten/NotRenamed/UITableView-FDTemplateLayoutCell/UIApplication+JKPermissions.h"; sourceTree = "<group>"; };
 		436DEC5622870E1A00F16341 /* CLLocationManager+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLLocationManager+Blocks.m"; sourceTree = "<group>"; };
@@ -778,7 +778,6 @@
 				436DEC4122870E1A00F16341 /* UITableView+FDTemplateLayoutCellDebug.h */,
 				436DEC4222870E1A00F16341 /* UITableView+FDTemplateLayoutCell.m */,
 				436DEC4322870E1A00F16341 /* UITableView+FDIndexPathHeightCache.h */,
-				436DEC4422870E1A00F16341 /* UITableView+FDKeyedHeightCache.m */,
 				436DEC4522870E1A00F16341 /* UITableView+FDTemplateLayoutCellDebug.m */,
 				436DEC4622870E1A00F16341 /* UITableView+FDIndexPathHeightCache.m */,
 				436DEC4722870E1A00F16341 /* UITableView+FDTemplateLayoutCell.h */,
@@ -832,7 +831,6 @@
 				436DEC5022870E1A00F16341 /* UICollectionView+ARDynamicCacheHeightLayoutCell.h */,
 				436DEC5122870E1A00F16341 /* UIWebView+Alert.h */,
 				436DEC5222870E1A00F16341 /* UIViewController+DDPopUpViewController.m */,
-				436DEC5322870E1A00F16341 /* UIView+FDCollapsibleConstraints.m */,
 				436DEC5422870E1A00F16341 /* WebView+Debug.h */,
 				436DEC5522870E1A00F16341 /* UIApplication+JKPermissions.h */,
 				436DEC5722870E1A00F16341 /* UIView+Debug.h */,
@@ -892,7 +890,6 @@
 				436DEC3E22870E1A00F16341 /* UIApplication+JKPermissions.m */,
 				436DEC9F22870E8700F16341 /* TransformationMatrix.cpp */,
 				436DECA122870E8700F16341 /* FloatConversion.h */,
-				436DECA222870E8700F16341 /* UnitBezier.h */,
 				436DEC5D22870E1A00F16341 /* UIScrollView+EmptyDataSet.h */,
 			);
 			path = requestAction;
@@ -1159,6 +1156,7 @@
 		D544A431CFB6EF8D747D9730 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				436DEC4422870E1A00F16341 /* UITableView+FDKeyedHeightCache.m */,
 				934CBCD72118217800608F2F /* NSDate+Additions.h */,
 				431CB4D020F499370043B0AC /* NSObject+JKRuntime.m */,
 				437921DD20ECC3E000B2EC88 /* NSArray+JKSafeAccess.m */,
@@ -1177,6 +1175,7 @@
 				4323FA25223CC1F500AC3959 /* NSManagedObjectContext+JKObjectClear.h */,
 				7217BE1521E0D21A00C1E58F /* NSData+Image.h */,
 				436DEC4B22870E1A00F16341 /* UINavigationController+FDFullscreenPopGesture.h */,
+				436DEC5322870E1A00F16341 /* UIView+FDCollapsibleConstraints.m */,
 				436DEC5622870E1A00F16341 /* CLLocationManager+Blocks.m */,
 				436DEC5822870E1A00F16341 /* UIViewController+MJPopupViewController.m */,
 				436DEC7822870E8700F16341 /* POPDefines.h */,
@@ -1199,6 +1198,7 @@
 				72506F5B21CD040900361964 /* SLHeadPortrait.h */,
 				72506F6121CD04D500361964 /* SLPushAnimationTransition.m */,
 				436DECA022870E8700F16341 /* TransformationMatrix.h */,
+				436DECA222870E8700F16341 /* UnitBezier.h */,
 				72C686F61D628C8898214FFC /* Pods-ShowLive.debug.xcconfig */,
 				AA2350AAA436CDCBB1E93DCE /* Pods-ShowLive.release.xcconfig */,
 				D6F34820745ED99EE82E0D41 /* Pods-ShowLiveTests.debug.xcconfig */,
