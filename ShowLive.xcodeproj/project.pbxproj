@@ -876,7 +876,7 @@
 		436DEC5C22870E1A00F16341 /* UIViewController+TopBarMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+TopBarMessage.h"; path = "../Untils/Exten/NotRenamed/UIViewController+TopBarMessage.h"; sourceTree = "<group>"; };
 		436DEC5D22870E1A00F16341 /* UIScrollView+EmptyDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+EmptyDataSet.h"; sourceTree = "<group>"; };
 		436DEC5E22870E1A00F16341 /* UIScrollView+APParallaxHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+APParallaxHeader.h"; sourceTree = "<group>"; };
-		436DEC5F22870E1A00F16341 /* UIView+FDCollapsibleConstraints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+FDCollapsibleConstraints.h"; path = "../Untils/Exten/SLHelper/pop/WebCore/UIView+FDCollapsibleConstraints.h"; sourceTree = "<group>"; };
+		436DEC5F22870E1A00F16341 /* UIView+FDCollapsibleConstraints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+FDCollapsibleConstraints.h"; path = "../Exten/SLHelper/pop/WebCore/UIView+FDCollapsibleConstraints.h"; sourceTree = "<group>"; };
 		436DEC6022870E1A00F16341 /* UIViewController+DDPopUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+DDPopUpViewController.h"; path = "../Untils/Exten/NotRenamed/UITableView-FDTemplateLayoutCell/UIViewController+DDPopUpViewController.h"; sourceTree = "<group>"; };
 		436DEC6122870E1A00F16341 /* UIWebView+Alert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIWebView+Alert.m"; path = "../Untils/Exten/NotRenamed/UITableView-FDTemplateLayoutCell/UIWebView+Alert.m"; sourceTree = "<group>"; };
 		436DEC6222870E1A00F16341 /* UICollectionView+ARDynamicCacheHeightLayoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+ARDynamicCacheHeightLayoutCell.m"; sourceTree = "<group>"; };
@@ -885,7 +885,7 @@
 		436DEC7922870E8700F16341 /* POPAnimationInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAnimationInternal.h; sourceTree = "<group>"; };
 		436DEC7A22870E8700F16341 /* POPAnimationExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POPAnimationExtras.h; path = ../Untils/Exten/SLHelper/pop/POPAnimationExtras.h; sourceTree = "<group>"; };
 		436DEC7B22870E8700F16341 /* POPAnimationEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POPAnimationEvent.h; path = "../Exten/NotRenamed/UITableView-FDTemplateLayoutCell/POPAnimationEvent.h"; sourceTree = "<group>"; };
-		436DEC7C22870E8700F16341 /* POPBasicAnimationInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POPBasicAnimationInternal.h; path = ../Untils/Exten/SLHelper/POPBasicAnimationInternal.h; sourceTree = "<group>"; };
+		436DEC7C22870E8700F16341 /* POPBasicAnimationInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POPBasicAnimationInternal.h; path = ../Exten/SLHelper/POPBasicAnimationInternal.h; sourceTree = "<group>"; };
 		436DEC7D22870E8700F16341 /* POPCGUtils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = POPCGUtils.mm; sourceTree = "<group>"; };
 		436DEC7E22870E8700F16341 /* POPPropertyAnimationInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPPropertyAnimationInternal.h; sourceTree = "<group>"; };
 		436DEC7F22870E8700F16341 /* pop-ios-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; name = "pop-ios-Info.plist"; path = "../Untils/Exten/NotRenamed/pop-ios-Info.plist"; sourceTree = "<group>"; };
@@ -1249,6 +1249,7 @@
 				431438A9209432D50059D373 /* LaunchScreen.strings */,
 				4323F9ED223CC1EF00AC3959 /* NSString+JKXMLDictionary.h */,
 				4323FA25223CC1F500AC3959 /* NSManagedObjectContext+JKObjectClear.h */,
+				436DEC5F22870E1A00F16341 /* UIView+FDCollapsibleConstraints.h */,
 				436DEC6222870E1A00F16341 /* UICollectionView+ARDynamicCacheHeightLayoutCell.m */,
 				436DEC4A22870E1A00F16341 /* UIView+Genie.m */,
 				436DEC4F22870E1A00F16341 /* UIScrollView+APParallaxHeader.m */,
@@ -1256,6 +1257,7 @@
 				436DEC5422870E1A00F16341 /* WebView+Debug.h */,
 				436DEC5922870E1A00F16341 /* UIView+GestureCallback.h */,
 				436DEC7B22870E8700F16341 /* POPAnimationEvent.h */,
+				436DEC7C22870E8700F16341 /* POPBasicAnimationInternal.h */,
 				436DEC7D22870E8700F16341 /* POPCGUtils.mm */,
 				436DEC7E22870E8700F16341 /* POPPropertyAnimationInternal.h */,
 				436DEC8222870E8700F16341 /* POPBasicAnimation.h */,
@@ -2075,7 +2077,6 @@
 				7217BE1221E0D21A00C1E58F /* NSString+Additions.h */,
 				4323F9FA223CC1F100AC3959 /* NSString+Additions.h */,
 				436DEC5E22870E1A00F16341 /* UIScrollView+APParallaxHeader.h */,
-				436DEC5F22870E1A00F16341 /* UIView+FDCollapsibleConstraints.h */,
 				7217BE1521E0D21A00C1E58F /* NSData+Image.h */,
 				436DEC9722870E8700F16341 /* POP.h */,
 				436DEC6122870E1A00F16341 /* UIWebView+Alert.m */,
@@ -2097,7 +2098,6 @@
 				436DEC7822870E8700F16341 /* POPDefines.h */,
 				436DEC7922870E8700F16341 /* POPAnimationInternal.h */,
 				436DEC7A22870E8700F16341 /* POPAnimationExtras.h */,
-				436DEC7C22870E8700F16341 /* POPBasicAnimationInternal.h */,
 				436DEC7F22870E8700F16341 /* pop-ios-Info.plist */,
 				436DEC8022870E8700F16341 /* POPDecayAnimationInternal.h */,
 				436DEC8122870E8700F16341 /* POPSpringAnimation.h */,
