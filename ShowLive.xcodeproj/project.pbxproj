@@ -515,7 +515,7 @@
 		436B764C22C7605A0029DD3E /* NSNumber+JKCGFloat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+JKCGFloat.h"; sourceTree = "<group>"; };
 		436B764D22C7605A0029DD3E /* UIResponder+JKFirstResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+JKFirstResponder.m"; sourceTree = "<group>"; };
 		436B764E22C7605A0029DD3E /* UITableView+FDKeyedHeightCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDKeyedHeightCache.h"; sourceTree = "<group>"; };
-		436B764F22C7605A0029DD3E /* UIScrollView+EmptyDataSet.h~HEAD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UIScrollView+EmptyDataSet.h~HEAD"; sourceTree = "<group>"; };
+		436B764F22C7605A0029DD3E /* UIScrollView+EmptyDataSet.h~HEAD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; name = "UIScrollView+EmptyDataSet.h~HEAD"; path = "../Exten/UIScrollView+EmptyDataSet.h~HEAD"; sourceTree = "<group>"; };
 		436B765022C7605A0029DD3E /* NSDate+JKFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JKFormatter.h"; sourceTree = "<group>"; };
 		436B765122C7605A0029DD3E /* NSMutableURLRequest+JKUpload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableURLRequest+JKUpload.m"; sourceTree = "<group>"; };
 		436B765222C7605A0029DD3E /* NSDate+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Additions.m"; sourceTree = "<group>"; };
@@ -1254,6 +1254,7 @@
 				436B764B22C7605A0029DD3E /* NSData+JKzlib.m */,
 				436B764C22C7605A0029DD3E /* NSNumber+JKCGFloat.h */,
 				436B764D22C7605A0029DD3E /* UIResponder+JKFirstResponder.m */,
+				436B764F22C7605A0029DD3E /* UIScrollView+EmptyDataSet.h~HEAD */,
 				436B765022C7605A0029DD3E /* NSDate+JKFormatter.h */,
 				436B765122C7605A0029DD3E /* NSMutableURLRequest+JKUpload.m */,
 				436B765222C7605A0029DD3E /* NSDate+Additions.m */,
@@ -1261,6 +1262,7 @@
 				436B765422C7605A0029DD3E /* NSManagedObjectContext+JKObjectClear.m */,
 				436B765522C7605A0029DD3E /* NSBundle+JKAppIcon.m */,
 				436B765622C7605A0029DD3E /* NSObject+JKGCD.m */,
+				436B765722C7605A0029DD3E /* MKMapView+JKZoomLevel.m */,
 				436B765822C7605A0029DD3E /* NSString+Validation.h */,
 				436B765922C7605A0029DD3E /* CLLocation+JKCH1903.h */,
 				436B765A22C7605A0029DD3E /* UIView+Additional.m */,
@@ -1391,8 +1393,6 @@
 			children = (
 				436B764A22C7605A0029DD3E /* NSObject+JKAppInfo.m */,
 				436B764E22C7605A0029DD3E /* UITableView+FDKeyedHeightCache.h */,
-				436B764F22C7605A0029DD3E /* UIScrollView+EmptyDataSet.h~HEAD */,
-				436B765722C7605A0029DD3E /* MKMapView+JKZoomLevel.m */,
 				436B773C22C7605A0029DD3E /* UIGestureRecognizer+BlocksKit.m */,
 				436B774722C7605B0029DD3E /* README.md */,
 				436B775322C7605B0029DD3E /* NSData+JKBase64.h */,
