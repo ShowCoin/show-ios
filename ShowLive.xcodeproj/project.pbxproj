@@ -1069,7 +1069,7 @@
 		72FE9B7D20621F59008DD3D5 /* ShowLiveUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowLiveUITests.m; sourceTree = "<group>"; };
 		72FE9B7F20621F59008DD3D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		877A7E42218D8E5D2E688D18 /* libPods-ShowLiveUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShowLiveUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9314D1DF20C5394500BB2429 /* SLAttentionListAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLAttentionListAction.h; path = ../Untils/Exten/SLHelper/pop/SLAttentionListAction.h; sourceTree = "<group>"; };
+		9314D1DF20C5394500BB2429 /* SLAttentionListAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLAttentionListAction.h; path = ../Exten/SLHelper/pop/SLAttentionListAction.h; sourceTree = "<group>"; };
 		9314D1E120C539D400BB2429 /* SLShutUpAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLShutUpAction.h; path = ../JKCategories/SLShutUpAction.h; sourceTree = "<group>"; };
 		9314D1E220C53A3B00BB2429 /* SLHistoryWorksAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLHistoryWorksAction.h; path = ../Exten/SLHelper/pop/SLHistoryWorksAction.h; sourceTree = "<group>"; };
 		9314D1E720C57AEF00BB2429 /* SLPrivateChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLPrivateChatViewController.h; sourceTree = "<group>"; };
@@ -1229,6 +1229,7 @@
 			isa = PBXGroup;
 			children = (
 				436DEC4122870E1A00F16341 /* UITableView+FDTemplateLayoutCellDebug.h */,
+				436DEC4222870E1A00F16341 /* UITableView+FDTemplateLayoutCell.m */,
 				7217BE1B21E0D21A00C1E58F /* NSDate+Additions.h */,
 				934CBCD72118217800608F2F /* NSDate+Additions.h */,
 				43291F3C20E51F50000C3C15 /* UITextFieldDemoViewController.h */,
@@ -1250,6 +1251,7 @@
 				720F85F720B2F59400AD0C54 /* SLChatStatisticsAction.h */,
 				4323F9FB223CC1F100AC3959 /* NSString+JKEmoji.m */,
 				9314D1E120C539D400BB2429 /* SLShutUpAction.h */,
+				9314D1DF20C5394500BB2429 /* SLAttentionListAction.h */,
 				720F85F920B2F59400AD0C54 /* SLMeConcernListAction.h */,
 				720F85FC20B2F59400AD0C54 /* SLRelationAction.h */,
 				93155E4F20D4B8D300E1B61F /* SLIsFollowAction.h */,
@@ -1259,6 +1261,7 @@
 				436DEC5F22870E1A00F16341 /* UIView+FDCollapsibleConstraints.h */,
 				7217BE1521E0D21A00C1E58F /* NSData+Image.h */,
 				436DEC6222870E1A00F16341 /* UICollectionView+ARDynamicCacheHeightLayoutCell.m */,
+				436DECA322870E8700F16341 /* POPAnimationTracerInternal.h */,
 				436DEC4822870E1A00F16341 /* WebView+Debug.m */,
 				436DEC4A22870E1A00F16341 /* UIView+Genie.m */,
 				436DEC4B22870E1A00F16341 /* UINavigationController+FDFullscreenPopGesture.h */,
@@ -2059,7 +2062,6 @@
 				72506F5F21CD04D500361964 /* SLNavigationControllerTransition.m */,
 				7217BE1421E0D21A00C1E58F /* NSData+ImageContentType.m */,
 				436DEC4022870E1A00F16341 /* UITableView+FDKeyedHeightCache.h */,
-				436DEC4222870E1A00F16341 /* UITableView+FDTemplateLayoutCell.m */,
 				436DEC4322870E1A00F16341 /* UITableView+FDIndexPathHeightCache.h */,
 				436DEC4422870E1A00F16341 /* UITableView+FDKeyedHeightCache.m */,
 				436DEC4522870E1A00F16341 /* UITableView+FDTemplateLayoutCellDebug.m */,
@@ -2079,7 +2081,6 @@
 				434DDB5620C932DB00191FC1 /* CAMediaTimingFunction+JKAdditionalEquations.h */,
 				93155E5120D4B9CE00E1B61F /* SLDefenderListAction.h */,
 				9343E47521C7D0140001B9C1 /* UILabel+Additional.h */,
-				9314D1DF20C5394500BB2429 /* SLAttentionListAction.h */,
 				720F85FD20B2F59500AD0C54 /* SLFollowUserAction.h */,
 				720F860320B2F59500AD0C54 /* SLGetRyTokenAction.h */,
 				720F860120B2F59500AD0C54 /* SLGetRyTokenAction.m */,
@@ -2091,7 +2092,6 @@
 				436DEC5E22870E1A00F16341 /* UIScrollView+APParallaxHeader.h */,
 				436DEC9722870E8700F16341 /* POP.h */,
 				436DEC6122870E1A00F16341 /* UIWebView+Alert.m */,
-				436DECA322870E8700F16341 /* POPAnimationTracerInternal.h */,
 				436DEC4922870E1A00F16341 /* UIViewController+TopBarMessage.m */,
 				436DEC4C22870E1A00F16341 /* UIView+GestureCallback.m */,
 				436DEC4D22870E1A00F16341 /* UIViewController+MJPopupViewController.h */,
