@@ -905,7 +905,7 @@
 		436DEC8D22870E8700F16341 /* pop-tvos-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; name = "pop-tvos-Info.plist"; path = "../../pop-tvos-Info.plist"; sourceTree = "<group>"; };
 		436DEC8E22870E8700F16341 /* POPGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POPGeometry.h; path = ../Exten/SLHelper/pop/POPGeometry.h; sourceTree = "<group>"; };
 		436DEC8F22870E8700F16341 /* POPDecayAnimation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = POPDecayAnimation.mm; path = ../Exten/POPDecayAnimation.mm; sourceTree = "<group>"; };
-		436DEC9022870E8700F16341 /* POPSpringAnimationInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPSpringAnimationInternal.h; sourceTree = "<group>"; };
+		436DEC9022870E8700F16341 /* POPSpringAnimationInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POPSpringAnimationInternal.h; path = ../SLClick/POPSpringAnimationInternal.h; sourceTree = "<group>"; };
 		436DEC9122870E8700F16341 /* pop-osx-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; name = "pop-osx-Info.plist"; path = "Untils/Exten/SLHelper/pop-osx-Info.plist"; sourceTree = SOURCE_ROOT; };
 		436DEC9222870E8700F16341 /* POPDecayAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPDecayAnimation.h; sourceTree = "<group>"; };
 		436DEC9322870E8700F16341 /* POPSpringSolver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPSpringSolver.h; sourceTree = "<group>"; };
@@ -1293,7 +1293,6 @@
 				436DEC5022870E1A00F16341 /* UICollectionView+ARDynamicCacheHeightLayoutCell.h */,
 				436DEC5122870E1A00F16341 /* UIWebView+Alert.h */,
 				436DEC5222870E1A00F16341 /* UIViewController+DDPopUpViewController.m */,
-				436DEC5422870E1A00F16341 /* WebView+Debug.h */,
 				436DEC5522870E1A00F16341 /* UIApplication+JKPermissions.h */,
 				436DEC5622870E1A00F16341 /* CLLocationManager+Blocks.m */,
 				436DEC5722870E1A00F16341 /* UIView+Debug.h */,
@@ -1320,7 +1319,6 @@
 				436DEC8C22870E8700F16341 /* POPAnimationExtras.mm */,
 				436DEC8E22870E8700F16341 /* POPGeometry.h */,
 				436DEC8F22870E8700F16341 /* POPDecayAnimation.mm */,
-				436DEC9022870E8700F16341 /* POPSpringAnimationInternal.h */,
 				436DEC9122870E8700F16341 /* pop-osx-Info.plist */,
 				436DEC9222870E8700F16341 /* POPDecayAnimation.h */,
 				436DEC9322870E8700F16341 /* POPSpringSolver.h */,
@@ -1389,10 +1387,12 @@
 				436DEC4922870E1A00F16341 /* UIViewController+TopBarMessage.m */,
 				436DEC4B22870E1A00F16341 /* UINavigationController+FDFullscreenPopGesture.h */,
 				436DEC5322870E1A00F16341 /* UIView+FDCollapsibleConstraints.m */,
+				436DEC5422870E1A00F16341 /* WebView+Debug.h */,
 				436DEC7722870E8700F16341 /* POPMath.h */,
 				436DEC7F22870E8700F16341 /* pop-ios-Info.plist */,
 				436DEC8522870E8700F16341 /* POPAction.h */,
 				436DEC8D22870E8700F16341 /* pop-tvos-Info.plist */,
+				436DEC9022870E8700F16341 /* POPSpringAnimationInternal.h */,
 				4323FA15223CC1F300AC3959 /* NSDictionary+JKBlock.h */,
 				436DEC9922870E8700F16341 /* POPLayerExtras.h */,
 				436DEC5A22870E1A00F16341 /* UINavigationController+FDFullscreenPopGesture.m */,
