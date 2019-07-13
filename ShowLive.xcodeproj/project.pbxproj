@@ -510,7 +510,7 @@
 		436B764722C7605A0029DD3E /* NSNotificationCenter+JKMainThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+JKMainThread.h"; sourceTree = "<group>"; };
 		436B764822C7605A0029DD3E /* UITextView+JKSelect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+JKSelect.m"; sourceTree = "<group>"; };
 		436B764922C7605A0029DD3E /* NSDate+JKZeroDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JKZeroDate.h"; sourceTree = "<group>"; };
-		436B764A22C7605A0029DD3E /* NSObject+JKAppInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JKAppInfo.m"; sourceTree = "<group>"; };
+		436B764A22C7605A0029DD3E /* NSObject+JKAppInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+JKAppInfo.m"; path = "../Exten/NSObject+JKAppInfo.m"; sourceTree = "<group>"; };
 		436B764B22C7605A0029DD3E /* NSData+JKzlib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+JKzlib.m"; sourceTree = "<group>"; };
 		436B764C22C7605A0029DD3E /* NSNumber+JKCGFloat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+JKCGFloat.h"; sourceTree = "<group>"; };
 		436B764D22C7605A0029DD3E /* UIResponder+JKFirstResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+JKFirstResponder.m"; sourceTree = "<group>"; };
@@ -1251,6 +1251,7 @@
 				436B764722C7605A0029DD3E /* NSNotificationCenter+JKMainThread.h */,
 				436B764822C7605A0029DD3E /* UITextView+JKSelect.m */,
 				436B764922C7605A0029DD3E /* NSDate+JKZeroDate.h */,
+				436B764A22C7605A0029DD3E /* NSObject+JKAppInfo.m */,
 				436B764B22C7605A0029DD3E /* NSData+JKzlib.m */,
 				436B764C22C7605A0029DD3E /* NSNumber+JKCGFloat.h */,
 				436B764D22C7605A0029DD3E /* UIResponder+JKFirstResponder.m */,
@@ -1397,7 +1398,6 @@
 		436B764622C7605A0029DD3E /* Exten */ = {
 			isa = PBXGroup;
 			children = (
-				436B764A22C7605A0029DD3E /* NSObject+JKAppInfo.m */,
 				436B764E22C7605A0029DD3E /* UITableView+FDKeyedHeightCache.h */,
 				436B775322C7605B0029DD3E /* NSData+JKBase64.h */,
 				436B778D22C7605B0029DD3E /* CAShapeLayerDemoViewController.m */,
