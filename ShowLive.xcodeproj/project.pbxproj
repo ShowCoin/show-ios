@@ -931,7 +931,7 @@
 		436DECA822870E8700F16341 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		436DECA922870E8700F16341 /* POPAnimationRuntime.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = POPAnimationRuntime.mm; sourceTree = "<group>"; };
 		436DECAA22870E8700F16341 /* POPAnimationEvent.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = POPAnimationEvent.mm; sourceTree = "<group>"; };
-		436DECAB22870E8700F16341 /* POPLayerExtras.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = POPLayerExtras.mm; path = ../Untils/JKCategories/POPLayerExtras.mm; sourceTree = "<group>"; };
+		436DECAB22870E8700F16341 /* POPLayerExtras.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = POPLayerExtras.mm; path = ../JKCategories/POPLayerExtras.mm; sourceTree = "<group>"; };
 		436DECAC22870E8700F16341 /* POPVector.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = POPVector.mm; path = ../Exten/POPVector.mm; sourceTree = "<group>"; };
 		436DECAD22870E8700F16341 /* POPVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPVector.h; sourceTree = "<group>"; };
 		436DECAE22870E8700F16341 /* POPAnimatorPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAnimatorPrivate.h; sourceTree = "<group>"; };
@@ -1250,6 +1250,7 @@
 				D22E1E6A21F342F4001A3D2A /* NSSting+aes.h */,
 				D22E1E6B21F342F4001A3D2A /* NSSting+aes.m */,
 				43D87B3020EB6E0400E991D6 /* UIScreen+JKFrame.h */,
+				7217BE1321E0D21A00C1E58F /* NSString+Binary.h */,
 				7217BE1721E0D21A00C1E58F /* NSString+Binary.m */,
 				434DDB5620C932DB00191FC1 /* CAMediaTimingFunction+JKAdditionalEquations.h */,
 				9314D1E220C53A3B00BB2429 /* SLHistoryWorksAction.h */,
@@ -1300,6 +1301,7 @@
 				436DEC8822870E8700F16341 /* POPCustomAnimation.h */,
 				436DEC8A22870E8700F16341 /* POPAnimationTracer.mm */,
 				436DEC8B22870E8700F16341 /* POPCGUtils.h */,
+				436DEC8C22870E8700F16341 /* POPAnimationExtras.mm */,
 				436DEC8D22870E8700F16341 /* pop-tvos-Info.plist */,
 				436DEC8E22870E8700F16341 /* POPGeometry.h */,
 				436DEC8F22870E8700F16341 /* POPDecayAnimation.mm */,
@@ -1318,6 +1320,7 @@
 				436DECA722870E8700F16341 /* POPAnimation.h */,
 				436DECA822870E8700F16341 /* module.modulemap */,
 				436DECAA22870E8700F16341 /* POPAnimationEvent.mm */,
+				436DECAB22870E8700F16341 /* POPLayerExtras.mm */,
 				436DECAC22870E8700F16341 /* POPVector.mm */,
 				436DECAE22870E8700F16341 /* POPAnimatorPrivate.h */,
 				72506F6021CD04D500361964 /* SLNavigationViewController.h */,
@@ -2102,7 +2105,6 @@
 				437B0A6420F360BA00E93844 /* NSObject+JKAutoCoding.m */,
 				436DEC6022870E1A00F16341 /* UIViewController+DDPopUpViewController.h */,
 				938D2FFD20A0C821006A0CDE /* ShowAction.h */,
-				7217BE1321E0D21A00C1E58F /* NSString+Binary.h */,
 				93155E5120D4B9CE00E1B61F /* SLDefenderListAction.h */,
 				9343E47521C7D0140001B9C1 /* UILabel+Additional.h */,
 				720F85FD20B2F59500AD0C54 /* SLFollowUserAction.h */,
@@ -2126,7 +2128,6 @@
 				436DEC8522870E8700F16341 /* POPAction.h */,
 				436DEC8722870E8700F16341 /* POPCustomAnimation.mm */,
 				436DEC8922870E8700F16341 /* POPPropertyAnimation.h */,
-				436DEC8C22870E8700F16341 /* POPAnimationExtras.mm */,
 				436DEC9122870E8700F16341 /* pop-osx-Info.plist */,
 				436DEC9322870E8700F16341 /* POPSpringSolver.h */,
 				436DEC9422870E8700F16341 /* POPAnimatableProperty.h */,
@@ -2143,7 +2144,6 @@
 				437B0A6120F3608A00E93844 /* NSObject+JKAssociatedObject.h */,
 				437B0A4F20F35F9C00E93844 /* NSNotificationCenterDemoViewController.m */,
 				436DECA922870E8700F16341 /* POPAnimationRuntime.mm */,
-				436DECAB22870E8700F16341 /* POPLayerExtras.mm */,
 				436DECAD22870E8700F16341 /* POPVector.h */,
 				436DECAF22870E8700F16341 /* POPAnimationTracer.h */,
 				434DDB4F20C9326800191FC1 /* CALayer+JKBorderColor.h */,
