@@ -338,7 +338,7 @@
 		436B764D22C7605A0029DD3E /* UIResponder+JKFirstResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+JKFirstResponder.m"; sourceTree = "<group>"; };
 		436B764E22C7605A0029DD3E /* UITableView+FDKeyedHeightCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDKeyedHeightCache.h"; sourceTree = "<group>"; };
 		436B764F22C7605A0029DD3E /* UIScrollView+EmptyDataSet.h~HEAD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; name = "UIScrollView+EmptyDataSet.h~HEAD"; path = "../Exten/UIScrollView+EmptyDataSet.h~HEAD"; sourceTree = "<group>"; };
-		436B765022C7605A0029DD3E /* NSDate+JKFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JKFormatter.h"; sourceTree = "<group>"; };
+		436B765022C7605A0029DD3E /* NSDate+JKFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+JKFormatter.h"; path = "../../../../pop/NSDate+JKFormatter.h"; sourceTree = "<group>"; };
 		436B765122C7605A0029DD3E /* NSMutableURLRequest+JKUpload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableURLRequest+JKUpload.m"; path = "../../../../pop/NSMutableURLRequest+JKUpload.m"; sourceTree = "<group>"; };
 		436B765222C7605A0029DD3E /* NSDate+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Additions.m"; sourceTree = "<group>"; };
 		436B765322C7605A0029DD3E /* CAAnimationDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAAnimationDemoViewController.m; sourceTree = "<group>"; };
@@ -591,7 +591,7 @@
 		436B774D22C7605B0029DD3E /* UILabel+Additional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Additional.h"; sourceTree = "<group>"; };
 		436B774E22C7605B0029DD3E /* NSNotificationCenter+JKMainThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNotificationCenter+JKMainThread.m"; sourceTree = "<group>"; };
 		436B774F22C7605B0029DD3E /* UISplitViewController+JKQuickAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISplitViewController+JKQuickAccess.m"; sourceTree = "<group>"; };
-		436B775022C7605B0029DD3E /* UIScrollView+EmptyDataSet.h~fc6ed825c6150727967b55cf2a4e012515dba0e3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UIScrollView+EmptyDataSet.h~fc6ed825c6150727967b55cf2a4e012515dba0e3"; sourceTree = "<group>"; };
+		436B775022C7605B0029DD3E /* UIScrollView+EmptyDataSet.h~fc6ed825c6150727967b55cf2a4e012515dba0e3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "UIScrollView+EmptyDataSet.h~fc6ed825c6150727967b55cf2a4e012515dba0e3"; path = "../../../../pop/UIScrollView+EmptyDataSet.h~fc6ed825c6150727967b55cf2a4e012515dba0e3"; sourceTree = "<group>"; };
 		436B775122C7605B0029DD3E /* NSString+JKRemoveEmoji.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JKRemoveEmoji.m"; sourceTree = "<group>"; };
 		436B775222C7605B0029DD3E /* UIView+Additional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Additional.h"; sourceTree = "<group>"; };
 		436B775322C7605B0029DD3E /* NSData+JKBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+JKBase64.h"; sourceTree = "<group>"; };
@@ -926,7 +926,6 @@
 				436B764D22C7605A0029DD3E /* UIResponder+JKFirstResponder.m */,
 				436B764E22C7605A0029DD3E /* UITableView+FDKeyedHeightCache.h */,
 				436B764F22C7605A0029DD3E /* UIScrollView+EmptyDataSet.h~HEAD */,
-				436B765022C7605A0029DD3E /* NSDate+JKFormatter.h */,
 				436B765222C7605A0029DD3E /* NSDate+Additions.m */,
 				436B765322C7605A0029DD3E /* CAAnimationDemoViewController.m */,
 				436B765422C7605A0029DD3E /* NSManagedObjectContext+JKObjectClear.m */,
@@ -972,7 +971,6 @@
 				436B774D22C7605B0029DD3E /* UILabel+Additional.h */,
 				436B774E22C7605B0029DD3E /* NSNotificationCenter+JKMainThread.m */,
 				436B774F22C7605B0029DD3E /* UISplitViewController+JKQuickAccess.m */,
-				436B775022C7605B0029DD3E /* UIScrollView+EmptyDataSet.h~fc6ed825c6150727967b55cf2a4e012515dba0e3 */,
 				436B775122C7605B0029DD3E /* NSString+JKRemoveEmoji.m */,
 				436B775222C7605B0029DD3E /* UIView+Additional.h */,
 				436B775322C7605B0029DD3E /* NSData+JKBase64.h */,
@@ -1380,9 +1378,11 @@
 				436B75D822C760560029DD3E /* SLPlayAudio.m */,
 				436B75E522C760560029DD3E /* UIViewController+XHPhoto.m */,
 				436B763022C760580029DD3E /* UIWindow+SLMotion.h */,
+				436B765022C7605A0029DD3E /* NSDate+JKFormatter.h */,
 				436B765122C7605A0029DD3E /* NSMutableURLRequest+JKUpload.m */,
 				436B765D22C7605A0029DD3E /* UITextView+JKPlaceHolder.m */,
 				436B774B22C7605B0029DD3E /* UIWindow+SLMotion.h */,
+				436B775022C7605B0029DD3E /* UIScrollView+EmptyDataSet.h~fc6ed825c6150727967b55cf2a4e012515dba0e3 */,
 				436B760D22C760570029DD3E /* NSManagedObject+JKExtensions.h */,
 				436DEC9E22870E8700F16341 /* WebCore */,
 			);
