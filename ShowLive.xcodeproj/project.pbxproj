@@ -297,7 +297,7 @@
 		436B75FE22C760570029DD3E /* NSObject+JKBlockTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JKBlockTimer.m"; sourceTree = "<group>"; };
 		436B75FF22C760570029DD3E /* SLMeFansListAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLMeFansListAction.h; sourceTree = "<group>"; };
 		436B760022C760570029DD3E /* UIGestureRecognizer+BlocksKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIGestureRecognizer+BlocksKit.m"; path = "../../../../pop/UIGestureRecognizer+BlocksKit.m"; sourceTree = "<group>"; };
-		436B760122C760570029DD3E /* NSDate+JKInternetDateTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JKInternetDateTime.m"; sourceTree = "<group>"; };
+		436B760122C760570029DD3E /* NSDate+JKInternetDateTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+JKInternetDateTime.m"; path = "../../../../pop/NSDate+JKInternetDateTime.m"; sourceTree = "<group>"; };
 		436B760222C760570029DD3E /* NSHTTPCookieStorage+JKFreezeDry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSHTTPCookieStorage+JKFreezeDry.h"; path = "../../../../pop/NSHTTPCookieStorage+JKFreezeDry.h"; sourceTree = "<group>"; };
 		436B760322C760570029DD3E /* NSManagedObjectContext+JKFetching.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+JKFetching.m"; sourceTree = "<group>"; };
 		436B760422C760570029DD3E /* MKMapView+JKBetterMaps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKMapView+JKBetterMaps.m"; sourceTree = "<group>"; };
@@ -575,7 +575,7 @@
 		436B773D22C7605A0029DD3E /* NSRunLoop+JKPerformBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSRunLoop+JKPerformBlock.m"; sourceTree = "<group>"; };
 		436B773E22C7605A0029DD3E /* UITextView+JKInputLimit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+JKInputLimit.h"; sourceTree = "<group>"; };
 		436B773F22C7605A0029DD3E /* NSDecimalNumber+JKCalculatingByString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDecimalNumber+JKCalculatingByString.h"; sourceTree = "<group>"; };
-		436B774022C7605A0029DD3E /* NSDate+JKInternetDateTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+JKInternetDateTime.m"; path = "../Exten/NSDate+JKInternetDateTime.m"; sourceTree = "<group>"; };
+		436B774022C7605A0029DD3E /* NSDate+JKInternetDateTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+JKInternetDateTime.m"; path = "../../NSDate+JKInternetDateTime.m"; sourceTree = "<group>"; };
 		436B774122C7605A0029DD3E /* NSURLConnection+JKSelfSigned.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLConnection+JKSelfSigned.m"; sourceTree = "<group>"; };
 		436B774222C7605A0029DD3E /* TODO.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = TODO.md; path = ../Exten/TODO.md; sourceTree = "<group>"; };
 		436B774322C7605A0029DD3E /* NSInvocation+JKBb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSInvocation+JKBb.m"; sourceTree = "<group>"; };
@@ -955,7 +955,6 @@
 				436B773D22C7605A0029DD3E /* NSRunLoop+JKPerformBlock.m */,
 				436B773E22C7605A0029DD3E /* UITextView+JKInputLimit.h */,
 				436B773F22C7605A0029DD3E /* NSDecimalNumber+JKCalculatingByString.h */,
-				436B774022C7605A0029DD3E /* NSDate+JKInternetDateTime.m */,
 				436B774122C7605A0029DD3E /* NSURLConnection+JKSelfSigned.m */,
 				436B774222C7605A0029DD3E /* TODO.md */,
 				436B774322C7605A0029DD3E /* NSInvocation+JKBb.m */,
@@ -1015,7 +1014,6 @@
 				436B75FD22C760570029DD3E /* NSFetchRequest+JKExtensions.h */,
 				436B75FE22C760570029DD3E /* NSObject+JKBlockTimer.m */,
 				436B75FF22C760570029DD3E /* SLMeFansListAction.h */,
-				436B760122C760570029DD3E /* NSDate+JKInternetDateTime.m */,
 				436B760322C760570029DD3E /* NSManagedObjectContext+JKFetching.m */,
 				436B760422C760570029DD3E /* MKMapView+JKBetterMaps.m */,
 				436B760522C760570029DD3E /* CAMediaTimingFunction+JKAdditionalEquations.m */,
@@ -1364,6 +1362,8 @@
 				436B778E22C7605B0029DD3E /* UITextField+JKBlocks.m */,
 				436B75FA22C760570029DD3E /* POPMath.mm */,
 				436B760022C760570029DD3E /* UIGestureRecognizer+BlocksKit.m */,
+				436B760122C760570029DD3E /* NSDate+JKInternetDateTime.m */,
+				436B774022C7605A0029DD3E /* NSDate+JKInternetDateTime.m */,
 				436B774822C7605B0029DD3E /* NSDate+JKFormatter.m */,
 				436B760222C760570029DD3E /* NSHTTPCookieStorage+JKFreezeDry.h */,
 				436B774A22C7605B0029DD3E /* MKMapView+JKBetterMaps.m */,
