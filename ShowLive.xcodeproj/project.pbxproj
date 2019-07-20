@@ -288,7 +288,7 @@
 		436B75F522C760570029DD3E /* SLMeConcernListAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLMeConcernListAction.h; sourceTree = "<group>"; };
 		436B75F622C760570029DD3E /* UIView+Additional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Additional.m"; path = "../../../../pop/UIView+Additional.m"; sourceTree = "<group>"; };
 		436B75F722C760570029DD3E /* NSURL+JKQueryDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+JKQueryDictionary.m"; sourceTree = "<group>"; };
-		436B75F822C760570029DD3E /* UITextField+JKBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+JKBlocks.h"; sourceTree = "<group>"; };
+		436B75F822C760570029DD3E /* UITextField+JKBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITextField+JKBlocks.h"; path = "../../../../pop/UITextField+JKBlocks.h"; sourceTree = "<group>"; };
 		436B75F922C760570029DD3E /* NSString+JKStringPages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JKStringPages.m"; sourceTree = "<group>"; };
 		436B75FA22C760570029DD3E /* POPMath.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = POPMath.mm; path = ../../../../pop/POPMath.mm; sourceTree = "<group>"; };
 		436B75FB22C760570029DD3E /* UITextFieldDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITextFieldDemoViewController.m; sourceTree = "<group>"; };
@@ -344,7 +344,7 @@
 		436B765322C7605A0029DD3E /* CAAnimationDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAAnimationDemoViewController.m; sourceTree = "<group>"; };
 		436B765422C7605A0029DD3E /* NSManagedObjectContext+JKObjectClear.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+JKObjectClear.m"; sourceTree = "<group>"; };
 		436B765522C7605A0029DD3E /* NSBundle+JKAppIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSBundle+JKAppIcon.m"; path = "../../NSBundle+JKAppIcon.m"; sourceTree = "<group>"; };
-		436B765622C7605A0029DD3E /* NSObject+JKGCD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JKGCD.m"; sourceTree = "<group>"; };
+		436B765622C7605A0029DD3E /* NSObject+JKGCD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+JKGCD.m"; path = "../../../../pop/NSObject+JKGCD.m"; sourceTree = "<group>"; };
 		436B765722C7605A0029DD3E /* MKMapView+JKZoomLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKMapView+JKZoomLevel.m"; sourceTree = "<group>"; };
 		436B765822C7605A0029DD3E /* NSString+Validation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Validation.h"; sourceTree = "<group>"; };
 		436B765922C7605A0029DD3E /* CLLocation+JKCH1903.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLLocation+JKCH1903.h"; sourceTree = "<group>"; };
@@ -929,7 +929,6 @@
 				436B765222C7605A0029DD3E /* NSDate+Additions.m */,
 				436B765322C7605A0029DD3E /* CAAnimationDemoViewController.m */,
 				436B765422C7605A0029DD3E /* NSManagedObjectContext+JKObjectClear.m */,
-				436B765622C7605A0029DD3E /* NSObject+JKGCD.m */,
 				436B765722C7605A0029DD3E /* MKMapView+JKZoomLevel.m */,
 				436B765822C7605A0029DD3E /* NSString+Validation.h */,
 				436B765922C7605A0029DD3E /* CLLocation+JKCH1903.h */,
@@ -1005,7 +1004,6 @@
 				436B75F422C760570029DD3E /* UIView+JKShake.h */,
 				436B75F522C760570029DD3E /* SLMeConcernListAction.h */,
 				436B75F722C760570029DD3E /* NSURL+JKQueryDictionary.m */,
-				436B75F822C760570029DD3E /* UITextField+JKBlocks.h */,
 				436B75F922C760570029DD3E /* NSString+JKStringPages.m */,
 				436B75FB22C760570029DD3E /* UITextFieldDemoViewController.m */,
 				436B75FC22C760570029DD3E /* UIScrollView+APParallaxHeader.m */,
@@ -1353,6 +1351,7 @@
 				436B75D722C760560029DD3E /* SLPlayAudio.h */,
 				436B75D822C760560029DD3E /* SLPlayAudio.m */,
 				436B75E522C760560029DD3E /* UIViewController+XHPhoto.m */,
+				436B75F822C760570029DD3E /* UITextField+JKBlocks.h */,
 				436B766322C7605A0029DD3E /* UIWebVIew+JKSwipeGesture.h */,
 				436B776222C7605B0029DD3E /* NotRenamed */,
 				436B778C22C7605B0029DD3E /* UIWebVIew+JKSwipeGesture.m */,
@@ -1374,6 +1373,7 @@
 				436B75EC22C760570029DD3E /* UIView+Debug.m */,
 				436B75F222C760570029DD3E /* NSBundle+JKAppIcon.m */,
 				436B765522C7605A0029DD3E /* NSBundle+JKAppIcon.m */,
+				436B765622C7605A0029DD3E /* NSObject+JKGCD.m */,
 				436B75F622C760570029DD3E /* UIView+Additional.m */,
 				436B765D22C7605A0029DD3E /* UITextView+JKPlaceHolder.m */,
 				436B774B22C7605B0029DD3E /* UIWindow+SLMotion.h */,
