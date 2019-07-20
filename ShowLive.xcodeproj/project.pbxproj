@@ -285,7 +285,7 @@
 		436B75F222C760570029DD3E /* NSBundle+JKAppIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSBundle+JKAppIcon.m"; path = "../../../../pop/NSBundle+JKAppIcon.m"; sourceTree = "<group>"; };
 		436B75F322C760570029DD3E /* NSManagedObject+JKExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObject+JKExtensions.m"; path = "../../../../pop/NSManagedObject+JKExtensions.m"; sourceTree = "<group>"; };
 		436B75F422C760570029DD3E /* UIView+JKShake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+JKShake.h"; path = "../../../../pop/UIView+JKShake.h"; sourceTree = "<group>"; };
-		436B75F522C760570029DD3E /* SLMeConcernListAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLMeConcernListAction.h; sourceTree = "<group>"; };
+		436B75F522C760570029DD3E /* SLMeConcernListAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLMeConcernListAction.h; path = ../../../../pop/SLMeConcernListAction.h; sourceTree = "<group>"; };
 		436B75F622C760570029DD3E /* UIView+Additional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Additional.m"; path = "../../../../pop/UIView+Additional.m"; sourceTree = "<group>"; };
 		436B75F722C760570029DD3E /* NSURL+JKQueryDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSURL+JKQueryDictionary.m"; path = "../../../../pop/NSURL+JKQueryDictionary.m"; sourceTree = "<group>"; };
 		436B75F822C760570029DD3E /* UITextField+JKBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITextField+JKBlocks.h"; path = "../../../../pop/UITextField+JKBlocks.h"; sourceTree = "<group>"; };
@@ -310,7 +310,7 @@
 		436B760B22C760570029DD3E /* NSDictionary+JKJSONString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+JKJSONString.m"; path = "../../../../pop/NSDictionary+JKJSONString.m"; sourceTree = "<group>"; };
 		436B760C22C760570029DD3E /* UITableViewCell+JKDelaysContentTouches.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableViewCell+JKDelaysContentTouches.m"; path = "../../../../pop/UITableViewCell+JKDelaysContentTouches.m"; sourceTree = "<group>"; };
 		436B760D22C760570029DD3E /* NSManagedObject+JKExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSManagedObject+JKExtensions.h"; path = "../../../../pop/NSManagedObject+JKExtensions.h"; sourceTree = "<group>"; };
-		436B760E22C760570029DD3E /* MKMapView+JKZoomLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKMapView+JKZoomLevel.h"; sourceTree = "<group>"; };
+		436B760E22C760570029DD3E /* MKMapView+JKZoomLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MKMapView+JKZoomLevel.h"; path = "../../../JKCategories/MKMapView+JKZoomLevel.h"; sourceTree = "<group>"; };
 		436B760F22C760570029DD3E /* NSDictionary+JKBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+JKBlock.m"; path = "../../../../pop/NSDictionary+JKBlock.m"; sourceTree = "<group>"; };
 		436B761022C760570029DD3E /* NSDate+JKLunarCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JKLunarCalendar.h"; sourceTree = "<group>"; };
 		436B761122C760570029DD3E /* UITextField+JKHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITextField+JKHistory.h"; path = "../../../../pop/UITextField+JKHistory.h"; sourceTree = "<group>"; };
@@ -930,10 +930,8 @@
 				436B779322C7605B0029DD3E /* NSDecimalNumber+JKCalculatingByString.m */,
 				436B779522C7605B0029DD3E /* NSDate+JKInternetDateTime.h */,
 				436B75F122C760570029DD3E /* UITableView+FDTemplateLayoutCellDebug.h */,
-				436B75F522C760570029DD3E /* SLMeConcernListAction.h */,
 				436B75FE22C760570029DD3E /* NSObject+JKBlockTimer.m */,
 				436B760A22C760570029DD3E /* NSData+JKGzip.m */,
-				436B760E22C760570029DD3E /* MKMapView+JKZoomLevel.h */,
 				436B761022C760570029DD3E /* NSDate+JKLunarCalendar.h */,
 				436B761522C760570029DD3E /* UIImage+Effects.h */,
 				436B761622C760570029DD3E /* NSString+Json.h */,
@@ -1266,6 +1264,7 @@
 				436B766122C7605A0029DD3E /* UITextField+JKBlocks.h */,
 				436B766222C7605A0029DD3E /* UIScrollView+EmptyDataSet.m */,
 				436B766322C7605A0029DD3E /* UIWebVIew+JKSwipeGesture.h */,
+				436B760E22C760570029DD3E /* MKMapView+JKZoomLevel.h */,
 				436B760F22C760570029DD3E /* NSDictionary+JKBlock.m */,
 				436B775C22C7605B0029DD3E /* UITextField+JKHistory.h */,
 				436B775D22C7605B0029DD3E /* UITableView+JKiOS7Style.h */,
@@ -1354,6 +1353,7 @@
 				436B75F322C760570029DD3E /* NSManagedObject+JKExtensions.m */,
 				436B75F422C760570029DD3E /* UIView+JKShake.h */,
 				436B765922C7605A0029DD3E /* CLLocation+JKCH1903.h */,
+				436B75F522C760570029DD3E /* SLMeConcernListAction.h */,
 				436B75F622C760570029DD3E /* UIView+Additional.m */,
 				436B765A22C7605A0029DD3E /* UIView+Additional.m */,
 				436B765B22C7605A0029DD3E /* NSData+JKBase64.m */,
