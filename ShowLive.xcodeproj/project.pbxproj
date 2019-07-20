@@ -281,7 +281,7 @@
 		436B75EE22C760570029DD3E /* POPAnimationEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POPAnimationEvent.h; path = ../../../../pop/POPAnimationEvent.h; sourceTree = "<group>"; };
 		436B75EF22C760570029DD3E /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+ImageContentType.h"; path = "../../../../pop/NSData+ImageContentType.h"; sourceTree = "<group>"; };
 		436B75F022C760570029DD3E /* NSSet+JKBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSSet+JKBlock.m"; path = "../../../../pop/NSSet+JKBlock.m"; sourceTree = "<group>"; };
-		436B75F122C760570029DD3E /* UITableView+FDTemplateLayoutCellDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDTemplateLayoutCellDebug.h"; sourceTree = "<group>"; };
+		436B75F122C760570029DD3E /* UITableView+FDTemplateLayoutCellDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITableView+FDTemplateLayoutCellDebug.h"; path = "../../../JKCategories/UITableView+FDTemplateLayoutCellDebug.h"; sourceTree = "<group>"; };
 		436B75F222C760570029DD3E /* NSBundle+JKAppIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSBundle+JKAppIcon.m"; path = "../../../../pop/NSBundle+JKAppIcon.m"; sourceTree = "<group>"; };
 		436B75F322C760570029DD3E /* NSManagedObject+JKExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObject+JKExtensions.m"; path = "../../../../pop/NSManagedObject+JKExtensions.m"; sourceTree = "<group>"; };
 		436B75F422C760570029DD3E /* UIView+JKShake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+JKShake.h"; path = "../../../../pop/UIView+JKShake.h"; sourceTree = "<group>"; };
@@ -325,7 +325,7 @@
 		436B761A22C760570029DD3E /* UIView+JKConstraints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+JKConstraints.h"; path = "../../../../pop/UIView+JKConstraints.h"; sourceTree = "<group>"; };
 		436B761B22C760570029DD3E /* UIWindow+JKHierarchy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIWindow+JKHierarchy.h"; path = "../../../../pop/UIWindow+JKHierarchy.h"; sourceTree = "<group>"; };
 		436B761F22C760570029DD3E /* SLJPushUntils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLJPushUntils.h; path = pop/SLJPushUntils.h; sourceTree = SOURCE_ROOT; };
-		436B762222C760570029DD3E /* NotificationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NotificationService.h; path = Untils/NotificationService.h; sourceTree = SOURCE_ROOT; };
+		436B762222C760570029DD3E /* NotificationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NotificationService.h; path = pop/NotificationService.h; sourceTree = SOURCE_ROOT; };
 		436B762422C760570029DD3E /* SLJPushUntils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLJPushUntils.m; path = pop/SLJPushUntils.m; sourceTree = SOURCE_ROOT; };
 		436B762A22C760580029DD3E /* SLExtensionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLExtensionHelper.h; path = pop/SLExtensionHelper.h; sourceTree = SOURCE_ROOT; };
 		436B763022C760580029DD3E /* UIWindow+SLMotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIWindow+SLMotion.h"; path = "Untils/UIWindow+SLMotion.h"; sourceTree = SOURCE_ROOT; };
@@ -878,7 +878,6 @@
 			children = (
 				436B764622C7605A0029DD3E /* Exten */,
 				436B75E622C760570029DD3E /* JKCategories */,
-				436B762222C760570029DD3E /* NotificationService.h */,
 				436B75D222C760550029DD3E /* SLClick */,
 				436B75D622C760560029DD3E /* SLPlayAudio */,
 				D544A431CFB6EF8D747D9730 /* Pods */,
@@ -925,7 +924,6 @@
 				436B775122C7605B0029DD3E /* NSString+JKRemoveEmoji.m */,
 				436B775A22C7605B0029DD3E /* NSString+JKNormalRegex.h */,
 				436B779322C7605B0029DD3E /* NSDecimalNumber+JKCalculatingByString.m */,
-				436B75F122C760570029DD3E /* UITableView+FDTemplateLayoutCellDebug.h */,
 				436B760A22C760570029DD3E /* NSData+JKGzip.m */,
 				436B761622C760570029DD3E /* NSString+Json.h */,
 			);
@@ -1345,6 +1343,7 @@
 				436B75EF22C760570029DD3E /* NSData+ImageContentType.h */,
 				436B75F022C760570029DD3E /* NSSet+JKBlock.m */,
 				436B765422C7605A0029DD3E /* NSManagedObjectContext+JKObjectClear.m */,
+				436B75F122C760570029DD3E /* UITableView+FDTemplateLayoutCellDebug.h */,
 				436B75F222C760570029DD3E /* NSBundle+JKAppIcon.m */,
 				436B765522C7605A0029DD3E /* NSBundle+JKAppIcon.m */,
 				436B765622C7605A0029DD3E /* NSObject+JKGCD.m */,
@@ -1385,6 +1384,7 @@
 				436B761922C760570029DD3E /* NSNumber+JKRomanNumerals.m */,
 				436B761A22C760570029DD3E /* UIView+JKConstraints.h */,
 				436B761B22C760570029DD3E /* UIWindow+JKHierarchy.h */,
+				436B762222C760570029DD3E /* NotificationService.h */,
 				436DEC9E22870E8700F16341 /* WebCore */,
 			);
 			path = pop;
