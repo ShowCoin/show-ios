@@ -289,7 +289,7 @@
 		436B75F622C760570029DD3E /* UIView+Additional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Additional.m"; path = "../../../../pop/UIView+Additional.m"; sourceTree = "<group>"; };
 		436B75F722C760570029DD3E /* NSURL+JKQueryDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSURL+JKQueryDictionary.m"; path = "../../../../pop/NSURL+JKQueryDictionary.m"; sourceTree = "<group>"; };
 		436B75F822C760570029DD3E /* UITextField+JKBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITextField+JKBlocks.h"; path = "../../../../pop/UITextField+JKBlocks.h"; sourceTree = "<group>"; };
-		436B75F922C760570029DD3E /* NSString+JKStringPages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JKStringPages.m"; sourceTree = "<group>"; };
+		436B75F922C760570029DD3E /* NSString+JKStringPages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+JKStringPages.m"; path = "../../../../pop/NSString+JKStringPages.m"; sourceTree = "<group>"; };
 		436B75FA22C760570029DD3E /* POPMath.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = POPMath.mm; path = ../../../../pop/POPMath.mm; sourceTree = "<group>"; };
 		436B75FB22C760570029DD3E /* UITextFieldDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UITextFieldDemoViewController.m; path = ../../../../pop/UITextFieldDemoViewController.m; sourceTree = "<group>"; };
 		436B75FC22C760570029DD3E /* UIScrollView+APParallaxHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+APParallaxHeader.m"; path = "../../../../pop/UIScrollView+APParallaxHeader.m"; sourceTree = "<group>"; };
@@ -319,7 +319,7 @@
 		436B761422C760570029DD3E /* UIScrollView+APParallaxHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+APParallaxHeader.h"; path = "../../../JKCategories/UIScrollView+APParallaxHeader.h"; sourceTree = "<group>"; };
 		436B761522C760570029DD3E /* UIImage+Effects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Effects.h"; sourceTree = "<group>"; };
 		436B761622C760570029DD3E /* NSString+Json.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Json.h"; sourceTree = "<group>"; };
-		436B761722C760570029DD3E /* UITextView+JKInputLimit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+JKInputLimit.m"; sourceTree = "<group>"; };
+		436B761722C760570029DD3E /* UITextView+JKInputLimit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITextView+JKInputLimit.m"; path = "../../../../pop/UITextView+JKInputLimit.m"; sourceTree = "<group>"; };
 		436B761822C760570029DD3E /* CATransactionDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CATransactionDemoViewController.h; path = ../../../JKCategories/CATransactionDemoViewController.h; sourceTree = "<group>"; };
 		436B761922C760570029DD3E /* NSNumber+JKRomanNumerals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+JKRomanNumerals.m"; path = "../../../../pop/NSNumber+JKRomanNumerals.m"; sourceTree = "<group>"; };
 		436B761A22C760570029DD3E /* UIView+JKConstraints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+JKConstraints.h"; path = "../../../../pop/UIView+JKConstraints.h"; sourceTree = "<group>"; };
@@ -931,14 +931,12 @@
 				436B779522C7605B0029DD3E /* NSDate+JKInternetDateTime.h */,
 				436B75F122C760570029DD3E /* UITableView+FDTemplateLayoutCellDebug.h */,
 				436B75F522C760570029DD3E /* SLMeConcernListAction.h */,
-				436B75F922C760570029DD3E /* NSString+JKStringPages.m */,
 				436B75FE22C760570029DD3E /* NSObject+JKBlockTimer.m */,
 				436B760A22C760570029DD3E /* NSData+JKGzip.m */,
 				436B760E22C760570029DD3E /* MKMapView+JKZoomLevel.h */,
 				436B761022C760570029DD3E /* NSDate+JKLunarCalendar.h */,
 				436B761522C760570029DD3E /* UIImage+Effects.h */,
 				436B761622C760570029DD3E /* NSString+Json.h */,
-				436B761722C760570029DD3E /* UITextView+JKInputLimit.m */,
 			);
 			name = JKCategories;
 			sourceTree = "<group>";
@@ -1281,6 +1279,7 @@
 				436B761322C760570029DD3E /* UIWebVIew+JKSwipeGesture.m */,
 				436B778D22C7605B0029DD3E /* CAShapeLayerDemoViewController.m */,
 				436B778E22C7605B0029DD3E /* UITextField+JKBlocks.m */,
+				436B75F922C760570029DD3E /* NSString+JKStringPages.m */,
 				436B75FA22C760570029DD3E /* POPMath.mm */,
 				436B75FB22C760570029DD3E /* UITextFieldDemoViewController.m */,
 				436B75FC22C760570029DD3E /* UIScrollView+APParallaxHeader.m */,
@@ -1330,6 +1329,7 @@
 				436B779422C7605B0029DD3E /* UITableView+FDTemplateLayoutCell.h */,
 				436B779622C7605B0029DD3E /* NSDate+JKExtension.h */,
 				436B779722C7605B0029DD3E /* NSRunLoop+JKPerformBlock.h */,
+				436B761722C760570029DD3E /* UITextView+JKInputLimit.m */,
 				436B779822C7605B0029DD3E /* CATransactionDemoViewController.h */,
 				436B761822C760570029DD3E /* CATransactionDemoViewController.h */,
 				436B779922C7605B0029DD3E /* NSDictionary+JKMerge.h */,
