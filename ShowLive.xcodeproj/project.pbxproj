@@ -303,7 +303,7 @@
 		436B760422C760570029DD3E /* MKMapView+JKBetterMaps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MKMapView+JKBetterMaps.m"; path = "../../../JKCategories/MKMapView+JKBetterMaps.m"; sourceTree = "<group>"; };
 		436B760522C760570029DD3E /* CAMediaTimingFunction+JKAdditionalEquations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CAMediaTimingFunction+JKAdditionalEquations.m"; path = "../../../../pop/CAMediaTimingFunction+JKAdditionalEquations.m"; sourceTree = "<group>"; };
 		436B760622C760570029DD3E /* NSObject+JKAddProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JKAddProperty.m"; sourceTree = "<group>"; };
-		436B760722C760570029DD3E /* NSData+JKzlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+JKzlib.h"; sourceTree = "<group>"; };
+		436B760722C760570029DD3E /* NSData+JKzlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+JKzlib.h"; path = "../../../../pop/NSData+JKzlib.h"; sourceTree = "<group>"; };
 		436B760822C760570029DD3E /* UIView+JKNib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JKNib.h"; sourceTree = "<group>"; };
 		436B760922C760570029DD3E /* UIPopoverController+iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIPopoverController+iPhone.h"; sourceTree = "<group>"; };
 		436B760A22C760570029DD3E /* NSData+JKGzip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+JKGzip.m"; sourceTree = "<group>"; };
@@ -573,7 +573,7 @@
 		436B773B22C7605A0029DD3E /* UITextViewDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITextViewDemoViewController.h; sourceTree = "<group>"; };
 		436B773C22C7605A0029DD3E /* UIGestureRecognizer+BlocksKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIGestureRecognizer+BlocksKit.m"; path = "../../UIGestureRecognizer+BlocksKit.m"; sourceTree = "<group>"; };
 		436B773D22C7605A0029DD3E /* NSRunLoop+JKPerformBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSRunLoop+JKPerformBlock.m"; path = "../../../../pop/NSRunLoop+JKPerformBlock.m"; sourceTree = "<group>"; };
-		436B773E22C7605A0029DD3E /* UITextView+JKInputLimit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+JKInputLimit.h"; sourceTree = "<group>"; };
+		436B773E22C7605A0029DD3E /* UITextView+JKInputLimit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITextView+JKInputLimit.h"; path = "../../../../pop/UITextView+JKInputLimit.h"; sourceTree = "<group>"; };
 		436B773F22C7605A0029DD3E /* NSDecimalNumber+JKCalculatingByString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDecimalNumber+JKCalculatingByString.h"; path = "../../../../pop/NSDecimalNumber+JKCalculatingByString.h"; sourceTree = "<group>"; };
 		436B774022C7605A0029DD3E /* NSDate+JKInternetDateTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+JKInternetDateTime.m"; path = "../../NSDate+JKInternetDateTime.m"; sourceTree = "<group>"; };
 		436B774122C7605A0029DD3E /* NSURLConnection+JKSelfSigned.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSURLConnection+JKSelfSigned.m"; path = "../../../../pop/NSURLConnection+JKSelfSigned.m"; sourceTree = "<group>"; };
@@ -931,7 +931,6 @@
 				436B766722C7605A0029DD3E /* NSDate+JKLunarCalendar.m */,
 				436B773922C7605A0029DD3E /* CALayer+JKBorderColor.h */,
 				436B773B22C7605A0029DD3E /* UITextViewDemoViewController.h */,
-				436B773E22C7605A0029DD3E /* UITextView+JKInputLimit.h */,
 				436B774222C7605A0029DD3E /* TODO.md */,
 				436B774322C7605A0029DD3E /* NSInvocation+JKBb.m */,
 				436B774422C7605A0029DD3E /* UIView+FDCollapsibleConstraints.m */,
@@ -961,7 +960,6 @@
 				436B75FC22C760570029DD3E /* UIScrollView+APParallaxHeader.m */,
 				436B75FE22C760570029DD3E /* NSObject+JKBlockTimer.m */,
 				436B760622C760570029DD3E /* NSObject+JKAddProperty.m */,
-				436B760722C760570029DD3E /* NSData+JKzlib.h */,
 				436B760822C760570029DD3E /* UIView+JKNib.h */,
 				436B760922C760570029DD3E /* UIPopoverController+iPhone.h */,
 				436B760A22C760570029DD3E /* NSData+JKGzip.m */,
@@ -1320,6 +1318,7 @@
 				436B760022C760570029DD3E /* UIGestureRecognizer+BlocksKit.m */,
 				436B773C22C7605A0029DD3E /* UIGestureRecognizer+BlocksKit.m */,
 				436B773D22C7605A0029DD3E /* NSRunLoop+JKPerformBlock.m */,
+				436B773E22C7605A0029DD3E /* UITextView+JKInputLimit.h */,
 				436B773F22C7605A0029DD3E /* NSDecimalNumber+JKCalculatingByString.h */,
 				436B760122C760570029DD3E /* NSDate+JKInternetDateTime.m */,
 				436B774022C7605A0029DD3E /* NSDate+JKInternetDateTime.m */,
@@ -1380,6 +1379,7 @@
 				436B775B22C7605B0029DD3E /* NSObject+JKKVOBlocks.h */,
 				436B761122C760570029DD3E /* UITextField+JKHistory.h */,
 				436B760522C760570029DD3E /* CAMediaTimingFunction+JKAdditionalEquations.m */,
+				436B760722C760570029DD3E /* NSData+JKzlib.h */,
 				436B760B22C760570029DD3E /* NSDictionary+JKJSONString.m */,
 				436B760C22C760570029DD3E /* UITableViewCell+JKDelaysContentTouches.m */,
 				436B760D22C760570029DD3E /* NSManagedObject+JKExtensions.h */,
