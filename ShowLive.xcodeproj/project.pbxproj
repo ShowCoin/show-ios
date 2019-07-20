@@ -334,7 +334,7 @@
 		436B764922C7605A0029DD3E /* NSDate+JKZeroDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+JKZeroDate.h"; path = "../../../../pop/NSDate+JKZeroDate.h"; sourceTree = "<group>"; };
 		436B764A22C7605A0029DD3E /* NSObject+JKAppInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+JKAppInfo.m"; path = "../../NSObject+JKAppInfo.m"; sourceTree = "<group>"; };
 		436B764B22C7605A0029DD3E /* NSData+JKzlib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+JKzlib.m"; path = "../../../../pop/NSData+JKzlib.m"; sourceTree = "<group>"; };
-		436B764C22C7605A0029DD3E /* NSNumber+JKCGFloat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+JKCGFloat.h"; sourceTree = "<group>"; };
+		436B764C22C7605A0029DD3E /* NSNumber+JKCGFloat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSNumber+JKCGFloat.h"; path = "../../../../pop/NSNumber+JKCGFloat.h"; sourceTree = "<group>"; };
 		436B764D22C7605A0029DD3E /* UIResponder+JKFirstResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIResponder+JKFirstResponder.m"; path = "../../../../pop/UIResponder+JKFirstResponder.m"; sourceTree = "<group>"; };
 		436B764E22C7605A0029DD3E /* UITableView+FDKeyedHeightCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITableView+FDKeyedHeightCache.h"; path = "../../../JKCategories/UITableView+FDKeyedHeightCache.h"; sourceTree = "<group>"; };
 		436B764F22C7605A0029DD3E /* UIScrollView+EmptyDataSet.h~HEAD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; name = "UIScrollView+EmptyDataSet.h~HEAD"; path = "../../UIScrollView+EmptyDataSet.h~HEAD"; sourceTree = "<group>"; };
@@ -916,7 +916,6 @@
 		436B75E622C760570029DD3E /* JKCategories */ = {
 			isa = PBXGroup;
 			children = (
-				436B764C22C7605A0029DD3E /* NSNumber+JKCGFloat.h */,
 			);
 			name = JKCategories;
 			sourceTree = "<group>";
@@ -1304,6 +1303,7 @@
 				436B764922C7605A0029DD3E /* NSDate+JKZeroDate.h */,
 				436B764A22C7605A0029DD3E /* NSObject+JKAppInfo.m */,
 				436B764B22C7605A0029DD3E /* NSData+JKzlib.m */,
+				436B764C22C7605A0029DD3E /* NSNumber+JKCGFloat.h */,
 				436B764D22C7605A0029DD3E /* UIResponder+JKFirstResponder.m */,
 				436B764E22C7605A0029DD3E /* UITableView+FDKeyedHeightCache.h */,
 				436B764F22C7605A0029DD3E /* UIScrollView+EmptyDataSet.h~HEAD */,
