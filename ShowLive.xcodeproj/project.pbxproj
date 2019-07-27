@@ -82,7 +82,7 @@
 		435E3AB820C02BB1002B7A7F /* NSNumber+JKCGFloat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+JKCGFloat.m"; sourceTree = "<group>"; };
 		435E3ABA20C02BB1002B7A7F /* NSDecimalNumber+JKCalculatingByString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDecimalNumber+JKCalculatingByString.m"; sourceTree = "<group>"; };
 		435E3ABB20C02BB1002B7A7F /* NSNumber+JKRomanNumerals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+JKRomanNumerals.m"; sourceTree = "<group>"; };
-		436B75DD22C760560029DD3E /* SLExtensionHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLExtensionHelper.m; path = Untils/Exten/SLHelper/pop/SLExtensionHelper.m; sourceTree = SOURCE_ROOT; };
+		436B75DD22C760560029DD3E /* SLExtensionHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLExtensionHelper.m; sourceTree = SOURCE_ROOT; };
 		436B761F22C760570029DD3E /* SLJPushUntils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLJPushUntils.h; path = Untils/Exten/SLHelper/pop/SLJPushUntils.h; sourceTree = SOURCE_ROOT; };
 		436B762222C760570029DD3E /* NotificationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NotificationService.h; path = Classes/NotificationService.h; sourceTree = SOURCE_ROOT; };
 		436B762422C760570029DD3E /* SLJPushUntils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLJPushUntils.m; sourceTree = SOURCE_ROOT; };
@@ -165,7 +165,7 @@
 		72C7B4F720C3EDE500065BC2 /* SLADView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLADView.h; sourceTree = "<group>"; };
 		72CA648B20EE4A4C0052E107 /* SLFansViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLFansViewController.h; sourceTree = "<group>"; };
 		72DFDE7820D9308600EA3AA1 /* ShowHomeMiddleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowHomeMiddleCell.h; sourceTree = "<group>"; };
-		72DFDE7C20D9328000EA3AA1 /* ShowHomeSamallCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowHomeSamallCell.h; sourceTree = "<group>"; };
+		72DFDE7C20D9328000EA3AA1 /* ShowHomeSamallCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShowHomeSamallCell.h; path = Untils/Exten/SLHelper/pop/ShowHomeSamallCell.h; sourceTree = "<group>"; };
 		72F9A9642200483100612687 /* NewTopListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewTopListCell.h; sourceTree = "<group>"; };
 		72F9A9652200484600612687 /* NewTopListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewTopListCell.m; sourceTree = "<group>"; };
 		72F9A9672200486F00612687 /* NewTopListHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewTopListHeader.h; sourceTree = "<group>"; };
@@ -226,7 +226,7 @@
 		AA2350AAA436CDCBB1E93DCE /* Pods-ShowLive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ShowLive.release.xcconfig"; sourceTree = "<group>"; };
 		B4C105B07A90052BA25F3424 /* Pods-ShowLiveUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveUITests.debug.xcconfig"; path = "../../../../requestAction/Pods-ShowLiveUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C80209C93E46267AFE3ADF2E /* libPods-ShowLiveTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShowLiveTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CFCDB8F5C4F35241EF7781C8 /* Pods-ShowLiveTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ShowLiveTests.release.xcconfig"; sourceTree = "<group>"; };
+		CFCDB8F5C4F35241EF7781C8 /* Pods-ShowLiveTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveTests.release.xcconfig"; path = "Untils/Exten/SLHelper/pop/Pods-ShowLiveTests.release.xcconfig"; sourceTree = "<group>"; };
 		D6F34820745ED99EE82E0D41 /* Pods-ShowLiveTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ShowLiveTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -370,14 +370,11 @@
 		436DEC7622870E8700F16341 /* pop */ = {
 			isa = PBXGroup;
 			children = (
-				436B75DD22C760560029DD3E /* SLExtensionHelper.m */,
 				72C686F61D628C8898214FFC /* Pods-ShowLive.debug.xcconfig */,
 				AA2350AAA436CDCBB1E93DCE /* Pods-ShowLive.release.xcconfig */,
 				D6F34820745ED99EE82E0D41 /* Pods-ShowLiveTests.debug.xcconfig */,
 				722BCF0621D78936004BFC52 /* SLInviteViewController.m */,
 				72DFDE7820D9308600EA3AA1 /* ShowHomeMiddleCell.h */,
-				72DFDE7C20D9328000EA3AA1 /* ShowHomeSamallCell.h */,
-				CFCDB8F5C4F35241EF7781C8 /* Pods-ShowLiveTests.release.xcconfig */,
 				B4C105B07A90052BA25F3424 /* Pods-ShowLiveUITests.debug.xcconfig */,
 				53B07B4395D318342B414DD2 /* Pods-ShowLiveUITests.release.xcconfig */,
 				436B761F22C760570029DD3E /* SLJPushUntils.h */,
@@ -852,8 +849,11 @@
 			isa = PBXGroup;
 			children = (
 				436B762A22C760580029DD3E /* SLExtensionHelper.h */,
+				436B75DD22C760560029DD3E /* SLExtensionHelper.m */,
 				724D4BC020C9150D0007E4E8 /* HomeHeader.h */,
 				724D4BC320C915BF0007E4E8 /* HotReusableView.h */,
+				72DFDE7C20D9328000EA3AA1 /* ShowHomeSamallCell.h */,
+				CFCDB8F5C4F35241EF7781C8 /* Pods-ShowLiveTests.release.xcconfig */,
 				A99892BD20BD79600026BA03 /* SLConfig.h */,
 				436B762422C760570029DD3E /* SLJPushUntils.m */,
 			);
