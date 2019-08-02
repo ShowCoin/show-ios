@@ -211,7 +211,7 @@
 		4367D94922EC21DB0072C5BA /* UIView+Additional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Additional.m"; path = "../../SLHelper/UIView+Additional.m"; sourceTree = "<group>"; };
 		4367D94A22EC21DB0072C5BA /* NSBundle+JKAppIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+JKAppIcon.m"; sourceTree = "<group>"; };
 		4367D94F22EC21F00072C5BA /* MKMapView+JKBetterMaps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKMapView+JKBetterMaps.m"; sourceTree = "<group>"; };
-		4367D95022EC21F00072C5BA /* UIScrollView+APParallaxHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+APParallaxHeader.h"; sourceTree = "<group>"; };
+		4367D95022EC21F00072C5BA /* UIScrollView+APParallaxHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+APParallaxHeader.h"; path = "../../../JKCategories/UIScrollView+APParallaxHeader.h"; sourceTree = "<group>"; };
 		4367D95122EC21F00072C5BA /* UITextField+JKBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+JKBlocks.m"; sourceTree = "<group>"; };
 		4367D95222EC21F00072C5BA /* UIWebVIew+JKSwipeGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIWebVIew+JKSwipeGesture.m"; path = "../../../JKCategories/UIWebVIew+JKSwipeGesture.m"; sourceTree = "<group>"; };
 		4367D95322EC21F00072C5BA /* CALayer+JKBorderColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+JKBorderColor.h"; sourceTree = "<group>"; };
@@ -452,7 +452,6 @@
 			isa = PBXGroup;
 			children = (
 				4367D95522EC21F00072C5BA /* NSObject+JKAppInfo.m */,
-				4367D95022EC21F00072C5BA /* UIScrollView+APParallaxHeader.h */,
 				4367D96822EC21FE0072C5BA /* UITextFieldDemoViewController.h */,
 				4321A34522F46DB300F19D03 /* NotRenamed */,
 			);
@@ -669,6 +668,7 @@
 				4367D94F22EC21F00072C5BA /* MKMapView+JKBetterMaps.m */,
 				4367D95422EC21F00072C5BA /* NSString+Additions.m */,
 				4367D95722EC21F00072C5BA /* TODO.md */,
+				4367D95022EC21F00072C5BA /* UIScrollView+APParallaxHeader.h */,
 				4367D95622EC21F00072C5BA /* UIScrollView+EmptyDataSet.h~HEAD */,
 				4367D95922EC21F00072C5BA /* UITableView+FDKeyedHeightCache.h */,
 				4367D96922EC21FE0072C5BA /* POPAnimatablePropertyTypes.h */,
