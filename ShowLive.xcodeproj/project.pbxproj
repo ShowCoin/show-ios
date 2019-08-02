@@ -11,6 +11,38 @@
 		431438AF209432E30059D373 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431438AD209432E30059D373 /* LaunchScreen.storyboard */; };
 		4321A34222F46D9000F19D03 /* NSObject+JKAppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4321A33F22F46D8F00F19D03 /* NSObject+JKAppInfo.m */; };
 		4321A34322F46D9000F19D03 /* UIView+Additional.m in Sources */ = {isa = PBXBuildFile; fileRef = 4321A34122F46D9000F19D03 /* UIView+Additional.m */; };
+		4321A39522F46DB300F19D03 /* NSArray+JKSafeAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 4321A34822F46DB300F19D03 /* NSArray+JKSafeAccess.m */; };
+		4321A39622F46DB300F19D03 /* pop-ios-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4321A34D22F46DB300F19D03 /* pop-ios-Info.plist */; };
+		4321A39722F46DB300F19D03 /* CATransaction+JKAnimateWithDuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 4321A35022F46DB300F19D03 /* CATransaction+JKAnimateWithDuration.m */; };
+		4321A39822F46DB300F19D03 /* NSDate+JKLunarCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4321A35222F46DB300F19D03 /* NSDate+JKLunarCalendar.m */; };
+		4321A39922F46DB300F19D03 /* POPAnimationTracer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4321A35322F46DB300F19D03 /* POPAnimationTracer.mm */; };
+		4321A39A22F46DB300F19D03 /* CATransactionDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4321A35522F46DB300F19D03 /* CATransactionDemoViewController.m */; };
+		4321A39B22F46DB300F19D03 /* UIView+FDCollapsibleConstraints.m in Sources */ = {isa = PBXBuildFile; fileRef = 4321A35822F46DB300F19D03 /* UIView+FDCollapsibleConstraints.m */; };
+		4321A39C22F46DB300F19D03 /* POPDecayAnimation.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4321A35B22F46DB300F19D03 /* POPDecayAnimation.mm */; };
+		4321A39D22F46DB300F19D03 /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 4321A35F22F46DB300F19D03 /* NSData+ImageContentType.m */; };
+		4321A39E22F46DB300F19D03 /* POPGeometry.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4321A36022F46DB300F19D03 /* POPGeometry.mm */; };
+		4321A39F22F46DB300F19D03 /* NSNotificationCenterDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4321A36222F46DB300F19D03 /* NSNotificationCenterDemoViewController.m */; };
+		4321A3A022F46DB300F19D03 /* SLNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4321A36322F46DB300F19D03 /* SLNavigationViewController.m */; };
+		4321A3A122F46DB300F19D03 /* POPLayerExtras.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4321A36422F46DB300F19D03 /* POPLayerExtras.mm */; };
+		4321A3A222F46DB300F19D03 /* NSData+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 4321A36522F46DB300F19D03 /* NSData+Image.m */; };
+		4321A3A322F46DB300F19D03 /* UIScrollView+EmptyDataSet.h~HEAD in Resources */ = {isa = PBXBuildFile; fileRef = 4321A36922F46DB300F19D03 /* UIScrollView+EmptyDataSet.h~HEAD */; };
+		4321A3A422F46DB300F19D03 /* Pods-ShowLive.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 4321A36C22F46DB300F19D03 /* Pods-ShowLive.release.xcconfig */; };
+		4321A3A522F46DB300F19D03 /* Pods-ShowLive.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 4321A36F22F46DB300F19D03 /* Pods-ShowLive.debug.xcconfig */; };
+		4321A3A622F46DB300F19D03 /* Pods-ShowLiveTests.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 4321A37122F46DB300F19D03 /* Pods-ShowLiveTests.release.xcconfig */; };
+		4321A3A722F46DB300F19D03 /* SLInviteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4321A37222F46DB300F19D03 /* SLInviteViewController.m */; };
+		4321A3A822F46DB300F19D03 /* Pods-ShowLiveTests.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 4321A37322F46DB300F19D03 /* Pods-ShowLiveTests.debug.xcconfig */; };
+		4321A3A922F46DB300F19D03 /* Pods-ShowLiveUITests.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 4321A37522F46DB300F19D03 /* Pods-ShowLiveUITests.release.xcconfig */; };
+		4321A3AA22F46DB300F19D03 /* NSObject+JKAppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4321A37922F46DB300F19D03 /* NSObject+JKAppInfo.m */; };
+		4321A3AB22F46DB300F19D03 /* UIView+Debug.m in Sources */ = {isa = PBXBuildFile; fileRef = 4321A37A22F46DB300F19D03 /* UIView+Debug.m */; };
+		4321A3AC22F46DB300F19D03 /* NSBundle+JKAppIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 4321A37C22F46DB300F19D03 /* NSBundle+JKAppIcon.m */; };
+		4321A3AD22F46DB300F19D03 /* UIView+Additional.m in Sources */ = {isa = PBXBuildFile; fileRef = 4321A37D22F46DB300F19D03 /* UIView+Additional.m */; };
+		4321A3AE22F46DB300F19D03 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4321A37F22F46DB300F19D03 /* NSString+Additions.m */; };
+		4321A3AF22F46DB300F19D03 /* UIGestureRecognizer+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4321A38222F46DB300F19D03 /* UIGestureRecognizer+BlocksKit.m */; };
+		4321A3B022F46DB300F19D03 /* NSDate+JKInternetDateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 4321A38322F46DB300F19D03 /* NSDate+JKInternetDateTime.m */; };
+		4321A3B122F46DB300F19D03 /* TODO.md in Resources */ = {isa = PBXBuildFile; fileRef = 4321A38422F46DB300F19D03 /* TODO.md */; };
+		4321A3B222F46DB300F19D03 /* MKMapView+JKBetterMaps.m in Sources */ = {isa = PBXBuildFile; fileRef = 4321A38522F46DB300F19D03 /* MKMapView+JKBetterMaps.m */; };
+		4321A3B322F46DB300F19D03 /* UIWebVIew+JKSwipeGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 4321A38B22F46DB300F19D03 /* UIWebVIew+JKSwipeGesture.m */; };
+		4321A3B422F46DB300F19D03 /* UITextField+JKBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 4321A38E22F46DB300F19D03 /* UITextField+JKBlocks.m */; };
 		435E3C8F20C02BB2002B7A7F /* NSDecimalNumber+JKExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 435E3AB420C02BB1002B7A7F /* NSDecimalNumber+JKExtensions.m */; };
 		435E3C9020C02BB2002B7A7F /* NSNumber+JKRound.m in Sources */ = {isa = PBXBuildFile; fileRef = 435E3AB720C02BB1002B7A7F /* NSNumber+JKRound.m */; };
 		435E3C9120C02BB2002B7A7F /* NSNumber+JKCGFloat.m in Sources */ = {isa = PBXBuildFile; fileRef = 435E3AB820C02BB1002B7A7F /* NSNumber+JKCGFloat.m */; };
@@ -94,6 +126,78 @@
 		4321A33F22F46D8F00F19D03 /* NSObject+JKAppInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JKAppInfo.m"; sourceTree = "<group>"; };
 		4321A34022F46D8F00F19D03 /* UITableView+FDKeyedHeightCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDKeyedHeightCache.h"; sourceTree = "<group>"; };
 		4321A34122F46D9000F19D03 /* UIView+Additional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additional.m"; sourceTree = "<group>"; };
+		4321A34722F46DB300F19D03 /* NSNotificationCenter+JKMainThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+JKMainThread.h"; sourceTree = "<group>"; };
+		4321A34822F46DB300F19D03 /* NSArray+JKSafeAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+JKSafeAccess.m"; sourceTree = "<group>"; };
+		4321A34922F46DB300F19D03 /* CLLocationManager+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLLocationManager+Blocks.h"; sourceTree = "<group>"; };
+		4321A34A22F46DB300F19D03 /* SLHistoryWorksAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLHistoryWorksAction.h; sourceTree = "<group>"; };
+		4321A34B22F46DB300F19D03 /* ShowAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowAction.h; sourceTree = "<group>"; };
+		4321A34C22F46DB300F19D03 /* UIViewController+MJPopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MJPopupViewController.h"; sourceTree = "<group>"; };
+		4321A34D22F46DB300F19D03 /* pop-ios-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "pop-ios-Info.plist"; sourceTree = "<group>"; };
+		4321A34E22F46DB300F19D03 /* NSSting+aes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSting+aes.h"; sourceTree = "<group>"; };
+		4321A34F22F46DB300F19D03 /* POPAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAction.h; sourceTree = "<group>"; };
+		4321A35022F46DB300F19D03 /* CATransaction+JKAnimateWithDuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CATransaction+JKAnimateWithDuration.m"; sourceTree = "<group>"; };
+		4321A35122F46DB300F19D03 /* SLShutUpAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLShutUpAction.h; sourceTree = "<group>"; };
+		4321A35222F46DB300F19D03 /* NSDate+JKLunarCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JKLunarCalendar.m"; sourceTree = "<group>"; };
+		4321A35322F46DB300F19D03 /* POPAnimationTracer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = POPAnimationTracer.mm; sourceTree = "<group>"; };
+		4321A35422F46DB300F19D03 /* NSNumber+JKRomanNumerals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+JKRomanNumerals.h"; sourceTree = "<group>"; };
+		4321A35522F46DB300F19D03 /* CATransactionDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CATransactionDemoViewController.m; sourceTree = "<group>"; };
+		4321A35622F46DB300F19D03 /* NSString+JKXMLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JKXMLDictionary.h"; sourceTree = "<group>"; };
+		4321A35722F46DB300F19D03 /* SLAttentionListAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLAttentionListAction.h; sourceTree = "<group>"; };
+		4321A35822F46DB300F19D03 /* UIView+FDCollapsibleConstraints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FDCollapsibleConstraints.m"; sourceTree = "<group>"; };
+		4321A35922F46DB300F19D03 /* SLGiftAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLGiftAction.h; sourceTree = "<group>"; };
+		4321A35A22F46DB300F19D03 /* FloatConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FloatConversion.h; sourceTree = "<group>"; };
+		4321A35B22F46DB300F19D03 /* POPDecayAnimation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = POPDecayAnimation.mm; sourceTree = "<group>"; };
+		4321A35C22F46DB300F19D03 /* POPAnimatableProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAnimatableProperty.h; sourceTree = "<group>"; };
+		4321A35D22F46DB300F19D03 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
+		4321A35E22F46DB300F19D03 /* UIView+GestureCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GestureCallback.h"; sourceTree = "<group>"; };
+		4321A35F22F46DB300F19D03 /* NSData+ImageContentType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+ImageContentType.m"; sourceTree = "<group>"; };
+		4321A36022F46DB300F19D03 /* POPGeometry.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = POPGeometry.mm; sourceTree = "<group>"; };
+		4321A36122F46DB300F19D03 /* POPAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAnimation.h; sourceTree = "<group>"; };
+		4321A36222F46DB300F19D03 /* NSNotificationCenterDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSNotificationCenterDemoViewController.m; sourceTree = "<group>"; };
+		4321A36322F46DB300F19D03 /* SLNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLNavigationViewController.m; sourceTree = "<group>"; };
+		4321A36422F46DB300F19D03 /* POPLayerExtras.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = POPLayerExtras.mm; sourceTree = "<group>"; };
+		4321A36522F46DB300F19D03 /* NSData+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Image.m"; sourceTree = "<group>"; };
+		4321A36722F46DB300F19D03 /* UITableView+FDTemplateLayoutCellDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDTemplateLayoutCellDebug.h"; sourceTree = "<group>"; };
+		4321A36922F46DB300F19D03 /* UIScrollView+EmptyDataSet.h~HEAD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UIScrollView+EmptyDataSet.h~HEAD"; sourceTree = "<group>"; };
+		4321A36B22F46DB300F19D03 /* HotReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotReusableView.h; sourceTree = "<group>"; };
+		4321A36C22F46DB300F19D03 /* Pods-ShowLive.release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Pods-ShowLive.release.xcconfig"; sourceTree = "<group>"; };
+		4321A36D22F46DB300F19D03 /* HomeHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeHeader.h; sourceTree = "<group>"; };
+		4321A36E22F46DB300F19D03 /* ShowHomeSamallCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowHomeSamallCell.h; sourceTree = "<group>"; };
+		4321A36F22F46DB300F19D03 /* Pods-ShowLive.debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Pods-ShowLive.debug.xcconfig"; sourceTree = "<group>"; };
+		4321A37022F46DB300F19D03 /* ShowHomeMiddleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowHomeMiddleCell.h; sourceTree = "<group>"; };
+		4321A37122F46DB300F19D03 /* Pods-ShowLiveTests.release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Pods-ShowLiveTests.release.xcconfig"; sourceTree = "<group>"; };
+		4321A37222F46DB300F19D03 /* SLInviteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLInviteViewController.m; sourceTree = "<group>"; };
+		4321A37322F46DB300F19D03 /* Pods-ShowLiveTests.debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Pods-ShowLiveTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4321A37422F46DB300F19D03 /* SLConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLConfig.h; sourceTree = "<group>"; };
+		4321A37522F46DB300F19D03 /* Pods-ShowLiveUITests.release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Pods-ShowLiveUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4321A37622F46DB300F19D03 /* UIView+FDCollapsibleConstraints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FDCollapsibleConstraints.h"; sourceTree = "<group>"; };
+		4321A37922F46DB300F19D03 /* NSObject+JKAppInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JKAppInfo.m"; sourceTree = "<group>"; };
+		4321A37A22F46DB300F19D03 /* UIView+Debug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Debug.m"; sourceTree = "<group>"; };
+		4321A37B22F46DB300F19D03 /* UITableView+FDKeyedHeightCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDKeyedHeightCache.h"; sourceTree = "<group>"; };
+		4321A37C22F46DB300F19D03 /* NSBundle+JKAppIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+JKAppIcon.m"; sourceTree = "<group>"; };
+		4321A37D22F46DB300F19D03 /* UIView+Additional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additional.m"; sourceTree = "<group>"; };
+		4321A37E22F46DB300F19D03 /* SLGetRyTokenAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLGetRyTokenAction.h; sourceTree = "<group>"; };
+		4321A37F22F46DB300F19D03 /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
+		4321A38022F46DB300F19D03 /* UITextField+JKBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+JKBlocks.h"; sourceTree = "<group>"; };
+		4321A38122F46DB300F19D03 /* CALayer+JKBorderColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+JKBorderColor.h"; sourceTree = "<group>"; };
+		4321A38222F46DB300F19D03 /* UIGestureRecognizer+BlocksKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+BlocksKit.m"; sourceTree = "<group>"; };
+		4321A38322F46DB300F19D03 /* NSDate+JKInternetDateTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JKInternetDateTime.m"; sourceTree = "<group>"; };
+		4321A38422F46DB300F19D03 /* TODO.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = TODO.md; sourceTree = "<group>"; };
+		4321A38522F46DB300F19D03 /* MKMapView+JKBetterMaps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKMapView+JKBetterMaps.m"; sourceTree = "<group>"; };
+		4321A38622F46DB300F19D03 /* UIView+Debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Debug.h"; sourceTree = "<group>"; };
+		4321A38722F46DB300F19D03 /* POPLayerExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPLayerExtras.h; sourceTree = "<group>"; };
+		4321A38822F46DB300F19D03 /* POPAnimatablePropertyTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAnimatablePropertyTypes.h; sourceTree = "<group>"; };
+		4321A38922F46DB300F19D03 /* UITextField+JKHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+JKHistory.h"; sourceTree = "<group>"; };
+		4321A38A22F46DB300F19D03 /* NSData+JKAPNSToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+JKAPNSToken.h"; sourceTree = "<group>"; };
+		4321A38B22F46DB300F19D03 /* UIWebVIew+JKSwipeGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebVIew+JKSwipeGesture.m"; sourceTree = "<group>"; };
+		4321A38C22F46DB300F19D03 /* UIScrollView+APParallaxHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+APParallaxHeader.h"; sourceTree = "<group>"; };
+		4321A38D22F46DB300F19D03 /* UITextFieldDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITextFieldDemoViewController.h; sourceTree = "<group>"; };
+		4321A38E22F46DB300F19D03 /* UITextField+JKBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+JKBlocks.m"; sourceTree = "<group>"; };
+		4321A38F22F46DB300F19D03 /* UIView+FDCollapsibleConstraints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FDCollapsibleConstraints.h"; sourceTree = "<group>"; };
+		4321A39022F46DB300F19D03 /* UIViewController+DDPopUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DDPopUpViewController.h"; sourceTree = "<group>"; };
+		4321A39122F46DB300F19D03 /* CATransactionDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CATransactionDemoViewController.h; sourceTree = "<group>"; };
+		4321A39222F46DB300F19D03 /* POPAnimationTracer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAnimationTracer.h; sourceTree = "<group>"; };
+		4321A39422F46DB300F19D03 /* POPSpringAnimationInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPSpringAnimationInternal.h; sourceTree = "<group>"; };
 		435E3AB420C02BB1002B7A7F /* NSDecimalNumber+JKExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDecimalNumber+JKExtensions.m"; sourceTree = "<group>"; };
 		435E3AB720C02BB1002B7A7F /* NSNumber+JKRound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+JKRound.m"; sourceTree = "<group>"; };
 		435E3AB820C02BB1002B7A7F /* NSNumber+JKCGFloat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+JKCGFloat.m"; sourceTree = "<group>"; };
@@ -344,6 +448,147 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
+		4321A34422F46DB300F19D03 /* JKCategories */ = {
+			isa = PBXGroup;
+			children = (
+				4321A34522F46DB300F19D03 /* NotRenamed */,
+			);
+			path = JKCategories;
+			sourceTree = "<group>";
+		};
+		4321A34522F46DB300F19D03 /* NotRenamed */ = {
+			isa = PBXGroup;
+			children = (
+				4321A34622F46DB300F19D03 /* UITableView-FDTemplateLayoutCell */,
+			);
+			path = NotRenamed;
+			sourceTree = "<group>";
+		};
+		4321A34622F46DB300F19D03 /* UITableView-FDTemplateLayoutCell */ = {
+			isa = PBXGroup;
+			children = (
+				4321A34722F46DB300F19D03 /* NSNotificationCenter+JKMainThread.h */,
+				4321A34822F46DB300F19D03 /* NSArray+JKSafeAccess.m */,
+				4321A34922F46DB300F19D03 /* CLLocationManager+Blocks.h */,
+				4321A34A22F46DB300F19D03 /* SLHistoryWorksAction.h */,
+				4321A34B22F46DB300F19D03 /* ShowAction.h */,
+				4321A34C22F46DB300F19D03 /* UIViewController+MJPopupViewController.h */,
+				4321A34D22F46DB300F19D03 /* pop-ios-Info.plist */,
+				4321A34E22F46DB300F19D03 /* NSSting+aes.h */,
+				4321A34F22F46DB300F19D03 /* POPAction.h */,
+				4321A35022F46DB300F19D03 /* CATransaction+JKAnimateWithDuration.m */,
+				4321A35122F46DB300F19D03 /* SLShutUpAction.h */,
+				4321A35222F46DB300F19D03 /* NSDate+JKLunarCalendar.m */,
+				4321A35322F46DB300F19D03 /* POPAnimationTracer.mm */,
+				4321A35422F46DB300F19D03 /* NSNumber+JKRomanNumerals.h */,
+				4321A35522F46DB300F19D03 /* CATransactionDemoViewController.m */,
+				4321A35622F46DB300F19D03 /* NSString+JKXMLDictionary.h */,
+				4321A35722F46DB300F19D03 /* SLAttentionListAction.h */,
+				4321A35822F46DB300F19D03 /* UIView+FDCollapsibleConstraints.m */,
+				4321A35922F46DB300F19D03 /* SLGiftAction.h */,
+				4321A35A22F46DB300F19D03 /* FloatConversion.h */,
+				4321A35B22F46DB300F19D03 /* POPDecayAnimation.mm */,
+				4321A35C22F46DB300F19D03 /* POPAnimatableProperty.h */,
+				4321A35D22F46DB300F19D03 /* NSString+Additions.h */,
+				4321A35E22F46DB300F19D03 /* UIView+GestureCallback.h */,
+				4321A35F22F46DB300F19D03 /* NSData+ImageContentType.m */,
+				4321A36022F46DB300F19D03 /* POPGeometry.mm */,
+				4321A36122F46DB300F19D03 /* POPAnimation.h */,
+				4321A36222F46DB300F19D03 /* NSNotificationCenterDemoViewController.m */,
+				4321A36322F46DB300F19D03 /* SLNavigationViewController.m */,
+				4321A36422F46DB300F19D03 /* POPLayerExtras.mm */,
+				4321A36522F46DB300F19D03 /* NSData+Image.m */,
+			);
+			path = "UITableView-FDTemplateLayoutCell";
+			sourceTree = "<group>";
+		};
+		4321A36622F46DB300F19D03 /* Exten */ = {
+			isa = PBXGroup;
+			children = (
+				4321A36722F46DB300F19D03 /* UITableView+FDTemplateLayoutCellDebug.h */,
+				4321A36822F46DB300F19D03 /* SLHelper */,
+				4321A37722F46DB300F19D03 /* NotRenamed */,
+			);
+			path = Exten;
+			sourceTree = "<group>";
+		};
+		4321A36822F46DB300F19D03 /* SLHelper */ = {
+			isa = PBXGroup;
+			children = (
+				4321A36922F46DB300F19D03 /* UIScrollView+EmptyDataSet.h~HEAD */,
+				4321A36A22F46DB300F19D03 /* pop */,
+				4321A37622F46DB300F19D03 /* UIView+FDCollapsibleConstraints.h */,
+			);
+			path = SLHelper;
+			sourceTree = "<group>";
+		};
+		4321A36A22F46DB300F19D03 /* pop */ = {
+			isa = PBXGroup;
+			children = (
+				4321A36B22F46DB300F19D03 /* HotReusableView.h */,
+				4321A36C22F46DB300F19D03 /* Pods-ShowLive.release.xcconfig */,
+				4321A36D22F46DB300F19D03 /* HomeHeader.h */,
+				4321A36E22F46DB300F19D03 /* ShowHomeSamallCell.h */,
+				4321A36F22F46DB300F19D03 /* Pods-ShowLive.debug.xcconfig */,
+				4321A37022F46DB300F19D03 /* ShowHomeMiddleCell.h */,
+				4321A37122F46DB300F19D03 /* Pods-ShowLiveTests.release.xcconfig */,
+				4321A37222F46DB300F19D03 /* SLInviteViewController.m */,
+				4321A37322F46DB300F19D03 /* Pods-ShowLiveTests.debug.xcconfig */,
+				4321A37422F46DB300F19D03 /* SLConfig.h */,
+				4321A37522F46DB300F19D03 /* Pods-ShowLiveUITests.release.xcconfig */,
+			);
+			path = pop;
+			sourceTree = "<group>";
+		};
+		4321A37722F46DB300F19D03 /* NotRenamed */ = {
+			isa = PBXGroup;
+			children = (
+				4321A37822F46DB300F19D03 /* UITableView-FDTemplateLayoutCell */,
+			);
+			path = NotRenamed;
+			sourceTree = "<group>";
+		};
+		4321A37822F46DB300F19D03 /* UITableView-FDTemplateLayoutCell */ = {
+			isa = PBXGroup;
+			children = (
+				4321A37922F46DB300F19D03 /* NSObject+JKAppInfo.m */,
+				4321A37A22F46DB300F19D03 /* UIView+Debug.m */,
+				4321A37B22F46DB300F19D03 /* UITableView+FDKeyedHeightCache.h */,
+				4321A37C22F46DB300F19D03 /* NSBundle+JKAppIcon.m */,
+				4321A37D22F46DB300F19D03 /* UIView+Additional.m */,
+				4321A37E22F46DB300F19D03 /* SLGetRyTokenAction.h */,
+				4321A37F22F46DB300F19D03 /* NSString+Additions.m */,
+				4321A38022F46DB300F19D03 /* UITextField+JKBlocks.h */,
+				4321A38122F46DB300F19D03 /* CALayer+JKBorderColor.h */,
+				4321A38222F46DB300F19D03 /* UIGestureRecognizer+BlocksKit.m */,
+				4321A38322F46DB300F19D03 /* NSDate+JKInternetDateTime.m */,
+				4321A38422F46DB300F19D03 /* TODO.md */,
+				4321A38522F46DB300F19D03 /* MKMapView+JKBetterMaps.m */,
+				4321A38622F46DB300F19D03 /* UIView+Debug.h */,
+				4321A38722F46DB300F19D03 /* POPLayerExtras.h */,
+				4321A38822F46DB300F19D03 /* POPAnimatablePropertyTypes.h */,
+				4321A38922F46DB300F19D03 /* UITextField+JKHistory.h */,
+				4321A38A22F46DB300F19D03 /* NSData+JKAPNSToken.h */,
+				4321A38B22F46DB300F19D03 /* UIWebVIew+JKSwipeGesture.m */,
+				4321A38C22F46DB300F19D03 /* UIScrollView+APParallaxHeader.h */,
+				4321A38D22F46DB300F19D03 /* UITextFieldDemoViewController.h */,
+				4321A38E22F46DB300F19D03 /* UITextField+JKBlocks.m */,
+				4321A38F22F46DB300F19D03 /* UIView+FDCollapsibleConstraints.h */,
+				4321A39022F46DB300F19D03 /* UIViewController+DDPopUpViewController.h */,
+				4321A39122F46DB300F19D03 /* CATransactionDemoViewController.h */,
+				4321A39222F46DB300F19D03 /* POPAnimationTracer.h */,
+			);
+			path = "UITableView-FDTemplateLayoutCell";
+			sourceTree = "<group>";
+		};
+		4321A39322F46DB300F19D03 /* SLPlayAudio */ = {
+			isa = PBXGroup;
+			children = (
+				4321A39422F46DB300F19D03 /* POPSpringAnimationInternal.h */,
+			);
+			path = SLPlayAudio;
+			sourceTree = "<group>";
+		};
 		434DDB4B20C92B4E00191FC1 /* JKCategories */ = {
 			isa = PBXGroup;
 			children = (
@@ -457,6 +702,9 @@
 		43968A6720AC397000149DCC /* Untils */ = {
 			isa = PBXGroup;
 			children = (
+				4321A36622F46DB300F19D03 /* Exten */,
+				4321A34422F46DB300F19D03 /* JKCategories */,
+				4321A39322F46DB300F19D03 /* SLPlayAudio */,
 				934AE45E20FC6B7B00B60AD4 /* Exten */,
 				434DDB4B20C92B4E00191FC1 /* JKCategories */,
 			);
@@ -1052,11 +1300,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4321A3B122F46DB300F19D03 /* TODO.md in Resources */,
+				4321A3A822F46DB300F19D03 /* Pods-ShowLiveTests.debug.xcconfig in Resources */,
+				4321A3A622F46DB300F19D03 /* Pods-ShowLiveTests.release.xcconfig in Resources */,
+				4321A3A422F46DB300F19D03 /* Pods-ShowLive.release.xcconfig in Resources */,
 				4367D96222EC21F00072C5BA /* UIScrollView+EmptyDataSet.h~HEAD in Resources */,
+				4321A3A322F46DB300F19D03 /* UIScrollView+EmptyDataSet.h~HEAD in Resources */,
 				72FE9B6620621F59008DD3D5 /* LaunchScreen.storyboard in Resources */,
+				4321A39622F46DB300F19D03 /* pop-ios-Info.plist in Resources */,
 				431438AF209432E30059D373 /* LaunchScreen.storyboard in Resources */,
+				4321A3A922F46DB300F19D03 /* Pods-ShowLiveUITests.release.xcconfig in Resources */,
 				A9BBAFBE20CA8E5B001683F8 /* Media.xcassets in Resources */,
 				4367D96322EC21F00072C5BA /* TODO.md in Resources */,
+				4321A3A522F46DB300F19D03 /* Pods-ShowLive.debug.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1154,45 +1410,67 @@
 				725282F221BE666A00802C09 /* ShowAccountTableHeader.m in Sources */,
 				43D24A952094B4C500C59AC8 /* ShowNavigationBar.m in Sources */,
 				435E3C9220C02BB2002B7A7F /* NSDecimalNumber+JKCalculatingByString.m in Sources */,
+				4321A39722F46DB300F19D03 /* CATransaction+JKAnimateWithDuration.m in Sources */,
 				722BCF0721D78936004BFC52 /* SLInviteViewController.m in Sources */,
 				72A0088620FC9FE40051C643 /* SLBlankView.m in Sources */,
 				72FE9B6920621F59008DD3D5 /* main.m in Sources */,
 				435E3C9020C02BB2002B7A7F /* NSNumber+JKRound.m in Sources */,
 				728E16B721C7C7A50000047A /* CoinDetailVC.m in Sources */,
 				725282E021BB968500802C09 /* SLWalletHomePageHeader.m in Sources */,
+				4321A39D22F46DB300F19D03 /* NSData+ImageContentType.m in Sources */,
 				435E3C8F20C02BB2002B7A7F /* NSDecimalNumber+JKExtensions.m in Sources */,
 				4367D94B22EC21DB0072C5BA /* NSDate+JKInternetDateTime.m in Sources */,
 				72F9A96C220048E800612687 /* NewTopListViewController.m in Sources */,
+				4321A3AE22F46DB300F19D03 /* NSString+Additions.m in Sources */,
+				4321A39522F46DB300F19D03 /* NSArray+JKSafeAccess.m in Sources */,
+				4321A3A222F46DB300F19D03 /* NSData+Image.m in Sources */,
 				435E3C9120C02BB2002B7A7F /* NSNumber+JKCGFloat.m in Sources */,
 				4367D95D22EC21F00072C5BA /* MKMapView+JKBetterMaps.m in Sources */,
 				7289901B20F795EA0044E74A /* SLWithdrawAlert.m in Sources */,
+				4321A3AD22F46DB300F19D03 /* UIView+Additional.m in Sources */,
 				72F9A9692200487B00612687 /* NewTopListHeader.m in Sources */,
+				4321A3B422F46DB300F19D03 /* UITextField+JKBlocks.m in Sources */,
 				436B77C822C7605B0029DD3E /* SLJPushUntils.m in Sources */,
 				4367D96022EC21F00072C5BA /* NSString+Additions.m in Sources */,
+				4321A3AC22F46DB300F19D03 /* NSBundle+JKAppIcon.m in Sources */,
+				4321A3A722F46DB300F19D03 /* SLInviteViewController.m in Sources */,
 				72F9A9662200484600612687 /* NewTopListCell.m in Sources */,
 				4321A34322F46D9000F19D03 /* UIView+Additional.m in Sources */,
 				4367D94D22EC21DB0072C5BA /* UIView+Additional.m in Sources */,
+				4321A3B022F46DB300F19D03 /* NSDate+JKInternetDateTime.m in Sources */,
 				4321A34222F46D9000F19D03 /* NSObject+JKAppInfo.m in Sources */,
 				72A0088C20FCA1820051C643 /* SLUserViewHeader+SLMinCard.m in Sources */,
 				4367D94C22EC21DB0072C5BA /* UIGestureRecognizer+BlocksKit.m in Sources */,
 				435E3C9320C02BB2002B7A7F /* NSNumber+JKRomanNumerals.m in Sources */,
 				9391AA8320BF078A00D520F1 /* SLTimerLabel.m in Sources */,
 				93615AF320C14BB2000D5658 /* SLSearchBar.m in Sources */,
+				4321A3AB22F46DB300F19D03 /* UIView+Debug.m in Sources */,
 				725282CC21BB94FC00802C09 /* SLAuthenticationView.m in Sources */,
 				43D24A912094A43600C59AC8 /* AppDelegate+ShowRegisterService.m in Sources */,
 				43D24A922094A43600C59AC8 /* ShowAppDelegate.m in Sources */,
+				4321A39A22F46DB300F19D03 /* CATransactionDemoViewController.m in Sources */,
+				4321A3B222F46DB300F19D03 /* MKMapView+JKBetterMaps.m in Sources */,
 				4367D96422EC21F00072C5BA /* UIView+Debug.m in Sources */,
+				4321A3AA22F46DB300F19D03 /* NSObject+JKAppInfo.m in Sources */,
 				725282F021BE660A00802C09 /* ShowAccountHead.m in Sources */,
 				723816BE20C6ABFF00C3885E /* UIColor+Equalable.m in Sources */,
 				4367D96122EC21F00072C5BA /* NSObject+JKAppInfo.m in Sources */,
+				4321A3B322F46DB300F19D03 /* UIWebVIew+JKSwipeGesture.m in Sources */,
+				4321A39C22F46DB300F19D03 /* POPDecayAnimation.mm in Sources */,
 				4367D95F22EC21F00072C5BA /* UIWebVIew+JKSwipeGesture.m in Sources */,
+				4321A39922F46DB300F19D03 /* POPAnimationTracer.mm in Sources */,
+				4321A3AF22F46DB300F19D03 /* UIGestureRecognizer+BlocksKit.m in Sources */,
 				724FF37D20E6680500DD40EB /* SLUserInfoListCell.m in Sources */,
+				4321A39E22F46DB300F19D03 /* POPGeometry.mm in Sources */,
 				723816B720C68B3C00C3885E /* SLHeadPortrait.m in Sources */,
 				93615AEB20C1453A000D5658 /* SLBaseWebViewController.m in Sources */,
+				4321A39B22F46DB300F19D03 /* UIView+FDCollapsibleConstraints.m in Sources */,
 				7217AD9A21C536A700D082E9 /* WithdrawViewController.m in Sources */,
 				72A0088920FCA0710051C643 /* SLSafeCenterCell.m in Sources */,
+				4321A39F22F46DB300F19D03 /* NSNotificationCenterDemoViewController.m in Sources */,
 				9391AA9720C03A4300D520F1 /* SLWebViewJSFuncNameConst.m in Sources */,
 				725282E821BBE44200802C09 /* SLPassWordAlert.m in Sources */,
+				4321A3A022F46DB300F19D03 /* SLNavigationViewController.m in Sources */,
 				725282E621BBE3EE00802C09 /* SLGooglePassWordAlert.m in Sources */,
 				4367D94E22EC21DB0072C5BA /* NSBundle+JKAppIcon.m in Sources */,
 				725282EC21BE655400802C09 /* ShowAccountExchangeView.m in Sources */,
@@ -1201,7 +1479,9 @@
 				723816B420C689AB00C3885E /* SLLevelMarkView.m in Sources */,
 				725282E221BB971900802C09 /* ShowAccountCell.m in Sources */,
 				93D2C11220BD238500C9D960 /* SLFriendListCell.m in Sources */,
+				4321A3A122F46DB300F19D03 /* POPLayerExtras.mm in Sources */,
 				724FF37A20E6678D00DD40EB /* SLInfoHeaderView.m in Sources */,
+				4321A39822F46DB300F19D03 /* NSDate+JKLunarCalendar.m in Sources */,
 				436B77A622C7605B0029DD3E /* SLExtensionHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
