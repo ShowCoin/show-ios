@@ -216,7 +216,7 @@
 		4367D95222EC21F00072C5BA /* UIWebVIew+JKSwipeGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIWebVIew+JKSwipeGesture.m"; path = "../../../JKCategories/UIWebVIew+JKSwipeGesture.m"; sourceTree = "<group>"; };
 		4367D95322EC21F00072C5BA /* CALayer+JKBorderColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+JKBorderColor.h"; sourceTree = "<group>"; };
 		4367D95422EC21F00072C5BA /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Additions.m"; path = "../../../JKCategories/NSString+Additions.m"; sourceTree = "<group>"; };
-		4367D95522EC21F00072C5BA /* NSObject+JKAppInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+JKAppInfo.m"; path = "../Exten/SLHelper/NSObject+JKAppInfo.m"; sourceTree = "<group>"; };
+		4367D95522EC21F00072C5BA /* NSObject+JKAppInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+JKAppInfo.m"; path = "../../SLHelper/NSObject+JKAppInfo.m"; sourceTree = "<group>"; };
 		4367D95622EC21F00072C5BA /* UIScrollView+EmptyDataSet.h~HEAD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; name = "UIScrollView+EmptyDataSet.h~HEAD"; path = "../UIScrollView+EmptyDataSet.h~HEAD"; sourceTree = "<group>"; };
 		4367D95722EC21F00072C5BA /* TODO.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = TODO.md; sourceTree = "<group>"; };
 		4367D95822EC21F00072C5BA /* UIView+Debug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Debug.m"; sourceTree = "<group>"; };
@@ -451,7 +451,6 @@
 		4321A34422F46DB300F19D03 /* JKCategories */ = {
 			isa = PBXGroup;
 			children = (
-				4367D95522EC21F00072C5BA /* NSObject+JKAppInfo.m */,
 				4367D96822EC21FE0072C5BA /* UITextFieldDemoViewController.h */,
 				4321A34522F46DB300F19D03 /* NotRenamed */,
 			);
@@ -666,6 +665,7 @@
 				4367D95322EC21F00072C5BA /* CALayer+JKBorderColor.h */,
 				4367D95A22EC21F00072C5BA /* CATransactionDemoViewController.h */,
 				4367D94F22EC21F00072C5BA /* MKMapView+JKBetterMaps.m */,
+				4367D95522EC21F00072C5BA /* NSObject+JKAppInfo.m */,
 				4367D95422EC21F00072C5BA /* NSString+Additions.m */,
 				4367D95722EC21F00072C5BA /* TODO.md */,
 				4367D95022EC21F00072C5BA /* UIScrollView+APParallaxHeader.h */,
