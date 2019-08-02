@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0F0522A04561E7C62B6FF647 /* libPods-ShowLive.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4537B7EFEE31B0E75BBC7D5B /* libPods-ShowLive.a */; };
 		431438AF209432E30059D373 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431438AD209432E30059D373 /* LaunchScreen.storyboard */; };
+		4321A34222F46D9000F19D03 /* NSObject+JKAppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4321A33F22F46D8F00F19D03 /* NSObject+JKAppInfo.m */; };
+		4321A34322F46D9000F19D03 /* UIView+Additional.m in Sources */ = {isa = PBXBuildFile; fileRef = 4321A34122F46D9000F19D03 /* UIView+Additional.m */; };
 		435E3C8F20C02BB2002B7A7F /* NSDecimalNumber+JKExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 435E3AB420C02BB1002B7A7F /* NSDecimalNumber+JKExtensions.m */; };
 		435E3C9020C02BB2002B7A7F /* NSNumber+JKRound.m in Sources */ = {isa = PBXBuildFile; fileRef = 435E3AB720C02BB1002B7A7F /* NSNumber+JKRound.m */; };
 		435E3C9120C02BB2002B7A7F /* NSNumber+JKCGFloat.m in Sources */ = {isa = PBXBuildFile; fileRef = 435E3AB820C02BB1002B7A7F /* NSNumber+JKCGFloat.m */; };
@@ -89,6 +91,9 @@
 /* Begin PBXFileReference section */
 		43143749209432BE0059D373 /* ShowWallet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowWallet.h; sourceTree = "<group>"; };
 		431438AE209432E30059D373 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4321A33F22F46D8F00F19D03 /* NSObject+JKAppInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JKAppInfo.m"; sourceTree = "<group>"; };
+		4321A34022F46D8F00F19D03 /* UITableView+FDKeyedHeightCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDKeyedHeightCache.h"; sourceTree = "<group>"; };
+		4321A34122F46D9000F19D03 /* UIView+Additional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additional.m"; sourceTree = "<group>"; };
 		435E3AB420C02BB1002B7A7F /* NSDecimalNumber+JKExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDecimalNumber+JKExtensions.m"; sourceTree = "<group>"; };
 		435E3AB720C02BB1002B7A7F /* NSNumber+JKRound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+JKRound.m"; sourceTree = "<group>"; };
 		435E3AB820C02BB1002B7A7F /* NSNumber+JKCGFloat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+JKCGFloat.m"; sourceTree = "<group>"; };
@@ -405,6 +410,9 @@
 		436DEC3F22870E1A00F16341 /* UITableView-FDTemplateLayoutCell */ = {
 			isa = PBXGroup;
 			children = (
+				4321A33F22F46D8F00F19D03 /* NSObject+JKAppInfo.m */,
+				4321A34022F46D8F00F19D03 /* UITableView+FDKeyedHeightCache.h */,
+				4321A34122F46D9000F19D03 /* UIView+Additional.m */,
 				4367D94A22EC21DB0072C5BA /* NSBundle+JKAppIcon.m */,
 				4367D95122EC21F00072C5BA /* UITextField+JKBlocks.m */,
 				4367D95822EC21F00072C5BA /* UIView+Debug.m */,
@@ -1162,7 +1170,9 @@
 				436B77C822C7605B0029DD3E /* SLJPushUntils.m in Sources */,
 				4367D96022EC21F00072C5BA /* NSString+Additions.m in Sources */,
 				72F9A9662200484600612687 /* NewTopListCell.m in Sources */,
+				4321A34322F46D9000F19D03 /* UIView+Additional.m in Sources */,
 				4367D94D22EC21DB0072C5BA /* UIView+Additional.m in Sources */,
+				4321A34222F46D9000F19D03 /* NSObject+JKAppInfo.m in Sources */,
 				72A0088C20FCA1820051C643 /* SLUserViewHeader+SLMinCard.m in Sources */,
 				4367D94C22EC21DB0072C5BA /* UIGestureRecognizer+BlocksKit.m in Sources */,
 				435E3C9320C02BB2002B7A7F /* NSNumber+JKRomanNumerals.m in Sources */,
