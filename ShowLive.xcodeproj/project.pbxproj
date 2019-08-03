@@ -315,7 +315,7 @@
 		72C7B4F720C3EDE500065BC2 /* SLADView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLADView.h; sourceTree = "<group>"; };
 		72CA648B20EE4A4C0052E107 /* SLFansViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLFansViewController.h; sourceTree = "<group>"; };
 		72DFDE7820D9308600EA3AA1 /* ShowHomeMiddleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowHomeMiddleCell.h; sourceTree = "<group>"; };
-		72DFDE7C20D9328000EA3AA1 /* ShowHomeSamallCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShowHomeSamallCell.h; path = Untils/Exten/SLHelper/pop/ShowHomeSamallCell.h; sourceTree = "<group>"; };
+		72DFDE7C20D9328000EA3AA1 /* ShowHomeSamallCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowHomeSamallCell.h; sourceTree = "<group>"; };
 		72F9A9642200483100612687 /* NewTopListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewTopListCell.h; sourceTree = "<group>"; };
 		72F9A9652200484600612687 /* NewTopListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewTopListCell.m; sourceTree = "<group>"; };
 		72F9A9672200486F00612687 /* NewTopListHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewTopListHeader.h; sourceTree = "<group>"; };
@@ -373,7 +373,7 @@
 		93D2C11120BD238500C9D960 /* SLFriendListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLFriendListCell.m; sourceTree = "<group>"; };
 		A99892BD20BD79600026BA03 /* SLConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLConfig.h; sourceTree = "<group>"; };
 		A9BBAFBD20CA8E5B001683F8 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
-		AA2350AAA436CDCBB1E93DCE /* Pods-ShowLive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowLive.release.xcconfig"; path = "Untils/Exten/SLHelper/pop/Pods-ShowLive.release.xcconfig"; sourceTree = "<group>"; };
+		AA2350AAA436CDCBB1E93DCE /* Pods-ShowLive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ShowLive.release.xcconfig"; sourceTree = "<group>"; };
 		B4C105B07A90052BA25F3424 /* Pods-ShowLiveUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveUITests.debug.xcconfig"; path = "../../../../requestAction/Pods-ShowLiveUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C80209C93E46267AFE3ADF2E /* libPods-ShowLiveTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShowLiveTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFCDB8F5C4F35241EF7781C8 /* Pods-ShowLiveTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ShowLiveTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -589,10 +589,12 @@
 				4321A36022F46DB300F19D03 /* POPGeometry.mm */,
 				4321A36122F46DB300F19D03 /* POPAnimation.h */,
 				72C686F61D628C8898214FFC /* Pods-ShowLive.debug.xcconfig */,
+				AA2350AAA436CDCBB1E93DCE /* Pods-ShowLive.release.xcconfig */,
 				724D4BC020C9150D0007E4E8 /* HomeHeader.h */,
 				722BCF0621D78936004BFC52 /* SLInviteViewController.m */,
 				724D4BC320C915BF0007E4E8 /* HotReusableView.h */,
 				72DFDE7820D9308600EA3AA1 /* ShowHomeMiddleCell.h */,
+				72DFDE7C20D9328000EA3AA1 /* ShowHomeSamallCell.h */,
 				CFCDB8F5C4F35241EF7781C8 /* Pods-ShowLiveTests.release.xcconfig */,
 				D25D805B22F553990082F6FB /* Pods-ShowLiveUITests.debug.xcconfig */,
 				53B07B4395D318342B414DD2 /* Pods-ShowLiveUITests.release.xcconfig */,
@@ -1182,9 +1184,7 @@
 			children = (
 				436B762A22C760580029DD3E /* SLExtensionHelper.h */,
 				436B75DD22C760560029DD3E /* SLExtensionHelper.m */,
-				AA2350AAA436CDCBB1E93DCE /* Pods-ShowLive.release.xcconfig */,
 				D6F34820745ED99EE82E0D41 /* Pods-ShowLiveTests.debug.xcconfig */,
-				72DFDE7C20D9328000EA3AA1 /* ShowHomeSamallCell.h */,
 				D238833622EC1F1B00A9161B /* Pods-ShowLiveUITests.debug.xcconfig */,
 			);
 			name = Pods;
