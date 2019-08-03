@@ -232,11 +232,11 @@
 		4367D96A22EC21FE0072C5BA /* POPLayerExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPLayerExtras.h; sourceTree = "<group>"; };
 		4367D96B22EC21FF0072C5BA /* POPAnimationTracer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAnimationTracer.h; sourceTree = "<group>"; };
 		4367D96C22EC21FF0072C5BA /* UIViewController+DDPopUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DDPopUpViewController.h"; sourceTree = "<group>"; };
-		436B75DD22C760560029DD3E /* SLExtensionHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLExtensionHelper.m; sourceTree = SOURCE_ROOT; };
+		436B75DD22C760560029DD3E /* SLExtensionHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLExtensionHelper.m; path = Untils/JKCategories/SLExtensionHelper.m; sourceTree = SOURCE_ROOT; };
 		436B761F22C760570029DD3E /* SLJPushUntils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLJPushUntils.h; path = Untils/JKCategories/SLJPushUntils.h; sourceTree = SOURCE_ROOT; };
 		436B762222C760570029DD3E /* NotificationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NotificationService.h; path = Classes/NotificationService.h; sourceTree = SOURCE_ROOT; };
 		436B762422C760570029DD3E /* SLJPushUntils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLJPushUntils.m; path = Untils/JKCategories/SLJPushUntils.m; sourceTree = SOURCE_ROOT; };
-		436B762A22C760580029DD3E /* SLExtensionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLExtensionHelper.h; sourceTree = SOURCE_ROOT; };
+		436B762A22C760580029DD3E /* SLExtensionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLExtensionHelper.h; path = Untils/JKCategories/SLExtensionHelper.h; sourceTree = SOURCE_ROOT; };
 		437864562075FD1E00146B97 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		43D24A8D2094A43600C59AC8 /* AppDelegate+ShowRegisterService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+ShowRegisterService.m"; sourceTree = "<group>"; };
 		43D24A8E2094A43600C59AC8 /* ShowAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowAppDelegate.h; sourceTree = "<group>"; };
@@ -588,6 +588,8 @@
 				4321A35F22F46DB300F19D03 /* NSData+ImageContentType.m */,
 				4321A36022F46DB300F19D03 /* POPGeometry.mm */,
 				4321A36122F46DB300F19D03 /* POPAnimation.h */,
+				436B762A22C760580029DD3E /* SLExtensionHelper.h */,
+				436B75DD22C760560029DD3E /* SLExtensionHelper.m */,
 				72C686F61D628C8898214FFC /* Pods-ShowLive.debug.xcconfig */,
 				AA2350AAA436CDCBB1E93DCE /* Pods-ShowLive.release.xcconfig */,
 				724D4BC020C9150D0007E4E8 /* HomeHeader.h */,
@@ -1182,8 +1184,6 @@
 		D544A431CFB6EF8D747D9730 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				436B762A22C760580029DD3E /* SLExtensionHelper.h */,
-				436B75DD22C760560029DD3E /* SLExtensionHelper.m */,
 				D6F34820745ED99EE82E0D41 /* Pods-ShowLiveTests.debug.xcconfig */,
 				D238833622EC1F1B00A9161B /* Pods-ShowLiveUITests.debug.xcconfig */,
 			);
