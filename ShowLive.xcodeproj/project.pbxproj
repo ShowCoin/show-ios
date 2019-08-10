@@ -148,7 +148,7 @@
 		4321A35A22F46DB300F19D03 /* FloatConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FloatConversion.h; path = ../Untils/JKCategories/FloatConversion.h; sourceTree = "<group>"; };
 		4321A35B22F46DB300F19D03 /* POPDecayAnimation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = POPDecayAnimation.mm; sourceTree = "<group>"; };
 		4321A35C22F46DB300F19D03 /* POPAnimatableProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAnimatableProperty.h; sourceTree = "<group>"; };
-		4321A35D22F46DB300F19D03 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Additions.h"; path = "../Untils/Exten/NSString+Additions.h"; sourceTree = "<group>"; };
+		4321A35D22F46DB300F19D03 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Additions.h"; path = "../Exten/NSString+Additions.h"; sourceTree = "<group>"; };
 		4321A35E22F46DB300F19D03 /* UIView+GestureCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+GestureCallback.h"; path = "../Untils/Exten/UIView+GestureCallback.h"; sourceTree = "<group>"; };
 		4321A35F22F46DB300F19D03 /* NSData+ImageContentType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+ImageContentType.m"; path = "../Untils/JKCategories/NSData+ImageContentType.m"; sourceTree = "<group>"; };
 		4321A36022F46DB300F19D03 /* POPGeometry.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = POPGeometry.mm; sourceTree = "<group>"; };
@@ -233,9 +233,9 @@
 		4367D96B22EC21FF0072C5BA /* POPAnimationTracer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAnimationTracer.h; sourceTree = "<group>"; };
 		4367D96C22EC21FF0072C5BA /* UIViewController+DDPopUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DDPopUpViewController.h"; sourceTree = "<group>"; };
 		436B75DD22C760560029DD3E /* SLExtensionHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLExtensionHelper.m; path = Untils/JKCategories/SLExtensionHelper.m; sourceTree = SOURCE_ROOT; };
-		436B761F22C760570029DD3E /* SLJPushUntils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLJPushUntils.h; path = requestAction/SLJPushUntils.h; sourceTree = SOURCE_ROOT; };
+		436B761F22C760570029DD3E /* SLJPushUntils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLJPushUntils.h; path = Untils/SLPlayAudio/SLJPushUntils.h; sourceTree = SOURCE_ROOT; };
 		436B762222C760570029DD3E /* NotificationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NotificationService.h; path = Classes/NotificationService.h; sourceTree = SOURCE_ROOT; };
-		436B762422C760570029DD3E /* SLJPushUntils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLJPushUntils.m; path = requestAction/SLJPushUntils.m; sourceTree = SOURCE_ROOT; };
+		436B762422C760570029DD3E /* SLJPushUntils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLJPushUntils.m; path = Untils/SLPlayAudio/SLJPushUntils.m; sourceTree = SOURCE_ROOT; };
 		436B762A22C760580029DD3E /* SLExtensionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLExtensionHelper.h; path = requestAction/SLExtensionHelper.h; sourceTree = SOURCE_ROOT; };
 		437864562075FD1E00146B97 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		43D24A8D2094A43600C59AC8 /* AppDelegate+ShowRegisterService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+ShowRegisterService.m"; sourceTree = "<group>"; };
@@ -379,6 +379,7 @@
 		CFCDB8F5C4F35241EF7781C8 /* Pods-ShowLiveTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveTests.release.xcconfig"; path = "../Untils/JKCategories/Pods-ShowLiveTests.release.xcconfig"; sourceTree = "<group>"; };
 		D25D805B22F553990082F6FB /* Pods-ShowLiveUITests.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveUITests.debug.xcconfig"; path = "../../../../../requestAction/Pods-ShowLiveUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D2A091F322FE908F00F8683B /* Pods-ShowLiveUITests.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveUITests.debug.xcconfig"; path = "../../../../requestAction/Pods-ShowLiveUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D2A091F422FE90A200F8683B /* Pods-ShowLiveUITests.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveUITests.debug.xcconfig"; path = "../../../../../requestAction/Pods-ShowLiveUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D6F34820745ED99EE82E0D41 /* Pods-ShowLiveTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ShowLiveTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -552,6 +553,23 @@
 		4321A39322F46DB300F19D03 /* SLPlayAudio */ = {
 			isa = PBXGroup;
 			children = (
+				4321A34722F46DB300F19D03 /* NSNotificationCenter+JKMainThread.h */,
+				4321A34A22F46DB300F19D03 /* SLHistoryWorksAction.h */,
+				4321A34D22F46DB300F19D03 /* pop-ios-Info.plist */,
+				4321A35622F46DB300F19D03 /* NSString+JKXMLDictionary.h */,
+				4321A35722F46DB300F19D03 /* SLAttentionListAction.h */,
+				4321A35822F46DB300F19D03 /* UIView+FDCollapsibleConstraints.m */,
+				4321A35D22F46DB300F19D03 /* NSString+Additions.h */,
+				722BCF0621D78936004BFC52 /* SLInviteViewController.m */,
+				724D4BC320C915BF0007E4E8 /* HotReusableView.h */,
+				72DFDE7820D9308600EA3AA1 /* ShowHomeMiddleCell.h */,
+				72DFDE7C20D9328000EA3AA1 /* ShowHomeSamallCell.h */,
+				D2A091F422FE90A200F8683B /* Pods-ShowLiveUITests.debug.xcconfig */,
+				53B07B4395D318342B414DD2 /* Pods-ShowLiveUITests.release.xcconfig */,
+				A99892BD20BD79600026BA03 /* SLConfig.h */,
+				436B761F22C760570029DD3E /* SLJPushUntils.h */,
+				436B762422C760570029DD3E /* SLJPushUntils.m */,
+				4321A36522F46DB300F19D03 /* NSData+Image.m */,
 				4321A39422F46DB300F19D03 /* POPSpringAnimationInternal.h */,
 			);
 			path = SLPlayAudio;
@@ -837,13 +855,10 @@
 			isa = PBXGroup;
 			children = (
 				4321A36722F46DB300F19D03 /* UITableView+FDTemplateLayoutCellDebug.h */,
-				4321A34722F46DB300F19D03 /* NSNotificationCenter+JKMainThread.h */,
 				4321A34822F46DB300F19D03 /* NSArray+JKSafeAccess.m */,
 				4321A34922F46DB300F19D03 /* CLLocationManager+Blocks.h */,
-				4321A34A22F46DB300F19D03 /* SLHistoryWorksAction.h */,
 				4321A34B22F46DB300F19D03 /* ShowAction.h */,
 				4321A34C22F46DB300F19D03 /* UIViewController+MJPopupViewController.h */,
-				4321A34D22F46DB300F19D03 /* pop-ios-Info.plist */,
 				4321A34E22F46DB300F19D03 /* NSSting+aes.h */,
 				4321A34F22F46DB300F19D03 /* POPAction.h */,
 				4321A35022F46DB300F19D03 /* CATransaction+JKAnimateWithDuration.m */,
@@ -852,14 +867,10 @@
 				4321A35322F46DB300F19D03 /* POPAnimationTracer.mm */,
 				4321A35422F46DB300F19D03 /* NSNumber+JKRomanNumerals.h */,
 				4321A35522F46DB300F19D03 /* CATransactionDemoViewController.m */,
-				4321A35622F46DB300F19D03 /* NSString+JKXMLDictionary.h */,
-				4321A35722F46DB300F19D03 /* SLAttentionListAction.h */,
-				4321A35822F46DB300F19D03 /* UIView+FDCollapsibleConstraints.m */,
 				4321A35922F46DB300F19D03 /* SLGiftAction.h */,
 				4321A35A22F46DB300F19D03 /* FloatConversion.h */,
 				4321A35B22F46DB300F19D03 /* POPDecayAnimation.mm */,
 				4321A35C22F46DB300F19D03 /* POPAnimatableProperty.h */,
-				4321A35D22F46DB300F19D03 /* NSString+Additions.h */,
 				4321A35E22F46DB300F19D03 /* UIView+GestureCallback.h */,
 				4321A35F22F46DB300F19D03 /* NSData+ImageContentType.m */,
 				4321A36022F46DB300F19D03 /* POPGeometry.mm */,
@@ -870,20 +881,11 @@
 				AA2350AAA436CDCBB1E93DCE /* Pods-ShowLive.release.xcconfig */,
 				D6F34820745ED99EE82E0D41 /* Pods-ShowLiveTests.debug.xcconfig */,
 				724D4BC020C9150D0007E4E8 /* HomeHeader.h */,
-				722BCF0621D78936004BFC52 /* SLInviteViewController.m */,
-				724D4BC320C915BF0007E4E8 /* HotReusableView.h */,
-				72DFDE7820D9308600EA3AA1 /* ShowHomeMiddleCell.h */,
-				72DFDE7C20D9328000EA3AA1 /* ShowHomeSamallCell.h */,
 				CFCDB8F5C4F35241EF7781C8 /* Pods-ShowLiveTests.release.xcconfig */,
 				D2A091F322FE908F00F8683B /* Pods-ShowLiveUITests.debug.xcconfig */,
-				53B07B4395D318342B414DD2 /* Pods-ShowLiveUITests.release.xcconfig */,
-				A99892BD20BD79600026BA03 /* SLConfig.h */,
-				436B761F22C760570029DD3E /* SLJPushUntils.h */,
-				436B762422C760570029DD3E /* SLJPushUntils.m */,
 				4321A36222F46DB300F19D03 /* NSNotificationCenterDemoViewController.m */,
 				4321A36322F46DB300F19D03 /* SLNavigationViewController.m */,
 				4321A36422F46DB300F19D03 /* POPLayerExtras.mm */,
-				4321A36522F46DB300F19D03 /* NSData+Image.m */,
 				4321A36922F46DB300F19D03 /* UIScrollView+EmptyDataSet.h~HEAD */,
 			);
 			path = requestAction;
