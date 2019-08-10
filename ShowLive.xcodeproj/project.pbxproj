@@ -145,7 +145,7 @@
 		4321A35722F46DB300F19D03 /* SLAttentionListAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLAttentionListAction.h; sourceTree = "<group>"; };
 		4321A35822F46DB300F19D03 /* UIView+FDCollapsibleConstraints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FDCollapsibleConstraints.m"; sourceTree = "<group>"; };
 		4321A35922F46DB300F19D03 /* SLGiftAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLGiftAction.h; sourceTree = "<group>"; };
-		4321A35A22F46DB300F19D03 /* FloatConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FloatConversion.h; path = ../Untils/JKCategories/FloatConversion.h; sourceTree = "<group>"; };
+		4321A35A22F46DB300F19D03 /* FloatConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FloatConversion.h; path = ../JKCategories/FloatConversion.h; sourceTree = "<group>"; };
 		4321A35B22F46DB300F19D03 /* POPDecayAnimation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = POPDecayAnimation.mm; path = ../../requestAction/POPDecayAnimation.mm; sourceTree = "<group>"; };
 		4321A35C22F46DB300F19D03 /* POPAnimatableProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAnimatableProperty.h; sourceTree = "<group>"; };
 		4321A35D22F46DB300F19D03 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Additions.h"; path = "../Exten/NSString+Additions.h"; sourceTree = "<group>"; };
@@ -311,7 +311,7 @@
 		72A0088820FCA0710051C643 /* SLSafeCenterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLSafeCenterCell.m; path = Classes/UserCenter/View/SLSafeCenterCell.m; sourceTree = SOURCE_ROOT; };
 		72A0088A20FCA1820051C643 /* SLUserViewHeader+SLMinCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SLUserViewHeader+SLMinCard.h"; path = "Classes/UserCenter/View/SLUserViewHeader+SLMinCard.h"; sourceTree = SOURCE_ROOT; };
 		72A0088B20FCA1820051C643 /* SLUserViewHeader+SLMinCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "SLUserViewHeader+SLMinCard.m"; path = "Classes/UserCenter/View/SLUserViewHeader+SLMinCard.m"; sourceTree = SOURCE_ROOT; };
-		72C686F61D628C8898214FFC /* Pods-ShowLive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowLive.debug.xcconfig"; path = "../Untils/JKCategories/Pods-ShowLive.debug.xcconfig"; sourceTree = "<group>"; };
+		72C686F61D628C8898214FFC /* Pods-ShowLive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowLive.debug.xcconfig"; path = "../JKCategories/Pods-ShowLive.debug.xcconfig"; sourceTree = "<group>"; };
 		72C7B4F720C3EDE500065BC2 /* SLADView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLADView.h; sourceTree = "<group>"; };
 		72CA648B20EE4A4C0052E107 /* SLFansViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLFansViewController.h; sourceTree = "<group>"; };
 		72DFDE7820D9308600EA3AA1 /* ShowHomeMiddleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowHomeMiddleCell.h; sourceTree = "<group>"; };
@@ -556,6 +556,7 @@
 				4321A36722F46DB300F19D03 /* UITableView+FDTemplateLayoutCellDebug.h */,
 				4321A34722F46DB300F19D03 /* NSNotificationCenter+JKMainThread.h */,
 				4321A34822F46DB300F19D03 /* NSArray+JKSafeAccess.m */,
+				4321A34922F46DB300F19D03 /* CLLocationManager+Blocks.h */,
 				4321A34A22F46DB300F19D03 /* SLHistoryWorksAction.h */,
 				4321A34B22F46DB300F19D03 /* ShowAction.h */,
 				4321A34C22F46DB300F19D03 /* UIViewController+MJPopupViewController.h */,
@@ -572,12 +573,14 @@
 				4321A35722F46DB300F19D03 /* SLAttentionListAction.h */,
 				4321A35822F46DB300F19D03 /* UIView+FDCollapsibleConstraints.m */,
 				4321A35922F46DB300F19D03 /* SLGiftAction.h */,
+				4321A35A22F46DB300F19D03 /* FloatConversion.h */,
 				4321A35B22F46DB300F19D03 /* POPDecayAnimation.mm */,
 				4321A35D22F46DB300F19D03 /* NSString+Additions.h */,
 				4321A35F22F46DB300F19D03 /* NSData+ImageContentType.m */,
 				4321A36022F46DB300F19D03 /* POPGeometry.mm */,
 				4321A36122F46DB300F19D03 /* POPAnimation.h */,
 				436B762A22C760580029DD3E /* SLExtensionHelper.h */,
+				72C686F61D628C8898214FFC /* Pods-ShowLive.debug.xcconfig */,
 				AA2350AAA436CDCBB1E93DCE /* Pods-ShowLive.release.xcconfig */,
 				D6F34820745ED99EE82E0D41 /* Pods-ShowLiveTests.debug.xcconfig */,
 				724D4BC020C9150D0007E4E8 /* HomeHeader.h */,
@@ -880,12 +883,9 @@
 		72C6166720A0C65200103C44 /* requestAction */ = {
 			isa = PBXGroup;
 			children = (
-				4321A34922F46DB300F19D03 /* CLLocationManager+Blocks.h */,
-				4321A35A22F46DB300F19D03 /* FloatConversion.h */,
 				4321A35C22F46DB300F19D03 /* POPAnimatableProperty.h */,
 				4321A35E22F46DB300F19D03 /* UIView+GestureCallback.h */,
 				436B75DD22C760560029DD3E /* SLExtensionHelper.m */,
-				72C686F61D628C8898214FFC /* Pods-ShowLive.debug.xcconfig */,
 				D2A091F322FE908F00F8683B /* Pods-ShowLiveUITests.debug.xcconfig */,
 			);
 			path = requestAction;
