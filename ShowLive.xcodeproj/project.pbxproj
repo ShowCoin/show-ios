@@ -165,7 +165,7 @@
 		4321A36E22F46DB300F19D03 /* ShowHomeSamallCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShowHomeSamallCell.h; path = ../../SLHelper/pop/ShowHomeSamallCell.h; sourceTree = "<group>"; };
 		4321A36F22F46DB300F19D03 /* Pods-ShowLive.debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Pods-ShowLive.debug.xcconfig"; path = "../../SLHelper/pop/Pods-ShowLive.debug.xcconfig"; sourceTree = "<group>"; };
 		4321A37022F46DB300F19D03 /* ShowHomeMiddleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowHomeMiddleCell.h; sourceTree = "<group>"; };
-		4321A37122F46DB300F19D03 /* Pods-ShowLiveTests.release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Pods-ShowLiveTests.release.xcconfig"; sourceTree = "<group>"; };
+		4321A37122F46DB300F19D03 /* Pods-ShowLiveTests.release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveTests.release.xcconfig"; path = "../../SLHelper/pop/Pods-ShowLiveTests.release.xcconfig"; sourceTree = "<group>"; };
 		4321A37222F46DB300F19D03 /* SLInviteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLInviteViewController.m; sourceTree = "<group>"; };
 		4321A37322F46DB300F19D03 /* Pods-ShowLiveTests.debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Pods-ShowLiveTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4321A37422F46DB300F19D03 /* SLConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLConfig.h; path = ../../SLHelper/pop/SLConfig.h; sourceTree = "<group>"; };
@@ -496,9 +496,7 @@
 		4321A36A22F46DB300F19D03 /* pop */ = {
 			isa = PBXGroup;
 			children = (
-				4321A35322F46DB300F19D03 /* POPAnimationTracer.mm */,
 				D2A091F522FE90B500F8683B /* Pods-ShowLiveUITests.debug.xcconfig */,
-				4321A37122F46DB300F19D03 /* Pods-ShowLiveTests.release.xcconfig */,
 			);
 			path = pop;
 			sourceTree = "<group>";
@@ -530,6 +528,7 @@
 				4321A35022F46DB300F19D03 /* CATransaction+JKAnimateWithDuration.m */,
 				4321A35122F46DB300F19D03 /* SLShutUpAction.h */,
 				4321A35222F46DB300F19D03 /* NSDate+JKLunarCalendar.m */,
+				4321A35322F46DB300F19D03 /* POPAnimationTracer.mm */,
 				4321A35422F46DB300F19D03 /* NSNumber+JKRomanNumerals.h */,
 				4321A35522F46DB300F19D03 /* CATransactionDemoViewController.m */,
 				4321A35622F46DB300F19D03 /* NSString+JKXMLDictionary.h */,
@@ -546,6 +545,7 @@
 				72DFDE7C20D9328000EA3AA1 /* ShowHomeSamallCell.h */,
 				4321A36E22F46DB300F19D03 /* ShowHomeSamallCell.h */,
 				CFCDB8F5C4F35241EF7781C8 /* Pods-ShowLiveTests.release.xcconfig */,
+				4321A37122F46DB300F19D03 /* Pods-ShowLiveTests.release.xcconfig */,
 				4352C5FD22FEE5AD00759938 /* Pods-ShowLiveUITests.debug.xcconfig */,
 				53B07B4395D318342B414DD2 /* Pods-ShowLiveUITests.release.xcconfig */,
 				4321A37522F46DB300F19D03 /* Pods-ShowLiveUITests.release.xcconfig */,
