@@ -148,7 +148,7 @@
 		4321A35A22F46DB300F19D03 /* FloatConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FloatConversion.h; path = ../JKCategories/FloatConversion.h; sourceTree = "<group>"; };
 		4321A35B22F46DB300F19D03 /* POPDecayAnimation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = POPDecayAnimation.mm; path = ../../requestAction/POPDecayAnimation.mm; sourceTree = "<group>"; };
 		4321A35C22F46DB300F19D03 /* POPAnimatableProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAnimatableProperty.h; sourceTree = "<group>"; };
-		4321A35D22F46DB300F19D03 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Additions.h"; path = "../Exten/NSString+Additions.h"; sourceTree = "<group>"; };
+		4321A35D22F46DB300F19D03 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Additions.h"; path = "../../NSString+Additions.h"; sourceTree = "<group>"; };
 		4321A35E22F46DB300F19D03 /* UIView+GestureCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+GestureCallback.h"; path = "../Exten/UIView+GestureCallback.h"; sourceTree = "<group>"; };
 		4321A35F22F46DB300F19D03 /* NSData+ImageContentType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+ImageContentType.m"; path = "../JKCategories/NSData+ImageContentType.m"; sourceTree = "<group>"; };
 		4321A36022F46DB300F19D03 /* POPGeometry.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = POPGeometry.mm; sourceTree = "<group>"; };
@@ -502,10 +502,12 @@
 				4321A35822F46DB300F19D03 /* UIView+FDCollapsibleConstraints.m */,
 				4321A35922F46DB300F19D03 /* SLGiftAction.h */,
 				4321A35C22F46DB300F19D03 /* POPAnimatableProperty.h */,
+				4321A35D22F46DB300F19D03 /* NSString+Additions.h */,
 				4321A36122F46DB300F19D03 /* POPAnimation.h */,
 				436B75DD22C760560029DD3E /* SLExtensionHelper.m */,
 				D6F34820745ED99EE82E0D41 /* Pods-ShowLiveTests.debug.xcconfig */,
 				CFCDB8F5C4F35241EF7781C8 /* Pods-ShowLiveTests.release.xcconfig */,
+				436B761F22C760570029DD3E /* SLJPushUntils.h */,
 				4321A36322F46DB300F19D03 /* SLNavigationViewController.m */,
 				4321A36422F46DB300F19D03 /* POPLayerExtras.mm */,
 				4321A36B22F46DB300F19D03 /* HotReusableView.h */,
@@ -582,7 +584,6 @@
 				4321A35722F46DB300F19D03 /* SLAttentionListAction.h */,
 				4321A35A22F46DB300F19D03 /* FloatConversion.h */,
 				4321A35B22F46DB300F19D03 /* POPDecayAnimation.mm */,
-				4321A35D22F46DB300F19D03 /* NSString+Additions.h */,
 				4321A35E22F46DB300F19D03 /* UIView+GestureCallback.h */,
 				4321A35F22F46DB300F19D03 /* NSData+ImageContentType.m */,
 				4321A36022F46DB300F19D03 /* POPGeometry.mm */,
@@ -597,7 +598,6 @@
 				D2A091F422FE90A200F8683B /* Pods-ShowLiveUITests.debug.xcconfig */,
 				53B07B4395D318342B414DD2 /* Pods-ShowLiveUITests.release.xcconfig */,
 				A99892BD20BD79600026BA03 /* SLConfig.h */,
-				436B761F22C760570029DD3E /* SLJPushUntils.h */,
 				436B762422C760570029DD3E /* SLJPushUntils.m */,
 				4321A36222F46DB300F19D03 /* NSNotificationCenterDemoViewController.m */,
 				4321A36522F46DB300F19D03 /* NSData+Image.m */,
