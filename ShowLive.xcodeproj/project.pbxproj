@@ -145,7 +145,7 @@
 		4321A35722F46DB300F19D03 /* SLAttentionListAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLAttentionListAction.h; sourceTree = "<group>"; };
 		4321A35822F46DB300F19D03 /* UIView+FDCollapsibleConstraints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FDCollapsibleConstraints.m"; sourceTree = "<group>"; };
 		4321A35922F46DB300F19D03 /* SLGiftAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLGiftAction.h; sourceTree = "<group>"; };
-		4321A35A22F46DB300F19D03 /* FloatConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FloatConversion.h; sourceTree = "<group>"; };
+		4321A35A22F46DB300F19D03 /* FloatConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FloatConversion.h; path = ../Untils/JKCategories/FloatConversion.h; sourceTree = "<group>"; };
 		4321A35B22F46DB300F19D03 /* POPDecayAnimation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = POPDecayAnimation.mm; sourceTree = "<group>"; };
 		4321A35C22F46DB300F19D03 /* POPAnimatableProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAnimatableProperty.h; sourceTree = "<group>"; };
 		4321A35D22F46DB300F19D03 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Additions.h"; path = "../Exten/NSString+Additions.h"; sourceTree = "<group>"; };
@@ -571,7 +571,6 @@
 				4321A35222F46DB300F19D03 /* NSDate+JKLunarCalendar.m */,
 				4321A35422F46DB300F19D03 /* NSNumber+JKRomanNumerals.h */,
 				4321A35922F46DB300F19D03 /* SLGiftAction.h */,
-				4321A35A22F46DB300F19D03 /* FloatConversion.h */,
 				4321A35B22F46DB300F19D03 /* POPDecayAnimation.mm */,
 				4321A35C22F46DB300F19D03 /* POPAnimatableProperty.h */,
 				4321A35D22F46DB300F19D03 /* NSString+Additions.h */,
@@ -580,7 +579,6 @@
 				4321A36122F46DB300F19D03 /* POPAnimation.h */,
 				436B75DD22C760560029DD3E /* SLExtensionHelper.m */,
 				72C686F61D628C8898214FFC /* Pods-ShowLive.debug.xcconfig */,
-				D6F34820745ED99EE82E0D41 /* Pods-ShowLiveTests.debug.xcconfig */,
 				724D4BC020C9150D0007E4E8 /* HomeHeader.h */,
 				722BCF0621D78936004BFC52 /* SLInviteViewController.m */,
 				724D4BC320C915BF0007E4E8 /* HotReusableView.h */,
@@ -878,9 +876,11 @@
 				4321A35622F46DB300F19D03 /* NSString+JKXMLDictionary.h */,
 				4321A35722F46DB300F19D03 /* SLAttentionListAction.h */,
 				4321A35822F46DB300F19D03 /* UIView+FDCollapsibleConstraints.m */,
+				4321A35A22F46DB300F19D03 /* FloatConversion.h */,
 				4321A36022F46DB300F19D03 /* POPGeometry.mm */,
 				436B762A22C760580029DD3E /* SLExtensionHelper.h */,
 				AA2350AAA436CDCBB1E93DCE /* Pods-ShowLive.release.xcconfig */,
+				D6F34820745ED99EE82E0D41 /* Pods-ShowLiveTests.debug.xcconfig */,
 				53B07B4395D318342B414DD2 /* Pods-ShowLiveUITests.release.xcconfig */,
 				A99892BD20BD79600026BA03 /* SLConfig.h */,
 			);
