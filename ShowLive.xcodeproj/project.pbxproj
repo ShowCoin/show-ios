@@ -250,7 +250,7 @@
 		7217AD9821C5368100D082E9 /* WithdrawViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WithdrawViewController.h; sourceTree = "<group>"; };
 		7217AD9921C536A700D082E9 /* WithdrawViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WithdrawViewController.m; sourceTree = "<group>"; };
 		7217AD9B21C5377D00D082E9 /* SLCoinDetailInfoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLCoinDetailInfoVC.h; sourceTree = "<group>"; };
-		722BCF0621D78936004BFC52 /* SLInviteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLInviteViewController.m; sourceTree = "<group>"; };
+		722BCF0621D78936004BFC52 /* SLInviteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLInviteViewController.m; path = ../../SLHelper/pop/SLInviteViewController.m; sourceTree = "<group>"; };
 		723816B220C689AB00C3885E /* SLLevelMarkView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLLevelMarkView.h; sourceTree = "<group>"; };
 		723816B320C689AB00C3885E /* SLLevelMarkView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLLevelMarkView.m; sourceTree = "<group>"; };
 		723816B620C68B3C00C3885E /* SLHeadPortrait.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLHeadPortrait.m; sourceTree = "<group>"; };
@@ -498,17 +498,14 @@
 		4321A36A22F46DB300F19D03 /* pop */ = {
 			isa = PBXGroup;
 			children = (
-				4321A37922F46DB300F19D03 /* NSObject+JKAppInfo.m */,
 				D2A091F522FE90B500F8683B /* Pods-ShowLiveUITests.debug.xcconfig */,
 				4321A34722F46DB300F19D03 /* NSNotificationCenter+JKMainThread.h */,
 				4321A34922F46DB300F19D03 /* CLLocationManager+Blocks.h */,
 				4321A36222F46DB300F19D03 /* NSNotificationCenterDemoViewController.m */,
 				4321A36322F46DB300F19D03 /* SLNavigationViewController.m */,
-				4321A36922F46DB300F19D03 /* UIScrollView+EmptyDataSet.h~HEAD */,
 				4321A36C22F46DB300F19D03 /* Pods-ShowLive.release.xcconfig */,
 				D6F34820745ED99EE82E0D41 /* Pods-ShowLiveTests.debug.xcconfig */,
 				4321A37322F46DB300F19D03 /* Pods-ShowLiveTests.debug.xcconfig */,
-				722BCF0621D78936004BFC52 /* SLInviteViewController.m */,
 				724D4BC320C915BF0007E4E8 /* HotReusableView.h */,
 				72DFDE7C20D9328000EA3AA1 /* ShowHomeSamallCell.h */,
 				CFCDB8F5C4F35241EF7781C8 /* Pods-ShowLiveTests.release.xcconfig */,
@@ -518,7 +515,6 @@
 				436B761F22C760570029DD3E /* SLJPushUntils.h */,
 				436B762422C760570029DD3E /* SLJPushUntils.m */,
 				4321A35822F46DB300F19D03 /* UIView+FDCollapsibleConstraints.m */,
-				4321A35922F46DB300F19D03 /* SLGiftAction.h */,
 				4321A35A22F46DB300F19D03 /* FloatConversion.h */,
 				4321A35E22F46DB300F19D03 /* UIView+GestureCallback.h */,
 				4321A35F22F46DB300F19D03 /* NSData+ImageContentType.m */,
@@ -547,6 +543,7 @@
 		4321A37822F46DB300F19D03 /* UITableView-FDTemplateLayoutCell */ = {
 			isa = PBXGroup;
 			children = (
+				4321A37922F46DB300F19D03 /* NSObject+JKAppInfo.m */,
 				D24CA8E62307F10E00F529BB /* Pods-ShowLiveUITests.debug.xcconfig */,
 				4321A37B22F46DB300F19D03 /* UITableView+FDKeyedHeightCache.h */,
 				4321A36722F46DB300F19D03 /* UITableView+FDTemplateLayoutCellDebug.h */,
@@ -561,9 +558,11 @@
 				72C686F61D628C8898214FFC /* Pods-ShowLive.debug.xcconfig */,
 				4321A36F22F46DB300F19D03 /* Pods-ShowLive.debug.xcconfig */,
 				4321A36522F46DB300F19D03 /* NSData+Image.m */,
+				4321A36922F46DB300F19D03 /* UIScrollView+EmptyDataSet.h~HEAD */,
 				AA2350AAA436CDCBB1E93DCE /* Pods-ShowLive.release.xcconfig */,
 				724D4BC020C9150D0007E4E8 /* HomeHeader.h */,
 				4321A36D22F46DB300F19D03 /* HomeHeader.h */,
+				722BCF0621D78936004BFC52 /* SLInviteViewController.m */,
 				4321A37222F46DB300F19D03 /* SLInviteViewController.m */,
 				4321A39422F46DB300F19D03 /* POPSpringAnimationInternal.h */,
 				4321A36B22F46DB300F19D03 /* HotReusableView.h */,
@@ -574,6 +573,7 @@
 				53B07B4395D318342B414DD2 /* Pods-ShowLiveUITests.release.xcconfig */,
 				4321A37522F46DB300F19D03 /* Pods-ShowLiveUITests.release.xcconfig */,
 				4321A35722F46DB300F19D03 /* SLAttentionListAction.h */,
+				4321A35922F46DB300F19D03 /* SLGiftAction.h */,
 				4321A35B22F46DB300F19D03 /* POPDecayAnimation.mm */,
 				4321A35C22F46DB300F19D03 /* POPAnimatableProperty.h */,
 				4321A35D22F46DB300F19D03 /* NSString+Additions.h */,
