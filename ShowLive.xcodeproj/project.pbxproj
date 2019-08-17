@@ -237,7 +237,7 @@
 		43056387230831270090EA36 /* NSNotificationCenter+JKMainThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSNotificationCenter+JKMainThread.h"; path = "SLHelper/pop/NSNotificationCenter+JKMainThread.h"; sourceTree = "<group>"; };
 		43056388230831270090EA36 /* UIWebVIew+JKSwipeGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIWebVIew+JKSwipeGesture.m"; path = "SLHelper/pop/UIWebVIew+JKSwipeGesture.m"; sourceTree = "<group>"; };
 		43056389230831270090EA36 /* NSNotificationCenterDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSNotificationCenterDemoViewController.m; path = SLHelper/pop/NSNotificationCenterDemoViewController.m; sourceTree = "<group>"; };
-		4305638A230831280090EA36 /* MKMapView+JKBetterMaps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MKMapView+JKBetterMaps.m"; path = "SLHelper/pop/MKMapView+JKBetterMaps.m"; sourceTree = "<group>"; };
+		4305638A230831280090EA36 /* MKMapView+JKBetterMaps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKMapView+JKBetterMaps.m"; sourceTree = "<group>"; };
 		4305638B230831280090EA36 /* ShowHomeSamallCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShowHomeSamallCell.h; path = SLHelper/pop/ShowHomeSamallCell.h; sourceTree = "<group>"; };
 		4305638C230831280090EA36 /* UITextField+JKBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITextField+JKBlocks.m"; path = "SLHelper/pop/UITextField+JKBlocks.m"; sourceTree = "<group>"; };
 		4305638D230831280090EA36 /* POPLayerExtras.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = POPLayerExtras.mm; path = SLHelper/pop/POPLayerExtras.mm; sourceTree = "<group>"; };
@@ -628,7 +628,6 @@
 		4321A36622F46DB300F19D03 /* Exten */ = {
 			isa = PBXGroup;
 			children = (
-				4305638A230831280090EA36 /* MKMapView+JKBetterMaps.m */,
 				4305633F230831250090EA36 /* NSBundle+JKAppIcon.m */,
 				4305637C230831260090EA36 /* NSData+Image.m */,
 				43056385230831270090EA36 /* NSData+JKAPNSToken.h */,
@@ -688,6 +687,7 @@
 				4305633E230831250090EA36 /* CATransactionDemoViewController.h */,
 				43056376230831260090EA36 /* HomeHeader.h */,
 				43056379230831260090EA36 /* HotReusableView.h */,
+				4305638A230831280090EA36 /* MKMapView+JKBetterMaps.m */,
 				4305637B230831260090EA36 /* Pods-ShowLive.release.xcconfig */,
 				4321A37922F46DB300F19D03 /* NSObject+JKAppInfo.m */,
 				D24CA8EA2307F12600F529BB /* Pods-ShowLiveUITests.debug.xcconfig */,
