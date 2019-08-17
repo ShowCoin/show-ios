@@ -143,7 +143,7 @@
 		4321A35522F46DB300F19D03 /* CATransactionDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CATransactionDemoViewController.m; sourceTree = "<group>"; };
 		4321A35622F46DB300F19D03 /* NSString+JKXMLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JKXMLDictionary.h"; sourceTree = "<group>"; };
 		4321A35722F46DB300F19D03 /* SLAttentionListAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLAttentionListAction.h; sourceTree = "<group>"; };
-		4321A35822F46DB300F19D03 /* UIView+FDCollapsibleConstraints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+FDCollapsibleConstraints.m"; path = "../../SLHelper/pop/UIView+FDCollapsibleConstraints.m"; sourceTree = "<group>"; };
+		4321A35822F46DB300F19D03 /* UIView+FDCollapsibleConstraints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FDCollapsibleConstraints.m"; sourceTree = "<group>"; };
 		4321A35922F46DB300F19D03 /* SLGiftAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLGiftAction.h; sourceTree = "<group>"; };
 		4321A35A22F46DB300F19D03 /* FloatConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FloatConversion.h; path = ../../../JKCategories/FloatConversion.h; sourceTree = "<group>"; };
 		4321A35B22F46DB300F19D03 /* POPDecayAnimation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = POPDecayAnimation.mm; path = ../../../../requestAction/POPDecayAnimation.mm; sourceTree = "<group>"; };
@@ -316,7 +316,7 @@
 		72C7B4F720C3EDE500065BC2 /* SLADView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLADView.h; sourceTree = "<group>"; };
 		72CA648B20EE4A4C0052E107 /* SLFansViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLFansViewController.h; sourceTree = "<group>"; };
 		72DFDE7820D9308600EA3AA1 /* ShowHomeMiddleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowHomeMiddleCell.h; sourceTree = "<group>"; };
-		72DFDE7C20D9328000EA3AA1 /* ShowHomeSamallCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShowHomeSamallCell.h; path = ../../SLHelper/pop/ShowHomeSamallCell.h; sourceTree = "<group>"; };
+		72DFDE7C20D9328000EA3AA1 /* ShowHomeSamallCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowHomeSamallCell.h; sourceTree = "<group>"; };
 		72F9A9642200483100612687 /* NewTopListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewTopListCell.h; sourceTree = "<group>"; };
 		72F9A9652200484600612687 /* NewTopListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewTopListCell.m; sourceTree = "<group>"; };
 		72F9A9672200486F00612687 /* NewTopListHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewTopListHeader.h; sourceTree = "<group>"; };
@@ -538,6 +538,7 @@
 				4321A36B22F46DB300F19D03 /* HotReusableView.h */,
 				72DFDE7820D9308600EA3AA1 /* ShowHomeMiddleCell.h */,
 				4321A37022F46DB300F19D03 /* ShowHomeMiddleCell.h */,
+				72DFDE7C20D9328000EA3AA1 /* ShowHomeSamallCell.h */,
 				4321A36E22F46DB300F19D03 /* ShowHomeSamallCell.h */,
 				CFCDB8F5C4F35241EF7781C8 /* Pods-ShowLiveTests.release.xcconfig */,
 				4321A37122F46DB300F19D03 /* Pods-ShowLiveTests.release.xcconfig */,
@@ -547,10 +548,13 @@
 				4321A37422F46DB300F19D03 /* SLConfig.h */,
 				436B761F22C760570029DD3E /* SLJPushUntils.h */,
 				436B762422C760570029DD3E /* SLJPushUntils.m */,
+				4321A35722F46DB300F19D03 /* SLAttentionListAction.h */,
+				4321A35822F46DB300F19D03 /* UIView+FDCollapsibleConstraints.m */,
 				4321A35922F46DB300F19D03 /* SLGiftAction.h */,
 				4321A35A22F46DB300F19D03 /* FloatConversion.h */,
 				4321A35B22F46DB300F19D03 /* POPDecayAnimation.mm */,
 				4321A35C22F46DB300F19D03 /* POPAnimatableProperty.h */,
+				4321A35D22F46DB300F19D03 /* NSString+Additions.h */,
 				4321A35E22F46DB300F19D03 /* UIView+GestureCallback.h */,
 				4321A35F22F46DB300F19D03 /* NSData+ImageContentType.m */,
 				4321A36022F46DB300F19D03 /* POPGeometry.mm */,
@@ -601,10 +605,6 @@
 				D24CA8E62307F10E00F529BB /* Pods-ShowLiveUITests.debug.xcconfig */,
 				D24CA8E72307F11200F529BB /* Pods-ShowLiveUITests.debug.xcconfig */,
 				4321A36D22F46DB300F19D03 /* HomeHeader.h */,
-				72DFDE7C20D9328000EA3AA1 /* ShowHomeSamallCell.h */,
-				4321A35722F46DB300F19D03 /* SLAttentionListAction.h */,
-				4321A35822F46DB300F19D03 /* UIView+FDCollapsibleConstraints.m */,
-				4321A35D22F46DB300F19D03 /* NSString+Additions.h */,
 				4321A38422F46DB300F19D03 /* TODO.md */,
 				4321A38D22F46DB300F19D03 /* UITextFieldDemoViewController.h */,
 				4321A39222F46DB300F19D03 /* POPAnimationTracer.h */,
