@@ -177,7 +177,7 @@
 		4321A37C22F46DB300F19D03 /* NSBundle+JKAppIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+JKAppIcon.m"; sourceTree = "<group>"; };
 		4321A37D22F46DB300F19D03 /* UIView+Additional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additional.m"; sourceTree = "<group>"; };
 		4321A37E22F46DB300F19D03 /* SLGetRyTokenAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLGetRyTokenAction.h; sourceTree = "<group>"; };
-		4321A37F22F46DB300F19D03 /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Additions.m"; path = "../../SLHelper/pop/NSString+Additions.m"; sourceTree = "<group>"; };
+		4321A37F22F46DB300F19D03 /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
 		4321A38022F46DB300F19D03 /* UITextField+JKBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITextField+JKBlocks.h"; path = "../../NotRenamed/UITableView-FDTemplateLayoutCell/UITextField+JKBlocks.h"; sourceTree = "<group>"; };
 		4321A38122F46DB300F19D03 /* CALayer+JKBorderColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+JKBorderColor.h"; sourceTree = "<group>"; };
 		4321A38222F46DB300F19D03 /* UIGestureRecognizer+BlocksKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIGestureRecognizer+BlocksKit.m"; path = "../../NotRenamed/UITableView-FDTemplateLayoutCell/UIGestureRecognizer+BlocksKit.m"; sourceTree = "<group>"; };
@@ -510,6 +510,7 @@
 				4321A36122F46DB300F19D03 /* POPAnimation.h */,
 				4321A36222F46DB300F19D03 /* NSNotificationCenterDemoViewController.m */,
 				4321A36F22F46DB300F19D03 /* Pods-ShowLive.debug.xcconfig */,
+				4321A36922F46DB300F19D03 /* UIScrollView+EmptyDataSet.h~HEAD */,
 				4321A36C22F46DB300F19D03 /* Pods-ShowLive.release.xcconfig */,
 				4321A37322F46DB300F19D03 /* Pods-ShowLiveTests.debug.xcconfig */,
 				722BCF0621D78936004BFC52 /* SLInviteViewController.m */,
@@ -529,7 +530,9 @@
 				4321A35922F46DB300F19D03 /* SLGiftAction.h */,
 				4321A35C22F46DB300F19D03 /* POPAnimatableProperty.h */,
 				4321A36022F46DB300F19D03 /* POPGeometry.mm */,
+				4321A37C22F46DB300F19D03 /* NSBundle+JKAppIcon.m */,
 				4321A37E22F46DB300F19D03 /* SLGetRyTokenAction.h */,
+				4321A37F22F46DB300F19D03 /* NSString+Additions.m */,
 				4321A38022F46DB300F19D03 /* UITextField+JKBlocks.h */,
 				4321A38122F46DB300F19D03 /* CALayer+JKBorderColor.h */,
 				4321A38222F46DB300F19D03 /* UIGestureRecognizer+BlocksKit.m */,
@@ -539,6 +542,7 @@
 				4321A38F22F46DB300F19D03 /* UIView+FDCollapsibleConstraints.h */,
 				4321A37622F46DB300F19D03 /* UIView+FDCollapsibleConstraints.h */,
 				4321A39022F46DB300F19D03 /* UIViewController+DDPopUpViewController.h */,
+				4321A39122F46DB300F19D03 /* CATransactionDemoViewController.h */,
 				4321A34C22F46DB300F19D03 /* UIViewController+MJPopupViewController.h */,
 				4321A34F22F46DB300F19D03 /* POPAction.h */,
 				4321A35022F46DB300F19D03 /* CATransaction+JKAnimateWithDuration.m */,
@@ -572,7 +576,6 @@
 				4321A36422F46DB300F19D03 /* POPLayerExtras.mm */,
 				72C686F61D628C8898214FFC /* Pods-ShowLive.debug.xcconfig */,
 				4321A36522F46DB300F19D03 /* NSData+Image.m */,
-				4321A36922F46DB300F19D03 /* UIScrollView+EmptyDataSet.h~HEAD */,
 				AA2350AAA436CDCBB1E93DCE /* Pods-ShowLive.release.xcconfig */,
 				D6F34820745ED99EE82E0D41 /* Pods-ShowLiveTests.debug.xcconfig */,
 				724D4BC020C9150D0007E4E8 /* HomeHeader.h */,
@@ -587,9 +590,7 @@
 				4321A35D22F46DB300F19D03 /* NSString+Additions.h */,
 				4321A35E22F46DB300F19D03 /* UIView+GestureCallback.h */,
 				4321A35F22F46DB300F19D03 /* NSData+ImageContentType.m */,
-				4321A37C22F46DB300F19D03 /* NSBundle+JKAppIcon.m */,
 				4321A37D22F46DB300F19D03 /* UIView+Additional.m */,
-				4321A37F22F46DB300F19D03 /* NSString+Additions.m */,
 				4321A38322F46DB300F19D03 /* NSDate+JKInternetDateTime.m */,
 				4321A38422F46DB300F19D03 /* TODO.md */,
 				4321A38622F46DB300F19D03 /* UIView+Debug.h */,
@@ -599,7 +600,6 @@
 				4321A38C22F46DB300F19D03 /* UIScrollView+APParallaxHeader.h */,
 				4321A38D22F46DB300F19D03 /* UITextFieldDemoViewController.h */,
 				4321A38E22F46DB300F19D03 /* UITextField+JKBlocks.m */,
-				4321A39122F46DB300F19D03 /* CATransactionDemoViewController.h */,
 				4321A39222F46DB300F19D03 /* POPAnimationTracer.h */,
 				4321A34B22F46DB300F19D03 /* ShowAction.h */,
 				4321A34D22F46DB300F19D03 /* pop-ios-Info.plist */,
