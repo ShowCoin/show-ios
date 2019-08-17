@@ -374,7 +374,7 @@
 		93D2C11120BD238500C9D960 /* SLFriendListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLFriendListCell.m; sourceTree = "<group>"; };
 		A99892BD20BD79600026BA03 /* SLConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLConfig.h; sourceTree = "<group>"; };
 		A9BBAFBD20CA8E5B001683F8 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
-		AA2350AAA436CDCBB1E93DCE /* Pods-ShowLive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowLive.release.xcconfig"; path = "../../SLHelper/pop/Pods-ShowLive.release.xcconfig"; sourceTree = "<group>"; };
+		AA2350AAA436CDCBB1E93DCE /* Pods-ShowLive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ShowLive.release.xcconfig"; sourceTree = "<group>"; };
 		B4C105B07A90052BA25F3424 /* Pods-ShowLiveUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveUITests.debug.xcconfig"; path = "../../../../requestAction/Pods-ShowLiveUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C80209C93E46267AFE3ADF2E /* libPods-ShowLiveTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShowLiveTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFCDB8F5C4F35241EF7781C8 /* Pods-ShowLiveTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveTests.release.xcconfig"; path = "../../../JKCategories/Pods-ShowLiveTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -505,6 +505,7 @@
 				4321A34922F46DB300F19D03 /* CLLocationManager+Blocks.h */,
 				4321A34A22F46DB300F19D03 /* SLHistoryWorksAction.h */,
 				4321A35622F46DB300F19D03 /* NSString+JKXMLDictionary.h */,
+				AA2350AAA436CDCBB1E93DCE /* Pods-ShowLive.release.xcconfig */,
 				D6F34820745ED99EE82E0D41 /* Pods-ShowLiveTests.debug.xcconfig */,
 				4321A36D22F46DB300F19D03 /* HomeHeader.h */,
 				4321A39422F46DB300F19D03 /* POPSpringAnimationInternal.h */,
@@ -513,9 +514,13 @@
 				4321A37122F46DB300F19D03 /* Pods-ShowLiveTests.release.xcconfig */,
 				A99892BD20BD79600026BA03 /* SLConfig.h */,
 				436B761F22C760570029DD3E /* SLJPushUntils.h */,
+				4321A35722F46DB300F19D03 /* SLAttentionListAction.h */,
 				4321A35C22F46DB300F19D03 /* POPAnimatableProperty.h */,
 				4321A35F22F46DB300F19D03 /* NSData+ImageContentType.m */,
 				4321A36022F46DB300F19D03 /* POPGeometry.mm */,
+				4321A37D22F46DB300F19D03 /* UIView+Additional.m */,
+				4321A37F22F46DB300F19D03 /* NSString+Additions.m */,
+				4321A38322F46DB300F19D03 /* NSDate+JKInternetDateTime.m */,
 				4321A38722F46DB300F19D03 /* POPLayerExtras.h */,
 				4321A38822F46DB300F19D03 /* POPAnimatablePropertyTypes.h */,
 				4321A38B22F46DB300F19D03 /* UIWebVIew+JKSwipeGesture.m */,
@@ -561,7 +566,6 @@
 				4321A37522F46DB300F19D03 /* Pods-ShowLiveUITests.release.xcconfig */,
 				4321A37422F46DB300F19D03 /* SLConfig.h */,
 				436B762422C760570029DD3E /* SLJPushUntils.m */,
-				4321A35722F46DB300F19D03 /* SLAttentionListAction.h */,
 				4321A35822F46DB300F19D03 /* UIView+FDCollapsibleConstraints.m */,
 				4321A35922F46DB300F19D03 /* SLGiftAction.h */,
 				4321A35A22F46DB300F19D03 /* FloatConversion.h */,
@@ -579,16 +583,12 @@
 				4321A36F22F46DB300F19D03 /* Pods-ShowLive.debug.xcconfig */,
 				4321A36922F46DB300F19D03 /* UIScrollView+EmptyDataSet.h~HEAD */,
 				4321A36C22F46DB300F19D03 /* Pods-ShowLive.release.xcconfig */,
-				AA2350AAA436CDCBB1E93DCE /* Pods-ShowLive.release.xcconfig */,
 				4321A37322F46DB300F19D03 /* Pods-ShowLiveTests.debug.xcconfig */,
 				4321A37C22F46DB300F19D03 /* NSBundle+JKAppIcon.m */,
-				4321A37D22F46DB300F19D03 /* UIView+Additional.m */,
 				4321A37E22F46DB300F19D03 /* SLGetRyTokenAction.h */,
-				4321A37F22F46DB300F19D03 /* NSString+Additions.m */,
 				4321A38022F46DB300F19D03 /* UITextField+JKBlocks.h */,
 				4321A38122F46DB300F19D03 /* CALayer+JKBorderColor.h */,
 				4321A38222F46DB300F19D03 /* UIGestureRecognizer+BlocksKit.m */,
-				4321A38322F46DB300F19D03 /* NSDate+JKInternetDateTime.m */,
 				4321A38422F46DB300F19D03 /* TODO.md */,
 				4321A38522F46DB300F19D03 /* MKMapView+JKBetterMaps.m */,
 				4321A38622F46DB300F19D03 /* UIView+Debug.h */,
