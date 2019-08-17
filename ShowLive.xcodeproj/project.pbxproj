@@ -316,7 +316,7 @@
 		72C7B4F720C3EDE500065BC2 /* SLADView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLADView.h; sourceTree = "<group>"; };
 		72CA648B20EE4A4C0052E107 /* SLFansViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLFansViewController.h; sourceTree = "<group>"; };
 		72DFDE7820D9308600EA3AA1 /* ShowHomeMiddleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShowHomeMiddleCell.h; path = ../../SLHelper/pop/ShowHomeMiddleCell.h; sourceTree = "<group>"; };
-		72DFDE7C20D9328000EA3AA1 /* ShowHomeSamallCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowHomeSamallCell.h; sourceTree = "<group>"; };
+		72DFDE7C20D9328000EA3AA1 /* ShowHomeSamallCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShowHomeSamallCell.h; path = ../../SLHelper/pop/ShowHomeSamallCell.h; sourceTree = "<group>"; };
 		72F9A9642200483100612687 /* NewTopListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewTopListCell.h; sourceTree = "<group>"; };
 		72F9A9652200484600612687 /* NewTopListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewTopListCell.m; sourceTree = "<group>"; };
 		72F9A9672200486F00612687 /* NewTopListHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewTopListHeader.h; sourceTree = "<group>"; };
@@ -503,18 +503,14 @@
 				4321A36C22F46DB300F19D03 /* Pods-ShowLive.release.xcconfig */,
 				4321A37322F46DB300F19D03 /* Pods-ShowLiveTests.debug.xcconfig */,
 				724D4BC320C915BF0007E4E8 /* HotReusableView.h */,
-				72DFDE7C20D9328000EA3AA1 /* ShowHomeSamallCell.h */,
 				D24CA8E52307F0F500F529BB /* Pods-ShowLiveUITests.debug.xcconfig */,
 				4321A37422F46DB300F19D03 /* SLConfig.h */,
 				A99892BD20BD79600026BA03 /* SLConfig.h */,
 				436B762422C760570029DD3E /* SLJPushUntils.m */,
 				4321A35822F46DB300F19D03 /* UIView+FDCollapsibleConstraints.m */,
 				4321A35A22F46DB300F19D03 /* FloatConversion.h */,
-				4321A35F22F46DB300F19D03 /* NSData+ImageContentType.m */,
 				4321A37E22F46DB300F19D03 /* SLGetRyTokenAction.h */,
 				4321A38822F46DB300F19D03 /* POPAnimatablePropertyTypes.h */,
-				4321A38922F46DB300F19D03 /* UITextField+JKHistory.h */,
-				4321A34E22F46DB300F19D03 /* NSSting+aes.h */,
 				4321A35422F46DB300F19D03 /* NSNumber+JKRomanNumerals.h */,
 			);
 			path = pop;
@@ -559,6 +555,7 @@
 				4321A36B22F46DB300F19D03 /* HotReusableView.h */,
 				72DFDE7820D9308600EA3AA1 /* ShowHomeMiddleCell.h */,
 				4321A37022F46DB300F19D03 /* ShowHomeMiddleCell.h */,
+				72DFDE7C20D9328000EA3AA1 /* ShowHomeSamallCell.h */,
 				4321A36E22F46DB300F19D03 /* ShowHomeSamallCell.h */,
 				CFCDB8F5C4F35241EF7781C8 /* Pods-ShowLiveTests.release.xcconfig */,
 				4321A37122F46DB300F19D03 /* Pods-ShowLiveTests.release.xcconfig */,
@@ -571,6 +568,7 @@
 				4321A35C22F46DB300F19D03 /* POPAnimatableProperty.h */,
 				4321A35D22F46DB300F19D03 /* NSString+Additions.h */,
 				4321A35E22F46DB300F19D03 /* UIView+GestureCallback.h */,
+				4321A35F22F46DB300F19D03 /* NSData+ImageContentType.m */,
 				4321A36022F46DB300F19D03 /* POPGeometry.mm */,
 				4321A37C22F46DB300F19D03 /* NSBundle+JKAppIcon.m */,
 				4321A37D22F46DB300F19D03 /* UIView+Additional.m */,
@@ -583,6 +581,7 @@
 				4321A38522F46DB300F19D03 /* MKMapView+JKBetterMaps.m */,
 				4321A38622F46DB300F19D03 /* UIView+Debug.h */,
 				4321A38722F46DB300F19D03 /* POPLayerExtras.h */,
+				4321A38922F46DB300F19D03 /* UITextField+JKHistory.h */,
 				4321A38A22F46DB300F19D03 /* NSData+JKAPNSToken.h */,
 				4321A38B22F46DB300F19D03 /* UIWebVIew+JKSwipeGesture.m */,
 				4321A38C22F46DB300F19D03 /* UIScrollView+APParallaxHeader.h */,
@@ -596,6 +595,7 @@
 				4321A34B22F46DB300F19D03 /* ShowAction.h */,
 				4321A34C22F46DB300F19D03 /* UIViewController+MJPopupViewController.h */,
 				4321A34D22F46DB300F19D03 /* pop-ios-Info.plist */,
+				4321A34E22F46DB300F19D03 /* NSSting+aes.h */,
 				4321A34F22F46DB300F19D03 /* POPAction.h */,
 				4321A35022F46DB300F19D03 /* CATransaction+JKAnimateWithDuration.m */,
 				4321A35122F46DB300F19D03 /* SLShutUpAction.h */,
