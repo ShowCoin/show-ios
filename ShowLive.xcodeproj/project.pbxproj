@@ -160,7 +160,7 @@
 		4321A36722F46DB300F19D03 /* UITableView+FDTemplateLayoutCellDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITableView+FDTemplateLayoutCellDebug.h"; path = "../../../../requestAction/UITableView+FDTemplateLayoutCellDebug.h"; sourceTree = "<group>"; };
 		4321A36922F46DB300F19D03 /* UIScrollView+EmptyDataSet.h~HEAD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UIScrollView+EmptyDataSet.h~HEAD"; sourceTree = "<group>"; };
 		4321A36B22F46DB300F19D03 /* HotReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotReusableView.h; sourceTree = "<group>"; };
-		4321A36C22F46DB300F19D03 /* Pods-ShowLive.release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Pods-ShowLive.release.xcconfig"; path = "../../SLHelper/pop/Pods-ShowLive.release.xcconfig"; sourceTree = "<group>"; };
+		4321A36C22F46DB300F19D03 /* Pods-ShowLive.release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Pods-ShowLive.release.xcconfig"; sourceTree = "<group>"; };
 		4321A36D22F46DB300F19D03 /* HomeHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeHeader.h; sourceTree = "<group>"; };
 		4321A36E22F46DB300F19D03 /* ShowHomeSamallCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowHomeSamallCell.h; sourceTree = "<group>"; };
 		4321A36F22F46DB300F19D03 /* Pods-ShowLive.debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Pods-ShowLive.debug.xcconfig"; sourceTree = "<group>"; };
@@ -250,7 +250,7 @@
 		7217AD9821C5368100D082E9 /* WithdrawViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WithdrawViewController.h; sourceTree = "<group>"; };
 		7217AD9921C536A700D082E9 /* WithdrawViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WithdrawViewController.m; sourceTree = "<group>"; };
 		7217AD9B21C5377D00D082E9 /* SLCoinDetailInfoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLCoinDetailInfoVC.h; sourceTree = "<group>"; };
-		722BCF0621D78936004BFC52 /* SLInviteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLInviteViewController.m; path = ../../SLHelper/pop/SLInviteViewController.m; sourceTree = "<group>"; };
+		722BCF0621D78936004BFC52 /* SLInviteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLInviteViewController.m; sourceTree = "<group>"; };
 		723816B220C689AB00C3885E /* SLLevelMarkView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLLevelMarkView.h; sourceTree = "<group>"; };
 		723816B320C689AB00C3885E /* SLLevelMarkView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLLevelMarkView.m; sourceTree = "<group>"; };
 		723816B620C68B3C00C3885E /* SLHeadPortrait.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLHeadPortrait.m; sourceTree = "<group>"; };
@@ -504,8 +504,11 @@
 				4321A37A22F46DB300F19D03 /* UIView+Debug.m */,
 				4321A35622F46DB300F19D03 /* NSString+JKXMLDictionary.h */,
 				4321A36122F46DB300F19D03 /* POPAnimation.h */,
+				4321A36222F46DB300F19D03 /* NSNotificationCenterDemoViewController.m */,
 				4321A36F22F46DB300F19D03 /* Pods-ShowLive.debug.xcconfig */,
+				4321A36C22F46DB300F19D03 /* Pods-ShowLive.release.xcconfig */,
 				4321A37322F46DB300F19D03 /* Pods-ShowLiveTests.debug.xcconfig */,
+				722BCF0621D78936004BFC52 /* SLInviteViewController.m */,
 				4321A37222F46DB300F19D03 /* SLInviteViewController.m */,
 				4321A39422F46DB300F19D03 /* POPSpringAnimationInternal.h */,
 				4321A36B22F46DB300F19D03 /* HotReusableView.h */,
@@ -555,18 +558,15 @@
 				4321A34A22F46DB300F19D03 /* SLHistoryWorksAction.h */,
 				436B762A22C760580029DD3E /* SLExtensionHelper.h */,
 				436B75DD22C760560029DD3E /* SLExtensionHelper.m */,
-				4321A36222F46DB300F19D03 /* NSNotificationCenterDemoViewController.m */,
 				4321A36322F46DB300F19D03 /* SLNavigationViewController.m */,
 				4321A36422F46DB300F19D03 /* POPLayerExtras.mm */,
 				72C686F61D628C8898214FFC /* Pods-ShowLive.debug.xcconfig */,
 				4321A36522F46DB300F19D03 /* NSData+Image.m */,
 				4321A36922F46DB300F19D03 /* UIScrollView+EmptyDataSet.h~HEAD */,
-				4321A36C22F46DB300F19D03 /* Pods-ShowLive.release.xcconfig */,
 				AA2350AAA436CDCBB1E93DCE /* Pods-ShowLive.release.xcconfig */,
 				D6F34820745ED99EE82E0D41 /* Pods-ShowLiveTests.debug.xcconfig */,
 				724D4BC020C9150D0007E4E8 /* HomeHeader.h */,
 				4321A36D22F46DB300F19D03 /* HomeHeader.h */,
-				722BCF0621D78936004BFC52 /* SLInviteViewController.m */,
 				724D4BC320C915BF0007E4E8 /* HotReusableView.h */,
 				72DFDE7820D9308600EA3AA1 /* ShowHomeMiddleCell.h */,
 				4321A37022F46DB300F19D03 /* ShowHomeMiddleCell.h */,
