@@ -136,7 +136,7 @@
 		4321A34E22F46DB300F19D03 /* NSSting+aes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSting+aes.h"; sourceTree = "<group>"; };
 		4321A34F22F46DB300F19D03 /* POPAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAction.h; sourceTree = "<group>"; };
 		4321A35022F46DB300F19D03 /* CATransaction+JKAnimateWithDuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CATransaction+JKAnimateWithDuration.m"; path = "../../SLHelper/CATransaction+JKAnimateWithDuration.m"; sourceTree = "<group>"; };
-		4321A35122F46DB300F19D03 /* SLShutUpAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLShutUpAction.h; path = ../../SLHelper/SLShutUpAction.h; sourceTree = "<group>"; };
+		4321A35122F46DB300F19D03 /* SLShutUpAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLShutUpAction.h; path = ../SLShutUpAction.h; sourceTree = "<group>"; };
 		4321A35222F46DB300F19D03 /* NSDate+JKLunarCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JKLunarCalendar.m"; sourceTree = "<group>"; };
 		4321A35322F46DB300F19D03 /* POPAnimationTracer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = POPAnimationTracer.mm; path = ../../../../requestAction/POPAnimationTracer.mm; sourceTree = "<group>"; };
 		4321A35422F46DB300F19D03 /* NSNumber+JKRomanNumerals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+JKRomanNumerals.h"; sourceTree = "<group>"; };
@@ -170,7 +170,7 @@
 		4321A37322F46DB300F19D03 /* Pods-ShowLiveTests.debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Pods-ShowLiveTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4321A37422F46DB300F19D03 /* SLConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLConfig.h; sourceTree = "<group>"; };
 		4321A37522F46DB300F19D03 /* Pods-ShowLiveUITests.release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Pods-ShowLiveUITests.release.xcconfig"; sourceTree = "<group>"; };
-		4321A37622F46DB300F19D03 /* UIView+FDCollapsibleConstraints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+FDCollapsibleConstraints.h"; path = "../../SLHelper/UIView+FDCollapsibleConstraints.h"; sourceTree = "<group>"; };
+		4321A37622F46DB300F19D03 /* UIView+FDCollapsibleConstraints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+FDCollapsibleConstraints.h"; path = "../UIView+FDCollapsibleConstraints.h"; sourceTree = "<group>"; };
 		4321A37922F46DB300F19D03 /* NSObject+JKAppInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JKAppInfo.m"; sourceTree = "<group>"; };
 		4321A37A22F46DB300F19D03 /* UIView+Debug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Debug.m"; sourceTree = "<group>"; };
 		4321A37B22F46DB300F19D03 /* UITableView+FDKeyedHeightCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDKeyedHeightCache.h"; sourceTree = "<group>"; };
@@ -506,6 +506,8 @@
 				4321A37E22F46DB300F19D03 /* SLGetRyTokenAction.h */,
 				4321A38022F46DB300F19D03 /* UITextField+JKBlocks.h */,
 				4321A38222F46DB300F19D03 /* UIGestureRecognizer+BlocksKit.m */,
+				4321A37622F46DB300F19D03 /* UIView+FDCollapsibleConstraints.h */,
+				4321A35122F46DB300F19D03 /* SLShutUpAction.h */,
 				D2A091F522FE90B500F8683B /* Pods-ShowLiveUITests.debug.xcconfig */,
 				D24CA8E52307F0F500F529BB /* Pods-ShowLiveUITests.debug.xcconfig */,
 			);
@@ -589,7 +591,6 @@
 				4321A38D22F46DB300F19D03 /* UITextFieldDemoViewController.h */,
 				4321A38E22F46DB300F19D03 /* UITextField+JKBlocks.m */,
 				4321A38F22F46DB300F19D03 /* UIView+FDCollapsibleConstraints.h */,
-				4321A37622F46DB300F19D03 /* UIView+FDCollapsibleConstraints.h */,
 				4321A39022F46DB300F19D03 /* UIViewController+DDPopUpViewController.h */,
 				4321A39122F46DB300F19D03 /* CATransactionDemoViewController.h */,
 				4321A39222F46DB300F19D03 /* POPAnimationTracer.h */,
@@ -599,7 +600,6 @@
 				4321A34E22F46DB300F19D03 /* NSSting+aes.h */,
 				4321A34F22F46DB300F19D03 /* POPAction.h */,
 				4321A35022F46DB300F19D03 /* CATransaction+JKAnimateWithDuration.m */,
-				4321A35122F46DB300F19D03 /* SLShutUpAction.h */,
 				4321A35222F46DB300F19D03 /* NSDate+JKLunarCalendar.m */,
 				4321A35322F46DB300F19D03 /* POPAnimationTracer.mm */,
 				4321A35422F46DB300F19D03 /* NSNumber+JKRomanNumerals.h */,
