@@ -1,18 +1,18 @@
 //
-//  CATransactionDemoViewController.m
+//  NSNotificationCenterDemoViewController.m
 //  JKCategories
 //
-//  Created by Jakey on 15/6/20.
-//  Copyright © 2015年 www.skyfox.org. All rights reserved.
+//  Created by Jakey on 15/6/5.
+//  Copyright (c) 2015年 www.skyfox.org. All rights reserved.
 //
 
-#import "CATransactionDemoViewController.h"
+#import "NSNotificationCenterDemoViewController.h"
 
-@interface CATransactionDemoViewController ()
+@interface NSNotificationCenterDemoViewController ()
 
 @end
 
-@implementation CATransactionDemoViewController
+@implementation NSNotificationCenterDemoViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
