@@ -165,7 +165,7 @@
 		4305633E230831250090EA36 /* CATransactionDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CATransactionDemoViewController.h; path = ../CATransactionDemoViewController.h; sourceTree = "<group>"; };
 		4305633F230831250090EA36 /* NSBundle+JKAppIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSBundle+JKAppIcon.m"; path = "../../NSBundle+JKAppIcon.m"; sourceTree = "<group>"; };
 		43056340230831250090EA36 /* SLJPushUntils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLJPushUntils.h; path = ../SLJPushUntils.h; sourceTree = "<group>"; };
-		43056341230831250090EA36 /* POPAnimatableProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POPAnimatableProperty.h; path = ../../POPAnimatableProperty.h; sourceTree = "<group>"; };
+		43056341230831250090EA36 /* POPAnimatableProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAnimatableProperty.h; sourceTree = "<group>"; };
 		43056342230831250090EA36 /* UIView+Additional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Additional.m"; path = "../UIView+Additional.m"; sourceTree = "<group>"; };
 		43056344230831250090EA36 /* HotReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotReusableView.h; sourceTree = "<group>"; };
 		43056345230831250090EA36 /* UIView+Debug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Debug.m"; sourceTree = "<group>"; };
@@ -193,7 +193,7 @@
 		4305635B230831250090EA36 /* POPSpringAnimationInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POPSpringAnimationInternal.h; path = "../Exten/SLHelper/pop/UITableView-FDTemplateLayoutCell/POPSpringAnimationInternal.h"; sourceTree = "<group>"; };
 		4305635C230831250090EA36 /* POPAnimatableProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAnimatableProperty.h; sourceTree = "<group>"; };
 		4305635D230831250090EA36 /* POPLayerExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPLayerExtras.h; sourceTree = "<group>"; };
-		4305635E230831250090EA36 /* SLJPushUntils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLJPushUntils.m; sourceTree = "<group>"; };
+		4305635E230831250090EA36 /* SLJPushUntils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLJPushUntils.m; path = "../Exten/SLHelper/pop/UITableView-FDTemplateLayoutCell/SLJPushUntils.m"; sourceTree = "<group>"; };
 		4305635F230831250090EA36 /* POPGeometry.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = POPGeometry.mm; sourceTree = "<group>"; };
 		43056360230831250090EA36 /* POPAnimatablePropertyTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAnimatablePropertyTypes.h; sourceTree = "<group>"; };
 		43056361230831250090EA36 /* UITextField+JKHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+JKHistory.h"; sourceTree = "<group>"; };
@@ -551,7 +551,6 @@
 				4305637B230831260090EA36 /* Pods-ShowLive.release.xcconfig */,
 				4305637D230831270090EA36 /* Pods-ShowLiveTests.debug.xcconfig */,
 				4305637A230831260090EA36 /* Pods-ShowLiveUITests.release.xcconfig */,
-				43056341230831250090EA36 /* POPAnimatableProperty.h */,
 				4305637E230831270090EA36 /* POPAnimatablePropertyTypes.h */,
 				4305637F230831270090EA36 /* SLGetRyTokenAction.h */,
 				43056391230831280090EA36 /* SLGiftAction.h */,
@@ -587,7 +586,6 @@
 				4305635A230831250090EA36 /* UIView+Debug.h */,
 				4305635C230831250090EA36 /* POPAnimatableProperty.h */,
 				4305635D230831250090EA36 /* POPLayerExtras.h */,
-				4305635E230831250090EA36 /* SLJPushUntils.m */,
 				4305635F230831250090EA36 /* POPGeometry.mm */,
 				43056360230831250090EA36 /* POPAnimatablePropertyTypes.h */,
 				43056361230831250090EA36 /* UITextField+JKHistory.h */,
@@ -662,8 +660,10 @@
 				43056363230831250090EA36 /* NSData+JKAPNSToken.h */,
 				4321A37B22F46DB300F19D03 /* UITableView+FDKeyedHeightCache.h */,
 				43056389230831270090EA36 /* NSNotificationCenterDemoViewController.m */,
+				43056341230831250090EA36 /* POPAnimatableProperty.h */,
 				43056364230831250090EA36 /* POPAnimation.h */,
 				4305638E230831280090EA36 /* POPAnimationTracer.h */,
+				4305635E230831250090EA36 /* SLJPushUntils.m */,
 				43056382230831270090EA36 /* POPGeometry.mm */,
 				4321A34A22F46DB300F19D03 /* SLHistoryWorksAction.h */,
 				4321A34C22F46DB300F19D03 /* UIViewController+MJPopupViewController.h */,
