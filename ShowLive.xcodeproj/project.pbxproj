@@ -168,7 +168,7 @@
 		43056341230831250090EA36 /* POPAnimatableProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAnimatableProperty.h; sourceTree = "<group>"; };
 		43056342230831250090EA36 /* UIView+Additional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Additional.m"; path = "../Exten/SLHelper/pop/UIView+Additional.m"; sourceTree = "<group>"; };
 		43056344230831250090EA36 /* HotReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotReusableView.h; sourceTree = "<group>"; };
-		43056345230831250090EA36 /* UIView+Debug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Debug.m"; sourceTree = "<group>"; };
+		43056345230831250090EA36 /* UIView+Debug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Debug.m"; path = "../Exten/SLHelper/pop/UITableView-FDTemplateLayoutCell/UIView+Debug.m"; sourceTree = "<group>"; };
 		43056346230831250090EA36 /* UIScrollView+EmptyDataSet.h~HEAD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UIScrollView+EmptyDataSet.h~HEAD"; sourceTree = "<group>"; };
 		43056347230831250090EA36 /* NSBundle+JKAppIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+JKAppIcon.m"; sourceTree = "<group>"; };
 		43056348230831250090EA36 /* UIView+Additional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additional.m"; sourceTree = "<group>"; };
@@ -242,7 +242,7 @@
 		4305638C230831280090EA36 /* UITextField+JKBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+JKBlocks.m"; sourceTree = "<group>"; };
 		4305638D230831280090EA36 /* POPLayerExtras.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = POPLayerExtras.mm; sourceTree = "<group>"; };
 		4305638E230831280090EA36 /* POPAnimationTracer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAnimationTracer.h; sourceTree = "<group>"; };
-		4305638F230831280090EA36 /* NSString+JKXMLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+JKXMLDictionary.h"; path = "../../NSString+JKXMLDictionary.h"; sourceTree = "<group>"; };
+		4305638F230831280090EA36 /* NSString+JKXMLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JKXMLDictionary.h"; sourceTree = "<group>"; };
 		43056390230831280090EA36 /* SLInviteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLInviteViewController.m; path = ../../SLInviteViewController.m; sourceTree = "<group>"; };
 		43056391230831280090EA36 /* SLGiftAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLGiftAction.h; path = ../../SLGiftAction.h; sourceTree = "<group>"; };
 		43056392230831280090EA36 /* UIScrollView+EmptyDataSet.h~HEAD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UIScrollView+EmptyDataSet.h~HEAD"; sourceTree = "<group>"; };
@@ -525,7 +525,6 @@
 			isa = PBXGroup;
 			children = (
 				43056344230831250090EA36 /* HotReusableView.h */,
-				43056345230831250090EA36 /* UIView+Debug.m */,
 				43056346230831250090EA36 /* UIScrollView+EmptyDataSet.h~HEAD */,
 				4305633C230831250090EA36 /* UITextField+JKHistory.h */,
 				43056348230831250090EA36 /* UIView+Additional.m */,
@@ -538,7 +537,6 @@
 				4305637C230831260090EA36 /* NSData+Image.m */,
 				4321A36722F46DB300F19D03 /* UITableView+FDTemplateLayoutCellDebug.h */,
 				43056387230831270090EA36 /* NSNotificationCenter+JKMainThread.h */,
-				4305638F230831280090EA36 /* NSString+JKXMLDictionary.h */,
 				4305637B230831260090EA36 /* Pods-ShowLive.release.xcconfig */,
 				4305637A230831260090EA36 /* Pods-ShowLiveUITests.release.xcconfig */,
 				43056391230831280090EA36 /* SLGiftAction.h */,
@@ -641,6 +639,7 @@
 				4321A34722F46DB300F19D03 /* NSNotificationCenter+JKMainThread.h */,
 				43056389230831270090EA36 /* NSNotificationCenterDemoViewController.m */,
 				43056367230831250090EA36 /* NSNotificationCenterDemoViewController.m */,
+				4305638F230831280090EA36 /* NSString+JKXMLDictionary.h */,
 				43056359230831250090EA36 /* Pods-ShowLiveTests.debug.xcconfig */,
 				4305637D230831270090EA36 /* Pods-ShowLiveTests.debug.xcconfig */,
 				43056341230831250090EA36 /* POPAnimatableProperty.h */,
@@ -673,6 +672,7 @@
 				4305634F230831250090EA36 /* UIGestureRecognizer+BlocksKit.m */,
 				43056379230831260090EA36 /* HotReusableView.h */,
 				43056375230831260090EA36 /* UIView+Debug.m */,
+				43056345230831250090EA36 /* UIView+Debug.m */,
 				43056392230831280090EA36 /* UIScrollView+EmptyDataSet.h~HEAD */,
 				43056347230831250090EA36 /* NSBundle+JKAppIcon.m */,
 				4305633F230831250090EA36 /* NSBundle+JKAppIcon.m */,
