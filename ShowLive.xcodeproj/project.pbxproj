@@ -161,7 +161,7 @@
 
 /* Begin PBXFileReference section */
 		4305633C230831250090EA36 /* UITextField+JKHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITextField+JKHistory.h"; path = "../../UITextField+JKHistory.h"; sourceTree = "<group>"; };
-		4305633D230831250090EA36 /* UITextFieldDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITextFieldDemoViewController.h; sourceTree = "<group>"; };
+		4305633D230831250090EA36 /* UITextFieldDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UITextFieldDemoViewController.h; path = ../../UITextFieldDemoViewController.h; sourceTree = "<group>"; };
 		4305633E230831250090EA36 /* CATransactionDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CATransactionDemoViewController.h; path = ../CATransactionDemoViewController.h; sourceTree = "<group>"; };
 		4305633F230831250090EA36 /* NSBundle+JKAppIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+JKAppIcon.m"; sourceTree = "<group>"; };
 		43056340230831250090EA36 /* SLJPushUntils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLJPushUntils.h; path = ../SLJPushUntils.h; sourceTree = "<group>"; };
@@ -527,6 +527,7 @@
 				43056347230831250090EA36 /* NSBundle+JKAppIcon.m */,
 				4305638C230831280090EA36 /* UITextField+JKBlocks.m */,
 				4305633C230831250090EA36 /* UITextField+JKHistory.h */,
+				4305633D230831250090EA36 /* UITextFieldDemoViewController.h */,
 				43056348230831250090EA36 /* UIView+Additional.m */,
 				43056349230831250090EA36 /* Pods-ShowLive.release.xcconfig */,
 				4305634A230831250090EA36 /* HomeHeader.h */,
@@ -574,6 +575,7 @@
 				4321A34C22F46DB300F19D03 /* UIViewController+MJPopupViewController.h */,
 				4321A34D22F46DB300F19D03 /* pop-ios-Info.plist */,
 				4321A34E22F46DB300F19D03 /* NSSting+aes.h */,
+				4321A34F22F46DB300F19D03 /* POPAction.h */,
 				4321A35022F46DB300F19D03 /* CATransaction+JKAnimateWithDuration.m */,
 				4321A35122F46DB300F19D03 /* SLShutUpAction.h */,
 				4321A35222F46DB300F19D03 /* NSDate+JKLunarCalendar.m */,
@@ -703,7 +705,6 @@
 		4321A36822F46DB300F19D03 /* SLHelper */ = {
 			isa = PBXGroup;
 			children = (
-				4305633D230831250090EA36 /* UITextFieldDemoViewController.h */,
 				43056380230831270090EA36 /* CALayer+JKBorderColor.h */,
 				4305633F230831250090EA36 /* NSBundle+JKAppIcon.m */,
 				43056387230831270090EA36 /* NSNotificationCenter+JKMainThread.h */,
@@ -714,7 +715,6 @@
 				D244B943230FC190007C33A7 /* Pods-ShowLiveUITests.debug.xcconfig */,
 				D244B942230FC18D007C33A7 /* Pods-ShowLiveUITests.debug.xcconfig */,
 				D244B941230FC18B007C33A7 /* Pods-ShowLiveUITests.debug.xcconfig */,
-				4321A34F22F46DB300F19D03 /* POPAction.h */,
 				4321A36A22F46DB300F19D03 /* pop */,
 			);
 			path = SLHelper;
