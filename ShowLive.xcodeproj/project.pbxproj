@@ -161,7 +161,7 @@
 
 /* Begin PBXFileReference section */
 		4305633C230831250090EA36 /* UITextField+JKHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITextField+JKHistory.h"; path = "SLHelper/pop/UITextField+JKHistory.h"; sourceTree = "<group>"; };
-		4305633D230831250090EA36 /* UITextFieldDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UITextFieldDemoViewController.h; path = SLHelper/pop/UITextFieldDemoViewController.h; sourceTree = "<group>"; };
+		4305633D230831250090EA36 /* UITextFieldDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITextFieldDemoViewController.h; sourceTree = "<group>"; };
 		4305633E230831250090EA36 /* CATransactionDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CATransactionDemoViewController.h; path = pop/CATransactionDemoViewController.h; sourceTree = "<group>"; };
 		4305633F230831250090EA36 /* NSBundle+JKAppIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+JKAppIcon.m"; sourceTree = "<group>"; };
 		43056340230831250090EA36 /* SLJPushUntils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLJPushUntils.h; path = pop/SLJPushUntils.h; sourceTree = "<group>"; };
@@ -267,7 +267,7 @@
 		4321A34E22F46DB300F19D03 /* NSSting+aes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSting+aes.h"; sourceTree = "<group>"; };
 		4321A34F22F46DB300F19D03 /* POPAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAction.h; sourceTree = "<group>"; };
 		4321A35022F46DB300F19D03 /* CATransaction+JKAnimateWithDuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CATransaction+JKAnimateWithDuration.m"; path = "SLHelper/CATransaction+JKAnimateWithDuration.m"; sourceTree = "<group>"; };
-		4321A35122F46DB300F19D03 /* SLShutUpAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLShutUpAction.h; path = SLHelper/SLShutUpAction.h; sourceTree = "<group>"; };
+		4321A35122F46DB300F19D03 /* SLShutUpAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLShutUpAction.h; sourceTree = "<group>"; };
 		4321A35222F46DB300F19D03 /* NSDate+JKLunarCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JKLunarCalendar.m"; sourceTree = "<group>"; };
 		4321A35322F46DB300F19D03 /* POPAnimationTracer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = POPAnimationTracer.mm; path = ../../../requestAction/POPAnimationTracer.mm; sourceTree = "<group>"; };
 		4321A35422F46DB300F19D03 /* NSNumber+JKRomanNumerals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSNumber+JKRomanNumerals.h"; path = "../NSNumber+JKRomanNumerals.h"; sourceTree = "<group>"; };
@@ -634,13 +634,11 @@
 			children = (
 				43056343230831250090EA36 /* UITableView-FDTemplateLayoutCell */,
 				4305633C230831250090EA36 /* UITextField+JKHistory.h */,
-				4305633D230831250090EA36 /* UITextFieldDemoViewController.h */,
 				43056342230831250090EA36 /* UIView+Additional.m */,
 				43056380230831270090EA36 /* CALayer+JKBorderColor.h */,
 				4305633F230831250090EA36 /* NSBundle+JKAppIcon.m */,
 				4305637C230831260090EA36 /* NSData+Image.m */,
 				43056385230831270090EA36 /* NSData+JKAPNSToken.h */,
-				43056387230831270090EA36 /* NSNotificationCenter+JKMainThread.h */,
 				4321A34722F46DB300F19D03 /* NSNotificationCenter+JKMainThread.h */,
 				4305637D230831270090EA36 /* Pods-ShowLiveTests.debug.xcconfig */,
 				43056341230831250090EA36 /* POPAnimatableProperty.h */,
@@ -657,7 +655,6 @@
 				4321A34A22F46DB300F19D03 /* SLHistoryWorksAction.h */,
 				4321A34B22F46DB300F19D03 /* ShowAction.h */,
 				4321A35022F46DB300F19D03 /* CATransaction+JKAnimateWithDuration.m */,
-				4321A35122F46DB300F19D03 /* SLShutUpAction.h */,
 				4321A35222F46DB300F19D03 /* NSDate+JKLunarCalendar.m */,
 				43056393230831280090EA36 /* UIViewController+DDPopUpViewController.h */,
 				4321A36822F46DB300F19D03 /* SLHelper */,
@@ -670,6 +667,7 @@
 			isa = PBXGroup;
 			children = (
 				4305638C230831280090EA36 /* UITextField+JKBlocks.m */,
+				4305633D230831250090EA36 /* UITextFieldDemoViewController.h */,
 				43056375230831260090EA36 /* UIView+Debug.m */,
 				43056372230831260090EA36 /* UIView+FDCollapsibleConstraints.h */,
 				4305633E230831250090EA36 /* CATransactionDemoViewController.h */,
@@ -679,6 +677,7 @@
 				4321A37B22F46DB300F19D03 /* UITableView+FDKeyedHeightCache.h */,
 				43056394230831280090EA36 /* NSDate+JKInternetDateTime.m */,
 				4321A36722F46DB300F19D03 /* UITableView+FDTemplateLayoutCellDebug.h */,
+				43056387230831270090EA36 /* NSNotificationCenter+JKMainThread.h */,
 				43056389230831270090EA36 /* NSNotificationCenterDemoViewController.m */,
 				4305638F230831280090EA36 /* NSString+JKXMLDictionary.h */,
 				4305637B230831260090EA36 /* Pods-ShowLive.release.xcconfig */,
@@ -703,6 +702,7 @@
 				4321A34D22F46DB300F19D03 /* pop-ios-Info.plist */,
 				4321A34E22F46DB300F19D03 /* NSSting+aes.h */,
 				4321A34F22F46DB300F19D03 /* POPAction.h */,
+				4321A35122F46DB300F19D03 /* SLShutUpAction.h */,
 				4321A35322F46DB300F19D03 /* POPAnimationTracer.mm */,
 				4321A35422F46DB300F19D03 /* NSNumber+JKRomanNumerals.h */,
 				4321A35522F46DB300F19D03 /* CATransactionDemoViewController.m */,
