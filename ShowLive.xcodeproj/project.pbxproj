@@ -222,7 +222,7 @@
 		43056378230831260090EA36 /* TODO.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = TODO.md; path = ../../TODO.md; sourceTree = "<group>"; };
 		43056379230831260090EA36 /* HotReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HotReusableView.h; path = ../Exten/SLHelper/pop/HotReusableView.h; sourceTree = "<group>"; };
 		4305637A230831260090EA36 /* Pods-ShowLiveUITests.release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveUITests.release.xcconfig"; path = "../../Pods-ShowLiveUITests.release.xcconfig"; sourceTree = "<group>"; };
-		4305637B230831260090EA36 /* Pods-ShowLive.release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Pods-ShowLive.release.xcconfig"; path = "../../Pods-ShowLive.release.xcconfig"; sourceTree = "<group>"; };
+		4305637B230831260090EA36 /* Pods-ShowLive.release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Pods-ShowLive.release.xcconfig"; path = "../Exten/SLHelper/Pods-ShowLive.release.xcconfig"; sourceTree = "<group>"; };
 		4305637C230831260090EA36 /* NSData+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Image.m"; sourceTree = "<group>"; };
 		4305637D230831270090EA36 /* Pods-ShowLiveTests.debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveTests.debug.xcconfig"; path = "../Exten/SLHelper/Pods-ShowLiveTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4305637E230831270090EA36 /* POPAnimatablePropertyTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAnimatablePropertyTypes.h; sourceTree = "<group>"; };
@@ -233,7 +233,7 @@
 		43056383230831270090EA36 /* UIGestureRecognizer+BlocksKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIGestureRecognizer+BlocksKit.m"; path = "../Exten/SLHelper/UIGestureRecognizer+BlocksKit.m"; sourceTree = "<group>"; };
 		43056384230831270090EA36 /* POPSpringAnimationInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POPSpringAnimationInternal.h; path = ../Exten/SLHelper/POPSpringAnimationInternal.h; sourceTree = "<group>"; };
 		43056385230831270090EA36 /* NSData+JKAPNSToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+JKAPNSToken.h"; path = "../Exten/SLHelper/NSData+JKAPNSToken.h"; sourceTree = "<group>"; };
-		43056386230831270090EA36 /* UIScrollView+APParallaxHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+APParallaxHeader.h"; path = "../../UIScrollView+APParallaxHeader.h"; sourceTree = "<group>"; };
+		43056386230831270090EA36 /* UIScrollView+APParallaxHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+APParallaxHeader.h"; path = "../Exten/SLHelper/UIScrollView+APParallaxHeader.h"; sourceTree = "<group>"; };
 		43056387230831270090EA36 /* NSNotificationCenter+JKMainThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+JKMainThread.h"; sourceTree = "<group>"; };
 		43056388230831270090EA36 /* UIWebVIew+JKSwipeGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIWebVIew+JKSwipeGesture.m"; path = "../Exten/SLHelper/pop/UIWebVIew+JKSwipeGesture.m"; sourceTree = "<group>"; };
 		43056389230831270090EA36 /* NSNotificationCenterDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSNotificationCenterDemoViewController.m; sourceTree = "<group>"; };
@@ -530,11 +530,9 @@
 				43056346230831250090EA36 /* UIScrollView+EmptyDataSet.h~HEAD */,
 				4305634A230831250090EA36 /* HomeHeader.h */,
 				4321A36722F46DB300F19D03 /* UITableView+FDTemplateLayoutCellDebug.h */,
-				4305637B230831260090EA36 /* Pods-ShowLive.release.xcconfig */,
 				4305637A230831260090EA36 /* Pods-ShowLiveUITests.release.xcconfig */,
 				43056391230831280090EA36 /* SLGiftAction.h */,
 				43056378230831260090EA36 /* TODO.md */,
-				43056386230831270090EA36 /* UIScrollView+APParallaxHeader.h */,
 				D244B946230FC1A7007C33A7 /* Pods-ShowLiveUITests.debug.xcconfig */,
 				D244B945230FC1A3007C33A7 /* Pods-ShowLiveUITests.debug.xcconfig */,
 				D244B944230FC1A2007C33A7 /* Pods-ShowLiveUITests.debug.xcconfig */,
@@ -675,6 +673,7 @@
 				43056345230831250090EA36 /* UIView+Debug.m */,
 				43056383230831270090EA36 /* UIGestureRecognizer+BlocksKit.m */,
 				43056366230831250090EA36 /* UIScrollView+APParallaxHeader.h */,
+				43056386230831270090EA36 /* UIScrollView+APParallaxHeader.h */,
 				43056392230831280090EA36 /* UIScrollView+EmptyDataSet.h~HEAD */,
 				43056347230831250090EA36 /* NSBundle+JKAppIcon.m */,
 				4305633F230831250090EA36 /* NSBundle+JKAppIcon.m */,
@@ -687,6 +686,7 @@
 				43056342230831250090EA36 /* UIView+Additional.m */,
 				43056348230831250090EA36 /* UIView+Additional.m */,
 				43056349230831250090EA36 /* Pods-ShowLive.release.xcconfig */,
+				4305637B230831260090EA36 /* Pods-ShowLive.release.xcconfig */,
 				43056376230831260090EA36 /* HomeHeader.h */,
 				43056374230831260090EA36 /* POPLayerExtras.h */,
 				4305638D230831280090EA36 /* POPLayerExtras.mm */,
