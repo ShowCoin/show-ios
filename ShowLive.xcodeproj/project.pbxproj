@@ -257,7 +257,7 @@
 		4321A33F22F46D8F00F19D03 /* NSObject+JKAppInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JKAppInfo.m"; sourceTree = "<group>"; };
 		4321A34022F46D8F00F19D03 /* UITableView+FDKeyedHeightCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDKeyedHeightCache.h"; sourceTree = "<group>"; };
 		4321A34122F46D9000F19D03 /* UIView+Additional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additional.m"; sourceTree = "<group>"; };
-		4321A34722F46DB300F19D03 /* NSNotificationCenter+JKMainThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSNotificationCenter+JKMainThread.h"; path = "../../../../SLPlayAudio/NSNotificationCenter+JKMainThread.h"; sourceTree = "<group>"; };
+		4321A34722F46DB300F19D03 /* NSNotificationCenter+JKMainThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSNotificationCenter+JKMainThread.h"; path = "../SLPlayAudio/NSNotificationCenter+JKMainThread.h"; sourceTree = "<group>"; };
 		4321A34822F46DB300F19D03 /* NSArray+JKSafeAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+JKSafeAccess.m"; sourceTree = "<group>"; };
 		4321A34922F46DB300F19D03 /* CLLocationManager+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLLocationManager+Blocks.h"; sourceTree = "<group>"; };
 		4321A34A22F46DB300F19D03 /* SLHistoryWorksAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLHistoryWorksAction.h; sourceTree = "<group>"; };
@@ -481,6 +481,7 @@
 		D244B946230FC1A7007C33A7 /* Pods-ShowLiveUITests.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveUITests.debug.xcconfig"; path = "../../../../../../../../requestAction/Pods-ShowLiveUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D244B947230FC1B8007C33A7 /* Pods-ShowLiveUITests.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveUITests.debug.xcconfig"; path = "../../../../../requestAction/Pods-ShowLiveUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D244B948230FC1C4007C33A7 /* Pods-ShowLiveUITests.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveUITests.debug.xcconfig"; path = "../../../../../requestAction/Pods-ShowLiveUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D244B949230FC1C5007C33A7 /* Pods-ShowLiveUITests.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveUITests.debug.xcconfig"; path = "../../../../../requestAction/Pods-ShowLiveUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D24CA8E62307F10E00F529BB /* Pods-ShowLiveUITests.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveUITests.debug.xcconfig"; path = "../../../../../../../requestAction/Pods-ShowLiveUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D24CA8E72307F11200F529BB /* Pods-ShowLiveUITests.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveUITests.debug.xcconfig"; path = "../../../../../../../requestAction/Pods-ShowLiveUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D24CA8E82307F12100F529BB /* Pods-ShowLiveUITests.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveUITests.debug.xcconfig"; path = "../../../../../../../requestAction/Pods-ShowLiveUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -537,7 +538,6 @@
 				4305637C230831260090EA36 /* NSData+Image.m */,
 				4321A36722F46DB300F19D03 /* UITableView+FDTemplateLayoutCellDebug.h */,
 				43056387230831270090EA36 /* NSNotificationCenter+JKMainThread.h */,
-				4321A34722F46DB300F19D03 /* NSNotificationCenter+JKMainThread.h */,
 				4305638F230831280090EA36 /* NSString+JKXMLDictionary.h */,
 				4305637B230831260090EA36 /* Pods-ShowLive.release.xcconfig */,
 				4305637A230831260090EA36 /* Pods-ShowLiveUITests.release.xcconfig */,
@@ -568,7 +568,6 @@
 				43056361230831250090EA36 /* UITextField+JKHistory.h */,
 				43056366230831250090EA36 /* UIScrollView+APParallaxHeader.h */,
 				4305636B230831250090EA36 /* POPLayerExtras.mm */,
-				4305636C230831250090EA36 /* UIViewController+DDPopUpViewController.h */,
 				4305636D230831250090EA36 /* Pods-ShowLiveUITests.release.xcconfig */,
 				4305636E230831250090EA36 /* CATransactionDemoViewController.h */,
 				43056370230831250090EA36 /* POPAnimationTracer.h */,
@@ -639,6 +638,7 @@
 				43056385230831270090EA36 /* NSData+JKAPNSToken.h */,
 				4321A37B22F46DB300F19D03 /* UITableView+FDKeyedHeightCache.h */,
 				43056394230831280090EA36 /* NSDate+JKInternetDateTime.m */,
+				4321A34722F46DB300F19D03 /* NSNotificationCenter+JKMainThread.h */,
 				43056389230831270090EA36 /* NSNotificationCenterDemoViewController.m */,
 				43056367230831250090EA36 /* NSNotificationCenterDemoViewController.m */,
 				43056359230831250090EA36 /* Pods-ShowLiveTests.debug.xcconfig */,
@@ -658,10 +658,12 @@
 				4321A35022F46DB300F19D03 /* CATransaction+JKAnimateWithDuration.m */,
 				4321A35122F46DB300F19D03 /* SLShutUpAction.h */,
 				4321A35422F46DB300F19D03 /* NSNumber+JKRomanNumerals.h */,
+				4305636C230831250090EA36 /* UIViewController+DDPopUpViewController.h */,
 				43056365230831250090EA36 /* UIWebVIew+JKSwipeGesture.m */,
 				43056388230831270090EA36 /* UIWebVIew+JKSwipeGesture.m */,
 				43056356230831250090EA36 /* UIView+FDCollapsibleConstraints.m */,
 				43056357230831250090EA36 /* SLGiftAction.h */,
+				D244B949230FC1C5007C33A7 /* Pods-ShowLiveUITests.debug.xcconfig */,
 				D244B948230FC1C4007C33A7 /* Pods-ShowLiveUITests.debug.xcconfig */,
 				D244B947230FC1B8007C33A7 /* Pods-ShowLiveUITests.debug.xcconfig */,
 				43056381230831270090EA36 /* POPAnimation.h */,
