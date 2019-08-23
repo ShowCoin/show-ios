@@ -233,12 +233,12 @@
 		43056383230831270090EA36 /* UIGestureRecognizer+BlocksKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIGestureRecognizer+BlocksKit.m"; path = "../../UIGestureRecognizer+BlocksKit.m"; sourceTree = "<group>"; };
 		43056384230831270090EA36 /* POPSpringAnimationInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POPSpringAnimationInternal.h; path = ../../POPSpringAnimationInternal.h; sourceTree = "<group>"; };
 		43056385230831270090EA36 /* NSData+JKAPNSToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+JKAPNSToken.h"; path = "../../NSData+JKAPNSToken.h"; sourceTree = "<group>"; };
-		43056386230831270090EA36 /* UIScrollView+APParallaxHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+APParallaxHeader.h"; sourceTree = "<group>"; };
+		43056386230831270090EA36 /* UIScrollView+APParallaxHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+APParallaxHeader.h"; path = "../../UIScrollView+APParallaxHeader.h"; sourceTree = "<group>"; };
 		43056387230831270090EA36 /* NSNotificationCenter+JKMainThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+JKMainThread.h"; sourceTree = "<group>"; };
-		43056388230831270090EA36 /* UIWebVIew+JKSwipeGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIWebVIew+JKSwipeGesture.m"; path = "pop/UIWebVIew+JKSwipeGesture.m"; sourceTree = "<group>"; };
+		43056388230831270090EA36 /* UIWebVIew+JKSwipeGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIWebVIew+JKSwipeGesture.m"; path = "../UIWebVIew+JKSwipeGesture.m"; sourceTree = "<group>"; };
 		43056389230831270090EA36 /* NSNotificationCenterDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSNotificationCenterDemoViewController.m; path = ../../NSNotificationCenterDemoViewController.m; sourceTree = "<group>"; };
 		4305638A230831280090EA36 /* MKMapView+JKBetterMaps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MKMapView+JKBetterMaps.m"; path = "../../MKMapView+JKBetterMaps.m"; sourceTree = "<group>"; };
-		4305638B230831280090EA36 /* ShowHomeSamallCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowHomeSamallCell.h; sourceTree = "<group>"; };
+		4305638B230831280090EA36 /* ShowHomeSamallCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShowHomeSamallCell.h; path = ../../ShowHomeSamallCell.h; sourceTree = "<group>"; };
 		4305638C230831280090EA36 /* UITextField+JKBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITextField+JKBlocks.m"; path = "../../UITextField+JKBlocks.m"; sourceTree = "<group>"; };
 		4305638D230831280090EA36 /* POPLayerExtras.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = POPLayerExtras.mm; sourceTree = "<group>"; };
 		4305638E230831280090EA36 /* POPAnimationTracer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POPAnimationTracer.h; path = ../../POPAnimationTracer.h; sourceTree = "<group>"; };
@@ -533,6 +533,7 @@
 				43056374230831260090EA36 /* POPLayerExtras.h */,
 				43056384230831270090EA36 /* POPSpringAnimationInternal.h */,
 				43056395230831280090EA36 /* ShowHomeMiddleCell.h */,
+				4305638B230831280090EA36 /* ShowHomeSamallCell.h */,
 				43056373230831260090EA36 /* SLAttentionListAction.h */,
 				43056377230831260090EA36 /* SLExtensionHelper.h */,
 				4305634B230831250090EA36 /* SLGetRyTokenAction.h */,
@@ -562,6 +563,7 @@
 				43056340230831250090EA36 /* SLJPushUntils.h */,
 				43056378230831260090EA36 /* TODO.md */,
 				43056383230831270090EA36 /* UIGestureRecognizer+BlocksKit.m */,
+				43056386230831270090EA36 /* UIScrollView+APParallaxHeader.h */,
 				4321A37922F46DB300F19D03 /* NSObject+JKAppInfo.m */,
 				D244B945230FC1A3007C33A7 /* Pods-ShowLiveUITests.debug.xcconfig */,
 				D244B944230FC1A2007C33A7 /* Pods-ShowLiveUITests.debug.xcconfig */,
@@ -578,6 +580,7 @@
 				4321A35422F46DB300F19D03 /* NSNumber+JKRomanNumerals.h */,
 				4321A35522F46DB300F19D03 /* CATransactionDemoViewController.m */,
 				43056393230831280090EA36 /* UIViewController+DDPopUpViewController.h */,
+				43056388230831270090EA36 /* UIWebVIew+JKSwipeGesture.m */,
 				4305634C230831250090EA36 /* NSString+Additions.m */,
 				4305634D230831250090EA36 /* ShowHomeSamallCell.h */,
 				4305634E230831250090EA36 /* CALayer+JKBorderColor.h */,
@@ -706,15 +709,12 @@
 				4305637B230831260090EA36 /* Pods-ShowLive.release.xcconfig */,
 				43056341230831250090EA36 /* POPAnimatableProperty.h */,
 				4305638D230831280090EA36 /* POPLayerExtras.mm */,
-				4305638B230831280090EA36 /* ShowHomeSamallCell.h */,
-				43056386230831270090EA36 /* UIScrollView+APParallaxHeader.h */,
 				43056392230831280090EA36 /* UIScrollView+EmptyDataSet.h~HEAD */,
 				D244B943230FC190007C33A7 /* Pods-ShowLiveUITests.debug.xcconfig */,
 				D244B942230FC18D007C33A7 /* Pods-ShowLiveUITests.debug.xcconfig */,
 				D244B941230FC18B007C33A7 /* Pods-ShowLiveUITests.debug.xcconfig */,
 				4321A34F22F46DB300F19D03 /* POPAction.h */,
 				4321A35222F46DB300F19D03 /* NSDate+JKLunarCalendar.m */,
-				43056388230831270090EA36 /* UIWebVIew+JKSwipeGesture.m */,
 				4321A36A22F46DB300F19D03 /* pop */,
 			);
 			path = SLHelper;
