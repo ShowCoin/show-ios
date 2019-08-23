@@ -160,7 +160,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4305633C230831250090EA36 /* UITextField+JKHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITextField+JKHistory.h"; path = "SLHelper/pop/UITextField+JKHistory.h"; sourceTree = "<group>"; };
+		4305633C230831250090EA36 /* UITextField+JKHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+JKHistory.h"; sourceTree = "<group>"; };
 		4305633D230831250090EA36 /* UITextFieldDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITextFieldDemoViewController.h; sourceTree = "<group>"; };
 		4305633E230831250090EA36 /* CATransactionDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CATransactionDemoViewController.h; path = pop/CATransactionDemoViewController.h; sourceTree = "<group>"; };
 		4305633F230831250090EA36 /* NSBundle+JKAppIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+JKAppIcon.m"; sourceTree = "<group>"; };
@@ -634,13 +634,10 @@
 			isa = PBXGroup;
 			children = (
 				43056343230831250090EA36 /* UITableView-FDTemplateLayoutCell */,
-				4305633C230831250090EA36 /* UITextField+JKHistory.h */,
 				43056342230831250090EA36 /* UIView+Additional.m */,
-				43056380230831270090EA36 /* CALayer+JKBorderColor.h */,
 				4305637C230831260090EA36 /* NSData+Image.m */,
 				4305637D230831270090EA36 /* Pods-ShowLiveTests.debug.xcconfig */,
 				43056341230831250090EA36 /* POPAnimatableProperty.h */,
-				4305637F230831270090EA36 /* SLGetRyTokenAction.h */,
 				43056386230831270090EA36 /* UIScrollView+APParallaxHeader.h */,
 				430563BF2308317A0090EA36 /* Pods-ShowLiveUITests.debug.xcconfig */,
 				430563BE230831710090EA36 /* Pods-ShowLiveUITests.debug.xcconfig */,
@@ -657,9 +654,11 @@
 			isa = PBXGroup;
 			children = (
 				4305638C230831280090EA36 /* UITextField+JKBlocks.m */,
+				4305633C230831250090EA36 /* UITextField+JKHistory.h */,
 				4305633D230831250090EA36 /* UITextFieldDemoViewController.h */,
 				43056375230831260090EA36 /* UIView+Debug.m */,
 				43056372230831260090EA36 /* UIView+FDCollapsibleConstraints.h */,
+				43056380230831270090EA36 /* CALayer+JKBorderColor.h */,
 				4305633E230831250090EA36 /* CATransactionDemoViewController.h */,
 				43056376230831260090EA36 /* HomeHeader.h */,
 				43056379230831260090EA36 /* HotReusableView.h */,
@@ -686,6 +685,7 @@
 				4305638B230831280090EA36 /* ShowHomeSamallCell.h */,
 				43056373230831260090EA36 /* SLAttentionListAction.h */,
 				43056377230831260090EA36 /* SLExtensionHelper.h */,
+				4305637F230831270090EA36 /* SLGetRyTokenAction.h */,
 				43056391230831280090EA36 /* SLGiftAction.h */,
 				43056390230831280090EA36 /* SLInviteViewController.m */,
 				43056340230831250090EA36 /* SLJPushUntils.h */,
