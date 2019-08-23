@@ -229,7 +229,7 @@
 		4305637F230831270090EA36 /* SLGetRyTokenAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLGetRyTokenAction.h; path = ../../SLGetRyTokenAction.h; sourceTree = "<group>"; };
 		43056380230831270090EA36 /* CALayer+JKBorderColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CALayer+JKBorderColor.h"; path = "../../CALayer+JKBorderColor.h"; sourceTree = "<group>"; };
 		43056381230831270090EA36 /* POPAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAnimation.h; sourceTree = "<group>"; };
-		43056382230831270090EA36 /* POPGeometry.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = POPGeometry.mm; path = ../../POPGeometry.mm; sourceTree = "<group>"; };
+		43056382230831270090EA36 /* POPGeometry.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = POPGeometry.mm; sourceTree = "<group>"; };
 		43056383230831270090EA36 /* UIGestureRecognizer+BlocksKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIGestureRecognizer+BlocksKit.m"; path = "../../UIGestureRecognizer+BlocksKit.m"; sourceTree = "<group>"; };
 		43056384230831270090EA36 /* POPSpringAnimationInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POPSpringAnimationInternal.h; path = ../../POPSpringAnimationInternal.h; sourceTree = "<group>"; };
 		43056385230831270090EA36 /* NSData+JKAPNSToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+JKAPNSToken.h"; path = "../../NSData+JKAPNSToken.h"; sourceTree = "<group>"; };
@@ -549,7 +549,6 @@
 				4305633F230831250090EA36 /* NSBundle+JKAppIcon.m */,
 				4305637C230831260090EA36 /* NSData+Image.m */,
 				43056385230831270090EA36 /* NSData+JKAPNSToken.h */,
-				4321A37B22F46DB300F19D03 /* UITableView+FDKeyedHeightCache.h */,
 				43056394230831280090EA36 /* NSDate+JKInternetDateTime.m */,
 				4321A36722F46DB300F19D03 /* UITableView+FDTemplateLayoutCellDebug.h */,
 				43056387230831270090EA36 /* NSNotificationCenter+JKMainThread.h */,
@@ -561,7 +560,6 @@
 				43056341230831250090EA36 /* POPAnimatableProperty.h */,
 				4305637E230831270090EA36 /* POPAnimatablePropertyTypes.h */,
 				4305638E230831280090EA36 /* POPAnimationTracer.h */,
-				43056382230831270090EA36 /* POPGeometry.mm */,
 				4305637F230831270090EA36 /* SLGetRyTokenAction.h */,
 				43056391230831280090EA36 /* SLGiftAction.h */,
 				43056390230831280090EA36 /* SLInviteViewController.m */,
@@ -674,7 +672,9 @@
 			isa = PBXGroup;
 			children = (
 				4305636F230831250090EA36 /* SLExtensionHelper.h */,
+				4321A37B22F46DB300F19D03 /* UITableView+FDKeyedHeightCache.h */,
 				43056389230831270090EA36 /* NSNotificationCenterDemoViewController.m */,
+				43056382230831270090EA36 /* POPGeometry.mm */,
 				43056357230831250090EA36 /* SLGiftAction.h */,
 				D244B947230FC1B8007C33A7 /* Pods-ShowLiveUITests.debug.xcconfig */,
 				43056381230831270090EA36 /* POPAnimation.h */,
