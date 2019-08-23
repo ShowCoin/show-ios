@@ -271,7 +271,7 @@
 		4321A35222F46DB300F19D03 /* NSDate+JKLunarCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+JKLunarCalendar.m"; path = "../Exten/SLHelper/NSDate+JKLunarCalendar.m"; sourceTree = "<group>"; };
 		4321A35322F46DB300F19D03 /* POPAnimationTracer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = POPAnimationTracer.mm; path = ../../requestAction/POPAnimationTracer.mm; sourceTree = "<group>"; };
 		4321A35422F46DB300F19D03 /* NSNumber+JKRomanNumerals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSNumber+JKRomanNumerals.h"; path = "../Exten/NSNumber+JKRomanNumerals.h"; sourceTree = "<group>"; };
-		4321A35522F46DB300F19D03 /* CATransactionDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CATransactionDemoViewController.m; path = ../CATransactionDemoViewController.m; sourceTree = "<group>"; };
+		4321A35522F46DB300F19D03 /* CATransactionDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CATransactionDemoViewController.m; path = ../Exten/SLHelper/pop/CATransactionDemoViewController.m; sourceTree = "<group>"; };
 		4321A35822F46DB300F19D03 /* UIView+FDCollapsibleConstraints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FDCollapsibleConstraints.m"; sourceTree = "<group>"; };
 		4321A35B22F46DB300F19D03 /* POPDecayAnimation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = POPDecayAnimation.mm; path = /requestAction/POPDecayAnimation.mm; sourceTree = "<absolute>"; };
 		4321A35F22F46DB300F19D03 /* NSData+ImageContentType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+ImageContentType.m"; path = "../../../JKCategories/NSData+ImageContentType.m"; sourceTree = "<group>"; };
@@ -541,15 +541,12 @@
 				D244B946230FC1A7007C33A7 /* Pods-ShowLiveUITests.debug.xcconfig */,
 				D244B945230FC1A3007C33A7 /* Pods-ShowLiveUITests.debug.xcconfig */,
 				D244B944230FC1A2007C33A7 /* Pods-ShowLiveUITests.debug.xcconfig */,
-				4321A35522F46DB300F19D03 /* CATransactionDemoViewController.m */,
 				43056350230831250090EA36 /* NSString+JKXMLDictionary.h */,
 				43056353230831250090EA36 /* TODO.md */,
-				43056354230831250090EA36 /* SLAttentionListAction.h */,
 				4305635A230831250090EA36 /* UIView+Debug.h */,
 				4305635C230831250090EA36 /* POPAnimatableProperty.h */,
 				4305635D230831250090EA36 /* POPLayerExtras.h */,
 				4305635F230831250090EA36 /* POPGeometry.mm */,
-				43056366230831250090EA36 /* UIScrollView+APParallaxHeader.h */,
 				43056371230831250090EA36 /* NSData+Image.m */,
 			);
 			name = "UITableView-FDTemplateLayoutCell";
@@ -607,6 +604,7 @@
 				4305634D230831250090EA36 /* ShowHomeSamallCell.h */,
 				4305638B230831280090EA36 /* ShowHomeSamallCell.h */,
 				43056373230831260090EA36 /* SLAttentionListAction.h */,
+				43056354230831250090EA36 /* SLAttentionListAction.h */,
 				4305636F230831250090EA36 /* SLExtensionHelper.h */,
 				43056377230831260090EA36 /* SLExtensionHelper.h */,
 				4305634B230831250090EA36 /* SLGetRyTokenAction.h */,
@@ -651,6 +649,7 @@
 				4321A35222F46DB300F19D03 /* NSDate+JKLunarCalendar.m */,
 				4321A35322F46DB300F19D03 /* POPAnimationTracer.mm */,
 				4321A35422F46DB300F19D03 /* NSNumber+JKRomanNumerals.h */,
+				4321A35522F46DB300F19D03 /* CATransactionDemoViewController.m */,
 				4305636C230831250090EA36 /* UIViewController+DDPopUpViewController.h */,
 				43056393230831280090EA36 /* UIViewController+DDPopUpViewController.h */,
 				43056365230831250090EA36 /* UIWebVIew+JKSwipeGesture.m */,
@@ -675,6 +674,7 @@
 				43056375230831260090EA36 /* UIView+Debug.m */,
 				43056345230831250090EA36 /* UIView+Debug.m */,
 				43056383230831270090EA36 /* UIGestureRecognizer+BlocksKit.m */,
+				43056366230831250090EA36 /* UIScrollView+APParallaxHeader.h */,
 				43056392230831280090EA36 /* UIScrollView+EmptyDataSet.h~HEAD */,
 				43056347230831250090EA36 /* NSBundle+JKAppIcon.m */,
 				4305633F230831250090EA36 /* NSBundle+JKAppIcon.m */,
