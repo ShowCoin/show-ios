@@ -221,7 +221,7 @@
 		43056377230831260090EA36 /* SLExtensionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLExtensionHelper.h; path = ../Exten/SLHelper/SLExtensionHelper.h; sourceTree = "<group>"; };
 		43056378230831260090EA36 /* TODO.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = TODO.md; path = ../../TODO.md; sourceTree = "<group>"; };
 		43056379230831260090EA36 /* HotReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HotReusableView.h; path = ../Exten/SLHelper/pop/HotReusableView.h; sourceTree = "<group>"; };
-		4305637A230831260090EA36 /* Pods-ShowLiveUITests.release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveUITests.release.xcconfig"; path = "../../Pods-ShowLiveUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4305637A230831260090EA36 /* Pods-ShowLiveUITests.release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveUITests.release.xcconfig"; path = "../Exten/SLHelper/Pods-ShowLiveUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4305637B230831260090EA36 /* Pods-ShowLive.release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Pods-ShowLive.release.xcconfig"; path = "../Exten/SLHelper/Pods-ShowLive.release.xcconfig"; sourceTree = "<group>"; };
 		4305637C230831260090EA36 /* NSData+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Image.m"; sourceTree = "<group>"; };
 		4305637D230831270090EA36 /* Pods-ShowLiveTests.debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveTests.debug.xcconfig"; path = "../Exten/SLHelper/Pods-ShowLiveTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -530,14 +530,11 @@
 				43056346230831250090EA36 /* UIScrollView+EmptyDataSet.h~HEAD */,
 				4305634A230831250090EA36 /* HomeHeader.h */,
 				4321A36722F46DB300F19D03 /* UITableView+FDTemplateLayoutCellDebug.h */,
-				4305637A230831260090EA36 /* Pods-ShowLiveUITests.release.xcconfig */,
 				43056378230831260090EA36 /* TODO.md */,
 				D244B946230FC1A7007C33A7 /* Pods-ShowLiveUITests.debug.xcconfig */,
 				D244B945230FC1A3007C33A7 /* Pods-ShowLiveUITests.debug.xcconfig */,
 				D244B944230FC1A2007C33A7 /* Pods-ShowLiveUITests.debug.xcconfig */,
 				43056350230831250090EA36 /* NSString+JKXMLDictionary.h */,
-				43056353230831250090EA36 /* TODO.md */,
-				4305635A230831250090EA36 /* UIView+Debug.h */,
 				4305635C230831250090EA36 /* POPAnimatableProperty.h */,
 				4305635F230831250090EA36 /* POPGeometry.mm */,
 				43056371230831250090EA36 /* NSData+Image.m */,
@@ -590,6 +587,7 @@
 			children = (
 				4305635D230831250090EA36 /* POPLayerExtras.h */,
 				4305636B230831250090EA36 /* POPLayerExtras.mm */,
+				4305635A230831250090EA36 /* UIView+Debug.h */,
 				4305635B230831250090EA36 /* POPSpringAnimationInternal.h */,
 				4305634C230831250090EA36 /* NSString+Additions.m */,
 				43056384230831270090EA36 /* POPSpringAnimationInternal.h */,
@@ -623,6 +621,7 @@
 				43056359230831250090EA36 /* Pods-ShowLiveTests.debug.xcconfig */,
 				4305637D230831270090EA36 /* Pods-ShowLiveTests.debug.xcconfig */,
 				4305636D230831250090EA36 /* Pods-ShowLiveUITests.release.xcconfig */,
+				4305637A230831260090EA36 /* Pods-ShowLiveUITests.release.xcconfig */,
 				43056341230831250090EA36 /* POPAnimatableProperty.h */,
 				4305637E230831270090EA36 /* POPAnimatablePropertyTypes.h */,
 				43056360230831250090EA36 /* POPAnimatablePropertyTypes.h */,
@@ -664,6 +663,7 @@
 				43056355230831250090EA36 /* SLInviteViewController.m */,
 				43056390230831280090EA36 /* SLInviteViewController.m */,
 				43056340230831250090EA36 /* SLJPushUntils.h */,
+				43056353230831250090EA36 /* TODO.md */,
 				4305634F230831250090EA36 /* UIGestureRecognizer+BlocksKit.m */,
 				4305636E230831250090EA36 /* CATransactionDemoViewController.h */,
 				4305633E230831250090EA36 /* CATransactionDemoViewController.h */,
