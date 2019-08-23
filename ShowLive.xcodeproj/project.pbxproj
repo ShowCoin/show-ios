@@ -213,7 +213,7 @@
 		4305636F230831250090EA36 /* SLExtensionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLExtensionHelper.h; sourceTree = "<group>"; };
 		43056370230831250090EA36 /* POPAnimationTracer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAnimationTracer.h; sourceTree = "<group>"; };
 		43056371230831250090EA36 /* NSData+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Image.m"; sourceTree = "<group>"; };
-		43056372230831260090EA36 /* UIView+FDCollapsibleConstraints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+FDCollapsibleConstraints.h"; path = "SLHelper/pop/UIView+FDCollapsibleConstraints.h"; sourceTree = "<group>"; };
+		43056372230831260090EA36 /* UIView+FDCollapsibleConstraints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FDCollapsibleConstraints.h"; sourceTree = "<group>"; };
 		43056373230831260090EA36 /* SLAttentionListAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLAttentionListAction.h; path = pop/SLAttentionListAction.h; sourceTree = "<group>"; };
 		43056374230831260090EA36 /* POPLayerExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPLayerExtras.h; sourceTree = "<group>"; };
 		43056375230831260090EA36 /* UIView+Debug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Debug.m"; sourceTree = "<group>"; };
@@ -473,6 +473,7 @@
 		B4C105B07A90052BA25F3424 /* Pods-ShowLiveUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveUITests.debug.xcconfig"; path = "../../../../requestAction/Pods-ShowLiveUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C80209C93E46267AFE3ADF2E /* libPods-ShowLiveTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShowLiveTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFCDB8F5C4F35241EF7781C8 /* Pods-ShowLiveTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveTests.release.xcconfig"; path = "../../../JKCategories/Pods-ShowLiveTests.release.xcconfig"; sourceTree = "<group>"; };
+		D244B941230FC18B007C33A7 /* Pods-ShowLiveUITests.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveUITests.debug.xcconfig"; path = "../../../../../../requestAction/Pods-ShowLiveUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D24CA8E62307F10E00F529BB /* Pods-ShowLiveUITests.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveUITests.debug.xcconfig"; path = "../../../../../../../requestAction/Pods-ShowLiveUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D24CA8E72307F11200F529BB /* Pods-ShowLiveUITests.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveUITests.debug.xcconfig"; path = "../../../../../../../requestAction/Pods-ShowLiveUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D24CA8E82307F12100F529BB /* Pods-ShowLiveUITests.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveUITests.debug.xcconfig"; path = "../../../../../../../requestAction/Pods-ShowLiveUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -635,7 +636,6 @@
 				4305633C230831250090EA36 /* UITextField+JKHistory.h */,
 				4305633D230831250090EA36 /* UITextFieldDemoViewController.h */,
 				43056342230831250090EA36 /* UIView+Additional.m */,
-				43056372230831260090EA36 /* UIView+FDCollapsibleConstraints.h */,
 				43056380230831270090EA36 /* CALayer+JKBorderColor.h */,
 				4305633F230831250090EA36 /* NSBundle+JKAppIcon.m */,
 				4305637C230831260090EA36 /* NSData+Image.m */,
@@ -671,6 +671,7 @@
 			children = (
 				4305638C230831280090EA36 /* UITextField+JKBlocks.m */,
 				43056375230831260090EA36 /* UIView+Debug.m */,
+				43056372230831260090EA36 /* UIView+FDCollapsibleConstraints.h */,
 				4305633E230831250090EA36 /* CATransactionDemoViewController.h */,
 				43056376230831260090EA36 /* HomeHeader.h */,
 				43056379230831260090EA36 /* HotReusableView.h */,
@@ -695,6 +696,7 @@
 				43056340230831250090EA36 /* SLJPushUntils.h */,
 				43056378230831260090EA36 /* TODO.md */,
 				43056392230831280090EA36 /* UIScrollView+EmptyDataSet.h~HEAD */,
+				D244B941230FC18B007C33A7 /* Pods-ShowLiveUITests.debug.xcconfig */,
 				4321A34822F46DB300F19D03 /* NSArray+JKSafeAccess.m */,
 				4321A34922F46DB300F19D03 /* CLLocationManager+Blocks.h */,
 				4321A34C22F46DB300F19D03 /* UIViewController+MJPopupViewController.h */,
