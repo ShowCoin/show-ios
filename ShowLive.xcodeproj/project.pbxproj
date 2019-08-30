@@ -164,7 +164,7 @@
 		4305633D230831250090EA36 /* UITextFieldDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UITextFieldDemoViewController.h; path = SLHelper/UITextFieldDemoViewController.h; sourceTree = "<group>"; };
 		4305633E230831250090EA36 /* CATransactionDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CATransactionDemoViewController.h; path = SLHelper/pop/CATransactionDemoViewController.h; sourceTree = "<group>"; };
 		4305633F230831250090EA36 /* NSBundle+JKAppIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+JKAppIcon.m"; sourceTree = "<group>"; };
-		43056340230831250090EA36 /* SLJPushUntils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLJPushUntils.h; path = ../Exten/SLHelper/pop/SLJPushUntils.h; sourceTree = "<group>"; };
+		43056340230831250090EA36 /* SLJPushUntils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLJPushUntils.h; path = SLHelper/pop/SLJPushUntils.h; sourceTree = "<group>"; };
 		43056341230831250090EA36 /* POPAnimatableProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POPAnimatableProperty.h; path = ../JKCategories/POPAnimatableProperty.h; sourceTree = "<group>"; };
 		43056342230831250090EA36 /* UIView+Additional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Additional.m"; path = "../Exten/SLHelper/pop/UIView+Additional.m"; sourceTree = "<group>"; };
 		43056344230831250090EA36 /* HotReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotReusableView.h; sourceTree = "<group>"; };
@@ -194,7 +194,7 @@
 		4305635C230831250090EA36 /* POPAnimatableProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POPAnimatableProperty.h; path = "../Exten/SLHelper/pop/UITableView-FDTemplateLayoutCell/POPAnimatableProperty.h"; sourceTree = "<group>"; };
 		4305635D230831250090EA36 /* POPLayerExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POPLayerExtras.h; path = "../Exten/SLHelper/pop/UITableView-FDTemplateLayoutCell/POPLayerExtras.h"; sourceTree = "<group>"; };
 		4305635E230831250090EA36 /* SLJPushUntils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLJPushUntils.m; path = "../Exten/SLHelper/pop/UITableView-FDTemplateLayoutCell/SLJPushUntils.m"; sourceTree = "<group>"; };
-		4305635F230831250090EA36 /* POPGeometry.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = POPGeometry.mm; path = "../Exten/SLHelper/pop/UITableView-FDTemplateLayoutCell/POPGeometry.mm"; sourceTree = "<group>"; };
+		4305635F230831250090EA36 /* POPGeometry.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = POPGeometry.mm; sourceTree = "<group>"; };
 		43056360230831250090EA36 /* POPAnimatablePropertyTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAnimatablePropertyTypes.h; sourceTree = "<group>"; };
 		43056361230831250090EA36 /* UITextField+JKHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+JKHistory.h"; sourceTree = "<group>"; };
 		43056362230831250090EA36 /* SLConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLConfig.h; sourceTree = "<group>"; };
@@ -696,7 +696,6 @@
 				4305634D230831250090EA36 /* ShowHomeSamallCell.h */,
 				43056354230831250090EA36 /* SLAttentionListAction.h */,
 				43056377230831260090EA36 /* SLExtensionHelper.h */,
-				4305635F230831250090EA36 /* POPGeometry.mm */,
 				43056382230831270090EA36 /* POPGeometry.mm */,
 				4305636A230831250090EA36 /* UIView+FDCollapsibleConstraints.h */,
 				4305634E230831250090EA36 /* CALayer+JKBorderColor.h */,
@@ -739,14 +738,12 @@
 				4321A34E22F46DB300F19D03 /* NSSting+aes.h */,
 				4321A34F22F46DB300F19D03 /* POPAction.h */,
 				4321A35022F46DB300F19D03 /* CATransaction+JKAnimateWithDuration.m */,
-				4321A35322F46DB300F19D03 /* POPAnimationTracer.mm */,
 				4321A35422F46DB300F19D03 /* NSNumber+JKRomanNumerals.h */,
 				4321A35522F46DB300F19D03 /* CATransactionDemoViewController.m */,
 				43056393230831280090EA36 /* UIViewController+DDPopUpViewController.h */,
 				43056388230831270090EA36 /* UIWebVIew+JKSwipeGesture.m */,
 				43056356230831250090EA36 /* UIView+FDCollapsibleConstraints.m */,
 				43056355230831250090EA36 /* SLInviteViewController.m */,
-				43056340230831250090EA36 /* SLJPushUntils.h */,
 				4305637B230831260090EA36 /* Pods-ShowLive.release.xcconfig */,
 				43056349230831250090EA36 /* Pods-ShowLive.release.xcconfig */,
 				43056383230831270090EA36 /* UIGestureRecognizer+BlocksKit.m */,
@@ -1242,6 +1239,7 @@
 				4305638B230831280090EA36 /* ShowHomeSamallCell.h */,
 				43056373230831260090EA36 /* SLAttentionListAction.h */,
 				4305636F230831250090EA36 /* SLExtensionHelper.h */,
+				4305635F230831250090EA36 /* POPGeometry.mm */,
 				4305637F230831270090EA36 /* SLGetRyTokenAction.h */,
 				4305634B230831250090EA36 /* SLGetRyTokenAction.h */,
 				43056372230831260090EA36 /* UIView+FDCollapsibleConstraints.h */,
@@ -1273,9 +1271,11 @@
 				4321A34C22F46DB300F19D03 /* UIViewController+MJPopupViewController.h */,
 				4321A35122F46DB300F19D03 /* SLShutUpAction.h */,
 				4321A35222F46DB300F19D03 /* NSDate+JKLunarCalendar.m */,
+				4321A35322F46DB300F19D03 /* POPAnimationTracer.mm */,
 				4305636C230831250090EA36 /* UIViewController+DDPopUpViewController.h */,
 				43056365230831250090EA36 /* UIWebVIew+JKSwipeGesture.m */,
 				43056390230831280090EA36 /* SLInviteViewController.m */,
+				43056340230831250090EA36 /* SLJPushUntils.h */,
 				4305634F230831250090EA36 /* UIGestureRecognizer+BlocksKit.m */,
 				4305633E230831250090EA36 /* CATransactionDemoViewController.h */,
 				4305634A230831250090EA36 /* HomeHeader.h */,
