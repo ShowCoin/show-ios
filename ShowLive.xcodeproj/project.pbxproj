@@ -198,7 +198,7 @@
 		43056360230831250090EA36 /* POPAnimatablePropertyTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POPAnimatablePropertyTypes.h; path = "../Exten/SLHelper/pop/UITableView-FDTemplateLayoutCell/POPAnimatablePropertyTypes.h"; sourceTree = "<group>"; };
 		43056361230831250090EA36 /* UITextField+JKHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITextField+JKHistory.h"; path = "../Exten/SLHelper/pop/UITableView-FDTemplateLayoutCell/UITextField+JKHistory.h"; sourceTree = "<group>"; };
 		43056362230831250090EA36 /* SLConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLConfig.h; sourceTree = "<group>"; };
-		43056363230831250090EA36 /* NSData+JKAPNSToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+JKAPNSToken.h"; sourceTree = "<group>"; };
+		43056363230831250090EA36 /* NSData+JKAPNSToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+JKAPNSToken.h"; path = "../../../../JKCategories/NSData+JKAPNSToken.h"; sourceTree = "<group>"; };
 		43056364230831250090EA36 /* POPAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POPAnimation.h; path = "../Exten/SLHelper/pop/UITableView-FDTemplateLayoutCell/POPAnimation.h"; sourceTree = "<group>"; };
 		43056365230831250090EA36 /* UIWebVIew+JKSwipeGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebVIew+JKSwipeGesture.m"; sourceTree = "<group>"; };
 		43056366230831250090EA36 /* UIScrollView+APParallaxHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+APParallaxHeader.h"; sourceTree = "<group>"; };
@@ -529,10 +529,13 @@
 			children = (
 				4305638D230831280090EA36 /* POPLayerExtras.mm */,
 				4305635A230831250090EA36 /* UIView+Debug.h */,
+				4305636F230831250090EA36 /* SLExtensionHelper.h */,
 				43056382230831270090EA36 /* POPGeometry.mm */,
+				43056363230831250090EA36 /* NSData+JKAPNSToken.h */,
 				43056385230831270090EA36 /* NSData+JKAPNSToken.h */,
 				43056352230831250090EA36 /* NSDate+JKInternetDateTime.m */,
 				4321A36722F46DB300F19D03 /* UITableView+FDTemplateLayoutCellDebug.h */,
+				43056387230831270090EA36 /* NSNotificationCenter+JKMainThread.h */,
 				4321A34722F46DB300F19D03 /* NSNotificationCenter+JKMainThread.h */,
 				43056389230831270090EA36 /* NSNotificationCenterDemoViewController.m */,
 				4305635C230831250090EA36 /* POPAnimatableProperty.h */,
@@ -612,7 +615,6 @@
 				4305638B230831280090EA36 /* ShowHomeSamallCell.h */,
 				43056373230831260090EA36 /* SLAttentionListAction.h */,
 				43056354230831250090EA36 /* SLAttentionListAction.h */,
-				4305636F230831250090EA36 /* SLExtensionHelper.h */,
 				43056377230831260090EA36 /* SLExtensionHelper.h */,
 				4305635F230831250090EA36 /* POPGeometry.mm */,
 				4305634B230831250090EA36 /* SLGetRyTokenAction.h */,
@@ -625,10 +627,8 @@
 				43056362230831250090EA36 /* SLConfig.h */,
 				4305637C230831260090EA36 /* NSData+Image.m */,
 				43056371230831250090EA36 /* NSData+Image.m */,
-				43056363230831250090EA36 /* NSData+JKAPNSToken.h */,
 				4321A37B22F46DB300F19D03 /* UITableView+FDKeyedHeightCache.h */,
 				43056394230831280090EA36 /* NSDate+JKInternetDateTime.m */,
-				43056387230831270090EA36 /* NSNotificationCenter+JKMainThread.h */,
 				43056367230831250090EA36 /* NSNotificationCenterDemoViewController.m */,
 				4305638F230831280090EA36 /* NSString+JKXMLDictionary.h */,
 				43056359230831250090EA36 /* Pods-ShowLiveTests.debug.xcconfig */,
