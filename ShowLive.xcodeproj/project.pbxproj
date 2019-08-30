@@ -177,7 +177,7 @@
 		4305634B230831250090EA36 /* SLGetRyTokenAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLGetRyTokenAction.h; path = ../../../../JKCategories/SLGetRyTokenAction.h; sourceTree = "<group>"; };
 		4305634C230831250090EA36 /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
 		4305634D230831250090EA36 /* ShowHomeSamallCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShowHomeSamallCell.h; path = "../Exten/SLHelper/pop/UITableView-FDTemplateLayoutCell/ShowHomeSamallCell.h"; sourceTree = "<group>"; };
-		4305634E230831250090EA36 /* CALayer+JKBorderColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+JKBorderColor.h"; sourceTree = "<group>"; };
+		4305634E230831250090EA36 /* CALayer+JKBorderColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CALayer+JKBorderColor.h"; path = "../Exten/SLHelper/pop/UITableView-FDTemplateLayoutCell/CALayer+JKBorderColor.h"; sourceTree = "<group>"; };
 		4305634F230831250090EA36 /* UIGestureRecognizer+BlocksKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+BlocksKit.m"; sourceTree = "<group>"; };
 		43056350230831250090EA36 /* NSString+JKXMLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JKXMLDictionary.h"; sourceTree = "<group>"; };
 		43056351230831250090EA36 /* ShowHomeMiddleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowHomeMiddleCell.h; sourceTree = "<group>"; };
@@ -248,7 +248,7 @@
 		43056392230831280090EA36 /* UIScrollView+EmptyDataSet.h~HEAD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UIScrollView+EmptyDataSet.h~HEAD"; sourceTree = "<group>"; };
 		43056393230831280090EA36 /* UIViewController+DDPopUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DDPopUpViewController.h"; sourceTree = "<group>"; };
 		43056394230831280090EA36 /* NSDate+JKInternetDateTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+JKInternetDateTime.m"; path = "../JKCategories/NSDate+JKInternetDateTime.m"; sourceTree = "<group>"; };
-		43056395230831280090EA36 /* ShowHomeMiddleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShowHomeMiddleCell.h; path = ../../ShowHomeMiddleCell.h; sourceTree = "<group>"; };
+		43056395230831280090EA36 /* ShowHomeMiddleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShowHomeMiddleCell.h; path = ../Exten/SLHelper/ShowHomeMiddleCell.h; sourceTree = "<group>"; };
 		430563BD230831570090EA36 /* Pods-ShowLiveUITests.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveUITests.debug.xcconfig"; path = "../../../../../requestAction/Pods-ShowLiveUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		430563BE230831710090EA36 /* Pods-ShowLiveUITests.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveUITests.debug.xcconfig"; path = "../../../../../requestAction/Pods-ShowLiveUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		430563BF2308317A0090EA36 /* Pods-ShowLiveUITests.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveUITests.debug.xcconfig"; path = "../../../../../requestAction/Pods-ShowLiveUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -547,10 +547,8 @@
 			children = (
 				4305636B230831250090EA36 /* POPLayerExtras.mm */,
 				4305635A230831250090EA36 /* UIView+Debug.h */,
-				43056395230831280090EA36 /* ShowHomeMiddleCell.h */,
 				4305635F230831250090EA36 /* POPGeometry.mm */,
 				4305634B230831250090EA36 /* SLGetRyTokenAction.h */,
-				4305634E230831250090EA36 /* CALayer+JKBorderColor.h */,
 				43056363230831250090EA36 /* NSData+JKAPNSToken.h */,
 				43056389230831270090EA36 /* NSNotificationCenterDemoViewController.m */,
 				D289269C2318F44A0044EB51 /* Pods-ShowLiveUITests.debug.xcconfig */,
@@ -703,6 +701,7 @@
 				4305634C230831250090EA36 /* NSString+Additions.m */,
 				43056384230831270090EA36 /* POPSpringAnimationInternal.h */,
 				4305635B230831250090EA36 /* POPSpringAnimationInternal.h */,
+				43056395230831280090EA36 /* ShowHomeMiddleCell.h */,
 				43056351230831250090EA36 /* ShowHomeMiddleCell.h */,
 				4305634D230831250090EA36 /* ShowHomeSamallCell.h */,
 				4305638B230831280090EA36 /* ShowHomeSamallCell.h */,
@@ -714,6 +713,7 @@
 				4305637F230831270090EA36 /* SLGetRyTokenAction.h */,
 				43056372230831260090EA36 /* UIView+FDCollapsibleConstraints.h */,
 				4305636A230831250090EA36 /* UIView+FDCollapsibleConstraints.h */,
+				4305634E230831250090EA36 /* CALayer+JKBorderColor.h */,
 				43056380230831270090EA36 /* CALayer+JKBorderColor.h */,
 				4305638A230831280090EA36 /* MKMapView+JKBetterMaps.m */,
 				43056358230831250090EA36 /* MKMapView+JKBetterMaps.m */,
