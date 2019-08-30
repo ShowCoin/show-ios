@@ -174,7 +174,7 @@
 		43056348230831250090EA36 /* UIView+Additional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additional.m"; sourceTree = "<group>"; };
 		43056349230831250090EA36 /* Pods-ShowLive.release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Pods-ShowLive.release.xcconfig"; sourceTree = "<group>"; };
 		4305634A230831250090EA36 /* HomeHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeHeader.h; path = "../Exten/SLHelper/pop/UITableView-FDTemplateLayoutCell/HomeHeader.h"; sourceTree = "<group>"; };
-		4305634B230831250090EA36 /* SLGetRyTokenAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLGetRyTokenAction.h; path = ../JKCategories/SLGetRyTokenAction.h; sourceTree = "<group>"; };
+		4305634B230831250090EA36 /* SLGetRyTokenAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLGetRyTokenAction.h; sourceTree = "<group>"; };
 		4305634C230831250090EA36 /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
 		4305634D230831250090EA36 /* ShowHomeSamallCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShowHomeSamallCell.h; path = "../Exten/SLHelper/pop/UITableView-FDTemplateLayoutCell/ShowHomeSamallCell.h"; sourceTree = "<group>"; };
 		4305634E230831250090EA36 /* CALayer+JKBorderColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CALayer+JKBorderColor.h"; path = "../Exten/SLHelper/pop/UITableView-FDTemplateLayoutCell/CALayer+JKBorderColor.h"; sourceTree = "<group>"; };
@@ -262,7 +262,7 @@
 		4321A34922F46DB300F19D03 /* CLLocationManager+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLLocationManager+Blocks.h"; sourceTree = "<group>"; };
 		4321A34A22F46DB300F19D03 /* SLHistoryWorksAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLHistoryWorksAction.h; sourceTree = "<group>"; };
 		4321A34B22F46DB300F19D03 /* ShowAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowAction.h; sourceTree = "<group>"; };
-		4321A34C22F46DB300F19D03 /* UIViewController+MJPopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+MJPopupViewController.h"; path = "../Exten/UIViewController+MJPopupViewController.h"; sourceTree = "<group>"; };
+		4321A34C22F46DB300F19D03 /* UIViewController+MJPopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MJPopupViewController.h"; sourceTree = "<group>"; };
 		4321A34D22F46DB300F19D03 /* pop-ios-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; name = "pop-ios-Info.plist"; path = "../Exten/pop-ios-Info.plist"; sourceTree = "<group>"; };
 		4321A34E22F46DB300F19D03 /* NSSting+aes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSting+aes.h"; sourceTree = "<group>"; };
 		4321A34F22F46DB300F19D03 /* POPAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAction.h; sourceTree = "<group>"; };
@@ -700,7 +700,6 @@
 				4305636F230831250090EA36 /* SLExtensionHelper.h */,
 				4305635F230831250090EA36 /* POPGeometry.mm */,
 				43056382230831270090EA36 /* POPGeometry.mm */,
-				4305634B230831250090EA36 /* SLGetRyTokenAction.h */,
 				4305637F230831270090EA36 /* SLGetRyTokenAction.h */,
 				43056372230831260090EA36 /* UIView+FDCollapsibleConstraints.h */,
 				4305636A230831250090EA36 /* UIView+FDCollapsibleConstraints.h */,
@@ -751,9 +750,7 @@
 				43056370230831250090EA36 /* POPAnimationTracer.h */,
 				4321A34822F46DB300F19D03 /* NSArray+JKSafeAccess.m */,
 				4321A34922F46DB300F19D03 /* CLLocationManager+Blocks.h */,
-				4321A34A22F46DB300F19D03 /* SLHistoryWorksAction.h */,
 				4321A34B22F46DB300F19D03 /* ShowAction.h */,
-				4321A34C22F46DB300F19D03 /* UIViewController+MJPopupViewController.h */,
 				4321A34D22F46DB300F19D03 /* pop-ios-Info.plist */,
 				4321A34E22F46DB300F19D03 /* NSSting+aes.h */,
 				4321A34F22F46DB300F19D03 /* POPAction.h */,
@@ -1268,12 +1265,15 @@
 			children = (
 				4305636B230831250090EA36 /* POPLayerExtras.mm */,
 				43056351230831250090EA36 /* ShowHomeMiddleCell.h */,
+				4305634B230831250090EA36 /* SLGetRyTokenAction.h */,
 				4305638A230831280090EA36 /* MKMapView+JKBetterMaps.m */,
 				43056371230831250090EA36 /* NSData+Image.m */,
 				43056350230831250090EA36 /* NSString+JKXMLDictionary.h */,
 				43056360230831250090EA36 /* POPAnimatablePropertyTypes.h */,
 				D28926AA2318F46B0044EB51 /* Pods-ShowLiveUITests.debug.xcconfig */,
 				D28926A92318F46A0044EB51 /* Pods-ShowLiveUITests.debug.xcconfig */,
+				4321A34A22F46DB300F19D03 /* SLHistoryWorksAction.h */,
+				4321A34C22F46DB300F19D03 /* UIViewController+MJPopupViewController.h */,
 				4321A35122F46DB300F19D03 /* SLShutUpAction.h */,
 				4305633E230831250090EA36 /* CATransactionDemoViewController.h */,
 				43056378230831260090EA36 /* TODO.md */,
