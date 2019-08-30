@@ -191,7 +191,7 @@
 		43056359230831250090EA36 /* Pods-ShowLiveTests.debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Pods-ShowLiveTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4305635A230831250090EA36 /* UIView+Debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Debug.h"; sourceTree = "<group>"; };
 		4305635B230831250090EA36 /* POPSpringAnimationInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPSpringAnimationInternal.h; sourceTree = "<group>"; };
-		4305635C230831250090EA36 /* POPAnimatableProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POPAnimatableProperty.h; path = "../Exten/SLHelper/pop/UITableView-FDTemplateLayoutCell/POPAnimatableProperty.h"; sourceTree = "<group>"; };
+		4305635C230831250090EA36 /* POPAnimatableProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAnimatableProperty.h; sourceTree = "<group>"; };
 		4305635D230831250090EA36 /* POPLayerExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POPLayerExtras.h; path = "../Exten/SLHelper/pop/UITableView-FDTemplateLayoutCell/POPLayerExtras.h"; sourceTree = "<group>"; };
 		4305635E230831250090EA36 /* SLJPushUntils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLJPushUntils.m; path = "../Exten/SLHelper/pop/UITableView-FDTemplateLayoutCell/SLJPushUntils.m"; sourceTree = "<group>"; };
 		4305635F230831250090EA36 /* POPGeometry.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = POPGeometry.mm; sourceTree = "<group>"; };
@@ -270,7 +270,7 @@
 		4321A35122F46DB300F19D03 /* SLShutUpAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLShutUpAction.h; path = SLHelper/SLShutUpAction.h; sourceTree = "<group>"; };
 		4321A35222F46DB300F19D03 /* NSDate+JKLunarCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+JKLunarCalendar.m"; path = "SLHelper/NSDate+JKLunarCalendar.m"; sourceTree = "<group>"; };
 		4321A35322F46DB300F19D03 /* POPAnimationTracer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = POPAnimationTracer.mm; path = ../../requestAction/POPAnimationTracer.mm; sourceTree = "<group>"; };
-		4321A35422F46DB300F19D03 /* NSNumber+JKRomanNumerals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSNumber+JKRomanNumerals.h"; path = "../Exten/NSNumber+JKRomanNumerals.h"; sourceTree = "<group>"; };
+		4321A35422F46DB300F19D03 /* NSNumber+JKRomanNumerals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+JKRomanNumerals.h"; sourceTree = "<group>"; };
 		4321A35522F46DB300F19D03 /* CATransactionDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CATransactionDemoViewController.m; path = ../Exten/SLHelper/pop/CATransactionDemoViewController.m; sourceTree = "<group>"; };
 		4321A35822F46DB300F19D03 /* UIView+FDCollapsibleConstraints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FDCollapsibleConstraints.m"; sourceTree = "<group>"; };
 		4321A35B22F46DB300F19D03 /* POPDecayAnimation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = POPDecayAnimation.mm; path = /requestAction/POPDecayAnimation.mm; sourceTree = "<absolute>"; };
@@ -699,7 +699,6 @@
 				43056382230831270090EA36 /* POPGeometry.mm */,
 				4305636A230831250090EA36 /* UIView+FDCollapsibleConstraints.h */,
 				4305634E230831250090EA36 /* CALayer+JKBorderColor.h */,
-				43056362230831250090EA36 /* SLConfig.h */,
 				4305637C230831260090EA36 /* NSData+Image.m */,
 				43056363230831250090EA36 /* NSData+JKAPNSToken.h */,
 				4321A37B22F46DB300F19D03 /* UITableView+FDKeyedHeightCache.h */,
@@ -709,7 +708,6 @@
 				4305638F230831280090EA36 /* NSString+JKXMLDictionary.h */,
 				4305637D230831270090EA36 /* Pods-ShowLiveTests.debug.xcconfig */,
 				43056359230831250090EA36 /* Pods-ShowLiveTests.debug.xcconfig */,
-				4305635C230831250090EA36 /* POPAnimatableProperty.h */,
 				43056342230831250090EA36 /* UIView+Additional.m */,
 				43056348230831250090EA36 /* UIView+Additional.m */,
 				D28926A82318F45F0044EB51 /* Pods-ShowLiveUITests.debug.xcconfig */,
@@ -733,7 +731,6 @@
 				4321A34E22F46DB300F19D03 /* NSSting+aes.h */,
 				4321A34F22F46DB300F19D03 /* POPAction.h */,
 				4321A35022F46DB300F19D03 /* CATransaction+JKAnimateWithDuration.m */,
-				4321A35422F46DB300F19D03 /* NSNumber+JKRomanNumerals.h */,
 				4321A35522F46DB300F19D03 /* CATransactionDemoViewController.m */,
 				43056393230831280090EA36 /* UIViewController+DDPopUpViewController.h */,
 				43056388230831270090EA36 /* UIWebVIew+JKSwipeGesture.m */,
@@ -1242,6 +1239,7 @@
 				43056380230831270090EA36 /* CALayer+JKBorderColor.h */,
 				43056358230831250090EA36 /* MKMapView+JKBetterMaps.m */,
 				4305638A230831280090EA36 /* MKMapView+JKBetterMaps.m */,
+				43056362230831250090EA36 /* SLConfig.h */,
 				43056371230831250090EA36 /* NSData+Image.m */,
 				43056385230831270090EA36 /* NSData+JKAPNSToken.h */,
 				43056394230831280090EA36 /* NSDate+JKInternetDateTime.m */,
@@ -1251,6 +1249,7 @@
 				43056350230831250090EA36 /* NSString+JKXMLDictionary.h */,
 				4305637A230831260090EA36 /* Pods-ShowLiveUITests.release.xcconfig */,
 				4305636D230831250090EA36 /* Pods-ShowLiveUITests.release.xcconfig */,
+				4305635C230831250090EA36 /* POPAnimatableProperty.h */,
 				43056341230831250090EA36 /* POPAnimatableProperty.h */,
 				4305637E230831270090EA36 /* POPAnimatablePropertyTypes.h */,
 				43056360230831250090EA36 /* POPAnimatablePropertyTypes.h */,
@@ -1276,6 +1275,7 @@
 				4321A35122F46DB300F19D03 /* SLShutUpAction.h */,
 				4321A35222F46DB300F19D03 /* NSDate+JKLunarCalendar.m */,
 				4321A35322F46DB300F19D03 /* POPAnimationTracer.mm */,
+				4321A35422F46DB300F19D03 /* NSNumber+JKRomanNumerals.h */,
 				4305636C230831250090EA36 /* UIViewController+DDPopUpViewController.h */,
 				43056365230831250090EA36 /* UIWebVIew+JKSwipeGesture.m */,
 				43056390230831280090EA36 /* SLInviteViewController.m */,
