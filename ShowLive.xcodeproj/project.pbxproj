@@ -222,7 +222,7 @@
 		43056378230831260090EA36 /* TODO.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = TODO.md; sourceTree = "<group>"; };
 		43056379230831260090EA36 /* HotReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HotReusableView.h; path = SLHelper/pop/HotReusableView.h; sourceTree = "<group>"; };
 		4305637A230831260090EA36 /* Pods-ShowLiveUITests.release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveUITests.release.xcconfig"; path = "../SLPlayAudio/Pods-ShowLiveUITests.release.xcconfig"; sourceTree = "<group>"; };
-		4305637B230831260090EA36 /* Pods-ShowLive.release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Pods-ShowLive.release.xcconfig"; path = "../Exten/SLHelper/pop/UITableView-FDTemplateLayoutCell/Pods-ShowLive.release.xcconfig"; sourceTree = "<group>"; };
+		4305637B230831260090EA36 /* Pods-ShowLive.release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Pods-ShowLive.release.xcconfig"; sourceTree = "<group>"; };
 		4305637C230831260090EA36 /* NSData+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Image.m"; sourceTree = "<group>"; };
 		4305637D230831270090EA36 /* Pods-ShowLiveTests.debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveTests.debug.xcconfig"; path = "../Exten/SLHelper/pop/UITableView-FDTemplateLayoutCell/Pods-ShowLiveTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4305637E230831270090EA36 /* POPAnimatablePropertyTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POPAnimatablePropertyTypes.h; path = ../SLPlayAudio/POPAnimatablePropertyTypes.h; sourceTree = "<group>"; };
@@ -693,14 +693,12 @@
 			children = (
 				4305635A230831250090EA36 /* UIView+Debug.h */,
 				43056384230831270090EA36 /* POPSpringAnimationInternal.h */,
-				4305635B230831250090EA36 /* POPSpringAnimationInternal.h */,
 				4305634D230831250090EA36 /* ShowHomeSamallCell.h */,
 				43056382230831270090EA36 /* POPGeometry.mm */,
 				4305636A230831250090EA36 /* UIView+FDCollapsibleConstraints.h */,
 				4305634E230831250090EA36 /* CALayer+JKBorderColor.h */,
 				4305637C230831260090EA36 /* NSData+Image.m */,
 				43056363230831250090EA36 /* NSData+JKAPNSToken.h */,
-				4321A37B22F46DB300F19D03 /* UITableView+FDKeyedHeightCache.h */,
 				43056352230831250090EA36 /* NSDate+JKInternetDateTime.m */,
 				4321A36722F46DB300F19D03 /* UITableView+FDTemplateLayoutCellDebug.h */,
 				43056367230831250090EA36 /* NSNotificationCenterDemoViewController.m */,
@@ -728,7 +726,6 @@
 				4321A34E22F46DB300F19D03 /* NSSting+aes.h */,
 				4321A35522F46DB300F19D03 /* CATransactionDemoViewController.m */,
 				43056355230831250090EA36 /* SLInviteViewController.m */,
-				4305637B230831260090EA36 /* Pods-ShowLive.release.xcconfig */,
 				43056349230831250090EA36 /* Pods-ShowLive.release.xcconfig */,
 				4305636E230831250090EA36 /* CATransactionDemoViewController.h */,
 				43056376230831260090EA36 /* HomeHeader.h */,
@@ -1215,6 +1212,7 @@
 				4305638D230831280090EA36 /* POPLayerExtras.mm */,
 				4305636B230831250090EA36 /* POPLayerExtras.mm */,
 				4305634C230831250090EA36 /* NSString+Additions.m */,
+				4305635B230831250090EA36 /* POPSpringAnimationInternal.h */,
 				43056395230831280090EA36 /* ShowHomeMiddleCell.h */,
 				43056351230831250090EA36 /* ShowHomeMiddleCell.h */,
 				4305638B230831280090EA36 /* ShowHomeSamallCell.h */,
@@ -1232,6 +1230,7 @@
 				43056362230831250090EA36 /* SLConfig.h */,
 				43056371230831250090EA36 /* NSData+Image.m */,
 				43056385230831270090EA36 /* NSData+JKAPNSToken.h */,
+				4321A37B22F46DB300F19D03 /* UITableView+FDKeyedHeightCache.h */,
 				43056394230831280090EA36 /* NSDate+JKInternetDateTime.m */,
 				4321A34722F46DB300F19D03 /* NSNotificationCenter+JKMainThread.h */,
 				43056387230831270090EA36 /* NSNotificationCenter+JKMainThread.h */,
@@ -1280,6 +1279,7 @@
 				43056356230831250090EA36 /* UIView+FDCollapsibleConstraints.m */,
 				43056390230831280090EA36 /* SLInviteViewController.m */,
 				43056340230831250090EA36 /* SLJPushUntils.h */,
+				4305637B230831260090EA36 /* Pods-ShowLive.release.xcconfig */,
 				43056383230831270090EA36 /* UIGestureRecognizer+BlocksKit.m */,
 				4305634F230831250090EA36 /* UIGestureRecognizer+BlocksKit.m */,
 				4305633E230831250090EA36 /* CATransactionDemoViewController.h */,
