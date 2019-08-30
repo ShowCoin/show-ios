@@ -207,7 +207,7 @@
 		43056369230831250090EA36 /* UITextField+JKBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITextField+JKBlocks.m"; path = "../Exten/SLHelper/pop/UITableView-FDTemplateLayoutCell/UITextField+JKBlocks.m"; sourceTree = "<group>"; };
 		4305636A230831250090EA36 /* UIView+FDCollapsibleConstraints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FDCollapsibleConstraints.h"; sourceTree = "<group>"; };
 		4305636B230831250090EA36 /* POPLayerExtras.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = POPLayerExtras.mm; sourceTree = "<group>"; };
-		4305636C230831250090EA36 /* UIViewController+DDPopUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+DDPopUpViewController.h"; path = "../JKCategories/UIViewController+DDPopUpViewController.h"; sourceTree = "<group>"; };
+		4305636C230831250090EA36 /* UIViewController+DDPopUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DDPopUpViewController.h"; sourceTree = "<group>"; };
 		4305636D230831250090EA36 /* Pods-ShowLiveUITests.release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveUITests.release.xcconfig"; path = "../Exten/SLHelper/pop/UITableView-FDTemplateLayoutCell/Pods-ShowLiveUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4305636E230831250090EA36 /* CATransactionDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CATransactionDemoViewController.h; sourceTree = "<group>"; };
 		4305636F230831250090EA36 /* SLExtensionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLExtensionHelper.h; path = "../Exten/SLHelper/pop/UITableView-FDTemplateLayoutCell/SLExtensionHelper.h"; sourceTree = "<group>"; };
@@ -240,7 +240,7 @@
 		4305638A230831280090EA36 /* MKMapView+JKBetterMaps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKMapView+JKBetterMaps.m"; sourceTree = "<group>"; };
 		4305638B230831280090EA36 /* ShowHomeSamallCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowHomeSamallCell.h; sourceTree = "<group>"; };
 		4305638C230831280090EA36 /* UITextField+JKBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+JKBlocks.m"; sourceTree = "<group>"; };
-		4305638D230831280090EA36 /* POPLayerExtras.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = POPLayerExtras.mm; sourceTree = "<group>"; };
+		4305638D230831280090EA36 /* POPLayerExtras.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = POPLayerExtras.mm; path = ../SLPlayAudio/POPLayerExtras.mm; sourceTree = "<group>"; };
 		4305638E230831280090EA36 /* POPAnimationTracer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POPAnimationTracer.h; path = ../JKCategories/POPAnimationTracer.h; sourceTree = "<group>"; };
 		4305638F230831280090EA36 /* NSString+JKXMLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+JKXMLDictionary.h"; path = "../JKCategories/NSString+JKXMLDictionary.h"; sourceTree = "<group>"; };
 		43056390230831280090EA36 /* SLInviteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLInviteViewController.m; path = "../Exten/SLHelper/pop/UITableView-FDTemplateLayoutCell/SLInviteViewController.m"; sourceTree = "<group>"; };
@@ -686,7 +686,6 @@
 			isa = PBXGroup;
 			children = (
 				43056374230831260090EA36 /* POPLayerExtras.h */,
-				4305638D230831280090EA36 /* POPLayerExtras.mm */,
 				4305634C230831250090EA36 /* NSString+Additions.m */,
 				4305635A230831250090EA36 /* UIView+Debug.h */,
 				43056384230831270090EA36 /* POPSpringAnimationInternal.h */,
@@ -759,7 +758,6 @@
 				4321A35322F46DB300F19D03 /* POPAnimationTracer.mm */,
 				4321A35422F46DB300F19D03 /* NSNumber+JKRomanNumerals.h */,
 				4321A35522F46DB300F19D03 /* CATransactionDemoViewController.m */,
-				4305636C230831250090EA36 /* UIViewController+DDPopUpViewController.h */,
 				43056393230831280090EA36 /* UIViewController+DDPopUpViewController.h */,
 				43056388230831270090EA36 /* UIWebVIew+JKSwipeGesture.m */,
 				43056365230831250090EA36 /* UIWebVIew+JKSwipeGesture.m */,
@@ -1263,6 +1261,7 @@
 		934AE45E20FC6B7B00B60AD4 /* Exten */ = {
 			isa = PBXGroup;
 			children = (
+				4305638D230831280090EA36 /* POPLayerExtras.mm */,
 				4305636B230831250090EA36 /* POPLayerExtras.mm */,
 				43056351230831250090EA36 /* ShowHomeMiddleCell.h */,
 				4305634B230831250090EA36 /* SLGetRyTokenAction.h */,
@@ -1275,6 +1274,7 @@
 				4321A34A22F46DB300F19D03 /* SLHistoryWorksAction.h */,
 				4321A34C22F46DB300F19D03 /* UIViewController+MJPopupViewController.h */,
 				4321A35122F46DB300F19D03 /* SLShutUpAction.h */,
+				4305636C230831250090EA36 /* UIViewController+DDPopUpViewController.h */,
 				4305633E230831250090EA36 /* CATransactionDemoViewController.h */,
 				43056378230831260090EA36 /* TODO.md */,
 				43056366230831250090EA36 /* UIScrollView+APParallaxHeader.h */,
