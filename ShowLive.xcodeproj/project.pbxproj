@@ -268,7 +268,7 @@
 		4321A34F22F46DB300F19D03 /* POPAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAction.h; sourceTree = "<group>"; };
 		4321A35022F46DB300F19D03 /* CATransaction+JKAnimateWithDuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CATransaction+JKAnimateWithDuration.m"; path = "../Exten/SLHelper/CATransaction+JKAnimateWithDuration.m"; sourceTree = "<group>"; };
 		4321A35122F46DB300F19D03 /* SLShutUpAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLShutUpAction.h; path = SLHelper/SLShutUpAction.h; sourceTree = "<group>"; };
-		4321A35222F46DB300F19D03 /* NSDate+JKLunarCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+JKLunarCalendar.m"; path = "../Exten/SLHelper/NSDate+JKLunarCalendar.m"; sourceTree = "<group>"; };
+		4321A35222F46DB300F19D03 /* NSDate+JKLunarCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+JKLunarCalendar.m"; path = "SLHelper/NSDate+JKLunarCalendar.m"; sourceTree = "<group>"; };
 		4321A35322F46DB300F19D03 /* POPAnimationTracer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = POPAnimationTracer.mm; path = ../../requestAction/POPAnimationTracer.mm; sourceTree = "<group>"; };
 		4321A35422F46DB300F19D03 /* NSNumber+JKRomanNumerals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSNumber+JKRomanNumerals.h"; path = "../Exten/NSNumber+JKRomanNumerals.h"; sourceTree = "<group>"; };
 		4321A35522F46DB300F19D03 /* CATransactionDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CATransactionDemoViewController.m; path = ../Exten/SLHelper/pop/CATransactionDemoViewController.m; sourceTree = "<group>"; };
@@ -512,6 +512,7 @@
 		D28926A92318F46A0044EB51 /* Pods-ShowLiveUITests.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveUITests.debug.xcconfig"; path = "../../../../../requestAction/Pods-ShowLiveUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D28926AA2318F46B0044EB51 /* Pods-ShowLiveUITests.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveUITests.debug.xcconfig"; path = "../../../../../requestAction/Pods-ShowLiveUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D28926AB2318F46C0044EB51 /* Pods-ShowLiveUITests.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveUITests.debug.xcconfig"; path = "../../../../../requestAction/Pods-ShowLiveUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D28926AC2318F46D0044EB51 /* Pods-ShowLiveUITests.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveUITests.debug.xcconfig"; path = "../../../../../requestAction/Pods-ShowLiveUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D2A091F322FE908F00F8683B /* Pods-ShowLiveUITests.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveUITests.debug.xcconfig"; path = "../../../../requestAction/Pods-ShowLiveUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D2A091F422FE90A200F8683B /* Pods-ShowLiveUITests.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveUITests.debug.xcconfig"; path = "../../../../../requestAction/Pods-ShowLiveUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D6F34820745ED99EE82E0D41 /* Pods-ShowLiveTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveTests.debug.xcconfig"; path = "../../../SLPlayAudio/Pods-ShowLiveTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -693,7 +694,6 @@
 				4305635B230831250090EA36 /* POPSpringAnimationInternal.h */,
 				43056395230831280090EA36 /* ShowHomeMiddleCell.h */,
 				4305634D230831250090EA36 /* ShowHomeSamallCell.h */,
-				4305638B230831280090EA36 /* ShowHomeSamallCell.h */,
 				43056354230831250090EA36 /* SLAttentionListAction.h */,
 				43056377230831260090EA36 /* SLExtensionHelper.h */,
 				4305636F230831250090EA36 /* SLExtensionHelper.h */,
@@ -746,7 +746,6 @@
 				4321A34E22F46DB300F19D03 /* NSSting+aes.h */,
 				4321A34F22F46DB300F19D03 /* POPAction.h */,
 				4321A35022F46DB300F19D03 /* CATransaction+JKAnimateWithDuration.m */,
-				4321A35222F46DB300F19D03 /* NSDate+JKLunarCalendar.m */,
 				4321A35322F46DB300F19D03 /* POPAnimationTracer.mm */,
 				4321A35422F46DB300F19D03 /* NSNumber+JKRomanNumerals.h */,
 				4321A35522F46DB300F19D03 /* CATransactionDemoViewController.m */,
@@ -1248,6 +1247,7 @@
 				4305638D230831280090EA36 /* POPLayerExtras.mm */,
 				4305636B230831250090EA36 /* POPLayerExtras.mm */,
 				43056351230831250090EA36 /* ShowHomeMiddleCell.h */,
+				4305638B230831280090EA36 /* ShowHomeSamallCell.h */,
 				43056373230831260090EA36 /* SLAttentionListAction.h */,
 				4305634B230831250090EA36 /* SLGetRyTokenAction.h */,
 				43056372230831260090EA36 /* UIView+FDCollapsibleConstraints.h */,
@@ -1263,6 +1263,7 @@
 				4305633D230831250090EA36 /* UITextFieldDemoViewController.h */,
 				43056357230831250090EA36 /* SLGiftAction.h */,
 				43056391230831280090EA36 /* SLGiftAction.h */,
+				D28926AC2318F46D0044EB51 /* Pods-ShowLiveUITests.debug.xcconfig */,
 				D28926AB2318F46C0044EB51 /* Pods-ShowLiveUITests.debug.xcconfig */,
 				D28926AA2318F46B0044EB51 /* Pods-ShowLiveUITests.debug.xcconfig */,
 				D28926A92318F46A0044EB51 /* Pods-ShowLiveUITests.debug.xcconfig */,
@@ -1271,6 +1272,7 @@
 				4321A34A22F46DB300F19D03 /* SLHistoryWorksAction.h */,
 				4321A34C22F46DB300F19D03 /* UIViewController+MJPopupViewController.h */,
 				4321A35122F46DB300F19D03 /* SLShutUpAction.h */,
+				4321A35222F46DB300F19D03 /* NSDate+JKLunarCalendar.m */,
 				4305636C230831250090EA36 /* UIViewController+DDPopUpViewController.h */,
 				43056365230831250090EA36 /* UIWebVIew+JKSwipeGesture.m */,
 				43056390230831280090EA36 /* SLInviteViewController.m */,
