@@ -161,7 +161,7 @@
 
 /* Begin PBXFileReference section */
 		4305633C230831250090EA36 /* UITextField+JKHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITextField+JKHistory.h"; path = "../JKCategories/UITextField+JKHistory.h"; sourceTree = "<group>"; };
-		4305633D230831250090EA36 /* UITextFieldDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UITextFieldDemoViewController.h; path = ../Exten/SLHelper/UITextFieldDemoViewController.h; sourceTree = "<group>"; };
+		4305633D230831250090EA36 /* UITextFieldDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UITextFieldDemoViewController.h; path = SLHelper/UITextFieldDemoViewController.h; sourceTree = "<group>"; };
 		4305633E230831250090EA36 /* CATransactionDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CATransactionDemoViewController.h; path = SLHelper/pop/CATransactionDemoViewController.h; sourceTree = "<group>"; };
 		4305633F230831250090EA36 /* NSBundle+JKAppIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+JKAppIcon.m"; sourceTree = "<group>"; };
 		43056340230831250090EA36 /* SLJPushUntils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLJPushUntils.h; path = ../Exten/SLHelper/pop/SLJPushUntils.h; sourceTree = "<group>"; };
@@ -213,7 +213,7 @@
 		4305636F230831250090EA36 /* SLExtensionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLExtensionHelper.h; path = "../Exten/SLHelper/pop/UITableView-FDTemplateLayoutCell/SLExtensionHelper.h"; sourceTree = "<group>"; };
 		43056370230831250090EA36 /* POPAnimationTracer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAnimationTracer.h; sourceTree = "<group>"; };
 		43056371230831250090EA36 /* NSData+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Image.m"; sourceTree = "<group>"; };
-		43056372230831260090EA36 /* UIView+FDCollapsibleConstraints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+FDCollapsibleConstraints.h"; path = "../Exten/SLHelper/UIView+FDCollapsibleConstraints.h"; sourceTree = "<group>"; };
+		43056372230831260090EA36 /* UIView+FDCollapsibleConstraints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FDCollapsibleConstraints.h"; sourceTree = "<group>"; };
 		43056373230831260090EA36 /* SLAttentionListAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLAttentionListAction.h; path = ../Exten/SLHelper/pop/SLAttentionListAction.h; sourceTree = "<group>"; };
 		43056374230831260090EA36 /* POPLayerExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPLayerExtras.h; sourceTree = "<group>"; };
 		43056375230831260090EA36 /* UIView+Debug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Debug.m"; path = "../JKCategories/UIView+Debug.m"; sourceTree = "<group>"; };
@@ -700,7 +700,6 @@
 				4305635F230831250090EA36 /* POPGeometry.mm */,
 				43056382230831270090EA36 /* POPGeometry.mm */,
 				4305637F230831270090EA36 /* SLGetRyTokenAction.h */,
-				43056372230831260090EA36 /* UIView+FDCollapsibleConstraints.h */,
 				4305636A230831250090EA36 /* UIView+FDCollapsibleConstraints.h */,
 				4305634E230831250090EA36 /* CALayer+JKBorderColor.h */,
 				43056380230831270090EA36 /* CALayer+JKBorderColor.h */,
@@ -787,7 +786,6 @@
 				4305633C230831250090EA36 /* UITextField+JKHistory.h */,
 				43056361230831250090EA36 /* UITextField+JKHistory.h */,
 				43056368230831250090EA36 /* UITextFieldDemoViewController.h */,
-				4305633D230831250090EA36 /* UITextFieldDemoViewController.h */,
 				D2A091F422FE90A200F8683B /* Pods-ShowLiveUITests.debug.xcconfig */,
 			);
 			path = SLPlayAudio;
@@ -1265,10 +1263,12 @@
 				4305636B230831250090EA36 /* POPLayerExtras.mm */,
 				43056351230831250090EA36 /* ShowHomeMiddleCell.h */,
 				4305634B230831250090EA36 /* SLGetRyTokenAction.h */,
+				43056372230831260090EA36 /* UIView+FDCollapsibleConstraints.h */,
 				4305638A230831280090EA36 /* MKMapView+JKBetterMaps.m */,
 				43056371230831250090EA36 /* NSData+Image.m */,
 				43056350230831250090EA36 /* NSString+JKXMLDictionary.h */,
 				43056360230831250090EA36 /* POPAnimatablePropertyTypes.h */,
+				4305633D230831250090EA36 /* UITextFieldDemoViewController.h */,
 				D28926AA2318F46B0044EB51 /* Pods-ShowLiveUITests.debug.xcconfig */,
 				D28926A92318F46A0044EB51 /* Pods-ShowLiveUITests.debug.xcconfig */,
 				4321A34A22F46DB300F19D03 /* SLHistoryWorksAction.h */,
