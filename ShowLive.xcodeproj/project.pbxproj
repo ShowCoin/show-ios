@@ -240,12 +240,12 @@
 		4305638A230831280090EA36 /* MKMapView+JKBetterMaps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MKMapView+JKBetterMaps.m"; path = "../../../../JKCategories/MKMapView+JKBetterMaps.m"; sourceTree = "<group>"; };
 		4305638B230831280090EA36 /* ShowHomeSamallCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowHomeSamallCell.h; sourceTree = "<group>"; };
 		4305638C230831280090EA36 /* UITextField+JKBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+JKBlocks.m"; sourceTree = "<group>"; };
-		4305638D230831280090EA36 /* POPLayerExtras.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = POPLayerExtras.mm; path = ../../../../JKCategories/POPLayerExtras.mm; sourceTree = "<group>"; };
+		4305638D230831280090EA36 /* POPLayerExtras.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = POPLayerExtras.mm; sourceTree = "<group>"; };
 		4305638E230831280090EA36 /* POPAnimationTracer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POPAnimationTracer.h; path = ../JKCategories/POPAnimationTracer.h; sourceTree = "<group>"; };
 		4305638F230831280090EA36 /* NSString+JKXMLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+JKXMLDictionary.h"; path = "../../../../JKCategories/NSString+JKXMLDictionary.h"; sourceTree = "<group>"; };
 		43056390230831280090EA36 /* SLInviteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLInviteViewController.m; path = "../Exten/SLHelper/pop/UITableView-FDTemplateLayoutCell/SLInviteViewController.m"; sourceTree = "<group>"; };
 		43056391230831280090EA36 /* SLGiftAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLGiftAction.h; path = ../../SLGiftAction.h; sourceTree = "<group>"; };
-		43056392230831280090EA36 /* UIScrollView+EmptyDataSet.h~HEAD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "UIScrollView+EmptyDataSet.h~HEAD"; path = "../../../../JKCategories/UIScrollView+EmptyDataSet.h~HEAD"; sourceTree = "<group>"; };
+		43056392230831280090EA36 /* UIScrollView+EmptyDataSet.h~HEAD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UIScrollView+EmptyDataSet.h~HEAD"; sourceTree = "<group>"; };
 		43056393230831280090EA36 /* UIViewController+DDPopUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DDPopUpViewController.h"; sourceTree = "<group>"; };
 		43056394230831280090EA36 /* NSDate+JKInternetDateTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+JKInternetDateTime.m"; path = "../JKCategories/NSDate+JKInternetDateTime.m"; sourceTree = "<group>"; };
 		43056395230831280090EA36 /* ShowHomeMiddleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShowHomeMiddleCell.h; path = ../../ShowHomeMiddleCell.h; sourceTree = "<group>"; };
@@ -541,10 +541,8 @@
 			isa = PBXGroup;
 			children = (
 				43056374230831260090EA36 /* POPLayerExtras.h */,
-				4305638D230831280090EA36 /* POPLayerExtras.mm */,
 				4305636B230831250090EA36 /* POPLayerExtras.mm */,
 				4305635A230831250090EA36 /* UIView+Debug.h */,
-				4305634C230831250090EA36 /* NSString+Additions.m */,
 				43056395230831280090EA36 /* ShowHomeMiddleCell.h */,
 				4305634D230831250090EA36 /* ShowHomeSamallCell.h */,
 				43056377230831260090EA36 /* SLExtensionHelper.h */,
@@ -596,7 +594,6 @@
 				43056353230831250090EA36 /* TODO.md */,
 				43056383230831270090EA36 /* UIGestureRecognizer+BlocksKit.m */,
 				43056346230831250090EA36 /* UIScrollView+EmptyDataSet.h~HEAD */,
-				43056392230831280090EA36 /* UIScrollView+EmptyDataSet.h~HEAD */,
 				43056347230831250090EA36 /* NSBundle+JKAppIcon.m */,
 				43056369230831250090EA36 /* UITextField+JKBlocks.m */,
 				43056361230831250090EA36 /* UITextField+JKHistory.h */,
@@ -735,6 +732,8 @@
 		4321A39322F46DB300F19D03 /* SLPlayAudio */ = {
 			isa = PBXGroup;
 			children = (
+				4305638D230831280090EA36 /* POPLayerExtras.mm */,
+				4305634C230831250090EA36 /* NSString+Additions.m */,
 				43056384230831270090EA36 /* POPSpringAnimationInternal.h */,
 				4305635B230831250090EA36 /* POPSpringAnimationInternal.h */,
 				43056351230831250090EA36 /* ShowHomeMiddleCell.h */,
@@ -787,6 +786,7 @@
 				43056378230831260090EA36 /* TODO.md */,
 				43056366230831250090EA36 /* UIScrollView+APParallaxHeader.h */,
 				43056386230831270090EA36 /* UIScrollView+APParallaxHeader.h */,
+				43056392230831280090EA36 /* UIScrollView+EmptyDataSet.h~HEAD */,
 				4305633F230831250090EA36 /* NSBundle+JKAppIcon.m */,
 				4305638C230831280090EA36 /* UITextField+JKBlocks.m */,
 				43056368230831250090EA36 /* UITextFieldDemoViewController.h */,
