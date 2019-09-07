@@ -192,7 +192,7 @@
 		4305635A230831250090EA36 /* UIView+Debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Debug.h"; sourceTree = "<group>"; };
 		4305635B230831250090EA36 /* POPSpringAnimationInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPSpringAnimationInternal.h; sourceTree = "<group>"; };
 		4305635C230831250090EA36 /* POPAnimatableProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAnimatableProperty.h; sourceTree = "<group>"; };
-		4305635D230831250090EA36 /* POPLayerExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPLayerExtras.h; sourceTree = "<group>"; };
+		4305635D230831250090EA36 /* POPLayerExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POPLayerExtras.h; path = "SLHelper/pop/UITableView-FDTemplateLayoutCell/POPLayerExtras.h"; sourceTree = "<group>"; };
 		4305635E230831250090EA36 /* SLJPushUntils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLJPushUntils.m; path = "SLHelper/pop/UITableView-FDTemplateLayoutCell/SLJPushUntils.m"; sourceTree = "<group>"; };
 		4305635F230831250090EA36 /* POPGeometry.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = POPGeometry.mm; sourceTree = "<group>"; };
 		43056360230831250090EA36 /* POPAnimatablePropertyTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAnimatablePropertyTypes.h; sourceTree = "<group>"; };
@@ -635,6 +635,7 @@
 		D2A466E0232377DA0057E5AD /* SLStringSizeCalculation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLStringSizeCalculation.h; path = ../../../../../../FriendList/SLStringSizeCalculation.h; sourceTree = "<group>"; };
 		D2A466E1232377DA0057E5AD /* SLBaseWebViewRequestHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLBaseWebViewRequestHelper.h; path = ../../../WebView/Base/SLBaseWebViewRequestHelper.h; sourceTree = "<group>"; };
 		D2A466E2232377DA0057E5AD /* SLBlankView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLBlankView.h; path = ../../../../../WebView/Base/SLBlankView.h; sourceTree = "<group>"; };
+		D2A466E3232377DA0057E5AD /* ShowAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ShowAppDelegate.m; path = ../../../../../WebView/Base/ShowAppDelegate.m; sourceTree = "<group>"; };
 		D2C5F4BC232376A10074BEAE /* Pods-ShowLiveUITests.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveUITests.debug.xcconfig"; path = "../../../../../requestAction/Pods-ShowLiveUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D2C5F4BD232376A10074BEAE /* Pods-ShowLiveUITests.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveUITests.debug.xcconfig"; path = "../../../../../requestAction/Pods-ShowLiveUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D2C5F4BE232376A10074BEAE /* Pods-ShowLiveUITests.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveUITests.debug.xcconfig"; path = "../../../../../requestAction/Pods-ShowLiveUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -682,7 +683,6 @@
 		43056343230831250090EA36 /* UITableView-FDTemplateLayoutCell */ = {
 			isa = PBXGroup;
 			children = (
-				4305635D230831250090EA36 /* POPLayerExtras.h */,
 				9391AA8C20C0369100D520F1 /* SLBlankView.h */,
 				D2A466A1232377CB0057E5AD /* SLBlankView.h */,
 				72A0088520FC9FE40051C643 /* SLBlankView.m */,
@@ -878,6 +878,7 @@
 				D2A466D3232377D80057E5AD /* SLBlankView.m */,
 				D2A466C6232377D70057E5AD /* SLChatBusiness.h */,
 				D2A466C3232377D70057E5AD /* SLPureColorImageGenerate.h */,
+				4305635D230831250090EA36 /* POPLayerExtras.h */,
 				D2A466E2232377DA0057E5AD /* SLBlankView.h */,
 				D2A466C5232377D70057E5AD /* SLBlankView.h */,
 				D2A466BA232377D50057E5AD /* SLChatBusiness.h */,
@@ -893,6 +894,7 @@
 				D2A466C1232377D60057E5AD /* ShowNavigationBar.h */,
 				D2A466DD232377D90057E5AD /* ShowAppDelegate.h */,
 				D2A466BC232377D60057E5AD /* ShowNavigationBar.m */,
+				D2A466E3232377DA0057E5AD /* ShowAppDelegate.m */,
 				D2A466D8232377D90057E5AD /* ShowAppDelegate.m */,
 				D2A466C7232377D70057E5AD /* AppDelegate+ShowRegisterService.h */,
 				D2A466D1232377D80057E5AD /* NewTopListHeader.m */,
