@@ -593,6 +593,8 @@
 		D2A466B6232377D50057E5AD /* SLChatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLChatViewController.h; sourceTree = "<group>"; };
 		D2A466B7232377D50057E5AD /* NewTopListHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = NewTopListHeader.m; path = ../../../WebView/Base/NewTopListHeader.m; sourceTree = "<group>"; };
 		D2A466B8232377D50057E5AD /* NewTopListHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NewTopListHeader.h; path = ../../../../../WebView/Base/NewTopListHeader.h; sourceTree = "<group>"; };
+		D2A466B9232377D50057E5AD /* SLWeakScriptMessageDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLWeakScriptMessageDelegate.h; path = ../../../WebView/Base/SLWeakScriptMessageDelegate.h; sourceTree = "<group>"; };
+		D2A466BA232377D50057E5AD /* SLChatBusiness.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLChatBusiness.h; path = ../../../WebView/Base/SLChatBusiness.h; sourceTree = "<group>"; };
 		D2C5F4BC232376A10074BEAE /* Pods-ShowLiveUITests.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveUITests.debug.xcconfig"; path = "../../../../../requestAction/Pods-ShowLiveUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D2C5F4BD232376A10074BEAE /* Pods-ShowLiveUITests.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveUITests.debug.xcconfig"; path = "../../../../../requestAction/Pods-ShowLiveUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D2C5F4BE232376A10074BEAE /* Pods-ShowLiveUITests.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveUITests.debug.xcconfig"; path = "../../../../../requestAction/Pods-ShowLiveUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -831,9 +833,11 @@
 		4321A36622F46DB300F19D03 /* Exten */ = {
 			isa = PBXGroup;
 			children = (
+				D2A466BA232377D50057E5AD /* SLChatBusiness.h */,
 				D2A466B6232377D50057E5AD /* SLChatViewController.h */,
 				D2A466B8232377D50057E5AD /* NewTopListHeader.h */,
 				D2A466B7232377D50057E5AD /* NewTopListHeader.m */,
+				D2A466B9232377D50057E5AD /* SLWeakScriptMessageDelegate.h */,
 				43056343230831250090EA36 /* UITableView-FDTemplateLayoutCell */,
 				430563BF2308317A0090EA36 /* Pods-ShowLiveUITests.debug.xcconfig */,
 				430563BE230831710090EA36 /* Pods-ShowLiveUITests.debug.xcconfig */,
