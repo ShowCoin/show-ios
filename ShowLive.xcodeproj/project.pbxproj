@@ -341,9 +341,9 @@
 		437864562075FD1E00146B97 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		43D24A8D2094A43600C59AC8 /* AppDelegate+ShowRegisterService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "AppDelegate+ShowRegisterService.m"; path = "../WebView/Base/AppDelegate+ShowRegisterService.m"; sourceTree = "<group>"; };
 		43D24A8E2094A43600C59AC8 /* ShowAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShowAppDelegate.h; path = ../WebView/Base/ShowAppDelegate.h; sourceTree = "<group>"; };
-		43D24A8F2094A43600C59AC8 /* ShowAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowAppDelegate.m; sourceTree = "<group>"; };
+		43D24A8F2094A43600C59AC8 /* ShowAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShowAppDelegate.m; path = ../WebView/Base/ShowAppDelegate.m; sourceTree = "<group>"; };
 		43D24A902094A43600C59AC8 /* AppDelegate+ShowRegisterService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+ShowRegisterService.h"; sourceTree = "<group>"; };
-		43D24A932094B4C500C59AC8 /* ShowNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowNavigationBar.h; sourceTree = "<group>"; };
+		43D24A932094B4C500C59AC8 /* ShowNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShowNavigationBar.h; path = ../WebView/Base/ShowNavigationBar.h; sourceTree = "<group>"; };
 		43D24A942094B4C500C59AC8 /* ShowNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShowNavigationBar.m; path = ../WebView/Base/ShowNavigationBar.m; sourceTree = "<group>"; };
 		4537B7EFEE31B0E75BBC7D5B /* libPods-ShowLive.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShowLive.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		53B07B4395D318342B414DD2 /* Pods-ShowLiveUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ShowLiveUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -405,7 +405,7 @@
 		728E16B521C7C78B0000047A /* CoinDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoinDetailVC.h; sourceTree = "<group>"; };
 		728E16B621C7C7A50000047A /* CoinDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoinDetailVC.m; sourceTree = "<group>"; };
 		7290201820DBF3A600F02370 /* SLSafeCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLSafeCenterViewController.h; sourceTree = "<group>"; };
-		72A0088520FC9FE40051C643 /* SLBlankView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLBlankView.m; sourceTree = "<group>"; };
+		72A0088520FC9FE40051C643 /* SLBlankView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLBlankView.m; path = ../WebView/Base/SLBlankView.m; sourceTree = "<group>"; };
 		72A0088720FCA0490051C643 /* SLSafeCenterCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLSafeCenterCell.h; path = Classes/UserCenter/View/SLSafeCenterCell.h; sourceTree = SOURCE_ROOT; };
 		72A0088820FCA0710051C643 /* SLSafeCenterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLSafeCenterCell.m; path = Classes/UserCenter/View/SLSafeCenterCell.m; sourceTree = SOURCE_ROOT; };
 		72A0088A20FCA1820051C643 /* SLUserViewHeader+SLMinCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SLUserViewHeader+SLMinCard.h"; path = "Classes/UserCenter/View/SLUserViewHeader+SLMinCard.h"; sourceTree = SOURCE_ROOT; };
@@ -450,7 +450,7 @@
 		931DAAC820B5A7A6003A0B38 /* SLConvListSystemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLConvListSystemTableViewCell.h; sourceTree = "<group>"; };
 		934E1B9720AC39D900A0B080 /* SLChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLChatViewController.h; path = ../WebView/Base/SLChatViewController.h; sourceTree = "<group>"; };
 		934E1B9820AC3A1E00A0B080 /* SLChatViewController+BlankView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SLChatViewController+BlankView.h"; path = "../WebView/Base/SLChatViewController+BlankView.h"; sourceTree = "<group>"; };
-		93615AE820C142D7000D5658 /* SLBaseWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLBaseWebViewController.h; sourceTree = "<group>"; };
+		93615AE820C142D7000D5658 /* SLBaseWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLBaseWebViewController.h; path = ../WebView/Base/SLBaseWebViewController.h; sourceTree = "<group>"; };
 		93615AEA20C1453A000D5658 /* SLBaseWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLBaseWebViewController.m; sourceTree = "<group>"; };
 		93615AEC20C1461A000D5658 /* SLBaseWebViewRequestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLBaseWebViewRequestHelper.h; sourceTree = "<group>"; };
 		93615AED20C14746000D5658 /* SLWebViewScriptMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLWebViewScriptMessage.h; path = ../WebView/Base/SLWebViewScriptMessage.h; sourceTree = "<group>"; };
@@ -725,16 +725,20 @@
 		4321A39322F46DB300F19D03 /* SLPlayAudio */ = {
 			isa = PBXGroup;
 			children = (
+				72A0088520FC9FE40051C643 /* SLBlankView.m */,
 				D26694A42323771B00401294 /* SLStringSizeCalculation.h */,
 				934E1B9720AC39D900A0B080 /* SLChatViewController.h */,
 				934E1B9820AC3A1E00A0B080 /* SLChatViewController+BlankView.h */,
+				43D24A932094B4C500C59AC8 /* ShowNavigationBar.h */,
 				43D24A942094B4C500C59AC8 /* ShowNavigationBar.m */,
 				43D24A8E2094A43600C59AC8 /* ShowAppDelegate.h */,
+				43D24A8F2094A43600C59AC8 /* ShowAppDelegate.m */,
 				43D24A8D2094A43600C59AC8 /* AppDelegate+ShowRegisterService.m */,
 				72F9A9642200483100612687 /* NewTopListCell.h */,
 				72F9A9652200484600612687 /* NewTopListCell.m */,
 				72F9A9672200486F00612687 /* NewTopListHeader.h */,
 				D26694A52323771C00401294 /* NewTopListViewController.h */,
+				93615AE820C142D7000D5658 /* SLBaseWebViewController.h */,
 				93615AED20C14746000D5658 /* SLWebViewScriptMessage.h */,
 				93615AEE20C14834000D5658 /* SLWeakScriptMessageDelegate.h */,
 				9391AA9820C046B800D520F1 /* SLWebView.h */,
@@ -1361,18 +1365,14 @@
 			isa = PBXGroup;
 			children = (
 				9391AA8C20C0369100D520F1 /* SLBlankView.h */,
-				72A0088520FC9FE40051C643 /* SLBlankView.m */,
 				9391AA8D20C036DC00D520F1 /* SLChatBusiness.h */,
 				9391AA8E20C0376B00D520F1 /* SLPureColorImageGenerate.h */,
 				9391AA9020C0380800D520F1 /* SLStringSizeCalculation.h */,
 				931DAAC820B5A7A6003A0B38 /* SLConvListSystemTableViewCell.h */,
-				43D24A932094B4C500C59AC8 /* ShowNavigationBar.h */,
-				43D24A8F2094A43600C59AC8 /* ShowAppDelegate.m */,
 				43D24A902094A43600C59AC8 /* AppDelegate+ShowRegisterService.h */,
 				72F9A9682200487B00612687 /* NewTopListHeader.m */,
 				72F9A96A220048C900612687 /* NewTopListViewController.h */,
 				72F9A96B220048E800612687 /* NewTopListViewController.m */,
-				93615AE820C142D7000D5658 /* SLBaseWebViewController.h */,
 				93615AEA20C1453A000D5658 /* SLBaseWebViewController.m */,
 				93615AEC20C1461A000D5658 /* SLBaseWebViewRequestHelper.h */,
 			);
