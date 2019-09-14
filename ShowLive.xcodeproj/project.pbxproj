@@ -349,7 +349,7 @@
 		53B07B4395D318342B414DD2 /* Pods-ShowLiveUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ShowLiveUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7217AD9821C5368100D082E9 /* WithdrawViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WithdrawViewController.h; path = ../../../Base/WithdrawViewController.h; sourceTree = "<group>"; };
 		7217AD9921C536A700D082E9 /* WithdrawViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WithdrawViewController.m; path = ../../../Base/WithdrawViewController.m; sourceTree = "<group>"; };
-		7217AD9B21C5377D00D082E9 /* SLCoinDetailInfoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLCoinDetailInfoVC.h; sourceTree = "<group>"; };
+		7217AD9B21C5377D00D082E9 /* SLCoinDetailInfoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLCoinDetailInfoVC.h; path = ../../../Base/SLCoinDetailInfoVC.h; sourceTree = "<group>"; };
 		722BCF0621D78936004BFC52 /* SLInviteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLInviteViewController.m; sourceTree = "<group>"; };
 		723816B220C689AB00C3885E /* SLLevelMarkView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLLevelMarkView.h; sourceTree = "<group>"; };
 		723816B320C689AB00C3885E /* SLLevelMarkView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLLevelMarkView.m; sourceTree = "<group>"; };
@@ -397,13 +397,13 @@
 		725282F121BE666A00802C09 /* ShowAccountTableHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowAccountTableHeader.m; sourceTree = "<group>"; };
 		7254543021C2947A000B3FB8 /* SLWalletHomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWalletHomePageViewController.h; sourceTree = "<group>"; };
 		7254543221C294BE000B3FB8 /* ShowAccountViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowAccountViewController.h; sourceTree = "<group>"; };
-		7254543521C29503000B3FB8 /* ShowAddAddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowAddAddressViewController.h; sourceTree = "<group>"; };
+		7254543521C29503000B3FB8 /* ShowAddAddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShowAddAddressViewController.h; path = ../../../Base/ShowAddAddressViewController.h; sourceTree = "<group>"; };
 		7254543821C295B2000B3FB8 /* ShowCollectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShowCollectViewController.h; path = ../../../Base/ShowCollectViewController.h; sourceTree = "<group>"; };
 		7289901820F795E90044E74A /* SLWithdrawAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLWithdrawAlert.m; sourceTree = "<group>"; };
 		7289901920F795E90044E74A /* SLWithDrawIndentifyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWithDrawIndentifyCell.h; sourceTree = "<group>"; };
 		7289901A20F795EA0044E74A /* SLWithdrawAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWithdrawAlert.h; sourceTree = "<group>"; };
 		728E16B521C7C78B0000047A /* CoinDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CoinDetailVC.h; path = ../../../Base/CoinDetailVC.h; sourceTree = "<group>"; };
-		728E16B621C7C7A50000047A /* CoinDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoinDetailVC.m; sourceTree = "<group>"; };
+		728E16B621C7C7A50000047A /* CoinDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoinDetailVC.m; path = ../../../Base/CoinDetailVC.m; sourceTree = "<group>"; };
 		7290201820DBF3A600F02370 /* SLSafeCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLSafeCenterViewController.h; path = ../../../Base/SLSafeCenterViewController.h; sourceTree = "<group>"; };
 		72A0088520FC9FE40051C643 /* SLBlankView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLBlankView.m; path = ../../../../WebView/Base/SLBlankView.m; sourceTree = "<group>"; };
 		72A0088720FCA0490051C643 /* SLSafeCenterCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLSafeCenterCell.h; path = Classes/UserCenter/View/SLSafeCenterCell.h; sourceTree = SOURCE_ROOT; };
@@ -1272,9 +1272,6 @@
 			children = (
 				7254543021C2947A000B3FB8 /* SLWalletHomePageViewController.h */,
 				7254543221C294BE000B3FB8 /* ShowAccountViewController.h */,
-				7254543521C29503000B3FB8 /* ShowAddAddressViewController.h */,
-				7217AD9B21C5377D00D082E9 /* SLCoinDetailInfoVC.h */,
-				728E16B621C7C7A50000047A /* CoinDetailVC.m */,
 			);
 			path = wallet;
 			sourceTree = "<group>";
@@ -1601,10 +1598,13 @@
 		93615AE720C142C9000D5658 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				7254543521C29503000B3FB8 /* ShowAddAddressViewController.h */,
 				7254543821C295B2000B3FB8 /* ShowCollectViewController.h */,
 				7217AD9821C5368100D082E9 /* WithdrawViewController.h */,
 				7217AD9921C536A700D082E9 /* WithdrawViewController.m */,
+				7217AD9B21C5377D00D082E9 /* SLCoinDetailInfoVC.h */,
 				728E16B521C7C78B0000047A /* CoinDetailVC.h */,
+				728E16B621C7C7A50000047A /* CoinDetailVC.m */,
 				7239EB2D20BD38FC00588BED /* ChangeheadportraitController.h */,
 				7239EB3B20BD468F00588BED /* ChangeTextController.h */,
 				7239EB2820BD38FC00588BED /* ShowSettingViewController.h */,
