@@ -139,6 +139,10 @@
 		93D2C11220BD238500C9D960 /* SLFriendListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D2C11120BD238500C9D960 /* SLFriendListCell.m */; };
 		A7E2C221F3EC94B44C97ADEE /* libPods-ShowLiveTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C80209C93E46267AFE3ADF2E /* libPods-ShowLiveTests.a */; };
 		A9BBAFBE20CA8E5B001683F8 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9BBAFBD20CA8E5B001683F8 /* Media.xcassets */; };
+		D25E40EF232CC356005EE124 /* CATransaction+JKAnimateWithDuration.m in Sources */ = {isa = PBXBuildFile; fileRef = D25E40E8232CC355005EE124 /* CATransaction+JKAnimateWithDuration.m */; };
+		D25E40F0232CC356005EE124 /* SLJPushUntils.m in Sources */ = {isa = PBXBuildFile; fileRef = D25E40E9232CC355005EE124 /* SLJPushUntils.m */; };
+		D25E40F1232CC356005EE124 /* TODO.md in Resources */ = {isa = PBXBuildFile; fileRef = D25E40ED232CC356005EE124 /* TODO.md */; };
+		D25E40F2232CC356005EE124 /* NSBundle+JKAppIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = D25E40EE232CC356005EE124 /* NSBundle+JKAppIcon.m */; };
 		EC6B0793D76068920F217137 /* libPods-ShowLiveUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 877A7E42218D8E5D2E688D18 /* libPods-ShowLiveUITests.a */; };
 /* End PBXBuildFile section */
 
@@ -491,6 +495,13 @@
 		D24CA8E92307F12200F529BB /* Pods-ShowLiveUITests.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveUITests.debug.xcconfig"; path = "../../../../../../../requestAction/Pods-ShowLiveUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D24CA8EA2307F12600F529BB /* Pods-ShowLiveUITests.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveUITests.debug.xcconfig"; path = "../../../../../../../requestAction/Pods-ShowLiveUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D25D805B22F553990082F6FB /* Pods-ShowLiveUITests.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveUITests.debug.xcconfig"; path = "../../../../../requestAction/Pods-ShowLiveUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D25E40E8232CC355005EE124 /* CATransaction+JKAnimateWithDuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CATransaction+JKAnimateWithDuration.m"; sourceTree = "<group>"; };
+		D25E40E9232CC355005EE124 /* SLJPushUntils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLJPushUntils.m; sourceTree = "<group>"; };
+		D25E40EA232CC355005EE124 /* UITextFieldDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITextFieldDemoViewController.h; sourceTree = "<group>"; };
+		D25E40EB232CC355005EE124 /* UITextField+JKBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+JKBlocks.h"; sourceTree = "<group>"; };
+		D25E40EC232CC355005EE124 /* UIView+FDCollapsibleConstraints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FDCollapsibleConstraints.h"; sourceTree = "<group>"; };
+		D25E40ED232CC356005EE124 /* TODO.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = TODO.md; sourceTree = "<group>"; };
+		D25E40EE232CC356005EE124 /* NSBundle+JKAppIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+JKAppIcon.m"; sourceTree = "<group>"; };
 		D26694A42323771B00401294 /* SLStringSizeCalculation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLStringSizeCalculation.h; path = ../../../../FriendList/SLStringSizeCalculation.h; sourceTree = "<group>"; };
 		D26694A52323771C00401294 /* NewTopListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NewTopListViewController.h; path = ../../../../Toplist/NewTopListViewController.h; sourceTree = "<group>"; };
 		D28926972318F4450044EB51 /* Pods-ShowLiveUITests.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveUITests.debug.xcconfig"; path = "../../../../../../../../requestAction/Pods-ShowLiveUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -884,6 +895,13 @@
 		4321A36622F46DB300F19D03 /* Exten */ = {
 			isa = PBXGroup;
 			children = (
+				D25E40E8232CC355005EE124 /* CATransaction+JKAnimateWithDuration.m */,
+				D25E40EE232CC356005EE124 /* NSBundle+JKAppIcon.m */,
+				D25E40E9232CC355005EE124 /* SLJPushUntils.m */,
+				D25E40ED232CC356005EE124 /* TODO.md */,
+				D25E40EB232CC355005EE124 /* UITextField+JKBlocks.h */,
+				D25E40EA232CC355005EE124 /* UITextFieldDemoViewController.h */,
+				D25E40EC232CC355005EE124 /* UIView+FDCollapsibleConstraints.h */,
 				D2A466DA232377D90057E5AD /* SLWebViewJSFuncNameConst.m */,
 				D2A466D2232377D80057E5AD /* SLBlankView.m */,
 				D2A466C6232377D70057E5AD /* SLChatBusiness.h */,
@@ -1802,6 +1820,7 @@
 				4321A3A322F46DB300F19D03 /* UIScrollView+EmptyDataSet.h~HEAD in Resources */,
 				72FE9B6620621F59008DD3D5 /* LaunchScreen.storyboard in Resources */,
 				430563AB230831290090EA36 /* Pods-ShowLiveUITests.release.xcconfig in Resources */,
+				D25E40F1232CC356005EE124 /* TODO.md in Resources */,
 				4321A39622F46DB300F19D03 /* pop-ios-Info.plist in Resources */,
 				43056399230831290090EA36 /* UIScrollView+EmptyDataSet.h~HEAD in Resources */,
 				430563AF230831290090EA36 /* Pods-ShowLiveUITests.release.xcconfig in Resources */,
@@ -1918,10 +1937,12 @@
 				430563B6230831290090EA36 /* NSNotificationCenterDemoViewController.m in Sources */,
 				430563AD230831290090EA36 /* UIView+Debug.m in Sources */,
 				435E3C9020C02BB2002B7A7F /* NSNumber+JKRound.m in Sources */,
+				D25E40F0232CC356005EE124 /* SLJPushUntils.m in Sources */,
 				728E16B721C7C7A50000047A /* CoinDetailVC.m in Sources */,
 				430563B5230831290090EA36 /* UIWebVIew+JKSwipeGesture.m in Sources */,
 				725282E021BB968500802C09 /* SLWalletHomePageHeader.m in Sources */,
 				4321A39D22F46DB300F19D03 /* NSData+ImageContentType.m in Sources */,
+				D25E40F2232CC356005EE124 /* NSBundle+JKAppIcon.m in Sources */,
 				435E3C8F20C02BB2002B7A7F /* NSDecimalNumber+JKExtensions.m in Sources */,
 				4367D94B22EC21DB0072C5BA /* NSDate+JKInternetDateTime.m in Sources */,
 				72F9A96C220048E800612687 /* NewTopListViewController.m in Sources */,
@@ -2012,6 +2033,7 @@
 				430563B7230831290090EA36 /* MKMapView+JKBetterMaps.m in Sources */,
 				4321A39822F46DB300F19D03 /* NSDate+JKLunarCalendar.m in Sources */,
 				436B77A622C7605B0029DD3E /* SLExtensionHelper.m in Sources */,
+				D25E40EF232CC356005EE124 /* CATransaction+JKAnimateWithDuration.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
