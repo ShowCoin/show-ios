@@ -358,11 +358,11 @@
 		723816BC20C6ABFF00C3885E /* SLVerticalAlignLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLVerticalAlignLabel.h; sourceTree = "<group>"; };
 		723816C120C6AC5300C3885E /* SLLinkLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLLinkLabel.h; sourceTree = "<group>"; };
 		723816C320C6AC5C00C3885E /* UIColor+Equalable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Equalable.h"; sourceTree = "<group>"; };
-		7239EB2820BD38FC00588BED /* ShowSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowSettingViewController.h; sourceTree = "<group>"; };
+		7239EB2820BD38FC00588BED /* ShowSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShowSettingViewController.h; path = ../../../Base/ShowSettingViewController.h; sourceTree = "<group>"; };
 		7239EB2920BD38FC00588BED /* ShowUserQRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowUserQRViewController.h; sourceTree = "<group>"; };
 		7239EB2D20BD38FC00588BED /* ChangeheadportraitController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeheadportraitController.h; sourceTree = "<group>"; };
 		7239EB3020BD38FC00588BED /* SLNetDiagnoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLNetDiagnoViewController.h; path = ../../../Base/SLNetDiagnoViewController.h; sourceTree = "<group>"; };
-		7239EB3120BD38FC00588BED /* SLUserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLUserInfoViewController.h; sourceTree = "<group>"; };
+		7239EB3120BD38FC00588BED /* SLUserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLUserInfoViewController.h; path = ../../../Classes/UserCenter/Controller/SLUserInfoViewController.h; sourceTree = "<group>"; };
 		7239EB3220BD38FC00588BED /* SLTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLTextView.h; path = ../../../Base/SLTextView.h; sourceTree = "<group>"; };
 		7239EB3320BD38FC00588BED /* UserCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserCenterViewController.h; path = ../../../Base/UserCenterViewController.h; sourceTree = "<group>"; };
 		7239EB3420BD38FC00588BED /* SLCropImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLCropImageViewController.h; path = ../../../Base/SLCropImageViewController.h; sourceTree = "<group>"; };
@@ -1303,9 +1303,7 @@
 			children = (
 				7254542E21C2947A000B3FB8 /* wallet */,
 				7239EB2D20BD38FC00588BED /* ChangeheadportraitController.h */,
-				7239EB2820BD38FC00588BED /* ShowSettingViewController.h */,
 				7239EB2920BD38FC00588BED /* ShowUserQRViewController.h */,
-				7239EB3120BD38FC00588BED /* SLUserInfoViewController.h */,
 				72CA648B20EE4A4C0052E107 /* SLFansViewController.h */,
 			);
 			path = Controller;
@@ -1611,9 +1609,11 @@
 				7217AD9921C536A700D082E9 /* WithdrawViewController.m */,
 				728E16B521C7C78B0000047A /* CoinDetailVC.h */,
 				7239EB3B20BD468F00588BED /* ChangeTextController.h */,
+				7239EB2820BD38FC00588BED /* ShowSettingViewController.h */,
 				7239EB3420BD38FC00588BED /* SLCropImageViewController.h */,
 				7239EB3020BD38FC00588BED /* SLNetDiagnoViewController.h */,
 				7239EB3220BD38FC00588BED /* SLTextView.h */,
+				7239EB3120BD38FC00588BED /* SLUserInfoViewController.h */,
 				7239EB3320BD38FC00588BED /* UserCenterViewController.h */,
 				7290201820DBF3A600F02370 /* SLSafeCenterViewController.h */,
 				9391AA9020C0380800D520F1 /* SLStringSizeCalculation.h */,
