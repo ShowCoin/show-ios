@@ -395,7 +395,7 @@
 		725282ED21BE65B300802C09 /* CoinDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoinDetailCell.m; sourceTree = "<group>"; };
 		725282EF21BE660A00802C09 /* ShowAccountHead.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowAccountHead.m; sourceTree = "<group>"; };
 		725282F121BE666A00802C09 /* ShowAccountTableHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowAccountTableHeader.m; sourceTree = "<group>"; };
-		7254543021C2947A000B3FB8 /* SLWalletHomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLWalletHomePageViewController.h; sourceTree = "<group>"; };
+		7254543021C2947A000B3FB8 /* SLWalletHomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLWalletHomePageViewController.h; path = ../../../Base/SLWalletHomePageViewController.h; sourceTree = "<group>"; };
 		7254543221C294BE000B3FB8 /* ShowAccountViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowAccountViewController.h; sourceTree = "<group>"; };
 		7254543521C29503000B3FB8 /* ShowAddAddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShowAddAddressViewController.h; path = ../../../Base/ShowAddAddressViewController.h; sourceTree = "<group>"; };
 		7254543821C295B2000B3FB8 /* ShowCollectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShowCollectViewController.h; path = ../../../Base/ShowCollectViewController.h; sourceTree = "<group>"; };
@@ -1270,7 +1270,6 @@
 		7254542E21C2947A000B3FB8 /* wallet */ = {
 			isa = PBXGroup;
 			children = (
-				7254543021C2947A000B3FB8 /* SLWalletHomePageViewController.h */,
 				7254543221C294BE000B3FB8 /* ShowAccountViewController.h */,
 			);
 			path = wallet;
@@ -1598,6 +1597,7 @@
 		93615AE720C142C9000D5658 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				7254543021C2947A000B3FB8 /* SLWalletHomePageViewController.h */,
 				7254543521C29503000B3FB8 /* ShowAddAddressViewController.h */,
 				7254543821C295B2000B3FB8 /* ShowCollectViewController.h */,
 				7217AD9821C5368100D082E9 /* WithdrawViewController.h */,
