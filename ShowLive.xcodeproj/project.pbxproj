@@ -908,7 +908,7 @@
 		D25E41B6232CC397005EE124 /* UIView + SoftBodyAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView + SoftBodyAnimation.h"; sourceTree = "<group>"; };
 		D25E41B7232CC397005EE124 /* NSString+Validation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Validation.m"; sourceTree = "<group>"; };
 		D25E41B8232CC397005EE124 /* NSString+Date.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Date.m"; sourceTree = "<group>"; };
-		D25E41B9232CC397005EE124 /* NSDate+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Additions.h"; sourceTree = "<group>"; };
+		D25E41B9232CC397005EE124 /* NSDate+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+Additions.h"; path = "../../pop/SLHelper/pop/NSDate+Additions.h"; sourceTree = "<group>"; };
 		D25E41BA232CC397005EE124 /* POPAnimation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = POPAnimation.mm; sourceTree = "<group>"; };
 		D25E41BB232CC397005EE124 /* UIImage+SLImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+SLImage.h"; sourceTree = "<group>"; };
 		D25E41BC232CC397005EE124 /* NSAttributedString+React.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+React.m"; sourceTree = "<group>"; };
@@ -940,7 +940,7 @@
 		D25E41D7232CC397005EE124 /* UIImage+Gradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Gradient.m"; sourceTree = "<group>"; };
 		D25E41D8232CC397005EE124 /* UIView+Constraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Constraint.h"; sourceTree = "<group>"; };
 		D25E41D9232CC397005EE124 /* UITextField+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Category.m"; sourceTree = "<group>"; };
-		D25E41DA232CC397005EE124 /* UIButton+EnlargeTouchArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+EnlargeTouchArea.m"; sourceTree = "<group>"; };
+		D25E41DA232CC397005EE124 /* UIButton+EnlargeTouchArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIButton+EnlargeTouchArea.m"; path = "../../pop/SLHelper/pop/UIButton+EnlargeTouchArea.m"; sourceTree = "<group>"; };
 		D25E41DB232CC397005EE124 /* UIViewController+XHPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+XHPhoto.m"; sourceTree = "<group>"; };
 		D25E41DC232CC397005EE124 /* NSString+Replace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Replace.m"; sourceTree = "<group>"; };
 		D25E41DD232CC397005EE124 /* UIView+SLComOpenThreadOTScreenshotHelperStatusBarReference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SLComOpenThreadOTScreenshotHelperStatusBarReference.h"; sourceTree = "<group>"; };
@@ -1722,6 +1722,7 @@
 				D25E4252232CC398005EE124 /* UINavigationController+JKStackManager.h */,
 				D25E41B6232CC397005EE124 /* UIView + SoftBodyAnimation.h */,
 				D25E4253232CC398005EE124 /* NSDate+Additions.h */,
+				D25E41B9232CC397005EE124 /* NSDate+Additions.h */,
 				D25E41BA232CC397005EE124 /* POPAnimation.mm */,
 				D25E41BB232CC397005EE124 /* UIImage+SLImage.h */,
 				D25E41BC232CC397005EE124 /* NSAttributedString+React.m */,
@@ -1730,6 +1731,7 @@
 				D25E41D3232CC397005EE124 /* NSString+SLPictureChoice.h */,
 				D25E41D5232CC397005EE124 /* UIColor+SLExtend.h */,
 				D25E41D8232CC397005EE124 /* UIView+Constraint.h */,
+				D25E41DA232CC397005EE124 /* UIButton+EnlargeTouchArea.m */,
 				D25E41DB232CC397005EE124 /* UIViewController+XHPhoto.m */,
 				D25E41DD232CC397005EE124 /* UIView+SLComOpenThreadOTScreenshotHelperStatusBarReference.h */,
 				D25E41DE232CC397005EE124 /* NSString+Binary.m */,
@@ -2784,14 +2786,12 @@
 				D25E41B4232CC397005EE124 /* UIViewController+MJPopupViewController.m */,
 				D25E41B7232CC397005EE124 /* NSString+Validation.m */,
 				D25E41B8232CC397005EE124 /* NSString+Date.m */,
-				D25E41B9232CC397005EE124 /* NSDate+Additions.h */,
 				D25E41BD232CC397005EE124 /* POPBasicAnimation.mm */,
 				D25E41BE232CC397005EE124 /* WebCore */,
 				D25E41D4232CC397005EE124 /* UIColor+Category.m */,
 				D25E41D6232CC397005EE124 /* UIView+Additions.h */,
 				D25E41D7232CC397005EE124 /* UIImage+Gradient.m */,
 				D25E41D9232CC397005EE124 /* UITextField+Category.m */,
-				D25E41DA232CC397005EE124 /* UIButton+EnlargeTouchArea.m */,
 				D25E41DC232CC397005EE124 /* NSString+Replace.m */,
 				D25E41DF232CC397005EE124 /* UILabel+Category.h */,
 				D25E41E0232CC397005EE124 /* NSObject+NSInteger.h */,
