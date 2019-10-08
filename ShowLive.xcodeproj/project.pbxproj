@@ -1028,7 +1028,7 @@
 		D25E422F232CC398005EE124 /* CLLocationManager+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLLocationManager+Blocks.m"; sourceTree = "<group>"; };
 		D25E4230232CC398005EE124 /* NSDate+JKReporting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JKReporting.m"; sourceTree = "<group>"; };
 		D25E4231232CC398005EE124 /* UIView+Debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Debug.h"; sourceTree = "<group>"; };
-		D25E4232232CC398005EE124 /* UIResponder+JKFirstResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+JKFirstResponder.h"; sourceTree = "<group>"; };
+		D25E4232232CC398005EE124 /* UIResponder+JKFirstResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIResponder+JKFirstResponder.h"; path = "../../pop/SLHelper/UIResponder+JKFirstResponder.h"; sourceTree = "<group>"; };
 		D25E4233232CC398005EE124 /* UITableViewDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewDemoViewController.h; sourceTree = "<group>"; };
 		D25E4234232CC398005EE124 /* NSString+JKContains.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JKContains.m"; sourceTree = "<group>"; };
 		D25E4235232CC398005EE124 /* UNLICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = UNLICENSE; path = ../../pop/SLHelper/UNLICENSE; sourceTree = "<group>"; };
@@ -1760,6 +1760,7 @@
 				D25E41AC232CC397005EE124 /* UIImageView+Category.h */,
 				D25E4118232CC388005EE124 /* UIWindow+SLMotion.h */,
 				D25E4231232CC398005EE124 /* UIView+Debug.h */,
+				D25E4232232CC398005EE124 /* UIResponder+JKFirstResponder.h */,
 				D25E4233232CC398005EE124 /* UITableViewDemoViewController.h */,
 				D25E4234232CC398005EE124 /* NSString+JKContains.m */,
 				D25E4235232CC398005EE124 /* UNLICENSE */,
@@ -1804,6 +1805,7 @@
 				D25E41DD232CC397005EE124 /* UIView+SLComOpenThreadOTScreenshotHelperStatusBarReference.h */,
 				D25E41DE232CC397005EE124 /* NSString+Binary.m */,
 				D25E41DF232CC397005EE124 /* UILabel+Category.h */,
+				D25E41E0232CC397005EE124 /* NSObject+NSInteger.h */,
 				D25E41E1232CC397005EE124 /* NSTimer+MSBlock.m */,
 				D25E41E2232CC397005EE124 /* NSDate+SLStringFormat.h */,
 				D25E41E3232CC397005EE124 /* UIScreen+JKFrame.m */,
@@ -2773,7 +2775,6 @@
 				D25E4219232CC398005EE124 /* NSDate+JKExtension.m */,
 				D25E421F232CC398005EE124 /* NSURLConnection+JKSelfSigned.m */,
 				D25E422C232CC398005EE124 /* NSObject+JKAutoCoding.m */,
-				D25E4232232CC398005EE124 /* UIResponder+JKFirstResponder.h */,
 				D25E423B232CC398005EE124 /* NSDate+JKZeroDate.m */,
 				D25E423D232CC398005EE124 /* NSDictionary+JKSafeAccess.h */,
 				D25E4243232CC398005EE124 /* NSString+JKRemoveEmoji.m */,
@@ -2794,7 +2795,6 @@
 				D25E41B8232CC397005EE124 /* NSString+Date.m */,
 				D25E41BE232CC397005EE124 /* WebCore */,
 				D25E41DC232CC397005EE124 /* NSString+Replace.m */,
-				D25E41E0232CC397005EE124 /* NSObject+NSInteger.h */,
 			);
 			path = pop;
 			sourceTree = "<group>";
