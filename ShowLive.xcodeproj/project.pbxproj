@@ -1078,7 +1078,7 @@
 		D25E4261232CC398005EE124 /* NSDateFormatter+JKMake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDateFormatter+JKMake.h"; path = "../../pop/SLHelper/NSDateFormatter+JKMake.h"; sourceTree = "<group>"; };
 		D25E4262232CC398005EE124 /* NSUserDefaults+JKSafeAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+JKSafeAccess.m"; sourceTree = "<group>"; };
 		D25E4263232CC398005EE124 /* NSNotificationCenterDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSNotificationCenterDemoViewController.m; path = ../../pop/SLHelper/NSNotificationCenterDemoViewController.m; sourceTree = "<group>"; };
-		D25E4264232CC398005EE124 /* UITextFieldDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITextFieldDemoViewController.h; sourceTree = "<group>"; };
+		D25E4264232CC398005EE124 /* UITextFieldDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UITextFieldDemoViewController.h; path = ../../pop/SLHelper/UITextFieldDemoViewController.h; sourceTree = "<group>"; };
 		D25E4265232CC398005EE124 /* SLUrgeListAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLUrgeListAction.h; sourceTree = "<group>"; };
 		D25E4266232CC398005EE124 /* NSData+JKHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+JKHash.h"; sourceTree = "<group>"; };
 		D25E4267232CC398005EE124 /* NSString+JKStringPages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JKStringPages.h"; sourceTree = "<group>"; };
@@ -1661,6 +1661,7 @@
 				D25E426B232CC398005EE124 /* NSManagedObjectContext+JKFetching.h */,
 				D25E426C232CC398005EE124 /* UIView+JKFrame.h */,
 				D25E426E232CC398005EE124 /* NSHTTPCookieStorage+JKFreezeDry.m */,
+				D25E426F232CC398005EE124 /* NSURLSession+JKSynchronousTask.m */,
 				D25E4126232CC38B005EE124 /* NSString+Json.h */,
 				D25E4156232CC393005EE124 /* NSString+Validation.h */,
 				D25E4281232CC39A005EE124 /* NSString+Validation.m */,
@@ -1739,6 +1740,7 @@
 				D25E41A2232CC397005EE124 /* NSAttributedString+React.h */,
 				D25E41A3232CC397005EE124 /* NSDate+SLStringFormat.m */,
 				D25E41A5232CC397005EE124 /* NSObject+NSInteger.m */,
+				D25E41A6232CC397005EE124 /* UILabel+Category.m */,
 				D25E41A8232CC397005EE124 /* NSString+Trim.m */,
 				D25E41A9232CC397005EE124 /* WebView+Debug.h */,
 				D25E41AA232CC397005EE124 /* UIImage+MSVagueEffect.h */,
@@ -1872,6 +1874,7 @@
 				D25E4262232CC398005EE124 /* NSUserDefaults+JKSafeAccess.m */,
 				D25E4263232CC398005EE124 /* NSNotificationCenterDemoViewController.m */,
 				D25E40EA232CC355005EE124 /* UITextFieldDemoViewController.h */,
+				D25E4264232CC398005EE124 /* UITextFieldDemoViewController.h */,
 				D25E4265232CC398005EE124 /* SLUrgeListAction.h */,
 				D25E411B232CC389005EE124 /* UICollectionView+ARDynamicCacheHeightLayoutCell.m */,
 				D25E42A3232CC3A1005EE124 /* UIGestureRecognizer+BlocksKit.m */,
@@ -2761,11 +2764,9 @@
 				D25E4257232CC398005EE124 /* SLGetWithdrawListAction.h */,
 				D25E4259232CC398005EE124 /* UIImage+Avatar.h */,
 				D25E425D232CC398005EE124 /* UIButton+Addtional.m */,
-				D25E4264232CC398005EE124 /* UITextFieldDemoViewController.h */,
 				D25E4267232CC398005EE124 /* NSString+JKStringPages.h */,
 				D25E4269232CC398005EE124 /* UIImage+Additional.m */,
 				D25E426D232CC398005EE124 /* UIWebView+JKWebStorage.h */,
-				D25E426F232CC398005EE124 /* NSURLSession+JKSynchronousTask.m */,
 				D25E4273232CC398005EE124 /* UIColor+HexString.m */,
 				D25E4275232CC398005EE124 /* NSDate+JKInternetDateTime.h */,
 				D25E4276232CC398005EE124 /* UIGestureRecognizer+BlocksKit.h */,
@@ -2782,7 +2783,6 @@
 				D25E4190232CC397005EE124 /* NSDictionary+SLKeyValue.m */,
 				D25E419C232CC397005EE124 /* UIView+Constraint.m */,
 				D25E41A4232CC397005EE124 /* NSTimer+MSBlock.h */,
-				D25E41A6232CC397005EE124 /* UILabel+Category.m */,
 				D25E41A7232CC397005EE124 /* UIImage+SLCompress.m */,
 				D25E41AC232CC397005EE124 /* UIImageView+Category.h */,
 				D25E41AD232CC397005EE124 /* UIWindow+SLMotion.h */,
