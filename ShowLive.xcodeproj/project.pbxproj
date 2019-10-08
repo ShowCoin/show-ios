@@ -906,7 +906,7 @@
 		D25E41B4232CC397005EE124 /* UIViewController+MJPopupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MJPopupViewController.m"; sourceTree = "<group>"; };
 		D25E41B5232CC397005EE124 /* UIColor+color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+color.h"; sourceTree = "<group>"; };
 		D25E41B6232CC397005EE124 /* UIView + SoftBodyAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView + SoftBodyAnimation.h"; sourceTree = "<group>"; };
-		D25E41B7232CC397005EE124 /* NSString+Validation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Validation.m"; sourceTree = "<group>"; };
+		D25E41B7232CC397005EE124 /* NSString+Validation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Validation.m"; path = "../../pop/SLHelper/pop/NSString+Validation.m"; sourceTree = "<group>"; };
 		D25E41B8232CC397005EE124 /* NSString+Date.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Date.m"; sourceTree = "<group>"; };
 		D25E41B9232CC397005EE124 /* NSDate+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+Additions.h"; path = "../../pop/SLHelper/pop/NSDate+Additions.h"; sourceTree = "<group>"; };
 		D25E41BA232CC397005EE124 /* POPAnimation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = POPAnimation.mm; sourceTree = "<group>"; };
@@ -1596,6 +1596,7 @@
 				D25E42A4232CC3A1005EE124 /* NSDate+JKInternetDateTime.m */,
 				D25E415B232CC394005EE124 /* NSDate+JKLunarCalendar.h */,
 				D25E4203232CC397005EE124 /* CATransaction+JKAnimateWithDuration.m */,
+				D25E4204232CC397005EE124 /* UIButton+Addtional.h */,
 				D25E4205232CC397005EE124 /* NSDecimalNumber+JKExtensions.m */,
 				D25E4206232CC397005EE124 /* NSObject+JKEasyCopy.m */,
 				D25E4207232CC397005EE124 /* UITableView+JKiOS7Style.m */,
@@ -1782,6 +1783,7 @@
 				D25E4252232CC398005EE124 /* UINavigationController+JKStackManager.h */,
 				D25E41B6232CC397005EE124 /* UIView + SoftBodyAnimation.h */,
 				D25E424A232CC398005EE124 /* NSString+Validation.m */,
+				D25E41B7232CC397005EE124 /* NSString+Validation.m */,
 				D25E4253232CC398005EE124 /* NSDate+Additions.h */,
 				D25E41B9232CC397005EE124 /* NSDate+Additions.h */,
 				D25E41BA232CC397005EE124 /* POPAnimation.mm */,
@@ -2768,7 +2770,6 @@
 			children = (
 				D25E417F232CC397005EE124 /* pop */,
 				D25E41F1232CC397005EE124 /* POPDecayAnimationInternal.h */,
-				D25E4204232CC397005EE124 /* UIButton+Addtional.h */,
 				D25E4219232CC398005EE124 /* NSDate+JKExtension.m */,
 				D25E421F232CC398005EE124 /* NSURLConnection+JKSelfSigned.m */,
 				D25E422C232CC398005EE124 /* NSObject+JKAutoCoding.m */,
@@ -2790,7 +2791,6 @@
 		D25E417F232CC397005EE124 /* pop */ = {
 			isa = PBXGroup;
 			children = (
-				D25E41B7232CC397005EE124 /* NSString+Validation.m */,
 				D25E41B8232CC397005EE124 /* NSString+Date.m */,
 				D25E41BE232CC397005EE124 /* WebCore */,
 				D25E41DC232CC397005EE124 /* NSString+Replace.m */,
