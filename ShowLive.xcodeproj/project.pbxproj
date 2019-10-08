@@ -1100,7 +1100,7 @@
 		D25E4277232CC398005EE124 /* NSString+JKXMLDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JKXMLDictionary.m"; sourceTree = "<group>"; };
 		D25E4278232CC398005EE124 /* UIView+JKFind.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JKFind.m"; sourceTree = "<group>"; };
 		D25E4279232CC398005EE124 /* SLFollowUserAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLFollowUserAction.h; sourceTree = "<group>"; };
-		D25E427A232CC398005EE124 /* NSObject+JKAssociatedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JKAssociatedObject.h"; sourceTree = "<group>"; };
+		D25E427A232CC398005EE124 /* NSObject+JKAssociatedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+JKAssociatedObject.h"; path = "../../pop/SLHelper/NSObject+JKAssociatedObject.h"; sourceTree = "<group>"; };
 		D25E427B232CC398005EE124 /* NSData+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Image.m"; sourceTree = "<group>"; };
 		D25E427C232CC398005EE124 /* NSFileManager+JKPaths.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+JKPaths.m"; sourceTree = "<group>"; };
 		D25E427D232CC399005EE124 /* SLHeadPortrait.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLHeadPortrait.m; path = pop/SLHeadPortrait.m; sourceTree = SOURCE_ROOT; };
@@ -1789,6 +1789,7 @@
 				D25E41B6232CC397005EE124 /* UIView + SoftBodyAnimation.h */,
 				D25E424A232CC398005EE124 /* NSString+Validation.m */,
 				D25E41B7232CC397005EE124 /* NSString+Validation.m */,
+				D25E41B8232CC397005EE124 /* NSString+Date.m */,
 				D25E4253232CC398005EE124 /* NSDate+Additions.h */,
 				D25E41B9232CC397005EE124 /* NSDate+Additions.h */,
 				D25E41BA232CC397005EE124 /* POPAnimation.mm */,
@@ -1940,6 +1941,7 @@
 				D25E4277232CC398005EE124 /* NSString+JKXMLDictionary.m */,
 				D25E4278232CC398005EE124 /* UIView+JKFind.m */,
 				D25E4279232CC398005EE124 /* SLFollowUserAction.h */,
+				D25E427A232CC398005EE124 /* NSObject+JKAssociatedObject.h */,
 				D25E427B232CC398005EE124 /* NSData+Image.m */,
 				D25E427C232CC398005EE124 /* NSFileManager+JKPaths.m */,
 				D25E4110232CC387005EE124 /* SLHelper.h */,
@@ -2784,7 +2786,6 @@
 				D25E417F232CC397005EE124 /* pop */,
 				D25E424D232CC398005EE124 /* UINavigationController+FDFullscreenPopGesture.m */,
 				D25E4267232CC398005EE124 /* NSString+JKStringPages.h */,
-				D25E427A232CC398005EE124 /* NSObject+JKAssociatedObject.h */,
 			);
 			name = SLHelper;
 			path = pop/SLHelper;
@@ -2793,7 +2794,6 @@
 		D25E417F232CC397005EE124 /* pop */ = {
 			isa = PBXGroup;
 			children = (
-				D25E41B8232CC397005EE124 /* NSString+Date.m */,
 				D25E41BE232CC397005EE124 /* WebCore */,
 			);
 			path = pop;
