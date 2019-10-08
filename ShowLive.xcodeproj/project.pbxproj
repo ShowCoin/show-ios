@@ -954,7 +954,7 @@
 		D25E41E5232CC397005EE124 /* NSDate+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Additions.m"; sourceTree = "<group>"; };
 		D25E41E6232CC397005EE124 /* POPAnimationExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAnimationExtras.h; sourceTree = "<group>"; };
 		D25E41E7232CC397005EE124 /* NSString+JKDictionaryValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JKDictionaryValue.h"; sourceTree = "<group>"; };
-		D25E41E8232CC397005EE124 /* UINavigationController+JKStackManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+JKStackManager.m"; sourceTree = "<group>"; };
+		D25E41E8232CC397005EE124 /* UINavigationController+JKStackManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+JKStackManager.m"; path = "../../pop/SLHelper/UINavigationController+JKStackManager.m"; sourceTree = "<group>"; };
 		D25E41E9232CC397005EE124 /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
 		D25E41EA232CC397005EE124 /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
 		D25E41EB232CC397005EE124 /* NSIndexPath+JKOffset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSIndexPath+JKOffset.h"; sourceTree = "<group>"; };
@@ -1688,10 +1688,12 @@
 				D25E41BC232CC397005EE124 /* NSAttributedString+React.m */,
 				D25E41E7232CC397005EE124 /* NSString+JKDictionaryValue.h */,
 				D25E40EB232CC355005EE124 /* UITextField+JKBlocks.h */,
+				D25E41E8232CC397005EE124 /* UINavigationController+JKStackManager.m */,
 				D25E40FD232CC383005EE124 /* UITextField+JKSelect.h */,
 				D25E4201232CC397005EE124 /* NSDateFormatter+JKMake.m */,
 				D25E40E8232CC355005EE124 /* CATransaction+JKAnimateWithDuration.m */,
 				D25E420C232CC397005EE124 /* UIView+JKVisuals.h */,
+				D25E4102232CC384005EE124 /* UIWindow+JKHierarchy.m */,
 				D25E4212232CC397005EE124 /* NSObject+JKAssociatedObject.m */,
 				D25E4216232CC398005EE124 /* CALayer+JKBorderColor.h */,
 				D25E4117232CC388005EE124 /* UITableView+FDTemplateLayoutCell.m */,
@@ -1773,7 +1775,6 @@
 				D25E4160232CC394005EE124 /* UIWebVIew+JKSwipeGesture.h */,
 				D25E4101232CC384005EE124 /* UIWebVIew+JKSwipeGesture.m */,
 				D25E4113232CC388005EE124 /* UIWindow+JKHierarchy.h */,
-				D25E4102232CC384005EE124 /* UIWindow+JKHierarchy.m */,
 				D25E413C232CC38F005EE124 /* UnitBezier.h */,
 				D25E40E9232CC355005EE124 /* SLJPushUntils.m */,
 				D25E40ED232CC356005EE124 /* TODO.md */,
@@ -2581,7 +2582,6 @@
 				D25E41E4232CC397005EE124 /* UITextView+JKPinchZoom.m */,
 				D25E41E5232CC397005EE124 /* NSDate+Additions.m */,
 				D25E41E6232CC397005EE124 /* POPAnimationExtras.h */,
-				D25E41E8232CC397005EE124 /* UINavigationController+JKStackManager.m */,
 				D25E41E9232CC397005EE124 /* NSData+ImageContentType.h */,
 				D25E41EA232CC397005EE124 /* UINavigationController+FDFullscreenPopGesture.h */,
 				D25E41EB232CC397005EE124 /* NSIndexPath+JKOffset.h */,
