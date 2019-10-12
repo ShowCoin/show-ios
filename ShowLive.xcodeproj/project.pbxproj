@@ -1256,7 +1256,7 @@
 		D25E42A3232CC3A1005EE124 /* UIGestureRecognizer+BlocksKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIGestureRecognizer+BlocksKit.m"; path = "pop/UIGestureRecognizer+BlocksKit.m"; sourceTree = SOURCE_ROOT; };
 		D25E42A4232CC3A1005EE124 /* NSDate+JKInternetDateTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+JKInternetDateTime.m"; path = "pop/NSDate+JKInternetDateTime.m"; sourceTree = SOURCE_ROOT; };
 		D25E42A5232CC3A1005EE124 /* NSDictionary+JKMerge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+JKMerge.h"; path = "pop/NSDictionary+JKMerge.h"; sourceTree = SOURCE_ROOT; };
-		D25E42A6232CC3A2005EE124 /* CAAnimationDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CAAnimationDemoViewController.h; path = pop/CAAnimationDemoViewController.h; sourceTree = SOURCE_ROOT; };
+		D25E42A6232CC3A2005EE124 /* CAAnimationDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CAAnimationDemoViewController.h; path = Untils/Exten/WebCore/CAAnimationDemoViewController.h; sourceTree = SOURCE_ROOT; };
 		D25E42A7232CC3A2005EE124 /* NSString+JKNormalRegex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+JKNormalRegex.h"; path = "pop/NSString+JKNormalRegex.h"; sourceTree = SOURCE_ROOT; };
 		D25E42A8232CC3A2005EE124 /* NSDate+JKFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+JKFormatter.h"; path = "Untils/Exten/WebCore/NSDate+JKFormatter.h"; sourceTree = SOURCE_ROOT; };
 		D25E42A9232CC3A2005EE124 /* NSManagedObjectContext+JKFetching.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObjectContext+JKFetching.m"; path = "pop/NSManagedObjectContext+JKFetching.m"; sourceTree = SOURCE_ROOT; };
@@ -1663,7 +1663,6 @@
 		4321A36622F46DB300F19D03 /* Exten */ = {
 			isa = PBXGroup;
 			children = (
-				D25E42A6232CC3A2005EE124 /* CAAnimationDemoViewController.h */,
 				D25E4292232CC39E005EE124 /* CAAnimationDemoViewController.m */,
 				D25E4213232CC398005EE124 /* POPCustomAnimation.h */,
 				D25E4214232CC398005EE124 /* UICollectionView+ARDynamicCacheHeightLayoutCell.h */,
@@ -1701,7 +1700,6 @@
 				D25E428B232CC39C005EE124 /* NSData+JKPCM.h */,
 				D25E415A232CC393005EE124 /* NSData+JKzlib.h */,
 				D25E4284232CC39B005EE124 /* NSData+JKzlib.m */,
-				D25E4100232CC384005EE124 /* NSDate+Additions.m */,
 				D25E427F232CC399005EE124 /* NSDate+JKCupertinoYankee.m */,
 				D25E40F3232CC381005EE124 /* NSDate+JKExtension.h */,
 				D25E428A232CC39C005EE124 /* NSDate+JKFormatter.m */,
@@ -3011,6 +3009,8 @@
 			isa = PBXGroup;
 			children = (
 				D25E41BF232CC397005EE124 /* CAMediaTimingFunction+JKAdditionalEquations.h */,
+				D25E42A6232CC3A2005EE124 /* CAAnimationDemoViewController.h */,
+				D25E4100232CC384005EE124 /* NSDate+Additions.m */,
 				D25E42A8232CC3A2005EE124 /* NSDate+JKFormatter.h */,
 				D25E4134232CC38D005EE124 /* SLChatStatisticsAction.h */,
 				D25E4136232CC38E005EE124 /* NSString+JKDictionaryValue.m */,
