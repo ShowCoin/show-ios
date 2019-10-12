@@ -824,7 +824,7 @@
 		D25E40EC232CC355005EE124 /* UIView+FDCollapsibleConstraints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FDCollapsibleConstraints.h"; sourceTree = "<group>"; };
 		D25E40ED232CC356005EE124 /* TODO.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = TODO.md; sourceTree = "<group>"; };
 		D25E40EE232CC356005EE124 /* NSBundle+JKAppIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+JKAppIcon.m"; sourceTree = "<group>"; };
-		D25E40F3232CC381005EE124 /* NSDate+JKExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+JKExtension.h"; path = "pop/NSDate+JKExtension.h"; sourceTree = SOURCE_ROOT; };
+		D25E40F3232CC381005EE124 /* NSDate+JKExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+JKExtension.h"; path = "Untils/Exten/WebCore/NSDate+JKExtension.h"; sourceTree = SOURCE_ROOT; };
 		D25E40F4232CC382005EE124 /* NSRunLoop+JKPerformBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSRunLoop+JKPerformBlock.m"; path = "Untils/Exten/WebCore/NSRunLoop+JKPerformBlock.m"; sourceTree = SOURCE_ROOT; };
 		D25E40F5232CC382005EE124 /* NSURLConnection+JKSelfSigned.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSURLConnection+JKSelfSigned.h"; path = "pop/NSURLConnection+JKSelfSigned.h"; sourceTree = SOURCE_ROOT; };
 		D25E40F6232CC382005EE124 /* CATransaction+JKAnimateWithDuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CATransaction+JKAnimateWithDuration.h"; path = "Untils/Exten/WebCore/CATransaction+JKAnimateWithDuration.h"; sourceTree = SOURCE_ROOT; };
@@ -1674,7 +1674,6 @@
 				D25E410F232CC387005EE124 /* NSBundle+JKAppIcon.m */,
 				D25E412A232CC38C005EE124 /* NSData+JKGzip.m */,
 				D25E427F232CC399005EE124 /* NSDate+JKCupertinoYankee.m */,
-				D25E40F3232CC381005EE124 /* NSDate+JKExtension.h */,
 				D25E4295232CC39E005EE124 /* NSDate+JKInternetDateTime.h */,
 				D25E415B232CC394005EE124 /* NSDate+JKLunarCalendar.h */,
 				D25E4203232CC397005EE124 /* CATransaction+JKAnimateWithDuration.m */,
@@ -1688,7 +1687,6 @@
 				D25E4293232CC39E005EE124 /* NSDictionary+JKBlock.h */,
 				D25E423D232CC398005EE124 /* NSDictionary+JKSafeAccess.h */,
 				D25E4167232CC396005EE124 /* NSDictionary+JKJSONString.m */,
-				D25E4149232CC391005EE124 /* NSDictionary+JKSafeAccess.m */,
 				D25E4157232CC393005EE124 /* NSFetchRequest+JKExtensions.h */,
 				D25E42B2232CC3A4005EE124 /* NSInvocation+JKBb.m */,
 				D25E428F232CC39D005EE124 /* NSManagedObject+JKExtensions.h */,
@@ -2900,6 +2898,7 @@
 				D25E415A232CC393005EE124 /* NSData+JKzlib.h */,
 				D25E4284232CC39B005EE124 /* NSData+JKzlib.m */,
 				D25E4100232CC384005EE124 /* NSDate+Additions.m */,
+				D25E40F3232CC381005EE124 /* NSDate+JKExtension.h */,
 				D25E42A8232CC3A2005EE124 /* NSDate+JKFormatter.h */,
 				D25E4116232CC388005EE124 /* POPVector.h */,
 				D25E4225232CC398005EE124 /* UIScrollView+JKPages.m */,
@@ -2928,6 +2927,7 @@
 				D25E4241232CC398005EE124 /* UIResponderDemoViewController.m */,
 				D25E42A5232CC3A1005EE124 /* NSDictionary+JKMerge.h */,
 				D25E428D232CC39D005EE124 /* NSDictionary+JKMerge.m */,
+				D25E4149232CC391005EE124 /* NSDictionary+JKSafeAccess.m */,
 				D25E429B232CC3A0005EE124 /* NSDictionary+JKXML.m */,
 				D25E4133232CC38D005EE124 /* NSHTTPCookieStorage+JKFreezeDry.h */,
 				D25E4145232CC390005EE124 /* NSInvocation+JKBb.h */,
