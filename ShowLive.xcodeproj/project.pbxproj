@@ -851,7 +851,7 @@
 		D25E410B232CC386005EE124 /* UITextView+JKInputLimit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITextView+JKInputLimit.h"; path = "pop/UITextView+JKInputLimit.h"; sourceTree = SOURCE_ROOT; };
 		D25E410C232CC386005EE124 /* UIScrollView+APParallaxHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+APParallaxHeader.h"; path = "Untils/Exten/UIScrollView+APParallaxHeader.h"; sourceTree = SOURCE_ROOT; };
 		D25E410D232CC387005EE124 /* UIView+Additional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Additional.h"; path = "pop/UIView+Additional.h"; sourceTree = SOURCE_ROOT; };
-		D25E410E232CC387005EE124 /* UIView+Debug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Debug.m"; path = "Untils/Exten/UIView+Debug.m"; sourceTree = SOURCE_ROOT; };
+		D25E410E232CC387005EE124 /* UIView+Debug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Debug.m"; path = "Untils/Exten/WebCore/UIView+Debug.m"; sourceTree = SOURCE_ROOT; };
 		D25E410F232CC387005EE124 /* NSBundle+JKAppIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSBundle+JKAppIcon.m"; path = "pop/NSBundle+JKAppIcon.m"; sourceTree = SOURCE_ROOT; };
 		D25E4110232CC387005EE124 /* SLHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLHelper.h; path = pop/SLHelper.h; sourceTree = SOURCE_ROOT; };
 		D25E4111232CC387005EE124 /* NSObject+JKEasyCopy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+JKEasyCopy.m"; path = "Untils/Exten/WebCore/NSObject+JKEasyCopy.m"; sourceTree = SOURCE_ROOT; };
@@ -925,7 +925,7 @@
 		D25E4155232CC393005EE124 /* NSNumber+JKCGFloat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSNumber+JKCGFloat.h"; path = "Untils/Exten/WebCore/NSNumber+JKCGFloat.h"; sourceTree = SOURCE_ROOT; };
 		D25E4156232CC393005EE124 /* NSString+Validation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Validation.h"; path = "pop/NSString+Validation.h"; sourceTree = SOURCE_ROOT; };
 		D25E4157232CC393005EE124 /* NSFetchRequest+JKExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSFetchRequest+JKExtensions.h"; path = "pop/NSFetchRequest+JKExtensions.h"; sourceTree = SOURCE_ROOT; };
-		D25E4158232CC393005EE124 /* UITextView+JKPlaceHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITextView+JKPlaceHolder.m"; path = "Untils/Exten/UITextView+JKPlaceHolder.m"; sourceTree = SOURCE_ROOT; };
+		D25E4158232CC393005EE124 /* UITextView+JKPlaceHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITextView+JKPlaceHolder.m"; path = "Untils/Exten/WebCore/UITextView+JKPlaceHolder.m"; sourceTree = SOURCE_ROOT; };
 		D25E4159232CC393005EE124 /* UITableView+FDTemplateLayoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITableView+FDTemplateLayoutCell.h"; path = "pop/UITableView+FDTemplateLayoutCell.h"; sourceTree = SOURCE_ROOT; };
 		D25E415A232CC393005EE124 /* NSData+JKzlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+JKzlib.h"; path = "Untils/Exten/WebCore/NSData+JKzlib.h"; sourceTree = SOURCE_ROOT; };
 		D25E415B232CC394005EE124 /* NSDate+JKLunarCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+JKLunarCalendar.h"; path = "pop/NSDate+JKLunarCalendar.h"; sourceTree = SOURCE_ROOT; };
@@ -1682,8 +1682,6 @@
 				D25E428F232CC39D005EE124 /* NSManagedObject+JKExtensions.h */,
 				D25E40FA232CC383005EE124 /* NSNotificationCenter+JKMainThread.h */,
 				D25E40F9232CC383005EE124 /* UITableViewCell+JKDelaysContentTouches.m */,
-				D25E4158232CC393005EE124 /* UITextView+JKPlaceHolder.m */,
-				D25E410E232CC387005EE124 /* UIView+Debug.m */,
 				D25E4291232CC39E005EE124 /* UIView+JKConstraints.h */,
 				D25E412C232CC38C005EE124 /* UIView+JKNib.h */,
 				D25E413E232CC38F005EE124 /* NSObject+JKAddProperty.m */,
@@ -1699,7 +1697,6 @@
 				D25E4280232CC39A005EE124 /* POPMath.mm */,
 				D25E416B232CC396005EE124 /* POPPropertyAnimationInternal.h */,
 				D25E4175232CC397005EE124 /* CAMediaTimingFunction+JKAdditionalEquations.h */,
-				D25E4181232CC397005EE124 /* UIImageView+Category.m */,
 				D25E4177232CC397005EE124 /* CLLocationManager+Blocks.h */,
 				D25E4179232CC397005EE124 /* NSObject+JKAutoCoding.h */,
 				D25E417B232CC397005EE124 /* MKMapView+JKBetterMaps.h */,
@@ -1713,7 +1710,6 @@
 				D25E4234232CC398005EE124 /* NSString+JKContains.m */,
 				D25E41AF232CC397005EE124 /* pop-osx-Info.plist */,
 				D25E41B1232CC397005EE124 /* UITextView+Rect.h */,
-				D25E41B3232CC397005EE124 /* UIView+Gradient.m */,
 				D25E424F232CC398005EE124 /* UITableView+FDTemplateLayoutCellDebug.m */,
 				D25E4251232CC398005EE124 /* NSData+ImageContentType.m */,
 				D25E41BB232CC397005EE124 /* UIImage+SLImage.h */,
@@ -2928,7 +2924,9 @@
 				D25E40FB232CC383005EE124 /* UITableView+JKiOS7Style.h */,
 				D25E4152232CC392005EE124 /* UITextField+JKBlocks.h */,
 				D25E4296232CC39F005EE124 /* UITextView+JKInputLimit.m */,
+				D25E4158232CC393005EE124 /* UITextView+JKPlaceHolder.m */,
 				D25E4135232CC38D005EE124 /* UIView+Additional.m */,
+				D25E410E232CC387005EE124 /* UIView+Debug.m */,
 				D25E4154232CC393005EE124 /* UIView+FDCollapsibleConstraints.m */,
 				D25E4147232CC390005EE124 /* UIView+Genie.h */,
 				D25E40FF232CC384005EE124 /* UIView+GestureCallback.m */,
@@ -2967,6 +2965,7 @@
 				D25E4129232CC38B005EE124 /* SLClick.m */,
 				D25E429E232CC3A0005EE124 /* UIButton+ImageTitleSpacing.h */,
 				D25E4180232CC397005EE124 /* UIButton+ImageTitleSpacing.h */,
+				D25E4181232CC397005EE124 /* UIImageView+Category.m */,
 				D25E4176232CC397005EE124 /* NSNumber+JKRound.h */,
 				D25E4182232CC397005EE124 /* NSNumber+JKRound.h */,
 				D25E4178232CC397005EE124 /* UIView+JKScreenshot.h */,
@@ -3021,6 +3020,7 @@
 				D25E4239232CC398005EE124 /* UIButton+ImageTitleSpacing.m */,
 				D25E41B0232CC397005EE124 /* POPAnimator.h */,
 				D25E41B2232CC397005EE124 /* NSDictionary+SLKeyValue.h */,
+				D25E41B3232CC397005EE124 /* UIView+Gradient.m */,
 				D25E41B4232CC397005EE124 /* UIViewController+MJPopupViewController.m */,
 				D25E41B8232CC397005EE124 /* NSString+Date.m */,
 				D25E41B9232CC397005EE124 /* NSDate+Additions.h */,
