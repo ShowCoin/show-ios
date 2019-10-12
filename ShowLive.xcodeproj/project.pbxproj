@@ -1258,7 +1258,7 @@
 		D25E42A5232CC3A1005EE124 /* NSDictionary+JKMerge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+JKMerge.h"; path = "pop/NSDictionary+JKMerge.h"; sourceTree = SOURCE_ROOT; };
 		D25E42A6232CC3A2005EE124 /* CAAnimationDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CAAnimationDemoViewController.h; path = pop/CAAnimationDemoViewController.h; sourceTree = SOURCE_ROOT; };
 		D25E42A7232CC3A2005EE124 /* NSString+JKNormalRegex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+JKNormalRegex.h"; path = "pop/NSString+JKNormalRegex.h"; sourceTree = SOURCE_ROOT; };
-		D25E42A8232CC3A2005EE124 /* NSDate+JKFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+JKFormatter.h"; path = "pop/NSDate+JKFormatter.h"; sourceTree = SOURCE_ROOT; };
+		D25E42A8232CC3A2005EE124 /* NSDate+JKFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+JKFormatter.h"; path = "Untils/Exten/WebCore/NSDate+JKFormatter.h"; sourceTree = SOURCE_ROOT; };
 		D25E42A9232CC3A2005EE124 /* NSManagedObjectContext+JKFetching.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObjectContext+JKFetching.m"; path = "pop/NSManagedObjectContext+JKFetching.m"; sourceTree = SOURCE_ROOT; };
 		D25E42AA232CC3A2005EE124 /* NSManagedObjectContext+JKObjectClear.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObjectContext+JKObjectClear.m"; path = "pop/NSManagedObjectContext+JKObjectClear.m"; sourceTree = SOURCE_ROOT; };
 		D25E42AB232CC3A2005EE124 /* NSDate+JKZeroDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+JKZeroDate.h"; path = "pop/NSDate+JKZeroDate.h"; sourceTree = SOURCE_ROOT; };
@@ -1704,7 +1704,6 @@
 				D25E4100232CC384005EE124 /* NSDate+Additions.m */,
 				D25E427F232CC399005EE124 /* NSDate+JKCupertinoYankee.m */,
 				D25E40F3232CC381005EE124 /* NSDate+JKExtension.h */,
-				D25E42A8232CC3A2005EE124 /* NSDate+JKFormatter.h */,
 				D25E428A232CC39C005EE124 /* NSDate+JKFormatter.m */,
 				D25E4295232CC39E005EE124 /* NSDate+JKInternetDateTime.h */,
 				D25E42A4232CC3A1005EE124 /* NSDate+JKInternetDateTime.m */,
@@ -1834,7 +1833,6 @@
 				D25E417B232CC397005EE124 /* MKMapView+JKBetterMaps.h */,
 				D25E417C232CC397005EE124 /* NSDate+JKUtilities.h */,
 				D25E417D232CC397005EE124 /* MKMapView+JKMoveLogo.m */,
-				D25E417E232CC397005EE124 /* UIScrollView+JKAddition.m */,
 				D25E4116232CC388005EE124 /* POPVector.h */,
 				D25E4225232CC398005EE124 /* UIScrollView+JKPages.m */,
 				D25E4226232CC398005EE124 /* UITextView+JKPinchZoom.h */,
@@ -1886,7 +1884,6 @@
 				D25E41A6232CC397005EE124 /* UILabel+Category.m */,
 				D25E41A7232CC397005EE124 /* UIImage+SLCompress.m */,
 				D25E41A8232CC397005EE124 /* NSString+Trim.m */,
-				D25E41A9232CC397005EE124 /* WebView+Debug.h */,
 				D25E41AA232CC397005EE124 /* UIImage+MSVagueEffect.h */,
 				D25E41AB232CC397005EE124 /* UITableView+NIMScrollToBottom.m */,
 				D25E41AC232CC397005EE124 /* UIImageView+Category.h */,
@@ -1898,7 +1895,6 @@
 				D25E4235232CC398005EE124 /* UNLICENSE */,
 				D25E4236232CC398005EE124 /* POPGeometry.h */,
 				D25E4237232CC398005EE124 /* NSArray+JKSafeAccess.h */,
-				D25E4238232CC398005EE124 /* NSObject+JKAppInfo.h */,
 				D25E41AD232CC397005EE124 /* UIWindow+SLMotion.h */,
 				D25E41AE232CC397005EE124 /* UIButton+ImageTitleSpacing.m */,
 				D25E4239232CC398005EE124 /* UIButton+ImageTitleSpacing.m */,
@@ -3027,6 +3023,10 @@
 			isa = PBXGroup;
 			children = (
 				D25E41BF232CC397005EE124 /* CAMediaTimingFunction+JKAdditionalEquations.h */,
+				D25E42A8232CC3A2005EE124 /* NSDate+JKFormatter.h */,
+				D25E417E232CC397005EE124 /* UIScrollView+JKAddition.m */,
+				D25E41A9232CC397005EE124 /* WebView+Debug.h */,
+				D25E4238232CC398005EE124 /* NSObject+JKAppInfo.h */,
 				D25E41C0232CC397005EE124 /* WebView+Debug.m */,
 				D25E41C1232CC397005EE124 /* NSDate+Additions.m */,
 				D25E41C2232CC397005EE124 /* NSString+JKEmoji.m */,
