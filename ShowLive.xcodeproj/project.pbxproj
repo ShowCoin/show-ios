@@ -1226,7 +1226,7 @@
 		D25E4285232CC39B005EE124 /* UITableView+FDTemplateLayoutCellDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITableView+FDTemplateLayoutCellDebug.h"; path = "Untils/Exten/WebCore/UITableView+FDTemplateLayoutCellDebug.h"; sourceTree = SOURCE_ROOT; };
 		D25E4286232CC39B005EE124 /* NSNumber+JKRomanNumerals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+JKRomanNumerals.m"; path = "pop/NSNumber+JKRomanNumerals.m"; sourceTree = SOURCE_ROOT; };
 		D25E4287232CC39B005EE124 /* NSManagedObject+JKExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObject+JKExtensions.m"; path = "pop/NSManagedObject+JKExtensions.m"; sourceTree = SOURCE_ROOT; };
-		D25E4288232CC39C005EE124 /* NSObject+JKBlockTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+JKBlockTimer.h"; path = "pop/NSObject+JKBlockTimer.h"; sourceTree = SOURCE_ROOT; };
+		D25E4288232CC39C005EE124 /* NSObject+JKBlockTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+JKBlockTimer.h"; path = "Untils/Exten/WebCore/NSObject+JKBlockTimer.h"; sourceTree = SOURCE_ROOT; };
 		D25E4289232CC39C005EE124 /* CLLocation+JKCH1903.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CLLocation+JKCH1903.h"; path = "Untils/Exten/WebCore/CLLocation+JKCH1903.h"; sourceTree = SOURCE_ROOT; };
 		D25E428A232CC39C005EE124 /* NSDate+JKFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+JKFormatter.m"; path = "Untils/Exten/WebCore/NSDate+JKFormatter.m"; sourceTree = SOURCE_ROOT; };
 		D25E428B232CC39C005EE124 /* NSData+JKPCM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+JKPCM.h"; path = "Untils/Exten/WebCore/NSData+JKPCM.h"; sourceTree = SOURCE_ROOT; };
@@ -1668,7 +1668,6 @@
 				D25E4294232CC39E005EE124 /* MKMapView+JKZoomLevel.m */,
 				D25E42A2232CC3A1005EE124 /* module.modulemap */,
 				D25E411D232CC389005EE124 /* NSArray+JKBlock.h */,
-				D25E4248232CC398005EE124 /* NSString+JKEmoji.h */,
 				D25E424C232CC398005EE124 /* NSSet+JKBlock.h */,
 				D25E412A232CC38C005EE124 /* NSData+JKGzip.m */,
 				D25E427F232CC399005EE124 /* NSDate+JKCupertinoYankee.m */,
@@ -1700,7 +1699,6 @@
 				D25E4112232CC387005EE124 /* UIView+JKShake.h */,
 				D25E413E232CC38F005EE124 /* NSObject+JKAddProperty.m */,
 				D25E411A232CC389005EE124 /* NSObject+JKAutoCoding.m */,
-				D25E4288232CC39C005EE124 /* NSObject+JKBlockTimer.h */,
 				D25E429C232CC3A0005EE124 /* NSObject+JKBlockTimer.m */,
 				D25E4137232CC38E005EE124 /* NSRunLoop+JKPerformBlock.h */,
 				D25E42AE232CC3A3005EE124 /* NSString+JKContains.h */,
@@ -2872,6 +2870,7 @@
 				D25E4103232CC385005EE124 /* CLLocation+JKCH1903.m */,
 				D25E4163232CC395005EE124 /* MKMapView+JKBetterMaps.m */,
 				D25E424B232CC398005EE124 /* MKMapView+JKZoomLevel.h */,
+				D25E4248232CC398005EE124 /* NSString+JKEmoji.h */,
 				D25E4249232CC398005EE124 /* UIControl+BlocksKit.m */,
 				D25E4168232CC396005EE124 /* MKMapView+JKZoomLevel.h */,
 				D25E424D232CC398005EE124 /* UINavigationController+FDFullscreenPopGesture.m */,
@@ -2904,6 +2903,7 @@
 				D25E428A232CC39C005EE124 /* NSDate+JKFormatter.m */,
 				D25E42A4232CC3A1005EE124 /* NSDate+JKInternetDateTime.m */,
 				D25E4150232CC392005EE124 /* NSObject+JKAssociatedObject.h */,
+				D25E4288232CC39C005EE124 /* NSObject+JKBlockTimer.h */,
 				D25E4111232CC387005EE124 /* NSObject+JKEasyCopy.m */,
 				D25E4206232CC397005EE124 /* NSObject+JKEasyCopy.m */,
 				D25E4207232CC397005EE124 /* UITableView+JKiOS7Style.m */,
