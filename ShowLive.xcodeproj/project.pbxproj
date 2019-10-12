@@ -563,6 +563,11 @@
 		4311D3E62351FDD9006B19BE /* SLBaseWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLBaseWebViewController.h; path = ../../../../../WebView/Base/SLBaseWebViewController.h; sourceTree = "<group>"; };
 		4311D3E72351FDD9006B19BE /* SLPureColorImageGenerate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLPureColorImageGenerate.h; path = ../../../WebView/Base/SLPureColorImageGenerate.h; sourceTree = "<group>"; };
 		4311D3E82351FDD9006B19BE /* SLConvListSystemTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLConvListSystemTableViewCell.h; path = ../../../../../WebView/Base/SLConvListSystemTableViewCell.h; sourceTree = "<group>"; };
+		4311D3E92351FDD9006B19BE /* SLWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLWebViewController.h; path = ../../../WebView/SLWebViewController.h; sourceTree = "<group>"; };
+		4311D3EA2351FDD9006B19BE /* SLWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLWebViewController.h; path = ../../../../../WebView/SLWebViewController.h; sourceTree = "<group>"; };
+		4311D3EB2351FDDA006B19BE /* NewTopListHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NewTopListHeader.h; path = ../../../../../WebView/Base/NewTopListHeader.h; sourceTree = "<group>"; };
+		4311D3EC2351FDDA006B19BE /* SLWebViewJSFuncNameConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLWebViewJSFuncNameConst.h; path = ../../../../../WebView/SLWebViewJSFuncNameConst.h; sourceTree = "<group>"; };
+		4311D3ED2351FDDA006B19BE /* AppDelegate+ShowRegisterService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "AppDelegate+ShowRegisterService.m"; path = "../../../WebView/Base/AppDelegate+ShowRegisterService.m"; sourceTree = "<group>"; };
 		43143749209432BE0059D373 /* ShowWallet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowWallet.h; sourceTree = "<group>"; };
 		431438AE209432E30059D373 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4321A33F22F46D8F00F19D03 /* NSObject+JKAppInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JKAppInfo.m"; sourceTree = "<group>"; };
@@ -916,7 +921,7 @@
 		D25E415B232CC394005EE124 /* NSDate+JKLunarCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+JKLunarCalendar.h"; path = "pop/NSDate+JKLunarCalendar.h"; sourceTree = SOURCE_ROOT; };
 		D25E415C232CC394005EE124 /* NSMutableURLRequest+JKUpload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableURLRequest+JKUpload.m"; path = "pop/NSMutableURLRequest+JKUpload.m"; sourceTree = SOURCE_ROOT; };
 		D25E415D232CC394005EE124 /* POPPropertyAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POPPropertyAnimation.h; path = pop/POPPropertyAnimation.h; sourceTree = SOURCE_ROOT; };
-		D25E415E232CC394005EE124 /* UIScrollView+EmptyDataSet.h~fc6ed825c6150727967b55cf2a4e012515dba0e3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "UIScrollView+EmptyDataSet.h~fc6ed825c6150727967b55cf2a4e012515dba0e3"; path = "pop/SLHelper/UIScrollView+EmptyDataSet.h~fc6ed825c6150727967b55cf2a4e012515dba0e3"; sourceTree = SOURCE_ROOT; };
+		D25E415E232CC394005EE124 /* UIScrollView+EmptyDataSet.h~fc6ed825c6150727967b55cf2a4e012515dba0e3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "UIScrollView+EmptyDataSet.h~fc6ed825c6150727967b55cf2a4e012515dba0e3"; path = "Untils/Exten/UIScrollView+EmptyDataSet.h~fc6ed825c6150727967b55cf2a4e012515dba0e3"; sourceTree = SOURCE_ROOT; };
 		D25E415F232CC394005EE124 /* UIScrollView+APParallaxHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+APParallaxHeader.m"; path = "pop/UIScrollView+APParallaxHeader.m"; sourceTree = SOURCE_ROOT; };
 		D25E4160232CC394005EE124 /* UIWebVIew+JKSwipeGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIWebVIew+JKSwipeGesture.h"; path = "pop/UIWebVIew+JKSwipeGesture.h"; sourceTree = SOURCE_ROOT; };
 		D25E4161232CC395005EE124 /* POPAnimationEvent.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = POPAnimationEvent.mm; path = pop/POPAnimationEvent.mm; sourceTree = SOURCE_ROOT; };
@@ -1743,6 +1748,7 @@
 				D25E40EE232CC356005EE124 /* NSBundle+JKAppIcon.m */,
 				D25E4285232CC39B005EE124 /* UITableView+FDTemplateLayoutCellDebug.h */,
 				D25E40FB232CC383005EE124 /* UITableView+JKiOS7Style.h */,
+				D25E4152232CC392005EE124 /* UITextField+JKBlocks.h */,
 				D25E4296232CC39F005EE124 /* UITextView+JKInputLimit.m */,
 				D25E4135232CC38D005EE124 /* UIView+Additional.m */,
 				D25E410E232CC387005EE124 /* UIView+Debug.m */,
@@ -2069,8 +2075,10 @@
 				4311D3E02351FDD7006B19BE /* ShowAppDelegate.m */,
 				4311D3C02351FDD1006B19BE /* ShowAppDelegate.m */,
 				4311D3DA2351FDD7006B19BE /* AppDelegate+ShowRegisterService.h */,
+				4311D3EB2351FDDA006B19BE /* NewTopListHeader.h */,
 				4311D3C32351FDD2006B19BE /* NewTopListHeader.h */,
 				4311D3DB2351FDD7006B19BE /* NewTopListHeader.m */,
+				4311D3ED2351FDDA006B19BE /* AppDelegate+ShowRegisterService.m */,
 				4311D3CC2351FDD4006B19BE /* NewTopListCell.h */,
 				4311D3C82351FDD3006B19BE /* NewTopListCell.h */,
 				4311D3DD2351FDD7006B19BE /* NewTopListCell.m */,
@@ -2081,6 +2089,7 @@
 				D25E4290232CC39D005EE124 /* UIScreen+JKFrame.h */,
 				D25E410C232CC386005EE124 /* UIScrollView+APParallaxHeader.h */,
 				D25E4108232CC386005EE124 /* UIScrollView+EmptyDataSet.h */,
+				D25E415E232CC394005EE124 /* UIScrollView+EmptyDataSet.h~fc6ed825c6150727967b55cf2a4e012515dba0e3 */,
 				D25E4139232CC38E005EE124 /* UISplitViewController+JKQuickAccess.m */,
 				D25E4151232CC392005EE124 /* UITableView+FDIndexPathHeightCache.h */,
 				D25E4298232CC39F005EE124 /* UIWindow+SLMotion.m */,
@@ -2110,6 +2119,9 @@
 				4311D3D42351FDD5006B19BE /* SLBaseWebViewRequestHelper.h */,
 				4311D3CF2351FDD4006B19BE /* SLWeakScriptMessageDelegate.h */,
 				4311D3C12351FDD1006B19BE /* SLWeakScriptMessageDelegate.h */,
+				4311D3EA2351FDD9006B19BE /* SLWebViewController.h */,
+				4311D3E92351FDD9006B19BE /* SLWebViewController.h */,
+				4311D3EC2351FDDA006B19BE /* SLWebViewJSFuncNameConst.h */,
 				4311D3E52351FDD9006B19BE /* SLWebViewJSFuncNameConst.h */,
 				D25E429A232CC39F005EE124 /* SLMeConcernListAction.h */,
 				D25E4146232CC390005EE124 /* SLMeFansListAction.h */,
@@ -2941,9 +2953,7 @@
 				4311D3902351FD98006B19BE /* NewTopListCell.m */,
 				4311D38A2351FD97006B19BE /* NewTopListViewController.h */,
 				D25E4121232CC38A005EE124 /* UIPopoverController+iPhone.h */,
-				D25E415E232CC394005EE124 /* UIScrollView+EmptyDataSet.h~fc6ed825c6150727967b55cf2a4e012515dba0e3 */,
 				D25E40F9232CC383005EE124 /* UITableViewCell+JKDelaysContentTouches.m */,
-				D25E4152232CC392005EE124 /* UITextField+JKBlocks.h */,
 				D25E4158232CC393005EE124 /* UITextView+JKPlaceHolder.m */,
 				D25E4154232CC393005EE124 /* UIView+FDCollapsibleConstraints.m */,
 				D25E4147232CC390005EE124 /* UIView+Genie.h */,
