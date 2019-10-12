@@ -904,7 +904,7 @@
 		D25E4140232CC38F005EE124 /* NSString+JKRemoveEmoji.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+JKRemoveEmoji.h"; path = "pop/NSString+JKRemoveEmoji.h"; sourceTree = SOURCE_ROOT; };
 		D25E4141232CC38F005EE124 /* NSObject+JKAddProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+JKAddProperty.h"; path = "Untils/Exten/WebCore/NSObject+JKAddProperty.h"; sourceTree = SOURCE_ROOT; };
 		D25E4142232CC390005EE124 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Additions.h"; path = "pop/NSString+Additions.h"; sourceTree = SOURCE_ROOT; };
-		D25E4143232CC390005EE124 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = pop/README.md; sourceTree = SOURCE_ROOT; };
+		D25E4143232CC390005EE124 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = Untils/Exten/WebCore/README.md; sourceTree = SOURCE_ROOT; };
 		D25E4144232CC390005EE124 /* UIButton+Addtional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIButton+Addtional.m"; path = "pop/UIButton+Addtional.m"; sourceTree = SOURCE_ROOT; };
 		D25E4145232CC390005EE124 /* NSInvocation+JKBb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSInvocation+JKBb.h"; path = "Untils/Exten/WebCore/NSInvocation+JKBb.h"; sourceTree = SOURCE_ROOT; };
 		D25E4146232CC390005EE124 /* SLMeFansListAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLMeFansListAction.h; path = pop/SLMeFansListAction.h; sourceTree = SOURCE_ROOT; };
@@ -998,7 +998,7 @@
 		D25E41A0232CC397005EE124 /* POPSpringAnimation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = POPSpringAnimation.mm; sourceTree = "<group>"; };
 		D25E41A1232CC397005EE124 /* NSBundle+MainBundleBuildDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+MainBundleBuildDate.m"; sourceTree = "<group>"; };
 		D25E41A2232CC397005EE124 /* NSAttributedString+React.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSAttributedString+React.h"; path = "../../../pop/SLHelper/pop/NSAttributedString+React.h"; sourceTree = "<group>"; };
-		D25E41A3232CC397005EE124 /* NSDate+SLStringFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+SLStringFormat.m"; path = "../../pop/SLHelper/pop/NSDate+SLStringFormat.m"; sourceTree = "<group>"; };
+		D25E41A3232CC397005EE124 /* NSDate+SLStringFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+SLStringFormat.m"; path = "../../../pop/SLHelper/pop/NSDate+SLStringFormat.m"; sourceTree = "<group>"; };
 		D25E41A4232CC397005EE124 /* NSTimer+MSBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSTimer+MSBlock.h"; path = "../../../pop/SLHelper/pop/NSTimer+MSBlock.h"; sourceTree = "<group>"; };
 		D25E41A5232CC397005EE124 /* NSObject+NSInteger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+NSInteger.m"; sourceTree = "<group>"; };
 		D25E41A6232CC397005EE124 /* UILabel+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Category.m"; sourceTree = "<group>"; };
@@ -1715,9 +1715,7 @@
 				D25E4177232CC397005EE124 /* CLLocationManager+Blocks.h */,
 				D25E4179232CC397005EE124 /* NSObject+JKAutoCoding.h */,
 				D25E417B232CC397005EE124 /* MKMapView+JKBetterMaps.h */,
-				D25E4143232CC390005EE124 /* README.md */,
 				D25E40F7232CC382005EE124 /* SLClick.h */,
-				D25E4183232CC397005EE124 /* UITableView+NIMScrollToBottom.h */,
 				D25E414D232CC391005EE124 /* UIViewController+DDPopUpViewController.m */,
 				D25E4189232CC397005EE124 /* POPBasicAnimationInternal.h */,
 				D25E418A232CC397005EE124 /* UIView+Genie.m */,
@@ -1731,7 +1729,6 @@
 				D25E419A232CC397005EE124 /* UIView+Additions.m */,
 				D25E419B232CC397005EE124 /* UIColor+Category.h */,
 				D25E419C232CC397005EE124 /* UIView+Constraint.m */,
-				D25E41A3232CC397005EE124 /* NSDate+SLStringFormat.m */,
 				D25E41AA232CC397005EE124 /* UIImage+MSVagueEffect.h */,
 				D25E4118232CC388005EE124 /* UIWindow+SLMotion.h */,
 				D25E4231232CC398005EE124 /* UIView+Debug.h */,
@@ -2890,6 +2887,7 @@
 				D25E4116232CC388005EE124 /* POPVector.h */,
 				D25E4225232CC398005EE124 /* UIScrollView+JKPages.m */,
 				D25E4226232CC398005EE124 /* UITextView+JKPinchZoom.h */,
+				D25E4143232CC390005EE124 /* README.md */,
 				D25E4134232CC38D005EE124 /* SLChatStatisticsAction.h */,
 				D25E4173232CC397005EE124 /* NSObject+JKAddProperty.h */,
 				D25E428A232CC39C005EE124 /* NSDate+JKFormatter.m */,
@@ -2985,6 +2983,7 @@
 				D25E417C232CC397005EE124 /* NSDate+JKUtilities.h */,
 				D25E417D232CC397005EE124 /* MKMapView+JKMoveLogo.m */,
 				D25E417E232CC397005EE124 /* UIScrollView+JKAddition.m */,
+				D25E4183232CC397005EE124 /* UITableView+NIMScrollToBottom.h */,
 				D25E4184232CC397005EE124 /* ShowForgetPwdAction.h */,
 				D25E4185232CC397005EE124 /* UIImage+SLCompress.h */,
 				D25E4186232CC397005EE124 /* NSString+Trim.h */,
@@ -3004,6 +3003,7 @@
 				D25E41A0232CC397005EE124 /* POPSpringAnimation.mm */,
 				D25E41A1232CC397005EE124 /* NSBundle+MainBundleBuildDate.m */,
 				D25E41A2232CC397005EE124 /* NSAttributedString+React.h */,
+				D25E41A3232CC397005EE124 /* NSDate+SLStringFormat.m */,
 				D25E41A4232CC397005EE124 /* NSTimer+MSBlock.h */,
 				D25E41A5232CC397005EE124 /* NSObject+NSInteger.m */,
 				D25E41A6232CC397005EE124 /* UILabel+Category.m */,
