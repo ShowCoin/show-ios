@@ -855,7 +855,7 @@
 		D25E410F232CC387005EE124 /* NSBundle+JKAppIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSBundle+JKAppIcon.m"; path = "pop/NSBundle+JKAppIcon.m"; sourceTree = SOURCE_ROOT; };
 		D25E4110232CC387005EE124 /* SLHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLHelper.h; path = pop/SLHelper.h; sourceTree = SOURCE_ROOT; };
 		D25E4111232CC387005EE124 /* NSObject+JKEasyCopy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+JKEasyCopy.m"; path = "Untils/Exten/WebCore/NSObject+JKEasyCopy.m"; sourceTree = SOURCE_ROOT; };
-		D25E4112232CC387005EE124 /* UIView+JKShake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+JKShake.h"; path = "Untils/Exten/UIView+JKShake.h"; sourceTree = SOURCE_ROOT; };
+		D25E4112232CC387005EE124 /* UIView+JKShake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+JKShake.h"; path = "Untils/Exten/WebCore/UIView+JKShake.h"; sourceTree = SOURCE_ROOT; };
 		D25E4113232CC388005EE124 /* UIWindow+JKHierarchy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIWindow+JKHierarchy.h"; path = "pop/UIWindow+JKHierarchy.h"; sourceTree = SOURCE_ROOT; };
 		D25E4114232CC388005EE124 /* SLNavigationControllerTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLNavigationControllerTransition.h; path = pop/SLNavigationControllerTransition.h; sourceTree = SOURCE_ROOT; };
 		D25E4115232CC388005EE124 /* UIImage+Additional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Additional.m"; path = "pop/UIImage+Additional.m"; sourceTree = SOURCE_ROOT; };
@@ -1689,7 +1689,6 @@
 				D25E410E232CC387005EE124 /* UIView+Debug.m */,
 				D25E4291232CC39E005EE124 /* UIView+JKConstraints.h */,
 				D25E412C232CC38C005EE124 /* UIView+JKNib.h */,
-				D25E4112232CC387005EE124 /* UIView+JKShake.h */,
 				D25E413E232CC38F005EE124 /* NSObject+JKAddProperty.m */,
 				D25E4137232CC38E005EE124 /* NSRunLoop+JKPerformBlock.h */,
 				D25E42AE232CC3A3005EE124 /* NSString+JKContains.h */,
@@ -1711,9 +1710,7 @@
 				D25E418B232CC397005EE124 /* NSString+Date.h */,
 				D25E4191232CC397005EE124 /* UITextView+Rect.m */,
 				D25E4192232CC397005EE124 /* UIView+SLComOpenThreadOTScreenshotHelperStatusBarReference.m */,
-				D25E41FE232CC397005EE124 /* NSUserDefaults+JKSafeAccess.h */,
 				D25E4195232CC397005EE124 /* UIScrollView+EmptyDataSet.m */,
-				D25E4198232CC397005EE124 /* UITextField+Category.h */,
 				D25E419A232CC397005EE124 /* UIView+Additions.m */,
 				D25E419C232CC397005EE124 /* UIView+Constraint.m */,
 				D25E4231232CC398005EE124 /* UIView+Debug.h */,
@@ -2937,6 +2934,7 @@
 				D25E4154232CC393005EE124 /* UIView+FDCollapsibleConstraints.m */,
 				D25E4147232CC390005EE124 /* UIView+Genie.h */,
 				D25E40FF232CC384005EE124 /* UIView+GestureCallback.m */,
+				D25E4112232CC387005EE124 /* UIView+JKShake.h */,
 				D25E4172232CC397005EE124 /* UIWindow+SLMotion.m */,
 				D25E4141232CC38F005EE124 /* NSObject+JKAddProperty.h */,
 				D25E42B1232CC3A4005EE124 /* NSObject+JKGCD.m */,
@@ -2989,9 +2987,11 @@
 				D25E41FD232CC397005EE124 /* UIImage+Effects.m */,
 				D25E4193232CC397005EE124 /* NSString+Replace.h */,
 				D25E4194232CC397005EE124 /* UIViewController+XHPhoto.h */,
+				D25E41FE232CC397005EE124 /* NSUserDefaults+JKSafeAccess.h */,
 				D25E41FF232CC397005EE124 /* UIScrollView+EmptyDataSet.m */,
 				D25E4196232CC397005EE124 /* UIButton+EnlargeTouchArea.h */,
 				D25E4197232CC397005EE124 /* NotificationService.m */,
+				D25E4198232CC397005EE124 /* UITextField+Category.h */,
 				D25E4199232CC397005EE124 /* TransformationMatrix.h */,
 				D25E419B232CC397005EE124 /* UIColor+Category.h */,
 				D25E419D232CC397005EE124 /* UIImage+Gradient.h */,
