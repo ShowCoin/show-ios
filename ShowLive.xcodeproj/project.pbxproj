@@ -1165,14 +1165,14 @@
 		D25E4248232CC398005EE124 /* NSString+JKEmoji.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JKEmoji.h"; sourceTree = "<group>"; };
 		D25E4249232CC398005EE124 /* UIControl+BlocksKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+BlocksKit.m"; sourceTree = "<group>"; };
 		D25E424A232CC398005EE124 /* NSString+Validation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Validation.m"; sourceTree = "<group>"; };
-		D25E424B232CC398005EE124 /* MKMapView+JKZoomLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKMapView+JKZoomLevel.h"; sourceTree = "<group>"; };
+		D25E424B232CC398005EE124 /* MKMapView+JKZoomLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MKMapView+JKZoomLevel.h"; path = "../MKMapView+JKZoomLevel.h"; sourceTree = "<group>"; };
 		D25E424C232CC398005EE124 /* NSSet+JKBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSet+JKBlock.h"; sourceTree = "<group>"; };
 		D25E424D232CC398005EE124 /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
 		D25E424E232CC398005EE124 /* NSBundle+JKAppIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+JKAppIcon.h"; sourceTree = "<group>"; };
 		D25E424F232CC398005EE124 /* UITableView+FDTemplateLayoutCellDebug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDTemplateLayoutCellDebug.m"; sourceTree = "<group>"; };
 		D25E4250232CC398005EE124 /* NSIndexPath+JKOffset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSIndexPath+JKOffset.m"; sourceTree = "<group>"; };
 		D25E4251232CC398005EE124 /* NSData+ImageContentType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+ImageContentType.m"; sourceTree = "<group>"; };
-		D25E4252232CC398005EE124 /* UINavigationController+JKStackManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+JKStackManager.h"; path = "../../pop/SLHelper/UINavigationController+JKStackManager.h"; sourceTree = "<group>"; };
+		D25E4252232CC398005EE124 /* UINavigationController+JKStackManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+JKStackManager.h"; path = "../../../pop/SLHelper/UINavigationController+JKStackManager.h"; sourceTree = "<group>"; };
 		D25E4253232CC398005EE124 /* NSDate+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Additions.h"; sourceTree = "<group>"; };
 		D25E4254232CC398005EE124 /* CAAnimationDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAAnimationDemoViewController.h; sourceTree = "<group>"; };
 		D25E4255232CC398005EE124 /* NSMutableURLRequest+JKUpload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableURLRequest+JKUpload.h"; sourceTree = "<group>"; };
@@ -1670,7 +1670,6 @@
 				D25E42A2232CC3A1005EE124 /* module.modulemap */,
 				D25E411D232CC389005EE124 /* NSArray+JKBlock.h */,
 				D25E4248232CC398005EE124 /* NSString+JKEmoji.h */,
-				D25E424B232CC398005EE124 /* MKMapView+JKZoomLevel.h */,
 				D25E424C232CC398005EE124 /* NSSet+JKBlock.h */,
 				D25E410F232CC387005EE124 /* NSBundle+JKAppIcon.m */,
 				D25E412A232CC38C005EE124 /* NSData+JKGzip.m */,
@@ -1760,7 +1759,6 @@
 				D25E424F232CC398005EE124 /* UITableView+FDTemplateLayoutCellDebug.m */,
 				D25E4250232CC398005EE124 /* NSIndexPath+JKOffset.m */,
 				D25E4251232CC398005EE124 /* NSData+ImageContentType.m */,
-				D25E4252232CC398005EE124 /* UINavigationController+JKStackManager.h */,
 				D25E41B6232CC397005EE124 /* UIView + SoftBodyAnimation.h */,
 				D25E41B7232CC397005EE124 /* NSString+Validation.m */,
 				D25E41BA232CC397005EE124 /* POPAnimation.mm */,
@@ -2880,6 +2878,7 @@
 				D25E4289232CC39C005EE124 /* CLLocation+JKCH1903.h */,
 				D25E4103232CC385005EE124 /* CLLocation+JKCH1903.m */,
 				D25E4163232CC395005EE124 /* MKMapView+JKBetterMaps.m */,
+				D25E424B232CC398005EE124 /* MKMapView+JKZoomLevel.h */,
 				D25E4249232CC398005EE124 /* UIControl+BlocksKit.m */,
 				D25E4168232CC396005EE124 /* MKMapView+JKZoomLevel.h */,
 				D25E424D232CC398005EE124 /* UINavigationController+FDFullscreenPopGesture.m */,
@@ -2974,6 +2973,7 @@
 				D25E418D232CC397005EE124 /* NSString+Validation.h */,
 				D25E41B5232CC397005EE124 /* UIColor+color.h */,
 				D25E4132232CC38D005EE124 /* UITableView+FDTemplateLayoutCellDebug.m */,
+				D25E4252232CC398005EE124 /* UINavigationController+JKStackManager.h */,
 				D25E424A232CC398005EE124 /* NSString+Validation.m */,
 				D25E4174232CC397005EE124 /* UITableViewDemoViewController.m */,
 				D25E4129232CC38B005EE124 /* SLClick.m */,
