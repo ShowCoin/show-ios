@@ -898,7 +898,7 @@
 		D25E413A232CC38E005EE124 /* NSData+JKBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+JKBase64.m"; path = "Untils/Exten/WebCore/NSData+JKBase64.m"; sourceTree = SOURCE_ROOT; };
 		D25E413B232CC38E005EE124 /* POPAnimator.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = POPAnimator.mm; path = pop/POPAnimator.mm; sourceTree = SOURCE_ROOT; };
 		D25E413C232CC38F005EE124 /* UnitBezier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UnitBezier.h; path = pop/UnitBezier.h; sourceTree = SOURCE_ROOT; };
-		D25E413D232CC38F005EE124 /* NSData+Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+Image.h"; path = "pop/NSData+Image.h"; sourceTree = SOURCE_ROOT; };
+		D25E413D232CC38F005EE124 /* NSData+Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+Image.h"; path = "Untils/Exten/WebCore/NSData+Image.h"; sourceTree = SOURCE_ROOT; };
 		D25E413E232CC38F005EE124 /* NSObject+JKAddProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+JKAddProperty.m"; path = "pop/NSObject+JKAddProperty.m"; sourceTree = SOURCE_ROOT; };
 		D25E413F232CC38F005EE124 /* NSSting+aes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSSting+aes.m"; path = "Untils/Exten/WebCore/NSSting+aes.m"; sourceTree = SOURCE_ROOT; };
 		D25E4140232CC38F005EE124 /* NSString+JKRemoveEmoji.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+JKRemoveEmoji.h"; path = "pop/NSString+JKRemoveEmoji.h"; sourceTree = SOURCE_ROOT; };
@@ -965,7 +965,7 @@
 		D25E417E232CC397005EE124 /* UIScrollView+JKAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+JKAddition.m"; sourceTree = "<group>"; };
 		D25E4180232CC397005EE124 /* UIButton+ImageTitleSpacing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIButton+ImageTitleSpacing.h"; path = "../UIButton+ImageTitleSpacing.h"; sourceTree = "<group>"; };
 		D25E4181232CC397005EE124 /* UIImageView+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Category.m"; sourceTree = "<group>"; };
-		D25E4182232CC397005EE124 /* NSNumber+JKRound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSNumber+JKRound.h"; path = "../../pop/SLHelper/pop/NSNumber+JKRound.h"; sourceTree = "<group>"; };
+		D25E4182232CC397005EE124 /* NSNumber+JKRound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+JKRound.h"; sourceTree = "<group>"; };
 		D25E4183232CC397005EE124 /* UITableView+NIMScrollToBottom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+NIMScrollToBottom.h"; sourceTree = "<group>"; };
 		D25E4184232CC397005EE124 /* ShowForgetPwdAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowForgetPwdAction.h; sourceTree = "<group>"; };
 		D25E4185232CC397005EE124 /* UIImage+SLCompress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+SLCompress.h"; sourceTree = "<group>"; };
@@ -1677,7 +1677,6 @@
 				D25E424B232CC398005EE124 /* MKMapView+JKZoomLevel.h */,
 				D25E424C232CC398005EE124 /* NSSet+JKBlock.h */,
 				D25E410F232CC387005EE124 /* NSBundle+JKAppIcon.m */,
-				D25E413D232CC38F005EE124 /* NSData+Image.h */,
 				D25E412A232CC38C005EE124 /* NSData+JKGzip.m */,
 				D25E428B232CC39C005EE124 /* NSData+JKPCM.h */,
 				D25E415A232CC393005EE124 /* NSData+JKzlib.h */,
@@ -1765,7 +1764,6 @@
 				D25E4226232CC398005EE124 /* UITextView+JKPinchZoom.h */,
 				D25E4143232CC390005EE124 /* README.md */,
 				D25E40F7232CC382005EE124 /* SLClick.h */,
-				D25E4182232CC397005EE124 /* NSNumber+JKRound.h */,
 				D25E4183232CC397005EE124 /* UITableView+NIMScrollToBottom.h */,
 				D25E4184232CC397005EE124 /* ShowForgetPwdAction.h */,
 				D25E414D232CC391005EE124 /* UIViewController+DDPopUpViewController.m */,
@@ -2925,6 +2923,7 @@
 				D25E4155232CC393005EE124 /* NSNumber+JKCGFloat.h */,
 				D25E4170232CC397005EE124 /* NSNumber+JKCGFloat.h */,
 				D25E40EE232CC356005EE124 /* NSBundle+JKAppIcon.m */,
+				D25E413D232CC38F005EE124 /* NSData+Image.h */,
 				D25E42B0232CC3A3005EE124 /* NSData+ImageContentType.h */,
 				D25E427E232CC399005EE124 /* NSData+JKAPNSToken.h */,
 				D25E4122232CC38A005EE124 /* NSData+JKAPNSToken.m */,
@@ -2991,6 +2990,7 @@
 				D25E429E232CC3A0005EE124 /* UIButton+ImageTitleSpacing.h */,
 				D25E4180232CC397005EE124 /* UIButton+ImageTitleSpacing.h */,
 				D25E4176232CC397005EE124 /* NSNumber+JKRound.h */,
+				D25E4182232CC397005EE124 /* NSNumber+JKRound.h */,
 				D25E417A232CC397005EE124 /* NSObject+JKReflection.m */,
 				D25E417D232CC397005EE124 /* MKMapView+JKMoveLogo.m */,
 				D25E417E232CC397005EE124 /* UIScrollView+JKAddition.m */,
