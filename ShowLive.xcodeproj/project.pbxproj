@@ -871,7 +871,7 @@
 		D25E411F232CC38A005EE124 /* UIWebView+Alert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIWebView+Alert.h"; path = "pop/UIWebView+Alert.h"; sourceTree = SOURCE_ROOT; };
 		D25E4120232CC38A005EE124 /* POPSpringSolver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POPSpringSolver.h; path = pop/POPSpringSolver.h; sourceTree = SOURCE_ROOT; };
 		D25E4121232CC38A005EE124 /* UIPopoverController+iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIPopoverController+iPhone.h"; path = "Untils/Exten/UIPopoverController+iPhone.h"; sourceTree = SOURCE_ROOT; };
-		D25E4122232CC38A005EE124 /* NSData+JKAPNSToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+JKAPNSToken.m"; path = "pop/NSData+JKAPNSToken.m"; sourceTree = SOURCE_ROOT; };
+		D25E4122232CC38A005EE124 /* NSData+JKAPNSToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+JKAPNSToken.m"; path = "Untils/Exten/WebCore/NSData+JKAPNSToken.m"; sourceTree = SOURCE_ROOT; };
 		D25E4123232CC38A005EE124 /* CATransactionDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CATransactionDemoViewController.h; path = pop/CATransactionDemoViewController.h; sourceTree = SOURCE_ROOT; };
 		D25E4124232CC38A005EE124 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Cartfile; path = pop/Cartfile; sourceTree = SOURCE_ROOT; };
 		D25E4125232CC38B005EE124 /* UITextView+JKSelect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITextView+JKSelect.m"; path = "pop/UITextView+JKSelect.m"; sourceTree = SOURCE_ROOT; };
@@ -1266,7 +1266,7 @@
 		D25E42AD232CC3A3005EE124 /* NSDictionary+JKBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+JKBlock.m"; path = "pop/NSDictionary+JKBlock.m"; sourceTree = SOURCE_ROOT; };
 		D25E42AE232CC3A3005EE124 /* NSString+JKContains.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+JKContains.h"; path = "pop/NSString+JKContains.h"; sourceTree = SOURCE_ROOT; };
 		D25E42AF232CC3A3005EE124 /* POPAnimationExtras.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = POPAnimationExtras.mm; path = pop/POPAnimationExtras.mm; sourceTree = SOURCE_ROOT; };
-		D25E42B0232CC3A3005EE124 /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+ImageContentType.h"; path = "pop/NSData+ImageContentType.h"; sourceTree = SOURCE_ROOT; };
+		D25E42B0232CC3A3005EE124 /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+ImageContentType.h"; path = "Untils/Exten/WebCore/NSData+ImageContentType.h"; sourceTree = SOURCE_ROOT; };
 		D25E42B1232CC3A4005EE124 /* NSObject+JKGCD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+JKGCD.m"; path = "Untils/Exten/WebCore/NSObject+JKGCD.m"; sourceTree = SOURCE_ROOT; };
 		D25E42B2232CC3A4005EE124 /* NSInvocation+JKBb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSInvocation+JKBb.m"; path = "pop/NSInvocation+JKBb.m"; sourceTree = SOURCE_ROOT; };
 		D25E42B3232CC3A4005EE124 /* POPAnimationInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POPAnimationInternal.h; path = pop/POPAnimationInternal.h; sourceTree = SOURCE_ROOT; };
@@ -1688,8 +1688,6 @@
 				D25E4166232CC395005EE124 /* NSBundle+JKAppIcon.h */,
 				D25E410F232CC387005EE124 /* NSBundle+JKAppIcon.m */,
 				D25E413D232CC38F005EE124 /* NSData+Image.h */,
-				D25E42B0232CC3A3005EE124 /* NSData+ImageContentType.h */,
-				D25E4122232CC38A005EE124 /* NSData+JKAPNSToken.m */,
 				D25E40FE232CC384005EE124 /* NSData+JKBase64.h */,
 				D25E413A232CC38E005EE124 /* NSData+JKBase64.m */,
 				D25E412A232CC38C005EE124 /* NSData+JKGzip.m */,
@@ -3000,7 +2998,9 @@
 			children = (
 				D25E41BF232CC397005EE124 /* CAMediaTimingFunction+JKAdditionalEquations.h */,
 				D25E42A6232CC3A2005EE124 /* CAAnimationDemoViewController.h */,
+				D25E42B0232CC3A3005EE124 /* NSData+ImageContentType.h */,
 				D25E427E232CC399005EE124 /* NSData+JKAPNSToken.h */,
+				D25E4122232CC38A005EE124 /* NSData+JKAPNSToken.m */,
 				D25E4100232CC384005EE124 /* NSDate+Additions.m */,
 				D25E42A8232CC3A2005EE124 /* NSDate+JKFormatter.h */,
 				D25E4134232CC38D005EE124 /* SLChatStatisticsAction.h */,
