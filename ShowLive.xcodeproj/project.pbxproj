@@ -1153,7 +1153,7 @@
 		D25E423C232CC398005EE124 /* UITextView+JKSelect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+JKSelect.h"; sourceTree = "<group>"; };
 		D25E423D232CC398005EE124 /* NSDictionary+JKSafeAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+JKSafeAccess.h"; sourceTree = "<group>"; };
 		D25E423E232CC398005EE124 /* UITableViewCell+JKNIB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+JKNIB.m"; sourceTree = "<group>"; };
-		D25E423F232CC398005EE124 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Additions.h"; path = "../../pop/SLHelper/NSString+Additions.h"; sourceTree = "<group>"; };
+		D25E423F232CC398005EE124 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Additions.h"; path = "../../../pop/SLHelper/NSString+Additions.h"; sourceTree = "<group>"; };
 		D25E4240232CC398005EE124 /* NSURL+JKQueryDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+JKQueryDictionary.h"; sourceTree = "<group>"; };
 		D25E4241232CC398005EE124 /* UIResponderDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIResponderDemoViewController.m; sourceTree = "<group>"; };
 		D25E4242232CC398005EE124 /* NSDictionary+JKJSONString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+JKJSONString.m"; sourceTree = "<group>"; };
@@ -1260,7 +1260,7 @@
 		D25E42A7232CC3A2005EE124 /* NSString+JKNormalRegex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+JKNormalRegex.h"; path = "Untils/Exten/WebCore/NSString+JKNormalRegex.h"; sourceTree = SOURCE_ROOT; };
 		D25E42A8232CC3A2005EE124 /* NSDate+JKFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+JKFormatter.h"; path = "Untils/Exten/WebCore/NSDate+JKFormatter.h"; sourceTree = SOURCE_ROOT; };
 		D25E42A9232CC3A2005EE124 /* NSManagedObjectContext+JKFetching.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObjectContext+JKFetching.m"; path = "pop/NSManagedObjectContext+JKFetching.m"; sourceTree = SOURCE_ROOT; };
-		D25E42AA232CC3A2005EE124 /* NSManagedObjectContext+JKObjectClear.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObjectContext+JKObjectClear.m"; path = "pop/NSManagedObjectContext+JKObjectClear.m"; sourceTree = SOURCE_ROOT; };
+		D25E42AA232CC3A2005EE124 /* NSManagedObjectContext+JKObjectClear.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObjectContext+JKObjectClear.m"; path = "Untils/Exten/WebCore/NSManagedObjectContext+JKObjectClear.m"; sourceTree = SOURCE_ROOT; };
 		D25E42AB232CC3A2005EE124 /* NSDate+JKZeroDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+JKZeroDate.h"; path = "pop/NSDate+JKZeroDate.h"; sourceTree = SOURCE_ROOT; };
 		D25E42AC232CC3A3005EE124 /* NSDecimalNumber+JKCalculatingByString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDecimalNumber+JKCalculatingByString.m"; path = "pop/NSDecimalNumber+JKCalculatingByString.m"; sourceTree = SOURCE_ROOT; };
 		D25E42AD232CC3A3005EE124 /* NSDictionary+JKBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+JKBlock.m"; path = "pop/NSDictionary+JKBlock.m"; sourceTree = SOURCE_ROOT; };
@@ -1712,7 +1712,6 @@
 				D25E423A232CC398005EE124 /* .gitignore */,
 				D25E423B232CC398005EE124 /* NSDate+JKZeroDate.m */,
 				D25E423D232CC398005EE124 /* NSDictionary+JKSafeAccess.h */,
-				D25E423F232CC398005EE124 /* NSString+Additions.h */,
 				D25E4240232CC398005EE124 /* NSURL+JKQueryDictionary.h */,
 				D25E4241232CC398005EE124 /* UIResponderDemoViewController.m */,
 				D25E4167232CC396005EE124 /* NSDictionary+JKJSONString.m */,
@@ -1723,7 +1722,6 @@
 				D25E42B2232CC3A4005EE124 /* NSInvocation+JKBb.m */,
 				D25E428F232CC39D005EE124 /* NSManagedObject+JKExtensions.h */,
 				D25E4287232CC39B005EE124 /* NSManagedObject+JKExtensions.m */,
-				D25E42AA232CC3A2005EE124 /* NSManagedObjectContext+JKObjectClear.m */,
 				D25E415C232CC394005EE124 /* NSMutableURLRequest+JKUpload.m */,
 				D25E40FA232CC383005EE124 /* NSNotificationCenter+JKMainThread.h */,
 				D25E4131232CC38D005EE124 /* NSNotificationCenter+JKMainThread.m */,
@@ -2970,10 +2968,12 @@
 				D25E4273232CC398005EE124 /* UIColor+HexString.m */,
 				D25E423C232CC398005EE124 /* UITextView+JKSelect.h */,
 				D25E423E232CC398005EE124 /* UITableViewCell+JKNIB.m */,
+				D25E423F232CC398005EE124 /* NSString+Additions.h */,
 				D25E428D232CC39D005EE124 /* NSDictionary+JKMerge.m */,
 				D25E429B232CC3A0005EE124 /* NSDictionary+JKXML.m */,
 				D25E4145232CC390005EE124 /* NSInvocation+JKBb.h */,
 				D25E42A9232CC3A2005EE124 /* NSManagedObjectContext+JKFetching.m */,
+				D25E42AA232CC3A2005EE124 /* NSManagedObjectContext+JKObjectClear.m */,
 				D25E416D232CC396005EE124 /* UISplitViewController+JKQuickAccess.h */,
 				D25E416E232CC396005EE124 /* NSArray+JKBlock.m */,
 				D25E416F232CC396005EE124 /* NSArray+JKSafeAccess.m */,
