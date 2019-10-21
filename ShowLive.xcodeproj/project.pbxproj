@@ -1314,6 +1314,7 @@
 		D2930823235D827C00C54F2A /* SLBaseWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SLBaseWebViewController.m; path = ../../../WebView/Base/SLBaseWebViewController.m; sourceTree = "<group>"; };
 		D2930824235D827C00C54F2A /* SLWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLWebViewController.h; path = ../../../../../WebView/SLWebViewController.h; sourceTree = "<group>"; };
 		D2930825235D827C00C54F2A /* AppDelegate+ShowRegisterService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AppDelegate+ShowRegisterService.h"; path = "../../../../../WebView/Base/AppDelegate+ShowRegisterService.h"; sourceTree = "<group>"; };
+		D2930826235D827D00C54F2A /* ShowNavigationBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ShowNavigationBar.h; path = ../../../../../WebView/Base/ShowNavigationBar.h; sourceTree = "<group>"; };
 		D2A091F322FE908F00F8683B /* Pods-ShowLiveUITests.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveUITests.debug.xcconfig"; path = "../../../../requestAction/Pods-ShowLiveUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D2A091F422FE90A200F8683B /* Pods-ShowLiveUITests.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveUITests.debug.xcconfig"; path = "../../../../../requestAction/Pods-ShowLiveUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D2A466762323774F0057E5AD /* NewTopListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NewTopListViewController.h; path = ../../../../../../Toplist/NewTopListViewController.h; sourceTree = "<group>"; };
@@ -1718,7 +1719,6 @@
 				D25E40E8232CC355005EE124 /* CATransaction+JKAnimateWithDuration.m */,
 				D25E4209232CC397005EE124 /* NSManagedObject+JKDictionary.m */,
 				D25E420A232CC397005EE124 /* NSObject+JKKVOBlocks.m */,
-				D25E420B232CC397005EE124 /* NSString+JKNormalRegex.m */,
 				D25E420C232CC397005EE124 /* UIView+JKVisuals.h */,
 				D25E411F232CC38A005EE124 /* UIWebView+Alert.h */,
 				D25E4160232CC394005EE124 /* UIWebVIew+JKSwipeGesture.h */,
@@ -1768,7 +1768,6 @@
 				D25E4246232CC398005EE124 /* UIView+Additional.h */,
 				D25E4148232CC391005EE124 /* UIApplication+JKPermissions.m */,
 				D25E4254232CC398005EE124 /* CAAnimationDemoViewController.h */,
-				D25E4259232CC398005EE124 /* UIImage+Avatar.h */,
 				D25E425E232CC398005EE124 /* NSDecimalNumber+JKExtensions.h */,
 				D25E425F232CC398005EE124 /* NSString+MD5.m */,
 				D25E4260232CC398005EE124 /* NSFetchRequest+JKExtensions.m */,
@@ -2739,6 +2738,7 @@
 				4311D3B12351FDA1006B19BE /* SLWeakScriptMessageDelegate.h */,
 				4311D3922351FD99006B19BE /* SLWebView.h */,
 				4311D3882351FD97006B19BE /* SLBaseWebViewRequestHelper.h */,
+				D2930826235D827D00C54F2A /* ShowNavigationBar.h */,
 				4311D3A52351FD9F006B19BE /* SLWebViewController.h */,
 				4311D3982351FD9A006B19BE /* SLWebViewController.h */,
 				D2930824235D827C00C54F2A /* SLWebViewController.h */,
@@ -2757,6 +2757,7 @@
 				D25E413C232CC38F005EE124 /* UnitBezier.h */,
 				D25E4202232CC397005EE124 /* NSData+JKAPNSToken.m */,
 				D25E4208232CC397005EE124 /* NSDate+JKLunarCalendar.m */,
+				D25E420B232CC397005EE124 /* NSString+JKNormalRegex.m */,
 				D25E421A232CC398005EE124 /* NSString+JKXMLDictionary.h */,
 				D25E421D232CC398005EE124 /* UITableView+FDTemplateLayoutCell.m */,
 				D25E4224232CC398005EE124 /* UIWebView+JKWebStorage.m */,
@@ -2767,6 +2768,7 @@
 				D25E4247232CC398005EE124 /* NSString+JKBase64.h */,
 				D25E424E232CC398005EE124 /* NSBundle+JKAppIcon.h */,
 				D25E4258232CC398005EE124 /* NSData+JKPCM.h */,
+				D25E4259232CC398005EE124 /* UIImage+Avatar.h */,
 				D25E425A232CC398005EE124 /* NSManagedObject+JKDictionary.h */,
 				D293081B235D827500C54F2A /* SLChatBusiness.h */,
 				D293081F235D827900C54F2A /* NewTopListViewController.m */,
