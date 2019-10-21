@@ -1241,7 +1241,7 @@
 		D25E4294232CC39E005EE124 /* MKMapView+JKZoomLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MKMapView+JKZoomLevel.m"; path = "Untils/Exten/WebCore/MKMapView+JKZoomLevel.m"; sourceTree = SOURCE_ROOT; };
 		D25E4295232CC39E005EE124 /* NSDate+JKInternetDateTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+JKInternetDateTime.h"; path = "Untils/Exten/WebCore/NSDate+JKInternetDateTime.h"; sourceTree = SOURCE_ROOT; };
 		D25E4296232CC39F005EE124 /* UITextView+JKInputLimit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITextView+JKInputLimit.m"; path = "Untils/Exten/UITextView+JKInputLimit.m"; sourceTree = SOURCE_ROOT; };
-		D25E4297232CC39F005EE124 /* SLIsFollowAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLIsFollowAction.h; path = pop/SLIsFollowAction.h; sourceTree = SOURCE_ROOT; };
+		D25E4297232CC39F005EE124 /* SLIsFollowAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLIsFollowAction.h; path = pop/SLHelper/SLIsFollowAction.h; sourceTree = SOURCE_ROOT; };
 		D25E4298232CC39F005EE124 /* UIWindow+SLMotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIWindow+SLMotion.m"; path = "pop/SLHelper/UIWindow+SLMotion.m"; sourceTree = SOURCE_ROOT; };
 		D25E4299232CC39F005EE124 /* UITableView+FDKeyedHeightCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableView+FDKeyedHeightCache.m"; path = "pop/UITableView+FDKeyedHeightCache.m"; sourceTree = SOURCE_ROOT; };
 		D25E429A232CC39F005EE124 /* SLMeConcernListAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLMeConcernListAction.h; path = pop/SLMeConcernListAction.h; sourceTree = SOURCE_ROOT; };
@@ -1318,6 +1318,8 @@
 		D2930827235D827D00C54F2A /* SLWebViewScriptMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLWebViewScriptMessage.h; path = "../../../../../../SLHelper/pop/UITableView-FDTemplateLayoutCell/SLWebViewScriptMessage.h"; sourceTree = "<group>"; };
 		D2930828235D827F00C54F2A /* SLChatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLChatViewController.h; path = ../../../../../WebView/Base/SLChatViewController.h; sourceTree = "<group>"; };
 		D2930829235D827F00C54F2A /* AppDelegate+ShowRegisterService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "AppDelegate+ShowRegisterService.m"; path = "../../../WebView/Base/AppDelegate+ShowRegisterService.m"; sourceTree = "<group>"; };
+		D293082A235D827F00C54F2A /* SLBaseWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLBaseWebViewController.h; path = ../../../WebView/Base/SLBaseWebViewController.h; sourceTree = "<group>"; };
+		D293082B235D827F00C54F2A /* SLWeakScriptMessageDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLWeakScriptMessageDelegate.h; path = ../../../../../WebView/Base/SLWeakScriptMessageDelegate.h; sourceTree = "<group>"; };
 		D2A091F322FE908F00F8683B /* Pods-ShowLiveUITests.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveUITests.debug.xcconfig"; path = "../../../../requestAction/Pods-ShowLiveUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D2A091F422FE90A200F8683B /* Pods-ShowLiveUITests.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveUITests.debug.xcconfig"; path = "../../../../../requestAction/Pods-ShowLiveUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D2A466762323774F0057E5AD /* NewTopListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NewTopListViewController.h; path = ../../../../../../Toplist/NewTopListViewController.h; sourceTree = "<group>"; };
@@ -1789,7 +1791,6 @@
 				D25E427B232CC398005EE124 /* NSData+Image.m */,
 				D25E427C232CC398005EE124 /* NSFileManager+JKPaths.m */,
 				D25E4110232CC387005EE124 /* SLHelper.h */,
-				D25E4297232CC39F005EE124 /* SLIsFollowAction.h */,
 				D25E4128232CC38B005EE124 /* UILabel+Additional.m */,
 				4311D3EE2351FDDA006B19BE /* SLConvListSystemTableViewCell.h */,
 				4311D3E82351FDD9006B19BE /* SLConvListSystemTableViewCell.h */,
@@ -2667,7 +2668,9 @@
 				4311D3992351FD9A006B19BE /* SLChatViewController+BlankView.h */,
 				4311D3A42351FD9F006B19BE /* SLChatViewController+BlankView.h */,
 				4311D38F2351FD98006B19BE /* ShowAppDelegate.h */,
+				D25E4297232CC39F005EE124 /* SLIsFollowAction.h */,
 				D25E4282232CC39A005EE124 /* UILabel+Additional.h */,
+				D293082A235D827F00C54F2A /* SLBaseWebViewController.h */,
 				4311D3A92351FDA0006B19BE /* SLBaseWebViewController.h */,
 				4311D3962351FD99006B19BE /* SLBaseWebViewController.h */,
 				4311D3BC2351FDA4006B19BE /* SLBaseWebViewController.m */,
@@ -2740,6 +2743,7 @@
 				4311D3882351FD97006B19BE /* SLBaseWebViewRequestHelper.h */,
 				D2930826235D827D00C54F2A /* ShowNavigationBar.h */,
 				D2930827235D827D00C54F2A /* SLWebViewScriptMessage.h */,
+				D293082B235D827F00C54F2A /* SLWeakScriptMessageDelegate.h */,
 				4311D3A52351FD9F006B19BE /* SLWebViewController.h */,
 				4311D3982351FD9A006B19BE /* SLWebViewController.h */,
 				D2930824235D827C00C54F2A /* SLWebViewController.h */,
