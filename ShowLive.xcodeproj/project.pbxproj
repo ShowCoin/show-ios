@@ -406,7 +406,7 @@
 		4305635A230831250090EA36 /* UIView+Debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Debug.h"; sourceTree = "<group>"; };
 		4305635B230831250090EA36 /* POPSpringAnimationInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPSpringAnimationInternal.h; sourceTree = "<group>"; };
 		4305635C230831250090EA36 /* POPAnimatableProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAnimatableProperty.h; sourceTree = "<group>"; };
-		4305635D230831250090EA36 /* POPLayerExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POPLayerExtras.h; path = "SLHelper/pop/UITableView-FDTemplateLayoutCell/POPLayerExtras.h"; sourceTree = "<group>"; };
+		4305635D230831250090EA36 /* POPLayerExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POPLayerExtras.h; path = "../../Untils/Exten/SLHelper/pop/UITableView-FDTemplateLayoutCell/POPLayerExtras.h"; sourceTree = "<group>"; };
 		4305635E230831250090EA36 /* SLJPushUntils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLJPushUntils.m; path = "SLHelper/pop/UITableView-FDTemplateLayoutCell/SLJPushUntils.m"; sourceTree = "<group>"; };
 		4305635F230831250090EA36 /* POPGeometry.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = POPGeometry.mm; sourceTree = "<group>"; };
 		43056360230831250090EA36 /* POPAnimatablePropertyTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPAnimatablePropertyTypes.h; sourceTree = "<group>"; };
@@ -1721,7 +1721,6 @@
 				D25E421B232CC398005EE124 /* UIColor+HexString.h */,
 				D25E410B232CC386005EE124 /* UITextView+JKInputLimit.h */,
 				D25E4117232CC388005EE124 /* UITableView+FDTemplateLayoutCell.m */,
-				D25E421F232CC398005EE124 /* NSURLConnection+JKSelfSigned.m */,
 				D25E40ED232CC356005EE124 /* TODO.md */,
 				D25E4229232CC398005EE124 /* NSObject+JKReflection.h */,
 				D25E411C232CC389005EE124 /* UITableView+FDIndexPathHeightCache.m */,
@@ -1739,7 +1738,6 @@
 				D25E426A232CC398005EE124 /* UIScrollView+JKPages.h */,
 				D25E4274232CC398005EE124 /* NSDecimalNumber+JKCalculatingByString.m */,
 				D25E427A232CC398005EE124 /* NSObject+JKAssociatedObject.h */,
-				D25E427C232CC398005EE124 /* NSFileManager+JKPaths.m */,
 				4311D3EE2351FDDA006B19BE /* SLConvListSystemTableViewCell.h */,
 				4311D3E82351FDD9006B19BE /* SLConvListSystemTableViewCell.h */,
 				4311D3F02351FDDB006B19BE /* SLChatViewController+BlankView.h */,
@@ -1777,7 +1775,6 @@
 				4311D3C72351FDD3006B19BE /* SLChatBusiness.h */,
 				4311D3E72351FDD9006B19BE /* SLPureColorImageGenerate.h */,
 				4311D3CA2351FDD3006B19BE /* SLPureColorImageGenerate.h */,
-				4305635D230831250090EA36 /* POPLayerExtras.h */,
 				4311D3F22351FDDB006B19BE /* SLBlankView.h */,
 				4311D3E22351FDD8006B19BE /* SLBlankView.h */,
 				4311D3F72351FDDC006B19BE /* SLStringSizeCalculation.h */,
@@ -2605,6 +2602,7 @@
 				4311D38F2351FD98006B19BE /* ShowAppDelegate.h */,
 				D25E4279232CC398005EE124 /* SLFollowUserAction.h */,
 				D25E427B232CC398005EE124 /* NSData+Image.m */,
+				D25E427C232CC398005EE124 /* NSFileManager+JKPaths.m */,
 				D25E4110232CC387005EE124 /* SLHelper.h */,
 				D25E4297232CC39F005EE124 /* SLIsFollowAction.h */,
 				D25E4282232CC39A005EE124 /* UILabel+Additional.h */,
@@ -2685,6 +2683,7 @@
 				4311D3AE2351FDA1006B19BE /* SLPureColorImageGenerate.h */,
 				4311D38B2351FD97006B19BE /* SLPureColorImageGenerate.h */,
 				D2930838235D828B00C54F2A /* SLPureColorImageGenerate.h */,
+				4305635D230831250090EA36 /* POPLayerExtras.h */,
 				D2930822235D827A00C54F2A /* SLBlankView.h */,
 				4311D3AA2351FDA0006B19BE /* SLBlankView.h */,
 				4311D3A62351FD9F006B19BE /* SLBlankView.h */,
@@ -2785,6 +2784,7 @@
 				D25E421D232CC398005EE124 /* UITableView+FDTemplateLayoutCell.m */,
 				D25E421E232CC398005EE124 /* SLHelper.m */,
 				D25E40E9232CC355005EE124 /* SLJPushUntils.m */,
+				D25E421F232CC398005EE124 /* NSURLConnection+JKSelfSigned.m */,
 				D25E4220232CC398005EE124 /* NSString+Json.m */,
 				D25E4221232CC398005EE124 /* TODO.md */,
 				D25E4222232CC398005EE124 /* CAShapeLayer+JKUIBezierPath.h */,
