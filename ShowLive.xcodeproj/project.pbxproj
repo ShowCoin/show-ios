@@ -865,7 +865,7 @@
 		D25E4119232CC389005EE124 /* CAShapeLayerDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CAShapeLayerDemoViewController.m; path = pop/CAShapeLayerDemoViewController.m; sourceTree = SOURCE_ROOT; };
 		D25E411A232CC389005EE124 /* NSObject+JKAutoCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+JKAutoCoding.m"; path = "Untils/Exten/WebCore/NSObject+JKAutoCoding.m"; sourceTree = SOURCE_ROOT; };
 		D25E411B232CC389005EE124 /* UICollectionView+ARDynamicCacheHeightLayoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UICollectionView+ARDynamicCacheHeightLayoutCell.m"; path = "pop/UICollectionView+ARDynamicCacheHeightLayoutCell.m"; sourceTree = SOURCE_ROOT; };
-		D25E411C232CC389005EE124 /* UITableView+FDIndexPathHeightCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableView+FDIndexPathHeightCache.m"; path = "pop/UITableView+FDIndexPathHeightCache.m"; sourceTree = SOURCE_ROOT; };
+		D25E411C232CC389005EE124 /* UITableView+FDIndexPathHeightCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableView+FDIndexPathHeightCache.m"; path = "pop/SLHelper/UITableView+FDIndexPathHeightCache.m"; sourceTree = SOURCE_ROOT; };
 		D25E411D232CC389005EE124 /* NSArray+JKBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+JKBlock.h"; path = "Untils/Exten/WebCore/NSArray+JKBlock.h"; sourceTree = SOURCE_ROOT; };
 		D25E411E232CC38A005EE124 /* SLPlayAudio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLPlayAudio.m; path = pop/SLHelper/SLPlayAudio.m; sourceTree = SOURCE_ROOT; };
 		D25E411F232CC38A005EE124 /* UIWebView+Alert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIWebView+Alert.h"; path = "pop/SLHelper/UIWebView+Alert.h"; sourceTree = SOURCE_ROOT; };
@@ -1133,7 +1133,7 @@
 		D25E4228232CC398005EE124 /* UIScrollView+JKAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+JKAddition.h"; sourceTree = "<group>"; };
 		D25E4229232CC398005EE124 /* NSObject+JKReflection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JKReflection.h"; sourceTree = "<group>"; };
 		D25E422A232CC398005EE124 /* NSDate+JKUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JKUtilities.m"; sourceTree = "<group>"; };
-		D25E422B232CC398005EE124 /* MKMapView+JKMoveLogo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKMapView+JKMoveLogo.h"; sourceTree = "<group>"; };
+		D25E422B232CC398005EE124 /* MKMapView+JKMoveLogo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MKMapView+JKMoveLogo.h"; path = "../../Untils/Exten/MKMapView+JKMoveLogo.h"; sourceTree = "<group>"; };
 		D25E422C232CC398005EE124 /* NSObject+JKAutoCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JKAutoCoding.m"; sourceTree = "<group>"; };
 		D25E422D232CC398005EE124 /* UITableView+FDKeyedHeightCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDKeyedHeightCache.m"; sourceTree = "<group>"; };
 		D25E422E232CC398005EE124 /* NSNumber+JKRound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+JKRound.m"; sourceTree = "<group>"; };
@@ -1721,8 +1721,6 @@
 				D25E4117232CC388005EE124 /* UITableView+FDTemplateLayoutCell.m */,
 				D25E40ED232CC356005EE124 /* TODO.md */,
 				D25E4229232CC398005EE124 /* NSObject+JKReflection.h */,
-				D25E411C232CC389005EE124 /* UITableView+FDIndexPathHeightCache.m */,
-				D25E422B232CC398005EE124 /* MKMapView+JKMoveLogo.h */,
 				D25E4254232CC398005EE124 /* CAAnimationDemoViewController.h */,
 				D25E425E232CC398005EE124 /* NSDecimalNumber+JKExtensions.h */,
 				D25E40EA232CC355005EE124 /* UITextFieldDemoViewController.h */,
@@ -2797,8 +2795,10 @@
 				D25E4224232CC398005EE124 /* UIWebView+JKWebStorage.m */,
 				D25E4227232CC398005EE124 /* README.md */,
 				D25E4228232CC398005EE124 /* UIScrollView+JKAddition.h */,
+				D25E411C232CC389005EE124 /* UITableView+FDIndexPathHeightCache.m */,
 				D25E42A1232CC3A1005EE124 /* UITableView+FDKeyedHeightCache.h */,
 				D25E422A232CC398005EE124 /* NSDate+JKUtilities.m */,
+				D25E422B232CC398005EE124 /* MKMapView+JKMoveLogo.h */,
 				D25E422C232CC398005EE124 /* NSObject+JKAutoCoding.m */,
 				D25E4299232CC39F005EE124 /* UITableView+FDKeyedHeightCache.m */,
 				D25E422D232CC398005EE124 /* UITableView+FDKeyedHeightCache.m */,
