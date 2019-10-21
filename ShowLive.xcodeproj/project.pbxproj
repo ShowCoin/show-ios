@@ -909,7 +909,7 @@
 		D25E4145232CC390005EE124 /* NSInvocation+JKBb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSInvocation+JKBb.h"; path = "Untils/Exten/WebCore/NSInvocation+JKBb.h"; sourceTree = SOURCE_ROOT; };
 		D25E4146232CC390005EE124 /* SLMeFansListAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLMeFansListAction.h; path = pop/SLHelper/SLMeFansListAction.h; sourceTree = SOURCE_ROOT; };
 		D25E4147232CC390005EE124 /* UIView+Genie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Genie.h"; path = "Untils/Exten/WebCore/UIView+Genie.h"; sourceTree = SOURCE_ROOT; };
-		D25E4148232CC391005EE124 /* UIApplication+JKPermissions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+JKPermissions.m"; path = "pop/UIApplication+JKPermissions.m"; sourceTree = SOURCE_ROOT; };
+		D25E4148232CC391005EE124 /* UIApplication+JKPermissions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+JKPermissions.m"; path = "pop/SLHelper/UIApplication+JKPermissions.m"; sourceTree = SOURCE_ROOT; };
 		D25E4149232CC391005EE124 /* NSDictionary+JKSafeAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+JKSafeAccess.m"; path = "pop/NSDictionary+JKSafeAccess.m"; sourceTree = SOURCE_ROOT; };
 		D25E414A232CC391005EE124 /* NSSet+JKBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSSet+JKBlock.m"; path = "Untils/Exten/WebCore/NSSet+JKBlock.m"; sourceTree = SOURCE_ROOT; };
 		D25E414B232CC391005EE124 /* UIResponder+JKFirstResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIResponder+JKFirstResponder.m"; path = "Untils/Exten/UIResponder+JKFirstResponder.m"; sourceTree = SOURCE_ROOT; };
@@ -933,7 +933,7 @@
 		D25E415D232CC394005EE124 /* POPPropertyAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POPPropertyAnimation.h; path = Untils/Exten/WebCore/POPPropertyAnimation.h; sourceTree = SOURCE_ROOT; };
 		D25E415E232CC394005EE124 /* UIScrollView+EmptyDataSet.h~fc6ed825c6150727967b55cf2a4e012515dba0e3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "UIScrollView+EmptyDataSet.h~fc6ed825c6150727967b55cf2a4e012515dba0e3"; path = "Untils/Exten/UIScrollView+EmptyDataSet.h~fc6ed825c6150727967b55cf2a4e012515dba0e3"; sourceTree = SOURCE_ROOT; };
 		D25E415F232CC394005EE124 /* UIScrollView+APParallaxHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+APParallaxHeader.m"; path = "pop/UIScrollView+APParallaxHeader.m"; sourceTree = SOURCE_ROOT; };
-		D25E4160232CC394005EE124 /* UIWebVIew+JKSwipeGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIWebVIew+JKSwipeGesture.h"; path = "pop/UIWebVIew+JKSwipeGesture.h"; sourceTree = SOURCE_ROOT; };
+		D25E4160232CC394005EE124 /* UIWebVIew+JKSwipeGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIWebVIew+JKSwipeGesture.h"; path = "pop/SLHelper/UIWebVIew+JKSwipeGesture.h"; sourceTree = SOURCE_ROOT; };
 		D25E4161232CC395005EE124 /* POPAnimationEvent.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = POPAnimationEvent.mm; path = pop/POPAnimationEvent.mm; sourceTree = SOURCE_ROOT; };
 		D25E4162232CC395005EE124 /* NSDecimalNumber+JKExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDecimalNumber+JKExtensions.h"; path = "Untils/Exten/WebCore/NSDecimalNumber+JKExtensions.h"; sourceTree = SOURCE_ROOT; };
 		D25E4163232CC395005EE124 /* MKMapView+JKBetterMaps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MKMapView+JKBetterMaps.m"; path = "Untils/Exten/WebCore/MKMapView+JKBetterMaps.m"; sourceTree = SOURCE_ROOT; };
@@ -1326,6 +1326,7 @@
 		D293082F235D828300C54F2A /* SLWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLWebViewController.h; path = ../../../WebView/SLWebViewController.h; sourceTree = "<group>"; };
 		D2930830235D828300C54F2A /* NewTopListHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NewTopListHeader.h; path = ../../../../../WebView/Base/NewTopListHeader.h; sourceTree = "<group>"; };
 		D2930831235D828300C54F2A /* SLChatBusiness.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLChatBusiness.h; path = ../../../../../WebView/Base/SLChatBusiness.h; sourceTree = "<group>"; };
+		D2930832235D828400C54F2A /* NewTopListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = NewTopListCell.m; path = ../../../../../WebView/Base/NewTopListCell.m; sourceTree = "<group>"; };
 		D2A091F322FE908F00F8683B /* Pods-ShowLiveUITests.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveUITests.debug.xcconfig"; path = "../../../../requestAction/Pods-ShowLiveUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D2A091F422FE90A200F8683B /* Pods-ShowLiveUITests.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveUITests.debug.xcconfig"; path = "../../../../../requestAction/Pods-ShowLiveUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D2A466762323774F0057E5AD /* NewTopListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NewTopListViewController.h; path = ../../../../../../Toplist/NewTopListViewController.h; sourceTree = "<group>"; };
@@ -1723,7 +1724,6 @@
 				D25E415F232CC394005EE124 /* UIScrollView+APParallaxHeader.m */,
 				D25E4201232CC397005EE124 /* NSDateFormatter+JKMake.m */,
 				D25E40E8232CC355005EE124 /* CATransaction+JKAnimateWithDuration.m */,
-				D25E4160232CC394005EE124 /* UIWebVIew+JKSwipeGesture.h */,
 				D25E420D232CC397005EE124 /* NSData+JKPCM.m */,
 				D25E420E232CC397005EE124 /* UIImage+Avatar.m */,
 				D25E4102232CC384005EE124 /* UIWindow+JKHierarchy.m */,
@@ -1762,7 +1762,6 @@
 				D25E4243232CC398005EE124 /* NSString+JKRemoveEmoji.m */,
 				D25E4244232CC398005EE124 /* UITextView+JKPlaceHolder.h */,
 				D25E4246232CC398005EE124 /* UIView+Additional.h */,
-				D25E4148232CC391005EE124 /* UIApplication+JKPermissions.m */,
 				D25E4254232CC398005EE124 /* CAAnimationDemoViewController.h */,
 				D25E425E232CC398005EE124 /* NSDecimalNumber+JKExtensions.h */,
 				D25E425F232CC398005EE124 /* NSString+MD5.m */,
@@ -2695,6 +2694,7 @@
 				D2930823235D827C00C54F2A /* SLBaseWebViewController.m */,
 				D2930825235D827C00C54F2A /* AppDelegate+ShowRegisterService.h */,
 				D2930829235D827F00C54F2A /* AppDelegate+ShowRegisterService.m */,
+				D2930832235D828400C54F2A /* NewTopListCell.m */,
 				4311D38A2351FD97006B19BE /* NewTopListViewController.h */,
 				4311D3942351FD99006B19BE /* SLWebViewJSFuncNameConst.m */,
 				D2930828235D827F00C54F2A /* SLChatViewController.h */,
@@ -2772,6 +2772,7 @@
 				D25E420B232CC397005EE124 /* NSString+JKNormalRegex.m */,
 				D25E420C232CC397005EE124 /* UIView+JKVisuals.h */,
 				D25E411F232CC38A005EE124 /* UIWebView+Alert.h */,
+				D25E4160232CC394005EE124 /* UIWebVIew+JKSwipeGesture.h */,
 				D25E4101232CC384005EE124 /* UIWebVIew+JKSwipeGesture.m */,
 				D25E4113232CC388005EE124 /* UIWindow+JKHierarchy.h */,
 				D25E4212232CC397005EE124 /* NSObject+JKAssociatedObject.m */,
@@ -2786,6 +2787,7 @@
 				D25E4245232CC398005EE124 /* UINavigationController+JKTransitions.h */,
 				D25E410D232CC387005EE124 /* UIView+Additional.h */,
 				D25E4247232CC398005EE124 /* NSString+JKBase64.h */,
+				D25E4148232CC391005EE124 /* UIApplication+JKPermissions.m */,
 				D25E424E232CC398005EE124 /* NSBundle+JKAppIcon.h */,
 				D25E4258232CC398005EE124 /* NSData+JKPCM.h */,
 				D25E4259232CC398005EE124 /* UIImage+Avatar.h */,
