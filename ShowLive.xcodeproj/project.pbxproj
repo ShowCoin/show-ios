@@ -1382,7 +1382,7 @@
 		D2A466B3232377CD0057E5AD /* SLBaseWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SLBaseWebViewController.m; path = ../../../../../../WebView/Base/SLBaseWebViewController.m; sourceTree = "<group>"; };
 		D2A466B4232377CD0057E5AD /* SLChatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLChatViewController.h; path = ../../../../../../WebView/Base/SLChatViewController.h; sourceTree = "<group>"; };
 		D2A466B5232377CD0057E5AD /* ShowAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ShowAppDelegate.h; path = ../../../../../../WebView/Base/ShowAppDelegate.h; sourceTree = "<group>"; };
-		D2A466B6232377D50057E5AD /* SLChatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLChatViewController.h; sourceTree = "<group>"; };
+		D2A466B6232377D50057E5AD /* SLChatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLChatViewController.h; path = ../../Untils/Exten/SLChatViewController.h; sourceTree = "<group>"; };
 		D2A466B7232377D50057E5AD /* NewTopListHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = NewTopListHeader.m; path = ../../../WebView/Base/NewTopListHeader.m; sourceTree = "<group>"; };
 		D2A466B8232377D50057E5AD /* NewTopListHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NewTopListHeader.h; path = ../../../../../WebView/Base/NewTopListHeader.h; sourceTree = "<group>"; };
 		D2A466B9232377D50057E5AD /* SLWeakScriptMessageDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLWeakScriptMessageDelegate.h; path = ../../../WebView/Base/SLWeakScriptMessageDelegate.h; sourceTree = "<group>"; };
@@ -1690,7 +1690,6 @@
 				D25E41DC232CC397005EE124 /* NSString+Replace.m */,
 				D25E41DD232CC397005EE124 /* UIView+SLComOpenThreadOTScreenshotHelperStatusBarReference.h */,
 				D25E41DF232CC397005EE124 /* UILabel+Category.h */,
-				D25E41E0232CC397005EE124 /* NSObject+NSInteger.h */,
 				D25E41E1232CC397005EE124 /* NSTimer+MSBlock.m */,
 				D25E41E2232CC397005EE124 /* NSDate+SLStringFormat.h */,
 				D25E41E4232CC397005EE124 /* UITextView+JKPinchZoom.m */,
@@ -1703,9 +1702,7 @@
 				D25E41ED232CC397005EE124 /* UIControl+BlocksKit.h */,
 				D25E41EE232CC397005EE124 /* NSString+JKEmoji.m */,
 				D25E41EF232CC397005EE124 /* NSString+JKBase64.m */,
-				D25E41F0232CC397005EE124 /* UINavigationController+JKTransitions.m */,
 				D25E41F1232CC397005EE124 /* POPDecayAnimationInternal.h */,
-				D25E41F4232CC397005EE124 /* UIResponderDemoViewController.h */,
 				D25E41F5232CC397005EE124 /* NSData+JKGzip.h */,
 				D25E41F6232CC397005EE124 /* UIPopoverController+iPhone.m */,
 				D25E40FC232CC383005EE124 /* UITextField+JKHistory.h */,
@@ -1832,7 +1829,6 @@
 				D25E429F232CC3A0005EE124 /* SLGetRyTokenAction.m */,
 				D25E4109232CC386005EE124 /* SLGetWithdrawAddressAction.h */,
 				4311D3DE2351FDD7006B19BE /* SLWebViewJSFuncNameConst.m */,
-				D2A466B6232377D50057E5AD /* SLChatViewController.h */,
 				4311D3C92351FDD3006B19BE /* SLChatViewController.h */,
 				4311D3E12351FDD8006B19BE /* SLBlankView.m */,
 				4311D3D22351FDD5006B19BE /* SLBlankView.m */,
@@ -2708,6 +2704,7 @@
 				D25E4139232CC38E005EE124 /* UISplitViewController+JKQuickAccess.m */,
 				D25E4298232CC39F005EE124 /* UIWindow+SLMotion.m */,
 				D25E427D232CC399005EE124 /* SLHeadPortrait.m */,
+				D2A466B6232377D50057E5AD /* SLChatViewController.h */,
 				4311D3972351FD9A006B19BE /* SLBlankView.m */,
 				4311D3AC2351FDA1006B19BE /* SLBlankView.m */,
 				D293081C235D827600C54F2A /* NewTopListViewController.h */,
@@ -2748,12 +2745,15 @@
 				4311D38D2351FD98006B19BE /* SLWebViewJSFuncNameConst.h */,
 				D25E41D4232CC397005EE124 /* UIColor+Category.m */,
 				D25E41DE232CC397005EE124 /* NSString+Binary.m */,
+				D25E41E0232CC397005EE124 /* NSObject+NSInteger.h */,
 				D25E41E3232CC397005EE124 /* UIScreen+JKFrame.m */,
 				D25E41E6232CC397005EE124 /* POPAnimationExtras.h */,
 				D25E41E8232CC397005EE124 /* UINavigationController+JKStackManager.m */,
 				D25E41EC232CC397005EE124 /* NSManagedObjectContext+JKFetchRequestsConstructors.h */,
+				D25E41F0232CC397005EE124 /* UINavigationController+JKTransitions.m */,
 				D25E41F2232CC397005EE124 /* UITableViewCell+JKDelaysContentTouches.h */,
 				D25E41F3232CC397005EE124 /* NSDictionary+JKJSONString.h */,
+				D25E41F4232CC397005EE124 /* UIResponderDemoViewController.h */,
 				D25E41F9232CC397005EE124 /* NSData+JKHash.m */,
 				D25E4200232CC397005EE124 /* UIScrollView+APParallaxHeader.m */,
 				D25E413C232CC38F005EE124 /* UnitBezier.h */,
