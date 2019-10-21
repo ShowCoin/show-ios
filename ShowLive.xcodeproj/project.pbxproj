@@ -864,7 +864,7 @@
 		D25E4118232CC388005EE124 /* UIWindow+SLMotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIWindow+SLMotion.h"; path = "pop/UIWindow+SLMotion.h"; sourceTree = SOURCE_ROOT; };
 		D25E4119232CC389005EE124 /* CAShapeLayerDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CAShapeLayerDemoViewController.m; path = pop/CAShapeLayerDemoViewController.m; sourceTree = SOURCE_ROOT; };
 		D25E411A232CC389005EE124 /* NSObject+JKAutoCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+JKAutoCoding.m"; path = "Untils/Exten/WebCore/NSObject+JKAutoCoding.m"; sourceTree = SOURCE_ROOT; };
-		D25E411B232CC389005EE124 /* UICollectionView+ARDynamicCacheHeightLayoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UICollectionView+ARDynamicCacheHeightLayoutCell.m"; path = "pop/UICollectionView+ARDynamicCacheHeightLayoutCell.m"; sourceTree = SOURCE_ROOT; };
+		D25E411B232CC389005EE124 /* UICollectionView+ARDynamicCacheHeightLayoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UICollectionView+ARDynamicCacheHeightLayoutCell.m"; path = "pop/SLHelper/UICollectionView+ARDynamicCacheHeightLayoutCell.m"; sourceTree = SOURCE_ROOT; };
 		D25E411C232CC389005EE124 /* UITableView+FDIndexPathHeightCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableView+FDIndexPathHeightCache.m"; path = "pop/SLHelper/UITableView+FDIndexPathHeightCache.m"; sourceTree = SOURCE_ROOT; };
 		D25E411D232CC389005EE124 /* NSArray+JKBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+JKBlock.h"; path = "Untils/Exten/WebCore/NSArray+JKBlock.h"; sourceTree = SOURCE_ROOT; };
 		D25E411E232CC38A005EE124 /* SLPlayAudio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLPlayAudio.m; path = pop/SLHelper/SLPlayAudio.m; sourceTree = SOURCE_ROOT; };
@@ -1716,7 +1716,6 @@
 				D25E40EB232CC355005EE124 /* UITextField+JKBlocks.h */,
 				D25E41E9232CC397005EE124 /* NSData+ImageContentType.h */,
 				D25E41F5232CC397005EE124 /* NSData+JKGzip.h */,
-				D25E415F232CC394005EE124 /* UIScrollView+APParallaxHeader.m */,
 				D25E421B232CC398005EE124 /* UIColor+HexString.h */,
 				D25E410B232CC386005EE124 /* UITextView+JKInputLimit.h */,
 				D25E4117232CC388005EE124 /* UITableView+FDTemplateLayoutCell.m */,
@@ -1724,7 +1723,6 @@
 				D25E4254232CC398005EE124 /* CAAnimationDemoViewController.h */,
 				D25E425E232CC398005EE124 /* NSDecimalNumber+JKExtensions.h */,
 				D25E4265232CC398005EE124 /* SLUrgeListAction.h */,
-				D25E411B232CC389005EE124 /* UICollectionView+ARDynamicCacheHeightLayoutCell.m */,
 				D25E4269232CC398005EE124 /* UIImage+Additional.m */,
 				D25E426A232CC398005EE124 /* UIScrollView+JKPages.h */,
 				D25E4274232CC398005EE124 /* NSDecimalNumber+JKCalculatingByString.m */,
@@ -2637,6 +2635,7 @@
 				D25E4263232CC398005EE124 /* NSNotificationCenterDemoViewController.m */,
 				D25E40EA232CC355005EE124 /* UITextFieldDemoViewController.h */,
 				D25E4264232CC398005EE124 /* UITextFieldDemoViewController.h */,
+				D25E411B232CC389005EE124 /* UICollectionView+ARDynamicCacheHeightLayoutCell.m */,
 				D25E42A3232CC3A1005EE124 /* UIGestureRecognizer+BlocksKit.m */,
 				D25E4266232CC398005EE124 /* NSData+JKHash.h */,
 				D25E4127232CC38B005EE124 /* UIImage+Additional.h */,
@@ -2769,6 +2768,7 @@
 				D25E41FA232CC397005EE124 /* CAShapeLayerDemoViewController.h */,
 				D25E41FB232CC397005EE124 /* NSNotificationCenterDemoViewController.h */,
 				D25E41FC232CC397005EE124 /* POPAnimationPrivate.h */,
+				D25E415F232CC394005EE124 /* UIScrollView+APParallaxHeader.m */,
 				D25E4200232CC397005EE124 /* UIScrollView+APParallaxHeader.m */,
 				D25E4201232CC397005EE124 /* NSDateFormatter+JKMake.m */,
 				D25E413C232CC38F005EE124 /* UnitBezier.h */,
