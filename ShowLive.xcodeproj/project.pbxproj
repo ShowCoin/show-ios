@@ -1052,7 +1052,7 @@
 		D25E41D7232CC397005EE124 /* UIImage+Gradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Gradient.m"; sourceTree = "<group>"; };
 		D25E41D8232CC397005EE124 /* UIView+Constraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Constraint.h"; sourceTree = "<group>"; };
 		D25E41D9232CC397005EE124 /* UITextField+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Category.m"; sourceTree = "<group>"; };
-		D25E41DA232CC397005EE124 /* UIButton+EnlargeTouchArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIButton+EnlargeTouchArea.m"; path = "../../pop/SLHelper/pop/UIButton+EnlargeTouchArea.m"; sourceTree = "<group>"; };
+		D25E41DA232CC397005EE124 /* UIButton+EnlargeTouchArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIButton+EnlargeTouchArea.m"; path = "pop/UIButton+EnlargeTouchArea.m"; sourceTree = "<group>"; };
 		D25E41DB232CC397005EE124 /* UIViewController+XHPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+XHPhoto.m"; sourceTree = "<group>"; };
 		D25E41DC232CC397005EE124 /* NSString+Replace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Replace.m"; sourceTree = "<group>"; };
 		D25E41DD232CC397005EE124 /* UIView+SLComOpenThreadOTScreenshotHelperStatusBarReference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SLComOpenThreadOTScreenshotHelperStatusBarReference.h"; sourceTree = "<group>"; };
@@ -1316,6 +1316,8 @@
 		D2930825235D827C00C54F2A /* AppDelegate+ShowRegisterService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AppDelegate+ShowRegisterService.h"; path = "../../../../../WebView/Base/AppDelegate+ShowRegisterService.h"; sourceTree = "<group>"; };
 		D2930826235D827D00C54F2A /* ShowNavigationBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ShowNavigationBar.h; path = ../../../../../WebView/Base/ShowNavigationBar.h; sourceTree = "<group>"; };
 		D2930827235D827D00C54F2A /* SLWebViewScriptMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLWebViewScriptMessage.h; path = "../../../../../../SLHelper/pop/UITableView-FDTemplateLayoutCell/SLWebViewScriptMessage.h"; sourceTree = "<group>"; };
+		D2930828235D827F00C54F2A /* SLChatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLChatViewController.h; path = ../../../../../WebView/Base/SLChatViewController.h; sourceTree = "<group>"; };
+		D2930829235D827F00C54F2A /* AppDelegate+ShowRegisterService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "AppDelegate+ShowRegisterService.m"; path = "../../../WebView/Base/AppDelegate+ShowRegisterService.m"; sourceTree = "<group>"; };
 		D2A091F322FE908F00F8683B /* Pods-ShowLiveUITests.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveUITests.debug.xcconfig"; path = "../../../../requestAction/Pods-ShowLiveUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D2A091F422FE90A200F8683B /* Pods-ShowLiveUITests.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Pods-ShowLiveUITests.debug.xcconfig"; path = "../../../../../requestAction/Pods-ShowLiveUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D2A466762323774F0057E5AD /* NewTopListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NewTopListViewController.h; path = ../../../../../../Toplist/NewTopListViewController.h; sourceTree = "<group>"; };
@@ -1685,7 +1687,6 @@
 				D25E41D7232CC397005EE124 /* UIImage+Gradient.m */,
 				D25E41D8232CC397005EE124 /* UIView+Constraint.h */,
 				D25E41D9232CC397005EE124 /* UITextField+Category.m */,
-				D25E41DA232CC397005EE124 /* UIButton+EnlargeTouchArea.m */,
 				D25E41DB232CC397005EE124 /* UIViewController+XHPhoto.m */,
 				D25E41DC232CC397005EE124 /* NSString+Replace.m */,
 				D25E41DD232CC397005EE124 /* UIView+SLComOpenThreadOTScreenshotHelperStatusBarReference.h */,
@@ -2697,8 +2698,10 @@
 				D293081D235D827700C54F2A /* SLBaseWebViewController.h */,
 				D2930823235D827C00C54F2A /* SLBaseWebViewController.m */,
 				D2930825235D827C00C54F2A /* AppDelegate+ShowRegisterService.h */,
+				D2930829235D827F00C54F2A /* AppDelegate+ShowRegisterService.m */,
 				4311D38A2351FD97006B19BE /* NewTopListViewController.h */,
 				4311D3942351FD99006B19BE /* SLWebViewJSFuncNameConst.m */,
+				D2930828235D827F00C54F2A /* SLChatViewController.h */,
 				4311D3A12351FD9E006B19BE /* SLChatViewController.h */,
 				D25E4139232CC38E005EE124 /* UISplitViewController+JKQuickAccess.m */,
 				D25E4298232CC39F005EE124 /* UIWindow+SLMotion.m */,
@@ -2743,6 +2746,7 @@
 				4311D3BB2351FDA4006B19BE /* SLWebViewJSFuncNameConst.h */,
 				4311D38D2351FD98006B19BE /* SLWebViewJSFuncNameConst.h */,
 				D25E41D4232CC397005EE124 /* UIColor+Category.m */,
+				D25E41DA232CC397005EE124 /* UIButton+EnlargeTouchArea.m */,
 				D25E41DE232CC397005EE124 /* NSString+Binary.m */,
 				D25E41E0232CC397005EE124 /* NSObject+NSInteger.h */,
 				D25E41E3232CC397005EE124 /* UIScreen+JKFrame.m */,
