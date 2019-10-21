@@ -849,7 +849,7 @@
 		D25E4109232CC386005EE124 /* SLGetWithdrawAddressAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLGetWithdrawAddressAction.h; path = Untils/Exten/SLGetWithdrawAddressAction.h; sourceTree = SOURCE_ROOT; };
 		D25E410A232CC386005EE124 /* UIImage+Effects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Effects.h"; path = "pop/UIImage+Effects.h"; sourceTree = SOURCE_ROOT; };
 		D25E410B232CC386005EE124 /* UITextView+JKInputLimit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITextView+JKInputLimit.h"; path = "pop/UITextView+JKInputLimit.h"; sourceTree = SOURCE_ROOT; };
-		D25E410C232CC386005EE124 /* UIScrollView+APParallaxHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+APParallaxHeader.h"; path = "Untils/Exten/UIScrollView+APParallaxHeader.h"; sourceTree = SOURCE_ROOT; };
+		D25E410C232CC386005EE124 /* UIScrollView+APParallaxHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+APParallaxHeader.h"; path = "pop/SLHelper/UIScrollView+APParallaxHeader.h"; sourceTree = SOURCE_ROOT; };
 		D25E410D232CC387005EE124 /* UIView+Additional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Additional.h"; path = "pop/SLHelper/UIView+Additional.h"; sourceTree = SOURCE_ROOT; };
 		D25E410E232CC387005EE124 /* UIView+Debug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Debug.m"; path = "Untils/Exten/WebCore/UIView+Debug.m"; sourceTree = SOURCE_ROOT; };
 		D25E410F232CC387005EE124 /* NSBundle+JKAppIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSBundle+JKAppIcon.m"; path = "pop/NSBundle+JKAppIcon.m"; sourceTree = SOURCE_ROOT; };
@@ -1698,7 +1698,6 @@
 				D25E41D3232CC397005EE124 /* NSString+SLPictureChoice.h */,
 				D25E41D5232CC397005EE124 /* UIColor+SLExtend.h */,
 				D25E41D6232CC397005EE124 /* UIView+Additions.h */,
-				D25E41D9232CC397005EE124 /* UITextField+Category.m */,
 				D25E41DB232CC397005EE124 /* UIViewController+XHPhoto.m */,
 				D25E41DD232CC397005EE124 /* UIView+SLComOpenThreadOTScreenshotHelperStatusBarReference.h */,
 				D25E41E1232CC397005EE124 /* NSTimer+MSBlock.m */,
@@ -1790,7 +1789,6 @@
 				4311D3D82351FDD6006B19BE /* NewTopListViewController.h */,
 				4311D3D92351FDD6006B19BE /* NewTopListViewController.h */,
 				D25E4121232CC38A005EE124 /* UIPopoverController+iPhone.h */,
-				D25E410C232CC386005EE124 /* UIScrollView+APParallaxHeader.h */,
 				D25E4108232CC386005EE124 /* UIScrollView+EmptyDataSet.h */,
 				D25E4151232CC392005EE124 /* UITableView+FDIndexPathHeightCache.h */,
 				D25E429F232CC3A0005EE124 /* SLGetRyTokenAction.m */,
@@ -2678,6 +2676,7 @@
 				4311D3942351FD99006B19BE /* SLWebViewJSFuncNameConst.m */,
 				D2930828235D827F00C54F2A /* SLChatViewController.h */,
 				4311D3A12351FD9E006B19BE /* SLChatViewController.h */,
+				D25E410C232CC386005EE124 /* UIScrollView+APParallaxHeader.h */,
 				D25E415E232CC394005EE124 /* UIScrollView+EmptyDataSet.h~fc6ed825c6150727967b55cf2a4e012515dba0e3 */,
 				D25E4139232CC38E005EE124 /* UISplitViewController+JKQuickAccess.m */,
 				D25E4298232CC39F005EE124 /* UIWindow+SLMotion.m */,
@@ -2735,6 +2734,7 @@
 				D25E41D4232CC397005EE124 /* UIColor+Category.m */,
 				D25E41D7232CC397005EE124 /* UIImage+Gradient.m */,
 				D25E41D8232CC397005EE124 /* UIView+Constraint.h */,
+				D25E41D9232CC397005EE124 /* UITextField+Category.m */,
 				D25E41DA232CC397005EE124 /* UIButton+EnlargeTouchArea.m */,
 				D25E41DC232CC397005EE124 /* NSString+Replace.m */,
 				D25E41DE232CC397005EE124 /* NSString+Binary.m */,
