@@ -83,3 +83,46 @@
     }
     return self;
 }
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    CGFloat w = CGRectGetWidth(self.frame);
+    CGFloat h = CGRectGetHeight(self.frame);
+    
+    CGFloat viewX = 0;
+    CGFloat viewY = 0;
+    CGFloat viewW = 0;
+    CGFloat viewH = 0;
+    
+    self.textLabel.frame = self.bounds;
+    
+    viewX = 0;
+    viewH = 1;
+    viewY = h - 1;
+    viewW = w;
+    self.line.frame = CGRectMake(viewX, viewY, viewW, viewH);
+}
+
+- (UILabel *)textLabel {
+    if (!_textLabel) {
+        _textLabel = [[UILabel alloc] init];
+        _textLabel.font = [UIFont sl_fontMediumOfSize:24];
+        _textLabel.textColor = kTextWithb6;
+        _textLabel.textAlignment = NSTextAlignmentCenter;
+    }
+    return _textLabel;
+}
+
+- (UIView *)line {
+    if (!_line) {
+        _line = [[UIView alloc] init];
+        _line.backgroundColor = kTextWithb6;
+    }
+    return _line;
+}
+
++ (NSString *)cellID {
+    return NSStringFromClass(self.class);
+}
+
+@end
