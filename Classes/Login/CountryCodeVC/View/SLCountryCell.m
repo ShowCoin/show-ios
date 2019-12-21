@@ -12,7 +12,7 @@
 
 /// initWithStyle
 /// @param style cell style
-/// @param reuseIdentifier <#reuseIdentifier description#>
+/// @param reuseIdentifier reuseIdentifier
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
