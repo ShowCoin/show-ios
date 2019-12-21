@@ -71,3 +71,15 @@
 }
 
 @end
+
+@implementation DCCodeCell
+
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self.contentView addSubview:self.textLabel];
+        [self.contentView addSubview:self.line];
+    }
+    return self;
+}
