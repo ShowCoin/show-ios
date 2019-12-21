@@ -102,10 +102,10 @@
 }
 - (void)setModel:(TransactionRecordsModel *)model
 {
-    self.countLabel.text =@"+3.5000 秀币";
-    self.dateLabel.text= @"3/24/2018";
-    self.addressLabel.text = @"0xf416c78de9f3...2f837492a2be6c";
-    self.nameLabel.text= @"Binantt Jia";
+//    self.countLabel.text =@"+3.5000 秀币";
+//    self.dateLabel.text= @"3/24/2018";
+//    self.addressLabel.text = @"0xf416c78de9f3...2f837492a2be6c";
+//    self.nameLabel.text= @"Binantt Jia";
 
 }
 - (void)awakeFromNib {
