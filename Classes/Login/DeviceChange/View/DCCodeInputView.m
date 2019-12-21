@@ -50,3 +50,24 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     return [collectionView dequeueReusableCellWithReuseIdentifier:DCCodeCell.cellID forIndexPath:indexPath];
 }
+
+- (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(DCCodeCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
+    cell.textLabel.text = self.items[indexPath.item];
+}
+
+- (void)setText:(NSString *)text {
+    _text = text;
+    NSMutableArray *tmp = [NSMutableArray array];
+    for (int i = 0; i < text.length; i ++) {
+        NSString *c = [text substringWithRange:NSMakeRange(i, 1)];
+        [tmp addObject:c];
+    }
+    NSUInteger count = kDCGoogleCodeLength - tmp.count;
+    while (count--) {
+        [tmp addObject:@""];
+    }
+    self.items = tmp;
+    [self reloadData];
+}
+
+@end
