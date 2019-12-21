@@ -194,7 +194,11 @@
                 self.statusLabel.textColor = kThemeRedColor;
 
                 break;
+            case 3:
+            self.statusLabel.text = @"放币中";
+            self.statusLabel.textColor = kThemeRedColor;
 
+            break;
             default:
                 break;
         }
