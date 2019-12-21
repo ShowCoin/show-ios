@@ -63,13 +63,6 @@
     cell.textLabel.text = self.rows[indexPath.row];
 }
 
-/// didSelectRowAtIndexPath selectBlock
-/// @param tableView <#tableView description#>
-/// @param indexPath didSelectRowAtIndexPath
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (self.selectBlock) self.selectBlock(self.rows[indexPath.row]);
-}
-
 #pragma mark - lazy
 
 /// tableView
