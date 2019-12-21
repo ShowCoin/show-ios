@@ -43,8 +43,8 @@
 -(UIImageView*)backView
 {
     if (!_backView) {
-        _backView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kMainScreenWidth, self.height)];
-        _backView.backgroundColor = kThemeYellowColor;
+//        _backView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kMainScreenWidth, self.height)];
+//        _backView.backgroundColor = kThemeYellowColor;
         _backView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, kMainScreenWidth, self.height)];
         [_backView setImage:[UIImage imageNamed:@"wallet_bg"]];
     }
@@ -62,7 +62,7 @@
 {
     if (!_RmbNumLabel) {
         CGFloat rmb = AccountUserInfoModel.showCoinNum.floatValue/100;
-        _RmbNumLabel = [UILabel labelWithFrame:CGRectMake(0, _coinNumLabel.bottom+5*Proportion375, self.width, 18*Proportion375) text:[NSString stringWithFormat:@"",rmb] textColor:kThemeWhiteColor font:Font_Regular(18*WScale)   backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentCenter];
+        _RmbNumLabel = [UILabel labelWithFrame:CGRectMake(0, _coinNumLabel.bottom+5*Proportion375, self.width, 18*Proportion375) text:[NSString stringWithFormat:@"%.2f 元",rmb] textColor:kThemeWhiteColor font:Font_Regular(18*WScale)   backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentCenter];
 
     }
     return _RmbNumLabel;
