@@ -126,3 +126,23 @@
 }
 
 @end
+
+@implementation DCCodeFlowLayout
+
+- (void)prepareLayout {
+    [super prepareLayout];
+    
+    self.minimumLineSpacing = 10;
+    self.minimumInteritemSpacing = 0;
+    self.sectionInset = UIEdgeInsetsMake(0, 16, 0, 16);
+    
+    CGFloat w = CGRectGetWidth(self.collectionView.frame);
+    CGFloat h = CGRectGetHeight(self.collectionView.frame);
+    CGFloat itemW = ((w - self.sectionInset.left - self.sectionInset.right) - 10 * 5) / 6;
+    CGFloat itemH = h;
+    self.itemSize = CGSizeMake(itemW, itemH);
+    self.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+}
+
+@end
+
