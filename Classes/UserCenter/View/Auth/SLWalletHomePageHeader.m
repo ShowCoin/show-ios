@@ -36,16 +36,16 @@
         [self.BGBottomimgView addSubview:self.showPriceDisplayLab];
         [self.BGBottomimgView addSubview:self.showPriceDisplayImg];
         
-        [self.BGBottomimgView addSubview:self.showDayLowPriceLabNum];
-        [self.BGBottomimgView addSubview:self.showDayLowPriceLab];
-        [self.BGBottomimgView addSubview:self.showDayHighPriceLabNum];
-        [self.BGBottomimgView addSubview:self.showDayHighPriceLab];
-        
-        [self.BGBottomimgView addSubview:self.showDayDealLabNum];
-        [self.BGBottomimgView addSubview:self.showDayDealLab];
-        [self.BGBottomimgView addSubview:self.showValueLabNum];
-        [self.BGBottomimgView addSubview:self.showValueLab];
-        [self.BGBottomimgView addSubview:self.showMarketNum];
+//        [self.BGBottomimgView addSubview:self.showDayLowPriceLabNum];
+//        [self.BGBottomimgView addSubview:self.showDayLowPriceLab];
+//        [self.BGBottomimgView addSubview:self.showDayHighPriceLabNum];
+//        [self.BGBottomimgView addSubview:self.showDayHighPriceLab];
+//
+//        [self.BGBottomimgView addSubview:self.showDayDealLabNum];
+//        [self.BGBottomimgView addSubview:self.showDayDealLab];
+//        [self.BGBottomimgView addSubview:self.showValueLabNum];
+//        [self.BGBottomimgView addSubview:self.showValueLab];
+//        [self.BGBottomimgView addSubview:self.showMarketNum];
         
 //        [self.BGimgView addSubview:self.dealButton];
         
@@ -124,7 +124,7 @@
 -(UILabel*)showLab
 {
     if (!_showLab) {
-        _showLab = [UILabel labelWithFrame:CGRectMake(0, _headerImage.bottom+80*Proportion375, self.width, 13*Proportion375) text:@"SHOW" textColor:kTextWith8b font:Font_Regular(13*WScale)  backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentCenter];
+        _showLab = [UILabel labelWithFrame:CGRectMake(0, _headerImage.bottom+80*Proportion375, self.width, 13*Proportion375) text:@"" textColor:kTextWith8b font:Font_Regular(13*WScale)  backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentCenter];
         
     }
     return _showLab;
@@ -132,7 +132,7 @@
 -(UILabel*)showTLab
 {
     if (!_showTLab) {
-        _showTLab = [UILabel labelWithFrame:CGRectMake(0, _headerImage.bottom + 110 *Proportion375, 80*Proportion375, 10*Proportion375) text:@"SHOW" textColor:kTextWith8b font:Font_Regular(10*Proportion375)  backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentRight];
+        _showTLab = [UILabel labelWithFrame:CGRectMake(0, _headerImage.bottom + 110 *Proportion375, 80*Proportion375, 10*Proportion375) text:@"" textColor:kTextWith8b font:Font_Regular(10*Proportion375)  backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentRight];
         _showTLab.right = kMainScreenWidth -16*Proportion375;
     }
     return _showTLab;
@@ -140,7 +140,7 @@
 -(UILabel*)showPriceLab
 {
     if (!_showPriceLab) {
-        _showPriceLab = [UILabel labelWithFrame:CGRectMake(0, _showTLab.top, self.width, 10*Proportion375) text:@"0CNY" textColor:kTextWith8b font:Font_engRegular(10*WScale)  backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentRight];
+        _showPriceLab = [UILabel labelWithFrame:CGRectMake(0, _showTLab.top, self.width, 10*Proportion375) text:@"" textColor:kTextWith8b font:Font_engRegular(10*WScale)  backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentRight];
         _showPriceLab.right = kMainScreenWidth - 60*Proportion375;
 
     }
@@ -158,7 +158,7 @@
 -(UILabel*)otherPriceLab
 {
     if (!_otherPriceLab) {
-        _otherPriceLab = [UILabel labelWithFrame:CGRectMake(0, self.otherTLab.top, self.width, 10*Proportion375) text:@"0CNY" textColor:kTextWith8b font:Font_engRegular(10*WScale)  backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentRight];
+        _otherPriceLab = [UILabel labelWithFrame:CGRectMake(0, self.otherTLab.top, self.width, 10*Proportion375) text:@"" textColor:kTextWith8b font:Font_engRegular(10*WScale)  backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentRight];
         _otherPriceLab.right = kMainScreenWidth - 60*Proportion375;
 
     }
@@ -316,8 +316,8 @@
     if (!_hideBtn) {
         _hideBtn = [[UIButton alloc] initWithFrame:CGRectMake(16*Proportion375, _BGBottomimgView.bottom + 6*Proportion375, 90*Proportion375, 34*Proportion375)];
         _hideBtn.centerY = _addBtn.centerY;
-        [_hideBtn setImage:[UIImage imageNamed:@"wallet_home_hideType_nomal"] forState:UIControlStateNormal];
-        [_hideBtn setImage:[UIImage imageNamed:@"wallet_home_hideType_selected"] forState:UIControlStateSelected];
+//        [_hideBtn setImage:[UIImage imageNamed:@"wallet_home_hideType_nomal"] forState:UIControlStateNormal];
+//        [_hideBtn setImage:[UIImage imageNamed:@"wallet_home_hideType_selected"] forState:UIControlStateSelected];
         [_hideBtn setTitle:@"隐藏小余额" forState:UIControlStateNormal];
         [_hideBtn.titleLabel setFont:Font_Regular(12*Proportion375)];
         [_hideBtn setTitleColor:kTextWith8b forState:UIControlStateNormal];
