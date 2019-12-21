@@ -26,3 +26,17 @@
 
 @end
 
+@implementation DCCodeInputView
+
++ (instancetype)inputView {
+    DCCodeFlowLayout *layout = [[DCCodeFlowLayout alloc] init];
+    DCCodeInputView *view = [[DCCodeInputView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
+    view.delegate = view;
+    view.dataSource = view;
+    view.scrollEnabled = NO;
+    view.bounces = NO;
+    view.backgroundColor = [UIColor clearColor];
+    view.items = @[@"", @"", @"", @"", @"", @"", ];
+    [view registerClass:DCCodeCell.class forCellWithReuseIdentifier:DCCodeCell.cellID];
+    return view;
+}
