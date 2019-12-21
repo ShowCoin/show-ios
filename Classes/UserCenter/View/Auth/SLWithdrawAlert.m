@@ -87,7 +87,8 @@
     _closeBtn.centerY = _TabelView.bottom + 35*Proportion375;
     _closeBtn.layer.cornerRadius = 35*Proportion375/2;
     _closeBtn.clipsToBounds = YES;
-    [_closeBtn setTitle:@"取消" forState:UIControlStateNormal];
+//    [_closeBtn setTitle:@"取消" forState:UIControlStateNormal];
+    [_closeBtn setImage:[UIImage imageNamed:@"s"] forState:UIControlStateHighlighted];
     [_closeBtn setTitleColor:kThemeWhiteColor forState:UIControlStateNormal];
     _closeBtn.titleLabel.font = Font_Medium(17*Proportion375);
     [_closeBtn setBackgroundColor:kGrayWithdddddd forState:UIControlStateNormal];
