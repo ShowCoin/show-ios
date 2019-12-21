@@ -56,6 +56,8 @@
     cell.textLabel.text = self.items[indexPath.item];
 }
 
+/// setText
+/// @param text <#text description#>
 - (void)setText:(NSString *)text {
     _text = text;
     NSMutableArray *tmp = [NSMutableArray array];
