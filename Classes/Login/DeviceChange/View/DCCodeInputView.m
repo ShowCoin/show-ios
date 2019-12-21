@@ -11,3 +11,11 @@
 @interface DCCodeFlowLayout : UICollectionViewFlowLayout
 
 @end
+
+@interface DCCodeCell : UICollectionViewCell
+
+@property (nonatomic, strong) UILabel *textLabel;
+@property (nonatomic, strong) UIView *line;
+@property (nonatomic, readonly, class) NSString *cellID;
+
+@end    
