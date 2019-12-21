@@ -18,4 +18,11 @@
 @property (nonatomic, strong) UIView *line;
 @property (nonatomic, readonly, class) NSString *cellID;
 
-@end    
+@end
+
+@interface DCCodeInputView ()
+
+@property (nonatomic, strong) NSArray *items;
+
+@end
+
