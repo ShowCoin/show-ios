@@ -17,6 +17,8 @@
 
 @implementation SLCountryCover
 
+/// initWithFrame
+/// @param frame <#frame description#>
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
