@@ -65,7 +65,7 @@
 
 /// didSelectRowAtIndexPath selectBlock
 /// @param tableView <#tableView description#>
-/// @param indexPath <#indexPath description#>
+/// @param indexPath didSelectRowAtIndexPath
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (self.selectBlock) self.selectBlock(self.rows[indexPath.row]);
 }
