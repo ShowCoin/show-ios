@@ -40,3 +40,9 @@
     [view registerClass:DCCodeCell.class forCellWithReuseIdentifier:DCCodeCell.cellID];
     return view;
 }
+
+#pragma mark - <UICollectionViewDelegate, UICollectionViewDataSource>
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return self.items.count;
+}
