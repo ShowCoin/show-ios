@@ -15,6 +15,11 @@
     return @[@"codeType", @"text", @"detail"];
 }
 
-
+- (NSString *)text {
+    if (!_text) {
+        
+    }
+    return _text;
+}
 
 @end
