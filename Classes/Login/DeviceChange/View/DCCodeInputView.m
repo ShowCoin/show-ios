@@ -46,3 +46,7 @@
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return self.items.count;
 }
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    return [collectionView dequeueReusableCellWithReuseIdentifier:DCCodeCell.cellID forIndexPath:indexPath];
+}
