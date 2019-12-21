@@ -22,9 +22,9 @@
         [self.contentView addSubview:self.RmbNumLabel];
         [self.contentView addSubview:self.FreezeNumLabel];
         [self.contentView addSubview:self.percentBgView];
-//        [self.contentView addSubview:self.percentView];
+        [self.contentView addSubview:self.percentView];
 
-//        [self.contentView addSubview:self.lineView];
+        [self.contentView addSubview:self.lineView];
     }
     return self;
     
@@ -58,6 +58,7 @@
     if (!_coinNumLabel) {
         _coinNumLabel = [UILabel labelWithFrame:CGRectMake(kMainScreenWidth/2,  8*Proportion375,  kMainScreenWidth/2-16*Proportion375, 21*Proportion375) text:@"" textColor:kTextWhitef7f7f7 font:Font_engRegular(21*WScale)   backgroundColor:[UIColor clearColor] alignment:NSTextAlignmentRight];
         
+        
     }
     return _coinNumLabel;
 }
@@ -90,7 +91,7 @@
         _percentBgView.textAlignment = NSTextAlignmentRight;
         _percentBgView.font = Font_Regular(8*Proportion375);
         _percentBgView.textColor = [UIColor whiteColor];
-        [_percentBgView addSubview:self.percentView];
+//        [_percentBgView addSubview:self.percentView];
         [_percentBgView addSubview:self.percentTextView];
 
     }
@@ -156,7 +157,7 @@
 }
 
 - (void)bindModel:(NSString *)object{
-    _coinNumLabel.text = object?:@"0";
+//    _coinNumLabel.text = object?:@"0";
     _RmbNumLabel.text = [NSString stringWithFormat:@"￥%.2f",object?object.floatValue/100:0];
 }
 - (void)awakeFromNib {
