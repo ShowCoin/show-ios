@@ -393,6 +393,7 @@ NS_ASSUME_NONNULL_END
     return _buttonCenter;
 }
 
+/// imageIcon
 - (UIImageView *)imageIcon
 {
     if (!_imageIcon) {
