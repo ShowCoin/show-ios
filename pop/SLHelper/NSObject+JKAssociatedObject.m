@@ -36,6 +36,9 @@
  *
  *  @return 附加对象
  */
-
+- (id)jk_associatedValueForKey:(void *)key
+{
+    return objc_getAssociatedObject(self, key);
+}
 @end
 
