@@ -20,6 +20,6 @@
 //播放视频的URL
 @property (nonatomic,strong) NSURL *movieURL;
 //初始化方法
-- (instancetype) initWithFrame:(CGRect)frame withMovieUrl:(NSURL *)movieURL;
+//- (instancetype) initWithFrame:(CGRect)frame withMovieUrl:(NSURL *)movieURL;
 
 @end
