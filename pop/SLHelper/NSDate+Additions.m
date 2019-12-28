@@ -85,7 +85,23 @@
 }
 
 
+- (NSString *)longStringValue {
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy-MM-dd hh:mm:ss"];
+    [formatter setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"UTC"]];
+    NSString *destDateString = [formatter stringFromDate:self];
+    return destDateString;
+}
 
+- (NSString *)stringValue {
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy-MM-dd"];
+    [formatter setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"UTC"]];
+    NSString *destDateString = [formatter stringFromDate:self];
+    return destDateString;
+}
 
 - (NSString *)timeText {
     
