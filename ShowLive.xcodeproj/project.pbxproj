@@ -897,7 +897,7 @@
 		D25E4109232CC386005EE124 /* SLGetWithdrawAddressAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLGetWithdrawAddressAction.h; path = pop/SLHelper/SLGetWithdrawAddressAction.h; sourceTree = SOURCE_ROOT; };
 		D25E410A232CC386005EE124 /* UIImage+Effects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Effects.h"; path = "pop/SLHelper/UIImage+Effects.h"; sourceTree = SOURCE_ROOT; };
 		D25E410B232CC386005EE124 /* UITextView+JKInputLimit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITextView+JKInputLimit.h"; path = "pop/UITextView+JKInputLimit.h"; sourceTree = SOURCE_ROOT; };
-		D25E410C232CC386005EE124 /* UIScrollView+APParallaxHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+APParallaxHeader.h"; path = "pop/SLHelper/UIScrollView+APParallaxHeader.h"; sourceTree = SOURCE_ROOT; };
+		D25E410C232CC386005EE124 /* UIScrollView+APParallaxHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+APParallaxHeader.h"; path = "pop/SLHelper/pop/UIScrollView+APParallaxHeader.h"; sourceTree = SOURCE_ROOT; };
 		D25E410D232CC387005EE124 /* UIView+Additional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Additional.h"; path = "pop/SLHelper/UIView+Additional.h"; sourceTree = SOURCE_ROOT; };
 		D25E410E232CC387005EE124 /* UIView+Debug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Debug.m"; path = "Untils/Exten/WebCore/UIView+Debug.m"; sourceTree = SOURCE_ROOT; };
 		D25E410F232CC387005EE124 /* NSBundle+JKAppIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSBundle+JKAppIcon.m"; path = "pop/NSBundle+JKAppIcon.m"; sourceTree = SOURCE_ROOT; };
@@ -1829,6 +1829,7 @@
 				D2A466BF232377D60057E5AD /* SLWebViewScriptMessage.h */,
 				D2A466C2232377D60057E5AD /* SLWebView.h */,
 				D2A466C4232377D70057E5AD /* SLBaseWebViewRequestHelper.h */,
+				D2A466ED232377DB0057E5AD /* SLPureColorImageGenerate.h */,
 				4311D3D82351FDD6006B19BE /* NewTopListViewController.h */,
 				4311D3D92351FDD6006B19BE /* NewTopListViewController.h */,
 				4311D3DE2351FDD7006B19BE /* SLWebViewJSFuncNameConst.m */,
@@ -1869,7 +1870,6 @@
 				D25E416C232CC396005EE124 /* SLHelper */,
 				D2A466DA232377D90057E5AD /* SLWebViewJSFuncNameConst.m */,
 				D2A466D2232377D80057E5AD /* SLBlankView.m */,
-				D2A466ED232377DB0057E5AD /* SLPureColorImageGenerate.h */,
 				D2A466C5232377D70057E5AD /* SLBlankView.h */,
 				D2A466DC232377D90057E5AD /* NewTopListViewController.h */,
 				D2A466BB232377D60057E5AD /* NewTopListViewController.h */,
@@ -2953,10 +2953,9 @@
 				D25E4277232CC398005EE124 /* NSString+JKXMLDictionary.m */,
 				D2930828235D827F00C54F2A /* SLChatViewController.h */,
 				4311D3A12351FD9E006B19BE /* SLChatViewController.h */,
-				4311D38A2351FD97006B19BE /* NewTopListViewController.h */,
-				D25E410C232CC386005EE124 /* UIScrollView+APParallaxHeader.h */,
 				D25E4108232CC386005EE124 /* UIScrollView+EmptyDataSet.h */,
 				D25E415E232CC394005EE124 /* UIScrollView+EmptyDataSet.h~fc6ed825c6150727967b55cf2a4e012515dba0e3 */,
+				4311D38A2351FD97006B19BE /* NewTopListViewController.h */,
 				D25E417F232CC397005EE124 /* pop */,
 			);
 			name = SLHelper;
@@ -2966,6 +2965,7 @@
 		D25E417F232CC397005EE124 /* pop */ = {
 			isa = PBXGroup;
 			children = (
+				D25E410C232CC386005EE124 /* UIScrollView+APParallaxHeader.h */,
 			);
 			path = pop;
 			sourceTree = "<group>";
