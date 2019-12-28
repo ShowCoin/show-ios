@@ -25,6 +25,17 @@
  *  @param value 被附加的对象
  *  @param key   被附加对象的key
  */
+- (void)jk_weaklyAssociateValue:(id)value withKey:(void *)key
+{
+    objc_setAssociatedObject(self, key, value, OBJC_ASSOCIATION_ASSIGN);
+}
+/**
+ *  @brief  根据附加对象的key取出附加对象
+ *
+ *  @param key 附加对象的key
+ *
+ *  @return 附加对象
+ */
 
 @end
 
