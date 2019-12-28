@@ -19,13 +19,5 @@
     return topController;
 }
 
-- (UIViewController*)jk_currentViewController;
-{
-    UIViewController *currentViewController = [self jk_topMostController];
-    
-    while ([currentViewController isKindOfClass:[UINavigationController class]] && [(UINavigationController*)currentViewController topViewController])
-        currentViewController = [(UINavigationController*)currentViewController topViewController];
-    
-    return currentViewController;
-}
+
 @end
