@@ -99,7 +99,7 @@
         CGContextDrawImage(context, innerRect, image.CGImage);
         // context 添加白色的边框 -> 执行填充白色画笔
         CGContextAddPath(context, outerPath.CGPath);
-        CGContextSetStrokeColorWithColor(context, [UIColor colorWithRed:0.95 green:0.85 blue:0.85 alpha:1].CGColor);
+        CGContextSetStrokeColorWithColor(context, [UIColor colorWithRed:0.85 green:0.85 blue:0.85 alpha:1].CGColor);
         CGContextSetLineWidth(context, outerWidth);
         CGContextStrokePath(context);
         // context 添加黑色的边界假象边框 -> 执行填充黑色画笔
