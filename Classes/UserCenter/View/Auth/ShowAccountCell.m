@@ -131,7 +131,7 @@
         CAGradientLayer *gradientLayer =  [CAGradientLayer layer];
         gradientLayer.frame = CGRectMake(0, 0, _percentBgView.width * percent, 9*Proportion375);
         gradientLayer.startPoint = CGPointMake(0, 0);
-        gradientLayer.endPoint = CGPointMake(1, 0);
+        gradientLayer.endPoint = CGPointMake(1, 1.5);
         gradientLayer.locations = @[@(0.0),@(1.0)];
         [gradientLayer setColors:@[(id)HexRGBAlpha(0xbd9c77, 1).CGColor,(id)HexRGBAlpha(0xf8d2a5, 1).CGColor]];
         [_percentView.layer addSublayer:gradientLayer];
