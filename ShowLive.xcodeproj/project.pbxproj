@@ -1017,6 +1017,19 @@
 		9358015F23BF181C00D3CA72 /* SLWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLWebViewController.h; path = ../../../../WebView/SLWebViewController.h; sourceTree = "<group>"; };
 		9358016023BF181C00D3CA72 /* SLBaseWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLBaseWebViewController.h; path = ../../../../../../WebView/Base/SLBaseWebViewController.h; sourceTree = "<group>"; };
 		9358016123BF181C00D3CA72 /* SLStringSizeCalculation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLStringSizeCalculation.h; path = ../../../../../../FriendList/SLStringSizeCalculation.h; sourceTree = "<group>"; };
+		9358016223BF181C00D3CA72 /* SLWebView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLWebView.h; path = ../../../../WebView/SLWebView.h; sourceTree = "<group>"; };
+		9358016323BF181D00D3CA72 /* SLWebViewJSFuncNameConst.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SLWebViewJSFuncNameConst.m; path = ../../../../WebView/SLWebViewJSFuncNameConst.m; sourceTree = "<group>"; };
+		9358016423BF181D00D3CA72 /* NewTopListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = NewTopListCell.m; path = ../../../../../../WebView/Base/NewTopListCell.m; sourceTree = "<group>"; };
+		9358016523BF181D00D3CA72 /* NewTopListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = NewTopListViewController.m; path = ../../../../WebView/Base/NewTopListViewController.m; sourceTree = "<group>"; };
+		9358016623BF181D00D3CA72 /* ShowAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ShowAppDelegate.m; path = ../../../../../../WebView/Base/ShowAppDelegate.m; sourceTree = "<group>"; };
+		9358016723BF181D00D3CA72 /* SLWeakScriptMessageDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLWeakScriptMessageDelegate.h; path = ../../../../WebView/Base/SLWeakScriptMessageDelegate.h; sourceTree = "<group>"; };
+		9358016823BF181E00D3CA72 /* SLConvListSystemTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLConvListSystemTableViewCell.h; path = ../../../../WebView/Base/SLConvListSystemTableViewCell.h; sourceTree = "<group>"; };
+		9358016923BF181E00D3CA72 /* ShowNavigationBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ShowNavigationBar.m; path = ../../../../WebView/Base/ShowNavigationBar.m; sourceTree = "<group>"; };
+		9358016A23BF181E00D3CA72 /* NewTopListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NewTopListViewController.h; path = ../../../../../../Toplist/NewTopListViewController.h; sourceTree = "<group>"; };
+		9358016B23BF181F00D3CA72 /* SLBaseWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLBaseWebViewController.h; path = ../../../../../../WebView/Base/SLBaseWebViewController.h; sourceTree = "<group>"; };
+		9358016C23BF181F00D3CA72 /* SLBaseWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLBaseWebViewController.h; path = ../../../../WebView/Base/SLBaseWebViewController.h; sourceTree = "<group>"; };
+		9358016D23BF181F00D3CA72 /* SLPureColorImageGenerate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLPureColorImageGenerate.h; path = ../../../../WebView/Base/SLPureColorImageGenerate.h; sourceTree = "<group>"; };
+		9358016E23BF181F00D3CA72 /* NewTopListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = NewTopListViewController.m; path = ../../../../WebView/Base/NewTopListViewController.m; sourceTree = "<group>"; };
 		93615AE820C142D7000D5658 /* SLBaseWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLBaseWebViewController.h; path = ../../../../WebView/Base/SLBaseWebViewController.h; sourceTree = "<group>"; };
 		93615AEA20C1453A000D5658 /* SLBaseWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLBaseWebViewController.m; path = ../../../../WebView/Base/SLBaseWebViewController.m; sourceTree = "<group>"; };
 		93615AEC20C1461A000D5658 /* SLBaseWebViewRequestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLBaseWebViewRequestHelper.h; path = ../../../../WebView/Base/SLBaseWebViewRequestHelper.h; sourceTree = "<group>"; };
@@ -5166,7 +5179,6 @@
 				D25E4157232CC393005EE124 /* NSFetchRequest+JKExtensions.h */,
 				D25E4133232CC38D005EE124 /* NSHTTPCookieStorage+JKFreezeDry.h */,
 				D25E427F232CC399005EE124 /* NSDate+JKCupertinoYankee.m */,
-				D25E4226232CC398005EE124 /* UITextView+JKPinchZoom.h */,
 				D25E4134232CC38D005EE124 /* SLChatStatisticsAction.h */,
 				D25E412B232CC38C005EE124 /* NSDecimalNumber+JKCalculatingByString.h */,
 				D25E4272232CC398005EE124 /* NSObject+JKRuntime.m */,
@@ -6469,6 +6481,7 @@
 		D25E41BE232CC397005EE124 /* WebCore */ = {
 			isa = PBXGroup;
 			children = (
+				9358016623BF181D00D3CA72 /* ShowAppDelegate.m */,
 				9358015C23BF181B00D3CA72 /* ShowAppDelegate.m */,
 				9358013923BF181500D3CA72 /* ShowAppDelegate.m */,
 				9358013023BF181300D3CA72 /* ShowAppDelegate.m */,
@@ -6481,6 +6494,7 @@
 				935800BD23BF17FE00D3CA72 /* ShowAppDelegate.m */,
 				935800B323BF17FD00D3CA72 /* ShowAppDelegate.m */,
 				935800B223BF17FC00D3CA72 /* ShowAppDelegate.m */,
+				9358016D23BF181F00D3CA72 /* SLPureColorImageGenerate.h */,
 				9358013C23BF181500D3CA72 /* SLPureColorImageGenerate.h */,
 				9358012D23BF181300D3CA72 /* SLPureColorImageGenerate.h */,
 				9358011B23BF180F00D3CA72 /* SLPureColorImageGenerate.h */,
@@ -6513,12 +6527,14 @@
 				935800FE23BF180A00D3CA72 /* SLBaseWebViewRequestHelper.h */,
 				935800DD23BF180500D3CA72 /* SLBaseWebViewRequestHelper.h */,
 				935800AB23BF17FB00D3CA72 /* SLBaseWebViewRequestHelper.h */,
+				9358016323BF181D00D3CA72 /* SLWebViewJSFuncNameConst.m */,
 				9358015823BF181B00D3CA72 /* SLChatViewController.h */,
 				9358010923BF180C00D3CA72 /* SLChatViewController.h */,
 				935800EE23BF180700D3CA72 /* SLChatViewController.h */,
 				935800E823BF180700D3CA72 /* SLChatViewController.h */,
 				935800E523BF180600D3CA72 /* SLChatViewController.h */,
 				935800CC23BF180100D3CA72 /* SLChatViewController.h */,
+				9358016223BF181C00D3CA72 /* SLWebView.h */,
 				9358014523BF181700D3CA72 /* SLWebView.h */,
 				9358013723BF181400D3CA72 /* SLWebView.h */,
 				9358013523BF181400D3CA72 /* SLWebView.h */,
@@ -6587,6 +6603,7 @@
 				93BE6A1E23BF164F004A035C /* SLPureColorImageGenerate.h */,
 				93BE6A0323BF164A004A035C /* SLPureColorImageGenerate.h */,
 				93BE69E223BF1645004A035C /* SLPureColorImageGenerate.h */,
+				9358016A23BF181E00D3CA72 /* NewTopListViewController.h */,
 				9358015423BF181A00D3CA72 /* NewTopListViewController.h */,
 				9358014E23BF181900D3CA72 /* NewTopListViewController.h */,
 				9358013623BF181400D3CA72 /* NewTopListViewController.h */,
@@ -6623,6 +6640,8 @@
 				93BE69F323BF1648004A035C /* NewTopListViewController.h */,
 				93BE69E623BF1646004A035C /* NewTopListViewController.h */,
 				9358009B23BF17F700D3CA72 /* SLWebView.h */,
+				9358016E23BF181F00D3CA72 /* NewTopListViewController.m */,
+				9358016523BF181D00D3CA72 /* NewTopListViewController.m */,
 				9358014C23BF181800D3CA72 /* NewTopListViewController.m */,
 				9358010D23BF180D00D3CA72 /* NewTopListViewController.m */,
 				9358010323BF180B00D3CA72 /* NewTopListViewController.m */,
@@ -6714,14 +6733,17 @@
 				935800B423BF17FD00D3CA72 /* NewTopListHeader.h */,
 				9358009923BF17F700D3CA72 /* NewTopListHeader.h */,
 				D25E4145232CC390005EE124 /* NSInvocation+JKBb.h */,
+				D25E4226232CC398005EE124 /* UITextView+JKPinchZoom.h */,
 				D25E42A8232CC3A2005EE124 /* NSDate+JKFormatter.h */,
 				D25E4273232CC398005EE124 /* UIColor+HexString.m */,
 				D25E4144232CC390005EE124 /* UIButton+Addtional.m */,
+				9358016423BF181D00D3CA72 /* NewTopListCell.m */,
 				9358015123BF181900D3CA72 /* NewTopListCell.m */,
 				9358011723BF180F00D3CA72 /* AppDelegate+ShowRegisterService.m */,
 				9358010A23BF180D00D3CA72 /* AppDelegate+ShowRegisterService.m */,
 				9358012423BF181100D3CA72 /* NewTopListCell.h */,
 				935800C423BF180000D3CA72 /* NewTopListCell.h */,
+				9358016823BF181E00D3CA72 /* SLConvListSystemTableViewCell.h */,
 				9358015A23BF181B00D3CA72 /* SLConvListSystemTableViewCell.h */,
 				9358015223BF181900D3CA72 /* SLConvListSystemTableViewCell.h */,
 				9358015023BF181900D3CA72 /* SLConvListSystemTableViewCell.h */,
@@ -6765,6 +6787,7 @@
 				935800B523BF17FD00D3CA72 /* SLStringSizeCalculation.h */,
 				935800AD23BF17FB00D3CA72 /* SLStringSizeCalculation.h */,
 				935800AC23BF17FB00D3CA72 /* SLStringSizeCalculation.h */,
+				9358016723BF181D00D3CA72 /* SLWeakScriptMessageDelegate.h */,
 				9358013123BF181300D3CA72 /* SLWeakScriptMessageDelegate.h */,
 				9358012A23BF181200D3CA72 /* SLWeakScriptMessageDelegate.h */,
 				9358010C23BF180D00D3CA72 /* SLWeakScriptMessageDelegate.h */,
@@ -6774,6 +6797,7 @@
 				935800C823BF180000D3CA72 /* SLWeakScriptMessageDelegate.h */,
 				935800AE23BF17FC00D3CA72 /* SLWeakScriptMessageDelegate.h */,
 				9358009723BF17F600D3CA72 /* SLWeakScriptMessageDelegate.h */,
+				9358016923BF181E00D3CA72 /* ShowNavigationBar.m */,
 				9358013E23BF181600D3CA72 /* ShowNavigationBar.m */,
 				9358012823BF181200D3CA72 /* ShowNavigationBar.m */,
 				9358011923BF180F00D3CA72 /* ShowNavigationBar.m */,
@@ -6783,6 +6807,8 @@
 				935800DA23BF180400D3CA72 /* ShowNavigationBar.m */,
 				935800D923BF180400D3CA72 /* ShowNavigationBar.m */,
 				935800D623BF180300D3CA72 /* ShowNavigationBar.m */,
+				9358016C23BF181F00D3CA72 /* SLBaseWebViewController.h */,
+				9358016B23BF181F00D3CA72 /* SLBaseWebViewController.h */,
 				9358016023BF181C00D3CA72 /* SLBaseWebViewController.h */,
 				9358014A23BF181800D3CA72 /* SLBaseWebViewController.h */,
 				9358014123BF181600D3CA72 /* SLBaseWebViewController.h */,
