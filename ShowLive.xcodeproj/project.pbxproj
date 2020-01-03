@@ -939,6 +939,18 @@
 		9391AA9520C039BB00D520F1 /* SLWebViewJSFuncNameConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLWebViewJSFuncNameConst.h; path = ../../../../WebView/SLWebViewJSFuncNameConst.h; sourceTree = "<group>"; };
 		9391AA9620C03A4300D520F1 /* SLWebViewJSFuncNameConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLWebViewJSFuncNameConst.m; path = ../../../../WebView/SLWebViewJSFuncNameConst.m; sourceTree = "<group>"; };
 		9391AA9820C046B800D520F1 /* SLWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLWebView.h; path = ../../../../WebView/SLWebView.h; sourceTree = "<group>"; };
+		93BE689823BF156D004A035C /* ShowNavigationBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ShowNavigationBar.h; path = ../../../../../WebView/Base/ShowNavigationBar.h; sourceTree = "<group>"; };
+		93BE689923BF156D004A035C /* SLStringSizeCalculation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLStringSizeCalculation.h; path = ../../../../../FriendList/SLStringSizeCalculation.h; sourceTree = "<group>"; };
+		93BE689A23BF156E004A035C /* SLPureColorImageGenerate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLPureColorImageGenerate.h; path = ../../../../../WebView/Base/SLPureColorImageGenerate.h; sourceTree = "<group>"; };
+		93BE689B23BF156E004A035C /* SLConvListSystemTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLConvListSystemTableViewCell.h; path = ../../../WebView/Base/SLConvListSystemTableViewCell.h; sourceTree = "<group>"; };
+		93BE689C23BF156E004A035C /* SLBaseWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLBaseWebViewController.h; path = ../../../WebView/Base/SLBaseWebViewController.h; sourceTree = "<group>"; };
+		93BE689D23BF156E004A035C /* SLStringSizeCalculation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLStringSizeCalculation.h; path = ../../../../../FriendList/SLStringSizeCalculation.h; sourceTree = "<group>"; };
+		93BE689E23BF156E004A035C /* SLBlankView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLBlankView.h; path = ../../../WebView/Base/SLBlankView.h; sourceTree = "<group>"; };
+		93BE689F23BF156F004A035C /* ShowNavigationBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ShowNavigationBar.m; path = ../../../WebView/Base/ShowNavigationBar.m; sourceTree = "<group>"; };
+		93BE68A023BF156F004A035C /* SLPureColorImageGenerate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLPureColorImageGenerate.h; path = ../../../WebView/Base/SLPureColorImageGenerate.h; sourceTree = "<group>"; };
+		93BE68A123BF156F004A035C /* SLConvListSystemTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLConvListSystemTableViewCell.h; path = ../../../../../WebView/Base/SLConvListSystemTableViewCell.h; sourceTree = "<group>"; };
+		93BE68A223BF156F004A035C /* SLChatViewController+BlankView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "SLChatViewController+BlankView.h"; path = "../../../../../WebView/Base/SLChatViewController+BlankView.h"; sourceTree = "<group>"; };
+		93BE68A323BF1570004A035C /* SLBaseWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLBaseWebViewController.h; path = ../../../../../WebView/Base/SLBaseWebViewController.h; sourceTree = "<group>"; };
 		93D2C11120BD238500C9D960 /* SLFriendListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLFriendListCell.m; sourceTree = "<group>"; };
 		A9BBAFBD20CA8E5B001683F8 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		AA2350AAA436CDCBB1E93DCE /* Pods-ShowLive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ShowLive.release.xcconfig"; sourceTree = "<group>"; };
@@ -1862,13 +1874,23 @@
 			isa = PBXGroup;
 			children = (
 				D25E41BE232CC397005EE124 /* WebCore */,
+				93BE68A123BF156F004A035C /* SLConvListSystemTableViewCell.h */,
 				4311D3EE2351FDDA006B19BE /* SLConvListSystemTableViewCell.h */,
 				4311D3E82351FDD9006B19BE /* SLConvListSystemTableViewCell.h */,
 				4311D3F02351FDDB006B19BE /* SLChatViewController+BlankView.h */,
 				4311D3DF2351FDD7006B19BE /* SLChatViewController+BlankView.h */,
 				D2A466C6232377D70057E5AD /* SLChatBusiness.h */,
 				D2A466E2232377DA0057E5AD /* SLBlankView.h */,
+				93BE68A023BF156F004A035C /* SLPureColorImageGenerate.h */,
+				93BE689A23BF156E004A035C /* SLPureColorImageGenerate.h */,
+				93BE689E23BF156E004A035C /* SLBlankView.h */,
 				D2A466E8232377DA0057E5AD /* ShowNavigationBar.h */,
+				93BE689B23BF156E004A035C /* SLConvListSystemTableViewCell.h */,
+				93BE68A223BF156F004A035C /* SLChatViewController+BlankView.h */,
+				93BE689F23BF156F004A035C /* ShowNavigationBar.m */,
+				93BE68A323BF1570004A035C /* SLBaseWebViewController.h */,
+				93BE689C23BF156E004A035C /* SLBaseWebViewController.h */,
+				93BE689D23BF156E004A035C /* SLStringSizeCalculation.h */,
 				D2A466E0232377DA0057E5AD /* SLStringSizeCalculation.h */,
 				4311D3C62351FDD3006B19BE /* ShowAppDelegate.h */,
 				4311D3D72351FDD6006B19BE /* ShowAppDelegate.h */,
@@ -1913,6 +1935,8 @@
 				D2A466B7232377D50057E5AD /* NewTopListHeader.m */,
 				D2A466CC232377D80057E5AD /* AppDelegate+ShowRegisterService.m */,
 				D2A466D3232377D80057E5AD /* SLBlankView.m */,
+				93BE689823BF156D004A035C /* ShowNavigationBar.h */,
+				93BE689923BF156D004A035C /* SLStringSizeCalculation.h */,
 				4311D3DD2351FDD7006B19BE /* NewTopListCell.m */,
 				4311D3D12351FDD5006B19BE /* NewTopListCell.m */,
 				D2A466D0232377D80057E5AD /* NewTopListCell.h */,
