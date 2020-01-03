@@ -1090,7 +1090,7 @@
 		D25E4168232CC396005EE124 /* MKMapView+JKZoomLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MKMapView+JKZoomLevel.h"; path = "pop/SLHelper/MKMapView+JKZoomLevel.h"; sourceTree = SOURCE_ROOT; };
 		D25E4169232CC396005EE124 /* NSObject+JKKVOBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+JKKVOBlocks.h"; path = "pop/SLHelper/NSObject+JKKVOBlocks.h"; sourceTree = SOURCE_ROOT; };
 		D25E416A232CC396005EE124 /* NSURLConnection+JKSelfSigned.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSURLConnection+JKSelfSigned.m"; path = "Untils/Exten/WebCore/NSURLConnection+JKSelfSigned.m"; sourceTree = SOURCE_ROOT; };
-		D25E416B232CC396005EE124 /* POPPropertyAnimationInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POPPropertyAnimationInternal.h; path = Untils/Exten/WebCore/POPPropertyAnimationInternal.h; sourceTree = SOURCE_ROOT; };
+		D25E416B232CC396005EE124 /* POPPropertyAnimationInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POPPropertyAnimationInternal.h; path = pop/SLHelper/POPPropertyAnimationInternal.h; sourceTree = SOURCE_ROOT; };
 		D25E416D232CC396005EE124 /* UISplitViewController+JKQuickAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISplitViewController+JKQuickAccess.h"; sourceTree = "<group>"; };
 		D25E416E232CC396005EE124 /* NSArray+JKBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+JKBlock.m"; sourceTree = "<group>"; };
 		D25E416F232CC396005EE124 /* NSArray+JKSafeAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+JKSafeAccess.m"; sourceTree = "<group>"; };
@@ -1404,7 +1404,7 @@
 		D25E42A7232CC3A2005EE124 /* NSString+JKNormalRegex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+JKNormalRegex.h"; path = "pop/SLHelper/NSString+JKNormalRegex.h"; sourceTree = SOURCE_ROOT; };
 		D25E42A8232CC3A2005EE124 /* NSDate+JKFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+JKFormatter.h"; path = "pop/SLHelper/NSDate+JKFormatter.h"; sourceTree = SOURCE_ROOT; };
 		D25E42A9232CC3A2005EE124 /* NSManagedObjectContext+JKFetching.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObjectContext+JKFetching.m"; path = "pop/NSManagedObjectContext+JKFetching.m"; sourceTree = SOURCE_ROOT; };
-		D25E42AA232CC3A2005EE124 /* NSManagedObjectContext+JKObjectClear.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObjectContext+JKObjectClear.m"; path = "Untils/Exten/WebCore/NSManagedObjectContext+JKObjectClear.m"; sourceTree = SOURCE_ROOT; };
+		D25E42AA232CC3A2005EE124 /* NSManagedObjectContext+JKObjectClear.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObjectContext+JKObjectClear.m"; path = "pop/SLHelper/NSManagedObjectContext+JKObjectClear.m"; sourceTree = SOURCE_ROOT; };
 		D25E42AB232CC3A2005EE124 /* NSDate+JKZeroDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+JKZeroDate.h"; path = "Untils/Exten/WebCore/NSDate+JKZeroDate.h"; sourceTree = SOURCE_ROOT; };
 		D25E42AC232CC3A3005EE124 /* NSDecimalNumber+JKCalculatingByString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDecimalNumber+JKCalculatingByString.m"; path = "Untils/Exten/WebCore/NSDecimalNumber+JKCalculatingByString.m"; sourceTree = SOURCE_ROOT; };
 		D25E42AD232CC3A3005EE124 /* NSDictionary+JKBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+JKBlock.m"; path = "pop/NSDictionary+JKBlock.m"; sourceTree = SOURCE_ROOT; };
@@ -2861,6 +2861,7 @@
 				D25E42A5232CC3A1005EE124 /* NSDictionary+JKMerge.h */,
 				D25E428F232CC39D005EE124 /* NSManagedObject+JKExtensions.h */,
 				D25E42A9232CC3A2005EE124 /* NSManagedObjectContext+JKFetching.m */,
+				D25E42AA232CC3A2005EE124 /* NSManagedObjectContext+JKObjectClear.m */,
 				D25E415C232CC394005EE124 /* NSMutableURLRequest+JKUpload.m */,
 				D25E4131232CC38D005EE124 /* NSNotificationCenter+JKMainThread.m */,
 				D25E414F232CC392005EE124 /* NSURL+JKQueryDictionary.m */,
@@ -2915,6 +2916,7 @@
 				D25E4181232CC397005EE124 /* UIImageView+Category.m */,
 				D25E4179232CC397005EE124 /* NSObject+JKAutoCoding.h */,
 				D25E417A232CC397005EE124 /* NSObject+JKReflection.m */,
+				D25E417B232CC397005EE124 /* MKMapView+JKBetterMaps.h */,
 				D25E417C232CC397005EE124 /* NSDate+JKUtilities.h */,
 				D25E417D232CC397005EE124 /* MKMapView+JKMoveLogo.m */,
 				D25E417E232CC397005EE124 /* UIScrollView+JKAddition.m */,
@@ -2931,6 +2933,7 @@
 				D25E424A232CC398005EE124 /* NSString+Validation.m */,
 				D25E4281232CC39A005EE124 /* NSString+Validation.m */,
 				D25E41B7232CC397005EE124 /* NSString+Validation.m */,
+				D25E416B232CC396005EE124 /* POPPropertyAnimationInternal.h */,
 				D25E42AE232CC3A3005EE124 /* NSString+JKContains.h */,
 				D25E4171232CC397005EE124 /* NSString+JKContains.h */,
 				D25E4251232CC398005EE124 /* NSData+ImageContentType.m */,
@@ -2990,6 +2993,7 @@
 				D25E4104232CC385005EE124 /* NSDate+JKReporting.h */,
 				D25E4271232CC398005EE124 /* CAShapeLayer+JKUIBezierPath.m */,
 				D25E42AC232CC3A3005EE124 /* NSDecimalNumber+JKCalculatingByString.m */,
+				D25E4162232CC395005EE124 /* NSDecimalNumber+JKExtensions.h */,
 				D25E423A232CC398005EE124 /* .gitignore */,
 				D25E4192232CC397005EE124 /* UIView+SLComOpenThreadOTScreenshotHelperStatusBarReference.m */,
 				D25E41FD232CC397005EE124 /* UIImage+Effects.m */,
@@ -3430,10 +3434,6 @@
 				D25E42AB232CC3A2005EE124 /* NSDate+JKZeroDate.h */,
 				D25E4149232CC391005EE124 /* NSDictionary+JKSafeAccess.m */,
 				D25E429B232CC3A0005EE124 /* NSDictionary+JKXML.m */,
-				D25E416B232CC396005EE124 /* POPPropertyAnimationInternal.h */,
-				D25E4162232CC395005EE124 /* NSDecimalNumber+JKExtensions.h */,
-				D25E42AA232CC3A2005EE124 /* NSManagedObjectContext+JKObjectClear.m */,
-				D25E417B232CC397005EE124 /* MKMapView+JKBetterMaps.h */,
 			);
 			path = WebCore;
 			sourceTree = "<group>";
