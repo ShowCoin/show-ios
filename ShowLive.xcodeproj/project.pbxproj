@@ -1989,6 +1989,20 @@
 		93BE6CAF23BF16F7004A035C /* SLWebView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLWebView.h; path = ../../../WebView/SLWebView.h; sourceTree = "<group>"; };
 		93BE6CB023BF16F7004A035C /* NewTopListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = NewTopListViewController.m; path = ../../../WebView/Base/NewTopListViewController.m; sourceTree = "<group>"; };
 		93BE6CB123BF16F7004A035C /* SLWebView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLWebView.h; path = ../../../WebView/SLWebView.h; sourceTree = "<group>"; };
+		93BE6CB223BF16F7004A035C /* SLWeakScriptMessageDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLWeakScriptMessageDelegate.h; path = ../../../WebView/Base/SLWeakScriptMessageDelegate.h; sourceTree = "<group>"; };
+		93BE6CB323BF16F8004A035C /* SLStringSizeCalculation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLStringSizeCalculation.h; path = ../../../../../FriendList/SLStringSizeCalculation.h; sourceTree = "<group>"; };
+		93BE6CB423BF16F8004A035C /* SLBlankView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLBlankView.h; path = ../../../../../WebView/Base/SLBlankView.h; sourceTree = "<group>"; };
+		93BE6CB523BF16F8004A035C /* ShowAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ShowAppDelegate.m; path = ../../../WebView/Base/ShowAppDelegate.m; sourceTree = "<group>"; };
+		93BE6CB623BF16F8004A035C /* ShowAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ShowAppDelegate.h; path = ../../../WebView/Base/ShowAppDelegate.h; sourceTree = "<group>"; };
+		93BE6CB723BF16F8004A035C /* SLStringSizeCalculation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLStringSizeCalculation.h; path = ../../../../../FriendList/SLStringSizeCalculation.h; sourceTree = "<group>"; };
+		93BE6CB823BF16F9004A035C /* SLBaseWebViewRequestHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLBaseWebViewRequestHelper.h; path = ../../../../../WebView/Base/SLBaseWebViewRequestHelper.h; sourceTree = "<group>"; };
+		93BE6CB923BF16F9004A035C /* SLStringSizeCalculation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLStringSizeCalculation.h; path = ../../../../../FriendList/SLStringSizeCalculation.h; sourceTree = "<group>"; };
+		93BE6CBA23BF16F9004A035C /* NewTopListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NewTopListCell.h; path = ../../../WebView/Base/NewTopListCell.h; sourceTree = "<group>"; };
+		93BE6CBB23BF16F9004A035C /* ShowAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ShowAppDelegate.h; path = ../../../../../WebView/Base/ShowAppDelegate.h; sourceTree = "<group>"; };
+		93BE6CBC23BF16F9004A035C /* SLStringSizeCalculation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLStringSizeCalculation.h; path = ../../../../../FriendList/SLStringSizeCalculation.h; sourceTree = "<group>"; };
+		93BE6CBD23BF16FA004A035C /* SLBlankView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLBlankView.h; path = ../../../../../WebView/Base/SLBlankView.h; sourceTree = "<group>"; };
+		93BE6CBE23BF16FA004A035C /* SLBlankView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLBlankView.h; path = ../../../../../WebView/Base/SLBlankView.h; sourceTree = "<group>"; };
+		93BE6CBF23BF16FA004A035C /* SLWebViewScriptMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLWebViewScriptMessage.h; path = "../../../../SLHelper/pop/UITableView-FDTemplateLayoutCell/SLWebViewScriptMessage.h"; sourceTree = "<group>"; };
 		93D2C11120BD238500C9D960 /* SLFriendListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLFriendListCell.m; sourceTree = "<group>"; };
 		A9BBAFBD20CA8E5B001683F8 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		AA2350AAA436CDCBB1E93DCE /* Pods-ShowLive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ShowLive.release.xcconfig"; sourceTree = "<group>"; };
@@ -4088,6 +4102,7 @@
 		D25E416C232CC396005EE124 /* SLHelper */ = {
 			isa = PBXGroup;
 			children = (
+				93BE6CB823BF16F9004A035C /* SLBaseWebViewRequestHelper.h */,
 				93BE6C9F23BF16F4004A035C /* SLBaseWebViewRequestHelper.h */,
 				93BE6C9923BF16F3004A035C /* SLBaseWebViewRequestHelper.h */,
 				93BE6C6A23BF16E9004A035C /* SLBaseWebViewRequestHelper.h */,
@@ -4130,6 +4145,7 @@
 				93874F6B23BF150100476726 /* SLPureColorImageGenerate.h */,
 				93874F7423BF150600476726 /* SLPureColorImageGenerate.h */,
 				93874F7A23BF150800476726 /* SLPureColorImageGenerate.h */,
+				93BE6CBF23BF16FA004A035C /* SLWebViewScriptMessage.h */,
 				93BE6CA323BF16F5004A035C /* SLWebViewScriptMessage.h */,
 				93BE6CA223BF16F5004A035C /* SLWebViewScriptMessage.h */,
 				93BE6C9823BF16F2004A035C /* SLWebViewScriptMessage.h */,
@@ -4205,6 +4221,7 @@
 				93BE6BCB23BF16CF004A035C /* NewTopListCell.m */,
 				93BE6B9D23BF16BE004A035C /* NewTopListCell.m */,
 				93BE6C9523BF16F2004A035C /* AppDelegate+ShowRegisterService.m */,
+				93BE6CBA23BF16F9004A035C /* NewTopListCell.h */,
 				93BE6C0423BF16D8004A035C /* NewTopListCell.h */,
 				93BE6BC023BF16CC004A035C /* NewTopListCell.h */,
 				93BE6C5C23BF16E7004A035C /* SLConvListSystemTableViewCell.h */,
@@ -4241,6 +4258,10 @@
 				93BE6BAF23BF16C5004A035C /* ShowNavigationBar.h */,
 				93BE6B9C23BF16BE004A035C /* ShowNavigationBar.h */,
 				93BE6B9923BF16BC004A035C /* ShowNavigationBar.h */,
+				93BE6CBC23BF16F9004A035C /* SLStringSizeCalculation.h */,
+				93BE6CB923BF16F9004A035C /* SLStringSizeCalculation.h */,
+				93BE6CB723BF16F8004A035C /* SLStringSizeCalculation.h */,
+				93BE6CB323BF16F8004A035C /* SLStringSizeCalculation.h */,
 				93BE6C9E23BF16F4004A035C /* SLStringSizeCalculation.h */,
 				93BE6C7623BF16EC004A035C /* SLStringSizeCalculation.h */,
 				93BE6C6123BF16E8004A035C /* SLStringSizeCalculation.h */,
@@ -4255,6 +4276,7 @@
 				93BE6BBD23BF16CB004A035C /* SLStringSizeCalculation.h */,
 				93BE6BB123BF16C6004A035C /* SLStringSizeCalculation.h */,
 				93BE6BA623BF16C1004A035C /* SLStringSizeCalculation.h */,
+				93BE6CB223BF16F7004A035C /* SLWeakScriptMessageDelegate.h */,
 				93BE6C9B23BF16F3004A035C /* SLWeakScriptMessageDelegate.h */,
 				93BE6C7C23BF16ED004A035C /* SLWeakScriptMessageDelegate.h */,
 				93BE6C5D23BF16E7004A035C /* SLWeakScriptMessageDelegate.h */,
@@ -4311,6 +4333,9 @@
 				93874F7523BF150600476726 /* SLChatBusiness.h */,
 				93874F9F23BF151E00476726 /* SLChatBusiness.h */,
 				93BE6BDF23BF16D2004A035C /* SLWebViewController.h */,
+				93BE6CBE23BF16FA004A035C /* SLBlankView.h */,
+				93BE6CBD23BF16FA004A035C /* SLBlankView.h */,
+				93BE6CB423BF16F8004A035C /* SLBlankView.h */,
 				93BE6CA723BF16F6004A035C /* SLBlankView.h */,
 				93BE6C9C23BF16F3004A035C /* SLBlankView.h */,
 				93BE6C8923BF16EF004A035C /* SLBlankView.h */,
@@ -4336,6 +4361,7 @@
 				93874F5F23BF14FA00476726 /* SLStringSizeCalculation.h */,
 				93874F7023BF150300476726 /* SLStringSizeCalculation.h */,
 				93BE6B9A23BF16BD004A035C /* SLChatBusiness.h */,
+				93BE6CB523BF16F8004A035C /* ShowAppDelegate.m */,
 				93BE6C9323BF16F1004A035C /* ShowAppDelegate.m */,
 				93BE6C7A23BF16EC004A035C /* ShowAppDelegate.m */,
 				93BE6C6E23BF16EA004A035C /* ShowAppDelegate.m */,
@@ -4398,6 +4424,8 @@
 				D25E4165232CC395005EE124 /* POPDecayAnimation.h */,
 				D25E42AB232CC3A2005EE124 /* NSDate+JKZeroDate.h */,
 				D25E4149232CC391005EE124 /* NSDictionary+JKSafeAccess.m */,
+				93BE6CBB23BF16F9004A035C /* ShowAppDelegate.h */,
+				93BE6CB623BF16F8004A035C /* ShowAppDelegate.h */,
 				93BE6CAB23BF16F6004A035C /* ShowAppDelegate.h */,
 				93BE6C9623BF16F2004A035C /* ShowAppDelegate.h */,
 				93BE6C8E23BF16F1004A035C /* ShowAppDelegate.h */,
