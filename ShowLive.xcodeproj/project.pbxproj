@@ -715,6 +715,22 @@
 		7217AD9821C5368100D082E9 /* WithdrawViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WithdrawViewController.h; path = ../../../Base/WithdrawViewController.h; sourceTree = "<group>"; };
 		7217AD9921C536A700D082E9 /* WithdrawViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WithdrawViewController.m; path = ../../../Base/WithdrawViewController.m; sourceTree = "<group>"; };
 		7217AD9B21C5377D00D082E9 /* SLCoinDetailInfoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLCoinDetailInfoVC.h; path = ../../../Base/SLCoinDetailInfoVC.h; sourceTree = "<group>"; };
+		721D5D0D23CB22AA00ED2B2C /* NewTopListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NewTopListViewController.h; path = ../../../../Toplist/NewTopListViewController.h; sourceTree = "<group>"; };
+		721D5D0E23CB22AB00ED2B2C /* SLChatViewController+BlankView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "SLChatViewController+BlankView.h"; path = "../../WebView/Base/SLChatViewController+BlankView.h"; sourceTree = "<group>"; };
+		721D5D0F23CB22AB00ED2B2C /* SLWeakScriptMessageDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLWeakScriptMessageDelegate.h; path = ../../../../WebView/Base/SLWeakScriptMessageDelegate.h; sourceTree = "<group>"; };
+		721D5D1023CB22AB00ED2B2C /* SLWebViewScriptMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLWebViewScriptMessage.h; path = "../../../SLHelper/pop/UITableView-FDTemplateLayoutCell/SLWebViewScriptMessage.h"; sourceTree = "<group>"; };
+		721D5D1123CB22AC00ED2B2C /* ShowAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ShowAppDelegate.h; path = ../../WebView/Base/ShowAppDelegate.h; sourceTree = "<group>"; };
+		721D5D1223CB22AC00ED2B2C /* SLWeakScriptMessageDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLWeakScriptMessageDelegate.h; path = ../../WebView/Base/SLWeakScriptMessageDelegate.h; sourceTree = "<group>"; };
+		721D5D1323CB22AC00ED2B2C /* SLBlankView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SLBlankView.m; path = ../../../../WebView/Base/SLBlankView.m; sourceTree = "<group>"; };
+		721D5D1423CB22AC00ED2B2C /* SLStringSizeCalculation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLStringSizeCalculation.h; path = ../../../../FriendList/SLStringSizeCalculation.h; sourceTree = "<group>"; };
+		721D5D1523CB22AC00ED2B2C /* SLConvListSystemTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLConvListSystemTableViewCell.h; path = ../../WebView/Base/SLConvListSystemTableViewCell.h; sourceTree = "<group>"; };
+		721D5D1623CB22AD00ED2B2C /* ShowNavigationBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ShowNavigationBar.h; path = ../../WebView/Base/ShowNavigationBar.h; sourceTree = "<group>"; };
+		721D5D1723CB22AD00ED2B2C /* SLWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLWebViewController.h; path = ../../WebView/SLWebViewController.h; sourceTree = "<group>"; };
+		721D5D1823CB22AD00ED2B2C /* SLChatBusiness.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLChatBusiness.h; path = ../../WebView/Base/SLChatBusiness.h; sourceTree = "<group>"; };
+		721D5D1923CB22AD00ED2B2C /* ShowAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ShowAppDelegate.m; path = ../../../../WebView/Base/ShowAppDelegate.m; sourceTree = "<group>"; };
+		721D5D1A23CB22AE00ED2B2C /* ShowAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ShowAppDelegate.m; path = ../../../../WebView/Base/ShowAppDelegate.m; sourceTree = "<group>"; };
+		721D5D1B23CB22AE00ED2B2C /* SLChatBusiness.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLChatBusiness.h; path = ../../../../WebView/Base/SLChatBusiness.h; sourceTree = "<group>"; };
+		721D5D1C23CB22AE00ED2B2C /* SLBaseWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLBaseWebViewController.h; path = ../../WebView/Base/SLBaseWebViewController.h; sourceTree = "<group>"; };
 		722BCF0621D78936004BFC52 /* SLInviteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLInviteViewController.m; sourceTree = "<group>"; };
 		723816B220C689AB00C3885E /* SLLevelMarkView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLLevelMarkView.h; sourceTree = "<group>"; };
 		723816B320C689AB00C3885E /* SLLevelMarkView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLLevelMarkView.m; sourceTree = "<group>"; };
@@ -4909,6 +4925,22 @@
 		43968A6720AC397000149DCC /* Untils */ = {
 			isa = PBXGroup;
 			children = (
+				721D5D1723CB22AD00ED2B2C /* SLWebViewController.h */,
+				721D5D1223CB22AC00ED2B2C /* SLWeakScriptMessageDelegate.h */,
+				721D5D0F23CB22AB00ED2B2C /* SLWeakScriptMessageDelegate.h */,
+				721D5D1123CB22AC00ED2B2C /* ShowAppDelegate.h */,
+				721D5D1323CB22AC00ED2B2C /* SLBlankView.m */,
+				721D5D1523CB22AC00ED2B2C /* SLConvListSystemTableViewCell.h */,
+				721D5D1623CB22AD00ED2B2C /* ShowNavigationBar.h */,
+				721D5D1423CB22AC00ED2B2C /* SLStringSizeCalculation.h */,
+				721D5D0E23CB22AB00ED2B2C /* SLChatViewController+BlankView.h */,
+				721D5D1B23CB22AE00ED2B2C /* SLChatBusiness.h */,
+				721D5D1823CB22AD00ED2B2C /* SLChatBusiness.h */,
+				721D5D1A23CB22AE00ED2B2C /* ShowAppDelegate.m */,
+				721D5D1923CB22AD00ED2B2C /* ShowAppDelegate.m */,
+				721D5D1C23CB22AE00ED2B2C /* SLBaseWebViewController.h */,
+				721D5D1023CB22AB00ED2B2C /* SLWebViewScriptMessage.h */,
+				721D5D0D23CB22AA00ED2B2C /* NewTopListViewController.h */,
 				4321A36622F46DB300F19D03 /* Exten */,
 				4321A34422F46DB300F19D03 /* JKCategories */,
 				4321A39322F46DB300F19D03 /* SLPlayAudio */,
