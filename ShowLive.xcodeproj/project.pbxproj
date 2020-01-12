@@ -2014,6 +2014,14 @@
 		724873F223CB25340034A647 /* NewTopListHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = NewTopListHeader.m; path = ../../WebView/Base/NewTopListHeader.m; sourceTree = "<group>"; };
 		724873F323CB25340034A647 /* SLWebViewScriptMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLWebViewScriptMessage.h; path = "../../../../SLHelper/pop/UITableView-FDTemplateLayoutCell/SLWebViewScriptMessage.h"; sourceTree = "<group>"; };
 		724873F423CB25350034A647 /* ShowAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ShowAppDelegate.m; path = ../../WebView/Base/ShowAppDelegate.m; sourceTree = "<group>"; };
+		724873F523CB25350034A647 /* ShowAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ShowAppDelegate.m; path = ../../WebView/Base/ShowAppDelegate.m; sourceTree = "<group>"; };
+		724873F623CB25360034A647 /* NewTopListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NewTopListCell.h; path = ../../../../WebView/Base/NewTopListCell.h; sourceTree = "<group>"; };
+		724873F723CB25360034A647 /* NewTopListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = NewTopListViewController.m; path = ../../../../WebView/Base/NewTopListViewController.m; sourceTree = "<group>"; };
+		724873F823CB25370034A647 /* SLWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLWebViewController.h; path = ../../WebView/SLWebViewController.h; sourceTree = "<group>"; };
+		724873F923CB25370034A647 /* SLChatBusiness.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLChatBusiness.h; path = ../../../../WebView/Base/SLChatBusiness.h; sourceTree = "<group>"; };
+		724873FA23CB25380034A647 /* SLWebView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLWebView.h; path = ../../../../WebView/SLWebView.h; sourceTree = "<group>"; };
+		724873FB23CB25380034A647 /* SLBaseWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SLBaseWebViewController.m; path = ../../WebView/Base/SLBaseWebViewController.m; sourceTree = "<group>"; };
+		724873FC23CB25390034A647 /* SLBaseWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLBaseWebViewController.h; path = ../../../../WebView/Base/SLBaseWebViewController.h; sourceTree = "<group>"; };
 		724FF37520E666EB00DD40EB /* ShowForUsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowForUsView.h; sourceTree = "<group>"; };
 		724FF37820E6676600DD40EB /* SLInfoHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLInfoHeaderView.h; sourceTree = "<group>"; };
 		724FF37920E6678D00DD40EB /* SLInfoHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLInfoHeaderView.m; sourceTree = "<group>"; };
@@ -7079,6 +7087,7 @@
 				724873E023CB252A0034A647 /* NewTopListCell.m */,
 				724872EA23CB24B40034A647 /* NewTopListCell.m */,
 				724872B223CB24990034A647 /* NewTopListCell.m */,
+				724873F623CB25360034A647 /* NewTopListCell.h */,
 				7248737823CB24F70034A647 /* NewTopListCell.h */,
 				724872AC23CB24970034A647 /* NewTopListCell.h */,
 				724873BC23CB25190034A647 /* ShowAppDelegate.h */,
@@ -7102,6 +7111,7 @@
 				7248727223CB247B0034A647 /* ShowAppDelegate.h */,
 				7248727123CB247A0034A647 /* ShowAppDelegate.h */,
 				7248726923CB24770034A647 /* ShowAppDelegate.h */,
+				724873F823CB25370034A647 /* SLWebViewController.h */,
 				724873DE23CB25290034A647 /* SLWebViewController.h */,
 				724873D923CB25270034A647 /* SLWebViewController.h */,
 				724873BD23CB25190034A647 /* SLWebViewController.h */,
@@ -7235,6 +7245,7 @@
 				7248728123CB24820034A647 /* SLStringSizeCalculation.h */,
 				7248726623CB24750034A647 /* SLStringSizeCalculation.h */,
 				7248725E23CB24710034A647 /* SLStringSizeCalculation.h */,
+				724873F723CB25360034A647 /* NewTopListViewController.m */,
 				724873D623CB25250034A647 /* NewTopListViewController.m */,
 				724873CA23CB251F0034A647 /* NewTopListViewController.m */,
 				7248738023CB24FB0034A647 /* NewTopListViewController.m */,
@@ -7271,6 +7282,7 @@
 				7248726A23CB24770034A647 /* SLChatViewController+BlankView.h */,
 				7248726423CB24740034A647 /* SLChatViewController+BlankView.h */,
 				7248726123CB24730034A647 /* SLChatViewController+BlankView.h */,
+				724873F923CB25370034A647 /* SLChatBusiness.h */,
 				724873F023CB25320034A647 /* SLChatBusiness.h */,
 				724873EA23CB252F0034A647 /* SLChatBusiness.h */,
 				724873D523CB25250034A647 /* SLChatBusiness.h */,
@@ -7292,6 +7304,7 @@
 				7248729B23CB248F0034A647 /* SLChatBusiness.h */,
 				7248728423CB24840034A647 /* SLChatBusiness.h */,
 				7248726B23CB24780034A647 /* SLChatBusiness.h */,
+				724873F523CB25350034A647 /* ShowAppDelegate.m */,
 				724873F423CB25350034A647 /* ShowAppDelegate.m */,
 				724873C223CB251B0034A647 /* ShowAppDelegate.m */,
 				724873B623CB25160034A647 /* ShowAppDelegate.m */,
@@ -7327,6 +7340,7 @@
 				7248728323CB24830034A647 /* ShowNavigationBar.m */,
 				7248726D23CB24790034A647 /* ShowNavigationBar.m */,
 				7248726723CB24760034A647 /* ShowNavigationBar.m */,
+				724873FC23CB25390034A647 /* SLBaseWebViewController.h */,
 				724873EE23CB25310034A647 /* SLBaseWebViewController.h */,
 				724873E423CB252C0034A647 /* SLBaseWebViewController.h */,
 				724873E223CB252B0034A647 /* SLBaseWebViewController.h */,
@@ -7353,6 +7367,7 @@
 				7248727F23CB24810034A647 /* SLBaseWebViewController.h */,
 				7248725C23CB24700034A647 /* SLBaseWebViewController.h */,
 				724873E623CB252D0034A647 /* SLWebViewJSFuncNameConst.h */,
+				724873FB23CB25380034A647 /* SLBaseWebViewController.m */,
 				724873E323CB252C0034A647 /* SLBaseWebViewController.m */,
 				724873D423CB25240034A647 /* SLBaseWebViewController.m */,
 				724873D323CB25240034A647 /* SLBaseWebViewController.m */,
@@ -7405,6 +7420,7 @@
 				724872E023CB24AF0034A647 /* SLWebViewJSFuncNameConst.m */,
 				7248728023CB24820034A647 /* SLWebViewJSFuncNameConst.m */,
 				7248725F23CB24720034A647 /* SLWebViewJSFuncNameConst.m */,
+				724873FA23CB25380034A647 /* SLWebView.h */,
 				724873E123CB252B0034A647 /* SLWebView.h */,
 				724873D723CB25260034A647 /* SLWebView.h */,
 				724873C123CB251B0034A647 /* SLWebView.h */,
