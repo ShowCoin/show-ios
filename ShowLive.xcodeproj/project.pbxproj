@@ -1943,6 +1943,13 @@
 		724873AB23CB25110034A647 /* SLWebViewScriptMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLWebViewScriptMessage.h; path = "../../../../SLHelper/pop/UITableView-FDTemplateLayoutCell/SLWebViewScriptMessage.h"; sourceTree = "<group>"; };
 		724873AC23CB25110034A647 /* SLBaseWebViewRequestHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLBaseWebViewRequestHelper.h; path = ../../../../WebView/Base/SLBaseWebViewRequestHelper.h; sourceTree = "<group>"; };
 		724873AD23CB25120034A647 /* ShowAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ShowAppDelegate.m; path = ../../../../WebView/Base/ShowAppDelegate.m; sourceTree = "<group>"; };
+		724873AE23CB25120034A647 /* SLWebViewScriptMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLWebViewScriptMessage.h; path = "../../../SLHelper/pop/UITableView-FDTemplateLayoutCell/SLWebViewScriptMessage.h"; sourceTree = "<group>"; };
+		724873AF23CB25130034A647 /* SLStringSizeCalculation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLStringSizeCalculation.h; path = ../../../../FriendList/SLStringSizeCalculation.h; sourceTree = "<group>"; };
+		724873B023CB25130034A647 /* SLBlankView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLBlankView.h; path = ../../../../WebView/Base/SLBlankView.h; sourceTree = "<group>"; };
+		724873B123CB25140034A647 /* ShowNavigationBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ShowNavigationBar.m; path = ../../WebView/Base/ShowNavigationBar.m; sourceTree = "<group>"; };
+		724873B223CB25140034A647 /* SLBlankView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLBlankView.h; path = ../../../../WebView/Base/SLBlankView.h; sourceTree = "<group>"; };
+		724873B323CB25150034A647 /* SLConvListSystemTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLConvListSystemTableViewCell.h; path = ../../../../WebView/Base/SLConvListSystemTableViewCell.h; sourceTree = "<group>"; };
+		724873B423CB25150034A647 /* SLBlankView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLBlankView.h; path = ../../WebView/Base/SLBlankView.h; sourceTree = "<group>"; };
 		724FF37520E666EB00DD40EB /* ShowForUsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowForUsView.h; sourceTree = "<group>"; };
 		724FF37820E6676600DD40EB /* SLInfoHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLInfoHeaderView.h; sourceTree = "<group>"; };
 		724FF37920E6678D00DD40EB /* SLInfoHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLInfoHeaderView.m; sourceTree = "<group>"; };
@@ -7057,6 +7064,7 @@
 				7248733623CB24D80034A647 /* SLBlankView.m */,
 				7248732623CB24D00034A647 /* SLBlankView.m */,
 				7248727023CB247A0034A647 /* SLBlankView.m */,
+				724873B323CB25150034A647 /* SLConvListSystemTableViewCell.h */,
 				724873AA23CB25100034A647 /* SLConvListSystemTableViewCell.h */,
 				7248739A23CB25080034A647 /* SLConvListSystemTableViewCell.h */,
 				7248738E23CB25020034A647 /* SLConvListSystemTableViewCell.h */,
@@ -7076,6 +7084,9 @@
 				7248727D23CB24800034A647 /* SLConvListSystemTableViewCell.h */,
 				7248726523CB24750034A647 /* SLConvListSystemTableViewCell.h */,
 				7248725B23CB24700034A647 /* SLConvListSystemTableViewCell.h */,
+				724873B423CB25150034A647 /* SLBlankView.h */,
+				724873B223CB25140034A647 /* SLBlankView.h */,
+				724873B023CB25130034A647 /* SLBlankView.h */,
 				7248739623CB25060034A647 /* SLBlankView.h */,
 				7248738523CB24FE0034A647 /* SLBlankView.h */,
 				7248737223CB24F40034A647 /* SLBlankView.h */,
@@ -7113,6 +7124,7 @@
 				724872A623CB24940034A647 /* ShowNavigationBar.h */,
 				7248729423CB248B0034A647 /* ShowNavigationBar.h */,
 				7248728D23CB24880034A647 /* ShowNavigationBar.h */,
+				724873AF23CB25130034A647 /* SLStringSizeCalculation.h */,
 				7248737C23CB24F90034A647 /* SLStringSizeCalculation.h */,
 				7248736823CB24F00034A647 /* SLStringSizeCalculation.h */,
 				7248735A23CB24E90034A647 /* SLStringSizeCalculation.h */,
@@ -7194,6 +7206,7 @@
 				7248729F23CB24900034A647 /* ShowAppDelegate.m */,
 				7248729C23CB248F0034A647 /* ShowAppDelegate.m */,
 				7248729923CB248E0034A647 /* ShowAppDelegate.m */,
+				724873B123CB25140034A647 /* ShowNavigationBar.m */,
 				7248739123CB25030034A647 /* ShowNavigationBar.m */,
 				7248737A23CB24F80034A647 /* ShowNavigationBar.m */,
 				7248736A23CB24F00034A647 /* ShowNavigationBar.m */,
@@ -7238,6 +7251,7 @@
 				724872B723CB249C0034A647 /* SLBaseWebViewController.m */,
 				7248728F23CB24890034A647 /* SLBaseWebViewController.m */,
 				7248728823CB24860034A647 /* SLBaseWebViewController.m */,
+				724873AE23CB25120034A647 /* SLWebViewScriptMessage.h */,
 				724873AB23CB25110034A647 /* SLWebViewScriptMessage.h */,
 				7248739523CB25050034A647 /* SLWebViewScriptMessage.h */,
 				7248738723CB24FF0034A647 /* SLWebViewScriptMessage.h */,
