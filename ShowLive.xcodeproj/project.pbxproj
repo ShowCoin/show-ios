@@ -2628,6 +2628,13 @@
 		938F658323D4337000B44B43 /* NewTopListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = NewTopListViewController.m; path = ../../WebView/Base/NewTopListViewController.m; sourceTree = "<group>"; };
 		938F658423D4337000B44B43 /* AppDelegate+ShowRegisterService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AppDelegate+ShowRegisterService.h"; path = "../../WebView/Base/AppDelegate+ShowRegisterService.h"; sourceTree = "<group>"; };
 		938F658523D4337100B44B43 /* NewTopListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NewTopListViewController.h; path = ../../../../Toplist/NewTopListViewController.h; sourceTree = "<group>"; };
+		938F658623D4337100B44B43 /* SLChatBusiness.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLChatBusiness.h; path = ../../WebView/Base/SLChatBusiness.h; sourceTree = "<group>"; };
+		938F658723D4337200B44B43 /* SLStringSizeCalculation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLStringSizeCalculation.h; path = ../../../../FriendList/SLStringSizeCalculation.h; sourceTree = "<group>"; };
+		938F658823D4337200B44B43 /* SLChatBusiness.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLChatBusiness.h; path = ../../../../WebView/Base/SLChatBusiness.h; sourceTree = "<group>"; };
+		938F658923D4337200B44B43 /* SLWeakScriptMessageDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLWeakScriptMessageDelegate.h; path = ../../../../WebView/Base/SLWeakScriptMessageDelegate.h; sourceTree = "<group>"; };
+		938F658A23D4337300B44B43 /* SLBaseWebViewRequestHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLBaseWebViewRequestHelper.h; path = ../../WebView/Base/SLBaseWebViewRequestHelper.h; sourceTree = "<group>"; };
+		938F658B23D4337300B44B43 /* NewTopListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NewTopListViewController.h; path = ../../../../Toplist/NewTopListViewController.h; sourceTree = "<group>"; };
+		938F658C23D4337300B44B43 /* SLPureColorImageGenerate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLPureColorImageGenerate.h; path = ../../WebView/Base/SLPureColorImageGenerate.h; sourceTree = "<group>"; };
 		9391AA8120BF070300D520F1 /* SLTimerLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLTimerLabel.h; sourceTree = "<group>"; };
 		9391AA8220BF078A00D520F1 /* SLTimerLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLTimerLabel.m; sourceTree = "<group>"; };
 		9391AA8C20C0369100D520F1 /* SLBlankView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLBlankView.h; path = ../../../../WebView/Base/SLBlankView.h; sourceTree = "<group>"; };
@@ -6566,6 +6573,7 @@
 				938F64F723D4333600B44B43 /* SLWebViewController.h */,
 				938F64F023D4333300B44B43 /* SLWebViewController.h */,
 				938F64EC23D4333200B44B43 /* SLWebViewController.h */,
+				938F658923D4337200B44B43 /* SLWeakScriptMessageDelegate.h */,
 				938F655323D4335C00B44B43 /* SLWeakScriptMessageDelegate.h */,
 				938F653C23D4335200B44B43 /* SLWeakScriptMessageDelegate.h */,
 				938F651A23D4334400B44B43 /* SLWeakScriptMessageDelegate.h */,
@@ -6583,6 +6591,7 @@
 				938F655423D4335C00B44B43 /* SLBlankView.m */,
 				938F651823D4334300B44B43 /* SLBlankView.m */,
 				938F653323D4334E00B44B43 /* ShowNavigationBar.h */,
+				938F658723D4337200B44B43 /* SLStringSizeCalculation.h */,
 				938F657E23D4336E00B44B43 /* SLStringSizeCalculation.h */,
 				938F657B23D4336D00B44B43 /* SLStringSizeCalculation.h */,
 				938F656B23D4336600B44B43 /* SLStringSizeCalculation.h */,
@@ -6622,6 +6631,8 @@
 				938F650723D4333C00B44B43 /* SLChatViewController+BlankView.h */,
 				938F64E323D4332D00B44B43 /* SLChatViewController+BlankView.h */,
 				938F64CE23D4332300B44B43 /* SLChatViewController+BlankView.h */,
+				938F658823D4337200B44B43 /* SLChatBusiness.h */,
+				938F658623D4337100B44B43 /* SLChatBusiness.h */,
 				938F657323D4336A00B44B43 /* SLChatBusiness.h */,
 				938F657123D4336900B44B43 /* SLChatBusiness.h */,
 				938F656823D4336500B44B43 /* SLChatBusiness.h */,
@@ -6708,10 +6719,12 @@
 				938F64FA23D4333700B44B43 /* SLWebView.h */,
 				938F64DC23D4332A00B44B43 /* SLWebView.h */,
 				938F64D423D4332600B44B43 /* SLWebView.h */,
+				938F658A23D4337300B44B43 /* SLBaseWebViewRequestHelper.h */,
 				938F657723D4336B00B44B43 /* SLBaseWebViewRequestHelper.h */,
 				938F656023D4336100B44B43 /* SLBaseWebViewRequestHelper.h */,
 				938F650C23D4333E00B44B43 /* SLBaseWebViewRequestHelper.h */,
 				938F64DE23D4332B00B44B43 /* SLBaseWebViewRequestHelper.h */,
+				938F658C23D4337300B44B43 /* SLPureColorImageGenerate.h */,
 				938F658223D4336F00B44B43 /* SLPureColorImageGenerate.h */,
 				938F655723D4335E00B44B43 /* SLPureColorImageGenerate.h */,
 				938F654F23D4335A00B44B43 /* SLPureColorImageGenerate.h */,
@@ -6721,6 +6734,7 @@
 				938F64DD23D4332A00B44B43 /* SLPureColorImageGenerate.h */,
 				938F64DB23D4332900B44B43 /* SLPureColorImageGenerate.h */,
 				938F64D523D4332600B44B43 /* SLPureColorImageGenerate.h */,
+				938F658B23D4337300B44B43 /* NewTopListViewController.h */,
 				938F658523D4337100B44B43 /* NewTopListViewController.h */,
 				938F656E23D4336800B44B43 /* NewTopListViewController.h */,
 				938F656D23D4336700B44B43 /* NewTopListViewController.h */,
