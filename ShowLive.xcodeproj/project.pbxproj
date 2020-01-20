@@ -1678,6 +1678,11 @@
 		93451B5523D58258003CBE36 /* ShowAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ShowAppDelegate.h; path = ../../../WebView/Base/ShowAppDelegate.h; sourceTree = "<group>"; };
 		93451B5623D58258003CBE36 /* SLWeakScriptMessageDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLWeakScriptMessageDelegate.h; path = ../WebView/Base/SLWeakScriptMessageDelegate.h; sourceTree = "<group>"; };
 		93451B5723D58258003CBE36 /* SLStringSizeCalculation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLStringSizeCalculation.h; path = ../../../FriendList/SLStringSizeCalculation.h; sourceTree = "<group>"; };
+		93451B5823D5825C003CBE36 /* SLChatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLChatViewController.h; path = ../../../WebView/Base/SLChatViewController.h; sourceTree = "<group>"; };
+		93451B5923D5825C003CBE36 /* SLWebView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLWebView.h; path = ../../../WebView/SLWebView.h; sourceTree = "<group>"; };
+		93451B5A23D5825D003CBE36 /* SLChatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLChatViewController.h; path = ../../../WebView/Base/SLChatViewController.h; sourceTree = "<group>"; };
+		93451B5B23D5825D003CBE36 /* SLBaseWebViewRequestHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLBaseWebViewRequestHelper.h; path = ../../../WebView/Base/SLBaseWebViewRequestHelper.h; sourceTree = "<group>"; };
+		93451B5C23D5825D003CBE36 /* NewTopListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NewTopListViewController.h; path = ../../../Toplist/NewTopListViewController.h; sourceTree = "<group>"; };
 		934E1B9720AC39D900A0B080 /* SLChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLChatViewController.h; path = ../../../../WebView/Base/SLChatViewController.h; sourceTree = "<group>"; };
 		934E1B9820AC3A1E00A0B080 /* SLChatViewController+BlankView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SLChatViewController+BlankView.h"; path = "../../../../WebView/Base/SLChatViewController+BlankView.h"; sourceTree = "<group>"; };
 		9358009723BF17F600D3CA72 /* SLWeakScriptMessageDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLWeakScriptMessageDelegate.h; path = ../../../../../../WebView/Base/SLWeakScriptMessageDelegate.h; sourceTree = "<group>"; };
@@ -7947,7 +7952,6 @@
 				938F64F423D4333500B44B43 /* NewTopListViewController.h */,
 				938F64F223D4333400B44B43 /* NewTopListViewController.h */,
 				938F64CC23D4332200B44B43 /* NewTopListViewController.h */,
-				4321A36622F46DB300F19D03 /* Exten */,
 				4321A34422F46DB300F19D03 /* JKCategories */,
 				4321A39322F46DB300F19D03 /* SLPlayAudio */,
 				434DDB4B20C92B4E00191FC1 /* JKCategories */,
@@ -8165,11 +8169,14 @@
 				93451B4623D58253003CBE36 /* SLWebViewJSFuncNameConst.m */,
 				93451AFE23D5823C003CBE36 /* SLWebViewJSFuncNameConst.m */,
 				93451ADC23D58230003CBE36 /* SLWebViewJSFuncNameConst.m */,
+				93451B5A23D5825D003CBE36 /* SLChatViewController.h */,
+				93451B5823D5825C003CBE36 /* SLChatViewController.h */,
 				93451B4423D58252003CBE36 /* SLChatViewController.h */,
 				93451B3023D5824C003CBE36 /* SLChatViewController.h */,
 				93451B2D23D5824B003CBE36 /* SLChatViewController.h */,
 				93451B0923D5823F003CBE36 /* SLChatViewController.h */,
 				93451ADE23D58231003CBE36 /* SLChatViewController.h */,
+				93451B5923D5825C003CBE36 /* SLWebView.h */,
 				93451B4B23D58255003CBE36 /* SLWebView.h */,
 				93451B4323D58252003CBE36 /* SLWebView.h */,
 				93451B3F23D58251003CBE36 /* SLWebView.h */,
@@ -8177,6 +8184,7 @@
 				93451AFB23D5823B003CBE36 /* SLWebView.h */,
 				93451AF523D58239003CBE36 /* SLWebView.h */,
 				93451ADD23D58230003CBE36 /* SLWebView.h */,
+				93451B5B23D5825D003CBE36 /* SLBaseWebViewRequestHelper.h */,
 				93451B5423D58257003CBE36 /* SLBaseWebViewRequestHelper.h */,
 				93451B1223D58242003CBE36 /* SLBaseWebViewRequestHelper.h */,
 				93451AFC23D5823B003CBE36 /* SLBaseWebViewRequestHelper.h */,
@@ -8210,6 +8218,7 @@
 				93451B0523D5823E003CBE36 /* ShowAppDelegate.h */,
 				93451AD123D5822C003CBE36 /* ShowAppDelegate.h */,
 				93451ACC23D5822A003CBE36 /* ShowAppDelegate.h */,
+				93451B5C23D5825D003CBE36 /* NewTopListViewController.h */,
 				93451B5023D58256003CBE36 /* NewTopListViewController.h */,
 				93451B4823D58254003CBE36 /* NewTopListViewController.h */,
 				93451B4123D58251003CBE36 /* NewTopListViewController.h */,
@@ -8218,6 +8227,7 @@
 				93451B0223D5823D003CBE36 /* NewTopListViewController.h */,
 				93451AF823D5823A003CBE36 /* NewTopListViewController.h */,
 				93451AEC23D58236003CBE36 /* NewTopListViewController.h */,
+				4321A36622F46DB300F19D03 /* Exten */,
 				93451B3C23D58250003CBE36 /* SLWebViewController.h */,
 				93451B3823D5824E003CBE36 /* SLWebViewController.h */,
 				93451B2023D58246003CBE36 /* SLWebViewController.h */,
