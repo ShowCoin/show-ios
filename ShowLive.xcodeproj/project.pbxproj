@@ -1620,6 +1620,15 @@
 		93451B1B23D58245003CBE36 /* SLPureColorImageGenerate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLPureColorImageGenerate.h; path = ../WebView/Base/SLPureColorImageGenerate.h; sourceTree = "<group>"; };
 		93451B1C23D58245003CBE36 /* SLPureColorImageGenerate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLPureColorImageGenerate.h; path = ../WebView/Base/SLPureColorImageGenerate.h; sourceTree = "<group>"; };
 		93451B1D23D58245003CBE36 /* SLBaseWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SLBaseWebViewController.m; path = ../WebView/Base/SLBaseWebViewController.m; sourceTree = "<group>"; };
+		93451B1E23D58246003CBE36 /* SLChatBusiness.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLChatBusiness.h; path = ../../../WebView/Base/SLChatBusiness.h; sourceTree = "<group>"; };
+		93451B1F23D58246003CBE36 /* NewTopListHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = NewTopListHeader.m; path = ../../../WebView/Base/NewTopListHeader.m; sourceTree = "<group>"; };
+		93451B2023D58246003CBE36 /* SLWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLWebViewController.h; path = ../WebView/SLWebViewController.h; sourceTree = "<group>"; };
+		93451B2123D58247003CBE36 /* SLWebViewScriptMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLWebViewScriptMessage.h; path = "../../SLHelper/pop/UITableView-FDTemplateLayoutCell/SLWebViewScriptMessage.h"; sourceTree = "<group>"; };
+		93451B2223D58247003CBE36 /* NewTopListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = NewTopListCell.m; path = ../../../WebView/Base/NewTopListCell.m; sourceTree = "<group>"; };
+		93451B2323D58247003CBE36 /* SLPureColorImageGenerate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLPureColorImageGenerate.h; path = ../../../WebView/Base/SLPureColorImageGenerate.h; sourceTree = "<group>"; };
+		93451B2423D58247003CBE36 /* SLChatBusiness.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLChatBusiness.h; path = ../WebView/Base/SLChatBusiness.h; sourceTree = "<group>"; };
+		93451B2523D58248003CBE36 /* SLWebViewJSFuncNameConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLWebViewJSFuncNameConst.h; path = ../../../WebView/SLWebViewJSFuncNameConst.h; sourceTree = "<group>"; };
+		93451B2623D58248003CBE36 /* NewTopListHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NewTopListHeader.h; path = ../../../WebView/Base/NewTopListHeader.h; sourceTree = "<group>"; };
 		934E1B9720AC39D900A0B080 /* SLChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLChatViewController.h; path = ../../../../WebView/Base/SLChatViewController.h; sourceTree = "<group>"; };
 		934E1B9820AC3A1E00A0B080 /* SLChatViewController+BlankView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SLChatViewController+BlankView.h"; path = "../../../../WebView/Base/SLChatViewController+BlankView.h"; sourceTree = "<group>"; };
 		9358009723BF17F600D3CA72 /* SLWeakScriptMessageDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLWeakScriptMessageDelegate.h; path = ../../../../../../WebView/Base/SLWeakScriptMessageDelegate.h; sourceTree = "<group>"; };
@@ -8089,9 +8098,11 @@
 				93451B0423D5823D003CBE36 /* ShowAppDelegate.m */,
 				93451AE323D58233003CBE36 /* ShowAppDelegate.m */,
 				93451AD223D5822C003CBE36 /* ShowAppDelegate.m */,
+				93451B2523D58248003CBE36 /* SLWebViewJSFuncNameConst.h */,
 				93451B1D23D58245003CBE36 /* SLBaseWebViewController.m */,
 				93451AF923D5823A003CBE36 /* SLBaseWebViewController.m */,
 				93451AE223D58232003CBE36 /* SLBaseWebViewController.m */,
+				93451B2123D58247003CBE36 /* SLWebViewScriptMessage.h */,
 				93451AF423D58238003CBE36 /* SLWebViewScriptMessage.h */,
 				93451AF223D58238003CBE36 /* SLWebViewScriptMessage.h */,
 				93451AEA23D58235003CBE36 /* SLWebViewScriptMessage.h */,
@@ -8110,9 +8121,11 @@
 				93451AE923D58235003CBE36 /* SLBaseWebViewRequestHelper.h */,
 				93451AE723D58234003CBE36 /* SLBaseWebViewRequestHelper.h */,
 				93451AC923D58228003CBE36 /* SLBaseWebViewRequestHelper.h */,
+				93451B2223D58247003CBE36 /* NewTopListCell.m */,
 				93451AED23D58236003CBE36 /* NewTopListCell.m */,
 				93451B1123D58241003CBE36 /* NewTopListCell.h */,
 				93451ACA23D58229003CBE36 /* NewTopListCell.h */,
+				93451B2323D58247003CBE36 /* SLPureColorImageGenerate.h */,
 				93451B1C23D58245003CBE36 /* SLPureColorImageGenerate.h */,
 				93451B1B23D58245003CBE36 /* SLPureColorImageGenerate.h */,
 				93451B1623D58243003CBE36 /* SLPureColorImageGenerate.h */,
@@ -8128,6 +8141,7 @@
 				93451B0223D5823D003CBE36 /* NewTopListViewController.h */,
 				93451AF823D5823A003CBE36 /* NewTopListViewController.h */,
 				93451AEC23D58236003CBE36 /* NewTopListViewController.h */,
+				93451B2023D58246003CBE36 /* SLWebViewController.h */,
 				93451B1323D58242003CBE36 /* SLWebViewController.h */,
 				93451B1023D58241003CBE36 /* SLWebViewController.h */,
 				93451B0723D5823E003CBE36 /* SLWebViewController.h */,
@@ -8140,7 +8154,9 @@
 				93451B0E23D58241003CBE36 /* SLWeakScriptMessageDelegate.h */,
 				93451B0D23D58240003CBE36 /* SLWeakScriptMessageDelegate.h */,
 				93451AE023D58232003CBE36 /* SLWeakScriptMessageDelegate.h */,
+				93451B1F23D58246003CBE36 /* NewTopListHeader.m */,
 				93451AF623D58239003CBE36 /* NewTopListHeader.m */,
+				93451B2623D58248003CBE36 /* NewTopListHeader.h */,
 				93451AF323D58238003CBE36 /* NewTopListHeader.h */,
 				93451AE123D58232003CBE36 /* SLBlankView.m */,
 				93451AE623D58234003CBE36 /* ShowNavigationBar.h */,
@@ -8161,6 +8177,8 @@
 				93451AFD23D5823B003CBE36 /* SLChatViewController+BlankView.h */,
 				93451AF123D58237003CBE36 /* SLChatViewController+BlankView.h */,
 				93451ACB23D58229003CBE36 /* SLChatViewController+BlankView.h */,
+				93451B2423D58247003CBE36 /* SLChatBusiness.h */,
+				93451B1E23D58246003CBE36 /* SLChatBusiness.h */,
 				93451AE423D58233003CBE36 /* SLChatBusiness.h */,
 				93451ADF23D58231003CBE36 /* SLChatBusiness.h */,
 				93451AD923D5822F003CBE36 /* SLChatBusiness.h */,
